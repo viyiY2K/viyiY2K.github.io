@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TP 计算机 on 与你分享我的眼睛</title>
+    <link>/categories/tp-%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
+    <description>Recent content in TP 计算机 on 与你分享我的眼睛</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/tp-%E8%AE%A1%E7%AE%97%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 SSH 连接 Github 受锤记</title>
+      <link>/Notes/connection_closed_and_permission_denied/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/Notes/connection_closed_and_permission_denied/</guid>
+      <description>&lt;p&gt;在试图学习用 Git，那当然第一步是要先连上 Github 啦。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Markdown 简明指北</title>
+      <link>/Notes/markdown_tutorial/</link>
+      <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/Notes/markdown_tutorial/</guid>
+      <description>&lt;p&gt;写东西的时候，你为排版掉过头发吗？字号、字体、字间距、行间距、段间距、页间距&amp;hellip;.光是想想头发就掉了不少。当我们并不需要这么高的自由度，只想要有一份“看得过去”的内容呈现，这些可设置的选项，似乎就成了累赘。当选择变得更多，我们就会开始犹豫到底哪个更好，接着很可能会出现“码字五分钟，调样式俩小时”的无奈情况。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
