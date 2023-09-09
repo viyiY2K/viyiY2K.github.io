@@ -104,7 +104,7 @@
     },
     "headline": "再搭博客记 | 与你分享我的眼睛","datePublished": "2023-09-09T00:00:00+00:00",
     "dateModified": "2023-09-09T00:00:00+00:00",
-    "wordCount":  6736 ,
+    "wordCount":  6732 ,
     "author": {
         "@type": "Person",
         "name": ["viyi"]
@@ -296,13 +296,13 @@
 <p>在花了十来个小时寻找一个符合审美的 <a href="https://hexo.io/zh-cn/">Hexo</a> 主题之后，我甚至忘记了我一开始为什么想要做这件事。</p>
 <p>坦白来说，除了服务器贵了点之外，我对现行博客方案的唯一不满在于本地与 Typecho 两处的不同步。我习惯使用 Obisidian 撰写文章，每次写完复制到 Typecho 后，还得再手动填一次已经在 Front-matter 的内容，确实有点麻烦但还能忍受。可结合上我糟糕的审校习惯和细节雕花的强迫行为，每次回看就成了噩梦——总是能看到新的小错误，总是要重复修改，两处重复堆叠起来的次数之多着实令人生厌。</p>
 <p>「一定有更漂亮的方式完成这件事」，这种念头的出现毫不意外，接着我开始考虑起静态博客。这并不是一个深思熟虑的举动，现在回看，我更愿意称作是被拖进时间黑洞的预兆。我甚至都想不起来为什么选择了 Hexo。也许仅仅只是因为它是我记得的静态博客框架之一，毕竟观感上它们都大差不差。</p>
-<p>和我之前的判断差不多，的确静态博客的搭建要简单得多。参考 @EsunR 的《<a href="https://blog.esunr.xyz/2022/06/64163235c30f.html">Hexo 快速搭建指南</a>》按部就班地完成，耗时大概不足 2h。但写作流程依旧不够漂亮，将写完的 .md 文件放置在博客根目录下的 <code>source/_post</code> 文件夹后，还得 <code>hexo clean</code>、<code>hexo g</code>、<code>hexo d</code> 三连操作等待编译推送，且每次修改都需要来一回三连……这也很烦。进一步优化方案，结合 <a href="https://fushaolei.github.io/posts/github-action-hexo/">GitHub Action 的自动部署</a> 和 <a href="https://blog.esunr.xyz/2022/07/e9b42b453d9f.html#3-3-%E4%BD%BF%E7%94%A8-Obsidian-Git-%E6%8F%92%E4%BB%B6">Obsidian 中的 Git 插件</a>，基本可以实现全程在 Obsidian 中写完并推送。</p>
-<p>这套方案就写作体验来说绝对是相当丝滑，但我大概率还是会继续留在 Typecho。一方面 <a href="https://github.com/denolehov/obsidian-git">Obsidian Git</a> 的处理对象是仓库（vault）而不是库中的某个文件夹，考虑到我写作过程中经常需要查询援引既有笔记内容，而 Obsidian 跨仓库移动文件又并不是那么方便，操作还是稍显繁琐。另一方面，Hexo 的主题 <del>真的很丑</del> 很少有戳中我审美的。我是万万没想到，我能在两三个小时跑通流程之后，还要花大几十个小时找一个顺眼的主题（甚至还是没找到满意的）。<a href="https://github.com/FuShaoLei/hexo-theme-white">现行主题</a> 勉强及格，但它……不支持……脚注 (╯°□°）╯︵ ┻━┻。</p>
-<p>~~以结果论，这次迁移大概是失败了。~~既然没有 get things done，那么是否 make myself better 了呢？在这次的失败经历中，有两点我很好奇。</p>
+<p>和我之前的判断差不多，的确静态博客的搭建要简单得多。参考 @EsunR 的《<a href="https://blog.esunr.xyz/2022/06/64163235c30f.html">Hexo 快速搭建指南</a>》按部就班地完成，耗时大概不足 2h。但写作流程依旧不够漂亮，将写完的 .md 文件放置在博客根目录下的 <code>source/_post</code> 文件夹后，还得 <code>hexo clean</code>、<code>hexo g</code>、<code>hexo d</code> 三连操作等待编译推送，且每次修改都需要来一回三连……这也很烦。进一步优化方案，结合 <a href="https://fushaolei.github.io/posts/github-action-hexo/">GitHub Action 的自动部署</a>和 <a href="https://blog.esunr.xyz/2022/07/e9b42b453d9f.html#3-3-%E4%BD%BF%E7%94%A8-Obsidian-Git-%E6%8F%92%E4%BB%B6">Obsidian 中的 Git 插件</a>，基本可以实现全程在 Obsidian 中写完并推送。</p>
+<p>这套方案就写作体验来说绝对是相当丝滑，但我大概率还是会继续留在 Typecho。一方面 <a href="https://github.com/denolehov/obsidian-git">Obsidian Git</a> 的处理对象是仓库（vault）而不是库中的某个文件夹，考虑到我写作过程中经常需要查询援引既有笔记内容，而 Obsidian 跨仓库移动文件又并不是那么方便，操作还是稍显繁琐。另一方面，Hexo 的主题 <del>真的很丑</del> 很少有戳中我审美的。我是万万没想到，我能在两三个小时跑通流程之后，还要花大几十个小时找一个顺眼的主题（甚至还是没找到满意的）。<a href="https://github.com/FuShaoLei/hexo-theme-white">现行主题</a>勉强及格，但它……不支持……脚注 (╯°□°）╯︵ ┻━┻。</p>
+<p><del>以结果论，这次迁移大概是失败了</del>。既然没有 get things done，那么是否 make myself better 了呢？在这次的失败经历中，有两点我很好奇。</p>
 <p>一是为什么我会有这么强的完成执念，它是否能被利用于更高 ROI（投入产出比）的任务中？我并不是在所有任务上都能有如此之大的热枕，否则我的高数题册早该写完了。我也不是第一次被任务吸掉所有注意力，忍不住不间断地投入时间，这并非偶然事件。如果这种甚至可以忽略生理需求、专注数十小时的心流体验并不是发生在“选皮肤”这种低价值的事上，我想我会更幸福一点。</p>
 <p>二是如何避免陷入这种生产力提升幻境？寻找最优方案远没有行动本身重要。说真的，有重新折腾静态博客这十几个小时，我都能把文章校对上万次了。就像我此前热衷于效率工具与时间管理那样，“如何更好完成”总是比“完成”更有诱惑力，而我并不希望自己继续沉溺于「生产力色情」（Productivity Porn）<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 中。</p>
 <h3 id="静态博客">静态博客</h3>
-<p>让我们把上一节中的两个问题放置一下，来自九月的本人想纠正一下上文的「迁移失败」。事实上，我还是将它从 Typecho 迁移到了 <a href="https://gohugo.io/">Hugo</a>。又是一样的重复，考虑到我的文章数量并不多且均有本地备份，这并不是什么难事（如若需要教程，<a href="https://cuttontail.blog/about/">@小棉尾巴</a> 的 <a href="https://cuttontail.blog/blog/create-a-wesite-using-github-pages-and-hugo/">这篇文章</a> 对新人非常友好）。但讽刺的是我依旧复现了七月的那种「细节雕花」模式，我已经第三次做这件事，却依旧在花了 1h 让它能见人之后耗费 8h+ 调整样式细节。</p>
+<p>让我们把上一节中的两个问题放置一下，来自九月的本人想纠正一下上文的「迁移失败」。事实上，我还是将它从 Typecho 迁移到了 <a href="https://gohugo.io/">Hugo</a>。又是一样的重复，考虑到我的文章数量并不多且均有本地备份，这并不是什么难事（如若需要教程，<a href="https://cuttontail.blog/about/">@小棉尾巴</a>的<a href="https://cuttontail.blog/blog/create-a-wesite-using-github-pages-and-hugo/">这篇文章</a> 对新人非常友好）。但讽刺的是我依旧复现了七月的那种「细节雕花」模式，我已经第三次做这件事，却依旧在花了 1h 让它能见人之后耗费 8h+ 调整样式细节。</p>
 <p>这先按下不表，为什么我最终还是换成了静态博客呢？最直接的推动力是服务器到期了，本来之前是打算再续一段时间的。不过最近做心理咨询真的太贵了，本无业游民开始肉疼还是决定省点。另一方面，这次服务器到期应该是有几天了，如果不是刚巧昨天休息打算写点东西，它很可能会被我遗忘得更久。</p>
 <p>以前还没这么忙有空网上冲浪的时候，我时常会对现在的互联网产生幻灭。尤其是在被超链接不断传送后，不经意地发现十年前或是更早的漂亮产物时。不喜欢微信的一点是它的链接太糟糕了，而超链接绝对是我心目中最伟大的存在之一，可现在的简中“互不联网们”是不欢迎它的。</p>
 <p>更令人沮丧的是 404 Not Found，它只是存在过，然后没有然后了。被不经意导向它们的时候，我总是会想它们被链接的时候是带着对内容的肯定的吧？它们是有存在着且继续存在着的价值的吧？起码还有我点进它们想要看到呢。我知道有 <a href="https://archive.org/">Internet Archive</a> 这样的存在，但我依旧为那些小众却消失了的内容而感到可惜。</p>
@@ -329,7 +329,7 @@
 <p>诚然，后者是前者出现的必要条件，但休息的价值仍然被大多数人低估了。而更讽刺的是，我们日常所需要解决的并不是像 Archimedes 当时思考的 <a href="https://en.wikipedia.org/wiki/Eureka_effect#History_and_etymology">那种难题</a>。这种专注一旦被放置在次要矛盾的次要方面，就成了毫无必要的细节雕花，一如我在样式上的追毛求疵。</p>
 <h3 id="自我意识评价">自我意识评价</h3>
 <p>在和咨询师对话的过程中，对方给出了另一个视角的解释。我们都知道毛的矛盾论中，课本上必背的一句话是「主要矛盾的主要方面决定事物的性质」。对于博客而言，内容无疑是才是那个主要矛盾的主要方面。</p>
-<p>说真的，除了我之外，到底有谁会在意类别和标签是不是符合 <a href="https://en.wikipedia.org/wiki/MECE_principle">MECE 原则</a> 里的相互独立（Mutually Exclusive）和完全穷尽（Collectively Exhaustive）啊？！到底有谁会在意 URL 是 <a href="https://gohugo.io/content-management/urls/#appearance"> ugly 还是 pretty </a> 啊？！到底有谁会在意错别字和空格的 <a href="https://github.com/sparanoid/chinese-copywriting-guidelines">正确使用</a> 啊？！到底有谁会在意脚注里的引用出处、解释说明等内容啊？！</p>
+<p>说真的，除了我之外，到底有谁会在意类别和标签是不是符合 <a href="https://en.wikipedia.org/wiki/MECE_principle">MECE 原则</a> 里的相互独立（Mutually Exclusive）和完全穷尽（Collectively Exhaustive）啊？！到底有谁会在意 URL 是 <a href="https://gohugo.io/content-management/urls/#appearance">ugly 还是 pretty</a> 啊？！到底有谁会在意错别字和空格的 <a href="https://github.com/sparanoid/chinese-copywriting-guidelines">正确使用</a> 啊？！到底有谁会在意脚注里的引用出处、解释说明等内容啊？！</p>
 <p>是的，只有我很在意。它不符合我的美学，这是我的网站，这是我的一部分，这是你所见到的我，所以我在意。我和咨询师说，我觉得在 20% 的时间里把它做到 70% 的程度的时候，我就应该停下来了。剩下 80% 的时间我都在处理无关紧要的细节，而它们对主要目标的影响不足 10%，这种细节雕花的行为让我觉得……很蠢。我也很不能理解自己为什么会这样失控，等我反应过来的时候它已经发生了。有这个时间我都能把草稿箱里文章写完了，而且整件事非常没有条理，问题的解决明明可以更简单，这让我很不舒服。</p>
 <p>高中的政治课本上或许还有另一句话，「矛盾的主要方面和次要方面是在<strong>每一对矛盾</strong>内部里相对而言的」。也许对于可见成果的内容本身来说，样式确实无关紧要。但如果它要作为展示媒介构成对「我」的一种评价因素，它就是我潜意识中亟待解决的主要矛盾。</p>
 <p>是的，我的自我意识评价就是如此肤浅，而我的内在判官又是如此的苛刻。没有人会因为错别字而怒斥作者，没有人会因为 URL 丑陋而拒绝点开，没有人会因此觉得我很糟糕，我也不会就此陷入童年时刻的那种孤立无援境地。贬低自己的是我，PUA 自己的也是我，完美主义下脆弱的我。</p>
