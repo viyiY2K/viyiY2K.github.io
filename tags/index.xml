@@ -2,125 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 与你分享我的眼睛</title>
-    <link>/tags/</link>
+    <link>https://viyi.cc/tags/</link>
     <description>Recent content in Tags on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 09 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>/tags/blog/</link>
+      <link>https://viyi.cc/tags/blog/</link>
       <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/blog/</guid>
+      <guid>https://viyi.cc/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CPTSD</title>
-      <link>/tags/cptsd/</link>
+      <link>https://viyi.cc/tags/cptsd/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/cptsd/</guid>
+      <guid>https://viyi.cc/tags/cptsd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>情绪闪回</title>
-      <link>/tags/%E6%83%85%E7%BB%AA%E9%97%AA%E5%9B%9E/</link>
+      <link>https://viyi.cc/tags/%E6%83%85%E7%BB%AA%E9%97%AA%E5%9B%9E/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/%E6%83%85%E7%BB%AA%E9%97%AA%E5%9B%9E/</guid>
+      <guid>https://viyi.cc/tags/%E6%83%85%E7%BB%AA%E9%97%AA%E5%9B%9E/</guid>
       <description></description>
     </item>
     
     <item>
       <title>考研</title>
-      <link>/tags/%E8%80%83%E7%A0%94/</link>
+      <link>https://viyi.cc/tags/%E8%80%83%E7%A0%94/</link>
       <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/%E8%80%83%E7%A0%94/</guid>
+      <guid>https://viyi.cc/tags/%E8%80%83%E7%A0%94/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Github</title>
-      <link>/tags/github/</link>
+      <link>https://viyi.cc/tags/github/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/github/</guid>
+      <guid>https://viyi.cc/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SSH</title>
-      <link>/tags/ssh/</link>
+      <link>https://viyi.cc/tags/ssh/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ssh/</guid>
+      <guid>https://viyi.cc/tags/ssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>病记</title>
-      <link>/tags/%E7%97%85%E8%AE%B0/</link>
+      <link>https://viyi.cc/tags/%E7%97%85%E8%AE%B0/</link>
       <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/%E7%97%85%E8%AE%B0/</guid>
+      <guid>https://viyi.cc/tags/%E7%97%85%E8%AE%B0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>躯体化</title>
-      <link>/tags/%E8%BA%AF%E4%BD%93%E5%8C%96/</link>
+      <link>https://viyi.cc/tags/%E8%BA%AF%E4%BD%93%E5%8C%96/</link>
       <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/%E8%BA%AF%E4%BD%93%E5%8C%96/</guid>
+      <guid>https://viyi.cc/tags/%E8%BA%AF%E4%BD%93%E5%8C%96/</guid>
       <description></description>
     </item>
     
     <item>
       <title>二语习得</title>
-      <link>/tags/%E4%BA%8C%E8%AF%AD%E4%B9%A0%E5%BE%97/</link>
+      <link>https://viyi.cc/tags/%E4%BA%8C%E8%AF%AD%E4%B9%A0%E5%BE%97/</link>
       <pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/%E4%BA%8C%E8%AF%AD%E4%B9%A0%E5%BE%97/</guid>
+      <guid>https://viyi.cc/tags/%E4%BA%8C%E8%AF%AD%E4%B9%A0%E5%BE%97/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Markdown</title>
-      <link>/tags/markdown/</link>
+      <link>https://viyi.cc/tags/markdown/</link>
       <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/markdown/</guid>
+      <guid>https://viyi.cc/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PKM</title>
-      <link>/tags/pkm/</link>
+      <link>https://viyi.cc/tags/pkm/</link>
       <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/pkm/</guid>
+      <guid>https://viyi.cc/tags/pkm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>卡片盒笔记法</title>
-      <link>/tags/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95/</link>
+      <link>https://viyi.cc/tags/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95/</link>
       <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95/</guid>
+      <guid>https://viyi.cc/tags/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title>自控力</title>
-      <link>/tags/%E8%87%AA%E6%8E%A7%E5%8A%9B/</link>
+      <link>https://viyi.cc/tags/%E8%87%AA%E6%8E%A7%E5%8A%9B/</link>
       <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/%E8%87%AA%E6%8E%A7%E5%8A%9B/</guid>
+      <guid>https://viyi.cc/tags/%E8%87%AA%E6%8E%A7%E5%8A%9B/</guid>
       <description></description>
     </item>
     

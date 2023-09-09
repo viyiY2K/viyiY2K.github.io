@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>随想 on 与你分享我的眼睛</title>
-    <link>/categories/%E9%9A%8F%E6%83%B3/</link>
+    <link>https://viyi.cc/categories/%E9%9A%8F%E6%83%B3/</link>
     <description>Recent content in 随想 on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 09 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/categories/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>再搭博客记</title>
-      <link>/Notes/building_blog_again/</link>
+      <link>https://viyi.cc/Notes/building_blog_again/</link>
       <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>/Notes/building_blog_again/</guid>
+      <guid>https://viyi.cc/Notes/building_blog_again/</guid>
       <description>&lt;p&gt;拯救细节雕花作战，启动。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>记毕业三两事</title>
-      <link>/Thoughts/about_graduation/</link>
+      <link>https://viyi.cc/Thoughts/about_graduation/</link>
       <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>/Thoughts/about_graduation/</guid>
+      <guid>https://viyi.cc/Thoughts/about_graduation/</guid>
       <description>&lt;p&gt;2023 年 6 月，我第 2 次毕业。从大专到三本，一切似乎没有什么变化，一切又如此不同。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Oh god, these stars.</title>
-      <link>/Thoughts/oh_god_these_stars/</link>
+      <link>https://viyi.cc/Thoughts/oh_god_these_stars/</link>
       <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>/Thoughts/oh_god_these_stars/</guid>
+      <guid>https://viyi.cc/Thoughts/oh_god_these_stars/</guid>
       <description>&lt;p&gt;今天在 Space 有位网上邻居问我说，“你这个时候考计算机的研，不怕是 49 年入国军吗”。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>成功不必在我</title>
-      <link>/Thoughts/success_is_not_necessary_for_me/</link>
+      <link>https://viyi.cc/Thoughts/success_is_not_necessary_for_me/</link>
       <pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>/Thoughts/success_is_not_necessary_for_me/</guid>
+      <guid>https://viyi.cc/Thoughts/success_is_not_necessary_for_me/</guid>
       <description>&lt;p&gt;百日百句课程完结。&lt;/p&gt;
 &lt;p&gt;110 个英语句子，67192 个词数的笔记，1295 张抽认卡，170.75 个小时，101 次直播课。这是我有记录的所有数字，人对数字的感知总是很奇妙。&lt;/p&gt;</description>
     </item>
