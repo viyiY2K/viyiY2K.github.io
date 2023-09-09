@@ -5,6 +5,9 @@
     <loc>/authors/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/categories/b84-%E5%BF%83%E7%90%86%E5%AD%A6/</loc>
+    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/categories/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
   </url><url>
@@ -47,8 +50,11 @@
     <loc>/tags/%E8%80%83%E7%A0%94/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/markdown/</loc>
-    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+    <loc>/tags/github/</loc>
+    <lastmod>2023-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ssh/</loc>
+    <lastmod>2023-06-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/tp-%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
     <lastmod>2023-06-02T00:00:00+00:00</lastmod>
@@ -57,6 +63,12 @@
     <lastmod>2023-06-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/%E6%9C%AD%E8%AE%B0/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/%E7%97%85%E8%AE%B0/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/%E8%BA%AF%E4%BD%93%E5%8C%96/</loc>
     <lastmod>2023-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/CPTSD/cptsd/thinking_sick_body/</loc>
@@ -77,8 +89,14 @@
     <loc>/tags/%E4%BA%8C%E8%AF%AD%E4%B9%A0%E5%BE%97/</loc>
     <lastmod>2023-04-18T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/markdown/</loc>
+    <lastmod>2023-05-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/Notes/markdown_tutorial/</loc>
     <lastmod>2023-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/f014-%E7%94%9F%E4%BA%A7%E5%8A%9B/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/pkm/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
@@ -111,6 +129,9 @@
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/Notes/the_willpower_instinct/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/%E8%87%AA%E6%8E%A7%E5%8A%9B/</loc>
     <lastmod>2023-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/authors/example-author/</loc>

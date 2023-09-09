@@ -104,7 +104,7 @@
     },
     "headline": "使用 SSH 连接 Github 受锤记 | 与你分享我的眼睛","datePublished": "2023-06-01T00:00:00+00:00",
     "dateModified": "2023-06-02T00:00:00+00:00",
-    "wordCount":  5487 ,
+    "wordCount":  5488 ,
     "author": {
         "@type": "Person",
         "name": ["viyi"]
@@ -158,15 +158,11 @@
 <meta property="article:section" content="posts" />
 
 
-<meta property="article:tag" content="Markdown" />
+<meta property="article:tag" content="SSH" />
+
+<meta property="article:tag" content="Github" />
 
 
-
-
-
-<meta property="og:see_also" content="/Notes/markdown_tutorial/" />
-
-<meta property="og:see_also" content="/Notes/the_willpower_instinct/" />
 
 
 
@@ -291,7 +287,7 @@
 
   <p>在试图学习用 Git，那当然第一步是要先连上 Github 啦。</p>
 <h2 id="孤岛简中">孤岛简中</h2>
-<p>依旧使用 ssh (Secure Shell) 来连接到 GitHub，起初还是下意识想要<a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">创建新的密钥</a>，毕竟<a href="https://viyi.cc/cs/building_a_blog.html">之前</a>也这么干过，还灵光一现顺手改了个名字（记住这个下意识和顺手，后面要考🚬）。把公钥给到 GitHub 之后，用 <code>ssh -T git@github.com</code> 进行连接测试，结果报错 <code>Connection closed</code> ，这才开始启动大脑。</p>
+<p>依旧使用 ssh (Secure Shell) 来连接到 GitHub，起初还是下意识想要<a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">创建新的密钥</a>，毕竟<a href="https://viyi.cc/Notes/building_a_blog.html">之前</a>也这么干过，还灵光一现顺手改了个名字（记住这个下意识和顺手，后面要考🚬）。把公钥给到 GitHub 之后，用 <code>ssh -T git@github.com</code> 进行连接测试，结果报错 <code>Connection closed</code> ，这才开始启动大脑。</p>
 <p>查了好半天原因被溜回<a href="https://docs.github.com/zh/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">官方文档</a>，于是默默把它在寻找这类问题解决方法的路径优先级调高至 top。</p>
 <p>按照文档所言，先使用 <code>ssh -T -p 443 git@ssh.github.com</code> 进行测试。其中，选项 <code>-T</code> (test) 表测试，会在 ssh 成功连接后立即断开；<code>-p</code> (port) 指定端口号为 HTTPS 协议默认端口 44；<code>git</code> 为 GitHub 上 Git 服务器的用户名，通常没有实际操作权限，只是用于通信的身份认证；<code>ssh.github.com</code> 为所请求的服务器域名。结果报了新错 <code>Permission denied (publickey)</code>。看意思是能收到连接请求了，但没通过验证。</p>
 <p>先回看一下第一个错误，结合文档提及的代理服务器（proxy servers），考虑大概率是因为习惯科学养鹅，惯用的那家机场可能做了什么限制。确认 443 端口可以连接之后，考虑将它作为 ssh 的连接端口。参照文档中的具体操作，在 ssh 客户端的配置文件（ <code>~/.ssh/config</code> ）中添加以下内容</p>
@@ -302,7 +298,7 @@
 </code></pre>
 <p>其中，<code>Host</code> 用于指定该配置项作用的主机名（若后接 <code>*</code> 则表全局），<code>Hostname</code> 用于指定请求通信对象的目标地址，<code>Port</code> 指定了连接所使用的远程端口，<code>User</code> 用于指定登陆远程主机所用的用户名。</p>
 <h2 id="我很好奇">我很好奇</h2>
-<p><img src="https://i2.hdslb.com/bfs/archive/1d7600dee4177b9f30a057de75a0f2d15acbb577.jpg" alt="冰菓"></p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1694227110862.png" alt="冰菓">)</p>
 <p>官方文档提供的解决路径是把 ssh 的连接端口换成 HTTPS 的默认端口，网上<a href="https://www.v2ex.com/t/807649">查到也有说</a>可以通过在 config 中添加 <code>ProxyCommand nc -v -x 127.0.0.1:7890 %h %p</code> 来解决。顺手查了些拓展资料，还挺有意思的。</p>
 <p><code>ProxyCommand</code> (代理命令) 是 ssh 配置中的一个参数，用于实现通过 Jump Host（跳板机/堡垒机）来连接到远程主机。大概意思就是阿珍（本地主机）想和阿强（目标主机）在赛博空间 say hi，但阿珍出于害羞（安全）不想让阿强知道自己是谁，于是让阿狗（跳板机）传达一下。在这个过程中，阿狗需要知道 ta 需要知道向哪个阿强（目标主机的 IP/域名）转达阿珍的 hi （流量）以及阿强的档期（目标主机的端口号）。具体在命令行中的呈现，是两个占位符—— <code>%h</code> (host) 和 <code>%p</code> (port)，在实际中会被替换为对应的内容。</p>
 <p>这个参数除了 <del>围观阿珍和阿强的爱情故事</del> 通过跳板机转发 ssh 流量给到目标主机之外，还可以指定执行 ssh 连接之前要执行的命令。于是接着就出现了 <code>nc</code> (netcat) 命令<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，这个命令用于设置路由器。麻瓜式理解路由器的话，把它当作是在网络中传输数据的阿猫就行，和之前的阿狗差不多意思。选项 <code>-v</code> (verbose) 是指显示指令执行过程，也就是说会开启调试模式输出详细信息。<code>-x</code> 是用于指定代理主机地址和通信端口号，开启这个选项后会默认使用 SOCKES5(Socket Secure 5) 协议。也就是说，后面的 <code>127.0.0.1:7890</code> 是指代理服务器的 IP 地址，端口号是 <code>7890</code>，使用的通信协议是 SOCKES5。</p>
@@ -361,7 +357,9 @@
       
         <div class="my-4">
     
-    <a href="/tags/markdown/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#Markdown</a>
+    <a href="/tags/ssh/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#SSH</a>
+    
+    <a href="/tags/github/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#Github</a>
     
 </div>
       
@@ -485,19 +483,6 @@
     
 
     
-    
-      <div
-        class=" bg-secondary-bg prose col-span-2 rounded p-6 lg:col-span-6"
-      >
-        <h3>相关</h3>
-        
-          <a href="/Notes/markdown_tutorial/" class="no-underline">Markdown 简明指北</a>
-          <br />
-        
-          <a href="/Notes/the_willpower_instinct/" class="no-underline">里要控几住你记几啊，少年！</a>
-          <br />
-        
-      </div>
     
   </div>
 
