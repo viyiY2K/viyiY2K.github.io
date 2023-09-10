@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 SSH 连接 Github 受锤记</title>
-      <link>https://viyi.cc/Notes/connection_closed_and_permission_denied/</link>
+      <link>https://viyi.cc/connection_closed_and_permission_denied/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/Notes/connection_closed_and_permission_denied/</guid>
+      <guid>https://viyi.cc/connection_closed_and_permission_denied/</guid>
       <description>&lt;p&gt;在试图学习用 Git，那当然第一步是要先连上 Github 啦。&lt;/p&gt;</description>
     </item>
     

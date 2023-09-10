@@ -9,38 +9,38 @@
     <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 SSH 连接 Github 受锤记</title>
-      <link>https://viyi.cc/Notes/connection_closed_and_permission_denied/</link>
+      <link>https://viyi.cc/connection_closed_and_permission_denied/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/Notes/connection_closed_and_permission_denied/</guid>
+      <guid>https://viyi.cc/connection_closed_and_permission_denied/</guid>
       <description>&lt;p&gt;在试图学习用 Git，那当然第一步是要先连上 Github 啦。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>初搭博客记</title>
-      <link>https://viyi.cc/Notes/building_a_blog/</link>
+      <link>https://viyi.cc/building_a_blog/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/Notes/building_a_blog/</guid>
+      <guid>https://viyi.cc/building_a_blog/</guid>
       <description>&lt;h2 id=&#34;教练我想搭博客&#34;&gt;“教练，我想搭博客”&lt;/h2&gt;
 &lt;p&gt;一切要从新冠说起。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Markdown 简明指北</title>
-      <link>https://viyi.cc/Notes/markdown_tutorial/</link>
+      <link>https://viyi.cc/markdown_tutorial/</link>
       <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/Notes/markdown_tutorial/</guid>
+      <guid>https://viyi.cc/markdown_tutorial/</guid>
       <description>&lt;p&gt;写东西的时候，你为排版掉过头发吗？字号、字体、字间距、行间距、段间距、页间距&amp;hellip;.光是想想头发就掉了不少。当我们并不需要这么高的自由度，只想要有一份“看得过去”的内容呈现，这些可设置的选项，似乎就成了累赘。当选择变得更多，我们就会开始犹豫到底哪个更好，接着很可能会出现“码字五分钟，调样式俩小时”的无奈情况。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>卡片盒笔记到底是什么？</title>
-      <link>https://viyi.cc/Notes/zettelkasten/</link>
+      <link>https://viyi.cc/zettelkasten/</link>
       <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/Notes/zettelkasten/</guid>
+      <guid>https://viyi.cc/zettelkasten/</guid>
       <description>&lt;p&gt;当你打开一个空白文档，准备写论文，痛苦也开始了。&lt;/p&gt;
 &lt;p&gt;明明你看了很多文献、记了很多笔记、思考了很多可能性，但此时你还是只能凭借着感觉、回忆或是运气试图在面前这个空白文档中，一个字一个字地敲出你的想法。&lt;/p&gt;
 &lt;p&gt;开题、看文献、成文——这似乎是再熟悉不过的论文流程，你甚至还可以将其分解为更小更具体的子任务来进行。&lt;/p&gt;
@@ -49,10 +49,10 @@
     
     <item>
       <title>里要控几住你记几啊，少年！</title>
-      <link>https://viyi.cc/Notes/the_willpower_instinct/</link>
+      <link>https://viyi.cc/the_willpower_instinct/</link>
       <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/Notes/the_willpower_instinct/</guid>
+      <guid>https://viyi.cc/the_willpower_instinct/</guid>
       <description>&lt;p&gt;如你所见，今天这篇文章我们要来聊聊自控力。&lt;/p&gt;
 &lt;p&gt;如果你的第一反应是「拜托，我的自控力甚至不足以支撑我看完这篇文章」的话，我合理怀疑你有 ADD（注意力缺失症），请尽早就医哦（保持微笑）。&lt;/p&gt;</description>
     </item>
