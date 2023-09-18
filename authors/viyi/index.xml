@@ -6,7 +6,16 @@
     <description>Recent content in 枝因 on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 09 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/authors/viyi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/authors/viyi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么要自 0 始计数？</title>
+      <link>https://viyi.cc/why_numbering_should_start_at_zero/</link>
+      <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/why_numbering_should_start_at_zero/</guid>
+      <description>前几年还在 uTools 打零工的时候，和老大聊说评论区有人反馈，希望批量重命名插件的起始位序可以是 0 （当前默认是从 1 开始），我老大说这人一看就是搞计算机的。当时觉</description>
+    </item>
+    
     <item>
       <title>再搭博客记</title>
       <link>https://viyi.cc/building_blog_again/</link>
