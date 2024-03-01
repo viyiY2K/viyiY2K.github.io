@@ -6,7 +6,16 @@
     <description>Recent content in Categories on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>札记</title>
+      <link>https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/</link>
+      <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>随想</title>
       <link>https://viyi.cc/categories/%E9%9A%8F%E6%83%B3/</link>
@@ -22,15 +31,6 @@
       <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/categories/tp-%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>札记</title>
-      <link>https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/</link>
-      <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/</guid>
       <description></description>
     </item>
     
