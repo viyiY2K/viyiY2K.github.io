@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>4.1 计算机网络 (Computer Networks) | 4 计算机网络 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="4.1.1 早期网络 [line-2, body-2] &#43; 150 年前 &#43; 特快邮件 &#43; - 发一封信件从伦敦到加州要花 2~3 周。 - 传播一条信息所需要的时间称为「时延」 (latency) 。 &#43; 1950~60s &#43; 球鞋网络 (sneakernet) &#43; - 在公司或研究室内部使">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science",
+      "item":"https://viyi.cc/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"4 计算机网络",
+      "item":"https://viyi.cc/docs/computer_network/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"4.1 计算机网络 (Computer Networks)",
+      "item":"https://viyi.cc/docs/computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs/computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/"
+    },
+    "headline": "4.1 计算机网络 (Computer Networks) | 4 计算机网络 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  2196 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "4.1.1 早期网络 [line-2, body-2] \u002b 150 年前 \u002b 特快邮件 \u002b - 发一封信件从伦敦到加州要花 2~3 周。 - 传播一条信息所需要的时间称为「时延」 (latency) 。 \u002b 1950~60s \u002b 球鞋网络 (sneakernet) \u002b - 在公司或研究室内部使"
+}
+</script><meta property="og:title" content="4.1 计算机网络 (Computer Networks) | 4 计算机网络 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs/computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/" />
+
+
+
+
+<meta property="og:description" content="4.1.1 早期网络 [line-2, body-2] &#43; 150 年前 &#43; 特快邮件 &#43; - 发一封信件从伦敦到加州要花 2~3 周。 - 传播一条信息所需要的时间称为「时延」 (latency) 。 &#43; 1950~60s &#43; 球鞋网络 (sneakernet) &#43; - 在公司或研究室内部使" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/docs_1/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-e">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">目录</span>
+    <i class='fas fa-caret-right ms-1'></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="https://viyi.cc/docs/computer_network/">4 计算机网络</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="https://viyi.cc/docs/computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/">4.1 计算机网络 (Computer Networks)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_network/4.2-%E4%BA%92%E8%81%94%E7%BD%91-the-internet/">4.2 互联网 (The Internet)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_network/4.3-%E4%B8%87%E7%BB%B4%E7%BD%91-the-world-wide-web/">4.3 万维网 (The World Wide Web)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_network/4.4-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-cybersecurity/">4.4 网络安全 (Cybersecurity)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_network/4.5-%E9%BB%91%E5%AE%A2%E4%B8%8E%E6%94%BB%E5%87%BB-hackers-cyber-attacks/">4.5 黑客与攻击 (Hackers &amp; Cyber Attacks)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_network/4.6-%E5%8A%A0%E5%AF%86-cryptography/">4.6 加密 (Cryptography)</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    <article class="prose">
+  <h1 class="mb-4">4.1 计算机网络 (Computer Networks)</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>5分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h3 id="411-早期网络">4.1.1 早期网络</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 150 年前
++ 特快邮件
++ - 发一封信件从伦敦到加州要花 2~3 周。
+- 传播一条信息所需要的时间称为「时延」 (latency) 。
+
++ 1950~60s
++ 球鞋网络 (sneakernet) 
++ - 在公司或研究室内部使用，旨在信息交换。
+- 也有助于共享物理资源，如打印机或存储器。
+
++ 1970s
++ 以太网
++ - 一种局域网 (近距离构成的小型网络，简称 LAN) ，诞生于  Xerox PARC (施乐的&quot;帕洛阿尔托研究中心&quot;) 。
+- 最简单形式：一条以太网电线连接数台计算机，数据在电缆中共享，各取所需。
+
+</code></pre>
+<h3 id="412-以太网">4.1.2 以太网</h3>
+<h4 id="mac-地址">MAC 地址</h4>
+<p>以太网 (Ethernet) 是早期最著名也最成功的一种局域网 LAN 技术，其使用一条以太网电线连接数台计算机，数据在电缆中进行共享，使用 MAC 地址 (Media Access Control address) 来确认接收数据的对象。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674649146505.png" alt="MAC 地址"></p>
+<p>将 MAC 地址放在数据头部作为前缀，当计算机监听到以太电缆中的数据有自己的 MAC 地址时才处理数据。现在制造的每一台计算机都自带唯一的 MAC 地址用于构建以太网和无线网络 (WIFI) 。</p>
+<h4 id="载波监听">载波监听</h4>
+<p>像以太网这样多台电脑共享一个传输媒介的方法称为「载波侦听多路访问」 (Carrier Sense Multiple Access, CSMA)  ：</p>
+<ul>
+<li>载体 (carrier)：指运输数据的共享媒介。以太网的&quot;载体&quot;是铜线，WiFi 的&quot;载体&quot;是传播无线电波的空气。</li>
+<li>侦听(Sense)：计算机守候在端口等待数据。</li>
+<li>多路访问 (Multiple Access)：许多计算机同时侦听载体。</li>
+</ul>
+<p>载体传输数据的速度 叫「带宽」(Bandwidth)，共享载体会导致网络流量上升时出现「冲突」(collision)——大家都想往载体里传数据，但一次只能有一个。</p>
+<p>出现冲突后最简单的处理方式是停止传输，等待网络空闲重试。但其他计算机也会这样做，这很可能导致更多冲突。</p>
+<h4 id="指数退避">指数退避</h4>
+<p>一台计算机在传输聚聚期间检测到冲突时，会等待“1s+随机时间”后重试。若重试仍然出现冲突，意味着网络出现拥塞 (congestion)，此时则等待 2s。再度重试仍然冲突时，等待 4s 后进行重发尝试。接着是 8s、16s etc. ，以此类推。</p>
+<p>这种等待时间指数级增长的方法称为「指数退避」(Exponential Backoff)，以太网和 WIFI 等传输协议均使用这种技巧避免网络拥塞。</p>
+<h4 id="冲突域">冲突域</h4>
+<p>载体和其中的设备总称为「冲突域」(Collision Domain)，为了减少冲突并提升效率，可以将一个大的冲突域拆解为两个小的冲突域，使用交换机 (Network Switch) 来连接。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674649311076.png" alt="冲突域"></p>
+<p>交换机会维护记录着 MAC 地址所属网络（冲突域）的列表，其仅在必要时进行数据传输，如当 A 向 F 发数据时。</p>
+<h3 id="423-路由">4.2.3 路由</h3>
+<p>大型网络的构建通常是由多个稍小的网络连接而成的，而一个计算机通过多个网络到达另一个计算机通常也会有多条路径，因此存在「路由」(routing) 问题。</p>
+<h4 id="电路交换">电路交换</h4>
+<p>如同早期 1910s 的电话系统那样，为两台遥遥相望的计算机或网络通过电路连接后分配一条专用的通信线路，称为「电路交换」(Circuit Switching)。</p>
+<p>电路交换的缺点在于不灵活且价格高昂，同时存在线路闲置的情况。其优点在于专属电路无需共享可以随意使用，因此军队、银行等其他机构依然会购买专用线路来连接数据中心。</p>
+<h4 id="报文交换">报文交换</h4>
+<p>使用类似于邮政系统的站点中转方式进行数据传输，称为「报文交换」(Message Switching)。</p>
+<p>在报文交换中，数据会经由不同的路由器 (network routers) 传输至目的地。消息沿着路由跳转的次数称为「跳数」(hop count)，通过对跳数的记录分析，可以分辨相应的路由问题。</p>
+<p>若某条报文的跳数被检测出过高异常，则可以推断出路由存在错误，这称为「跳数限制」(Hop Limit)。</p>
+<p>报文交换的优点在于可以使用不同的路由使得通信更为可靠、容错率更高。缺点在于报文较大时易堵塞网络，可通过将大报文拆分为「数据包」(packets) 来解决。</p>
+<h4 id="ip-协议">IP 协议</h4>
+<p>被分割出的数据包中均带有目标地址，用于告知路由器如何转发。报文的具体格式通过 1970s 创建的「互联网协议」(Internet Protocol, IP) 定义。</p>
+<p>遵循 IP 协议的计算机都用于一个 IP 地址，以点分十进制的方式表示，如 172.217.7.238 (Google 某服务器的 IP 地址)。</p>
+<p>数百万台计算机在网络上不断交换数据，瓶颈的出现和消失是毫秒级的。因此，路由器平衡会与其他路由器之间的负载，以确保网络中的数据传输可以快速可靠，这叫「阻塞控制」(congestion control)。</p>
+<p>当同一报文的不同数据包经由不同线路到达目的地，其到达的先后顺序可能不一致，即出现乱序问题，可以通过 TCP/IP 协议来解决。</p>
+<h4 id="分组交换">分组交换</h4>
+<p>将大的报文数据拆分成多个小数据包后，通过灵活的路由传递，这种传输数据的运行方式称为「分组交换」(Packet Switching)。</p>
+<p>分组交换源于冷战期间的核攻击威胁，具有去中心化的特点，不存在中心权威机构，也没有单点失败问题。</p>
+<p>世界上第一个分组交换网络是 ARPANET ，该名字源于赞助此项目的机构“美国高级研究计划局”(Advanced Research Projects Agency)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674650984942.png" alt="1974 年的 ARPANET"></p>
+<p>上图是 1974 年的 ARPANET 简图。图中每个小圆表示一个地点，比如运行着一个路由器的大学或实验室（拥有单台或多台计算机）。图中还能看到 &ldquo;PDP-1&rdquo; 和&quot;IBM 360系统&quot;，甚至还有一个伦敦的 ATLAS 是通过卫星连到网络里的。</p>
+<p>如今，全球的路由器协同工作，找出最高效的线路，用各种标准协议运输数据，比如 &ldquo;因特网控制消息协议&rdquo;(Internet Control Message Protocol, ICMP) 以及&quot;边界网关协议&quot;(Border Gateway Protocol, BGP) 等。</p>
+<p>互联网在这几十年间发展迅速，据估计约有接近 100 亿台联网设备。随着各种智能设备的出现，比如联网冰箱，恒温器以及其他智能家电，它们还组成了「物联网」(internet of things)。</p>
+
+</article>
+
+                    
+                    
+                    
+
+                    
+
+
+
+                    
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/docs/computer_network/4.2-%E4%BA%92%E8%81%94%E7%BD%91-the-internet/" class="block">4.2 互联网 (The Internet)</a>
+      
+    </div>
+  </div>
+
+
+                    
+
+
+
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div
+  class="
+    bg-secondary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc 
+    border-s
+   hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#411-早期网络">4.1.1 早期网络</a></li>
+        <li><a href="#412-以太网">4.1.2 以太网</a>
+          <ul>
+            <li><a href="#mac-地址">MAC 地址</a></li>
+            <li><a href="#载波监听">载波监听</a></li>
+            <li><a href="#指数退避">指数退避</a></li>
+            <li><a href="#冲突域">冲突域</a></li>
+          </ul>
+        </li>
+        <li><a href="#423-路由">4.2.3 路由</a>
+          <ul>
+            <li><a href="#电路交换">电路交换</a></li>
+            <li><a href="#报文交换">报文交换</a></li>
+            <li><a href="#ip-协议">IP 协议</a></li>
+            <li><a href="#分组交换">分组交换</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        hljs.highlightAll();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>1.6 寄存器 &amp; 内存（Registers and RAM） | 1 计算机组成 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="!计算机的存储器（Memory）可分为两种类型： 随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。 SRAM( Static Random Access Memory，">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science",
+      "item":"https://viyi.cc/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"1 计算机组成",
+      "item":"https://viyi.cc/docs/computer_organization_principles/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"1.6 寄存器 \u0026 内存（Registers and RAM）",
+      "item":"https://viyi.cc/docs/computer_organization_principles/06_1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs/computer_organization_principles/06_1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/"
+    },
+    "headline": "1.6 寄存器 \u0026 内存（Registers and RAM） | 1 计算机组成 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  1536 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "!计算机的存储器（Memory）可分为两种类型： 随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。 SRAM( Static Random Access Memory，"
+}
+</script><meta property="og:title" content="1.6 寄存器 &amp; 内存（Registers and RAM） | 1 计算机组成 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs/computer_organization_principles/06_1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/" />
+
+
+
+
+<meta property="og:description" content="!计算机的存储器（Memory）可分为两种类型： 随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。 SRAM( Static Random Access Memory，" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-e">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">目录</span>
+    <i class='fas fa-caret-right ms-1'></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="https://viyi.cc/docs/computer_organization_principles/">1 计算机组成</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/chapter-2-%E5%89%AF%E6%9C%AC/">1.10 集成电路、摩尔定律（Integrated Circuits &amp; Moore&#39;s Law）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/02_1.2-%E7%94%B5%E5%AD%90%E8%AE%A1%E7%AE%97electronic-computing/">1.2 电子计算（Electronic Computing）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/03_1.3-%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E4%B8%8E%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AFboolean-logic-logic-gates/">1.3 布尔逻辑与逻辑电路（Boolean Logic &amp; Logic Gates）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/04_1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/">1.4 二进制表示法（Representing Numbers and Letters with Binary）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/05_1.5-alu-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83-how-computers-calculate/">1.5 ALU 算术逻辑单元 （How Computers Calculate）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/06_1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/">1.6 寄存器 &amp; 内存（Registers and RAM）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/07_1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/">1.7 CPU 中央处理器（The Central Processing Unit）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/08_1.8-%E6%8C%87%E4%BB%A4%E5%92%8C%E7%A8%8B%E5%BA%8Finstructions-programs/">1.8 指令和程序（Instructions &amp; Programs）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/09_1.9-%E9%AB%98%E7%BA%A7-cpu-%E8%AE%BE%E8%AE%A1advanced-cpu-designs/">1.9 高级 CPU 设计（Advanced CPU Designs）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/01_1.1%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97/">1.1 早期的计算（Early Computing）</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    <article class="prose">
+  <h1 class="mb-4">1.6 寄存器 &amp; 内存（Registers and RAM）</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>4分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>!计算机的存储器（Memory）可分为两种类型：</p>
+<ol>
+<li>随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。
+<ul>
+<li>SRAM( Static Random Access Memory，静态随机存取存储器）：“静态”是指这种存储器只要保持通电，里面储存的数据就可以恒常保持（接下来用锁存器做的就是它）。</li>
+<li>DRAM( Dynamic Random Access Memory，动态随机存取存储器)：“动态”是指所储存的数据需要周期性地更新。</li>
+<li>Flash：允许多次写入的非易失性存储器。</li>
+<li>NVRAM( Non-Volatile Random Access Memory）：非易失性随机存取存储器。</li>
+</ul>
+</li>
+<li>持久存储器（Persistent Memory）：电源关闭时，数据也不会丢失。</li>
+</ol>
+<h3 id="161-and-or-锁存器">1.6.1 AND-OR 锁存器</h3>
+<p>用 OR 或门可以记录 1，用 AND 与门可以记录 0：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2000%3A%E5%88%86%2048%3A%E7%A7%92%20f8s9s8sa5a1673078448290.png" alt="记录 0 或 1"></p>
+<p>将两者如下图所示连接则构成 AND-OR 锁存器，可以锁定（latch）一个值来存储 1 位信息，故有此名。其有两个输入：「设置」为 1 则输出为 1，「复位」为 1 则输出为 0，两者均为 0 则输出最后记录的数字。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2003%3A%E5%88%86%2022%3A%E7%A7%92%20y54bkthke61673078602256.png" alt="AND-OR 锁存器"></p>
+<p>另，通常将放入数据的动作称为「写入」（writing），拿出数据的动作称为「读取」（reading）。</p>
+<h3 id="162-门锁gated-latch">1.6.2 门锁（Gated Latch）</h3>
+<p>AND-OR 锁存器需要用两个输入记录一个数字，使用起来较为麻烦，因此引入可以控制读写的「门锁」（Gated Latch）来存储 1 bit。门锁在输入输出之外，添加了一条允许写入线（Write Enable）——启用时允许写入数据，反之锁定（locked）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2013%3A%E5%88%86%2029%3A%E7%A7%92%20afk0la4b791673079208922.png" alt="门锁"></p>
+<h3 id="163-八位锁存器8-bit-latch">1.6.3 八位锁存器（8-bit Latch）</h3>
+<p>将 8 个门锁用 1 根允许写入线连接，构成八位锁存器，可用于存储 8 位信息。先将允许写入线置 1，写入数据后将其置 0 则可完成存储。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2019%3A%E5%88%86%2059%3A%E7%A7%92%20r4n03hbow51673079598873.png" alt="八位锁存器"></p>
+<h3 id="164-锁存器矩阵latches-matrix">1.6.4 锁存器矩阵（Latches Matrix）</h3>
+<h4 id="连接">连接</h4>
+<p>使用 16 × 16 个可存储 1 bit 的锁存器矩阵来存储 256 位，当需要启用某个锁存器时就打开相对应的行线、列线和允许写入线。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2025%3A%E5%88%86%2041%3A%E7%A7%92%20g1at8wiorr1673079941760.png" alt="锁存器矩阵"></p>
+<p>在交叉处使用 AND 与门连接，当且仅当行线、列线、单个锁存器的允许写入线均为 1 时，才允许该锁存器进行写入。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2034%3A%E5%88%86%2030%3A%E7%A7%92%20vh516h50ga1673080470371.png" alt="使用与门连接"></p>
+<p>这也意味着可以使用 1 根数据线来连接矩阵中的所有锁存器用于传输数据，因为可根据行列线进行需要开启的锁存器。类似地，可以使用 1 根允许写入线来控制从矩阵中的某个锁存器读取数据。</p>
+<p>因此，256 位的锁存器矩阵仅需 35 条线连接—— 1 条数据线、1 条允许写入线、1 条允许读取线以及 16 行、16 列用于选择锁存器的线。</p>
+<h4 id="选择">选择</h4>
+<p>4 位二进制数可表示的最大数字为 16，刚好足够满足对 16 × 16 的矩阵进行行数、列数的地址编码。</p>
+<p>可以使用 8 位二进制数来唯一标识行列交叉处的锁存器，比如第 12 行第 8 列的锁存器可以表示为 1100 1000，这就是前文 1.4.4 节中提过「位址」（memory addresses）。</p>
+<p>为了使机器读懂这个位址，需要使用 2 个支持 16 路的「多路复用器」（multiplexer）来分别处理行列地址，输入 4 位的数字后，多路复用器会连通相应的行/列线。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2051%3A%E5%88%86%2002%3A%E7%A7%92%20vuunik1yzs1673081462614.png" alt="多路复用器"></p>
+<p>16 × 16 的单位锁存器矩阵可以存储 256 个 bit，将 8 个 256-bit 的存储器连接起来构成大小为 256Bytes 的存储器。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2056%3A%E5%88%86%2004%3A%E7%A7%92%20kx3tmy0ii71673081764761.png" alt=""></p>
+<p>在 256Bytes 存储器中，一个八位数字是将每位各自存储在一个 256-bit 内存中，1 个 256-bit 存储器中的某位比特与其余 7 个 256-bit 存储器中的某 7 位比特共享同一个地址。因此，256Bytes 内存中也只有 256 个地址，各自代表 1Byte 的大小，可读写 8bit 值。</p>
+<p>简单起见，将这个 256Bytes 的存储器当作整体抽象为一个可寻址存储器。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2017%3A%E6%97%B6%2008%3A%E5%88%86%2029%3A%E7%A7%92%20wevb3q92ws1673082508995.png" alt="8 位可寻址存储器"></p>
+<h3 id="165-ram">1.6.5 RAM</h3>
+<p>8 位位址最多可以表示 256 （0~255）个地址，想要对 TB 或是 GB 级别的存储器寻址则更高位的数字表示地址（比如 16/32 位）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2017%3A%E6%97%B6%2022%3A%E5%88%86%2056%3A%E7%A7%92%20sck417easb1673083376008.png" alt="1980s 的 1MB 内存条"></p>
+<p>上图是 1 MB 大小的 RAM 内存条（1980s），通常是由 8 个内存模块（memory modules）构成，1 个内存模块里有 32 个内存方块（squares of memory），1 个内存方块中有 4 个小块（block），1 个小块中有 128 × 64 位的矩阵，单个小块是 8192bits 大小。</p>
+<p>因此，1 个内存方块中有 8192 × 4 = 32768 bits，总共有 32 个内存方块，单个内存模块大约在 100w bits 大小，有 8 个内存模块，总共是 800w bits 约等于 1 MB 大小。</p>
+
+</article>
+
+                    
+                    
+                    
+
+                    
+
+
+
+                    
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/docs/computer_organization_principles/05_1.5-alu-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83-how-computers-calculate/" class="block">1.5 ALU 算术逻辑单元 （How Computers Calculate）</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/docs/computer_organization_principles/07_1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/" class="block">1.7 CPU 中央处理器（The Central Processing Unit）</a>
+      
+    </div>
+  </div>
+
+
+                    
+
+
+
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div
+  class="
+    bg-secondary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc 
+    border-s
+   hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#161-and-or-锁存器">1.6.1 AND-OR 锁存器</a></li>
+        <li><a href="#162-门锁gated-latch">1.6.2 门锁（Gated Latch）</a></li>
+        <li><a href="#163-八位锁存器8-bit-latch">1.6.3 八位锁存器（8-bit Latch）</a></li>
+        <li><a href="#164-锁存器矩阵latches-matrix">1.6.4 锁存器矩阵（Latches Matrix）</a>
+          <ul>
+            <li><a href="#连接">连接</a></li>
+            <li><a href="#选择">选择</a></li>
+          </ul>
+        </li>
+        <li><a href="#165-ram">1.6.5 RAM</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        hljs.highlightAll();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>5 拓展讨论 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="5 拓展讨论 5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence) 机器学习 (Machine Learning, ML) 的本质是根据数据做出决定，机器学习算法让计算机可以从数据中学习，然后自行做出预测和决定。 能够根据">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science",
+      "item":"https://viyi.cc/cccs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"计算机组成",
+      "item":"https://viyi.cc/cccs/crash-course-computer-science/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"5 拓展讨论",
+      "item":"https://viyi.cc/cccs/crash-course-computer-science/5-%E6%8B%93%E5%B1%95%E8%AE%A8%E8%AE%BA/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/cccs/crash-course-computer-science/5-%E6%8B%93%E5%B1%95%E8%AE%A8%E8%AE%BA/"
+    },
+    "headline": "5 拓展讨论 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2024-10-16T00:00:00+00:00",
+    "wordCount":  3219 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "5 拓展讨论 5.1 机器学习与人工智能 (Machine Learning \u0026amp; Artificial Intelligence) 机器学习 (Machine Learning, ML) 的本质是根据数据做出决定，机器学习算法让计算机可以从数据中学习，然后自行做出预测和决定。 能够根据"
+}
+</script><meta property="og:title" content="5 拓展讨论 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/cccs/crash-course-computer-science/5-%E6%8B%93%E5%B1%95%E8%AE%A8%E8%AE%BA/" />
+
+
+
+
+<meta property="og:description" content="5 拓展讨论 5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence) 机器学习 (Machine Learning, ML) 的本质是根据数据做出决定，机器学习算法让计算机可以从数据中学习，然后自行做出预测和决定。 能够根据" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2024-10-16T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="CCCS" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">5 拓展讨论</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>7分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h1 id="5-拓展讨论">5 拓展讨论</h1>
+<h2 id="51-机器学习与人工智能-machine-learning--artificial-intelligence">5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence)</h2>
+<p>机器学习 (Machine Learning, ML) 的本质是根据数据做出决定，机器学习算法让计算机可以从数据中学习，然后自行做出预测和决定。</p>
+<p>能够根据数据做出一定决断并不意味着它拥有和人类一般的智能 (Artificial Intelligence, AI)。ML 和 AI 经常混用，但计算机科学家通常认为前者是实现后者的技术之一。</p>
+<h3 id="511-分类器--classifier">5.1.1 分类器  (classifier)</h3>
+<p>本节以判断飞蛾是&quot;月蛾&quot;还是&quot;帝蛾&quot;为例，进行概念的简单讲解。这类问题称为「分类」 (classification)，用于解决分类问题的算法称为「分类器」 (classifier)。</p>
+<h3 id="决策边界-decision-boundaries">决策边界 (decision boundaries)</h3>
+<p>许多分类器会将照片和声音中的「训练数据」(training data) 简化为「特征」(features)，以便于更好地进行 &ldquo;分类&rdquo; 判断的取值。其具体步骤如下：</p>
+<p>（1）人类昆虫学家记录飞蛾的特征值和种类，进行「标记数据」(labeled data)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675220849996.png" alt="标记数据"></p>
+<p>（2）将数据可视化形成「决策空间」(decision space)，使用机器学习算法找出区分飞蛾的最佳方式，确定「决策边界」 (decision boundaries)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675220970138.png" alt="决策边界"></p>
+<p>（3）根据实际数据与决策边界的误差值，绘制「混淆矩阵」(confusion matrix)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221101348.png" alt="混淆矩阵"></p>
+<p>决策边界的确定无法 100% 涵盖正确判断，机器学习算法的目的在于「最大化正确分类 + 最小化错误分类」。在上述训练数据中，所确认的决策边界平均识别准确率在 84%。</p>
+<h4 id="决策树-decision-trees">决策树 (Decision Trees)</h4>
+<p>将不认识的飞蛾测量特征并绘制到决策空间中，这种数据称为「未标签数据」(unlabeled data)，可以利用决策边界预测判断飞蛾种类。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221502695.png" alt="未标签数据"></p>
+<p>将把决策空间切成几个盒子的简单方法可以用「决策树」(Decision Trees) 来表示，使用 if 语句写出代码就是生成决策树的机器学习算法。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221564903.png" alt="决策树"></p>
+<p>决策树只是机器学习中的一个简单示例，如今有数百种算法存在且不断出现新算法。一些算法甚至用多个 &ldquo;决策树&rdquo; 来预测，计算机科学家称为 &ldquo;森林&rdquo; (Forests)。</p>
+<p>也有不用树的方法，比如 &ldquo;支持向量机&rdquo; (Support Vector Machines)，本质上是用任意线段来切分 &ldquo;决策空间&rdquo;，线段可以是多项式或其他数学函数。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221885248.png" alt="支持向量机"></p>
+<p>机器学习算法会负责找出最好的线，最准的决策边界。增加至 3 个特征，我们还可以继续用 3D 散点图绘制出决策空间。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221960514.png" alt="3D散点图"></p>
+<p>但当引入多个特征，就无法依靠人力在一个上千维度的决策空间里，为超平面(Hyperplane)找出一个方程了，但聪明的机器学习算法可以做到。</p>
+<h3 id="512-人工神经网络-artificial-neural-networks">5.1.2 人工神经网络 (artificial neural networks)</h3>
+<p>&ldquo;决策树&quot;和&quot;支持向量机&quot;这样的技术发源自统计学，统计学早在计算机出现前就在用数据做决定，有一大类机器学习算法用了统计学方法。但也有不用统计学的算法，其中最值得注意的是「人工神经网络」(artificial neural networks)。</p>
+<p>人类的神经元细胞利用电信号和化学信号来处理和传输消息，它从其他细胞 得到一个或多个输入，然后处理信号并发出信号，从而形成巨大的互联网络来处理复杂的信息。</p>
+<p>人工神经元通过类似的方式，接收多个输入后整合并发出一个信号。其不适用电信号或是化学信号，而是使用数据堆叠成多层，形成神经元网络，故有此名。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675222465029.png" alt="人工神经网络"></p>
+<p>仍以飞蛾为例，输入数据的特征依旧选定为 &ldquo;重量&rdquo; 和 &ldquo;翼展&rdquo; 作为第一层「输入层」(input layer) ，在输入层和输出分类结果的「输出层」(output layer)  之间存在「隐藏层」(hidden layer)。</p>
+<p>隐藏层负责把输入变成输出，实际上用于判断分类。首先将输入数据乘以权重，求和后再进行偏差值处理（加减固定值），接着再用激活函数 (activation function) / 传递函数 (transfer function) 对输出结果执行最后一次数学修改。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675224489512.png" alt="隐藏层处理"></p>
+<p>权重和偏差值一开始是随机的，算法会通过 &ldquo;标记数据&rdquo; 来进行训练和测试，进而调整这些值来逐渐提高准确性。</p>
+<p>隐藏层中存在多个神经元 (neuron)，每个神经元都会进行加权、求和、偏置、激活函数的计算过程，并向前进行传播，计算结果最高的就是分类结果。</p>
+<p>最重要的是隐藏层可以有很多层，<strong>深度学习 (deep learning )</strong> 因存在多个隐藏层而得名。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675224592479.png" alt="深度学习"></p>
+<p>训练更复杂的网络需要更多的计算量和数据，尽管神经网络 50 多年前就发明了，但直到处理器和 CPU 的发展才使得深层神经网络在最近成为可能。</p>
+<p>几年前，Google 和 Facebook 展示了深度神经网络在照片中识别人脸的准确率和人一样高，这是一个巨大的里程碑。</p>
+<h3 id="513-强化学习--reinforcement-learning">5.1.3 强化学习 ( Reinforcement Learning)</h3>
+<p>只能做特定任务 &ldquo;弱 AI&rdquo;(Weak AI) 或&quot;窄 AI&rdquo; (Narrow AI)，比如利用深层神经网络来开车、翻译、诊断医疗状况等，只能做特定的一件事。</p>
+<p>真正通用的、像人一样聪明的 AI，叫 &ldquo;强 AI&rdquo; (Strong AI)。目前强 AI 暂未出现，但许多人认为随着数字化知识的爆炸性增长可能会加速其的出现，毕竟 AI 吸收新讯息的速度比人类强得多。</p>
+<p>比如 IBM 的 Watson(沃森) 吸收了 2 亿个网页的内容，在 2011 年的知识竞答中碾压了人类；2016 年 Google 推出的 AlphaGo（玩围棋的窄 AI）通过和自己的克隆版下无数次围棋来打败人类最好的围棋选手。</p>
+<p>像 AlphaGo 这样通过不断试错来学习什么管用、什么不管用，从而自己发现成功的策略的方法很类似与人类的学习方式，这称为「强化学习」(Reinforcement Learning)。</p>
+<p>对于很多垂直的问题，强化学习已被广​​泛使用。如果这类技术被广泛使用，可能会创造出类似于人类的 &ldquo;强 AI&rdquo; 能够像人类小孩一样学习，但学习速度超快。如果这发生了，对人类可能有相当大的影响。</p>
+<h2 id="52-计算机视觉-computer-vision">5.2 计算机视觉 (Computer Vision)</h2>
+<p>计算机视觉 (Computer Vision) 领域的目标是让计算机理解图像和视频。</p>
+<blockquote>
+<p>[!quote]
+&ldquo;Just like to hear is the not the same as to listen.To take pictures is not the same as to see.&rdquo; by computer vision professor Fei-Fei Li</p>
+<p>「听到不等于听懂，看到不等于看懂」——李飞飞，计算机视觉教授</p>
+</blockquote>
+<h3 id="521-颜色跟踪算法">5.2.1 颜色跟踪算法</h3>
+<p>参见 3.3.1 节位图的相关说明，我们知道单个像素是由 &ldquo;红、绿、蓝&rdquo; 三原色组成的，三种颜色的组合 RGB 值可以定义一个像素的颜色。而最简单的计算机视觉算法是一种 &ldquo;颜色跟踪算法&rdquo; (color marker tracking and similar algorithms)。</p>
+<p>首先记录单色物体的最中心像素 RGB 值，如粉球中心点像素。为使得程序找到输入图片中最接近该 RGB 值颜色的像素，算法会按序 (如左上始) 逐个检查像素计算于目标颜色的差异。遍历后最接近目标值的像素位置，可能就是所要找的物品 (粉球)。</p>
+<p>根据这个思路，可以为视频的每一帧图片都跑一次算法，从而跟踪粉球的位置。其缺陷在于因为光线、阴影等干扰会使得粉球的颜色有所变化，而与所存储的原始粉球 RGB 值不一致。再加上环境中可能存在其他颜色相近的物品，也会对该算法的识别准确率产生影响。</p>
+<p>因此颜色跟踪算法的使用环境的控制要求较高，且只适用于单个像素的搜索而无法匹配占有多个像素的特征。</p>
+<h3 id="522-核-kernel">5.2.2 核 (kernel)</h3>
+<p>当我们需要识别类似于物体边缘 (由多个像素组成) 时，需要采用能够按块处理像素的算法。简化颜色以灰度图片为例进行说明，易得边缘处存在垂直变化，故设定 &ldquo;某像素是垂直边缘的可能性，取决于左右两边像素的颜色差异程度&rdquo; 的判断规则。</p>
+<p>算法在本例中不仅处理单个像素，而是处理某像素和左右两边的像素这一小区域 (small regions) ，称该区域为「块」(patches)。</p>
+<p>判断规则——色差越大越可能是边缘——的数学表达，称为「核」(kernel) 或是「过滤器」(filter) 。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675483606870.png" alt="核"></p>
+<p>&ldquo;核&rdquo; 内的值 (数字) 用于对块做像素乘法，其总和用于存储更新中心像素的值。这种将 &ldquo;核&rdquo; 用于像素块的操作方式，称为「卷积」(convolution)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675484067296.png" alt=""></p>
+<p>将这个 &ldquo;核&rdquo; 用于照片中的每个像素，处理后的结果会突出垂直边缘的像素值，如下图所示。若想突出水平边缘的特征，则需要使用不同的 &ldquo;核&rdquo; 再做进一步的处理。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675484293371.png" alt="垂直边缘敏感核处理效果"></p>
+<p>这两个用于边缘增强的 &ldquo;核&rdquo; 称为「Prewitt 算子」(Prewitt Operators)，以发明者的名字命名。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675484648822.png"</div></div>
+<p>各类不同的 &ldquo;核&rdquo; 可以用于不同的图像转换，也可以制作对不同模式敏感的 &ldquo;核&rdquo;，用于匹配特定形状。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675485474276.png" alt="各类不同核"></p>
+<p>多个 &ldquo;核&rdquo; 组合在一起识别效率与准确率均会提升，比如用线段敏感的核判断鼻子、用像素岛核来判断眼睛等组合识别人脸。</p>
+<p>不是脸但又有一堆脸的特征在正确的位置，这种情况不太可能。这种组合 &ldquo;核&rdquo; 是一个早期很有影响力的算法的基础，称为「维奥拉·琼斯 人脸检测算法」(Viola-Jones Face Detection)。</p>
+<h3 id="523-卷积神经网络">5.2.3 卷积神经网络</h3>
+<p>5.1.2 节中介绍的人工神经网络，通过最基本的单位 &ldquo;神经元&rdquo; 来对多个输入进行处理，乘权求和后得到一个输出。当我们为神经元输入二维像素 (2D pixel data)，则会得到「卷积神经网络」 (Convolutional Neural Networks)。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675486107425.png"</div></div>
+<p>与 5.2.2 小节中预先设定好的 &ldquo;核&rdquo; 不同，卷积神经网络中的 &ldquo;核&rdquo; 可以自行学习，卷积神经网络可以选择有利于识别图片中特征的核作为某层神经元的处理方式，再将处理好的图像传给下一层进行别的特征识别。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675486149597.png" alt="卷积神经网络"></p>
+<p>&ldquo;卷积神经网络&rdquo; 不是非要很多很多层，但一般会有很多层，来识别复杂物体和场景，所以算是 &ldquo;深度学习&rdquo; 的一种。</p>
+<h3 id="524-情感识别算法">5.2.4 情感识别算法</h3>
+<p>识别出人脸后，还可以进一步使用更专用的计算机视觉算法——像是 &ldquo;情感识别算法&rdquo;(emotion recognition algorithms) 来定位面部标志，进而判断人类的情绪。</p>
+<p>比如定位了鼻尖和嘴角的标志点，可以通过计算点之间的举例来判断是否张嘴或微笑；跟踪眉毛相对于眼睛的位置，可以判断是否表示喜悦或是惊喜；通过这些信息来让电脑知道你的情绪，从而做出合适的行为。这只是计算机通过视觉感知周围的一个例子，你在不同环境会有不同行为，计算机在足够聪明的情况下也应如此。</p>
+<p>面部标记点也可以捕捉脸的形状，进行生物识别，可以用于手机解锁或是让政府用摄像头跟踪人。跟踪手臂和全身的标记点，可以让计算机理解用户的身体语言，比如用户给联网微波炉的手势。</p>
+<p>抽象是构建复杂系统的关键，计算机视觉也是一样。硬件层面，有工程师在造更好的摄像头，让计算机有越来越好的视力；有了用来自摄像头的数据，可以用视觉算法找出脸和手，用其他算法接着处理来解释图片中的东西；有这些基本信息后，人们可以做出新的交互体验，比如智能电视和智能辅导系统会根据用户的手势和表情来回应。</p>
+<h2 id="53-自然语言处理-natural-language-processing">5.3 自然语言处理 (Natural Language Processing)</h2>
+<p>相较于 2.2 节中讨论过的 &ldquo;编程语言&rdquo; 这种词汇量较少、非常结构化的语言类型而言，拥有大量词汇、多义词、口音等特点的人类语言与之完全不同。</p>
+<p>代码只能在拼写和语法完全正确时才能编译和运行，而在大多数情况下，人类语言就算有拼写或发音错误，对方也能够理解含义。</p>
+<p>我们将人类语言称为「自然语言」(Natural Language)，为了使得计算机拥有能够进行语音对话的能力而诞生了「自然语言处理」(Natural Language Processing, NLP)，这是结合计算机科学和语言学的跨学科领域。</p>
+<h3 id="531-分析树">5.3.1 分析树</h3>
+<h4 id="词性">词性</h4>
+<p>单词组成的句子组合方式有无数种，无法通过字典涵盖所有可能。因此 NLP 早期的基本问题是如何为句子分块，其可以通过词性和语法来判断。</p>
+<p>以英语为例，英语语音存在 9 种词性——名词，代词，冠词，动词，形容词，副词，介词，连词和感叹词，单类词性下还存在子类，如单数名词 vs 复数名词、副词最高级 vs 副词比较级等。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675493960162.png" alt="9 种词性"></p>
+<h4 id="短语结构规则">短语结构规则</h4>
+<p>但仅依靠词性字典无法处理多重词性的单词在某个语境下的模糊性，需要利用语法辅助判断，故出现「短语结构规则」(phrase structure rules) 来代表语法规则。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675494004128.png" alt="短语结构规则"></p>
+<p>比如英语中有一条规则是 &ldquo;句子可以由一个名词短语和一个动词短语组成，名词短语可以是 &lsquo;冠词 + n.&rsquo; 或 &lsquo;adj. + n.&rsquo; 等&rdquo;，我们可以给一门语言制定出一堆规则，如上图所示。</p>
+<h4 id="分析树">分析树</h4>
+<p>利用这些 &ldquo;短语结构规则&rdquo; 可以做出「分析树」(parse tree)，树中注明句子结构和单词词性，使得句子中的数据块更小更易处理。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675494113532.png" alt="分析树"></p>
+<h4 id="知识图谱">知识图谱</h4>
+<p>&ldquo;短语结构规则&quot;和其他把语言结构化的方法，还可以用来生成句子。当数据存在语义信息网络时，这种方法特别有效。实体互相连在一起，提供构造句子的所有成分。</p>
+<p>Google 版用结构化方法生成句子的方式称为「知识图谱 」(Knowledge Graph) 。在 2016 年底，包含大概七百亿个事实，以及不同实体间的关系。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675494579254.png" alt="知识图谱-Siri: Thriller was released in 1983 and sung by Michael Jackson"></p>
+<h3 id="532-聊天机器人">5.3.2 聊天机器人</h3>
+<p>处理, 分析, 生成文字是聊天程序的最基本部件，早期的聊天程序大多是基于规则 (rule-based)，后期则使用机器学习进行对话。</p>
+<p>基于规则的聊天程序中，会有专家将用户可能会说的话和机器人应该回复的话写成上百个规则，这使得其无法处理复杂对话且难以维护。</p>
+<p>一个著名早期例子是 1960 年代中期诞生于麻省理工学院的治疗师聊天机器人 Eliza，它用基本句法规则 (basic syntactic rules) 来理解用户打的文字，然后向用户提问。</p>
+<p>如今的聊天机器人和对话系统多使用机器学习完成，通过上 GB 的真人聊天数据来训练聊天机器人用于客服回答，人们也让聊天机器人互相聊天。</p>
+<p>在 Facebook 的一个实验里聊天机器人甚至发展出自己的语言，这件事被报道得很吓人，但实际上只是计算机为了提高效率在制定简单协议来帮助沟通。</p>
+<h3 id="533-语音识别-speech-recognition">5.3.3 语音识别 (speech recognition)</h3>
+<h4 id="发展简史">发展简史</h4>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1952 年
++ Audrey
++ - 由贝尔实验室推出的第一个语音识别系统  Audrey，用于自动数字识别器。
+- 如果说得够慢，它可以识别全部十位数字，但因不如手动输入快而没有实际应用。
+
++ 1962 年
++ 鞋盒 (Shoebox)
++ IBM 在世界博览会上展示了能够识别 16 个单词的机器，大小类似于鞋盒。
+
++ 1971 年
++ Harpy
++ - 由 DARPA 启动的五年筹资计划，推进了语音识别领域的研究
+- 因此诞生了卡内基梅隆大学 (CMU) 的 Harpy，第一个可以识别 1000 个单词以上的系统
+
++ 1980~90s
++ 实时语音识别
++ - 早期语言识别，经常比实时说话要慢十倍或以上
+- 随着计算机性能大幅提升，实时语音识别变得可行
+- 用于处理自然语音的算法也从手工制定规则变成了从语言数据库中进行学习的机器学习或是深度神经网络
+
+</code></pre>
+<h4 id="识别原理">识别原理</h4>
+<p>基本过程：将波形转为频谱，识别音素，转成文字。</p>
+<p>具体示例如下：</p>
+<p>通过麦克风内部隔膜震动的频率，捕捉信号形成声音的 &ldquo;波形&rdquo; (waveforms)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675495865620.png" alt="声波"></p>
+<p>将波形用「快速傅里叶变换」(Fast Fourier Transform, FFT) 转换为 &ldquo;频谱&rdquo;(spectrogram)。颜色越亮处，该频率的声音越大，类似于立体声系统的 EQ 可视化器。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675496137598.png" alt="频谱"></p>
+<p>因为发音时人类的声带会放大或减少不同的共振，所以频谱中的信号也会呈现出螺纹状，形成或亮或暗的区域。如果从底向上看，可以标出高峰，称这些峰值为「共振锋」(formants)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675496487850.png" alt="共振峰"></p>
+<p>通过对频谱中的 &ldquo;元音及其共振峰频率组合&rdquo; 标注值，电脑可以识别出元音，进而识别出整个单词。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675496543156.png" alt="元音及其共振峰频率组合"></p>
+<p>构成单词的声音片段，称为「音素」(phonemes)。英语有大概 44 种音素，所以语音识别的本质成了 &ldquo;音素识别&rdquo;。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675496773218.png" alt="音素"></p>
+<p>再结合分词、句子始终点确认等方法技术，就可以将语音转成文字。</p>
+<h4 id="语言模型">语言模型</h4>
+<p>因为口音和发音错误等原因，人们的单词发音有所不同，可以利用语言模型来提高识别准确度。</p>
+<p>语言模型中会有单词顺序的统计信息，比如 n. + v. 后大概率是 + adj. 。当识别时不确定 she was 后面紧跟的词是 happy 还是 harpy，语言模型会选可能性更高的 happy。</p>
+<h3 id="535-语音合成">5.3.5 语音合成</h3>
+<p>早期语音合成技术，可以清楚听到音素是拼在一起的，比如 1937 年贝尔实验室的手动操作机器。</p>
+<p>到了 1980 年代，技术改进了很多，但音素混合依然不够好，产生明显的机器人声。</p>
+<p>如今电脑合成的声音，比如 Siri, Cortana, Alexa 好了很多，尽管它们已经非常接近，但还不够像人。</p>
+<p>如果语音识别的效果足够好，人们用语音交互的频率会提高，这又给了谷歌，亚马逊，微软等公司更多数据来训练语音系统、提高准确率，这使得人们更愿意使用语音交互，从而形成正反馈循环。</p>
+<h2 id="54-机器人-robots">5.4 机器人 (Robots)</h2>
+<h3 id="541-robot">5.4.1 robot</h3>
+<p>机器人是由计算机控制，可以自动执行一系列动作的机器。</p>
+<p>外观并不重要，工厂的机械臂 (industrial arms)、无人机 (drones that fly)、辅助外科医生的蛇状机器人(snake-like medical robots)、以及人形机器人(robotic assistants)，都可以是机器人 (robot)。</p>
+<p>有时我们会将虚拟人物称为 &ldquo;robot&rdquo;，但将其称作 &ldquo;bot&rdquo; 甚至是 &ldquo;agent&rdquo; 会更加合适，因为 &ldquo;robot&rdquo; 的潜在含义是存在于现实世界中的机器。</p>
+<p>robot (机器人) 一词首次出现在 1920 年的一部捷克戏剧，代表人造的类人角色。该词源于斯拉夫语词汇 robota，代表农民在十九世纪欧洲封建社会的强迫劳动。</p>
+<p>在持续了一个世纪的称呼中，机器人都是大规模生产、高效不知疲倦、看起来像人的东西，但毫无情感，不会保护自己，没有创造力。</p>
+<h3 id="542-发展简史">5.4.2 发展简史</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ pre-1920s
++ 自动机 (auromatons)
++ - 古代发明家发明了比如计时/定时敲钟的机械装置，能够自动运行
+- 这类无需用电、具有人类或动物形象、能唱歌跳舞打鼓等的装置，可以认为是广义上的自动运行机器
+
++ 1739 年
++ Canard Digerateur (吃饭鸭鸭)
++ - 法国人 Jacques de Vaucans 发明的机器，形状像鸭子，能够吃东西然后排泄。
+- 伏尔泰在 1739 年写过，&quot;如果没有吃饭鸭鸭的声音，还有什么能够提醒你法国的荣光呢？&quot;
+
++ 1700 年
++ 土耳其行棋傀儡 (Mechanical Turk)
++ - 一个能下国际象棋的人形机器人，在欧洲各地展览，棋艺好得像某种机械人工智能
+- 实际上机器内有人控制，这是一个骗局
+
++ 1940s 末
++ CNC 机器
++ - Computer Numerical Control，简称 CNC 机器，是第一台由计算机控制的机器
+- CNC 机器可以执行一串由程序指定的操作，提高制造业的制造能力和精确度，同时降低了成本（5.7 会继续讨论）
+
++ 1960 年
++ Unimate
++ - 第一个进行商业出售的可编程工业机器人
+- 可以把压铸机做出来的热金属成品提起来，然后堆起来
+- 自此开启机器人行业
+
+</code></pre>
+<h3 id="543-控制原理">5.4.3 控制原理</h3>
+<h4 id="简单控制回路">简单控制回路</h4>
+<p>用于像是用机器爪子在轨道上来回移动这类简单的运动，可以通过 &ldquo;简单控制回路&rdquo; (simple control loop) 来完成，下图是一个判断当前位置和目标位置的「负反馈回路」(negative feedback loop) 示例。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675504258699.png" alt="负反馈回路"></p>
+<p>一个基本的负反馈回路由以下 3 部分组成：</p>
+<ol>
+<li>传感器 (sensor)：测量现实中想要控制的东西，如水压、马达位置、气温。</li>
+<li>error：通过传感器来计算与目标值相差的多少。</li>
+<li>控制器 (controller)：决定怎么减小 error，控制泵/电机/加热元件或其他物理组件来做出动作。</li>
+</ol>
+<p>简单控制回路适用于严格控制的环境，但现实世界中 robot 会受摩擦力、惯性力、风阻力等外力影响，比如上例中爪子如果过重则在惯性力的作用下可能会使得爪子在目标处不断来回移动。</p>
+<h4 id="pid-控制器">PID 控制器</h4>
+<p>PID 控制器的全称是 &ldquo;proportional–integral–derivative controller&rdquo; (比例-积分-微分 控制器)，早期是机械设备，现在由纯软件控制。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675506346709.png" alt="PID"></p>
+<p>以餐厅内递送食物的机器人为例，其设计目标是以 2m/s 的理想速度进行穿行，需要根据环境中的变化（风阻、地形 etc.）来控制马达动力的大小从而保持理想速度。</p>
+<p>PID 控制器会根据当前速度和目标速度的数据，计算以下 3 个值：</p>
+<ol>
+<li>比例值 (proportional value)：实际值 (actual value) 和理想值 (desired value) 之差。
+<ul>
+<li>实际值可能是实时的，也可能存在滞后。</li>
+<li>&ldquo;实际值&quot;和&quot;理想值&quot;的差距 (比例值) 越大则约用力。</li>
+<li>实行 &ldquo;比例控制&rdquo; (proportional control)。</li>
+</ul>
+</li>
+<li>积分值 (integral value)：一段时间内的误差总和，辅助弥补误差。
+<ul>
+<li>如上坡可能产生误差，值过大可能比例控制得不够，需更用力</li>
+</ul>
+</li>
+<li>导数值 (derivative value)：理想值与实际值之间的变化率。
+<ul>
+<li>有助于解决未来可能出现的错误。</li>
+<li>又名 &ldquo;预期控制&rdquo; (anticipatory control)。</li>
+</ul>
+</li>
+</ol>
+<p>这三个值会拥有各自权重，组合使用来控制系统。PID 控制器应用广泛，比如汽车里的巡航控制、无人机用来保持水平得螺旋桨速度控制等。</p>
+<h3 id="544-机器人的发展现状">5.4.4 机器人的发展现状</h3>
+<p>控制回路负责将机器人的物理属性 (e.g. 当前位置) 变成期望值，这些期望值由更高层软件来负责确定，其做出计划让机器人执行。</p>
+<p>利用技术，机器人已经取得了很多成就，比如潜入深海、探索火星。但有趣的是，许多对人类来说很简单的任务，比如双腿直立行走、开门、穿衣服、摸狗等人类无需刻意做的举动，有超级计算机能力的机器人却做不到。</p>
+<p>这些问题最有可能通过 5.1 小节讨论过的 &ldquo;人工智能&rdquo; 来解决，机器人无需休息且可以多个手臂同时练习，通过数千小时的训练来变得擅长。</p>
+<p>近年最大的突破之一是无人驾驶汽车，汽车的输入（转弯 or 变速）很简单，难得是应对路况——判断车道、理解路标、预测车流、车流中穿行、留心行人和骑自行车的以及各种障碍。</p>
+<p>无人驾驶汽车非常依赖 5.2 节 p35 集讨论的 &ldquo;计算机视觉算法&rdquo;，现在也出现了外貌和行为像人类的 &ldquo;类人计算机&rdquo; (primitive androids)。</p>
+<p>因可替换且力量、耐力、注意力和准确性远超人类，军队也对机器人很有兴趣。拆弹机器人和无人侦察机如今很常见，完全自主决定且全副武装的机器人也在慢慢出现。</p>
+<p>比如韩国的三星 SGR-A1 哨兵炮，这种有智力并且可以杀人的机器人，称为「致命自主武器」(lethal autonomous weapons)。这是一个复杂又棘手的问题，一方面它可以将士兵带离战场挽救生命甚至阻止战争，但另一方面它没有人类般的判断力和同情心，会让战争更加黑暗和复杂。</p>
+<h3 id="545-机器人三定律">5.4.5 机器人三定律</h3>
+<p>科幻作家艾萨克·阿西莫夫 (Isaac Asimov) 早预见了类似于 &ldquo;致命自主武器&rdquo; 所带来的危险，他在 1942 年短篇小说 Runaround 中写了 &ldquo;机器人三定律&rdquo; (Three Laws of Robotics)，之后在 1985 年的《机器人与帝国》（Robots and Empire）又加了 &ldquo;定律 0 &ldquo;。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675506611298.png" alt="机器人定律"></p>
+<p>简单说这些定律指导机器人的行为准则或者说道德指南，旨在让机器人不要造成伤害，特别是不要伤害人类。</p>
+<p>这些规则实践起来相当不足，并且有很多模糊的地方，但阿西莫夫三定律激发了大量科幻小说讨论和学术讨论，如今也有专门讨论机器人伦理的会议。</p>
+<p>阿西莫夫写这些虚构规则是为了反对 &ldquo;机器人都很邪恶&rdquo; 这种常见描述，他童年读的小说里，机器人脱离控制，然后伤害甚至毁灭创造者的场景很常见。但阿西莫夫认为 机器人有用、可靠，甚至可以让人喜爱。</p>
+<p>这种技术的两面性值得我们思考，我们要认真思考计算机的潜力和危害，从而改善这个世界，而机器人最能提醒我们这一点了。</p>
+<h2 id="55-计算机中的心理学-psychology-of-computing">5.5 计算机中的心理学 (Psychology of Computing)</h2>
+<p>系统设计师 (system designers) 会综合运用社会心理学、认知心理学、行为心理学、感知心理学等学科原理，使得物理界面或计算机界面更加具有「易用度」(Usability)。</p>
+<p>易用度是指指的是如软件这类人造物体软件达到目的的效率有多高。为了帮助人类工作，我们需要了解人类是怎么观察、思考、反应和互动的。</p>
+<h3 id="55-人类感知特性">5.5 人类感知特性</h3>
+<h4 id="视觉系统-visual-perception">视觉系统 (Visual Perception)</h4>
+<p>以视觉系统为例，人类擅长为颜色的深浅排序，而不擅长为不同颜色排序 (根据波长)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675508596239.png" alt="颜色深浅"></p>
+<p>因此，同色不同强度的颜色适合用于表现连续值，而不同颜色更适合用于分类或对比数据。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675508623450.png" alt="颜色区分"></p>
+<h4 id="认知系统-human-cognition">认知系统 (human cognition)</h4>
+<p>理解人类的认知系统也能帮我们设计更好的界面，比如信息分块 (chunked) 后会更易于读取和记忆。</p>
+<p>分块是指把信息分成更小，更有意义的块。人类的短期记忆能记住 5 到 9 个东西，保守估计是在 5 个及以下组块，因此在记忆电话号码时我们更倾向于分块记忆。</p>
+<p>尽管对于计算机而言，分块更加耗费时间和空间且效率更低，但这对人类更有效率，因此许多界面设计也利用了 &ldquo;分块&rdquo;，比如下拉菜单和带按钮的菜单栏。</p>
+<h3 id="552-直观功能">5.5.2 直观功能</h3>
+<p>Don Norman 使得 &ldquo;直观功能/功能可见性&rdquo; (affordances) 这个概念在计算机领域流行起来，据他所说，&ldquo;直观功能&rdquo; 是在为如何操作物体提供线索，而无需提示说明。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675509097898.png" alt="affordances"></p>
+<p>这个概念广泛用于 3.9 节 p26 集所讨论的 &ldquo;图形用户界面&rdquo;，这也是图形界面比命令行更易用的原因之一。</p>
+<p>@Carrie Anne 最喜欢的&quot;直观功能&quot;之一是向用户表明元素是可拖动的样式「滚花」(knurling)，其来源于现实世界中工具上用于提高握力的纹理。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675509388291.png" alt="knurling"></p>
+<p>&ldquo;直观功能&rdquo; 的心理学概念依据是「认出与回想」(recognition vs. recall)，这就是为什么选择题比填空题容易的原因，一般来说用感觉来触发记忆会容易得多。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675509642526.png" alt="认出与回想"></p>
+<p>图形界面用 &ldquo;图标&rdquo; (icons) 代表功能，比起依靠记忆来输入命令的命令行界面方便得多，无需回想功能只需认出图标即可。</p>
+<p>而让所有菜单选项好找好记，有时候意味着用的时候会慢一些。这与另一个心理学概念「专业知识」 (expertise) 有所冲突。当我们熟悉界面之后，会建立起如何高效完成某个事情的 &ldquo;心理模型&rdquo; (mental models) 使得操作速度会加快。</p>
+<p>好的界面会提供多种方法来实现目标操作，比如适用于新手的菜单栏操作，以及使用于熟练者的快捷键操作。</p>
+<h3 id="553-情感计算">5.5.3 情感计算</h3>
+<p>Rosalind Picard 在 1995 年关于「情感计算」 (Affective Computing) 的论文中，阐述了 &ldquo;计算机会根据用户状态做出恰当反应&rdquo; 的愿景。这篇论文开创了心理学、社会科学和计算机科学的跨学科结合，促进了让计算机理解人类情感的研究。</p>
+<p>情绪会影响人类学习、沟通和决策等日常活动，&ldquo;情感系统&rdquo; (Affect-aware systems) 会利用传感器获得声音、表情以及出汗/心率等生物指标，结合写明人类如何表达情感的计算模型来估算用户情绪，确定怎样用最好的方式来回应用户，以达到使用户冷静/建立信任/完成作业等目标。</p>
+<p>Facebook 在 2012 年进行了一项&quot;影响用户&quot;的研究，通过对时间线内容进行积极/消极内容出现频率的控制，他们发现看到积极向上内容的用户发的帖子往往更正面，反之亦然。</p>
+<p>这个研究结果相当有争议性，显然 Facebook 和其他网站向你展示的内容会对我们产生影响，这对他们而言是机会也是责任。</p>
+<p>由此还衍生出 &ldquo;计算机程序如何回应人类&rdquo; 的问题， 如果用户情绪较为负面，即使有点尴尬，电脑也应该试着积极正面地回应用户。而关于什么行为是&quot;正确的&rdquo;，这还是个开放性的研究问题。</p>
+<h3 id="554-cmc">5.5.4 CMC</h3>
+<p>Facebook 的研究试验是「以计算机为媒介沟通」(computer-mediated communication, CMC) 领域的极佳例子，该领域是一个很大的研究领域。</p>
+<p>&ldquo;计算机媒介&rdquo;(computer-mediated) 既包括在线会议这样的 &ldquo;同步通讯&rdquo; (synchronous communication) ，也包括推特、邮件、短信这样的 &ldquo;异步通信&rdquo; (asynchronous communication)。研究人员会研究用户怎么用表情包、怎么轮换发言、以及用不同沟通渠道时的用词有什么区别等问题。</p>
+<p>一个有趣的发现是，比起面对面沟通，人们更愿意在网上透露自己的信息。</p>
+<p>心理学研究也表明，如果想说服某人、传授经验知识或引起注意，双方的眼神注视非常重要。在谈话时看着别人叫 &ldquo;相互凝视&rdquo; (mutual gaze)，这在线上场景中常常缺失，从而带来权力不平衡等副作用。</p>
+<p>因此研究人员开发了计算机视觉和图形软件来纠正头部和眼睛的位置，使得视频时会觉得对方在直视摄像头，看着他们，这种方式称为 &ldquo;增强凝视&rdquo; (augmented gaze)。</p>
+<h3 id="555-恐怖谷">5.5.5 恐怖谷</h3>
+<p>在过去一个世纪，除了工业用途机器人，也有许多用于用于医疗、教育和娱乐的机器人出现。</p>
+<p>研究机器人和人类之间如何互动的领域称为「人机交互」(Human-Robot Interaction, HRI)，该领域研究 &ldquo;人类如何感受机器人的不同形式和不同行为？&rdquo; &ldquo;机器人如何明白人类社交暗示而非只是尴尬互动？&rdquo; 等问题。</p>
+<p>人们喜欢 &ldquo;拟人化&rdquo; 的物品，对计算机也不例外。我们有对 &ldquo;将机器人的外表和行为做得尽可能像人一样&rdquo; 的追求，1940~50s 的机器人是完全的工业机器，但如今的类人机器越来越像真实人类，以至于某些时候会让人有种怪异不安感。</p>
+<p>这个&quot;几乎像人类&quot;和&quot;真的是人类&quot;之间的小曲线(dip in realism)，叫「恐怖谷」(uncanny valley)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675511864175.png" alt="恐怖谷"></p>
+<p>对于机器人是否应该有人类一样的行为，也存在争议。很多证据表明，即使机器人的行为不像人类，人类也会用社交习俗对待它们。比如机器人插队或是踩脚，人们也会生气气！</p>
+<p>毫无疑问，心理学 + 计算机科学是强大的组合拥有可以影响日常生活的巨大潜力。这也带来了很多开放式问题。</p>
+<ul>
+<li>你可能会对计算机撒谎，但计算机应不应该对你撒谎？如果撒谎能让你更高效更快乐呢？</li>
+<li>社交媒体公司是否应该精心挑选展示给你的内容，让你在网站上多待一会儿、买更多东西？</li>
+</ul>
+<p>这类道德问题不容易回答，但心理学至少可以帮助我们理解不同选择 带来的影响和意义。</p>
+<h2 id="56-教育型科技-educational-technology">5.6 教育型科技 (Educational Technology)</h2>
+<p>计算机带来的最大改变之一是信息的创造和传播能力，如今的互联网的信息数据量级极高——目前有 13 亿个网站存在，仅维基百科就有 500 万篇英文文章，Google 每天提供 40 亿次搜索来访问这些信息；Youtube 上每分钟有 350 万个视频被观看，每分钟用户上传 400 小时的新视频。</p>
+<p>尽管很多播放量是 Gangnam Style 和 Despacito，但剩下大部分内容都是教育型内容。可能获取到信息和学习不是一回事，课上提问以及上手实践等互动式课堂的学习途径当然很棒，但我们也相信教育型技术在课内课外带来的帮助。</p>
+<p>从纸笔到用 ML 的智能系统，科技几千年来一直在辅助教育。甚至早期人类 在洞穴里画狩猎场景也是为了后代，远距离教育一直推动着教育科技的发展。</p>
+<p>自公元 50 年左右，圣保罗 (St. Paul) 就发书信给亚洲设立的新教堂提供宗教课程。从此，自广播和电视、到 DVD 和光碟这几大技术浪潮都自称要改变教育。</p>
+<p>事实上，在 1913 年托马斯·爱迪生 (Thomas Edison) 曾预测说：&ldquo;书籍很快会过时&hellip; 用影片来教授所有知识是可能的，学校体系将在未来十年彻底改变&rdquo;。显然，这还未成为现实。</p>
+<h3 id="561-学习技巧">5.6.1 学习技巧</h3>
+<p>在讨论教育技术可以帮你做什么之前，有研究表明有些简单事情可以显著提高学习效率：</p>
+<p>（1）倍速：将学习类视频的速度调整适合自己，能理解视频内容同时也有足够时间进行思考。</p>
+<p>（2）暂停：在困难的部分暂停。问自己一些问题看能不能回答；想想视频接下来可能讲什么，然后继续播放看猜对没有。</p>
+<p>（3）练习：做视频中的提供的练习。即使不是程序员，你也可以在纸上写伪代码，或试试学编程。</p>
+<h3 id="562-mooc">5.6.2 MOOC</h3>
+<p>把高质量教育内容做成视频传播，在过去一个世纪吸引了很多人，这个老想法的新化身则以「大型开放式课程」(Massive Open Online Courses, MOOC) 出现。</p>
+<p>纽约时报宣称 2012 年是 MOOC 年，曾有人认为大学会就此终结，但随着热度褪去这也没能成为现实。也许是因为加大授课规模时，让很少数量的老师或是在完全没有老师的情况下教百万名学生会遇到很多问题，而这引起了 &ldquo;教育科技家&rdquo;(educational technologists) 的注意和兴趣。</p>
+<p>在线上教育中，有效提供好的反馈是难题之一。有用但有些争议的做法是让学生之间提供相互的反馈，但学生既不是专家也非老师，其无法提供很好的反馈。但我们可以通过算法在数百万个选择里为学生匹配出完美的学习伙伴，也可以让算法完成一部分评分作业。</p>
+<h3 id="563-智能辅导系统">5.6.3 智能辅导系统</h3>
+<p>可以提供个性化学习体验的系统泛称为「智能辅导系统」(Intelligent Tutoring Systems) ，通常使用 AI 实现。该系统需要了解用户知道什么，不知道什么，进而在正确的时间提供正确的资料，让用户练习没理解的难的部分而不是给出用户已经学会的内容。</p>
+<h4 id="域模型">域模型</h4>
+<p>以研究代数问题的假想辅导系统为例，使用 IF-THEN 语句来描述计算过程中正确步骤所需知识的 &ldquo;判断规则&rdquo; (production rule)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675514671450.png" alt="表达式规则"></p>
+<p>同时其也可以用于代表学生常犯的错误，又名为 &ldquo;错误规则&rdquo; (buggy rules)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675514702086.png" alt="错误规则"></p>
+<p>学生做完一个步骤后可能触发多个&quot;判断规则&rdquo;，系统不能完全弄清是什么原因让学生选了那个答案，因此会将 &ldquo;判断规则&rdquo; 会和 &ldquo;选择算法&rdquo; (selection algorithm) 结合使用组成「域模型」(Domain Model)，来推断学生错选的可能原因。</p>
+<p>&ldquo;域模型&rdquo; 采用 &ldquo;形式化表达/正式写法&quot;来说明特定学科的知识、技能或是解题程序。但其不记录进度，无法带领学习者以正确顺序搞定学科上的所有课程，因此需要 &ldquo;智能辅导系统&rdquo; 来负责创建和维护 &ldquo;学生模型&rdquo; (student model) 。</p>
+<h4 id="贝叶斯知识追踪">贝叶斯知识追踪</h4>
+<p>&ldquo;学生模型&rdquo; 中需要记录学生已经掌握的判断规则，以及还需练习的生疏部分，这将通过「贝叶斯知识追踪」(Bayesian knowledge tracing) 来明晰学生的学习情况。</p>
+<p>贝叶斯知识追踪算法把学生的知识 当成一组值对外部不可见隐藏变量 (latent variables)，根据学生答题正确情况来更新学生对知识的掌握程度估算值。该算法记录 4 个答题概率：</p>
+<ol>
+<li>已经学会的概率 (probability of already learned previously)</li>
+<li>瞎猜的概率 (probability of guess)</li>
+<li>失误的概率 (probability of slip)</li>
+<li>做题过程中学会的概率 (probability of transit)</li>
+</ol>
+<p>之前已经学会的概率取决于答案的正确与否，计算公式有下图 2 种，计算后更新概率值。尽管存在别的方法来追踪学生学习情况，但 &ldquo;智能辅导系统&rdquo; 通常用 &ldquo;贝叶斯知识追踪&rdquo; 处理。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675515200283.png" alt="贝叶斯知识追踪"></p>
+<p>为了高效地让学生不断练习技能直至掌握，软件要选择合适的问题呈现给学生，这称为「自适应程序」(adaptive sequencing)，是个性化算法的形式之一。</p>
+<p>教师和研究人员在 APP 或网站收集上百万学习者的数据，进而从数据中观察学生回答正确率、常见错误、回答速度、观看视频时哪部分加速以及学生如何在论坛和其他人互动等。</p>
+<p>这个研究领域称为「教育数据挖掘」(Educational Data Mining)，它能用上学生所有的 &ldquo;捂脸&rdquo; (face palms) 和 &ldquo;啊哈&rdquo; (ah ha) 时刻，用以帮助改善未来的个性化学习。</p>
+<h3 id="564-教育科技未来">5.6.4 教育科技未来</h3>
+<p>谈到未来，教育技术人员经常从科幻小说中获得灵感。比如 Neal Stephenson 的《钻石时代》(The Diamond Age) 这本书激励了很多研究人员，该书讲述了年轻女孩在书中虚拟助手的帮助下学习成长过程的故事。</p>
+<p>如今有非科幻小说研究者，比如贾斯汀卡塞尔 (Justine Cassell) 在制作虚拟教学助手，助手可以&quot;像人类一样沟通、有人类一样的行为，在陪伴过程中和学习者建立信任，相处融洽，甚至和人类学生成为朋友&rdquo;。</p>
+<p>此外，教育科技和设备如今在逐渐扩展到笔记本和台式电脑之外。比如巨大桌面设备让学生可以团队合作，以及小型移动设备，让学生路上也能学习，同时 &ldquo;虚拟现实&rdquo; (Virtual Reality, VR) 和 &ldquo;增强现实&rdquo; (Augmented Reality, AR) 也让人们兴奋不已。</p>
+<p>如果猜想遥远的未来，教育可能会完全消失，直接在大脑层面进行，把新技能直接下载到大脑。尽管看起来遥远，但科学家们已经在摸索，比如仅仅通过检测大脑信号来得知某人是否知道什么。</p>
+<p>这带来了一个有趣的问题：如果我们可以把东西下载到大脑里，我们能不能上传大脑里的东西？</p>
+<h2 id="57-奇点天网计算机的未来the-singularity-skynet-and-the-future-of-computing">5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing)</h2>
+<blockquote>
+<p>[!quote]
+&ldquo;Computer science isn&rsquo;t magic, but it sort of is!Knowing how to use and program computers is sorcery of the 21st century.Instead of incantations and spells, it&rsquo;s scripts and code.&rdquo;  by Carrie Anne</p>
+<p>计算机科学不是魔法，但它有点像魔法。学习使用电脑和编程，是 21 世纪的巫术，只不过用的不是咒语而是代码。—— 凯莉·安</p>
+</blockquote>
+<h3 id="571-普适计算">5.7.1 普适计算</h3>
+<p>1990 年代由马克·威泽尔 (Mark Weiser) 提出「普适计算」 ( Ubiquitous Computing) 的概念，即计算机存在于在所有可想象的东西之中。</p>
+<blockquote>
+<p>[!quote]</p>
+<p>&ldquo;For (fifty) years, most interface design, and most computer design, has been headed down the path of the &ldquo;dramatic&rdquo; machine. Its highest idea is to make a computer so exciting, so wonderful, so interesting, that we never want to be without it. A less-traveled path I call the &ldquo;invisible&rdquo;; its highest idea is to make a computer so imbedded, so fitting, so natural, that we use it without even thinking about it … The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it.&rdquo; by Mark Weiser, 1990s</p>
+<p>(五十)年来，大多数界面和计算机设计，都是朝&quot;戏剧性&quot;方向前进想把计算机做得超好，让人一刻也不想离开。另一条少有人走的路 是&quot;无形&quot;的，把计算机整合到所有东西里，用的时候很自然、完全注意不到。最厉害的科技是看不见的科技，它们融入到日常生活的每一部分，直到无法区分。——马克·威泽尔</p>
+</blockquote>
+<p>有人把 &ldquo;普适计算&rdquo; 当作是 &ldquo;反乌托邦&rdquo; (dystopian) ，但提出者认为其具有非凡潜力。</p>
+<h3 id="572-奇点">5.7.2 奇点</h3>
+<p>&ldquo;普适计算&rdquo; 在一定程度上可以描述计算机的未来，而在人们思考计算机的未来时经常会直接想到人工智能。但并非所有东西都需要使用 AI 或是被 AI 优化更新，就像电气革命后出现了电灯泡但蜡烛仍然存在。</p>
+<p>最可能的情况是 AI 变成计算机科学家手中的另一门新工具，但真正让人深思和担忧的是 &ldquo;人工智能是否会超越人类智能？&rdquo; 这涉及许多因素，比如 &ldquo;智能的准确定义是什么？&quot;。</p>
+<p>尽管 AI 可以在几秒内识别歌曲、驾驶汽车、翻译多种语言，但却无法完成爬楼梯、叠衣服等简单事项，人工智能成长到和人类一样通用，还有很长的路。</p>
+<p>因为 &ldquo;智能&rdquo; 是难以量化的指标，人们更喜欢用处理能力来区分，但这种衡量智能的方法比较 &ldquo;以计算为中心&rdquo; 。以当前的发展速度来看，计算机的计算能力相当于老鼠，距离人类的计算能力似乎看起来还有些距离。</p>
+<p>但就算处理器增长速度不再遵循 &ldquo;摩尔定律&rdquo; (1.10 节, p17 集)，也可能只需要十几年计算机就能赶上人类的计算速度。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675517919707.png" alt="计算速度"></p>
+<p>假设计算机发展的趋势继续保持下去，在本世纪结束前计算机的处理能力/智能会比全人类加起来还多，然后人的参与会越来越少，人工超级智能会开始改造自己。</p>
+<p>这种智能科技的失控性发展称为「奇点」(singularity)，由约翰·冯·诺伊曼 (John von Neumann, 2.1.2 节, p10 集) 在 1950 年代最早提出。距离其提出后 60 多年的今天，奇点仍然距离我们十分遥远。</p>
+<blockquote>
+<p>[!quote]
+&ldquo;The accelerating progress of technology and changes in the mode of human life,give the appearance of approaching some essential singularity in the history of the race beyond which human affairs, as we know them, could not continue.&rdquo;  by John von Neumann</p>
+<p>&ldquo;越来越快的技术发展速度和人类生活方式的改变，看起来会接近人类历史中某些重要的奇点，看起来会接近人类历史中某些重要的奇点，这个势头不会永远继续下去。&rdquo; —— 约翰·冯·诺伊曼</p>
+</blockquote>
+<p>一些专家认为，计算机的发展趋势会更加平缓一些，更趋向于 S 型而非指数型。而随着复杂度增加，进步会越来越难，微软联合创始人保罗·艾伦 (Paul Allen) 称之为「复杂度刹车」(complexity brake)。</p>
+<h3 id="573-技术性失业">5.7.3 技术性失业</h3>
+<p>假设奇点到来、超智能计算机出现，这对人类意味着什么呢？关于这个问题由许多激烈讨论，其最直接的影响是 &ldquo;技术性失业&rdquo; (technological unemployment)——许多工作出于效率和成本的原因被计算机(AI 或是 robots) 替代了。</p>
+<p>技术性失业并非新鲜事，比如 1800s 雅卡尔的织布机(Jacquard&rsquo;s Loom, Episode 10) 带来的纺织工人失业导致了骚乱，1960s 的自动接线板代替了电话接线员，1980s 的机器喷漆代替了人工喷漆等等。</p>
+<p>一方面，自动化使得一部分人们失去了工作。另一方面，大量产品被廉价生产。但与之前技术进步带来的技术性失业不同，专家认为 AI、robots 以及更广义的计算机会比这些更具有破坏性。</p>
+<p>工作可以分为 2 个维度，4 种类型：</p>
+<div align="center"> <img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675519306363.png" ></div>
+<ul>
+<li>重复性手工工作：可以让机器自动化，部分已经被替代，剩下的主部被替代。</li>
+<li>非重复性手工型工作：如厨师、服务员、保安等，值得担心。</li>
+<li>非重复性思维型型工作：如客服，收银员，银行柜员和办公室助理，同样值得担心。</li>
+<li>非重复性思维型工作：如教师、艺术家、小说家、律师、医生和科学家等，暂时比较安全。</li>
+</ul>
+<p>非重复性思维型工作占美国劳动力的 40%，意味着 60% 的工作易受自动化的影响。有人认为这种大规模失业会带来社会动荡和混乱，但也有人认为这是对将人类从无聊工作中解放的途径之一。</p>
+<p>没人能预知未来，但长远来看一切终将归于平静，政界正在讨论的问题是怎么处理数百万人突然失业造成的短期经济混乱。</p>
+<h3 id="574-未来幻想">5.7.4 未来幻想</h3>
+<blockquote>
+<p>[!quote]
+&ldquo;The Singularity will allow us to transcend (the) limitations of our biological bodies and brains. We will gain power over our fates. &hellip; We will be able to live as long as we want. We will fully understand human thinking and will vastly extend and expand its reach.&rdquo; by futurist Ray Kurzweil</p>
+<p>&ldquo;奇点会让我们超越肉体和大脑的局限性，我们能掌控自己的命运。可以想活多久活多久，我们能完全理解并扩展大脑思维。&quot;——未来学家, 雷·库兹韦尔</p>
+</blockquote>
+<p>超人类主义者 (Transhumanists) 认为会出现&quot;改造人&rdquo; (cyborgs)，人类通过和科技融合在一起来增强智力和身体，随着脑机接口的出现，再加上 Google Glass 和 微软 Hololens 这样的穿戴式计算机，这条界线正变得越来越模糊。</p>
+<p>也有人预见到 &ldquo;数字永生&rdquo; (Digital Ascension) ，根据 Jaron Lanier 的说法，其是指 &ldquo;人类的肉体死去，意识上传到计算机&rdquo; (would involve people dying in the flesh and being uploaded into a computer and remaining conscious )。这种从生物体变成数字体的过程，可能是下一次进化跨越。</p>
+<p>而其他人则预测人类大体会保持原样，但超智能电脑会照顾我们以便让我们好好享受生活。但也有人反对，为什么超级人工智能会费时间照顾我们？人类不也没照顾蚂蚁吗？</p>
+<p>我们无法预测未来，但关于未来的讨论非常多。等这些技术出现后，我们可以更好地进行计划。不论你把计算机视为未来的朋友或敌人，更有可能的是它们的存在时间会超过人类。</p>
+<p>许多未来学家和科幻作家猜测，机器人会去太空殖民，无视时间、辐射以及一些其他让人类难以长时间太空旅行的因素。亿万年后太阳燃尽 地球成为星尘，也许我们的机器人孩子会继续努力探索宇宙每一个角落，以纪念它们的父母，同时让宇宙变得更好。</p>
+<p>与此同时，计算机还有很长的路要走，计算机科学家们在努力推进过去 40 集谈到的话题。</p>
+<p>在接下来的十几年，我们可以预想：VR/AR、无人驾驶车、无人机、可穿戴计算机和服务型机器人 会变得主流；互联网会继续诞生新服务；在线流媒体会用新方式连接人们；新的编程语言和范例会不断出现，帮助创造令人惊叹的新软件；新硬件能让神经网络和 3D 图形等复杂运算快如闪电；个人电脑也会创新，由过去 40 年的桌面电脑变为无处不在的虚拟助手。</p>
+<p>我们在这个系列还有很多话题没有讨论，比如加密货币，无线通讯，3D打印，生物信息学和量子计算。</p>
+<p>我们正处于计算机的黄金时代，全部总结是绝无可能的。但最重要的是你可以学习计算机成为这个惊人转型的一部分，把世界变得更好。</p>
+
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/cccs/crash-course-computer-science/4-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="block">4 计算机网络</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#51-机器学习与人工智能-machine-learning--artificial-intelligence">5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence)</a>
+      <ul>
+        <li><a href="#511-分类器--classifier">5.1.1 分类器  (classifier)</a></li>
+        <li><a href="#决策边界-decision-boundaries">决策边界 (decision boundaries)</a>
+          <ul>
+            <li><a href="#决策树-decision-trees">决策树 (Decision Trees)</a></li>
+          </ul>
+        </li>
+        <li><a href="#512-人工神经网络-artificial-neural-networks">5.1.2 人工神经网络 (artificial neural networks)</a></li>
+        <li><a href="#513-强化学习--reinforcement-learning">5.1.3 强化学习 ( Reinforcement Learning)</a></li>
+      </ul>
+    </li>
+    <li><a href="#52-计算机视觉-computer-vision">5.2 计算机视觉 (Computer Vision)</a>
+      <ul>
+        <li><a href="#521-颜色跟踪算法">5.2.1 颜色跟踪算法</a></li>
+        <li><a href="#522-核-kernel">5.2.2 核 (kernel)</a></li>
+        <li><a href="#523-卷积神经网络">5.2.3 卷积神经网络</a></li>
+        <li><a href="#524-情感识别算法">5.2.4 情感识别算法</a></li>
+      </ul>
+    </li>
+    <li><a href="#53-自然语言处理-natural-language-processing">5.3 自然语言处理 (Natural Language Processing)</a>
+      <ul>
+        <li><a href="#531-分析树">5.3.1 分析树</a>
+          <ul>
+            <li><a href="#词性">词性</a></li>
+            <li><a href="#短语结构规则">短语结构规则</a></li>
+            <li><a href="#分析树">分析树</a></li>
+            <li><a href="#知识图谱">知识图谱</a></li>
+          </ul>
+        </li>
+        <li><a href="#532-聊天机器人">5.3.2 聊天机器人</a></li>
+        <li><a href="#533-语音识别-speech-recognition">5.3.3 语音识别 (speech recognition)</a>
+          <ul>
+            <li><a href="#发展简史">发展简史</a></li>
+            <li><a href="#识别原理">识别原理</a></li>
+            <li><a href="#语言模型">语言模型</a></li>
+          </ul>
+        </li>
+        <li><a href="#535-语音合成">5.3.5 语音合成</a></li>
+      </ul>
+    </li>
+    <li><a href="#54-机器人-robots">5.4 机器人 (Robots)</a>
+      <ul>
+        <li><a href="#541-robot">5.4.1 robot</a></li>
+        <li><a href="#542-发展简史">5.4.2 发展简史</a></li>
+        <li><a href="#543-控制原理">5.4.3 控制原理</a>
+          <ul>
+            <li><a href="#简单控制回路">简单控制回路</a></li>
+            <li><a href="#pid-控制器">PID 控制器</a></li>
+          </ul>
+        </li>
+        <li><a href="#544-机器人的发展现状">5.4.4 机器人的发展现状</a></li>
+        <li><a href="#545-机器人三定律">5.4.5 机器人三定律</a></li>
+      </ul>
+    </li>
+    <li><a href="#55-计算机中的心理学-psychology-of-computing">5.5 计算机中的心理学 (Psychology of Computing)</a>
+      <ul>
+        <li><a href="#55-人类感知特性">5.5 人类感知特性</a>
+          <ul>
+            <li><a href="#视觉系统-visual-perception">视觉系统 (Visual Perception)</a></li>
+            <li><a href="#认知系统-human-cognition">认知系统 (human cognition)</a></li>
+          </ul>
+        </li>
+        <li><a href="#552-直观功能">5.5.2 直观功能</a></li>
+        <li><a href="#553-情感计算">5.5.3 情感计算</a></li>
+        <li><a href="#554-cmc">5.5.4 CMC</a></li>
+        <li><a href="#555-恐怖谷">5.5.5 恐怖谷</a></li>
+      </ul>
+    </li>
+    <li><a href="#56-教育型科技-educational-technology">5.6 教育型科技 (Educational Technology)</a>
+      <ul>
+        <li><a href="#561-学习技巧">5.6.1 学习技巧</a></li>
+        <li><a href="#562-mooc">5.6.2 MOOC</a></li>
+        <li><a href="#563-智能辅导系统">5.6.3 智能辅导系统</a>
+          <ul>
+            <li><a href="#域模型">域模型</a></li>
+            <li><a href="#贝叶斯知识追踪">贝叶斯知识追踪</a></li>
+          </ul>
+        </li>
+        <li><a href="#564-教育科技未来">5.6.4 教育科技未来</a></li>
+      </ul>
+    </li>
+    <li><a href="#57-奇点天网计算机的未来the-singularity-skynet-and-the-future-of-computing">5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing)</a>
+      <ul>
+        <li><a href="#571-普适计算">5.7.1 普适计算</a></li>
+        <li><a href="#572-奇点">5.7.2 奇点</a></li>
+        <li><a href="#573-技术性失业">5.7.3 技术性失业</a></li>
+        <li><a href="#574-未来幻想">5.7.4 未来幻想</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

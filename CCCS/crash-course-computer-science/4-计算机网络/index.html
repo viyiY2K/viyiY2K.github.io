@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>4 计算机网络 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="4 计算机网络 4.1 计算机网络 (Computer Networks) 4.1.1 早期网络 [line-2, body-2] &#43; 150 年前 &#43; 特快邮件 &#43; - 发一封信件从伦敦到加州要花 2~3 周。 - 传播一条信息所需要的时间称为「时延」 (latency) 。 &#43; 1950~60s &#43; 球鞋网">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science",
+      "item":"https://viyi.cc/cccs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"计算机组成",
+      "item":"https://viyi.cc/cccs/crash-course-computer-science/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"4 计算机网络",
+      "item":"https://viyi.cc/cccs/crash-course-computer-science/4-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/cccs/crash-course-computer-science/4-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"
+    },
+    "headline": "4 计算机网络 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2024-10-16T00:00:00+00:00",
+    "wordCount":  13801 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "4 计算机网络 4.1 计算机网络 (Computer Networks) 4.1.1 早期网络 [line-2, body-2] \u002b 150 年前 \u002b 特快邮件 \u002b - 发一封信件从伦敦到加州要花 2~3 周。 - 传播一条信息所需要的时间称为「时延」 (latency) 。 \u002b 1950~60s \u002b 球鞋网"
+}
+</script><meta property="og:title" content="4 计算机网络 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/cccs/crash-course-computer-science/4-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
+
+
+
+
+<meta property="og:description" content="4 计算机网络 4.1 计算机网络 (Computer Networks) 4.1.1 早期网络 [line-2, body-2] &#43; 150 年前 &#43; 特快邮件 &#43; - 发一封信件从伦敦到加州要花 2~3 周。 - 传播一条信息所需要的时间称为「时延」 (latency) 。 &#43; 1950~60s &#43; 球鞋网" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2024-10-16T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="CCCS" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">4 计算机网络</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>28分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h1 id="4-计算机网络">4 计算机网络</h1>
+<h2 id="41-计算机网络-computer-networks">4.1 计算机网络 (Computer Networks)</h2>
+<h3 id="411-早期网络">4.1.1 早期网络</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 150 年前
++ 特快邮件
++ - 发一封信件从伦敦到加州要花 2~3 周。
+- 传播一条信息所需要的时间称为「时延」 (latency) 。
+
++ 1950~60s
++ 球鞋网络 (sneakernet) 
++ - 在公司或研究室内部使用，旨在信息交换。
+- 也有助于共享物理资源，如打印机或存储器。
+
++ 1970s
++ 以太网
++ - 一种局域网 (近距离构成的小型网络，简称 LAN) ，诞生于  Xerox PARC (施乐的&quot;帕洛阿尔托研究中心&quot;) 。
+- 最简单形式：一条以太网电线连接数台计算机，数据在电缆中共享，各取所需。
+
+</code></pre>
+<h3 id="412-以太网">4.1.2 以太网</h3>
+<h4 id="mac-地址">MAC 地址</h4>
+<p>以太网 (Ethernet) 是早期最著名也最成功的一种局域网 LAN 技术，其使用一条以太网电线连接数台计算机，数据在电缆中进行共享，使用 MAC 地址 (Media Access Control address) 来确认接收数据的对象。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674649146505.png" alt="MAC 地址"></p>
+<p>将 MAC 地址放在数据头部作为前缀，当计算机监听到以太电缆中的数据有自己的 MAC 地址时才处理数据。现在制造的每一台计算机都自带唯一的 MAC 地址用于构建以太网和无线网络 (WIFI) 。</p>
+<h4 id="载波监听">载波监听</h4>
+<p>像以太网这样多台电脑共享一个传输媒介的方法称为「载波侦听多路访问」 (Carrier Sense Multiple Access, CSMA)  ：</p>
+<ul>
+<li>载体 (carrier)：指运输数据的共享媒介。以太网的&quot;载体&quot;是铜线，WiFi 的&quot;载体&quot;是传播无线电波的空气。</li>
+<li>侦听(Sense)：计算机守候在端口等待数据。</li>
+<li>多路访问 (Multiple Access)：许多计算机同时侦听载体。</li>
+</ul>
+<p>载体传输数据的速度 叫「带宽」(Bandwidth)，共享载体会导致网络流量上升时出现「冲突」(collision)——大家都想往载体里传数据，但一次只能有一个。</p>
+<p>出现冲突后最简单的处理方式是停止传输，等待网络空闲重试。但其他计算机也会这样做，这很可能导致更多冲突。</p>
+<h4 id="指数退避">指数退避</h4>
+<p>一台计算机在传输聚聚期间检测到冲突时，会等待“1s+随机时间”后重试。若重试仍然出现冲突，意味着网络出现拥塞 (congestion)，此时则等待 2s。再度重试仍然冲突时，等待 4s 后进行重发尝试。接着是 8s、16s etc. ，以此类推。</p>
+<p>这种等待时间指数级增长的方法称为「指数退避」(Exponential Backoff)，以太网和 WIFI 等传输协议均使用这种技巧避免网络拥塞。</p>
+<h4 id="冲突域">冲突域</h4>
+<p>载体和其中的设备总称为「冲突域」(Collision Domain)，为了减少冲突并提升效率，可以将一个大的冲突域拆解为两个小的冲突域，使用交换机 (Network Switch) 来连接。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674649311076.png" alt="冲突域"></p>
+<p>交换机会维护记录着 MAC 地址所属网络（冲突域）的列表，其仅在必要时进行数据传输，如当 A 向 F 发数据时。</p>
+<h3 id="423-路由">4.2.3 路由</h3>
+<p>大型网络的构建通常是由多个稍小的网络连接而成的，而一个计算机通过多个网络到达另一个计算机通常也会有多条路径，因此存在「路由」(routing) 问题。</p>
+<h4 id="电路交换">电路交换</h4>
+<p>如同早期 1910s 的电话系统那样，为两台遥遥相望的计算机或网络通过电路连接后分配一条专用的通信线路，称为「电路交换」(Circuit Switching)。</p>
+<p>电路交换的缺点在于不灵活且价格高昂，同时存在线路闲置的情况。其优点在于专属电路无需共享可以随意使用，因此军队、银行等其他机构依然会购买专用线路来连接数据中心。</p>
+<h4 id="报文交换">报文交换</h4>
+<p>使用类似于邮政系统的站点中转方式进行数据传输，称为「报文交换」(Message Switching)。</p>
+<p>在报文交换中，数据会经由不同的路由器 (network routers) 传输至目的地。消息沿着路由跳转的次数称为「跳数」(hop count)，通过对跳数的记录分析，可以分辨相应的路由问题。</p>
+<p>若某条报文的跳数被检测出过高异常，则可以推断出路由存在错误，这称为「跳数限制」(Hop Limit)。</p>
+<p>报文交换的优点在于可以使用不同的路由使得通信更为可靠、容错率更高。缺点在于报文较大时易堵塞网络，可通过将大报文拆分为「数据包」(packets) 来解决。</p>
+<h4 id="ip-协议">IP 协议</h4>
+<p>被分割出的数据包中均带有目标地址，用于告知路由器如何转发。报文的具体格式通过 1970s 创建的「互联网协议」(Internet Protocol, IP) 定义。</p>
+<p>遵循 IP 协议的计算机都用于一个 IP 地址，以点分十进制的方式表示，如 172.217.7.238 (Google 某服务器的 IP 地址)。</p>
+<p>数百万台计算机在网络上不断交换数据，瓶颈的出现和消失是毫秒级的。因此，路由器平衡会与其他路由器之间的负载，以确保网络中的数据传输可以快速可靠，这叫「阻塞控制」(congestion control)。</p>
+<p>当同一报文的不同数据包经由不同线路到达目的地，其到达的先后顺序可能不一致，即出现乱序问题，可以通过 TCP/IP 协议来解决。</p>
+<h4 id="分组交换">分组交换</h4>
+<p>将大的报文数据拆分成多个小数据包后，通过灵活的路由传递，这种传输数据的运行方式称为「分组交换」(Packet Switching)。</p>
+<p>分组交换源于冷战期间的核攻击威胁，具有去中心化的特点，不存在中心权威机构，也没有单点失败问题。</p>
+<p>世界上第一个分组交换网络是 ARPANET ，该名字源于赞助此项目的机构“美国高级研究计划局”(Advanced Research Projects Agency)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674650984942.png" alt="1974 年的 ARPANET"></p>
+<p>上图是 1974 年的 ARPANET 简图。图中每个小圆表示一个地点，比如运行着一个路由器的大学或实验室（拥有单台或多台计算机）。图中还能看到 &ldquo;PDP-1&rdquo; 和&quot;IBM 360系统&quot;，甚至还有一个伦敦的 ATLAS 是通过卫星连到网络里的。</p>
+<p>如今，全球的路由器协同工作，找出最高效的线路，用各种标准协议运输数据，比如 &ldquo;因特网控制消息协议&rdquo;(Internet Control Message Protocol, ICMP) 以及&quot;边界网关协议&quot;(Border Gateway Protocol, BGP) 等。</p>
+<p>互联网在这几十年间发展迅速，据估计约有接近 100 亿台联网设备。随着各种智能设备的出现，比如联网冰箱，恒温器以及其他智能家电，它们还组成了「物联网」(internet of things)。</p>
+<h2 id="42-互联网-the-internet">4.2 互联网 (The Internet)</h2>
+<p>互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。</p>
+<p>计算机需要先连接到局域网 (Local Area Network,LAN)—— 即 WIFI 路由器所连接的所有设备组成的小型网络，局域网再连接至广域网 (Wide Area Network, WAN)。</p>
+<p>广域网中的路由器又归属于「互联网服务提供商」(Internet Service Provider, ISP)，旗下有多个不同范围大小的广域网互相连接。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674706548886.png" alt="跳跃主干网络获取资源"></p>
+<p>若想获取某个资源，数据包（packet）需要先经由互联网主干（由一群超大型、带宽超高路由器组成）到达资源的服务器。</p>
+<p>在这个过程中，数据包可能要跳个 10 次才能到达（4 跳进主干，2 跳穿越，4 跳进服务器）。Windows, Mac OS 或 Linux系统，可以用 traceroute 来查看具体跳数。</p>
+<h3 id="421-ip">4.2.1 IP</h3>
+<p>互联网协议(Internet Protocol, IP) 中规定了数据包 (packet) 在互联网中传输的标准，是非常底层的一种协议。</p>
+<p>数据包的头部 (前缀) 是指“关于数据的数据”，又名「原数据」(metadata) 。头部指存储了目标地址，无法用于区分具体将数据交给目标地址的电脑中的哪个程序。</p>
+<p>因此需要更高层的协议来区分程序， IP 负责把数据包送到正确的计算机，而 UDP 负责把数据包送到正确的程序中。</p>
+<h3 id="422-udp">4.2.2 UDP</h3>
+<p>用户数据报协议(User Datagram Protocol, UDP) 是一种传输层协议，其头部包含着端口号 (port) 和校验和 (checksum)等元数据。</p>
+<p>每个想要访问网络的程序，会向操作系统申请唯一的端口号。当数据包到达时，根据端口号将数据交付给不同的程序。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674707170480.png" alt="端口号"></p>
+<p>校验和用于检验数据是否正确，最简单的方式是将数据求和后对比。在 UDP 中，校验和以 16bit 的形式进行存储，若求和高于 16 位所能表示的最大值则舍弃高位。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674707481545.png" alt="校验和"></p>
+<p>接收方收到数据包后会重新计算一次数据和，再与头部中的校验和进行对比，若不一致，则可判定数据可能因功率波动或电缆故障等原因而出现了错误。</p>
+<p>UDP 不提供修复数据或是数据重发的机制，检验出错后 UDP 会直接丢包，且其无法确认数据包是否已经到达。但其优势在于简单快捷，一些视频通话应用更加青睐。</p>
+<h3 id="423-tcp">4.2.3 TCP</h3>
+<p>传输控制协议(Transmission Control Protocol, TCP) 较之 UDP 的“尽力而为”而言更加可靠，其可以确保“所有数据均必须到达”。TCP 协议最初是和 IP 协议一齐出现，称为 TCP/IP 协议，后拆分为两个协议。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708413729.png" alt="TCP/IP"></p>
+<p>TCP 有许多更高级的功能，最重要的几个特性如下：</p>
+<h4 id="有序">有序</h4>
+<p>TCP 数据包有序号(sequence numbers)，就算传输过程中出现了乱序到达的情况，接收方仍然可以利用序号对数据包进行正确排序。</p>
+<h4 id="确认码">确认码</h4>
+<p>TCP 要求接收方的电脑收到数据包、检查&quot;校验和&quot;无误后（数据没有损坏），给发送方发一个确认码 (Acknowledgement, ACK) ，代表收到了数据包。</p>
+<p>发送方在收到上一个数据包的确认码之后，会接着再发送下一个数据包。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708847530.png" alt="ACK"></p>
+<p>若确认码因延误或丢失使得在一定时间后发送方仍未收到，则发送方会再次重发数据包。若接收方收到重复的数据包，可根据序号加判断是否重复需要丢弃。</p>
+<p>此外，TCP 可以一次发送多个数据包，等待接收多个确认码，使得效率提升。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708918911.png" alt=""></p>
+<h4 id="拥塞控制">拥塞控制</h4>
+<p>在 TCP 协议中，可以借由确认码的成功率和来回时间来推测网络的拥塞程度，进而调整发送数据包的数量。</p>
+<p>简言之，TCP 可以处理乱序、丢失、重发问题，还可以根据网络拥塞情况来自动调整传输速率。</p>
+<p>但为了提高可靠性而存在的 ACK 使得数据包数量翻番，信息传输的密度下降，不适用于像是在线射击游戏等对时间要求很高的程序使用。</p>
+<h3 id="424-dns">4.2.4 DNS</h3>
+<p>计算机根据“IP 地址”和“端口号”对网站进行访问，比如 谷歌的 IP 地址和端口号是 172.217.7.238/80。但数字不利于人类记忆识别，用文字表示的域名 google.com 较之更为友好。</p>
+<p>因此，需要使用特殊服务实现“IP 地址/端口号”和“域名”之间的映射对应关系，这种服务称为「域名系统」(Domain Name System, DNS) 。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674709731917.png" alt="DNS"></p>
+<p>输入域名后，浏览器会访问 DNS 服务器去询问其对应的 IP 地址是什么。接着 DNS 会查表，若表项存在则返回相应内容。</p>
+<p>因注册的二级域名就已高达数千万个，为了更好地管理，DNS 使用树状结构来存储映射关系。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674709783202.png" alt="DNS 结构树"></p>
+<p>域名自右往左为：「顶级域名」(Top Level Domains, TLD) 、二级域名(lower level domains)、子域名(subdomains) etc.</p>
+<p>因 DNS 的结构树非常大，因此这些数据都分布在许多 DNS 服务器中，不同的服务器负责树中不同部分的查询返回服务。</p>
+<h3 id="425-osi-模型">4.2.5 OSI 模型</h3>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674710118971.png" alt="OSI 模型"></p>
+<p>开放式系统互联通信参考模型 (Open System Interconnection, OSI) 是一种将网络通信划分为多层次的概念性框架，每层各自处理一部分问题，利用抽象以便更好地简化通信。具体分层如下：</p>
+<ol>
+<li>物理层 (Physical Layer)：线路里的电信号，以及无线网络里的无线信号。</li>
+<li>数据链路层 (Data Link Layer)：负责操控&quot;物理层&quot;，有媒体访问控制地址（MAC）、碰撞检测、指数退避，以及其他一些底层协议。</li>
+<li>网络层 (Network Layer)：负责各种报文交换和路由。</li>
+<li>传输层 (Transport layer)：有 TCP、UDP 等协议，负责在计算机之间进行点到点的传输，同时提供检测和修复错误的服务。</li>
+<li>会话层 (Session Layer)：使用 TCP 和 UDP 来创建连接，传递信息，然后关掉连接，这个过程称为「会话」(session) 。</li>
+<li>表示层 (the Presentation Layer) ：</li>
+<li>应用程序层 (Application Layer) ：其中有浏览器，Skype，HTML解码，在线看电影等。</li>
+</ol>
+<h2 id="43-万维网-the-world-wide-web">4.3 万维网 (The World Wide Web)</h2>
+<p>万维网 (World Wide Web) 运行在互联网 (Internet) 上，两者经常混用但不是一回事。</p>
+<p>互联网是传递数据的管道，各种程序都会用。其中传输最多数据的程序是分布在全球数百万个服务器上的万维网，可以通过浏览器进行访问。</p>
+<h3 id="431-超文本和超链接">4.3.1 超文本和超链接</h3>
+<p>万维网的最基本单位是单个页面 (page)，页面中有内容，也有去往其他页面的「超链接」(hyperlinks)，点击即可跳转。</p>
+<p>在超链接出现之前，我们需要在文件系统中找到信息或是把地址输入搜索框，才能在计算机上看到另一个信息。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674712345781.png" alt="Memex"></p>
+<p>Vannevar Bush 所构想机器 Memex 对其有相关的形容：</p>
+<blockquote>
+<p>[!quote]
+“关联式索引.. 选一个物品会引起另一个物品被立即选中，将两样东西联系在一起的过程十分重要。在任何时候，当其中一件东西进入视线只需点一下按钮，立马就能回忆起另一件。”</p>
+</blockquote>
+<p>在还未出现显示屏的 1945 年，这个想法非常超前。因文字超链接的强大，它有了一个专有名词「超文本」(hypertext)。如今的超文本通常指向另一个网页，然后由浏览器进行渲染。</p>
+<h3 id="432-url">4.3.2 URL</h3>
+<p>网页用于互相连接的唯一地址，称为「统一资源定位器」(Uniform Resource Locator, URL)。以访问 crash courses 的网页 thecrashcourse.com/courses 为例：</p>
+<ol>
+<li>DNS 查找：输入 thecrashcourse.com 域名，输出对应 IP 地址。</li>
+<li>建立连接：浏览器请求与运行着网页服务器的 IP 地址建立起 TCP 连接，使用标准端口号 80。</li>
+<li>请求服务：使用「超文本传输协议」(Hypertext Transfer Protocol, HTTP) 来向服务器发送指令 &ldquo;GET /courses&rdquo;，来请求名为 &ldquo;courses&rdquo; 的页面。</li>
+<li>返回渲染：请求指令以&quot;ASCII编码&quot;发送到服务器后，服务器返回该地址所对应的网页，浏览器将网页渲染至屏幕上。</li>
+</ol>
+<h3 id="433-http">4.3.3 HTTP</h3>
+<p>HTTP 的第一个标准 HTTP 0.9 创建于 1991 年，只有一个 &ldquo;GET&rdquo; 指令。当用户在网页中点击其他超链接是，计算机会重新发送 GET 请求，浏览网页的过程就是不断重复发送 GET 请求的过程。</p>
+<p>在之后的版本，HTTP 添加了放置在请求前的状态码 (status codes)，用于指明请求状态。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674713402801.png" alt="状态码"></p>
+<p>200 表示 OK - 网页找到了给你，而 400~499 则代表客户端出错，比如 404 代表网页不存在。</p>
+<h3 id="434-html">4.3.4 HTML</h3>
+<p>因超文本的存储和发送都是以普通文本的形式进行，利用 ASCII 或 UTF-16 进行编码解释，需要通过一种标记方法来区分文本和连接，因此诞生了「超文本标记语言」(Hypertext Markup Language, HTML)。</p>
+<p>HTML 第一版的版本号是 0.8，创建于 1990 年，有 18 种HTML指令，通常由一对开始标签和结束标签 (tag) 构成，基本指令如下：</p>
+<ul>
+<li><code>&lt;h1&gt; 标题 &lt;/h1&gt;</code> ：一级标题。</li>
+<li><code>&lt;a href=链接&gt; 文本 &lt;/a&gt;</code> ：超链接。</li>
+<li><code>&lt;ol&gt;&lt;li&gt;有序列表&lt;/li&gt;&lt;/ol&gt;</code> ：无序列表。</li>
+</ul>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674714038212.png" alt="HTML"></p>
+<p>将这些文字使用文本编辑器（记事本），另存为 &ldquo;test.html&rdquo; 后拖入浏览器即可打开该网页。</p>
+<p>最新版本的 HTML 5 由 100 多种标签，包括图片标签、表格标签、表单标签、按钮标签等。</p>
+<p>此外，还可以使用「层叠样式表」(Cascading Style Sheets, CSS) 和 JavaScript 等技术，加进网页来做一些更厉害的事。</p>
+<h3 id="435-浏览器">4.3.5 浏览器</h3>
+<p>第一个浏览器和服务器是 Tim Berners-Lee 在 1990 年写的，一共花了 2 个月，同时他还建立了 URL, HTML 和 HTTP 这几个最基本的网络标准。</p>
+<p>他在瑞士的&quot;欧洲核子研究所&quot;(CERN) 工作，已经研究超文本系统有十几年了。起初这个浏览器和服务器仅在 CERN 内部使用，1991 年对外发布，万维网就此诞生。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674714645353.png" alt="万维网"></p>
+<p>万维网带有开发标准，因此大家都可以开发新的服务器和浏览器。&ldquo;伊利诺伊大学香槟分校&quot;的一个小组在 1993 年做了 Mosaic 浏览器，这是第一个可以在文字旁边显示图片的浏览器。</p>
+<p>此前浏览图片需要单独开启新窗口，Mosaic 还引进了书签等新功能，界面友好，使它很受欢迎。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674714672867.png" alt="Mosaic"></p>
+<p>1990 年代末有许多浏览器面世，比如 Netscape Navigator, Internet Explorer, Opera, OmniWeb, Mozilla。同时也有很多服务器面世, 比如 Apache 和 微软互联网信息服务(Microsoft’s Internet Information Services, IIS)。在这个黄金时代中，也诞生了许多网络巨头，如创始于 1990 年代中期的亚马逊和 eBay。</p>
+<h3 id="436-搜索引擎">4.3.6 搜索引擎</h3>
+<h4 id="门户网站">门户网站</h4>
+<p>随着网页日益增多，寻找所需内容变得困难。起初人们会维护一个链接到其他网站的目录。</p>
+<p>其中最有名的叫 &ldquo;Jerry和David的万维网指南&rdquo; (Jerry and David&rsquo;s guide to the World Wide Web)，它在 1994 年改名为 Yahoo。</p>
+<p>随着网络越来越大，人工编辑的目录变得不便利，于是出现了「搜索引擎」(search engines)。</p>
+<h4 id="jump-station">Jump Station</h4>
+<p>最像现代搜索引擎的最早搜索引擎是由 Jonathon Fletcher 于 1993 年在斯特林大学创建的 JumpStation，它由三部分组成：</p>
+<ol>
+<li>爬虫 (web crawler)：顺着链接不停探索的软件，看到新链接时将其加入自己的列表当中。</li>
+<li>索引 (index)：记录爬虫访问过的网页中，出现过哪些关键词。</li>
+<li>搜索算法 (search algorithm)：用于排序匹配上关键词的网页先后顺序。</li>
+</ol>
+<h4 id="google">Google</h4>
+<p>早期搜索引擎的算法仅取决于搜索词在页面上的出现次数，有些内容农场会不断重复热门搜索词来吸引人们，拉低信息搜索质量。Google 创造了一个算法来规避这个问题，就此成名。</p>
+<p>与其信任网页上的内容，不如信任其他网站链接到这个网站的&quot;反向链接&quot;数量，而反向链接中有信誉的网站占比越大，则可认为网站质量越高。</p>
+<p>Google 一开始时是 1996 年斯坦福大学中名为 BackRub 的一个研究项目，两年后分离出来，演变成如今的谷歌。</p>
+<h3 id="437-网络中立性">4.3.7 网络中立性</h3>
+<p>网络中立性 (Net Neutrality) 是指应该平等对待所有数据包，不论它的内容是什么，其传输速度和优先级应当是一致的。</p>
+<p>有些公司会乐意通过故意给某些数据更少带宽和更低优先级的方式，来使得自己的数据优先到达，这种方式为「节流」(Throttled) 。</p>
+<p>支持&quot;网络中立性&quot;的人认为失去中立性后，服务商可以推出提速的&quot;高级套餐&rdquo;，为剥削性商业模式埋下种子，使得龙头企业拥有特权优势，而初创公司出于劣势，不利于创新。另一方面，从技术原因来看，我们也很容易希望即时通讯的消息比邮件的优先级更高、更快到达。</p>
+<p>而反对&quot;网络中立性&quot;的人认为，市场竞争会阻碍不良行为。如果供应商把客户喜欢的网站降速，客户会离开供应商。</p>
+<h2 id="44-网络安全-cybersecurity">4.4 网络安全 (Cybersecurity)</h2>
+<h3 id="441-安全特性">4.4.1 安全特性</h3>
+<p>计算机安全可以视为保护系统和数据的保密性 (Secrecy), 完整性 (Integrity) 和可用性 (Availability)：</p>
+<ul>
+<li>
+<p>保密性：只有有权限的人，才能<strong>读取</strong>计算机系统和数据。若黑客泄露信用卡信息，则是攻击保密性。</p>
+</li>
+<li>
+<p>完整性：只有有权限的人，才能<strong>使用和修改</strong>系统和数据。若黑客知道你邮箱密码伪造你的发送邮件，则是攻击完整性。</p>
+</li>
+<li>
+<p>可用性：有相应权限的人，可以<strong>随时访问</strong>计算机系统和数据。用大量假请求来拖垮服务器的「拒绝服务攻击」(Distributed Denial of Service Attack, DDOS)，是在攻击可用性。</p>
+</li>
+</ul>
+<h3 id="442-威胁模型分析">4.4.2 威胁模型分析</h3>
+<p>为实现 4.4.1 节中的对三种特性的维护，安全架构师会从抽象层面对假想敌人做出模拟，为特定情境做准备，这个过程称为「威胁模型分析」(threat model)。</p>
+<p>该模型会对攻击者进行大致描述：攻击者能力 (capabilities)、攻击目标 (goals)、可能攻击手段/攻击矢量（attack vector）。</p>
+<p>在实际应用过程中，具体如何保护要看是与谁进行对抗。通常威胁模型分析里 会以能力水平区分，比如&quot;某人可以物理接触到笔记本计算机，而且时间无限&quot;，安全架构师要在给定的威胁模型下提供解决方案以保持系统安全。</p>
+<p>只要某些假设不被推翻，保护计算机系统、网络和数据的方法有很多。诸多安全问题可以被归结为以下两个问题：</p>
+<ol>
+<li>who are you?  你是谁？ -&gt; 身份认证</li>
+<li>what should you have access to?  你能访问什么？-&gt; 访问控制</li>
+</ol>
+<h3 id="443-身份认证">4.4.3 身份认证</h3>
+<p>根据来访者的身份给予不同权限，用于区分不同使用者的方式称为「身份认证」 (authentication) ，常用的三种方式分别是：你知道什么 (What you know)、你有什么 (What you have)、你是什么 (what you are)。</p>
+<p>对于重要账户，可以采用&quot;双因素&quot; (two-factor) 或&quot;多因素&quot;认证 (multi-factor authentication)，这种两步验证使得安全性大大提升。</p>
+<h4 id="what-you-know">What you know</h4>
+<p>基于某个只有计算机和你知道的秘密（如用户名和密码）来确认身份，但若攻击者通过猜测得知，密码组合位数越多、复杂性越高，被猜中的概率越低。</p>
+<p>以 4 位的手机 PIN 码为例，计算机可以在 1s 内从 0000 一直试到 9999，这种尝试所有可能性的攻击方式称为「暴力攻击」(brute force attack)。</p>
+<p>通常的系统会有次数限制，比如在 PIN 码输入错误 3 次后，需要等待一定时间才能进行重试。但假设攻击者使用数以万计的计算机来形成僵尸网络在不同账户上尝试密码组合，就算每个账户只试一次，也存在命中的可能性。</p>
+<p>8 位 PIN 码著有 1 亿种组合，但包含特殊字符的 8 位数密码有超过 600w 亿种组合。为了记忆和复杂度的综合，可以使用三个连续单词的组合，英文大约有 10w 个单词，三个单词的组合约有 1亿亿种可能。而使用不在字典中的单词，会使得密码强度进一步提升。</p>
+<h4 id="what-you-have">What you have</h4>
+<p>基于某种用户所拥有的特定物体来确认身份，比如钥匙和锁。通常需要有人在场，使得远程攻击更为困难。但如果攻击者在附件，安全性就会降低——钥匙可以被复制，手机可能被偷，锁可以撬开。</p>
+<h4 id="what-you-are">What you are</h4>
+<p>基于人类自身的生物特征来进行身份认证，比如指纹识别器和虹膜扫描仪就是典型的生物识别验证器，安全性最高但好的识别技术十分昂贵，且传感器中识别到的数据每次都会有差异。</p>
+<p>相较于具有&quot;确定性&quot;（正确 or 错误）的 &ldquo;你知道什么&quot;和&quot;你有什么&quot;这两种验证方式，&ldquo;生物识别&quot;是存在概率性的。系统有可能认不出你或者错认你，同时生物认证也存在无法重设的问题——人只有十个手指，攻击者如果拿到所有指纹就玩完。</p>
+<h3 id="444-访问控制">4.4.4 访问控制</h3>
+<p>认证完身份后，可以通过用户相对应的权限 (Permissions) 或是「访问控制列表」(Access Control Lists, ACL) 来明确谁能访问什么，修改什么，使用什么。基本权限如下：</p>
+<ul>
+<li>读 (Read)：允许用户查看文件内容。</li>
+<li>写 (write)：允许用户修改内容。</li>
+<li>执行 (execute)：限允许用户运行文件（如程序）。</li>
+</ul>
+<p>一种常用的&quot;访问控制列表&quot;配置（即访问控制模型）是为美国国防部&quot;多层安全政策&quot;制定的 Bell-LaPadula 模型，其特点在于「不能向上读，不能向下写」。</p>
+<p>以 &ldquo;公开、机密、绝密&rdquo; 三个访问级别为例：&ldquo;机密&quot;权限用户仅能读取 &ldquo;机密&rdquo; 和 &ldquo;公开&rdquo; 文件，无法读取 &ldquo;绝密&rdquo; 文件；&ldquo;绝密&rdquo; 权限用户可以读取所有访问级别的文件，但为防止高级别文件泄露，无法修改写入低级别文件。</p>
+<p>除此之外，&ldquo;中国墙&quot;模型 (the Chinese Wall model) 和&quot;比伯&rdquo;(Biba model) 模型也是较为常见的访问控制模型，模型的优劣取决于具体情况。</p>
+<h3 id="445-独立安全检查和质量验证">4.4.5 独立安全检查和质量验证</h3>
+<p>进行身份验证和访问控制的前提是软硬件可信，但我们实际上无法确定操作系统有没有被攻击者的恶意软件控制或是安全程序是否有给攻击者留后门。</p>
+<p>安全软件在理论上是 &ldquo;安全的&rdquo;，但在实现时可能出错存有 bug，我们可以通过一发现漏洞就修复以及当程序被攻破时尽可能减少损害等方式来提高安全性。</p>
+<p>系统级安全的圣杯之一是「安全内核」(security kernel)，又称作「可信计算基础」(trusted computing base)：在最小化代码数量的前提下，决定内核中有什么，同时还要确保安全性都是接近可验证的。</p>
+<p>正式验证代码安全性是一个活跃的研究领域，现在最好的安全手段是「独立安全检查和质量验证」(Independent Verification and Validation)，这种方法让安全领域的软件开发者来审计代码（通常是开源的），外部开发人员比写原始代码的人更容易找到错误。</p>
+<p>同时，也会举行安全大会以便安全专家互相认识并分享想法。</p>
+<h3 id="446-隔离">4.4.6 隔离</h3>
+<p>隔离 (isolation) 是一种在当程序被攻破后控制损害最小化的方式之一，可以通过「沙盒」(sandbox) 程序来实现，沙盒的具体方法是由操作系统给每个程序独有的内存块，其他程序不能使用。</p>
+<p>一台计算机可以运行多个虚拟机 (Virtual Machines)，虚拟机模拟计算机，每个虚拟机都在自己的沙箱里。如果一个程序出错，最糟糕的情况是它自己崩溃或是搞坏它处于的虚拟机，而计算机上其他东西都是隔离的，并不会受其影响。</p>
+<h2 id="45-黑客与攻击-hackers--cyber-attacks">4.5 黑客与攻击 (Hackers &amp; Cyber Attacks)</h2>
+<h3 id="451-hackers">4.5.1 hackers</h3>
+<p>黑客 (hackers) 是指能凭技术知识闯入计算机系统的人，一些通过寻找并修复软件漏洞使得系统更加安全的黑客被称为是「白帽子」(White Hats)。</p>
+<p>相对应的，也有窃取、利用、售卖计算机漏洞和数据的 &ldquo;黑帽&rdquo; 人士 (Black Hat Hackers) 。他们或出于好玩与好奇，或是为了钱财而成为网络罪犯，或是通过黑客手段来影响社会舆论或是达到政治目的（即黑客行动主义者，hacktivists）。</p>
+<h3 id="452-社会工程学">4.5.2 社会工程学</h3>
+<p>黑客最常见的入侵方式是通过欺骗别人而非技术手段，这类通过欺骗手段让人泄露机密信息或让别人将电脑系统配置得变得易于攻击的方式称为「社会工程学」(social engineering)。</p>
+<h4 id="网络钓鱼-phishing">网络钓鱼 (phishing)</h4>
+<p>网络钓鱼的典型例子是伪造银行发送邮件，点击链接进入冒牌银行官网，输入的账密信息会发送给攻击者，之后对方就可以假冒你的身份来登录网站。</p>
+<h4 id="假托-pretexting">假托 (Pretexting)</h4>
+<p>假托是指攻击者伪装成内部人员通过电话将电脑系统配置得更加容易入侵，其第一通电话会让人进行内部转接使得攻击者看起来像是内部 IT 人员。</p>
+<p>通过这种方式只需要事先知道关键员工的名字等信息，就可以以假乱真，使对方降低戒备从而修改配置或是泄露出密码等机密信息。</p>
+<h4 id="木马-trojan-horse">木马 (Trojan horse)</h4>
+<p>木马是伪装成无害的照片或发票等内容的恶意软件，这些恶意软件有的是会偷取银行凭证之类的数据，有的是会加密文件索要赎金的 &ldquo;勒索软件&rdquo; (ransomware)。</p>
+<h3 id="453-nand-镜像-nand-mirroring">4.5.3 NAND 镜像 (NAND Mirroring)</h3>
+<p>若木马或是电话欺骗无法奏效，则攻击者可能会采取暴力尝试来试图进入系统。大多数现代系统会加长等待时间来抵御这种攻击，每次失败就加长等待时间，甚至失败超过一定次数后，完全锁住。</p>
+<p>但最近有一种攻破方式「NAND 镜像」可以绕过这种限制，这种方式需要能够物理接触到电脑，先在内存中接上几根线后复制整个内存。在暴力尝试密码出现设备等待重试的情况时，直接用复制好的内存重新覆盖一次，使得可以无限尝试密码而无序等待。</p>
+<h3 id="454-缓冲区溢出-buffer-overflow">4.5.4 缓冲区溢出 (buffer overflow)</h3>
+<h4 id="漏洞利用-exploit">漏洞利用 (Exploit)</h4>
+<p>通过系统漏洞来获得某些操作能力和访问权限的远程攻击方式，称为「漏洞利用」，最常见的一种漏洞利用是「缓冲区溢出」 (buffer overflow)。</p>
+<p>缓冲区 (buffer) 泛指预留在内存中的一块空间，比如在登录界面输入账密时，这些信息会先记录在缓冲区内再验证是否正确，当输入数据超出缓冲区大小时则出现 &ldquo;溢出&rdquo; (overflow)，此时溢出数据会覆盖掉缓冲区前后的相邻数据。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674737832654.png" alt="缓冲区溢出"></p>
+<p>这种情况有时只会因重要值被垃圾数据覆盖而导致程序或系统崩溃，有时攻击者可以更巧妙地利用这个漏洞 (bug) 来注入有意义的新值到程序的内存中，比如把 &ldquo;is_admin&rdquo; 的值改成 true 获得管理员权限。有了任意修改内存的能力，黑客可以绕过&quot;登录&quot;之类的东西，甚至使用那个程序劫持整个系统。</p>
+<p>应对缓冲区溢出有两种常见方式：边界检查 (bounds checking) 和金丝雀 (canaries)。</p>
+<h4 id="边界检查-bounds-checking">边界检查 (bounds checking)</h4>
+<p>边界检查是指在将值复制到缓冲区之前，先检查一下值的长度，许多现代编程语言自带了边界检查的功能。</p>
+<p>同时程序也会随机存放变量（比如之前提及的 &ldquo;is_admin&rdquo;）在内存中的位置，使得攻击者不知道应当覆盖内存中的哪部分内容。</p>
+<h4 id="金丝雀-canaries">金丝雀 (canaries)</h4>
+<p>金丝雀 (canaries) 源于矿工将金丝雀矿井来警告危险的举动，安全领域的 &ldquo;金丝雀&rdquo; 是指在缓冲区留有一些不用的空间，通过追踪空间内的值是否发生变化来确认是否受到攻击。</p>
+<h3 id="455-代码注入-injection">4.5.5 代码注入 (injection)</h3>
+<p>代码注入 (injection) 常用于攻击使用数据库的网站，在登陆界面使用一种流行的数据库 API —— &ldquo;结构化查询语言&rdquo;(Structured Query Language, SQL) 中的命令插入输入框内，进而对系统进行破坏性操作。</p>
+<p>比如在输入用户名的地方写入 &ldquo;whatever; drop table users&rdquo;，系统会先查询 whatever 这个用户，接着执行命令 &ldquo;drop table users&rdquo; (SQL 命令通过 <code>；</code> 分隔)，使得攻击者在未入侵系统的情况下删除了全表。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674737902017.png" alt="代码注入"></p>
+<p>即使没有正式访问权限，还是可以通过代码注入来利用 bug 来制造混乱。如果指令更复杂一些也许可以添加新记录到数据库，比如新建一个管理员帐户，甚至可以让数据库泄露数据，使得黑客能够窃取信用卡号码，社会安全号码以及各种其他信息。</p>
+<p>如今几乎所有服务器都会防御这种手段，比如通过不允许输入分号或括号等特殊字符来作为第一道防御，再比如通过修改或删除特殊字符来清理输入后再放入数据库查询语句中。</p>
+<h3 id="456-零日漏洞">4.5.6 零日漏洞</h3>
+<p>可行的系统「漏洞利用」(Exploits) 通常会被放置在网上售卖，若该漏洞十分流行或造成的危害很大，则售价越高。有时甚至政府也会购买漏洞利用，使得他们可以通过入侵系统实现间谍活动。</p>
+<p>若软件制造者不知道软件有新漏洞被发现了，则称该漏洞为「零日漏洞」(a zero day vulnerability)。黑帽子们会抢在白帽子们做出补丁之前尽可能的利用漏洞来获利，因此保持系统更新非常重要，很多更新都是安全性补丁。</p>
+<h3 id="457-僵尸网络">4.5.7 僵尸网络</h3>
+<p>当有足够多的电脑存在漏洞，使得恶意程序可以在电脑刺激互相传播，这种恶意程序被称为「蠕虫」(worms)。</p>
+<p>当攻击者利用蠕虫拿下了诸多电脑，则可以组成「僵尸网络」(botnet) 来进行大规模攻击，比如发送大量垃圾邮件、用别人电脑的计算能力和电费挖 Bitcoin、发起&quot;拒绝服务攻击&rdquo; (DDoS) 来攻击服务器等。</p>
+<p>现在，网络攻击每年损害全球经济差不多 5000 亿，这个数字正在日益渐增。许多专家预测下一次的大战会是网络攻击，因为越来越多的基础设施变得数字化，其造成的伤亡甚至会高于传统战争。</p>
+<h2 id="46-加密-cryptography">4.6 加密 (Cryptography)</h2>
+<p>世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署&quot;多层防御&rdquo; (defence in depth) 。</p>
+<p>计算机安全中最常见的防御形式是密码学(cryptography)，该词来自 crypto 和 graphy，大致翻译成&quot;秘密写作&rdquo;。其基本概念如下：</p>
+<ul>
+<li>加密算法 (Cipher)：用于将明文转为密文进行信息加密，不知道如何解密的情况下，密文看起来只是乱码。</li>
+<li>加密 (encryption)：将明文转成密文。</li>
+<li>解密 (decryption)：将密文恢复成明文。</li>
+</ul>
+<h3 id="461-替换加密">4.6.1 替换加密</h3>
+<h4 id="凯撒加密-caesar-cipher">凯撒加密 (Caesar cipher)</h4>
+<p>朱利叶斯·凯撒 (Julius Caesar) 在很早之前就通过将信件中的字母向前移动三个位置来进行加密，这种名为「凯撒加密」(Caesar cipher) 的加密算法归属于一大类名为「替换加密」(substitution ciphers) 的算法类型。</p>
+<p>为了解密，接收者要知道对方使用了什么算法，并且明确要偏移的字母位数。这种算法把每个字母替换成其他字母，其缺点在于替换后的字母出现频率依然有迹可循，密码破译师可以通过统计数据发现相关规律进而破解加密。</p>
+<p>1587 年，正因为一个&quot;替换加密&quot;的密文被破译，导致刺杀伊丽莎白女王的阴谋暴露，使得玛丽女王被处决。</p>
+<h4 id="英格玛机enigma">英格玛机（Enigma）</h4>
+<p>1900 年代，人们用密码学做了加密机器，其中最出名的是纳粹在战时用于加密通讯信息的机器英格玛机 (Enigma Machine) ，属于替换加密的一种。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742198444.png" alt="英格玛"></p>
+<p>如 2.6.2 节中提及的那样，Enigma 是一台像打字机的机器，另有键盘、灯板和转子齿轮，在键盘和转子 (rotors) 上都有完整的字母表。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742329044.png" alt="单个英格玛转子"></p>
+<p>在单个转子重，一面有代表 26 个字母的 26 个接触点，通过线连接到另一面来替换字母。使用多个转子，将上一个转自的输出作为下一个转子的输入。</p>
+<p>转子还有 26 个起始位置，可以按不同顺序放入转子，提供更多字母替换映射。转子之后是一个叫&quot;反射器&quot; (reflector) 的特殊电路，其每个引脚会连到另一个引脚并将信号发回给转子。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742426776.png" alt="多个转子"></p>
+<p>而在机器的前方还有一个插板，可以把输入键盘的字母预先进行替换，使得加密的复杂度进一步提升。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742594511.png" alt="插板"></p>
+<p>英格玛机器的电路是双向的，加密和解密步骤是一致的，因此只需要确保 发送机和接收机的初始配置一样就行。</p>
+<p>英格玛机器的加密特点在于字母加密后一定会变成另一个字母，为了弥补这种简单替换加密的弊端，英格玛会在每输入一个字母后将转子转动一个，使得同一字母会随每次的按键来呈现多种不同映射。</p>
+<p>而正如 2.6.2 节中介绍的那样，艾伦·图灵 (Alan Turing) 和同事破解了英格玛的加密过程，并把大部分破解流程做成了自动化。</p>
+<h3 id="462-移位加密-permutation-ciphers">4.6.2 移位加密 (permutation ciphers)</h3>
+<p>另一类加密算法称为「移位加密」(permutation ciphers)，其中的一个典例是「列移位加密」 (a columnar transposition cipher) —— 通过读取方向和网格大小来加密信息。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674741468891.png" alt="列移位加密"></p>
+<p>若从网格左起开始，从下往上，一次一列，重新组合字母，则可以得到 &ldquo;SCRMMTH EEA L EN-UFT NO&rdquo; 的密文。通过读取方向和 5×5 大小的网格尺寸，可以逆推出明文。</p>
+<h3 id="463-加密算法">4.6.3 加密算法</h3>
+<p>随着计算机出现，加密从硬件转往软件。早期加密算法中，应用最广泛的是数据加密标准和高级加密标准。</p>
+<h4 id="数据加密标准">数据加密标准</h4>
+<p>1977 年，IBM 和 NSA 开发了「数据加密标准」(Data Encryption Standard, DES)，最初使用的密钥是 56bit 长的二进制数，密钥数量为 $2^{56}$ (约 72 千万亿) 个。</p>
+<p>然而随着计算能力的暴增，1999 年一台 25w 美元的计算机可以在两天能遍历所有可能密钥从而暴力破解得到 DES 的密钥，因此该算法不再安全。</p>
+<h4 id="高级加密标准">高级加密标准</h4>
+<p>2001 年，为了紧跟算力增加的现状出台了「高级加密标准」(Advanced Encryption Standard, AES) ，其使用 128/192/256 bit 长度的密钥。</p>
+<p>一个 128bit 的密钥，使用如今的电脑想要暴力破解需要计算上万亿年才可以。更长的密钥位数，使得暴力破解更为困难。</p>
+<p>AES 会将数据切成每块 16 字节的大小，然后用密钥进行一系列替换加密和移位加密，再加上一些其他操作来进一步加密信息，每块数据会重复这个加密过程 10 次以上。</p>
+<p>密钥的长度位数和加密过程的重复次数都是基于性能速度和安全性两者之间的权衡，没有人愿意等待几个小时来加密发送邮件。</p>
+<p>如今 AES 被广泛使用，比如 iPhone 上加密文件、用 WPA2 协议在 WiFi 中访问 HTTPS 网站等。</p>
+<h3 id="464-密钥交换">4.6.4 密钥交换</h3>
+<p>以上所讨论的加密技术都有赖于发送者和接收者同时持有密钥进行加密解密。在早期密钥的交换可以通过口头约定或是实体交换，比如德国人给英格玛配了记录每天机器配置的密码本。</p>
+<p>为了在公开的互联网传递密钥，我们需要可靠的「密钥交换」(key exchange)——一种不发送密钥，但依然让两台计算机在密钥上达成共识的算法。</p>
+<h4 id="单向函数">单向函数</h4>
+<p>密钥交换通过「单向函数」(one-way functions) 实现，单向函数是指很容易正向算出结果，但想从结果逆向推算出输入非常困难的数学操作。</p>
+<p>以颜色为例，发送方和接收方各自选择不为人知的本命色，双方发送时将本名色混合公开色进行传输，接收时再使用自己的本名色叠加，三色混合而成的颜色 (即密钥) 仅交流双方可知。</p>
+<h4 id="迪菲-赫尔曼算法">迪菲-赫尔曼算法</h4>
+<p>具体实现是一种名为「迪菲-赫尔曼密钥交换」 (Diffie-Hellman Key Exchange) 的算法，其单向函数是模幂运算。</p>
+<p>通过对基数进行幂运算取余后得到模很容易，但想要从余数和基数中逆推出指数是多少就很难，而随着基数变大则会难上加难。</p>
+<p>基数 B 和模数 M 是公开的，指数是发送方秘密指定的。阿珍和阿强各自选取一个秘密指数 X 和 Y，发送给对方 B^X mod M /  B^Y mod M，接收之后各自对其取 X 或 Y 的次方进行模幂运算，得出仅双方共享的密钥，由此建立起「共享密钥」(shared key)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674744752363.png" alt="模幂运算"></p>
+<h3 id="465-非对称加密">4.6.5 非对称加密</h3>
+<p>双方用相同的的密钥加密和解密消息，称为「对称加密」(symmetric keys)，凯撒加密，英格玛，AES 都是&quot;对称加密&quot;。</p>
+<p>而使用两个不同的密钥——公开的公钥 (public key) 和私有的私钥 (private key)——进行加密的方式，称为「非对称加密」(asymmetric encryption)。其 &ldquo;不对称&rdquo; 在于仅仅知道公钥只能加密，但不能解密。</p>
+<h4 id="数字签名">数字签名</h4>
+<p>类似于锁和箱子，发送方将信息放入箱子锁起后传输，只有接收方的钥匙能开启箱子。同样的，公钥加密后只能私钥来解密，而私钥加密后可以用公钥解密，私钥和公钥时而是箱子时而是锁。</p>
+<p>这种做法常用于数字签名，服务器使用私钥加密，任何人都可以用服务器的公钥解密。因为只有私钥的持有人能加密，故签名无法伪造，从而证明数据源自可靠的服务器或个人。</p>
+<h4 id="rsa">RSA</h4>
+<p>目前最流行的&quot;非对称加密&quot;技术是 RSA，该名字源于发明者 Rivest, Shamir, Adleman。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674745560193.png" alt="RSA"></p>
+
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/cccs/crash-course-computer-science/3-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="block">3 操作系统</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/cccs/crash-course-computer-science/5-%E6%8B%93%E5%B1%95%E8%AE%A8%E8%AE%BA/" class="block">5 拓展讨论</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#41-计算机网络-computer-networks">4.1 计算机网络 (Computer Networks)</a>
+      <ul>
+        <li><a href="#411-早期网络">4.1.1 早期网络</a></li>
+        <li><a href="#412-以太网">4.1.2 以太网</a>
+          <ul>
+            <li><a href="#mac-地址">MAC 地址</a></li>
+            <li><a href="#载波监听">载波监听</a></li>
+            <li><a href="#指数退避">指数退避</a></li>
+            <li><a href="#冲突域">冲突域</a></li>
+          </ul>
+        </li>
+        <li><a href="#423-路由">4.2.3 路由</a>
+          <ul>
+            <li><a href="#电路交换">电路交换</a></li>
+            <li><a href="#报文交换">报文交换</a></li>
+            <li><a href="#ip-协议">IP 协议</a></li>
+            <li><a href="#分组交换">分组交换</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#42-互联网-the-internet">4.2 互联网 (The Internet)</a>
+      <ul>
+        <li><a href="#421-ip">4.2.1 IP</a></li>
+        <li><a href="#422-udp">4.2.2 UDP</a></li>
+        <li><a href="#423-tcp">4.2.3 TCP</a>
+          <ul>
+            <li><a href="#有序">有序</a></li>
+            <li><a href="#确认码">确认码</a></li>
+            <li><a href="#拥塞控制">拥塞控制</a></li>
+          </ul>
+        </li>
+        <li><a href="#424-dns">4.2.4 DNS</a></li>
+        <li><a href="#425-osi-模型">4.2.5 OSI 模型</a></li>
+      </ul>
+    </li>
+    <li><a href="#43-万维网-the-world-wide-web">4.3 万维网 (The World Wide Web)</a>
+      <ul>
+        <li><a href="#431-超文本和超链接">4.3.1 超文本和超链接</a></li>
+        <li><a href="#432-url">4.3.2 URL</a></li>
+        <li><a href="#433-http">4.3.3 HTTP</a></li>
+        <li><a href="#434-html">4.3.4 HTML</a></li>
+        <li><a href="#435-浏览器">4.3.5 浏览器</a></li>
+        <li><a href="#436-搜索引擎">4.3.6 搜索引擎</a>
+          <ul>
+            <li><a href="#门户网站">门户网站</a></li>
+            <li><a href="#jump-station">Jump Station</a></li>
+            <li><a href="#google">Google</a></li>
+          </ul>
+        </li>
+        <li><a href="#437-网络中立性">4.3.7 网络中立性</a></li>
+      </ul>
+    </li>
+    <li><a href="#44-网络安全-cybersecurity">4.4 网络安全 (Cybersecurity)</a>
+      <ul>
+        <li><a href="#441-安全特性">4.4.1 安全特性</a></li>
+        <li><a href="#442-威胁模型分析">4.4.2 威胁模型分析</a></li>
+        <li><a href="#443-身份认证">4.4.3 身份认证</a>
+          <ul>
+            <li><a href="#what-you-know">What you know</a></li>
+            <li><a href="#what-you-have">What you have</a></li>
+            <li><a href="#what-you-are">What you are</a></li>
+          </ul>
+        </li>
+        <li><a href="#444-访问控制">4.4.4 访问控制</a></li>
+        <li><a href="#445-独立安全检查和质量验证">4.4.5 独立安全检查和质量验证</a></li>
+        <li><a href="#446-隔离">4.4.6 隔离</a></li>
+      </ul>
+    </li>
+    <li><a href="#45-黑客与攻击-hackers--cyber-attacks">4.5 黑客与攻击 (Hackers &amp; Cyber Attacks)</a>
+      <ul>
+        <li><a href="#451-hackers">4.5.1 hackers</a></li>
+        <li><a href="#452-社会工程学">4.5.2 社会工程学</a>
+          <ul>
+            <li><a href="#网络钓鱼-phishing">网络钓鱼 (phishing)</a></li>
+            <li><a href="#假托-pretexting">假托 (Pretexting)</a></li>
+            <li><a href="#木马-trojan-horse">木马 (Trojan horse)</a></li>
+          </ul>
+        </li>
+        <li><a href="#453-nand-镜像-nand-mirroring">4.5.3 NAND 镜像 (NAND Mirroring)</a></li>
+        <li><a href="#454-缓冲区溢出-buffer-overflow">4.5.4 缓冲区溢出 (buffer overflow)</a>
+          <ul>
+            <li><a href="#漏洞利用-exploit">漏洞利用 (Exploit)</a></li>
+            <li><a href="#边界检查-bounds-checking">边界检查 (bounds checking)</a></li>
+            <li><a href="#金丝雀-canaries">金丝雀 (canaries)</a></li>
+          </ul>
+        </li>
+        <li><a href="#455-代码注入-injection">4.5.5 代码注入 (injection)</a></li>
+        <li><a href="#456-零日漏洞">4.5.6 零日漏洞</a></li>
+        <li><a href="#457-僵尸网络">4.5.7 僵尸网络</a></li>
+      </ul>
+    </li>
+    <li><a href="#46-加密-cryptography">4.6 加密 (Cryptography)</a>
+      <ul>
+        <li><a href="#461-替换加密">4.6.1 替换加密</a>
+          <ul>
+            <li><a href="#凯撒加密-caesar-cipher">凯撒加密 (Caesar cipher)</a></li>
+            <li><a href="#英格玛机enigma">英格玛机（Enigma）</a></li>
+          </ul>
+        </li>
+        <li><a href="#462-移位加密-permutation-ciphers">4.6.2 移位加密 (permutation ciphers)</a></li>
+        <li><a href="#463-加密算法">4.6.3 加密算法</a>
+          <ul>
+            <li><a href="#数据加密标准">数据加密标准</a></li>
+            <li><a href="#高级加密标准">高级加密标准</a></li>
+          </ul>
+        </li>
+        <li><a href="#464-密钥交换">4.6.4 密钥交换</a>
+          <ul>
+            <li><a href="#单向函数">单向函数</a></li>
+            <li><a href="#迪菲-赫尔曼算法">迪菲-赫尔曼算法</a></li>
+          </ul>
+        </li>
+        <li><a href="#465-非对称加密">4.6.5 非对称加密</a>
+          <ul>
+            <li><a href="#数字签名">数字签名</a></li>
+            <li><a href="#rsa">RSA</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

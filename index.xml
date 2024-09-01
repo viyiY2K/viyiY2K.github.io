@@ -6,7 +6,16 @@
     <description>Recent content on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 27 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>重学打字</title>
+      <link>https://viyi.cc/relearning_to_type/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/relearning_to_type/</guid>
+      <description>「壮壮撞墙了」，打出这句话你需要击键多少次、耗时多少秒？全拼下 28 次 8 秒，这是我用电脑键盘打字的速度，使用手机上的 T9 键盘也许要到 15s，而 8s 内我脑子里闪</description>
+    </item>
+    
     <item>
       <title>要有一个远见，超越你所未见</title>
       <link>https://viyi.cc/have_the_long_view_beyond_what_you_have_not_seen/</link>
@@ -32,6 +41,15 @@
       
       <guid>https://viyi.cc/why_numbering_should_start_at_zero/</guid>
       <description>之前还在 uTools 打零工的时候，和老大聊评论区有人反馈，希望批量重命名插件的起始位序可以是 0 （当前默认是从 1 开始），我老大说这人一看就是搞计算机的。当时觉得挺</description>
+    </item>
+    
+    <item>
+      <title>再搭博客记</title>
+      <link>https://viyi.cc/building_blog_again/</link>
+      <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/building_blog_again/</guid>
+      <description>&lt;p&gt;拯救沉溺细节雕花作战，启动。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -118,6 +136,375 @@
     </item>
     
     <item>
+      <title>二〇二二</title>
+      <link>https://viyi.cc/annual_review_2022/</link>
+      <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/annual_review_2022/</guid>
+      <description>上一次写年末回顾是在 2020 年，我很少为自己写下点什么，尽管我一直在敲击键盘。大多时候是为了工作，也为学业，只有在痛苦时会吐出无比熟悉的零星几个字。今年七月</description>
+    </item>
+    
+    <item>
+      <title>1.1 早期的计算（Early Computing）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.1%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.1%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97/</guid>
+      <description>1.1.1 信息时代（Electronic Age） 三次工业革命推动全球发展： 第一次（蒸汽）：用机械提高农业、工业、畜牧业的规模，又名机器时代（the Age of Mach</description>
+    </item>
+    
+    <item>
+      <title>1.2 电子计算（Electronic Computing）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.2-%E7%94%B5%E5%AD%90%E8%AE%A1%E7%AE%97electronic-computing/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.2-%E7%94%B5%E5%AD%90%E8%AE%A1%E7%AE%97electronic-computing/</guid>
+      <description>1.2.1 诞生背景 20 世纪人类社会规模的飞速增长，二战动员人数的数量级已经达亿，全球贸易和运输更加紧密，工程和科学的复杂程度达到新高。随之而来的是数据量的暴增，</description>
+    </item>
+    
+    <item>
+      <title>1.3 布尔逻辑与逻辑电路（Boolean Logic &amp; Logic Gates）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.3-%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E4%B8%8E%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AFboolean-logic-logic-gates/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.3-%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E4%B8%8E%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AFboolean-logic-logic-gates/</guid>
+      <description>抽象（Abstraction） 在计算机科学中，抽象化是将资料与程序，以它的语义来呈现出它的外观，但是隐藏起它的实现细节。 抽象化是用来减少程序的复杂度，</description>
+    </item>
+    
+    <item>
+      <title>1.4 二进制表示法（Representing Numbers and Letters with Binary）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/</guid>
+      <description>!&amp;gt;[!quote] “Everything is number.”by Pythagoras 「万物皆数。」——毕达哥斯拉 1.4.1 二进制 在二进制中，每个符号就是二进制元数字（0/1）中的一个二进制位 （b</description>
+    </item>
+    
+    <item>
+      <title>1.5 ALU 算术逻辑单元 （How Computers Calculate）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.5-alu-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83-how-computers-calculate/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.5-alu-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83-how-computers-calculate/</guid>
+      <description>!ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整</description>
+    </item>
+    
+    <item>
+      <title>1.6 寄存器 &amp; 内存（Registers and RAM）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/</guid>
+      <description>!计算机的存储器（Memory）可分为两种类型： 随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。 SRAM( Static Random Access Memory，</description>
+    </item>
+    
+    <item>
+      <title>1.7 CPU 中央处理器（The Central Processing Unit）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/</guid>
+      <description>!### 1.7.1 组成概述 CPU CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。 比如</description>
+    </item>
+    
+    <item>
+      <title>1.8 指令和程序（Instructions &amp; Programs）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.8-%E6%8C%87%E4%BB%A4%E5%92%8C%E7%A8%8B%E5%BA%8Finstructions-programs/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.8-%E6%8C%87%E4%BB%A4%E5%92%8C%E7%A8%8B%E5%BA%8Finstructions-programs/</guid>
+      <description>!### 1.8.1 指令集 指令由「操作码」和「地址码」组成，前者用于说明操作指令，后者则表示操作数据的地址（寄存器或内存地址）。记录指令名称、用法、操作码以及所需 RAM 地</description>
+    </item>
+    
+    <item>
+      <title>1.9 高级 CPU 设计（Advanced CPU Designs）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.9-%E9%AB%98%E7%BA%A7-cpu-%E8%AE%BE%E8%AE%A1advanced-cpu-designs/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.9-%E9%AB%98%E7%BA%A7-cpu-%E8%AE%BE%E8%AE%A1advanced-cpu-designs/</guid>
+      <description>1.9.1 瓶颈演变 计算机的计算量日益骤增，从 1Hz 到 1GHz 的 CPU 时钟速度（1.7.1 节），每秒需要执行约十亿条指令是非常庞大计算量。 为了提升计算速度，早期的计算机试图减</description>
+    </item>
+    
+    <item>
+      <title>2.1 编程史话（Early Programming）</title>
+      <link>https://viyi.cc/docs/programming/2.1-%E7%BC%96%E7%A8%8B%E5%8F%B2%E8%AF%9Dearly-programming/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/programming/2.1-%E7%BC%96%E7%A8%8B%E5%8F%B2%E8%AF%9Dearly-programming/</guid>
+      <description>2.1.1 编程介质 在 1.7.2 节中说明 CPU 工作原理时，我们假设程序已经在计算机内存中了，但实际上程序需要被加载（load into）进内存。 [line-2, body-2] + 1801 年 + 可穿孔纸卡（pun</description>
+    </item>
+    
+    <item>
+      <title>2.2 编程语言（The First Programming Languages）</title>
+      <link>https://viyi.cc/docs/programming/2.2-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80the-first-programming-languages/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/programming/2.2-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80the-first-programming-languages/</guid>
+      <description>[line-2, body-2] + early day + 机器语言（Machine Language） + - 机器语言又名机器码（Machine Code），指只能理解二进制描述的信息。 - 早期编程只能使用</description>
+    </item>
+    
+    <item>
+      <title>2.3 编程原理：语句和函数（Programming Basics Statements &amp; Functions）</title>
+      <link>https://viyi.cc/docs/programming/2.3-%E7%BC%96%E7%A8%8B%E5%8E%9F%E7%90%86%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%87%BD%E6%95%B0programming-basics-statements-functions/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/programming/2.3-%E7%BC%96%E7%A8%8B%E5%8E%9F%E7%90%86%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%87%BD%E6%95%B0programming-basics-statements-functions/</guid>
+      <description>2.3.1 概述 规定句子结构的一系列规则，叫做「语法」（syntax），编程语言也有相应的语法结构。用编程语言表达完整单个思想的内容，称为「语句」（statem</description>
+    </item>
+    
+    <item>
+      <title>2.4 算法入门（Intro to Algorithms）</title>
+      <link>https://viyi.cc/docs/programming/2.4-%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8intro-to-algorithms/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/programming/2.4-%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8intro-to-algorithms/</guid>
+      <description>2.4.1 概述 算法 算法（Algorithm）一词源自 1000 多年前的波斯博识者，阿尔·花拉子密(Abū ʿAbdallāh Muḥammad ibn Mūsā al-Khwāri</description>
+    </item>
+    
+    <item>
+      <title>2.5 数据结构（Data Structures）</title>
+      <link>https://viyi.cc/docs/programming/2.5-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84data-structures/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/programming/2.5-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84data-structures/</guid>
+      <description>数据结构是用于表示算法所处理的数据在内存中存储的格式，当数据是结构化的，会更便于读取。 不同的数据结构有不同的特性，适用于不同的场景,正确选择数据结构会</description>
+    </item>
+    
+    <item>
+      <title>2.6 阿兰·图灵（Alan Turing）</title>
+      <link>https://viyi.cc/docs/programming/2.6-%E9%98%BF%E5%85%B0%E5%9B%BE%E7%81%B5alan-turing/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/programming/2.6-%E9%98%BF%E5%85%B0%E5%9B%BE%E7%81%B5alan-turing/</guid>
+      <description>阿兰·马蒂森·图灵（Alan Mathison Turing）于 1921 年出生在伦敦，从小表现出惊人的数学和科学能力。他对计算机科学的建树始于 1935 年，当时他是剑桥国王学院的硕士</description>
+    </item>
+    
+    <item>
+      <title>2.7 软件工程（Software Engineering）</title>
+      <link>https://viyi.cc/docs/programming/2.7-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8Bsoftware-engineering/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/programming/2.7-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8Bsoftware-engineering/</guid>
+      <description>工程师会通过协作与工具完成大型程序的编写，相关的事情则形成了「软件工程」这个学科，该词由工程师 Margaret Hamilton 提出。 2.7.1 对象 2.3.4 节中提及的「函数」仍然无法应对超大数量</description>
+    </item>
+    
+    <item>
+      <title>3.1 操作系统（Operating Systems）</title>
+      <link>https://viyi.cc/docs/operating_system/3.1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9Foperating-systems/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/operating_system/3.1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9Foperating-systems/</guid>
+      <description>3.1.1 操作系统简史 [line-2, body-2] + 1940/50s + pre-OS + - 此时电脑每次只能运行一个程序，程序员在打孔纸卡上写程序，完成后交给操作员等待放入。 - 操作员在计算机完成上一个程序后，放入</description>
+    </item>
+    
+    <item>
+      <title>3.2 内存 &amp; 储存介质（Memory &amp; Storage）</title>
+      <link>https://viyi.cc/docs/operating_system/3.2-%E5%86%85%E5%AD%98-%E5%82%A8%E5%AD%98%E4%BB%8B%E8%B4%A8memory-storage/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/operating_system/3.2-%E5%86%85%E5%AD%98-%E5%82%A8%E5%AD%98%E4%BB%8B%E8%B4%A8memory-storage/</guid>
+      <description>3.2.1 存储器（storage） 1.6 小节设计的 RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent</description>
+    </item>
+    
+    <item>
+      <title>3.3 文件系统（Files &amp; File Systems）</title>
+      <link>https://viyi.cc/docs/operating_system/3.3-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9Ffiles-file-systems/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/operating_system/3.3-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9Ffiles-file-systems/</guid>
+      <description>3.3.1 文件格式（file format） 文件的底层均为二进制 0 和 1，需要用格式明确如何解释这些 0 和 1，同时也便于进行文件管理。文件格式可以自行发明，但最好使</description>
+    </item>
+    
+    <item>
+      <title>3.4 压缩（Compression）</title>
+      <link>https://viyi.cc/docs/operating_system/3.4-%E5%8E%8B%E7%BC%A9compression/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/operating_system/3.4-%E5%8E%8B%E7%BC%A9compression/</guid>
+      <description>3.4.1 游程编码（Run-Length Encoding） 游程编码（Run-Length Encoding）适用于经常出现重复值的文件中，比如下图中有 7 个连续黄</description>
+    </item>
+    
+    <item>
+      <title>3.5 人机交互（Human-Computer Interaction）</title>
+      <link>https://viyi.cc/docs/operating_system/3.5-%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92human-computer-interaction/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/operating_system/3.5-%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92human-computer-interaction/</guid>
+      <description>「人机交互」（Human-Computer Interaction）是一门研究人类和机器直接进行交互的学科，各种 I/O 设备都提供了界面（interface）</description>
+    </item>
+    
+    <item>
+      <title>3.6 屏幕 &amp; 2D 图形显示 - Screens &amp; 2D Graphics</title>
+      <link>https://viyi.cc/docs/operating_system/3.6-%E5%B1%8F%E5%B9%95-2d-%E5%9B%BE%E5%BD%A2%E6%98%BE%E7%A4%BA-screens-2d-graphics/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/operating_system/3.6-%E5%B1%8F%E5%B9%95-2d-%E5%9B%BE%E5%BD%A2%E6%98%BE%E7%A4%BA-screens-2d-graphics/</guid>
+      <description>1960s 的 PDP-1 的电脑、屏幕、电传打字机是分开的，因为早期的文本任务和图形任务是分开的。早期的屏幕无法显示清晰的文字，打印到纸上会有更高的对比度和分辨率。 屏幕早</description>
+    </item>
+    
+    <item>
+      <title>3.7 冷战和消费主义（The Cold War and Consumerism）</title>
+      <link>https://viyi.cc/docs/operating_system/3.7-%E5%86%B7%E6%88%98%E5%92%8C%E6%B6%88%E8%B4%B9%E4%B8%BB%E4%B9%89the-cold-war-and-consumerism/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/operating_system/3.7-%E5%86%B7%E6%88%98%E5%92%8C%E6%B6%88%E8%B4%B9%E4%B8%BB%E4%B9%89the-cold-war-and-consumerism/</guid>
+      <description>1940~1970 年代计算机在短短三十年间经历了巨变，这是由政府和消费者两方推动的。 政府资金推动了计算机的早期研究发展，使得计算机行业有时间等待技术成熟到可以商用，公</description>
+    </item>
+    
+    <item>
+      <title>3.8 个人计算机革命（The Personal Computer Revolution）</title>
+      <link>https://viyi.cc/docs/operating_system/3.8-%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%9D%A9%E5%91%BDthe-personal-computer-revolution/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/operating_system/3.8-%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%9D%A9%E5%91%BDthe-personal-computer-revolution/</guid>
+      <description>3.8.1 微型计算机 相较于那个时代放在公司或大学中的“普通”（normal）计算机，1970s 出现了「微型计算机」（microcomputer），它的出现源于</description>
+    </item>
+    
+    <item>
+      <title>3.9 图形用户界面（Graphical User Interfaces）</title>
+      <link>https://viyi.cc/docs/operating_system/3.9-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2graphical-user-interfaces/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/operating_system/3.9-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2graphical-user-interfaces/</guid>
+      <description>3.9.1 增强人类智力（Augmenting Human Intellect） GUI 的先驱是道格拉斯·恩格尔巴特（Douglas Engelbart），他在二战期间阅读了布什（</description>
+    </item>
+    
+    <item>
+      <title>4.1 计算机网络 (Computer Networks)</title>
+      <link>https://viyi.cc/docs/4_computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/4_computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/</guid>
+      <description>4.1.1 早期网络 [line-2, body-2] + 150 年前 + 特快邮件 + - 发一封信件从伦敦到加州要花 2~3 周。 - 传播一条信息所需要的时间称为「时延」 (latency) 。 + 1950~60s + 球鞋网络 (sneakernet) + - 在公司或研究室内部使</description>
+    </item>
+    
+    <item>
+      <title>4.2 互联网 (The Internet)</title>
+      <link>https://viyi.cc/docs/4_computer_network/4.2-%E4%BA%92%E8%81%94%E7%BD%91-the-internet/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/4_computer_network/4.2-%E4%BA%92%E8%81%94%E7%BD%91-the-internet/</guid>
+      <description>互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。 计算机需要先连接到局域网 (Local Area Network,LAN)—— 即 WIFI 路由器所连接的所有设备</description>
+    </item>
+    
+    <item>
+      <title>4.3 万维网 (The World Wide Web)</title>
+      <link>https://viyi.cc/docs/4_computer_network/4.3-%E4%B8%87%E7%BB%B4%E7%BD%91-the-world-wide-web/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/4_computer_network/4.3-%E4%B8%87%E7%BB%B4%E7%BD%91-the-world-wide-web/</guid>
+      <description>万维网 (World Wide Web) 运行在互联网 (Internet) 上，两者经常混用但不是一回事。 互联网是传递数据的管道，各种程序都会用。其中传输最多数据的程序是分布在全球数百万个服务器上的万</description>
+    </item>
+    
+    <item>
+      <title>4.4 网络安全 (Cybersecurity)</title>
+      <link>https://viyi.cc/docs/4_computer_network/4.4-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-cybersecurity/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/4_computer_network/4.4-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-cybersecurity/</guid>
+      <description>4.4.1 安全特性 计算机安全可以视为保护系统和数据的保密性 (Secrecy), 完整性 (Integrity) 和可用性 (Availability)： 保密性：只有有权限的人，才能读取计算机系统和数据。若</description>
+    </item>
+    
+    <item>
+      <title>4.5 黑客与攻击 (Hackers &amp; Cyber Attacks)</title>
+      <link>https://viyi.cc/docs/4_computer_network/4.5-%E9%BB%91%E5%AE%A2%E4%B8%8E%E6%94%BB%E5%87%BB-hackers-cyber-attacks/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/4_computer_network/4.5-%E9%BB%91%E5%AE%A2%E4%B8%8E%E6%94%BB%E5%87%BB-hackers-cyber-attacks/</guid>
+      <description>4.5.1 hackers 黑客 (hackers) 是指能凭技术知识闯入计算机系统的人，一些通过寻找并修复软件漏洞使得系统更加安全的黑客被称为是「白帽子」(White Hats)。 相对应的，也有</description>
+    </item>
+    
+    <item>
+      <title>4.6 加密 (Cryptography)</title>
+      <link>https://viyi.cc/docs/4_computer_network/4.6-%E5%8A%A0%E5%AF%86-cryptography/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/4_computer_network/4.6-%E5%8A%A0%E5%AF%86-cryptography/</guid>
+      <description>世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署&amp;quot;多层防御&amp;quot; (defence in depth) 。 计算机安</description>
+    </item>
+    
+    <item>
+      <title>5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence)</title>
+      <link>https://viyi.cc/docs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/</guid>
+      <description>机器学习 (Machine Learning, ML) 的本质是根据数据做出决定，机器学习算法让计算机可以从数据中学习，然后自行做出预测和决定。 能够根据数据做出一定决断并不意味着它拥有和人类一</description>
+    </item>
+    
+    <item>
+      <title>5.2 计算机视觉 (Computer Vision)</title>
+      <link>https://viyi.cc/docs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/</guid>
+      <description>计算机视觉 (Computer Vision) 领域的目标是让计算机理解图像和视频。 [!quote] &amp;ldquo;Just like to hear is the not the same as to listen.To take pictures is not the same as to see.&amp;rdquo; by computer vision professor Fei-Fei Li 「听到不等于听懂，看到不等于看懂」——李飞飞</description>
+    </item>
+    
+    <item>
+      <title>5.3 自然语言处理 (Natural Language Processing)</title>
+      <link>https://viyi.cc/docs/extended_discussion/5.3-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86-natural-language-processing/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/extended_discussion/5.3-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86-natural-language-processing/</guid>
+      <description>相较于 2.2 节中讨论过的 &amp;ldquo;编程语言&amp;rdquo; 这种词汇量较少、非常结构化的语言类型而言，拥有大量词汇、多义词、口音等特点的人类语言与之完全不</description>
+    </item>
+    
+    <item>
+      <title>5.4 机器人 (Robots)</title>
+      <link>https://viyi.cc/docs/extended_discussion/5.4-%E6%9C%BA%E5%99%A8%E4%BA%BA-robots/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/extended_discussion/5.4-%E6%9C%BA%E5%99%A8%E4%BA%BA-robots/</guid>
+      <description>5.4.1 robot 机器人是由计算机控制，可以自动执行一系列动作的机器。 外观并不重要，工厂的机械臂 (industrial arms)、无人机 (drones that fly)、辅助外科医生的蛇状机器人(snak</description>
+    </item>
+    
+    <item>
+      <title>5.5 计算机中的心理学 (Psychology of Computing)</title>
+      <link>https://viyi.cc/docs/extended_discussion/5.5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6-psychology-of-computing/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/extended_discussion/5.5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6-psychology-of-computing/</guid>
+      <description>系统设计师 (system designers) 会综合运用社会心理学、认知心理学、行为心理学、感知心理学等学科原理，使得物理界面或计算机界面更加具有「易用度」(Usability)。 易</description>
+    </item>
+    
+    <item>
+      <title>5.6 教育型科技 (Educational Technology)</title>
+      <link>https://viyi.cc/docs/extended_discussion/5.6-%E6%95%99%E8%82%B2%E5%9E%8B%E7%A7%91%E6%8A%80-educational-technology/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/extended_discussion/5.6-%E6%95%99%E8%82%B2%E5%9E%8B%E7%A7%91%E6%8A%80-educational-technology/</guid>
+      <description>计算机带来的最大改变之一是信息的创造和传播能力，如今的互联网的信息数据量级极高——目前有 13 亿个网站存在，仅维基百科就有 500 万篇英文文章，Google 每天</description>
+    </item>
+    
+    <item>
+      <title>5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing)</title>
+      <link>https://viyi.cc/docs/extended_discussion/5.7-%E5%A5%87%E7%82%B9%E5%A4%A9%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5the-singularity-skynet-and-the-future-of-computing/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/extended_discussion/5.7-%E5%A5%87%E7%82%B9%E5%A4%A9%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5the-singularity-skynet-and-the-future-of-computing/</guid>
+      <description>[!quote] &amp;ldquo;Computer science isn&amp;rsquo;t magic, but it sort of is!Knowing how to use and program computers is sorcery of the 21st century.Instead of incantations and spells, it&amp;rsquo;s scripts and code.&amp;rdquo; by Carrie Anne 计算机科学不是魔法，但它有点像魔法。学习使用电脑和编程，是 21 世纪的巫术，只不过用的不</description>
+    </item>
+    
+    <item>
+      <title>3.10 3D 图形（3D Graphics）</title>
+      <link>https://viyi.cc/docs/operating_system/3.10-3d-%E5%9B%BE%E5%BD%A23d-graphics/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/operating_system/3.10-3d-%E5%9B%BE%E5%BD%A23d-graphics/</guid>
+      <description>3.10.1 3D 投影（3 Dimensional Projection） 3D 中使用 X,Y,Z 三点构成某点的坐标，因 2D 电脑屏幕无法将三轴立体坐标完美展示，故使用某种图形算法来将 3D 坐标“拍平”（fla</description>
+    </item>
+    
+    <item>
+      <title>1.10 集成电路、摩尔定律（Integrated Circuits &amp; Moore&#39;s Law）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.10-%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E6%91%A9%E5%B0%94%E5%AE%9A%E5%BE%8Bintegrated-circuits-moores-law/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.10-%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E6%91%A9%E5%B0%94%E5%AE%9A%E5%BE%8Bintegrated-circuits-moores-law/</guid>
+      <description>1.10.1 集成电路（Integrated Circuits） 数字暴政 1940s~1960s 中期，计算机由独立部件用线连接而成组成，这些独立部件称为「分立元件」（discrete co</description>
+    </item>
+    
+    <item>
       <title>卡片盒笔记到底是什么？</title>
       <link>https://viyi.cc/zettelkasten/</link>
       <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
@@ -131,37 +518,37 @@
     
     <item>
       <title>Chapter 1</title>
-      <link>https://viyi.cc/docs/example-doc/chapter-1/</link>
+      <link>https://viyi.cc/docs_1/example-doc/chapter-1/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/docs/example-doc/chapter-1/</guid>
+      <guid>https://viyi.cc/docs_1/example-doc/chapter-1/</guid>
       <description>&lt;p&gt;This is chapter 1 of example doc.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chapter 1</title>
-      <link>https://viyi.cc/docs/example-doc/nested-chapter/chapter-1/</link>
+      <link>https://viyi.cc/docs_1/example-doc/nested-chapter/chapter-1/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/docs/example-doc/nested-chapter/chapter-1/</guid>
+      <guid>https://viyi.cc/docs_1/example-doc/nested-chapter/chapter-1/</guid>
       <description>&lt;p&gt;This is chapter 1 of nested chapter.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chapter 2</title>
-      <link>https://viyi.cc/docs/example-doc/chapter-2/</link>
+      <link>https://viyi.cc/docs_1/example-doc/chapter-2/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/docs/example-doc/chapter-2/</guid>
+      <guid>https://viyi.cc/docs_1/example-doc/chapter-2/</guid>
       <description>&lt;p&gt;This is chapter 2 of example doc.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chapter 2</title>
-      <link>https://viyi.cc/docs/example-doc/nested-chapter/chapter-2/</link>
+      <link>https://viyi.cc/docs_1/example-doc/nested-chapter/chapter-2/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/docs/example-doc/nested-chapter/chapter-2/</guid>
+      <guid>https://viyi.cc/docs_1/example-doc/nested-chapter/chapter-2/</guid>
       <description>&lt;p&gt;This is chapter 2 of nested chapter.&lt;/p&gt;</description>
     </item>
     

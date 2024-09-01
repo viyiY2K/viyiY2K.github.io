@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>4.2 互联网 (The Internet) | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。 计算机需要先连接到局域网 (Local Area Network,LAN)—— 即 WIFI 路由器所连接的所有设备">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science",
+      "item":"https://viyi.cc/cccs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"4 计算机网络",
+      "item":"https://viyi.cc/cccs/computer_network/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"4.2 互联网 (The Internet)",
+      "item":"https://viyi.cc/cccs/computer_network/4.2-%E4%BA%92%E8%81%94%E7%BD%91-the-internet/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/cccs/computer_network/4.2-%E4%BA%92%E8%81%94%E7%BD%91-the-internet/"
+    },
+    "headline": "4.2 互联网 (The Internet) | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  2009 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。 计算机需要先连接到局域网 (Local Area Network,LAN)—— 即 WIFI 路由器所连接的所有设备"
+}
+</script><meta property="og:title" content="4.2 互联网 (The Internet) | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/cccs/computer_network/4.2-%E4%BA%92%E8%81%94%E7%BD%91-the-internet/" />
+
+
+
+
+<meta property="og:description" content="互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。 计算机需要先连接到局域网 (Local Area Network,LAN)—— 即 WIFI 路由器所连接的所有设备" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="cccs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/cccs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">4.2 互联网 (The Internet)</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>5分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。</p>
+<p>计算机需要先连接到局域网 (Local Area Network,LAN)—— 即 WIFI 路由器所连接的所有设备组成的小型网络，局域网再连接至广域网 (Wide Area Network, WAN)。</p>
+<p>广域网中的路由器又归属于「互联网服务提供商」(Internet Service Provider, ISP)，旗下有多个不同范围大小的广域网互相连接。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674706548886.png" alt="跳跃主干网络获取资源"></p>
+<p>若想获取某个资源，数据包（packet）需要先经由互联网主干（由一群超大型、带宽超高路由器组成）到达资源的服务器。</p>
+<p>在这个过程中，数据包可能要跳个 10 次才能到达（4 跳进主干，2 跳穿越，4 跳进服务器）。Windows, Mac OS 或 Linux系统，可以用 traceroute 来查看具体跳数。</p>
+<h3 id="421-ip">4.2.1 IP</h3>
+<p>互联网协议(Internet Protocol, IP) 中规定了数据包 (packet) 在互联网中传输的标准，是非常底层的一种协议。</p>
+<p>数据包的头部 (前缀) 是指“关于数据的数据”，又名「原数据」(metadata) 。头部指存储了目标地址，无法用于区分具体将数据交给目标地址的电脑中的哪个程序。</p>
+<p>因此需要更高层的协议来区分程序， IP 负责把数据包送到正确的计算机，而 UDP 负责把数据包送到正确的程序中。</p>
+<h3 id="422-udp">4.2.2 UDP</h3>
+<p>用户数据报协议(User Datagram Protocol, UDP) 是一种传输层协议，其头部包含着端口号 (port) 和校验和 (checksum)等元数据。</p>
+<p>每个想要访问网络的程序，会向操作系统申请唯一的端口号。当数据包到达时，根据端口号将数据交付给不同的程序。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674707170480.png" alt="端口号"></p>
+<p>校验和用于检验数据是否正确，最简单的方式是将数据求和后对比。在 UDP 中，校验和以 16bit 的形式进行存储，若求和高于 16 位所能表示的最大值则舍弃高位。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674707481545.png" alt="校验和"></p>
+<p>接收方收到数据包后会重新计算一次数据和，再与头部中的校验和进行对比，若不一致，则可判定数据可能因功率波动或电缆故障等原因而出现了错误。</p>
+<p>UDP 不提供修复数据或是数据重发的机制，检验出错后 UDP 会直接丢包，且其无法确认数据包是否已经到达。但其优势在于简单快捷，一些视频通话应用更加青睐。</p>
+<h3 id="423-tcp">4.2.3 TCP</h3>
+<p>传输控制协议(Transmission Control Protocol, TCP) 较之 UDP 的“尽力而为”而言更加可靠，其可以确保“所有数据均必须到达”。TCP 协议最初是和 IP 协议一齐出现，称为 TCP/IP 协议，后拆分为两个协议。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708413729.png" alt="TCP/IP"></p>
+<p>TCP 有许多更高级的功能，最重要的几个特性如下：</p>
+<h4 id="有序">有序</h4>
+<p>TCP 数据包有序号(sequence numbers)，就算传输过程中出现了乱序到达的情况，接收方仍然可以利用序号对数据包进行正确排序。</p>
+<h4 id="确认码">确认码</h4>
+<p>TCP 要求接收方的电脑收到数据包、检查&quot;校验和&quot;无误后（数据没有损坏），给发送方发一个确认码 (Acknowledgement, ACK) ，代表收到了数据包。</p>
+<p>发送方在收到上一个数据包的确认码之后，会接着再发送下一个数据包。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708847530.png" alt="ACK"></p>
+<p>若确认码因延误或丢失使得在一定时间后发送方仍未收到，则发送方会再次重发数据包。若接收方收到重复的数据包，可根据序号加判断是否重复需要丢弃。</p>
+<p>此外，TCP 可以一次发送多个数据包，等待接收多个确认码，使得效率提升。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708918911.png" alt=""></p>
+<h4 id="拥塞控制">拥塞控制</h4>
+<p>在 TCP 协议中，可以借由确认码的成功率和来回时间来推测网络的拥塞程度，进而调整发送数据包的数量。</p>
+<p>简言之，TCP 可以处理乱序、丢失、重发问题，还可以根据网络拥塞情况来自动调整传输速率。</p>
+<p>但为了提高可靠性而存在的 ACK 使得数据包数量翻番，信息传输的密度下降，不适用于像是在线射击游戏等对时间要求很高的程序使用。</p>
+<h3 id="424-dns">4.2.4 DNS</h3>
+<p>计算机根据“IP 地址”和“端口号”对网站进行访问，比如 谷歌的 IP 地址和端口号是 172.217.7.238/80。但数字不利于人类记忆识别，用文字表示的域名 google.com 较之更为友好。</p>
+<p>因此，需要使用特殊服务实现“IP 地址/端口号”和“域名”之间的映射对应关系，这种服务称为「域名系统」(Domain Name System, DNS) 。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674709731917.png" alt="DNS"></p>
+<p>输入域名后，浏览器会访问 DNS 服务器去询问其对应的 IP 地址是什么。接着 DNS 会查表，若表项存在则返回相应内容。</p>
+<p>因注册的二级域名就已高达数千万个，为了更好地管理，DNS 使用树状结构来存储映射关系。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674709783202.png" alt="DNS 结构树"></p>
+<p>域名自右往左为：「顶级域名」(Top Level Domains, TLD) 、二级域名(lower level domains)、子域名(subdomains) etc.</p>
+<p>因 DNS 的结构树非常大，因此这些数据都分布在许多 DNS 服务器中，不同的服务器负责树中不同部分的查询返回服务。</p>
+<h3 id="425-osi-模型">4.2.5 OSI 模型</h3>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674710118971.png" alt="OSI 模型"></p>
+<p>开放式系统互联通信参考模型 (Open System Interconnection, OSI) 是一种将网络通信划分为多层次的概念性框架，每层各自处理一部分问题，利用抽象以便更好地简化通信。具体分层如下：</p>
+<ol>
+<li>物理层 (Physical Layer)：线路里的电信号，以及无线网络里的无线信号。</li>
+<li>数据链路层 (Data Link Layer)：负责操控&quot;物理层&quot;，有媒体访问控制地址（MAC）、碰撞检测、指数退避，以及其他一些底层协议。</li>
+<li>网络层 (Network Layer)：负责各种报文交换和路由。</li>
+<li>传输层 (Transport layer)：有 TCP、UDP 等协议，负责在计算机之间进行点到点的传输，同时提供检测和修复错误的服务。</li>
+<li>会话层 (Session Layer)：使用 TCP 和 UDP 来创建连接，传递信息，然后关掉连接，这个过程称为「会话」(session) 。</li>
+<li>表示层 (the Presentation Layer) ：</li>
+<li>应用程序层 (Application Layer) ：其中有浏览器，Skype，HTML解码，在线看电影等。</li>
+</ol>
+
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/cccs/computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/" class="block">4.1 计算机网络 (Computer Networks)</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/cccs/computer_network/4.3-%E4%B8%87%E7%BB%B4%E7%BD%91-the-world-wide-web/" class="block">4.3 万维网 (The World Wide Web)</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#421-ip">4.2.1 IP</a></li>
+        <li><a href="#422-udp">4.2.2 UDP</a></li>
+        <li><a href="#423-tcp">4.2.3 TCP</a>
+          <ul>
+            <li><a href="#有序">有序</a></li>
+            <li><a href="#确认码">确认码</a></li>
+            <li><a href="#拥塞控制">拥塞控制</a></li>
+          </ul>
+        </li>
+        <li><a href="#424-dns">4.2.4 DNS</a></li>
+        <li><a href="#425-osi-模型">4.2.5 OSI 模型</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

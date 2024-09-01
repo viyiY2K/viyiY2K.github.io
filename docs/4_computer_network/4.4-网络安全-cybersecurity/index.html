@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>4.4 网络安全 (Cybersecurity) | 4 计算机网络 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="4.4.1 安全特性 计算机安全可以视为保护系统和数据的保密性 (Secrecy), 完整性 (Integrity) 和可用性 (Availability)： 保密性：只有有权限的人，才能读取计算机系统和数据。若">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science | 计算机速成课",
+      "item":"https://viyi.cc/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"4 计算机网络",
+      "item":"https://viyi.cc/docs/4_computer_network/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"4.4 网络安全 (Cybersecurity)",
+      "item":"https://viyi.cc/docs/4_computer_network/4.4-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-cybersecurity/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs/4_computer_network/4.4-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-cybersecurity/"
+    },
+    "headline": "4.4 网络安全 (Cybersecurity) | 4 计算机网络 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  2477 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "4.4.1 安全特性 计算机安全可以视为保护系统和数据的保密性 (Secrecy), 完整性 (Integrity) 和可用性 (Availability)： 保密性：只有有权限的人，才能读取计算机系统和数据。若"
+}
+</script><meta property="og:title" content="4.4 网络安全 (Cybersecurity) | 4 计算机网络 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs/4_computer_network/4.4-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-cybersecurity/" />
+
+
+
+
+<meta property="og:description" content="4.4.1 安全特性 计算机安全可以视为保护系统和数据的保密性 (Secrecy), 完整性 (Integrity) 和可用性 (Availability)： 保密性：只有有权限的人，才能读取计算机系统和数据。若" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-e">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">目录</span>
+    <i class='fas fa-caret-right ms-1'></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="https://viyi.cc/docs/4_computer_network/">4 计算机网络</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/">4.1 计算机网络 (Computer Networks)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.2-%E4%BA%92%E8%81%94%E7%BD%91-the-internet/">4.2 互联网 (The Internet)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.3-%E4%B8%87%E7%BB%B4%E7%BD%91-the-world-wide-web/">4.3 万维网 (The World Wide Web)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.4-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-cybersecurity/">4.4 网络安全 (Cybersecurity)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.5-%E9%BB%91%E5%AE%A2%E4%B8%8E%E6%94%BB%E5%87%BB-hackers-cyber-attacks/">4.5 黑客与攻击 (Hackers &amp; Cyber Attacks)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.6-%E5%8A%A0%E5%AF%86-cryptography/">4.6 加密 (Cryptography)</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    <article class="prose">
+  <h1 class="mb-4">4.4 网络安全 (Cybersecurity)</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>5分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h3 id="441-安全特性">4.4.1 安全特性</h3>
+<p>计算机安全可以视为保护系统和数据的保密性 (Secrecy), 完整性 (Integrity) 和可用性 (Availability)：</p>
+<ul>
+<li>
+<p>保密性：只有有权限的人，才能<strong>读取</strong>计算机系统和数据。若黑客泄露信用卡信息，则是攻击保密性。</p>
+</li>
+<li>
+<p>完整性：只有有权限的人，才能<strong>使用和修改</strong>系统和数据。若黑客知道你邮箱密码伪造你的发送邮件，则是攻击完整性。</p>
+</li>
+<li>
+<p>可用性：有相应权限的人，可以<strong>随时访问</strong>计算机系统和数据。用大量假请求来拖垮服务器的「拒绝服务攻击」(Distributed Denial of Service Attack, DDOS)，是在攻击可用性。</p>
+</li>
+</ul>
+<h3 id="442-威胁模型分析">4.4.2 威胁模型分析</h3>
+<p>为实现 4.4.1 节中的对三种特性的维护，安全架构师会从抽象层面对假想敌人做出模拟，为特定情境做准备，这个过程称为「威胁模型分析」(threat model)。</p>
+<p>该模型会对攻击者进行大致描述：攻击者能力 (capabilities)、攻击目标 (goals)、可能攻击手段/攻击矢量（attack vector）。</p>
+<p>在实际应用过程中，具体如何保护要看是与谁进行对抗。通常威胁模型分析里 会以能力水平区分，比如&quot;某人可以物理接触到笔记本计算机，而且时间无限&quot;，安全架构师要在给定的威胁模型下提供解决方案以保持系统安全。</p>
+<p>只要某些假设不被推翻，保护计算机系统、网络和数据的方法有很多。诸多安全问题可以被归结为以下两个问题：</p>
+<ol>
+<li>who are you?  你是谁？ -&gt; 身份认证</li>
+<li>what should you have access to?  你能访问什么？-&gt; 访问控制</li>
+</ol>
+<h3 id="443-身份认证">4.4.3 身份认证</h3>
+<p>根据来访者的身份给予不同权限，用于区分不同使用者的方式称为「身份认证」 (authentication) ，常用的三种方式分别是：你知道什么 (What you know)、你有什么 (What you have)、你是什么 (what you are)。</p>
+<p>对于重要账户，可以采用&quot;双因素&quot; (two-factor) 或&quot;多因素&quot;认证 (multi-factor authentication)，这种两步验证使得安全性大大提升。</p>
+<h4 id="what-you-know">What you know</h4>
+<p>基于某个只有计算机和你知道的秘密（如用户名和密码）来确认身份，但若攻击者通过猜测得知，密码组合位数越多、复杂性越高，被猜中的概率越低。</p>
+<p>以 4 位的手机 PIN 码为例，计算机可以在 1s 内从 0000 一直试到 9999，这种尝试所有可能性的攻击方式称为「暴力攻击」(brute force attack)。</p>
+<p>通常的系统会有次数限制，比如在 PIN 码输入错误 3 次后，需要等待一定时间才能进行重试。但假设攻击者使用数以万计的计算机来形成僵尸网络在不同账户上尝试密码组合，就算每个账户只试一次，也存在命中的可能性。</p>
+<p>8 位 PIN 码著有 1 亿种组合，但包含特殊字符的 8 位数密码有超过 600w 亿种组合。为了记忆和复杂度的综合，可以使用三个连续单词的组合，英文大约有 10w 个单词，三个单词的组合约有 1亿亿种可能。而使用不在字典中的单词，会使得密码强度进一步提升。</p>
+<h4 id="what-you-have">What you have</h4>
+<p>基于某种用户所拥有的特定物体来确认身份，比如钥匙和锁。通常需要有人在场，使得远程攻击更为困难。但如果攻击者在附件，安全性就会降低——钥匙可以被复制，手机可能被偷，锁可以撬开。</p>
+<h4 id="what-you-are">What you are</h4>
+<p>基于人类自身的生物特征来进行身份认证，比如指纹识别器和虹膜扫描仪就是典型的生物识别验证器，安全性最高但好的识别技术十分昂贵，且传感器中识别到的数据每次都会有差异。</p>
+<p>相较于具有&quot;确定性&quot;（正确 or 错误）的 &ldquo;你知道什么&quot;和&quot;你有什么&quot;这两种验证方式，&ldquo;生物识别&quot;是存在概率性的。系统有可能认不出你或者错认你，同时生物认证也存在无法重设的问题——人只有十个手指，攻击者如果拿到所有指纹就玩完。</p>
+<h3 id="444-访问控制">4.4.4 访问控制</h3>
+<p>认证完身份后，可以通过用户相对应的权限 (Permissions) 或是「访问控制列表」(Access Control Lists, ACL) 来明确谁能访问什么，修改什么，使用什么。基本权限如下：</p>
+<ul>
+<li>读 (Read)：允许用户查看文件内容。</li>
+<li>写 (write)：允许用户修改内容。</li>
+<li>执行 (execute)：限允许用户运行文件（如程序）。</li>
+</ul>
+<p>一种常用的&quot;访问控制列表&quot;配置（即访问控制模型）是为美国国防部&quot;多层安全政策&quot;制定的 Bell-LaPadula 模型，其特点在于「不能向上读，不能向下写」。</p>
+<p>以 &ldquo;公开、机密、绝密&rdquo; 三个访问级别为例：&ldquo;机密&quot;权限用户仅能读取 &ldquo;机密&rdquo; 和 &ldquo;公开&rdquo; 文件，无法读取 &ldquo;绝密&rdquo; 文件；&ldquo;绝密&rdquo; 权限用户可以读取所有访问级别的文件，但为防止高级别文件泄露，无法修改写入低级别文件。</p>
+<p>除此之外，&ldquo;中国墙&quot;模型 (the Chinese Wall model) 和&quot;比伯&rdquo;(Biba model) 模型也是较为常见的访问控制模型，模型的优劣取决于具体情况。</p>
+<h3 id="445-独立安全检查和质量验证">4.4.5 独立安全检查和质量验证</h3>
+<p>进行身份验证和访问控制的前提是软硬件可信，但我们实际上无法确定操作系统有没有被攻击者的恶意软件控制或是安全程序是否有给攻击者留后门。</p>
+<p>安全软件在理论上是 &ldquo;安全的&rdquo;，但在实现时可能出错存有 bug，我们可以通过一发现漏洞就修复以及当程序被攻破时尽可能减少损害等方式来提高安全性。</p>
+<p>系统级安全的圣杯之一是「安全内核」(security kernel)，又称作「可信计算基础」(trusted computing base)：在最小化代码数量的前提下，决定内核中有什么，同时还要确保安全性都是接近可验证的。</p>
+<p>正式验证代码安全性是一个活跃的研究领域，现在最好的安全手段是「独立安全检查和质量验证」(Independent Verification and Validation)，这种方法让安全领域的软件开发者来审计代码（通常是开源的），外部开发人员比写原始代码的人更容易找到错误。</p>
+<p>同时，也会举行安全大会以便安全专家互相认识并分享想法。</p>
+<h3 id="446-隔离">4.4.6 隔离</h3>
+<p>隔离 (isolation) 是一种在当程序被攻破后控制损害最小化的方式之一，可以通过「沙盒」(sandbox) 程序来实现，沙盒的具体方法是由操作系统给每个程序独有的内存块，其他程序不能使用。</p>
+<p>一台计算机可以运行多个虚拟机 (Virtual Machines)，虚拟机模拟计算机，每个虚拟机都在自己的沙箱里。如果一个程序出错，最糟糕的情况是它自己崩溃或是搞坏它处于的虚拟机，而计算机上其他东西都是隔离的，并不会受其影响。</p>
+
+</article>
+
+                    
+                    
+                    
+
+                    
+
+
+
+                    
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/docs/4_computer_network/4.3-%E4%B8%87%E7%BB%B4%E7%BD%91-the-world-wide-web/" class="block">4.3 万维网 (The World Wide Web)</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/docs/4_computer_network/4.5-%E9%BB%91%E5%AE%A2%E4%B8%8E%E6%94%BB%E5%87%BB-hackers-cyber-attacks/" class="block">4.5 黑客与攻击 (Hackers &amp; Cyber Attacks)</a>
+      
+    </div>
+  </div>
+
+
+                    
+
+
+
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div
+  class="
+    bg-secondary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc 
+    border-s
+   hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#441-安全特性">4.4.1 安全特性</a></li>
+        <li><a href="#442-威胁模型分析">4.4.2 威胁模型分析</a></li>
+        <li><a href="#443-身份认证">4.4.3 身份认证</a>
+          <ul>
+            <li><a href="#what-you-know">What you know</a></li>
+            <li><a href="#what-you-have">What you have</a></li>
+            <li><a href="#what-you-are">What you are</a></li>
+          </ul>
+        </li>
+        <li><a href="#444-访问控制">4.4.4 访问控制</a></li>
+        <li><a href="#445-独立安全检查和质量验证">4.4.5 独立安全检查和质量验证</a></li>
+        <li><a href="#446-隔离">4.4.6 隔离</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        hljs.highlightAll();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

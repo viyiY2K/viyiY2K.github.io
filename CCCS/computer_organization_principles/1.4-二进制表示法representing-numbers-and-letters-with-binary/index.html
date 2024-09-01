@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>1.4 二进制表示法（Representing Numbers and Letters with Binary） | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="!&gt;[!quote] “Everything is number.”by Pythagoras 「万物皆数。」——毕达哥斯拉 1.4.1 二进制 在二进制中，每个符号就是二进制元数字（0/1）中的一个二进制位 （b">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science",
+      "item":"https://viyi.cc/cccs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"1 计算机组成",
+      "item":"https://viyi.cc/cccs/computer_organization_principles/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"1.4 二进制表示法（Representing Numbers and Letters with Binary）",
+      "item":"https://viyi.cc/cccs/computer_organization_principles/1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/cccs/computer_organization_principles/1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/"
+    },
+    "headline": "1.4 二进制表示法（Representing Numbers and Letters with Binary） | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  1398 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "!\u0026gt;[!quote] “Everything is number.”by Pythagoras 「万物皆数。」——毕达哥斯拉 1.4.1 二进制 在二进制中，每个符号就是二进制元数字（0\/1）中的一个二进制位 （b"
+}
+</script><meta property="og:title" content="1.4 二进制表示法（Representing Numbers and Letters with Binary） | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/cccs/computer_organization_principles/1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/" />
+
+
+
+
+<meta property="og:description" content="!&gt;[!quote] “Everything is number.”by Pythagoras 「万物皆数。」——毕达哥斯拉 1.4.1 二进制 在二进制中，每个符号就是二进制元数字（0/1）中的一个二进制位 （b" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="cccs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/cccs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">1.4 二进制表示法（Representing Numbers and Letters with Binary）</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>3分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>!&gt;[!quote]</p>
+<blockquote>
+<p>“Everything is number.”by Pythagoras</p>
+<p>「万物皆数。」——毕达哥斯拉</p>
+</blockquote>
+<h3 id="141-二进制">1.4.1 二进制</h3>
+<p>在二进制中，每个符号就是二进制元数字（0/1）中的一个二进制位 （binary digit） 或是称之为一位 （bit）。</p>
+<p>二进制基数为 2，位权为 2 的整数次幂。用 0 和 1 这两个数字表示，逢二进一。</p>
+<table>
+<thead>
+<tr>
+<th>$2^0$</th>
+<th style="text-align:center">$2^1$</th>
+<th style="text-align:center">$2^2$</th>
+<th style="text-align:center">$2^3$</th>
+<th style="text-align:center">$2^4$</th>
+<th style="text-align:center">$2^5$</th>
+<th style="text-align:center">$2^6$</th>
+<th style="text-align:center">$2^7$</th>
+<th style="text-align:center">$2^8$</th>
+<th style="text-align:center">$2^9$</th>
+<th style="text-align:center">$2^{10}$</th>
+<th style="text-align:center">$2^{11}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">128</td>
+<td style="text-align:center">256</td>
+<td style="text-align:center">512</td>
+<td style="text-align:center">1024</td>
+<td style="text-align:center">2048</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$2^{12}$</th>
+<th style="text-align:center">$2^{13}$</th>
+<th style="text-align:center">$2^{14}$</th>
+<th style="text-align:center">$2^{15}$</th>
+<th style="text-align:center">$2^{16}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">4096</td>
+<td style="text-align:center">8192</td>
+<td style="text-align:center">16384</td>
+<td style="text-align:center">32768</td>
+<td style="text-align:center">65536</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2012%3A%E6%97%B6%2039%3A%E5%88%86%2039%3A%E7%A7%92%20ljpx6dlqcw1673066379277.png" alt="二进制算术加法"></p>
+<p>计算机中的数据常用 8 位表示，又名 1 字节（1 bit = 1Byte）。8 位二进制可按 3 位为一组（高位补零）转换为八进制：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">八进制</th>
+<th style="text-align:center">二进制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">000</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">001</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">010</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">011</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">100</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">101</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">110</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">111</td>
+</tr>
+</tbody>
+</table>
+<h3 id="142-进制转换">1.4.2 进制转换</h3>
+<p>十进制转二进制则「除基逆序取余」，二进制转十进制则「乘位权后相加」。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2012%3A%E6%97%B6%2027%3A%E5%88%86%2055%3A%E7%A7%92%20220luifvo71673065675134.png" alt="二进制转十进制"></p>
+<h3 id="143-单位换算">1.4.3 单位换算</h3>
+<p>因 $10^3=1000$ 与 $2^{10}=1024$ 是近似值，故在某些时候 KB 所描述的两种含义经常混用（i.e. 1KB = 1000 or 1024 Byte 均正确）。</p>
+<p>通常来说描述存储容量或是文件大小时以 2 为底，描述频率或速率时以 10 为底。e.g. 32 位或 64 位计算机是指每次按块处理数据的单块长度位 32b 或 64b（32b 可表示的最大数约为 43 亿，64b 则为 $9.2^{10}$）。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">十进制术语</th>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">数值</th>
+<th style="text-align:center">二进制术语</th>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">数值</th>
+<th style="text-align:center">数值差别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">kilobyte</td>
+<td style="text-align:center">KB</td>
+<td style="text-align:center">$10^3$</td>
+<td style="text-align:center">kibibyte</td>
+<td style="text-align:center">KiB</td>
+<td style="text-align:center">$2^{10}$</td>
+<td style="text-align:center">2%</td>
+</tr>
+<tr>
+<td style="text-align:center">megabyte</td>
+<td style="text-align:center">MB</td>
+<td style="text-align:center">$10^6$</td>
+<td style="text-align:center">mebibyte</td>
+<td style="text-align:center">MiB</td>
+<td style="text-align:center">$2^{20}$</td>
+<td style="text-align:center">5%</td>
+</tr>
+<tr>
+<td style="text-align:center">gigabyte</td>
+<td style="text-align:center">GB</td>
+<td style="text-align:center">$10^9$</td>
+<td style="text-align:center">gibibyte</td>
+<td style="text-align:center">GiB</td>
+<td style="text-align:center">$2^{30}$</td>
+<td style="text-align:center">7%</td>
+</tr>
+<tr>
+<td style="text-align:center">terabyte</td>
+<td style="text-align:center">TB</td>
+<td style="text-align:center">$10^{12}$</td>
+<td style="text-align:center">tebibyte</td>
+<td style="text-align:center">TiB</td>
+<td style="text-align:center">$2^{40}$</td>
+<td style="text-align:center">10%</td>
+</tr>
+</tbody>
+</table>
+<p>e.g. 1KB = 1000B = 8000b；1MB = 1000KB etc.</p>
+<h3 id="144-负数与浮点数">1.4.4 负数与浮点数</h3>
+<p>为了便于存储数据，计算机将内存中的位置标记称为「位址」（memory addresses）。当硬盘（memory）的容量到达 GB 和 TB 这样上万亿字节的量级时，需要用 32/64 位的数字来表示位址。</p>
+<p>地址无需区分数字的正负，在其他情况下则需要区分（银行存款）。此时可用 32 位中的第 1 位标识正负（1 负 0 正），剩下的 31 位表示数字本身（实数），可表示范围为 ±20 亿左右（ $-2^{31}$ ~ $2^{31}-1$ ）。</p>
+<p>非整数因其小数点可以在数字中浮动而称为「浮点数」（Floating Point Numbers），其最常见的表示标准是 IEEE 754 标准。该标准使用类似于科学计数法的方式存储十进制值。</p>
+<p>具体表示方法为「浮点数 = 有效位数 × 指数」，以 32 位浮点数为例，第 1 位表示正负，第 2~9 位则表示指数，剩下 23 位存储有效位数。e.g. 625.9 = 0.6259（有效位数）× $10^3$（指数）</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2013%3A%E6%97%B6%2031%3A%E5%88%86%2032%3A%E7%A7%92%20ggyvmt3nuy1673069492724.png" alt="IEEE754浮点数表示"></p>
+<h3 id="145-字符">1.4.5 字符</h3>
+<p>英国作家弗朗西斯·培根（Francis Bacon）曾用 5 位序列来编码 26 个英文字母，在 1600s 传递机密信件。5 位最多可表示 $2^5=32$ 个数字，足够容纳英文字母，但无法表示符号与数字以及大小写字母。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2013%3A%E6%97%B6%2044%3A%E5%88%86%2012%3A%E7%A7%92%207qm0m2vwje1673070252440.png" alt="弗朗西斯·培根（Francis Bacon）的编码方式"></p>
+<h4 id="ascii">ASCII</h4>
+<p>ASCII 全称为美国信息交换标准代码（American Standard Code for Information Interchange），于 1963 年发明，使用 7 位代码表示 128 个不同的值。</p>
+<p>在 ASCII 中，除了大小写字母、数字以及常用符号之外，还有一些特殊命令符号。比如使用换行符（图中 10）进行换行。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2013%3A%E6%97%B6%2044%3A%E5%88%86%2022%3A%E7%A7%92%20k7yxn9xn0f1673070262779.png" alt="ASCII 码表"></p>
+<p>ASCII 的出现使得不同公司所制造的设备之间能够交换数据，我们将这种能够通用交换信息的能力称为「互用性」（interoperability）。</p>
+<p>ASCII 为英文设计，在其他非英语国家不够通用。因电脑中 1 字节有 8 位，ASCII 中未使用的 128~256 可供各个国家进行再次编码。常见用途如下：</p>
+<ul>
+<li>美国：主要用于编码附加符号，如数学符号、图形元素或是常用重音字符。</li>
+<li>俄罗斯：用于表示西里尔（Cyrillic）字符。</li>
+<li>希腊：表示希腊字母。</li>
+</ul>
+<h4 id="unicode">Unicode</h4>
+<p>尽管 ASCII 留有空余编码，但对非拉丁语系的国家仍不适用（比如中国和日本）。因此各国均发明了多字节编码方案，但互不兼容，由此带来新的问题——乱码（因过于常见，在日本甚至有个词  mojibake 表示这种情况）。</p>
+<p>Unicode 于 1992 年诞生，采用统一编码方案解决乱码问题。最常见的 Unicode 是 16 位的，可表示的量级达百万，甚至有空位放 Emoji 😉。</p>
+
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/cccs/computer_organization_principles/1.3-%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E4%B8%8E%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AFboolean-logic-logic-gates/" class="block">1.3 布尔逻辑与逻辑电路（Boolean Logic &amp; Logic Gates）</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/cccs/computer_organization_principles/1.5-alu-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83-how-computers-calculate/" class="block">1.5 ALU 算术逻辑单元 （How Computers Calculate）</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#141-二进制">1.4.1 二进制</a></li>
+        <li><a href="#142-进制转换">1.4.2 进制转换</a></li>
+        <li><a href="#143-单位换算">1.4.3 单位换算</a></li>
+        <li><a href="#144-负数与浮点数">1.4.4 负数与浮点数</a></li>
+        <li><a href="#145-字符">1.4.5 字符</a>
+          <ul>
+            <li><a href="#ascii">ASCII</a></li>
+            <li><a href="#unicode">Unicode</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

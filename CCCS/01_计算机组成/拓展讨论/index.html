@@ -1,0 +1,2607 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Crash Course Computer Science | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="Crash Course Computer Science 出自 Crash Course 上传在 YouTube 的课程（2017），授课教师为 @Carrie Anne Philbin ，于 2022.10.16 观看完中译版视频。笔记整理于 23.01.06~23.02.04，耗时 55h。相关资料">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science",
+      "item":"https://viyi.cc/cccs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"计算机组成",
+      "item":"https://viyi.cc/cccs/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"Crash Course Computer Science",
+      "item":"https://viyi.cc/cccs/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/%E6%8B%93%E5%B1%95%E8%AE%A8%E8%AE%BA/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/cccs/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/%E6%8B%93%E5%B1%95%E8%AE%A8%E8%AE%BA/"
+    },
+    "headline": "Crash Course Computer Science | 与你分享我的眼睛","wordCount":  42803 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "Crash Course Computer Science 出自 Crash Course 上传在 YouTube 的课程（2017），授课教师为 @Carrie Anne Philbin ，于 2022.10.16 观看完中译版视频。笔记整理于 23.01.06~23.02.04，耗时 55h。相关资料"
+}
+</script><meta property="og:title" content="Crash Course Computer Science | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/cccs/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/%E6%8B%93%E5%B1%95%E8%AE%A8%E8%AE%BA/" />
+
+
+
+
+<meta property="og:description" content="Crash Course Computer Science 出自 Crash Course 上传在 YouTube 的课程（2017），授课教师为 @Carrie Anne Philbin ，于 2022.10.16 观看完中译版视频。笔记整理于 23.01.06~23.02.04，耗时 55h。相关资料" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+
+
+
+<meta property="article:section" content="CCCS" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/cccs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">Crash Course Computer Science</a>
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class="lg:col-start-2 bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">Crash Course Computer Science</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >0001-01-01</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>86分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h1 id="crash-course-computer-science">Crash Course Computer Science</h1>
+<p>出自 Crash Course 上传在 <a href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo">YouTube</a> 的课程（2017），授课教师为 @Carrie Anne Philbin ，于 2022.10.16 观看完中译版视频。笔记整理于 23.01.06~23.02.04，耗时 55h。相关资料如下：</p>
+<blockquote>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1EW411u7th">中译版视频传送门</a></li>
+<li><a href="https://github.com/1c7/crash-course-computer-science-chinese">字幕组开源项目</a></li>
+<li><a href="https://shimo.im/docs/PJAUY30F1uYksv0h/read">完整版文字笔记</a></li>
+</ul>
+<p>课程全集为 40 集，自行分为 5 个小节，对应分集如下：</p>
+<ol>
+<li>计算机组成：p1~9+17</li>
+<li>程序设计：p10~16</li>
+<li>操作系统：p18~27</li>
+<li>计算机网络：p28~33</li>
+<li>拓展补充：p34~40</li>
+</ol>
+</blockquote>
+<h1 id="1-计算机组成">1 计算机组成</h1>
+<blockquote>
+<p>[!tip]
+对应分 P 为 p1~9+17, @GoogTech 整理的该小节笔记脑图见<a href="https://www.processon.com/view/link/61ef6e8f0e3e7439ae917672#map">此处</a>，@取名苦手小明 的文字版笔记见<a href="https://shimo.im/docs/vkCKkj3YxGtygrVg/read">此处</a>。</p>
+</blockquote>
+<h2 id="11-早期的计算early-computing">1.1 早期的计算（Early Computing）</h2>
+<h3 id="111-信息时代electronic-age">1.1.1 信息时代（Electronic Age）</h3>
+<p>三次工业革命推动全球发展：</p>
+<ol>
+<li>第一次（蒸汽）：用机械提高农业、工业、畜牧业的规模，又名机器时代（the Age of Machines）。</li>
+<li>第二次（电力）：第二次工业革命以电力的大规模应用为代表，电灯的发明为标志，用上了石油作为能源。</li>
+<li>第三次（电脑）：个人电脑的普及，互联网的出现，信息时代的到来。</li>
+</ol>
+<h3 id="112-早期计算历史">1.1.2 早期计算历史</h3>
+<blockquote>
+<p>[!quote]
+&ldquo;At each increase of knowledge, as well as on the contrivance of every new tool, human labor becomes abridged.&rdquo; by Charles Babbage</p>
+<p>「随着知识的增长和新工具的诞生，人工劳力会越来越少。」——查尔斯·巴贝奇</p>
+</blockquote>
+<pre><code class="language-timeline">[line-2, body-2]
++ 2500&lt;BR&gt;B.C.E.
++ 算盘（abacus）
++ - 发明于美索不达米亚，起因是社会规模超出心算能力。
+- 用于记录当前计算状态，基本版本以每行表示十的不同次方（以 0 为始位）。
+
++ 1500&lt;BR&gt;C.E. 前
++ 计算设备
++ - 星盘（astrolabe）：是[平面球和望筒的结合](https://zh.wikipedia.org/zh-cn/%E6%98%9F%E7%9B%98#cite_note-35)，用于解决天文问题。
+- balesilha：水手们在出海时使用一种简化的星盘，用来获得准确的纬度读数。
+- 时钟（clock)：用于计算日出、潮汐、天体位置，或是仅仅用于计时。
+
++ 1613 年
++ 计算者（Computer）
++- 该词出自 Rich Braithwait 的书。
+- 计算者是一种职业，指专门从事计算的人。
+- 直至 1800 年代仍然存在，之后 Compuer 逐渐代表机器。
+
++ pre-20c
++ 计算表（pre-computed tables）
++ - 由计算者事先算好的计算表。
+- 用于解决计算机存在的费用高昂、耗时长等问题。
+- 由其衍生出的射程表（Range Tables）广泛用于二战军队中。
+
++ 1694 年
++ 步进计算机（Step Recknoer）
++ - 德国博学家哥特佛里德·莱布尼茨（Gottfried Leibniz）建造。
+- 由十齿齿轮组构成，单个齿轮过九回转为零，邻近齿轮进位一齿。
+- 反向运作则是减法，可用累加/累减实现乘除法。
+
++ 1822 年
++ 差分机（Difference Engine）
++ - 英国数学家查尔斯·巴贝奇（Charles Babbage）提出的一种构想机器，针对射程表需根据大炮设计变化须全部重制的问题。
+- 用于近似计算描述多个变量之间关系的多项式，也可以近似对数和三角函数。
+- 提出后制作耗时二十年被作者放弃，但在 1991 年由历史学家成功造出。
+
++ 1837 年
++ 分析机（Analytical Engine）
++ - 查尔斯·巴贝奇在制作差分机的过程中构想出的通用计算机。
+- 不止执行一种运算；可以根据数据按序执行操作；有内存；有相当原始的打印机...但概念过于超前没有建成。
+- 衍生出跨时代的自动计算机（automatic computer）的概念。
+- 英国数学家 Ada Lovelace 为其写了假想程序，被认为是世界上第一位程序员。
+
++ 1890 年
++ 打孔卡片制表机（Tabulating Machine）
++ - 由于十年一次的美国人口普查因移民涌入带来的人口迅速增长而无法用人力编制完成，Herman Hollerith 发明该机器。
+- 由纯电动机械（electro-mechanical）驱动，采用传统机械计数（类似步进计算机）但用电动结构连接其他组件。
+- 用打孔卡（punch card）中的网格来表示数据，某位置被打孔后，金属针会穿透使得其泡入汞来联通电路，驱动相关类别的计数齿轮。
+- 严格意义上并非计算机，而是一种汇总机（tabulating machines），其只用于汇总数据。
+- 会计、保险评估和库存管理等数据密集型行业意识到计算机的价值，于是 Hollerith 成立了打孔卡片制表机公司，其是 IBM（The International Business Machiness Corporation）的前身之一。
+
+</code></pre>
+<h2 id="12-电子计算electronic-computing">1.2 电子计算（Electronic Computing）</h2>
+<h3 id="121-诞生背景">1.2.1 诞生背景</h3>
+<p>20 世纪人类社会规模的飞速增长，二战动员人数的数量级已经达亿，全球贸易和运输更加紧密，工程和科学的复杂程度达到新高。随之而来的是数据量的暴增，这使人们需要更自动化、更强大的计算能力。</p>
+<h3 id="122-电子元器件发展历史">1.2.2 电子元器件发展历史</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1835 年
++ 继电器（Relay）
++ - 由美国科学家约瑟夫·亨利（Joseph Henry）发明。
+- 一种利用电磁感应定律控制电路开关的机械开关器件。当电流流经控制电路中的线圈，线圈会产生电磁场用以吸引金属臂，从而闭合电路。
+- 尽管在 1940s 继电器可以达到 50 次/秒的翻转速度，但受机械金属臂存在实体质量的限制，其速度提升仍然无法满足需求。
+
++ 1904 年
++ 真空管（Vacuum Tube）
++ - 热电子管（thermionic valve)：由英国物理学家约翰·弗莱明（John Ambrose Fleming）发明，其将两个电极装入气密的玻璃灯泡中，是世界上第一个真空管。
+- 二极管（diode）：由可加热的电极端发射电子，另一电极则吸引正电电子，形成电流。
+- 只能单向流动，无法控制开关电流。
+
++ 1906 年
++ 三级管（Triode）
++ - 具有放大器功能的真空管，由美国发明家李·德弗雷斯特（Lee De Forest）发明。
+- 在二极管的基础上，加入第三个“控制”电极，使得在其上增加正电荷会允许电子流动，反之亦然。
+- 可通过控制线路开关电路，无机械器件损耗问题，每秒开闭高达数千次。
+- 玻璃制品，存在易碎易烧坏的问题。
+- 1940s 成本与可靠性得到改进，使得可以被用于制作计算机。
+
++ 1947 年
++ 晶体管（transistor）
++ - 由贝尔实验室的约翰·巴丁（John Bardeen）、沃尔特·布拉顿（Walter Brattain）和威廉·肖克利（William Shockley）发明。
+- 晶体管中使用半导体材料分隔两个电极，通过“门电极”的控制线路来改变半导体材料的导电性，从而控制电流。
+- 每秒开关次数达万次；固态制品，体积小。
+
+</code></pre>
+<p>一些趣闻：</p>
+<ol>
+<li>硅谷（Silicon Valley）：美国加利福尼亚州圣克拉拉谷（Santa Clara Valley）的别称，因此地多为晶体管和半导体的开发（其最常见材料为硅）企业而得名。</li>
+<li>晶体管的发明者之一威廉·肖克利（William Shockley）在硅谷创立了肖克利半导体实验室（Shockley Semiconductor Laboratory）。</li>
+<li>因不满肖克利的管理方法和行为，实验室中的八人（Traitorous eight）成立了仙童半导体（airchild Semiconductor），其员工后来创立了英特尔（Intel）——当今世界上最大的计算机芯片制造商。</li>
+</ol>
+<h3 id="123-电子计算机发展历史">1.2.3 电子计算机发展历史</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1944 年 
++ Harvard Mark Ⅰ
++ - 由 IBM 为二战同盟国制造的计算机（electro-mechanical），用于为曼哈顿计划（Manhattan Project）进行模拟，是最大的机电计算机之一。
+- 采用约 3500 个继电器制造，受限于继电器本身的开关速度、机械元件的损耗、高温易吸引昆虫等问题，其故障率很高。
+- 据 Grace Hopper 说，因 1947 年 9 月 Harvard Mark Ⅱ 操作员从故障继电器中拔出过死虫，此后便将电脑出问题称为「出了 bug」。
+- 程序是写在打孔纸带上的，当程序出现 bug 时，为了节约时间，只能贴上胶带也就是打补丁（patched）来填补空隙，漏洞和补丁因此得名(cr.p11)。
+
++ 1943 年
++ 巨人一号（the Colossus MK 1）
++ - 由工程师 Tommy Flowers 设计，主要用于破解纳粹通信。巨人是第一个大规模使用真空管的计算机。
+- 安装于英国布莱切利园（Bletchley Park），阿兰·图灵（Alan Turing）曾在此地制作过名为 Bombe 的用于破译纳粹英格玛（Nazi Enigma codes）的机电设备，其严格意义上不算是计算机。
+- 可以通过用几百根电线插入插板的方式进行编程（执行正确操作），是第一个可编程的电子计算机。
+
++ 1946 年
++ ENIAC
++ - ENIAC 全称为电子数值积分计算机（Electronic Numerical Integrator And Computer），由约翰·莫奇利（John Mauchly）和约翰·皮斯普·埃克特（J. Presper Eckert）于宾西法尼亚大学建造完成，是世界上第一个真正的通用可编程电子计算机。
+- 每秒可执行 5000 次十位数加减法，故障率在 2 次/天左右，运作了十年。
+
++ 1955 年
++ AN/FSQ-7 computer
++ 使用了[ 49,000 个真空管](https://en.wikipedia.org/wiki/AN/FSQ-7_Combat_Direction_Central)制作，是美国空军 SAGE 防空计算机系统的一部分，已经基本到达真空管计算机的极限。
+
++ 1957 年
++ IBM 608
++ - 第一个完全使用晶体管的计算机，价格便宜使得普通消费者也能够购入。
+- 使用了 3000 个晶体管，每秒可以执行 4500 次加法，每秒可执行 80 次左右的乘除法。
+
+</code></pre>
+<h2 id="13-布尔逻辑与逻辑电路boolean-logic--logic-gates">1.3 布尔逻辑与逻辑电路（Boolean Logic &amp; Logic Gates）</h2>
+<blockquote>
+<p>[!quote] 抽象（Abstraction）</p>
+<p>在计算机科学中，抽象化是将资料与程序，以它的语义来呈现出它的外观，但是隐藏起它的实现细节。</p>
+<p>抽象化是用来减少程序的复杂度，使得程序员可以专注在处理少数重要的部分。</p>
+<p>(cr. <a href="https://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)">wikipedia</a>, link <a href="https://ray-eldath.me/programming/three-important-ideas/">🆚 数学抽象</a>)</p>
+</blockquote>
+<h3 id="131-为何选择二进制">1.3.1 为何选择二进制</h3>
+<p>计算机从十进制的机电设备进化到了二进制（Binary）
+的电子设备，电路的开闭表示真（true）和假（false）两种状态。</p>
+<p>尽管晶体管可以表示超过两种状态（以不同大小的电流经过），但可表示的状态越多，越容易受噪音的扰动，就越难以区分。而二进制的 1 和 0 很容易在电路中用「通」和「断」区分出来。</p>
+<p>同时，布尔代数作为一种仅处理两种状态的数学分支，为计算机提供了完备的运算法则和方法。</p>
+<h3 id="132-布尔代数">1.3.2 布尔代数</h3>
+<p>布尔代数（Boolean Algebra）由英国数学家乔治·布尔（George Boole）发明，因出于对亚里士多德基于哲学的逻辑方法进行数学式扩展的兴趣，其用逻辑方程系统而正式地证明真理，并于 1847 年的首部著作《逻辑的数学分析》中进行了介绍。</p>
+<p>布尔代数中使用 true 和 false 两个变量进行逻辑操作，其基本运算如下：</p>
+<blockquote>
+<p>[!TIP]</p>
+<ol>
+<li>布尔代数的基本运算可以很容易地用晶体管构建，将晶体管的控制线当作 input，将底部的电极线当作 output，则输入输出同步：
+<img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2004%3A%E5%88%86%2015%3A%E7%A7%92%20czmo4eomik1673006655193.png" alt="布尔代数-电路图|300"></li>
+<li>能控制电流的路径称为「门」（Gate）。</li>
+<li>电路图中的拱门表示 2 条线没有连接，仅仅只是跨越。
+<img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2021%3A%E6%97%B6%2019%3A%E5%88%86%2027%3A%E7%A7%92%202inlqcldxu1673011167605.png" alt="布尔代数电路图|800"></li>
+</ol>
+</blockquote>
+<h3 id="133-not-非">1.3.3 NOT 非</h3>
+<p>数学符号： $\neg$</p>
+<p>Tips：真假倒置</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">!A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<ul>
+<li>上方的电极线当作 output，下方电极线接地。</li>
+<li>半导体通电 True （Input on），则线路接地，无输出电流，为 False。</li>
+<li>半导体不通电 False （Input off），则输出电流从上方输出，为 True。</li>
+</ul>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2037%3A%E5%88%86%2044%3A%E7%A7%92%207m0ink8yuf1673008663979.png" alt="!0-&gt;1"></p>
+<h3 id="134-and-与">1.3.4 AND 与</h3>
+<p>数学符号：$\land$</p>
+<p>Tips：一假则假，两真为真。</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A &amp;&amp; B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<ul>
+<li>两晶体管串联，当且仅当 2 个晶体管都通电，输出才有电流（True）。</li>
+</ul>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2032%3A%E5%88%86%2055%3A%E7%A7%92%20ijxuptscyd1673008375724.png" alt="1&amp;&amp;1-&gt;1"></p>
+<h3 id="135-or-或">1.3.5 OR 或</h3>
+<p>数学符号：$\lor$</p>
+<p>Tips：一真为真，两假则假。</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A || B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<ul>
+<li>两晶体管并联，均无电流时晶体管阻塞，输出无电流为 False。</li>
+</ul>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2037%3A%E5%88%86%2002%3A%E7%A7%92%20e02ug3n4s61673008622241.png" alt="0||0-&gt;0"></p>
+<h3 id="136-xor-异或">1.3.6 XOR 异或</h3>
+<p>数学符号：$\oplus$</p>
+<p>Tips：不同为真，相同则假。</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A XOR B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2038%3A%E5%88%86%2059%3A%E7%A7%92%20wp11yr3ucb1673008739003.png" alt="0 XOR 1-&gt;1"></p>
+<h3 id="137-逻辑门电路">1.3.7 逻辑门电路</h3>
+<p>作为用晶体管搭建的复杂电路的抽象，将逻辑门电路简化，用于构建更大的组件，而不至于太复杂。与、或、非以及异或门电路符号如下：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2058%3A%E5%88%86%2010%3A%E7%A7%92%20d126v1g9vz1673009890789.png" alt="逻辑门电路符号"></p>
+<h2 id="14-二进制表示法representing-numbers-and-letters-with-binary">1.4 二进制表示法（Representing Numbers and Letters with Binary）</h2>
+<blockquote>
+<p>[!quote]</p>
+<p>“Everything is number.”by Pythagoras</p>
+<p>「万物皆数。」——毕达哥斯拉</p>
+</blockquote>
+<h3 id="141-二进制">1.4.1 二进制</h3>
+<p>在二进制中，每个符号就是二进制元数字（0/1）中的一个二进制位 （binary digit） 或是称之为一位 （bit）。</p>
+<p>二进制基数为 2，位权为 2 的整数次幂。用 0 和 1 这两个数字表示，逢二进一。</p>
+<table>
+<thead>
+<tr>
+<th>$2^0$</th>
+<th style="text-align:center">$2^1$</th>
+<th style="text-align:center">$2^2$</th>
+<th style="text-align:center">$2^3$</th>
+<th style="text-align:center">$2^4$</th>
+<th style="text-align:center">$2^5$</th>
+<th style="text-align:center">$2^6$</th>
+<th style="text-align:center">$2^7$</th>
+<th style="text-align:center">$2^8$</th>
+<th style="text-align:center">$2^9$</th>
+<th style="text-align:center">$2^{10}$</th>
+<th style="text-align:center">$2^{11}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">128</td>
+<td style="text-align:center">256</td>
+<td style="text-align:center">512</td>
+<td style="text-align:center">1024</td>
+<td style="text-align:center">2048</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$2^{12}$</th>
+<th style="text-align:center">$2^{13}$</th>
+<th style="text-align:center">$2^{14}$</th>
+<th style="text-align:center">$2^{15}$</th>
+<th style="text-align:center">$2^{16}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">4096</td>
+<td style="text-align:center">8192</td>
+<td style="text-align:center">16384</td>
+<td style="text-align:center">32768</td>
+<td style="text-align:center">65536</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2012%3A%E6%97%B6%2039%3A%E5%88%86%2039%3A%E7%A7%92%20ljpx6dlqcw1673066379277.png" alt="二进制算术加法"></p>
+<p>计算机中的数据常用 8 位表示，又名 1 字节（1 bit = 1Byte）。8 位二进制可按 3 位为一组（高位补零）转换为八进制：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">八进制</th>
+<th style="text-align:center">二进制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">000</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">001</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">010</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">011</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">100</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">101</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">110</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">111</td>
+</tr>
+</tbody>
+</table>
+<h3 id="142-进制转换">1.4.2 进制转换</h3>
+<p>十进制转二进制则「除基逆序取余」，二进制转十进制则「乘位权后相加」。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2012%3A%E6%97%B6%2027%3A%E5%88%86%2055%3A%E7%A7%92%20220luifvo71673065675134.png" alt="二进制转十进制"></p>
+<h3 id="143-单位换算">1.4.3 单位换算</h3>
+<p>因 $10^3=1000$ 与 $2^{10}=1024$ 是近似值，故在某些时候 KB 所描述的两种含义经常混用（i.e. 1KB = 1000 or 1024 Byte 均正确）。</p>
+<p>通常来说描述存储容量或是文件大小时以 2 为底，描述频率或速率时以 10 为底。e.g. 32 位或 64 位计算机是指每次按块处理数据的单块长度位 32b 或 64b（32b 可表示的最大数约为 43 亿，64b 则为 $9.2^{10}$）。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">十进制术语</th>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">数值</th>
+<th style="text-align:center">二进制术语</th>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">数值</th>
+<th style="text-align:center">数值差别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">kilobyte</td>
+<td style="text-align:center">KB</td>
+<td style="text-align:center">$10^3$</td>
+<td style="text-align:center">kibibyte</td>
+<td style="text-align:center">KiB</td>
+<td style="text-align:center">$2^{10}$</td>
+<td style="text-align:center">2%</td>
+</tr>
+<tr>
+<td style="text-align:center">megabyte</td>
+<td style="text-align:center">MB</td>
+<td style="text-align:center">$10^6$</td>
+<td style="text-align:center">mebibyte</td>
+<td style="text-align:center">MiB</td>
+<td style="text-align:center">$2^{20}$</td>
+<td style="text-align:center">5%</td>
+</tr>
+<tr>
+<td style="text-align:center">gigabyte</td>
+<td style="text-align:center">GB</td>
+<td style="text-align:center">$10^9$</td>
+<td style="text-align:center">gibibyte</td>
+<td style="text-align:center">GiB</td>
+<td style="text-align:center">$2^{30}$</td>
+<td style="text-align:center">7%</td>
+</tr>
+<tr>
+<td style="text-align:center">terabyte</td>
+<td style="text-align:center">TB</td>
+<td style="text-align:center">$10^{12}$</td>
+<td style="text-align:center">tebibyte</td>
+<td style="text-align:center">TiB</td>
+<td style="text-align:center">$2^{40}$</td>
+<td style="text-align:center">10%</td>
+</tr>
+</tbody>
+</table>
+<p>e.g. 1KB = 1000B = 8000b；1MB = 1000KB etc.</p>
+<h3 id="144-负数与浮点数">1.4.4 负数与浮点数</h3>
+<p>为了便于存储数据，计算机将内存中的位置标记称为「位址」（memory addresses）。当硬盘（memory）的容量到达 GB 和 TB 这样上万亿字节的量级时，需要用 32/64 位的数字来表示位址。</p>
+<p>地址无需区分数字的正负，在其他情况下则需要区分（银行存款）。此时可用 32 位中的第 1 位标识正负（1 负 0 正），剩下的 31 位表示数字本身（实数），可表示范围为 ±20 亿左右（ $-2^{31}$ ~ $2^{31}-1$ ）。</p>
+<p>非整数因其小数点可以在数字中浮动而称为「浮点数」（Floating Point Numbers），其最常见的表示标准是 IEEE 754 标准。该标准使用类似于科学计数法的方式存储十进制值。</p>
+<p>具体表示方法为「浮点数 = 有效位数 × 指数」，以 32 位浮点数为例，第 1 位表示正负，第 2~9 位则表示指数，剩下 23 位存储有效位数。e.g. 625.9 = 0.6259（有效位数）× $10^3$（指数）</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2013%3A%E6%97%B6%2031%3A%E5%88%86%2032%3A%E7%A7%92%20ggyvmt3nuy1673069492724.png" alt="IEEE754浮点数表示"></p>
+<h3 id="145-字符">1.4.5 字符</h3>
+<p>英国作家弗朗西斯·培根（Francis Bacon）曾用 5 位序列来编码 26 个英文字母，在 1600s 传递机密信件。5 位最多可表示 $2^5=32$ 个数字，足够容纳英文字母，但无法表示符号与数字以及大小写字母。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2013%3A%E6%97%B6%2044%3A%E5%88%86%2012%3A%E7%A7%92%207qm0m2vwje1673070252440.png" alt="弗朗西斯·培根（Francis Bacon）的编码方式"></p>
+<h4 id="ascii">ASCII</h4>
+<p>ASCII 全称为美国信息交换标准代码（American Standard Code for Information Interchange），于 1963 年发明，使用 7 位代码表示 128 个不同的值。</p>
+<p>在 ASCII 中，除了大小写字母、数字以及常用符号之外，还有一些特殊命令符号。比如使用换行符（图中 10）进行换行。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2013%3A%E6%97%B6%2044%3A%E5%88%86%2022%3A%E7%A7%92%20k7yxn9xn0f1673070262779.png" alt="ASCII 码表"></p>
+<p>ASCII 的出现使得不同公司所制造的设备之间能够交换数据，我们将这种能够通用交换信息的能力称为「互用性」（interoperability）。</p>
+<p>ASCII 为英文设计，在其他非英语国家不够通用。因电脑中 1 字节有 8 位，ASCII 中未使用的 128~256 可供各个国家进行再次编码。常见用途如下：</p>
+<ul>
+<li>美国：主要用于编码附加符号，如数学符号、图形元素或是常用重音字符。</li>
+<li>俄罗斯：用于表示西里尔（Cyrillic）字符。</li>
+<li>希腊：表示希腊字母。</li>
+</ul>
+<h4 id="unicode">Unicode</h4>
+<p>尽管 ASCII 留有空余编码，但对非拉丁语系的国家仍不适用（比如中国和日本）。因此各国均发明了多字节编码方案，但互不兼容，由此带来新的问题——乱码（因过于常见，在日本甚至有个词  mojibake 表示这种情况）。</p>
+<p>Unicode 于 1992 年诞生，采用统一编码方案解决乱码问题。最常见的 Unicode 是 16 位的，可表示的量级达百万，甚至有空位放 Emoji 😉。</p>
+<h2 id="15-alu-算术逻辑单元-how-computers-calculate">1.5 ALU 算术逻辑单元 （How Computers Calculate）</h2>
+<p>ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。</p>
+<p>最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整 ALU。 Intel 74181 使用了 70 个逻辑门，但无法执行乘除运算。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2021%3A%E5%88%86%2021%3A%E7%A7%92%20v0rgihsyxw1673076081658.png" alt=" Intel 74181"></p>
+<p>ALU 由 1 个算术单元（arithmetic）和 1 个逻辑单元（logic unit）组成，算术单元可用于进行加减法运算或是增量运算（x+1），逻辑单元执行逻辑操作（如布尔代数中的基本运算）。</p>
+<h3 id="151-算术单元">1.5.1 算术单元</h3>
+<h4 id="半加器">半加器</h4>
+<p>半加器（half adder）由异或门和与门组成，仅能计算 1 位加法。两个输入（0 或 1）有 4 种可能的输出（1 = true，0 = false），不计进位的情况（1+1=0，高位舍弃）可用「异或门」搭建：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2012%3A%E5%88%86%2058%3A%E7%A7%92%20uriwgxr41q1673071978725.png" alt="一位加法器"></p>
+<p>当且仅当两个输入均为 1 时需要进位，该规则和「与门」相同，两者连接则为半加器：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2019%3A%E5%88%86%2003%3A%E7%A7%92%209ix22pv9ln1673072343403.png" alt="半加器"></p>
+<h4 id="全加器">全加器</h4>
+<p>使用半加器做两个三位二进制数加法时，需要多加一个进位上的数字（共计 3 个数相加）。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2034%3A%E5%88%86%2012%3A%E7%A7%92%20q2vav5eukd1673073252330.png" style="zoom: 50%;" /></div>
+<p>全加器的真值表如下：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2038%3A%E5%88%86%2013%3A%E7%A7%92%207fo91nyjhi1673073493503.png" alt="全加器真值表"></p>
+<p>全加器的逻辑门电路如下：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2040%3A%E5%88%86%2053%3A%E7%A7%92%20luq7musmfd1673073653711.png" alt="全加器电路图"></p>
+<h4 id="8-位行波进位加法器">8 位行波进位加法器</h4>
+<p>全加器可以处理两个三位二进制数的加法运算，两个八位二进制数的加法可以从低位逐列相加，用 1 个半加器和 7 个全加器搭建：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2052%3A%E5%88%86%2036%3A%E7%A7%92%202bznz43i2k1673074356077.png" alt="八位行波进位加法器"></p>
+<p>当计算结果的位数大于可用于表示的位数，则会出现「溢出」（overflow），这会导致 error 和不可预期的结果。</p>
+<p>为防止溢出，可以使用更多的全加器来完成 16 位或是 32 位数字的操作。但使用更多的逻辑门会提高造价，同时进位计算的耗时也更多，在每秒几十亿次的运算下该延迟仍然会造成影响。所以现代计算机所采用的加法电路为「超前进位加法器」（carry-look-ahead），其速度更快。</p>
+<h4 id="乘除法">乘除法</h4>
+<p>ALU 的算术单元基本都支持下图中的 8 种操作，简单 ALU 可以通过累加/累减来实现四则运算中的乘除法（慢但有效），复杂 ALU 会用更多的逻辑门构建乘法电路。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2006%3A%E5%88%86%2005%3A%E7%A7%92%20xugp30ectb1673075165151.png" alt="ALU算术单元支持的八种操作"></p>
+<h3 id="152-逻辑单元">1.5.2 逻辑单元</h3>
+<p>逻辑单元（logic unit）用于执行逻辑操作，比 AND、OR 和 NOT 操作，也可以用于进行简单的数值测试。注意此处的 0 和 1 遵守布尔代数的逻辑运作，而非算术加减。</p>
+<p>下图的逻辑单元门电路用于检测输出是否为 0（可用于确认两数字是否相等），OR 或门遇 1 出 1，最后用 NOT 非门取反后，凡有 1 则为 0，检测结果为 False 假，意为输出不为 0（其中至少有一位是 1）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2017%3A%E5%88%86%2012%3A%E7%A7%92%20jembsyifwo1673075831923.png" alt="检测输出是否为 0 的逻辑单元电路"></p>
+<h3 id="153-alu-抽象">1.5.3 ALU 抽象</h3>
+<p>8 位 ALU 需要用上百个逻辑门搭建，因此工程师用镂空大 V 符号来表示 ALU 组件：</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2023%3A%E5%88%86%2035%3A%E7%A7%92%20voq9xvav7n1673076215569.png" style="zoom: 50%;" /></div>
+<p>简图如下：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2028%3A%E5%88%86%2042%3A%E7%A7%92%20jkr8acrds91673076521986.png" alt="8 位 ALU 基本图形"></p>
+<p>除了两个 8 位的输出和一个输入之外，8 位 ALU 还需要用 4-bits「操作码」（Operation Code）确认执行操作类型，同时还会输出一些 1-bit 的标志位（Flags）表示特定状态，常见类型如下：</p>
+<ul>
+<li>溢出位（Overflow）检测是否发生溢出情况。</li>
+<li>零标志位（Zero）：检测输出是否为零。</li>
+<li>负标志位（Negative）：检测输出是否为负数。</li>
+</ul>
+<h2 id="16-寄存器--内存registers-and-ram">1.6 寄存器 &amp; 内存（Registers and RAM）</h2>
+<p>计算机的存储器（Memory）可分为两种类型：</p>
+<ol>
+<li>随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。
+<ul>
+<li>SRAM( Static Random Access Memory，静态随机存取存储器）：“静态”是指这种存储器只要保持通电，里面储存的数据就可以恒常保持（接下来用锁存器做的就是它）。</li>
+<li>DRAM( Dynamic Random Access Memory，动态随机存取存储器)：“动态”是指所储存的数据需要周期性地更新。</li>
+<li>Flash：允许多次写入的非易失性存储器。</li>
+<li>NVRAM( Non-Volatile Random Access Memory）：非易失性随机存取存储器。</li>
+</ul>
+</li>
+<li>持久存储器（Persistent Memory）：电源关闭时，数据也不会丢失。</li>
+</ol>
+<h3 id="161-and-or-锁存器">1.6.1 AND-OR 锁存器</h3>
+<p>用 OR 或门可以记录 1，用 AND 与门可以记录 0：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2000%3A%E5%88%86%2048%3A%E7%A7%92%20f8s9s8sa5a1673078448290.png" alt="记录 0 或 1"></p>
+<p>将两者如下图所示连接则构成 AND-OR 锁存器，可以锁定（latch）一个值来存储 1 位信息，故有此名。其有两个输入：「设置」为 1 则输出为 1，「复位」为 1 则输出为 0，两者均为 0 则输出最后记录的数字。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2003%3A%E5%88%86%2022%3A%E7%A7%92%20y54bkthke61673078602256.png" alt="AND-OR 锁存器"></p>
+<p>另，通常将放入数据的动作称为「写入」（writing），拿出数据的动作称为「读取」（reading）。</p>
+<h3 id="162-门锁gated-latch">1.6.2 门锁（Gated Latch）</h3>
+<p>AND-OR 锁存器需要用两个输入记录一个数字，使用起来较为麻烦，因此引入可以控制读写的「门锁」（Gated Latch）来存储 1 bit。门锁在输入输出之外，添加了一条允许写入线（Write Enable）——启用时允许写入数据，反之锁定（locked）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2013%3A%E5%88%86%2029%3A%E7%A7%92%20afk0la4b791673079208922.png" alt="门锁"></p>
+<h3 id="163-八位锁存器8-bit-latch">1.6.3 八位锁存器（8-bit Latch）</h3>
+<p>将 8 个门锁用 1 根允许写入线连接，构成八位锁存器，可用于存储 8 位信息。先将允许写入线置 1，写入数据后将其置 0 则可完成存储。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2019%3A%E5%88%86%2059%3A%E7%A7%92%20r4n03hbow51673079598873.png" alt="八位锁存器"></p>
+<h3 id="164-锁存器矩阵latches-matrix">1.6.4 锁存器矩阵（Latches Matrix）</h3>
+<h4 id="连接">连接</h4>
+<p>使用 16 × 16 个可存储 1 bit 的锁存器矩阵来存储 256 位，当需要启用某个锁存器时就打开相对应的行线、列线和允许写入线。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2025%3A%E5%88%86%2041%3A%E7%A7%92%20g1at8wiorr1673079941760.png" alt="锁存器矩阵"></p>
+<p>在交叉处使用 AND 与门连接，当且仅当行线、列线、单个锁存器的允许写入线均为 1 时，才允许该锁存器进行写入。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2034%3A%E5%88%86%2030%3A%E7%A7%92%20vh516h50ga1673080470371.png" alt="使用与门连接"></p>
+<p>这也意味着可以使用 1 根数据线来连接矩阵中的所有锁存器用于传输数据，因为可根据行列线进行需要开启的锁存器。类似地，可以使用 1 根允许写入线来控制从矩阵中的某个锁存器读取数据。</p>
+<p>因此，256 位的锁存器矩阵仅需 35 条线连接—— 1 条数据线、1 条允许写入线、1 条允许读取线以及 16 行、16 列用于选择锁存器的线。</p>
+<h4 id="选择">选择</h4>
+<p>4 位二进制数可表示的最大数字为 16，刚好足够满足对 16 × 16 的矩阵进行行数、列数的地址编码。</p>
+<p>可以使用 8 位二进制数来唯一标识行列交叉处的锁存器，比如第 12 行第 8 列的锁存器可以表示为 1100 1000，这就是前文 1.4.4 节中提过「位址」（memory addresses）。</p>
+<p>为了使机器读懂这个位址，需要使用 2 个支持 16 路的「多路复用器」（multiplexer）来分别处理行列地址，输入 4 位的数字后，多路复用器会连通相应的行/列线。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2051%3A%E5%88%86%2002%3A%E7%A7%92%20vuunik1yzs1673081462614.png" alt="多路复用器"></p>
+<p>16 × 16 的单位锁存器矩阵可以存储 256 个 bit，将 8 个 256-bit 的存储器连接起来构成大小为 256Bytes 的存储器。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2056%3A%E5%88%86%2004%3A%E7%A7%92%20kx3tmy0ii71673081764761.png" alt=""></p>
+<p>在 256Bytes 存储器中，一个八位数字是将每位各自存储在一个 256-bit 内存中，1 个 256-bit 存储器中的某位比特与其余 7 个 256-bit 存储器中的某 7 位比特共享同一个地址。因此，256Bytes 内存中也只有 256 个地址，各自代表 1Byte 的大小，可读写 8bit 值。</p>
+<p>简单起见，将这个 256Bytes 的存储器当作整体抽象为一个可寻址存储器。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2017%3A%E6%97%B6%2008%3A%E5%88%86%2029%3A%E7%A7%92%20wevb3q92ws1673082508995.png" alt="8 位可寻址存储器"></p>
+<h3 id="165-ram">1.6.5 RAM</h3>
+<p>8 位位址最多可以表示 256 （0~255）个地址，想要对 TB 或是 GB 级别的存储器寻址则更高位的数字表示地址（比如 16/32 位）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2017%3A%E6%97%B6%2022%3A%E5%88%86%2056%3A%E7%A7%92%20sck417easb1673083376008.png" alt="1980s 的 1MB 内存条"></p>
+<p>上图是 1 MB 大小的 RAM 内存条（1980s），通常是由 8 个内存模块（memory modules）构成，1 个内存模块里有 32 个内存方块（squares of memory），1 个内存方块中有 4 个小块（block），1 个小块中有 128 × 64 位的矩阵，单个小块是 8192bits 大小。</p>
+<p>因此，1 个内存方块中有 8192 × 4 = 32768 bits，总共有 32 个内存方块，单个内存模块大约在 100w bits 大小，有 8 个内存模块，总共是 800w bits 约等于 1 MB 大小。</p>
+<h2 id="17-cpu-中央处理器the-central-processing-unit">1.7 CPU 中央处理器（The Central Processing Unit）</h2>
+<h3 id="171-组成概述">1.7.1 组成概述</h3>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2019%3A%E6%97%B6%2018%3A%E5%88%86%2036%3A%E7%A7%92%20lzrx6mi9nu1673090315821.png" alt="CPU 简图"></p>
+<h4 id="cpu">CPU</h4>
+<p>CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。</p>
+<p>比如，若要执行加/减的数学指令，则交由 ALU 完成；若是内存指令，则与 RAM 通信配合进行读写操作（APU 与 RAM 用“地址线”、“数据线”和“允许读/写线”进行通信）。</p>
+<h4 id="微体系框架">微体系框架</h4>
+<p>使用高层次的视角观察计算机的方式称为「微体系架构」（microarchitecture），其更注重于逻辑上的「功能」。比如当我们用一条线连接 2 个组件时，这条线只是所有必须线路的抽象，并不代表两者连接仅仅通过一条线。</p>
+<h4 id="指令">指令</h4>
+<p>指令由「操作码」（operation code, opcode）和「地址码」组成，前者用于说明操作指令的 ID，后者则表示数据来自哪里（寄存器或内存地址）。指令用于指示计算机要做什么，多条指令共同组成程序。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2018%3A%E6%97%B6%2058%3A%E5%88%86%2035%3A%E7%A7%92%20ecjuw5ei941673089115725.png" alt="8-bit指令"></p>
+<h4 id="寄存器">寄存器</h4>
+<p>CPU 的控制单元中至少有 两个寄存器，一个「指令地址寄存器」（the instruction address register）用于存放当前指令的内存地址，另一个是「指令寄存器」（the instruction register）用于存储当前指令。</p>
+<p>另外还有一些寄存器用于临时存储数据和操作数据（如图中的 ABCD，其与 RAM 相连），寄存器也用于存储程序。</p>
+<h4 id="时钟">时钟</h4>
+<p>时钟（Clock）负责管理 CPU 运行的节奏，以精确地间隔触发电信号，控制单元用这个信号来推动 CPU 的内部操作。</p>
+<p>时钟速度（Clock Speed）是指 CPU 执行“取指令 -&gt; 解码 -&gt; 执行”中每一步的速度，单位为赫兹 Hz （频率单位，1Hz 表示 1 秒 1 个周期）。1MHz 为 1 秒 100w 个时钟周期，如今的电脑或是手机的时钟速度在千兆级别（1 秒 10 亿次时钟周期）。</p>
+<p>超频（overclocking）/  降频（underclocking）是指修改时钟速度，加快或降低 CPU 的速度。超频过多会让 CPU 过热或产生乱码，降频可以省电，对笔记本和手机很重要，通常会动态调整。</p>
+<p>1971 年发布的 4 位 CPU Intel 4004 是第一个单芯片 CPU，其微体系架构（microarchitecture）类似与上述所言，其时钟频率达到 740k Hz（每秒 74 万次）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2019%3A%E6%97%B6%2029%3A%E5%88%86%2026%3A%E7%A7%92%20gnrhs34n881673090966266.png" alt="Intel 4004 体系架构"></p>
+<h3 id="172-cpu-基本工作原理">1.7.2 CPU 基本工作原理</h3>
+<p>CPU 的运作分为三个阶段：取指令（fetch phase）、解码（decode phase）、执行（execute phase）。</p>
+<h4 id="取指令">取指令</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%209%3A%E6%97%A5%2016%3A%E6%97%B6%2054%3A%E5%88%86%2032%3A%E7%A7%92%20eiqzf4f3za1673254472039.png" alt="取指令"></p>
+<p>（1）指令地址寄存器发地址给 RAM</p>
+<p>（2）RAM 发该地址内的数据给指令寄存器</p>
+<p>（3）指令寄存器接受数据</p>
+<h4 id="解码">解码</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2013%3A%E6%97%B6%2020%3A%E5%88%86%2043%3A%E7%A7%92%20u5bw5b97n51673328043641.png" alt="解码"></p>
+<p>指令寄存器根据数据发送指令给控制单元 -&gt; 控制单元解码（使用逻辑门来确认操作码是否为某个指令，示例为 0010-LOAD A、地址 1110-14）</p>
+<h4 id="执行">执行</h4>
+<p>📌e.g. LOAD A(取数)：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2012%3A%E6%97%B6%2051%3A%E5%88%86%2019%3A%E7%A7%92%20cwmzjbgi4n1673326278756.png" alt="LOAD A"></p>
+<p>（1）使用确认指令（LOAD A）的电路打开寄存器 A 的允许写入线，将从 RAM 读取到的数据存入 A。</p>
+<p>（2）指令地址寄存器 +1，继续执行下一指令。</p>
+<p>📌e.g. ADD(加法)</p>
+<blockquote>
+<p>操作码 1000 0100 在解码阶段会被解出，1000 指 ADD 相加，则相应的后 4 位会被解释为名为 01 和 00 的两个寄存器地址，分别为寄存器 B 和寄存器 A -&gt; 把寄存器 B 的值加入寄存器 A 中。</p>
+</blockquote>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2012%3A%E6%97%B6%2045%3A%E5%88%86%2057%3A%E7%A7%92%20z0pe2mu8nk1673325956790.png" alt="ADD"></p>
+<p>（1）调用 ALU，控制单元将寄存器 B 作为 ALU 的第一个输入，将寄存器 A 作为 ALU 的第二个输入，同时传入 ADD 操作码进入 ALU。</p>
+<p>（2）ALU 计算完成后将结果暂存于控制单元中的寄存器中，若 ALU 直接将结果存于寄存器 A 中，则会出现不断自加的情况。</p>
+<p>（3）控制单元关闭 ALU 后， 将暂存在内部寄存器中的计算结果放入寄存器 A 中。</p>
+<p>（4）指令地址寄存器 +1。</p>
+<p>📌e.g. STORE(存数)</p>
+<blockquote>
+<p>操作码 0100 1101 在解码阶段会被解出，0100 为 STORE A，1101 是 RAM 地址 13。</p>
+</blockquote>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2012%3A%E6%97%B6%2047%3A%E5%88%86%2008%3A%E7%A7%92%20iwnygxwxsq1673326028241.png" alt="STORE"></p>
+<p>（1）打开寄存器 A 的允许读取线，将读取到的数据存入 RAM 。</p>
+<p>（2）程序结束，HALT 停止。</p>
+<h2 id="18-指令和程序instructions--programs">1.8 指令和程序（Instructions &amp; Programs）</h2>
+<h3 id="181-指令集">1.8.1 指令集</h3>
+<p>指令由「操作码」和「地址码」组成，前者用于说明操作指令，后者则表示操作数据的地址（寄存器或内存地址）。记录指令名称、用法、操作码以及所需 RAM 地址/寄存器位址的表格，称为「指令集」。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2013%3A%E6%97%B6%2008%3A%E5%88%86%2021%3A%E7%A7%92%20fntgnmfn3p1673327301020.png" alt="常见指令集"></p>
+<p>指令集使得身为硬件的 CPU 是「可编程」（programmable），其可以被软件控制做到硬件本身无法完成的事前，比如下图就是用仅能做加减的 ALU 实现计算余数（e.g. 11 / 5 -&gt; 1）的例子（下图的实现需要多个时钟周期，很低效）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2013%3A%E6%97%B6%2032%3A%E5%88%86%2026%3A%E7%A7%92%20mi3duinzyq1673328746142.png" alt="除法指令串"></p>
+<h3 id="182-指令执行">1.8.2 指令执行</h3>
+<h4 id="jump">JUMP</h4>
+<p>用于改变指令的顺序，或是跳过一些指令。JUMP 的底层实现方式是将指令后四位代表的内存地址的值覆盖掉「指令地址寄存器」里的值。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2013%3A%E6%97%B6%2024%3A%E5%88%86%2019%3A%E7%A7%92%209l94ptffwp1673328259061.png" alt="JUMP"></p>
+<p>为了避免无限循环（infinite loop）, JUMP 可以设置为有条件的，比如 JUMP NEGATIVE（在 ALU 的负标志位为真 true 时进行 JUMP）、JUMP IF EQUAL（如果相等）、JUMP IF GREATER（如果更大）。</p>
+<h4 id="halt">HALT</h4>
+<p>用于停止执行指令程序，同时也是区分指令和数据的标志（指令和数据在同一内存中均以二进制进行存储）。</p>
+<h3 id="183-指令长度">1.8.3 指令长度</h3>
+<p>本例中的 CPU 指令为 8 位，前 4 位为操作码，后 4 位为地址码，至多支持 $2^4=16$ 个操作，远远无法满足需求。现代 CPU 通常使用两种方法来拓展指令长度（the instruction length）：</p>
+<p>（1）使用更多位数表示指令，如 32 位或 64 位。</p>
+<p>（2）采用「可变指令长度」（variable-length instructions），指令长度任意，但指令读取稍显复杂。以 8-bit 操作码的 CPU 为例，其遇到 HALT 这类无序额外数据的指令会立即执行，遇到 JUMP 这类需要位置值信息的指令（又名「立即值」（Immediate Value））会明白所需位置值在 JUMP 后面。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2013%3A%E6%97%B6%2046%3A%E5%88%86%2055%3A%E7%A7%92%202lya7qg1jg1673329615323.png" alt="Intel 4004 指令集"></p>
+<p>1971 年 Intel 4004 CPU 发布，这是第一个单芯片 CPU，支持 46 个指令。为了表示更多的内存地址，其使用 8-bit 立即值来执行 JUMP。经多年发展，如今的 Intel i7 已有上千指令和指令变种，指令长度在 1~15 个字节中变化。</p>
+<h2 id="19-高级-cpu-设计advanced-cpu-designs">1.9 高级 CPU 设计（Advanced CPU Designs）</h2>
+<h3 id="191-瓶颈演变">1.9.1 瓶颈演变</h3>
+<p>计算机的计算量日益骤增，从 1Hz 到 1GHz 的 CPU 时钟速度（1.7.1 节），每秒需要执行约十亿条指令是非常庞大计算量。</p>
+<p>为了提升计算速度，早期的计算机试图减少晶体管（1.2/1.3 节）的切换时间，但最终碰到了物理瓶颈。</p>
+<p>另一种方法是通过硬件电路实现相关操作来加快处理速度，比如通过直接在 CPU 硬件层面中使用专门的电路设计除法，直接给 ALU 提供除法指令，而非像 1.8.1 节中举例的那样通过软件来实现。</p>
+<p>现代处理器中有许多类似于除法的专门电路来处理图形操作、解码压缩视频、加密文档等，主要为加快处理速度、减少时钟周期。像是 MMX、3DNOW、SSE 等还有额外电路来做更多复杂操作，用于游戏和加密等场景。</p>
+<p>硬件实现的便利使得人们很难删掉指令，于是其不断增加——从 Intel 4004 的 46 条指令到现代 CPU 的 上千条指令，CPU 的计算速度越来越快。新的瓶颈不再是时钟周期，而是读取写入数据的 I/O 操作。</p>
+<p>数据的读写需要 RAM 的配合，作为独立部件的 RAM 与 CPU 通过「总线」（bus）连接。尽管接近光速传输的电信号可以通过几厘米的总线很快到达（甚至不计寻址、取数、配置、输出的时间），但与每秒处理上亿条指令的 CPU 来说仍有速度差距。</p>
+<h3 id="192-缓存">1.9.2 缓存</h3>
+<p>缓存（cache）是内置于 CPU 中的仅有 KB/MB 大小的存储器，其作为中转站/临时空间缓和两者的处理速度差异，避免 CPU 在等待 I/O 操作执行时空等。</p>
+<p>因数据通常按顺序处理，故 CPU 从 RAM 取数据时，可一次取一批暂存在缓存中。在 CPU 执行时可以直接取用缓存中的数据，仅耗费 1 个时钟周期。</p>
+<p>当 CPU 执行复杂的长运算时，缓存也可充当临时空间用于存储计算中间值。</p>
+<h4 id="缓存命中">缓存命中</h4>
+<p>若 CPU 所需数据已在缓存中，称为「缓存命中」（cache hit），反之数据不在缓存中称为「缓存未命中」（cache miss）。</p>
+<h4 id="脏位">脏位</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2014%3A%E6%97%B6%2032%3A%E5%88%86%2033%3A%E7%A7%92%20z0499mn4bd1673332353893.png" alt="脏位"></p>
+<p>当因计算结果暂存在缓存中等原因，使得缓存中数据与 RAM 中的数据值不一致时，需要通过缓存中的特殊标记位「脏位」（dirty bit）记录，以便之后同步。</p>
+<h4 id="同步">同步</h4>
+<p>同步通常发生在缓存已满，但 CPU 又需要使用缓存时。在清理缓存之前，CPU 会先检查脏位，若该位已“脏”则先将数据写回 RAM 后再加载新内容。</p>
+<h3 id="192-指令流水线">1.9.2 指令流水线</h3>
+<p>指令流水线（instruction pipelining）是指当指令执行的各个阶段使用的是 CPU 不同部分时，将其并行处理（parallelize）的执行方式，像是做饭等水开的时候先去切菜。</p>
+<p>原本的「取指 -&gt; 解码 -&gt; 执行」需要 3 个时钟周期才能完成一个指令，并行后可以在每个时钟周期内处理 1 个指令，使得其吞吐量（throughput）翻三番。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2014%3A%E6%97%B6%2033%3A%E5%88%86%2017%3A%E7%A7%92%20sjf8oneu891673332397187.png" alt="指令流水线"></p>
+<p>指令流水线加快了处理速度，也带来了新的问题——数据依赖性（a dependency in the instructions）和执行流（exexution flow）的改变。</p>
+<h4 id="数据依赖性与乱序执行">数据依赖性与乱序执行</h4>
+<p>指令之间的前后依赖关系称为数据依赖性，比如在读取某个数据时，当前正在执行的指令会修改该数据，我们就会拿到旧数据。流水线处理器（pipelined processors）需要弄清楚这种数据之间的依赖关系，必要时停止流水线操作以避免出错。</p>
+<p>在高端的 CPU 中，使用「乱序执行」（out-of-order execution）来最小化流水线的停工时间，这种复杂电路其能够动态性排序有依赖关系的指令。</p>
+<h4 id="执行流改变与推测执行">执行流改变与推测执行</h4>
+<p>“条件跳转”之类的指令会改变程序的执行流，简单的流水线处理器会等待 JUMP 条件值确定后执行，复杂的流水线处理器为避免出现这种空等延迟会采用「推测执行」（speculative execution）。</p>
+<p>推测执行是指高端 CPU 会猜测 JUMP 的结果（在岔路口选择路径），提前将指令放进流水线。猜对则立即运行，猜错就清空流水线。</p>
+<p>为了减少猜错清空的次数，CPU 厂商使用更为复杂的方法来预测哪条分支更有可能，称为「分支预测」（branch prediction），现代 CPU 的正确率超过 90%。</p>
+<h4 id="超标量处理器">超标量处理器</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2014%3A%E6%97%B6%2052%3A%E5%88%86%2009%3A%E7%A7%92%205sf2i40vbi1673333529482.png" alt="超标量处理器"></p>
+<p>理想情况下，指令流水线在 1 个时钟周期完成 1 个指令，而可以在 1个时钟周期完成多个指令的处理器称为「超标量处理器」（superscalar processors）。</p>
+<p>这种处理器会一次性处理多条指令（取指令 + 解码），通过增加几个相同的电路执行高频指令，以便同时处理多条指令。比如很多 CPU 中会有 4/8/more 完全相同的 ALU 支持执行多个数学运算。</p>
+<h3 id="193-多核处理器">1.9.3 多核处理器</h3>
+<p>除了上一小节中谈及的优化 1 个指令流的吞吐量来提升 CPU 性能之外，还可以使用多核处理器同时运行多个指令流。</p>
+<p>多核处理器是指在一个 CPU 芯片中有多个独立处理单元，其共享缓存等资源，可以合作进行运算。如双核处理器（dual-core processors）或是四核处理器（quad-core processors）。</p>
+<h3 id="194-超级计算机">1.9.4 超级计算机</h3>
+<p>当多核处理器也无法满足运算需求时，可以使用多个多核处理器。最常见的是使用 2 个或是 4 个CPU ，而如果要模拟宇宙形成这种怪兽级别的运算（monster calculations）则需要使用超级计算机（supercomputer）的运算能力。</p>
+<p>超级计算机一般拥有着上万个 CPU，每个 CPU 有着上百个核心，每个核心的频率达到 GHz，每秒可以进行亿亿次量级的运算。</p>
+<p>截至 2022 年 11 月，<a href="https://www.top500.org/lists/top500/2022/11/">世界上最快的计算机</a>是美国橡树岭国家实验室的 Frontier，总共超过 8 千万个核心，每个核心的运算是 2GHz，每秒可运行 110.2 亿亿次浮点运算，这也称为每秒浮点运算次数（FLOPS）。</p>
+<h2 id="110-集成电路摩尔定律integrated-circuits--moores-law">1.10 集成电路、摩尔定律（Integrated Circuits &amp; Moore&rsquo;s Law）</h2>
+<h3 id="1101-集成电路integrated-circuits">1.10.1 集成电路（Integrated Circuits）</h3>
+<h4 id="数字暴政">数字暴政</h4>
+<p>1940s~1960s 中期，计算机由独立部件用线连接而成组成，这些独立部件称为「分立元件」（discrete components）。</p>
+<p>若想提升性能，只能增加更多分立元件，这会导致更多更复杂的电线，这种问题称为「数字暴政」（Tyranny of Numbers）。</p>
+<p>比如 1.2.3 小节提及的 ENIAC 就使用了 1.7w 多个真空管，7w 个电阻，1w 个电容，500w 个手工焊点。</p>
+<p>后来到了  1950s 中期，更小更可靠的晶体管在市场上出现。1959 年 IBM 将 709 计算机中的电子管换为晶体管制造出了 IBM 7090，其速度提升 6 倍，价格只有一半。但商业化的晶体管仍然属于分立元件。</p>
+<p>数字暴政问题的严重性在 1960s 达到顶峰，亟待引入新抽象来封装这种复杂性。</p>
+<h4 id="集成电路">集成电路</h4>
+<p>1958 年，Jack Kilby 使用锗作为材料将独立部件用电线连接集成在一起，使得原先分立元件组合成了新的独立组件单元，集成电路（Integrated Circuits, IC）自此出现。</p>
+<p>1959 年，Robert Noyce 所在公司仙童半导体使用了更稳定储量也更多的硅作为集成电路材料，使得集成电路被广泛使用。Noyce  也因此被公认为现代集成电路之父，开创了电子时代（the electronics era）。</p>
+<h4 id="印刷电路板">印刷电路板</h4>
+<p>起初的 IC 只集成了几个晶体管，可以将 1.3 节的逻辑门封装成单独组件，但 IC 之间的相互连接仍然不便。于是出现了「印刷电路板」（Printed Circuit Boards, PCB）。</p>
+<p>印刷电路板通过蚀刻（etch）金属线的方式将零件连接在一起，无需焊接或是使用一大堆线，并且可以大规模量产。</p>
+<p>PCB 和 IC 相结合使得分立元件和电线大幅减少，实现相同功能。</p>
+<h3 id="1102-光刻技术photolithography">1.10.2 光刻技术（Photolithography）</h3>
+<p>受限于当时的技术，在 IC 立塞 5 个以上的分立元件还是很困难，直到新的制作工艺「光刻」（Photolithography）出现，其利用光将图案印到材料上，可以使用基础操作来制造复杂电路。以用光刻技术制作晶体管为例：</p>
+<h4 id="蚀刻etch">蚀刻（etch）</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2019%3A%E5%88%86%2003%3A%E7%A7%92%20oi9hx9b8tb1673702343331.png" alt="光刻基础层"></p>
+<ul>
+<li>晶圆（silicon wafer）：最基础的硅薄片，一种半导体材料，有时导电有时不导电。</li>
+<li>氧化层（oxide layer）：保护层。</li>
+<li>光刻胶（photoresist）：光照后可溶，可以使用特殊化学药剂洗掉。</li>
+<li>光掩膜（photomask）：用于遮挡不希望被强光照射融化的地方。</li>
+</ul>
+<p>强光照射后，未被光掩模遮挡的光刻胶部分会发生化学变化，使用一种化学物质洗去后，氧化层露出：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2022%3A%E5%88%86%2044%3A%E7%A7%92%20mp9nxq20aj1673702564756.png" alt="强光照射"></p>
+<p>用另一种化学物质（通常是酸）洗去氧化层中间露出部分，注意两侧氧化层被光刻胶保护未被洗去：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2025%3A%E5%88%86%2056%3A%E7%A7%92%20ujxk66y7w81673702755980.png" alt="洗氧化层"></p>
+<p>使用另一种化学药品洗掉光刻胶，蚀刻完成：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2029%3A%E5%88%86%2031%3A%E7%A7%92%20e05skp8f1d1673702971087.png" alt="洗光刻胶"></p>
+<h4 id="掺杂doping">掺杂（doping）</h4>
+<p>使用高温气体（比如磷）渗透进暴露出的硅，改变硅的电学性质，使得其导电性更好，这一化学过程称为掺杂（doping）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2035%3A%E5%88%86%2031%3A%E7%A7%92%2090uy4vfw331673703331328.png" alt="掺杂"></p>
+<p>（注：半导体的具体物理和化学性质可参见 <a href="https://www.youtube.com/watch?v=IcrBqCFLHIY&amp;t=0s">Youtuber Derek Muller 的频道 @Veritasium</a>。）</p>
+<p>再重复一次蚀刻，放上光刻胶和光掩模，开出新形状的缺口：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2038%3A%E5%88%86%2003%3A%E7%A7%92%20a3sji5ixfb1673703483456.png" alt=""></p>
+<p>用另一种气体对硅进行掺杂，控制好深度和时机，控制其不超过之前的区域：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2040%3A%E5%88%86%2015%3A%E7%A7%92%20g8m0f1pvoj1673703614932.png" alt="二次掺杂"></p>
+<h4 id="金属化metalization">金属化（metalization）</h4>
+<p>材料处理完后，需要在氧化层上制作出通道，用于放置细小金属导线来连接晶体管。依旧使用光刻胶和光掩膜重复蚀刻步骤，刻出通道。</p>
+<p>接着放置一层薄金属（铝或者铜），该过程称为金属化（metalization）：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2047%3A%E5%88%86%2007%3A%E7%A7%92%20q0ts7df31t1673704027857.png" alt="金属化"></p>
+<p>再通过光刻胶和光掩膜重复蚀刻步骤，将金属上的具体电路蚀刻出：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2048%3A%E5%88%86%2048%3A%E7%A7%92%20tyuanol1xn1673704128024.png" alt="晶体管"></p>
+<p>至此一个晶体管（transistor）制作完工。这是一个双极型晶体管（bipolar junction transistor），由三根线连接不同的区域，每个趋于的掺杂方式不同。</p>
+<h4 id="微型芯片chip">微型芯片（chip）</h4>
+<p>光刻法同样可以制作电阻或电容等其他电子元件和相互连接的电路，其均可制作在一片硅上。</p>
+<p>光刻法一次会制作上百万个细节，同时通过焦距改变可以将透过光掩膜的光投射成任意大小，以便于制作出精细细节。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2054%3A%E5%88%86%2055%3A%E7%A7%92%20dmeut5c17j1673704495229.png" alt="光刻投影"></p>
+<p>IC 中会有许多导线上下交错，连接各个元件。一片晶圆可以制作很多 IC ，整块晶圆制作完成会后切割然后包裹进微型芯片（chip）中，成为它的核心。</p>
+<h3 id="1103-罗尔定律moore-law">1.10.3 罗尔定律（Moore&rsquo; Law）</h3>
+<p>因光刻技术的发展，晶体管变小且集成密度变高。从 1960s 初 IC 塞不下超过 5 个晶体管，到 1960s 中期市场出现超过 100 个晶体管的 IC，于是 1965 年戈登摩尔（Gordon Moore）看到了某些趋势：</p>
+<p>每两年左右，得益于材料和制造技术的发展，同样大小的空间可以塞进两倍数量的晶体管。</p>
+<p>这被称作是罗尔定理，虽然名为“定律”，但其实只是一种正确趋势。</p>
+<p>与此同时，芯片的价格也在急剧下降，从 1962 年的平均 50 美元，到 1968 年的 2 美元左右，再到现在几分钱的 IC ，晶体管更小密度更高价格也低廉。</p>
+<h3 id="1104-intel-4004">1.10.4 Intel 4004</h3>
+<p>晶体管越小，所要移动的电荷量就越少，就能越快速滴切换状态，耗电更少。同时，电路更紧凑也意味着信号延迟更低，时钟速度也会更快。</p>
+<p>1968 年，罗伯特·诺伊斯（Robert Noyce）和戈登·摩尔联手成立了新公司 Intel——现今最大的芯片制造商，该名字源于 Integrated（集成）和 Electronics（电子）两个词的组合。</p>
+<p>发布于 1971 年的 Intel 4004 CPU 是重要的里程碑，其是第一个使用 IC 制作的微型处理器（microprocessor），集成了 2.3k 个晶体管。</p>
+<h3 id="1105-超大规模集成vlsi">1.10.5 超大规模集成（VLSI）</h3>
+<p>自 Intel 4004 始，CPU 中集成的晶体管数量爆发式增长：</p>
+<ul>
+<li>1980 年，3w 晶体管</li>
+<li>1990 年，100w 晶体管</li>
+<li>2000 年，3000w 晶体管</li>
+<li>2010 年，10 亿晶体管</li>
+</ul>
+<p>实现 10 亿这种密度的光刻技术分辨率约为 1w 纳米，是人类头发直径的 1/10。现如今已发展到 14 纳米，比红细胞小 400 倍。</p>
+<p>与此同时，大多数电子器件——RAM、显卡、固态硬盘、摄像头感光元件 etc. ——也在指数式发展。</p>
+<p>以 iPhone 7 的 A10 CPU 为例，其在 1cm ×1 cm 大小的面积中集成了 33 亿个晶体管。</p>
+<p>这样数量级的电路设计显然无法人力一个个完成，自 1970 年代开始，现代工程师就开始使用「超大规模集成」（very-large-scale integration, VLSI）来自动生成芯片设计。</p>
+<p>比如使用「逻辑综合」（logic synthesis）这种技术，可以放置像缓存内存（memory cache）一样的完整高级组件，软件会自动高效生成电路。</p>
+<h3 id="1106-世代演变与瓶颈">1.10.6 世代演变与瓶颈</h3>
+<ul>
+<li>计算 1.0（the 1st generation of computer）：真空管</li>
+<li>计算 2.0（the second generation of electronic computing）：晶体管</li>
+<li>计算 3.0（the third generation of computing）：IC 出现并用于制作微处理器</li>
+<li>计算 4.0 （the fourth generation computer）：超大规模集成电路</li>
+</ul>
+<p>摩尔定律也许接近终结了，如果进一步做小芯片，会面临两个主要问题：</p>
+<ol>
+<li>波长精度极限：光刻法中使用的光的波长精度已经到达极限，无法更精细地使用光掩膜来蚀刻图案。因此，科学家在研制波长更短的光源，用以投射更小的图案。</li>
+<li>量子隧道贯穿（quantum tunneling）：当晶体管非常小，电极之间可能只举例几个原子，电子会跳过间隙，这种现象称为量子隧道贯穿。这会使得晶体管漏电，无法成为好的开关器件。实验室中已经造出 1 纳米大小的晶体管，但能否量产未知。</li>
+</ol>
+<h1 id="2-程序设计">2 程序设计</h1>
+<h2 id="21-编程史话early-programming">2.1 编程史话（Early Programming）</h2>
+<h3 id="211-编程介质">2.1.1 编程介质</h3>
+<p>在 1.7.2 节中说明 CPU 工作原理时，我们假设程序已经在计算机内存中了，但实际上程序需要被加载（load into）进内存。</p>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1801 年
++ 可穿孔纸卡（punch cards）
++ - 约瑟夫·雅卡尔（Joseph Marie Jacquard）发明了可编程纺织机，一种可编织图案的纺织机，其是最早的编程。
+- 纺织的每行图案由可穿孔纸卡决定，特定位置是否穿孔决定线的位置高低。
+- 1890 年人口普查也是采用穿孔纸卡进行汇总的（参见 1.1.2 节的打孔卡片制表机），但其存储的是数据而非程序。
+- 1955 年的美国 SAGE 防空系统是使用纸卡的最大型程序，其主控制程序用了 6.25w 张穿孔卡纸，约为 5MB 的数据。
+- 直至 1980s，基本所有的计算机都有穿孔卡纸读取器。
+
++ after 60s
++ 插线板（plug boards）
++ - 用于正确执行加减乘除的控制面板，面板上由许多可以插电线的小插孔，使得机器不同部分可以互相传递数据和信号。
+- 缺点在于运行不同的程序需要重新接线。
+
++ 1920s
++ 可插拔插线板（swappable plug boards）
++ - 目的是为了更方便地为机器插入不同程序，但对其编程很复杂。
+- 流行于 1940s，IBM 402 核算机、ENIAC（1946 年，参见 1.2.3 节）均采用可插拔插线板制作。
+- 缺点是更换程序耗时长且繁琐。以 ENIAC 为例，程序连线需至多耗费三周。
+
++ 1940s~50s
++ 内存（electronic memory）
++ - 内存价格下降、容量提升，将程序存储在内存更易于修改和读取。
+- 足够大的内存可以存储运行程序、所需数据以及运行时所产生的新数据。
+- 使用内存的机器称为「存储程序计算机」（Stored-program Computers）。
+- 内存中的程序和数据依然要通过穿孔卡纸读取器（punch card reader）从穿孔卡纸写入（1980s）。
+
++ pre-1980
++ 控制台（control consoles）
++ - 在控制台(控制面板)上进行面板编程（panel programming） ，面板是使用开关和按钮的，其可以做到在插线板上接线一样的效果。
+- 面板上有指示灯，用于代表各种函数的状态和内存中的值。
+- 早期针对爱好者的家用计算机因外围设备的昂贵，多使用开关进行编程。
+- 第一款取得商业成功的计算机是 Altair 8800（1975 年），提供整机和组件两个版本可供选择。
+
+</code></pre>
+<h3 id="212-冯诺依曼结构">2.1.2 冯诺依曼结构</h3>
+<p>「冯诺依曼结构」（Von Neumann Architecture）由数学家和物理学家约翰·冯·诺依曼（John Von Neumann）发明，其特点在于将程序和数据都存储在同一个地方。</p>
+<p>冯诺依曼计算机的标志性组成：处理器（带有 ALU）、数据寄存器、指令寄存器、指令地址寄存器、内存（存储数据和指令），如 1.7.1 小节中搭建起来的那样。</p>
+<p>第一台采用冯诺依曼结构的存储程序计算机（Von Neumann Architecture Stored-program）是由曼彻斯特大学于 1948 年建造的 Baby（绰号）——离散变量自动电子计算机（Electronic Discrete Variable Automatic Computer, EDVAC）。</p>
+<h2 id="22-编程语言the-first-programming-languages">2.2 编程语言（The First Programming Languages）</h2>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ early day
++ 机器语言（Machine Language）
++ - 机器语言又名机器码（Machine Code），指只能理解二进制描述的信息。
+- 早期编程只能使用机器语言进行，在其之前人们会先对程序做一个高层次的描述——称为「伪代码」（Pseudo-Code），然后再用操作码表（opcode tables）进行转换。
+
++ 1940~50s
++ 汇编语言（Assembly Language）
++ - 为操作码分配简单名字——助记符（mnemonics），后接数据形成完整指令。
+- 计算机无法理解助记符，因此需要二进制程序汇编器（Assembler）将文字指令自动转换为二进制指令。
+- 不断发展的汇编器还提供了自动分析 JUMP 地址（通过插入可跳转标签）等功能，以便应对程序开头新增代码导致地址变化的情况。
+- 通常来说，一条汇编指令对应一条机器指令，其依旧和底层硬件联系紧密，需要程序员思考使用什么寄存器和内存地址。
+
++ 1952 年
++ 算术语言版本 0（A-0)
++ - 算术语言版本 0（Arithmeic Language Version 0）是一种由葛丽丝·霍普（Dr.Grace Hopper）创造的高级编程语言，源于其在使用 Harvard Mark 1 编码的噩梦体验。
+- 高级程序语言可以将一行代码转换为几十条的二进制指令。
+- 葛丽丝·霍普在 1952 年创造了第一个编译器（compiler）。
+- 该想法有些超前，受限于当时“计算机只能做算术，不能运行程序”的看法，未被广泛使用。
+
++ 1957 年
++ FORTRAN
++ - IBM 于 1957 年发布，名字源自 Formula Translation（公式翻译），起初仅能运行在 IBM 计算机上。
+- 比同等的手写汇编代码平均短 20 倍，运行速度稍差，但编程速度大大提升。
+
++ 1959 年
++ COBOL
++ - 1950s 的编程语言和编译器仅能运行在一种计算机中，升级电脑会带来巨大的重写代码工作量，因此通用编程语言的开发被提上日程。
+-  1959 年组建的数据系统语言委员会开发了 Common Business-Oriented Language，简称 COBOL。
+- 为了兼容不同的硬件，每个计算机架构需要一个 COBOL 编译器，该编译器可以接收相同的 COBOL 代码。这种特性称为「一次编写，多次运行」（write once,run anywhere），现今大多数编程语言都是如此。
+
++ NOW
++ 高级编程语言（high-level programming languages）
++ - 1960s, ALGOL, LISO, BASIC
+- 70s, Pascal, C, Smalltalk
+- 80s, C++, Objective-C, Perl
+- 90s, Python, Ruby, Java
+- 千禧年，Swift, C#, Go etc.
+
+</code></pre>
+<p>🏆 the holy grail (圣杯)：使用英文直接于计算机对话（plain ol&rsquo; English），计算机会理解并执行。</p>
+<h2 id="23-编程原理语句和函数programming-basics-statements--functions">2.3 编程原理：语句和函数（Programming Basics: Statements &amp; Functions）</h2>
+<h3 id="231-概述">2.3.1 概述</h3>
+<p>规定句子结构的一系列规则，叫做「语法」（syntax），编程语言也有相应的语法结构。用编程语言表达完整单个思想的内容，称为「语句」（statement）。</p>
+<p>最基本的语句是赋值语句（assignment statement），用于将一个变量赋值给另一个变量，使用「=」连接两个变量，次序为从右往左。e.g. a = 5, b = 10, c = a +b, abc 均为可赋值的量，变量名可任意但需唯一。</p>
+<h3 id="232-控制流语句control-statements">2.3.2 控制流语句（Control statements）</h3>
+<p>用于控制程序的执行顺序。</p>
+<h4 id="if-statements">if Statements</h4>
+<p>又名条件语句（Conditional Statements），基本思想为「如果 X 为真（True），那么执行 Y」（其中 X 为 conditional expression 条件表达式），类似于岔路口，会根据条件表达时的真假执行一次。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2006%3A%E5%88%86%2049%3A%E7%A7%92%20uiyywudubm1673420809491.png" alt="if"></p>
+<p>与 else 结合使用后，当条件为假时，则执行 else 中的代码：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2010%3A%E5%88%86%2046%3A%E7%A7%92%20utaxns8mb11673421045990.png" alt="if-else"></p>
+<h4 id="条件循环conditional-loop">条件循环（conditional loop）</h4>
+<p>使用条件循环可根据条件执行多次，如 while 循环——当 while 条件为真时，代码会重复执行。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2014%3A%E5%88%86%2016%3A%E7%A7%92%20jcqh8njxwn1673421256371.png" alt="while"></p>
+<p>另一种常见的循环是 for loop ——不判断执行条件而是判断执行次数，for 会循环特定次数。执行后自增 1，直到循环条件不满足。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2016%3A%E5%88%86%2013%3A%E7%A7%92%20qn43d2xkmi1673421373452.png" alt="for"></p>
+<h3 id="234-函数">2.3.4 函数</h3>
+<p>「Less is more. 」当某段代码需要多次重复使用时，为避免修改繁琐可以将其打包为「函数」（functions），又名「方法」（methods）或是「子程序」（subroutines）。</p>
+<p>下图示例是名为「EXPONENT」(指数) 的函数，所需参数为「BASE」(底数) 和「EXP」(exponent, 指数)，「RETURN」用于返回计算结果给调用该函数的代码。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2022%3A%E5%88%86%2052%3A%E7%A7%92%20l0wr6voatd1673421772192.png" alt="指数函数"></p>
+<p>函数这样的抽象（abstraction）是现代编程的核心，现代软件采用「模块化编程」（Modularizing programs），其由上千个函数构成。不同的程序员写不同的函数，其各自确保自己的代码工作正常，各个函数各自负责不同的事情，使得整个程序正常运作。</p>
+<p>当某个函数的代码行数过百，则应该有东西可以拆成一个新的函数。现代编程语言中有专业人员预先写好的函数集合，称为「库」（library）。</p>
+<h2 id="24-算法入门intro-to-algorithms">2.4 算法入门（Intro to Algorithms）</h2>
+<h3 id="241-概述">2.4.1 概述</h3>
+<h4 id="算法">算法</h4>
+<p>算法（Algorithm）一词源自 1000 多年前的波斯博识者，阿尔·花拉子密(Abū ʿAbdallāh Muḥammad ibn Mūsā al-Khwārizmī), 代数（algebra）之父之一。</p>
+<p>算法是指求解问题的具体步骤，一般来说所需步骤越短越好，但有时也会考虑占用内存的情况。</p>
+<h4 id="复杂度">复杂度</h4>
+<p>算法的输入大小和运行步骤之间的关系叫做「算法复杂度」，使用「大 O 表示法」来衡量运行速度的量级。</p>
+<h3 id="242-选择排序selection-sort">2.4.2 选择排序（Selection sort）</h3>
+<p>遍历找到当前最小数，移动至最前，后从第二个继续循环该遍历，直到最后一个数字。算法时间复杂度为 $O（N^2）$，指数级增长，效率较低。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2043%3A%E5%88%86%2042%3A%E7%A7%92%20m5ruem6z3b1673423021920.png" alt="选择排序"></p>
+<h3 id="243-归并排序merge-sort">2.4.3 归并排序（merge sort）</h3>
+<p>若数组大小大于 1，则将数组对半分割，直至单个数组个数为 1（示例中）。接着从首个开始两两对比每组中第一个数字的大小，归并为 * 2 个组，循环重复。</p>
+<p>算法时间复杂度为 $O（nlogn）$ ，n 为比较 + 合并的次数（与输入成正比），log n 是合并步骤的次数（重复对半切是和输入呈对数关系）。</p>
+<h3 id="244-dijkstra-算法">2.4.4 Dijkstra 算法</h3>
+<p>Dijkstra 是一种图搜索（graph search）算法，图由节点（node）和边（line）相连构成，点到点之间的代价称为成本（cost）或是权重（weight）。</p>
+<p>若要计算任意某两点之间的最小代价路线，最简单的蛮力法是尝试每一条路计算总成本，时间复杂度为 $O(n!)$，阶乘量级是最糟糕的。</p>
+<p>Dijkstra 算法是 Edsger Dijkstra 发明与 1956 年构思的算法，其<a href="https://www.bilibili.com/video/BV1EW411u7th?t=492.9&amp;p=13">基本思想如下</a>：总是从代价最低的节点开始，运行一次后得知相邻节点的代价；再从相邻节点中的最小节点开始向前计算相邻节点的邻居的代价，更新该值，接着计算相邻节点中的第二小节点向前一步的代价，若相邻节点的同一邻居计算结果再次计算时比原值更小，则更新。</p>
+<p>1956 年初始版本的 Dijkstra 算法的时间复杂度是 $O(n)$，经改进后为 $O(nlog+l)$，其中 n 为节点数，l 为边数。</p>
+<h2 id="25-数据结构data-structures">2.5 数据结构（Data Structures）</h2>
+<p>数据结构是用于表示算法所处理的数据在内存中存储的格式，当数据是结构化的，会更便于读取。</p>
+<p>不同的数据结构有不同的特性，适用于不同的场景,正确选择数据结构会让工作更为简单。</p>
+<p>大多数编程语言自带了预先做好的数据结构，比如 C++ 中的「标准模板库」（Standard Template Library）和 Java 中的「Java 类库」（Java Class Library）。</p>
+<h3 id="251-数组array">2.5.1 数组（Array）</h3>
+<h4 id="数组">数组</h4>
+<p>数组又名列表（list）或是向量（Vector），其连续存储在内存中，可存储多个值。</p>
+<p>数组中不同值使用下标（index）区分，下标从 0 开始，使用方括号 [ ] 表示所访问数组的数值。e.g 数组 j 的第一个元素为 <code>j[0]</code>，第三个元素为 <code>j[2]</code>。</p>
+<p>本质上是通过计算第一个元素地址的<strong>偏移量</strong>，来得到数组中其他元素的地址。注意区分数组中第 5 个数字和数组中下标为 5 的数，前者下标为 4，后者实际为第六个数。</p>
+<p>数组用途广泛，几乎所有的编程语言都自带了很多函数来处理数据，比如数组排序函数。</p>
+<h4 id="字符串">字符串</h4>
+<p>字符串（string）是由字母、数字、标点等组成的数组，以二进制值 <code>\0</code> （null）结尾。处理字符串的常见函数有 <code>strcat</code>，其接受两个数组，将第二个放在第一个结尾处。</p>
+<h4 id="矩阵">矩阵</h4>
+<p>数组仅能操作一维数据，二维及以上数据需要使用<strong>矩阵（Matrix）</strong>。以二维矩阵为例，取值需要 2 个下标，如 <code>j[2][1]</code> :</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2016%3A%E6%97%B6%2027%3A%E5%88%86%2041%3A%E7%A7%92%20pq9kgaevs41673425660980.png" alt="矩阵"></p>
+<h3 id="252-结构体struct">2.5.2 结构体（struct）</h3>
+<p>结构体是指将几个逻辑上有关系的变量打包在一起的结构，比如将银行卡和余额打包在一个称为一个结构体放入数组中。</p>
+<p>但数组创建时则大小固定，无法动态增加，同时其按序排列，在中间插入某值需移动后续诸多值，着实不便。因而可以使用结构体建立新的数据结构消除相关限制。</p>
+<h3 id="253-链表">2.5.3 链表</h3>
+<p>通常采用名为 node 的结构体构建，节点（node）是变量（variable）和指针（pointer）构成的结构体，指针是指向一个内存地址的特殊变量。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2016%3A%E6%97%B6%2042%3A%E5%88%86%2007%3A%E7%A7%92%20tul9630evn1673426527084.png" alt="node"></p>
+<h4 id="单链表linked-list">单链表（linked list）</h4>
+<p>多个节点可以组成链表（linked list），通过链表中的每个节点指向下一个节点来实现灵活性。下图所示为「循环链表」（circular linked），若最后一个指针为 0(null)，则为非循环列表。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2016%3A%E6%97%B6%2045%3A%E5%88%86%2051%3A%E7%A7%92%208fczka81641673426751547.png" style="zoom: 50%;" /></div>
+<p>链表的大小可以动态增减，插入也比数组更加容易，只需改变指针即可（如下图）。在链表中，重新排序、两端缩减、分割以及倒序等操作也很容易进行。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2016%3A%E6%97%B6%2048%3A%E5%88%86%2046%3A%E7%A7%92%20brc1ggyzmx1673426925886.png" alt="链表插入"></p>
+<h4 id="队列queue">队列（queue）</h4>
+<p>一种可以使用链表构建的复杂数据结构，采用「先进先出」（First-In First-Out, FIFO）的原则。</p>
+<p>处理完一个数据则可以其「出队」（dequeue），将数据加入队列则称为「入队」（enqueue）。入队需要遍历整个链表直至结尾，然后将原先结尾节点的指针指向要加入的节点。</p>
+<h4 id="栈stacks">栈（stacks）</h4>
+<p>栈是一种「后进先出」（Last-In First-Out, LIFO）的数据结构，类似于放羽毛球进筒里。栈中数据的出入称为「进栈」（push）和「出栈」（pop）。</p>
+<h3 id="254-树tree">2.5.4 树（tree）</h3>
+<p>在 node 的基础上再新增一个指针可以构造出树：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2017%3A%E6%97%B6%2001%3A%E5%88%86%2038%3A%E7%A7%92%20v2onl6rku91673427698508.png" alt="树的结构体"></p>
+<p>抽象来看，可以将最高的节点称为「根节点」（root），节点下的所有节点称为「子节点」（children），任何子节点的直属上层节点称为「父节点」（parent node），没有任何子节点的节点（i.e. 树结束的地方）叫做「叶节点」（leaf）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2017%3A%E6%97%B6%2005%3A%E5%88%86%2024%3A%E7%A7%92%20sq5bh67yy91673427924179.png" alt="树"></p>
+<p>上图这种每个节点最多只有两个节点的树称为「二叉树」（binary tree），这是一种特殊的树。树的节点个数是任意的，甚至我们可以在 node 中使用链表来存储所有的子节点。</p>
+<p>树的特性是从根到叶是单向进行，而非循环。若数据随意连接，则构成 2.4.4 节中提过的图（graph），图的指向任意，可以使用多个指针的 node 来表示。</p>
+<h2 id="26-阿兰图灵alan-turing">2.6 阿兰·图灵（Alan Turing）</h2>
+<p>阿兰·马蒂森·图灵（Alan Mathison Turing）于 1921 年出生在伦敦，从小表现出惊人的数学和科学能力。他对计算机科学的建树始于 1935 年，当时他是剑桥国王学院的硕士生。</p>
+<h3 id="261-丘奇-图灵论题">2.6.1 丘奇-图灵论题</h3>
+<h4 id="可判定性问题">可判定性问题</h4>
+<p>可判定性问题（Entscheidungsproblem, 德语）是由德国数学家大卫·希尔伯特提出的问题：「是否存在一种算法，输入正式逻辑语句输出准确的&quot;是&quot;或&quot;否&quot;答案？」，该算法能回答如“是否有一个数大于所有数”之类的数学问题。</p>
+<p>1935 年美国数学家阿隆佐·丘奇（Alonzo Church）首次提出解决方法，其开发了名为「Lambda 算子」（Lambda Calculus）的数学表达系统，证明了该算法不存在。该系统能表示任何计算，但其使用的数学技巧难以理解和使用。</p>
+<p>与此同时，阿兰·图灵也提出了一种现在名为「图灵机」（Turing Machine）的假想计算机，其计算能力与 Lambda 算子一致但更为简单，因此在新兴的计算机领域更加受欢迎。</p>
+<h4 id="图灵机">图灵机</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2017%3A%E6%97%B6%2033%3A%E5%88%86%2039%3A%E7%A7%92%20w9592x62141673429619426.png" alt="图灵机"></p>
+<p>图灵机是一台理论计算设备，由如下部件组成：</p>
+<ol>
+<li>纸带：无限长，用于存储符号。</li>
+<li>读写头：位于纸带上，可以读取和写入纸带上的符号。</li>
+<li>状态变量：用于保存当前变量。</li>
+<li>规则：用于描述机器做什么；根据当前状态和读写头中的符号来决定机器的执行 -&gt; 写入符号 or 改变状态 or 移动一格读写头 or 动作组合。</li>
+</ol>
+<p>使用图灵机需要定义起始状态和规则，具体示例<a href="https://www.bilibili.com/video/BV1EW411u7th?t=154.5&amp;p=15">参见视频</a>。该机器是一台通用计算机，如果有足够的时间和内存（纸带）可以利用规则和状态执行任何计算，这是一个很强大的理论模型。</p>
+<h4 id="图灵完备">图灵完备</h4>
+<p>图灵完备（Turing Completeness）是针对一套数据操作规则而言的概念。数据操作规则可以是一门编程语言，也可以是计算机里具体实现了的指令集。当这套规侧可以实现图灵机模型里的全部功能时，就称它具有图灵完备性。（cr.<a href="https://www.zhihu.com/question/20115374/answer/288346717">知乎 @RanC</a>）</p>
+<h4 id="停机问题">停机问题</h4>
+<p>停机问题（Halt problem）是指“给定图灵机描述和输入纸带，是否有算法确定机器会永远计算下去，还是会在某一点停机？”，图灵证明了其无法解决，推理如下：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2018%3A%E6%97%B6%2006%3A%E5%88%86%2029%3A%E7%A7%92%20yqb68j2gtm1673431589745.png" alt="停机问题"></p>
+<ol>
+<li>假想图灵机 H：输入“问题描述 + 纸带数据”，输出 Yes 表示会停机，输出 No 表示不会。</li>
+<li>假想图灵机 -H：H 的输出为 Yes，则 -H 的输出为不会停机；H 的输出为 No，则 -H 的输出为会停机。</li>
+<li>将 H 和 -H 组成机器，并添加分离器（splitter）使得其只接收一个输入（程序），名为「Bizzaro」(异魔)。</li>
+</ol>
+<p>将 Bizzaro 的描述作为其输入（问 H 说当 Bizzaro 的输入是 H 时会如何），则出现悖论：</p>
+<ul>
+<li>H 说 Bizzaro 会停机，则通过 -H 进入无限循环。</li>
+<li>H 说 Bizzaro 不会停机，则输出 No 通过 -H 停机。</li>
+</ul>
+<p>图灵证明了有个程序使得图灵机 H 无法判断是否会停机，意味着“停机问题”无法用图灵机解决。</p>
+<h4 id="可计算性理论">可计算性理论</h4>
+<p>丘奇和图灵对可判定性问题的解答证明了计算机的能力是有极限的，无论有多少的时间或内存，有些问题是计算机无法解决的。</p>
+<p>这种对可计算性理论（formalize computability）的讨论，称为「丘奇-图灵论题」（Church-Turing Thesis）。</p>
+<h3 id="262-破译英格玛机">2.6.2 破译英格玛机</h3>
+<p>从 1936 年至 1938 年，图灵在丘奇的指导下拿到了普林斯顿的博士学位，毕业后回到剑桥。</p>
+<p>再之后，图灵加入了英国政府的密码破译组织。1939 年前后，英国卷入第二次世界大战，图灵的才能被投入战争，其工作内容之一是破解德国的通信加密。</p>
+<p>在 1.2.3  节我们在讨论巨人一号时，曾提及图灵在该计算机安装地——英国布莱切利园（Bletchley Park）——制作了 Bombe，一种用于破译纳粹英格玛（Nazi Enigma codes）的机电设备。</p>
+<p>英格玛机（Enigma Machine）是一种用于加密（Encryption）明文的设备，加密由机器顶部有 26 齿的齿轮组合决定，机器前还有用于互换两字母的插板，总共有上十亿种可能（具体可参见 4.6.1 节）。</p>
+<p>Bombe 是图灵在波兰破译专家成果的基础上设计的，其利用了英格玛机的缺陷——字母加密后绝不会是字母自己本身，减少了对加密信息尝试组合的搜索数量。</p>
+<p>德国人时不时会升级英格玛机（e.g. 加个齿轮），图灵和他的同事们则努力破解加密。这些解密得到的情报为盟军赢得了许多优势，有些史学家认为他们将战争缩短了好几年。</p>
+<h3 id="263-图灵测试">2.6.3 图灵测试</h3>
+<p>战后图灵回到学术界，为早期计算机工作做出贡献，如曼彻斯特 1 号（早期的存储程序计算机）以及人工智能（Aritificial Intelligence, 1956 年被正式命名，见后）。</p>
+<p>1950 年，图灵设想了未来计算机能够拥有和人类一样的智力，或至少难以区分。他提出“若计算机能够欺骗人类相信它是人类，才能算是智能”，这成为智能测试的基础，成为「图灵测试」（Turing Test）。</p>
+<p>图灵测试的现代版本称为「公开全自动图灵测试」（a completely automated public Turing Test），用于区分计算机和人类，即常见的「验证码」（Captcha）。</p>
+<p>同时，计算机领域的最高奖项「图灵奖」（Turing Award）也以图灵的名字命名。</p>
+<h2 id="27-软件工程software-engineering">2.7 软件工程（Software Engineering）</h2>
+<p>工程师会通过协作与工具完成大型程序的编写，相关的事情则形成了「软件工程」这个学科，该词由工程师 Margaret Hamilton 提出。</p>
+<h3 id="271-对象">2.7.1 对象</h3>
+<p>2.3.4 节中提及的「函数」仍然无法应对超大数量级的代码，比如微软的 Office 有共计 4kw 行代码，全抽象成函数少说也有几十万个。</p>
+<p>解决方法是将函数打包成新的层级，将相关的函数代码归为一类，打包成为「对象」（objects）。</p>
+<p>比如汽车软件和定速巡航有关的函数，像是设定速度、逐渐加速减速、定制定速巡航等，都可以打包为“定速巡航对象”。程序员在使用时，通过最外层的层级逐次往下找：Car. Engine. CruiseControl. setCruiseSpeed(550)。</p>
+<h3 id="272-面向对象编程">2.7.2 面向对象编程</h3>
+<p>将函数打包成为对象的思想称为「面向对象编程」（Object-Oriented, OO），常见的 OO 语言有 Python 和 Java。其本质在于通过封装组件来隐藏复杂度，就像之前把晶体管打包成了逻辑门，很适合大型工程。</p>
+<p>一类软件中介为另一类软件中介提供服务的方式，是通过「程序编程接口」（Application Programming Interface, API）实现，使用文档（documentation）可以辅助帮助其他人理解代码的作用。</p>
+<p>API 可以控制函数和数据的访问权限，确保安全。若函数被标记为 public，则其他对象可以顺利调用（call）它；若函数被标记为 private，则只有同一个对象内的其他函数可以调用它。</p>
+<h3 id="273-ide">2.7.3 IDE</h3>
+<p>集成开发环境（Integrated Development Environments, IDE）是指集成了写代码、编译、测试、调试（debug）、实时检查、高亮代码等功能的专门工具，例如 VIM。</p>
+<p>大多数程序员会耗费 70%~80% 的时间用于 debug，好的工具能够帮助程序员防止错误和解决错误。</p>
+<h3 id="274-文档与注释">2.7.4 文档与注释</h3>
+<p>文档（documentation）是用于对代码的解释说明，通常命名为「README」来告诉其他程序员看代码前先看这个文件。</p>
+<p>文档还有助于开发者在几个月后理解自己的代码，同时能够提高复用性，更好地利用其他程序员写好的东西来解决问题，而不是自己造轮子。</p>
+<p>注释（comments）同样是解释代码的，只不过是放在源代码中使用特殊标记注明。编译器在编译代码时，会忽略注释，其唯一作用是帮助开发者理解代码。</p>
+<h3 id="275-版本控制">2.7.5 版本控制</h3>
+<p>源代码管理（Source Control）又名版本控制（Revision  Control）。大型软件公司会把会把代码放到一个中心服务器上，称为「代码仓库」（code repository）。</p>
+<p>程序员可以从代码仓库中把想修改的代码借出（check out），该操作可以在 IDE 中完成。修改测试后再提交（commit）回代码仓库。当某段代码被 check out，且可能被修改过时，其他开发者不会动这段代码，防止冲突和重复劳动，有助于分工协作。</p>
+<p>代码的主版本（master）应编译正常且尽可能少 bug，若其出现问题则可以回滚（rolled back）到之前的稳定版（stable version）。这经由版本控制管理实现，其跟踪了所有变化，也记录了谁修改了什么代码。</p>
+<h3 id="276-质量保证测试">2.7.6 质量保证测试</h3>
+<p>质量保证测试（Quality Assurance testing, QA）是指个人或团队严格测试软件的方方面面，模拟各种可能情况，试验软件是否出错（找 bug）。</p>
+<p>较为粗糙版本称为 alpha 版，是 beta 版的前身，通常只在公司内部测试。软件接近完成但没有 100% 测试过的版本称为 beta 版，有时会向公众发布进行测试。</p>
+<h1 id="3-操作系统">3 操作系统</h1>
+<h2 id="31-操作系统operating-systems">3.1 操作系统（Operating Systems）</h2>
+<h3 id="311-操作系统简史">3.1.1 操作系统简史</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1940/50s
++ pre-OS
++ - 此时电脑每次只能运行一个程序，程序员在打孔纸卡上写程序，完成后交给操作员等待放入。
+- 操作员在计算机完成上一个程序后，放入新程序，运行计算机，输出结果，停机。
+- 一个程序通常需要几个小时/天，甚至是几周完成，但因计算机处理速度慢，因而手动放入程序的做法可以接受。
+
++ 1950s
++ 批处理系统与设备驱动程序
++ - 第一个操作系统加强了程序加载方式，使得计算机运行完一个程序后，会自动运行下一个程序，该过程称为「批处理」（batch processing）。
+- 操作系统提供 API 来抽象硬件层面的外部设备，充当软硬件之间的媒介，称为「设备驱动程序」（device drivers）。
+- 设备驱动程序使得程序员可以用标准化机制和 I/O 设备交互，不再只是对照手册 “plug-and-pray”（祈祷能用）。
+
++ 1962 年
++ Atlas Supervisor
++ - 英国曼彻斯特大学研发世界上第一台超级计算机 Atlas 时，为解决程序因 I/O 读取速度阻塞的问题所开发的程序。
+- Atlas Supervisor 可以通过调度（clever scheduling）来实现在单个 CPU 上同时运行多个程序，即「多任务处理」。
+- 同时运行多个程序会存在内存使用和数据保留问题，通过「虚拟内存」和「内存保护」解决。
+- 第一台支持虚拟内存和内存保护的计算机和操作系统。
+
++ 1969 年
++ Multics
++ - Multics(多任务与计算机系统)是早期最有影响力的分时操作系统，其从设计伊始就考虑到了安全问题，因此复杂程度远超平均，OS 占用 1Mb 内存。
+- Multics 的研究人员坦言其没能获得商业成功的明显问题在于过度设计，其提供了太多功能。
+
++ 1971 年
++ Unix
++ - 由 Multics 的研究员丹尼尔·里奇（Dennis Ritchie）和肯·汤姆逊（Ken Thompason）在贝尔实验室打造出的新操作系统。
+- Unix 将 OS 分为「内核」和「工具」两部分：内核（kernel）只有 OS 的核心功能，比如内存管理、多任务和 I/O 处理；工具部分的程序和运行库则不属于内核。
+- 内核恐慌（heard of kernel panics）：Unix 中处理错误的方式是当错误发生以至于内核崩溃无法恢复，就调用一个“恐慌”（panics）函数无限循环输出“恐慌”。
+- 因 Unix 足够简单可以在更便宜更多的硬件运行，再加上生态的丰富性（发布不久就有人写了不同编程语言的编译器、甚至是文字处理器），其成为 1970~80 年最流行的 OS 之一。
+
++ 1981 年
++ MS-DOS
++ - 1980s 早期计算机价格降低至可以大幅商业化，称为个人电脑（personal computer）或是家庭电脑（home computer），其操作系统比大型主机的简单得多
+- 微软发布的磁盘操作系统 MS-DOS 只有 160kB，可以使用磁盘容纳。
+- 没有多任务和保护内存的功能，使得程序经常使电脑崩溃，只能通过重启恢复。
+- 直至流行于 90s 发布于 1985 年的早期 Windows ，都仍然未提供内存保护。当程序行为不当，就会出现蓝屏——程序崩溃严重到将系统也带崩溃了。
+
++ NOW
++ 现代操作系统
++ 现代流行的操作系统有 Mac OS X, Windows 10, iOS 和 Android 等。
+
+</code></pre>
+<h3 id="312-os-特性">3.1.2 OS 特性</h3>
+<h4 id="多任务处理multitasking">多任务处理（multitasking）</h4>
+<p>在运行 I/O 相关程序等待调用相关外部设备时，先将程序休眠运行另一个程序，等待 I/O 操作结束后标记为“可继续运行”，在之后某时刻安排给 CPU 执行，实现多个程序的同时运行，在单个 CPU 上共享时间。</p>
+<h4 id="内存管理memory-allocation">内存管理（Memory Allocation）</h4>
+<p>多任务处理使得每个程序都会占用一些内存，为保证切换程序时相关数据不丢失，我们可以为每个程序分配专属内存块。</p>
+<p>当某个程序需要更多内存，则继续向操作系统请求。OS 会决定是否同意分配、分配哪些内存块。这导致程序所分配到的内存可能是非连续的，程序员难以跟踪使用，因此 OS 会将内存地址虚拟化（virtualize），称为「虚拟内存」（Virtual Memory）。</p>
+<p>使用虚拟内存后，OS 会自动处理虚拟内存和物理内存之间的映射，程序可以假定自己所分配到的内存总是从地址 0 开始。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2015%3A%E6%97%B6%2025%3A%E5%88%86%2018%3A%E7%A7%92%20yensex14ei1673767518831.png" alt="memory allocation"></p>
+<p>以程序 A 和 B为例：B 分配到的内存地址是 1000 到 1999，但对于程序而言，它所看到的地址是 0~999；而对于程序 A 而言，第二次请求分配后，它有了 2000 个连续地址的内存，但实际上第二次分配的物理地址是 2000~2999。</p>
+<h4 id="受保护内存memory-protection">受保护内存（Memory Protection）</h4>
+<p>为不同程序分块分配专属内存范围，将其各自隔离同时也可以实现对内存的保护，在防止恶意软件（如病毒）入侵时很有帮助，这样带病毒的程序只会损害自己的内存。</p>
+<h2 id="32-内存--储存介质memory--storage">3.2 内存 &amp; 储存介质（Memory &amp; Storage）</h2>
+<h3 id="321-存储器storage">3.2.1 存储器（storage）</h3>
+<p>1.6 小节设计的 RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent），断电后数据会丢失。</p>
+<p>存储器是一种非易失性（non-volatile）的存储介质，断电不会丢失，直到数据被删除或覆盖。</p>
+<p>在以前“易失性”的速度快，“非易失性”的速度慢，但随着技术发展两者差异逐渐缩小。</p>
+<h3 id="322-存储介质发展">3.2.2 存储介质发展</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1940s
++ 打孔纸卡
++ - 最早的存储介质是打孔纸卡以及打孔纸带，其使用了十几年。
+- 1940 年代的纸卡标准是 80 列 × 12 行，一张卡可以存储 960 位数据。
+- 美国军方于 1958 年投入使用的半自动地面防空系统 SAGE 是已知最大的纸卡程序，其主程序存储在 6.25w 个纸卡上，大小为 5MB。
+- 纸卡的优点在于不用电且便宜耐用，缺点在于读取慢、只能写入一次、难以修改（打孔后无法轻易补上），且不便于存储临时值。
+
++ 1944 年
++ 延迟线存储器（Delay Line Memory）
++ - 由 J.Presper Eckert 在建造 ENNIAC 时发明，其利用压力波在液体（如水银）中传播的延迟来存储数据。
+- 在装满液体的管子两端放置 input 和 output，用电路连接后，管子中间再加一个放大器（Amplifier）弥补信号衰弱，可以做出存储数据的循环。
+![延迟线](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2016%3A%E5%88%86%2047%3A%E7%A7%92%20g6v0fqdhet1673770607331.png)
+- 信号沿着电线传播几乎是瞬时的，故在任何时间点只能显示读取 1bit 数据，但管子内可以存储多个位。
+- 因每一时刻只能读取一位，访问特定 bit 需要等待其在循环中出现，其又名「顺序存储器」或是「循环存储器」（sequential or cyclic-access memory）。
+- 1949 年制作的 EDVAC 使用了 128 条延迟线，每条 352bits，存储了 4.5w 位数据，使得 EDVAC 成为最早的存储程序计算机（且采用了冯诺依曼结构）。
+
++ 1950s
++ 磁芯存储器（magnetic core memory）
++ - 在磁芯上饶电线并施加电流，将其磁化在一个方向，关掉后仍可保持磁化；沿反方向施加电流，磁化方向（磁性）会翻转。
+![磁芯](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2033%3A%E5%88%86%2004%3A%E7%A7%92%20uoukqjb3981673771583908.png)
+- 可以将磁芯排列成网格，通过贯穿每个磁芯的线和负责选择行列的线来读写某一位，可以随时访问任意一位。
+- 第一次大规模应用是在 1953 年 MIT 的 Whirlwind 1，其使用了 32 × 32 排列的 16 块磁芯板，存储约 1.6w 位。
+- 使用手工编织，自 1950s 中期流行了 20 余年。成本从 1 美元一位下降到 1970s 的 1 美分左右。
+
++ 1951 年
++ 磁带
++ - Eckert 和同事 Mauchly 创业设计了 UNIVAC 电脑——最早进行商业销售的电脑之一，其推出了「磁带」这种新存储介质。
+![磁带](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2035%3A%E5%88%86%2022%3A%E7%A7%92%209ixbyo7pov1673771722546.png)
+- 磁带使用一条长的磁性带卷在轴上，可以在“磁带驱动器”内前后移动；写头电流流经产生磁场，将磁带的一小部分磁化；电流方向决定极性，分别代表 1 和 0；此外，另附读头用于非破坏性地检测极性。
+- UNIVAC 是由半英寸宽的 8 条并行磁带，共存储近 2MB 字节。
+- 尽管磁带驱动器昂贵，但磁带便宜又小，因此磁带至今仍用于存档。
+- 缺点在于访问速度慢，连续介质需要找倒带或是快进才能到达特定位置进行访问。
+
++ 1950~60s
++ 磁鼓存储器（Magnetic Drum Memory）
++ - 使用盖满磁性材料的金属圆筒来记录数据，滚筒会持续旋转至正确位置，使用周围数十个读写头来读或写 1bit 数据。为缩短延迟，鼓轮每分钟上千转。
+![磁鼓](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2038%3A%E5%88%86%2022%3A%E7%A7%92%20gqi8z9n05u1673771902168.png)
+- 1953 年，可以买到存储 8w 位（约 10KB）的磁鼓存储器。但在 1970 年代，其不再生产。
+
++ 1956 年
++ 磁盘（disk drive）
++ - 由磁鼓存储器衍生而来，使用盘而非圆柱体。磁盘表面有磁性，使用写入头和读取他来处理上面的 1 和 0。
+- IBM 的 RAMAC 305 是世界上第一台磁盘计算机，其利用了磁盘体积薄的特点，将其堆叠在一起提供了更多表面积来存储数据。
+- RAMAC 共计使用 50 张 24 英寸直径的磁盘，可存储 5MB 大小。支持访问任意数据，寻道时间（the seek time）为平均 1/6s。
+- 因 1/6s 的速度仍然不够快，因此另配有磁鼓存储器和磁芯存储器。可当作是「内存层次结构」（memory hierarchy）的例子，在成本和速度中取得平衡。
+![内存层次结构](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2048%3A%E5%88%86%2032%3A%E7%A7%92%206dfonkm2jt1673772512260.png)
+- 访问特定比特时，磁盘会高速旋转至正确位置，读/写磁头向上/下移动找到正确磁盘，将磁头滑入进行读写。
+- 1970 年代机械硬盘（Hard Disk Drives, HDD）大幅度改进且变得普遍，如今现代硬盘的平均寻道时间低于 1/100s。
+- 流行于 mid-1970~1990s 的软盘使用了软性材料当作磁盘，其他基本与硬盘一致。当时发明是为了便携，现在最多可以在保存图标中看到。
+
++ 1972 年
++ 激光盘（laserdisc）
++ - 12 英寸的激光盘是一种光学存储器，使用表面的小坑造成光的不同反射来存储数据，光学传感器会捕获到这些反射，从而解码为 1 和 0。
+- 更为常见的光学存储器是光盘（Compact Disk, CD）以及 90s 流行的 DVD。
+
++ 1990s
++ 固态硬盘（Solid State Drives）
++ - 现在固态硬盘 SSD 逐渐取代机械硬盘 HDD，其没有移动部件磁头，无需等待磁盘旋转，访问时间低于 1/1000s。
+- 第一个 RAM 集成电路出现在 1972 年，成本每比特 1 美分，迅速取代了磁芯存储器。SSD 比起 RAM 的速度还是慢了很多，因此现代计算机仍然采用存储层次结构。
+
+</code></pre>
+<h2 id="33-文件系统files--file-systems">3.3 文件系统（Files &amp; File Systems）</h2>
+<h3 id="331-文件格式file-format">3.3.1 文件格式（file format）</h3>
+<p>文件的底层均为二进制 0 和 1，需要用格式明确如何解释这些 0 和 1，同时也便于进行文件管理。文件格式可以自行发明，但最好使用现有的通用标准。以下三种为常见格式：</p>
+<h4 id="文本文件txt-file">文本文件（txt file）</h4>
+<p>一种纯文本格式，后缀为 .txt，需配合 ASCII 编码或其他字符标准编码进行解码数字。</p>
+<h4 id="波形文件wave-file">波形文件（WAVE File）</h4>
+<p>用于存储音频数据，后缀为 .wav，其在文件开头存储「元数据」（metadata）——用于说明关于数据的信息，例如码率（bit rate）、声道数、立体声等。</p>
+<p>因元数据存储于文件开头，后接实际数据，故又名文件头（Header），下图为 WAVE 格式的前 44 个字节（以及数据 DATA）：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2014%3A%E6%97%B6%2017%3A%E5%88%86%2041%3A%E7%A7%92%20sjme0iaw9a1674022661347.png" alt=""></p>
+<p>DATA 中也存储着数字，表示每秒捕获了多少次的声音幅度。麦克风可以对声音进行上千次采样，录制好的采样可以用一个数字表示，声压越高数字也越大，这也称为「振幅」（amplitude）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2014%3A%E6%97%B6%2021%3A%E5%88%86%2036%3A%E7%A7%92%20tdc1chatso1674022896020.png" alt="振幅"></p>
+<p>在播放时，扬声器会产生与之相同的波形。</p>
+<h4 id="位图bitmap">位图（Bitmap）</h4>
+<p>位图用于存储图片，后缀为 .bmp，其文件开头也是元数据，用于说明图片宽度、高度、颜色深度等信息。</p>
+<p>计算机中的图片由「像素」（pixels）组成，单个像素又是由红、绿、蓝这三种加色原色/三基色 (additive primary colors) 组成。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2014%3A%E6%97%B6%2026%3A%E5%88%86%2046%3A%E7%A7%92%204srkyitpu81674023205847.png" alt="位图"></p>
+<p>上图示例为 4×4 像素大小的位图，颜色深度为 24 位——8 位（1 字节）红色，8 位 绿色和 8 位蓝色。</p>
+<p>元数据后的 3 个字节解释为第一个像素点的 RGB 值，即 255，255，255 白色，以此类推。解释好 4×3 = 12 个字节后换行，因为元数据中说明了宽度，然后接着往下解释。</p>
+<h3 id="332-文件目录directory-file">3.3.2 文件目录（Directory File）</h3>
+<p>早期的磁带、磁鼓、磁盘或是集成电路，通过软硬件抽象后可以当作一个“支持存储数据的桶”，桶里基本就只存一个数据的一整个文件，从头到尾直至存满所有数据。</p>
+<p>后来随着计算机的计算能力提高和存储容量的提高，开始将文件进行连续存储（back-to-back），因桶里只是存储大量位，故需要用一个特殊文件来记录其他文件的位置。这种特殊文件泛称为「文件目录」（Directory File），通常放置在存储器（ storage）最开头的位置 0 处。</p>
+<p>文件目录中存储着其他文件的名字、创建时间、最后修改时间、文件所有者、读写权限以及最重要的文件起始位置和长度。在增删文件或是进行更改文件名等操作时，必须修改目录文件。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2014%3A%E6%97%B6%2038%3A%E5%88%86%2033%3A%E7%A7%92%20rvlhuq8wa91674023913363.png" alt=""></p>
+<h3 id="333-平面文件系统flat-file-system">3.3.3 平面文件系统（Flat File System）</h3>
+<p>文件均位于同一个目录层次的文件管理系统，在文件连续存储的情况下，前一个文件数据的增加会覆盖掉后一个文件。</p>
+<p>现代文件系统会将存储空间分块后，将文件拆分存储在多块里，类似于 3.1.2 节中的虚拟内存。分块后会有一些预留空间（slack space），方便文件的改动与管理，因此目录中也要记录文件在哪些块里。</p>
+<p>数据的删除仅在目录文件中删掉文件存储在某块中的记录，使得可用空间增加，但不意味着存储空间内的数据已经被擦除或覆盖，因此存在恢复的可能。</p>
+<p>因文件并非完整存储，而是分散在切割好的块里，因此文件的增删改会带来「碎片」（fragmentation），块之间的跳转读取对于许多存储技术来说十分不便，因此计算机会通过「碎片整理」（defragmentation）来移动数据排列成正确顺序。</p>
+<h3 id="334-分层文件系统hierarchical-file-system">3.3.4 分层文件系统（Hierarchical File System）</h3>
+<p>文件数量的增多迫使文件需要层次化管理，用文件夹多层嵌套管理文件的方式称为「分层文件系统」（Hierarchical File System），目录文件不仅要指向文件，还要指向其他目录文件。</p>
+<p>比如最顶层的根目录（Root Directory）存储着其他文件和文件夹，若要读取其中的子文件夹，必须读取其目录文件。在移动文件至不同文件夹时，只需要修改两个文件夹的目录文件记录，文件的物理存储位置无需改变。</p>
+<h2 id="34-压缩compression">3.4 压缩（Compression）</h2>
+<h3 id="341-游程编码run-length-encoding">3.4.1 游程编码（Run-Length Encoding）</h3>
+<p>游程编码（Run-Length Encoding）适用于经常出现重复值的文件中，比如下图中有 7 个连续黄色像素，可以插入额外的字节表示有连续 7 个黄色像素，接着删除重复数据。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2015%3A%E6%97%B6%2038%3A%E5%88%86%2056%3A%E7%A7%92%20nltjudiib51674545936260.png" alt="游程编码"></p>
+<p>但需要为了能让计算机分辨出“长度”和“字节”，所以需要为所有不同颜色的像素标上长度，有时反而会使得数据量变多。</p>
+<h3 id="342-dftba">3.4.2 DFTBA</h3>
+<p>DFTBA 有点像“Don&rsquo;t forget to be awesome”（别忘了变厉害）的缩写，使用字典（dictionary）来存储代码和数据之间的对应关系，使得数据的表示更为紧凑，同样是无损压缩。</p>
+<p>首先将数据分块计算组合出现的频率，使用「霍夫曼树」（Huffman Tree）进行编码——由大卫·霍夫曼（David Huffman）发明于 1950s，具体步骤如下：</p>
+<p>列出所有分块组合以及其出现频率，每轮选中最低的两个频率组成一个树的节点，重复组成最终的霍夫曼树。其特点在于出现频率最低的排列在树的最底端，数字也越大。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2016%3A%E6%97%B6%2024%3A%E5%88%86%2048%3A%E7%A7%92%20654dwea33f1674030288880.png" alt="DFTBA"></p>
+<p>根据霍夫曼树对分块组合进行编码，因树的每条路径唯一，所以编码也不会有冲突。接着根据组合的对应将像素数据替换成相应的 code，如将两个黄色的像素替换为 00。同时将保存对应关系的字典也存储在编码数据前即可。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2016%3A%E6%97%B6%2028%3A%E5%88%86%2008%3A%E7%A7%92%207clqkk7h661674030488683.png" alt="字典编码"></p>
+<h3 id="343-有损压缩">3.4.3 有损压缩</h3>
+<p>解压前后数据完全一致的压缩方法，称为「无损压缩」（lossless compression）。常常组合使用“消除冗余”和“使用更紧凑的表示方式”两者压缩方法来实现，如 GIF, PNG, PDF, ZIP 。</p>
+<p>在一些人类看不出区别的时候，使用有损压缩（lossy compression）会更有效率。比如人类无法听到超声波数据，其对人声较为敏感，而对低音只能感觉得到震动。音频有损压缩会利用人类这种感知特性，使用不同的精度来编码不同的频段，比如在网络通话时会根据网速来视情况降低声音质量。</p>
+<p>这种通过删除人类无法感知到的数据的编码方式，称为「感知编码」（perceptual coding），属于心理物理学（Psychophysics）领域，依赖于人类的感知模型。</p>
+<p>与声音类似，人类的视觉系统也更善于看到尖锐对比（比如物体边缘），而对颜色的细微变化无法感知。因此 JPEG 会利用这种特性，将图片分解为 8×8 的像素块后，删除大量人眼无法分辨的高频率空间数据。</p>
+<p>视频作为一长串图片的组合，帧和帧之间有很多像素是一致的，这种情况称为「时间冗余」（temporal redundancy）。</p>
+<p>在存储视频时，有些视频编码格式会利用这种相似性，只存储帧与帧之间变化了的部分。更高级些的编码格式——比如视频压缩的常见标准 MPEG-4 ，会找出帧和帧之间变化部分中相似的补丁（patches），然后用简单效果（如移动、旋转等）来实现这种变化。比如用一些补丁代表 up 主手的移动，然后在帧之间直接移动补丁。</p>
+<p>但随之而来的问题是，当压缩过于严重时，没有足够空间来更新补丁内的像素，但播放器也依然会照常播放，画面就会错乱。</p>
+<h2 id="35-人机交互human-computer-interaction">3.5 人机交互（Human-Computer Interaction）</h2>
+<p>「人机交互」（Human-Computer Interaction）是一门研究人类和机器直接进行交互的学科，各种 I/O 设备都提供了界面（interface）以供使用，这对于用户体验（user experience）来说非常重要。</p>
+<h3 id="351-发展简史">3.5.1 发展简史</h3>
+<pre><code class="language-timeline">[line-2, body-2]
++ 1820s
++ 机械输入
++ - 早期计算设备使用齿轮、旋钮和开关等机械结构进行输入输出，这是最原始的“交互界面”。
+- 因计算过程缓慢，程序运行需要几周，故运行完要拿数据通常是打印在纸上。
+- 查尔斯·巴贝奇在 1820 年代还专门给差分机设计了一个打印机。
+
++ 1950s 初
++ 迁就机器
++ - 机械输入因打孔纸带和磁带的出现完全消失，但输出仍然是打印到纸上，同时也还是有大量指示灯用于在运行中提供反馈。
+- 打孔纸带可以用机械或是光学手段识别纸孔，利于计算机读取处理，但不利于人类理解。
+- 输入概念非常原始，人类负责输入程序和数据，计算机不会交互式回应。
+
++ 1950s 末
++ 电传打字机与命令行
++ - 随着小型机足够便宜、大型机支持多任务和分时系统、QWERTY 键盘的流行，计算机和人之间可以进行来回沟通的交互式操作。
+- 早期计算机修改专门用来发电报的电传打字机（teletype machine）的电子接口后连接进行交互，流行于 1960~1970。
+- 输入文字命令后按下回车，计算机会返回相关的文字，这种交互方式称为「命令行界面」（command line interface）。
+- 一直到 1980s，命令行界面都是最主要的人机交互方式
+
+</code></pre>
+<h3 id="352-键盘keyboards">3.5.2 键盘（Keyboards）</h3>
+<h4 id="qwerty">QWERTY</h4>
+<p>现代打字机是克里斯托弗·莱瑟姆·肖尔斯（Christopher Latham Sholes）在 1868 年发明的，1874 年才完成设计和制造。其使用了一种 QWERTY 的键盘布局，因其取得商业成功所以其他公司开始抄这种设计。</p>
+<p>采用这种布局的方式据说是为了把常见字母放得远一些来避免按键卡住，但实际上它把很多常见的字母（比如 th 和 er ）放在了一起，所以这个原因可能是错的或是不够全面。</p>
+<p>尽管有许多新的键盘布局被发明并且声称有各种好处，但也许是出于经济学家所说的转换成本（switching barrier），熟悉了 QWERTY 布局的人们并不想学习新的键盘布局。</p>
+<p>尽管在一个多世纪后 QWERTY 的地位依旧不可撼动，但其并非完全通用。现在仍然存在许多变体，比如法国的 AZWETY 布局以及中欧常见的 QWERTZ 布局。</p>
+<h4 id="十指盲打">十指盲打</h4>
+<p>打字机最初的发明是为了易读性和文件标准化，而非速度的提升。肖尔斯甚至没想到打字会比手写更快，手写速度大约是每分钟 20 个字母。但随着打字机称为办公室标配，快速打字的需求也渐起。</p>
+<p>1880 年，伊丽莎白·朗利（Elizabeth Longley）开始推广十指打字。1888 年，弗兰克·爱德华·麦克林格（Frank Edward McGurrin）学会十指盲打后赢得了备受关注的打字速度比赛后，十指盲打开始流行。专业打字员可以实现每分钟 100 字以上的速度，比手写快得多。</p>
+<h4 id="电传打字机">电传打字机</h4>
+<p>电传打字机（teletype machine）是一种经强化后可以用电报线发送以及接收文本的打字机，按下字母后信号会通过电报线使得另一端的电传打字机将字母打出，使得两人可以长距离沟通。</p>
+<h3 id="353-命令行界面command-line-interfaces">3.5.3 命令行界面（Command Line Interfaces）</h3>
+<p>使用简单的文字命令实现和电脑的交互界面，称为「 命令行界面」（Command Line Interfaces），其常见命令如下：</p>
+<ul>
+<li>ls: list 的缩写，列出当前目录里的所有文件</li>
+<li>cat: concatenate 的缩写，在 unix 中显示文件内容，需要在命令后传递「参数」（argument）来指定文件名。</li>
+<li>finger: 寻找同一个网络中的其他人。</li>
+</ul>
+<p>1970 年代，因针对普通消费者的电视机开始量产，同时处理器和内存也在大战，最早出现在 1950s 的屏幕开始代替电传打字机。出于方便，工程师们直接将现有的电传打字机协议套用在了屏幕上，这些“虚拟电传打字机”最终演化成了我们熟知的「终端」（terminals）。</p>
+<p>在 1970s 末，屏幕成了标配。1977 年早期最著名的交互式文字游戏 Zork 出现了，其原始版本只有 66 个可供探索的地方，但仍被广泛地认为是最早的互动式小说。</p>
+<p>后来由纯文字的游戏演变出了多人游戏（Multi-User Dungeons, MUD），以及如今的 MMORPG(massive, multiplayer online role-playing games)。</p>
+<p>如今大多数程序员的工作中依然在使用命令行界面，且用命令行访问远程计算机是最常见的方式。在 Windows 上输入 cmd 或是在 Mac 上搜 Terminal 均可使用命令行界面。</p>
+<h2 id="36-屏幕--2d-图形显示---screens--2d-graphics">3.6 屏幕 &amp; 2D 图形显示 - Screens &amp; 2D Graphics</h2>
+<p>1960s 的 PDP-1 的电脑、屏幕、电传打字机是分开的，因为早期的文本任务和图形任务是分开的。早期的屏幕无法显示清晰的文字，打印到纸上会有更高的对比度和分辨率。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2018%3A%E6%97%B6%2017%3A%E5%88%86%2026%3A%E7%A7%92%20awgsu0601u1674037046197.png" alt="PDP-1 "></p>
+<p>屏幕早期的典型用途是跟踪程序运行的情况，显示寄存器中临时存储的值等。此时屏幕还很少用于输出计算结果，其会打印到纸上或是更永久的媒介中。</p>
+<h3 id="361-阴射射线管crt">3.6.1 阴射射线管（CRT）</h3>
+<p>阴射射线管（Cathode Ray Tubes, CRT）的原理是将电子发射到有磷光体图层的屏幕上，当带电粒子的电子撞击图层时，其会发光几分之一秒。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2018%3A%E6%97%B6%2028%3A%E5%88%86%2046%3A%E7%A7%92%20ywpt4y05gg1674037726711.png" alt="CRT"></p>
+<p>而电子的撞击路径可以通过磁场控制，在屏幕内使用线圈或是板子引导电子即可，主要有两种绘制图形的方式：</p>
+<ol>
+<li>矢量扫描（Vector Scanning）: 引导电子束描绘出形状，就算发光只持续一小会，但只要重复得够快，就可以得到清晰图像。</li>
+<li>光栅扫描（Raster Scanning）: 按照固定路径逐行从上向下、从左到右地不断重复，只在某行特定点打开电子束，从而绘制图形。</li>
+</ol>
+<p>液晶显示器（Liquid Crystal Display, LCD）可以显示清晰的像素点，其使用光栅扫描，每秒更新多次单个像素中红绿蓝的颜色，但早期计算机因像素占用太多内存而弃用。</p>
+<h3 id="362-字符生成器">3.6.2 字符生成器</h3>
+<p>字符生成器（character generator）基本算是第一代显卡，是一种用于从内存中读取字符转换为光栅图形的硬件。</p>
+<p>为了节约内存，早期计算机不存储大量像素值，而是存储最典型的 80×25 = 2000 个符号。在字符生成器中的内部 ROM (Read-Only Memory, 只读程序存储器) 中，存储着每个符号的图形，称为「点阵图案」（dot matrix pattern）。</p>
+<p>当某 8 位二进制被解读为字符，则会将字母生成器中的点阵图案写进计算机内存中的特殊区域——「屏幕缓冲区」（screen buffer）。程序在显示文字时，修改这个区域里的值即可。</p>
+<p>扩展后的 ASCII（比如 IBM CP437 字符集）再加上某些可以用额外比特定义字体颜色和背景颜色的系统，可以实现用字符模仿图形界面，比如 DOS。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2018%3A%E6%97%B6%2042%3A%E5%88%86%2029%3A%E7%A7%92%20aljvw4j45m1674038549307.png" alt="DOS"></p>
+<h3 id="363-矢量模式vector-mode">3.6.3 矢量模式（vector mode）</h3>
+<p>矢量模式（vector mode）使用矢量指令绘制出线条来组成所有东西，比如早期的矢量系统 Vectrex，使用笛卡尔坐标系来标注电子枪的绘图点，修改相应强度。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2018%3A%E6%97%B6%2046%3A%E5%88%86%2013%3A%E7%A7%92%20czgpis025s1674038773788.png" alt="矢量模式"></p>
+<p>这些矢量模式的命令可以按序存储在屏幕缓冲区中被读取，程序可以随时间更新这些值做出动画效果。</p>
+<p>最早的电子游戏之一 Spacewar 是 1962 年在 PDP-1 上使用矢量图形制作的。其启发了许多后来的游戏，比如《爆破彗星》（Asteroids），甚至是第一个商业游戏《太空大战》（Computer Space）。</p>
+<h3 id="364-sketchpad">3.6.4 Sketchpad</h3>
+<p>1962 年，Sketchpad 出于计算机辅助设计（Computer-Aided Design, CAD）的愿景制作出了交互式图形程序（interactive graphical applications）。Sketchpad 被广泛认为是第一个完整的图形程序，其发明人伊万·萨瑟兰（Ivan Sutherland）后来因此获得图灵奖。</p>
+<p>Sketchpad 代表着人机交互的关键点，改变了人们对电脑的观念。电脑不仅可以用于计算，还能够帮助人们进行设计或其他事情。</p>
+<p>Sketchpad 提供了光笔和各种按钮来使用户可以划线和其他简单形状。光笔的笔尖使用光线传感器，其通过检测判断显示器刷新时间来让电脑知道笔的位置。</p>
+<p>在 Sketchpad 上绘制的线可以完美平行、长度相同、正交垂直、动态缩放，实现保存复用和修改，并且提供了图库可以直接拖拽使用。</p>
+<h3 id="365-位图显示bitmapped-displays">3.6.5 位图显示（bitmapped displays）</h3>
+<p>位图显示（bitmapped displays）是指内存中的位（bit）可以对应屏幕上的像素。</p>
+<p>绘制任意图形，就像是在修改一个巨大像素值矩阵中的值，这些像素数据存在帧缓冲区（frams buffer）。该区域早期位于电脑内存（computer&rsquo;s RAM）中，现在存储在高速视频缓存（high-speed Video RAM, VRAM）中。</p>
+<p>在 8 位灰度屏幕上，可用的颜色范围为 0（黑）到 255（白）。白色会更偏向绿色或橙色，因为早期显示器不能显示白色。假设低分辨率的位图屏幕分辨率为 60×35，则可以根据坐标系定位像素后把其设为不同颜色。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2020%3A%E6%97%B6%2049%3A%E5%88%86%2026%3A%E7%A7%92%20lvtikwjilo1674046166157.png" alt="VRAM"></p>
+<p>这种绘制矩形的代码也可以包装成函数进行复用，还有其他绘制直线、曲线、图形、文字等内容的函数可以调用。</p>
+<p>这种位图的灵活性为交互式操作开启了全新可能，但其成本高昂直至几十年后才有所降低。1971 年，整个美国只有 7w 电传打字机和 7w 终端，而拥有交互式图形屏幕的电脑大约只有 1000 台。</p>
+<h2 id="37-冷战和消费主义the-cold-war-and-consumerism">3.7 冷战和消费主义（The Cold War and Consumerism）</h2>
+<p>1940~1970 年代计算机在短短三十年间经历了巨变，这是由政府和消费者两方推动的。</p>
+<p>政府资金推动了计算机的早期研究发展，使得计算机行业有时间等待技术成熟到可以商用，公司、消费者进而将计算机变成了主流，其发展简史如下：</p>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1945 年
++ 政府早期资助
++ 1945 年二战结束，美苏争霸，冷战开始，政府往科学和工程学投入大量资金，ENIAC, EDVAC, Atlas, Whirlwind 等项目得以实现。
+
++ 1950s
++ 商业化开始
++ - 型号为 Univac 1 的电脑，是第一台取得商业成功的电脑，一共造了 40 多台，多数被卖给了政府和大公司。
+- 一台为美国原子能委员会生产的 Univac 1 被用于预测 1952 年的美国总统大选结果，其预测了与专家相反但最终正确的结果，将计算机推到了公众面前。
+
++ 1945 年
++ Memex
++ - 范内瓦·布什（Vannevar Bush）看到了计算机增强人类智力的潜力，他发表文章描述了一台名为 Memex 的假想机器。
+- Memex 可以用于存储自己所有的书和资料，数据按格式存储，可以快速查询且有很大的灵活性；同时还有和别人沟通、辅助我们记忆等功能；他还预测了会有信息之间相互链接的新百科书形式。
+- Memex 启发了 Sketchpad(3.6.4)、oN-LINE(by Dough Englbart,3.9.1) 等里程碑设备，后文会细说。
+
+
++ 1950 年
++ 国家科学基金会
++ 冷战时，经范内瓦·布什游说建立起来的用于资助和安排科学研究的机构，其前身为战时的“美国科学研究与开发办公室”。
+
++ 1950s
++ 晶体管设备进入市场
++ - 使用晶体管的收音机因体积小、耐用且便携而受到消费者的青睐。
+- 日本政府想寻求工业机会振兴战后经济，从贝尔实验室获得晶体管授权后，着手发展日本的半导体和电子行业。
+
++ 1955 年
++ Sony TR-55
++ 索尼的第一款产品 TR-55 晶体管收音机面世，因质量和价格的竞争力，在短短五年内就占有美国便携式收音机市场的一半。
+
++ 1950 年
++ 苏联太空竞赛占优
++ - 苏联完成了第一个可编程电子计算机，其计算机科技只比西方落后几年，但在太空竞赛遥遥领先。
+- 1957 年，苏联将第一个卫星史波尼克 1 号（Sputnik one）送上轨道；1961 年苏联宇航员尤里·加加林（Yuri Gagarin）第一个进入太空。
+
++ 1960s
++ 美国追赶推动 IC 产业
++ - NASA 在 1966 年的顶峰时期占政府预算的 4.5%，主要用于资助各种科学研究。
+- 为顺利登月使用的阿波罗导航计算机首先使用了集成电路，执行了 17 次任务，促进了 IC 的发展。
+- 随后洲际导弹、核弹等军事方面的应用，大大地推进了 IC 的大规模生产。
+- 超级计算机的出现，进一步推动了 IC 的产业优化。
+
+
++ 1950~60s
++ 日产占有市场
++ - 由于计算机价格高昂，美国半导体行业基本依赖于高利润的政府合同起步。
+- 日本半导体行业靠着低利润占领了消费市场，推动规模经济，研究技术降低成本、提高质量和产量。
+
++ 1970s
++ 美国半导体行业式微
++ - 美国半导体和电子设备公司随着冷战逐渐消退而式微，许多公司被合并甚至倒闭。
+- 1974 年，Intel 裁员 1/3，转型做处理器；1979 年仙童半导体濒临倒闭被收购。
+
++ 1975s
++ 家用电子设备
++ - 随着微处理器和集成电路的发展，成本不断下降直至普通消费者也能够购入，一批家用设备出现。
+- 1975 年的 Altair 8800 是第一批家用电脑之一；1977 年的 Atari 2600 是第一款家用游戏机。
+
+</code></pre>
+<h2 id="38-个人计算机革命the-personal-computer-revolution">3.8 个人计算机革命（The Personal Computer Revolution）</h2>
+<h3 id="381-微型计算机">3.8.1 微型计算机</h3>
+<p>相较于那个时代放在公司或大学中的“普通”（normal）计算机，1970s 出现了「微型计算机」（microcomputer），它的出现源于以下因素：</p>
+<ol>
+<li>强大、体积小、便宜的单芯片 CPU</li>
+<li>集成电路（IC）的进步，可用于充当 RAM/ROM 的低成本固态存储器的出现</li>
+<li>磁带和软盘等便宜可靠的存储介质</li>
+<li>用电视机稍作改装而成的低成本显示器</li>
+</ol>
+<h3 id="382-altair-8800">3.8.2 Altair 8800</h3>
+<p>个人计算机出现的准确时间节点难以定义，“第一台个人计算机”的名号存在争议，如 Kenback-1 或 MCM/70。但第一台取得商业成功的个人计算机，通常认为是 Altair 8800。</p>
+<p>Altair 8800 是 1975 年亮相于《Popular Electronics》中售价 $439 美元（约为如今的 2k 美元）的个人计算机，由 MITS 公司制造，需要自行组装。组件包相关的产品有内存、纸带读取器，甚至是电传接口——用于从纸带上读取更复杂的程序后，使用电传终端交互。</p>
+<h3 id="383-basic-解释器">3.8.3 BASIC 解释器</h3>
+<p>因 Altair 8800 的程序仍然需要使用机器码写，比尔·盖茨（Bill Gates）和保罗·艾伦 （Paul Allen）为能在 Altair 8800 上运行 BASIC 程序（BASIC 是一门更简单更受欢迎的程序语言），需要一门能将 BASIC 代码转化为可执行机器码的程序，名为「解释器」（interpreter）。</p>
+<p>类似于编译器，解释器是在运行时进行转化，而编译器是提前转化。MITS 公司同意他俩试试。</p>
+<p>两人在飞机上赶工完成后在总部进行演示时才知道代码可行，但一切进展顺利，MITS 允许该软件在 Altair 8800 上搭载，于是 Altair BASIC 称为微软的第一个产品。</p>
+<h3 id="384-apple-i">3.8.4 Apple-I</h3>
+<p>Altair 8800 的出现催生出了大量的计算机爱好者，其中最具有传奇色彩的计算机爱好小组是「家酿计算机俱乐部」（the Homebrew Computer Club）。</p>
+<p>该小组的第一次聚会在 1975 年 3 月，组织观看第一批运来加州的 Altair 8800 。在这次聚会上，24 岁的斯蒂芬·沃兹尼克（Steve Wozniak）被 Altair 8800 激励开始设想自己的计算机。</p>
+<p>1976 年 5 月，斯蒂芬·沃兹尼克向小组成员展示了原型机并分享了电路图，在他的设计中电脑需要连接到电视中显示并且提供了文本界面，这在低成本计算机中十分罕见。</p>
+<p>同为小组成员的史蒂夫·乔布斯（Steve Jobs）建议：与其免费分享设计，不如直接出售组装好的主板。但用户仍然需要自行配装键盘、电源以及机箱。</p>
+<p>于是苹果公司的第一个产品 Apple-I 于 1976 年 7 月以 $666.66 美元的价格进行发售。</p>
+<h3 id="385-the-1977-trinity">3.8.5 the 1977 Trinity</h3>
+<p>Apple-I 这样自行组装的计算机吸引了爱好者们，但个人消费者和公司却对其不太感冒。</p>
+<p>1977 年，市场上出现了 3 款开箱即用的计算机，称为 1977 年的“三位一体”（the 1977 Trinity）：</p>
+<ol>
+<li>Apple-II：苹果公司提供的第一个有全套设备的产品，其提供了简单色彩图形和声音输出，于低成本机器而言十分了得。Apple-II 卖出上百万套，苹果公司由此成为计算机行业的前沿。</li>
+<li>TRS-80：由 Tandy 公司生产，由 Radios hack 销售，故有此名。不如 Apple-II 先进，但价格只有其一半，销售量可观。</li>
+<li>Commodore PET 2001：采用集成了计算机、显示器、键盘和磁带驱动器的一体化设计，目标在于吸引普通消费者。</li>
+</ol>
+<p>the 1977 Trinity 均自带 BASIC 解释器，使得不那么精通计算机的人也可以使用 BASIC 写程序，由此带来面向消费者的软件行业开始腾飞，出现针对个人计算机的游戏和生产力工具，像是计算器、文字处理器等。</p>
+<p>最热门应用（killer app）是 1979 年的 VisiCalc ，其是第一个电子表格程序，是微软 Excel 和 Google Sheets 的老祖先。</p>
+<h3 id="386-ibm-pc">3.8.6 IBM PC</h3>
+<p>the 1977 Trinity 将计算机大规模地带入了家庭、小公司以及学校里，这引起了 IBM 的注意，因忽略不断增长的微型计算机市场，其市场份额从 1970 年的 60% 下降到了 30% 左右。</p>
+<p>1980 年，IBM 最便宜的计算机 5120 的价格约为 1w 美元，无法与 Apple-II 这样的产品竞争，IBM 需要另辟蹊径。其派遣了十二名工程师（后称为“肮脏十二人”，the dirty dozen）进行自由地独立设计，不受公司内部政治斗争干涉。</p>
+<p>该团队采用了与 IBM 传统做法不同的方式：自己做硬件来节约成本，而后与其他公司合作。1981 年，他们发布了 IBM 个人计算机，简称 IBM PC。</p>
+<p>IBM PC 是自由选择下的产物，而非局限于之前的惯例，其使用了 Intel 的芯片、微软的 MS-DOS 操作系统，最重要的是采用了「开放式架构」（open architecture），拥有良好的文档和扩展槽，使得第三方可以做硬件与外设——包括显卡、声卡、外置硬盘、游戏控制杆等其他组件。</p>
+<p>这种名为 IBM Compatible（IBM 兼容）的开放架构刺激了创新、引发了竞争，从而带来了庞大的生态系统。</p>
+<p>竞争对手公司可以遵循同样的标准制作出自己的 IBM 兼容计算机，因此 Compaq（康柏）和 Dell（戴尔）也开始售卖 PC，进而使得 DOS 迅速成为最欢迎的 PC 操作系统。</p>
+<p>在庞大的潜在用户群的诱惑下，软硬件的开发人员将精力更多地放在了 IBM 兼容平台，而潜在消费者也会考虑哪种计算机的软硬件选择更多，正如雪球效应一样。</p>
+<h3 id="387-macintosh">3.8.7 Macintosh</h3>
+<p>在一众性能更好但非 IBM 兼容计算机的公司中，只有苹果公司保持着足够的市场份额。苹果公司最终采用了完全相反的方式——「封闭架构」（closed architecture），用户通常无法加新硬件进计算机，通过控制软硬件来提高用户体验与可靠性。</p>
+<p>IBM 和苹果这种不同的商业策略是“MAC vs. PC，谁更好”这种争论的起源，但严格意义上来说这个用词并不准确，因为两者均为 Personal Computers。</p>
+<p>为了能在低成本个人计算机的竞争中存活下来，苹果需要提供比 PC 和 DOS 更好的用户体验，因此他们于 1984 年发布了 Macintosh，一台提供了图形界面的一体式计算机（带有鼠标），极具突破性且价格适中。</p>
+<h2 id="39-图形用户界面graphical-user-interfaces">3.9 图形用户界面（Graphical User Interfaces）</h2>
+<h3 id="391-增强人类智力augmenting-human-intellect">3.9.1 增强人类智力（Augmenting Human Intellect）</h3>
+<p>GUI 的先驱是道格拉斯·恩格尔巴特（Douglas Engelbart），他在二战期间阅读了布什（Vannevar Bush）关于 Memex 的文章，深受启发。</p>
+<p>服役结束后的 1955 年他在 UCB 取得博士学位，在 1962 年发布了一份名为「增强人类智能」（Augmenting Human Intellect）的开创性报告。</p>
+<p>在这份报告中，他认为人类所面临的问题比解决问题的能力增长得更快，因此有必要寻找一种增强智力的方式。其构想计算机不仅完成自动化的工作，也可以成为未来知识型的员工，用以应对复杂问题的工具。</p>
+<p>受到伊凡·苏泽兰（Ivan Sutherland）的几何画板（recently demonstrated Sketchpad）的启发，恩格尔巴特决定动手将愿景变为现实。</p>
+<p>在这个过程中，恩格尔巴特意识到他需要引入新的外设来完成他所希望搭建的程序。</p>
+<blockquote>
+<p>[!quote]</p>
+<p>&ldquo;We envisioned problem-solvers using computer-aided working stations to augment their efforts.They required the ability to interact with information displays using some sort of device to move (a cursor) around the screen.&rdquo;</p>
+<p>&ldquo;我们设想人们用计算机辅助工作站来增强工作，用户需要和屏幕上的信息互动，用某种设备在屏幕上移动（光标）。</p>
+</blockquote>
+<p>1964 年，恩格尔巴特和比尔·英格利希（Bill English）设计出了第一个计算机鼠标（mouse）。1968 年，他在秋季计算机连联合会议中展示了他的系统 oN-Line System，这次演示被视为所有 demos 的祖先（the mother of all demos）。</p>
+<p>在时长为 90min 的演示中，恩格尔巴特展现了现代计算机的许多功能，如位图图像、视频会议、文字处理、实时协作编辑文件等；以及现代图形界面的的原型，如鼠标与多窗口（但窗口无法重叠）。</p>
+<p>因构想过于超前，该系统在商业上失败了，但对计算机研究者的影响巨大，恩格尔巴特因此在 1997 年获得图灵奖。</p>
+<h3 id="392-xerox">3.9.2 Xerox</h3>
+<h4 id="xerox-alto">Xerox Alto</h4>
+<p>因冷战结束，政府资金减少，恩格尔巴特团队中的许多人进入了施乐公司新成立的&quot;帕洛阿尔托研究中心&rdquo;（Palo Alto Research Center），即  Xerox PARC。</p>
+<p>1973 年，他们在这里开发了第一台真正的图形用户界面（Graphical User Interfaces, GUI）计算机——Xerox Alto（施乐奥托）。其特点在于将 2D 的屏幕当作“桌面”（desktop），就像拿起桌面上的文件一样：用户打开多个程序，程序位于单个框内名为窗口（window），窗口可以重叠；同时还提供了桌面配件，比如计算机和时钟，配件可以自由移动。</p>
+<h4 id="wimp-界面">WIMP 界面</h4>
+<p>Xerox Alto 并非对现实桌面的完美照搬，而是使用桌面这种隐喻，称为「桌面隐喻」（the Desktop Metaphor）。界面的设计可以使用多种方法，而 Alto 团队采用了窗口，图标，菜单和指针来做，因此称为 WIMP 界面（Windows, Icons, Menus, Pointer interface）。</p>
+<p>现在大部分的 GUI 都采用 WIMP 界面，同时还提供了一些基本部件和可复用的基本元素，比如按钮，打勾框，滑动条和标签页。</p>
+<h4 id="事件驱动编程">事件驱动编程</h4>
+<p>之前的实例中，代码均为从上到下依次执行，但在 GUI 中代码可以在任意时间执行以便于响应事件，这称为「事件驱动编程」(even-driven programming)，用户触发事件——点击按钮、选一个菜单项、按下键盘或滚动窗口——后，代码运行。</p>
+<h4 id="xerox-star-system">Xerox Star system</h4>
+<p>Xerox Alto 仅制作了 2000 台用于内部使用或是送给大学实验室，但从未进行商业出售。后来 PARC 团队不断完善软硬件后，于 1981 年发布了「施乐之星系统」(Xerox Star system)，该系统扩展了桌面隐喻：</p>
+<ul>
+<li>文件 = 纸，存放于文件夹中，放置于桌面或是数字文件柜里。</li>
+<li>使用了来自编辑打字机文件中的术语，如剪切、复制、粘贴。</li>
+<li>提出了现在文字处理软件中常见的“所见即所得”（What-You-See-Is-What-You-Get , WYSIWYG），即无论你在计算机上做什么，文件打印出来应该长得一样。</li>
+</ul>
+<p>施乐之星也如同恩格尔巴特的 oN-Line System 一样，因构想超前和售价高昂未能取得商业成功。同年，价格低廉的 IBM PC 席卷市场。</p>
+<h3 id="393-mac-os">3.9.3 Mac OS</h3>
+<p>1979 年 12 月，施乐之星出货前一年半，史蒂夫·乔布斯去施乐公司参观。与谣传的苹果偷走创意相反，是施乐公司主动找到苹果希望合作。施乐还在苹果备受瞩目的首次公开募股(IPO) 前购入了苹果 100w 美元股份，其中的一个额外条款是&quot;公布一切施乐研究中心正在进行的酷工作&quot;。</p>
+<p>受到 Xerox PARC 在位图显示器上使用鼠标进行直观操作的启发，史蒂夫和随行的工程师继而开发了新功能，比如菜单栏和满了会膨胀的垃圾桶，于 1983 年发布了苹果第一款有 GUI 和鼠标的产品 Apple Lisa，售价约为 2.5w 美元。尽管比起施乐之星更为便宜，但仍然在市场上失败了。</p>
+<p>而苹果的另一个项目——于 1984 年发布的 Macintosh，在开售百天卖了 7w 台，大获成功。但随着最初的热潮消退，因软件生态的落后，苹果公司卖的 Apple II 比 Macs 多得多。</p>
+<p>后来，其他个人电脑竞争者紧随其后提供了原始但能用的图形界面，价格仅有 Macs 几分之一，消费者和 PC 软件开发者也为之埋单。</p>
+<p>随着苹果的财务状况日益严峻，以及和苹果新 CEO 约翰·斯卡利 的关系日益紧张，史蒂夫乔布斯被赶出了苹果公司。</p>
+<h3 id="394-windows">3.9.4 Windows</h3>
+<p>1984 年 Macintosh 发布的后几个月，微软发布了 Windows 1.0，它也许不如 Mac OS 漂亮，但让微软在市场中站稳脚跟并奠定了统治地位。十年内，95％ 的个人计算机上都有微软的 Windows。</p>
+<p>Windows 早期版本都是基于 DOS，其设计时没想过运行图形界面。Windows 3.1 之后，微软推出了面向消费者的 GUI 操作系统 Windows 95。</p>
+<p>Windows 95 提供了精美的界面且提供了 Mac OS 没有的多任务和受保护内存，同时还引入了像是开始菜单、任务栏和 windows 文件管理器等现在仍然常见的 GUI 元素。</p>
+<p>当然，微软在 Windows 之前也曾推出过 Microsoft Bob 这样基本仿照现实的操作系统，其并没有获得成功。如今存活下来的 GUI——无论是  Windows，Mac，Linux 或其他——几乎都是施乐奥托 WIMP 界面的变化版，这是自然选择后的结果。</p>
+<h2 id="310-3d-图形3d-graphics">3.10 3D 图形（3D Graphics）</h2>
+<h3 id="3101-3d-投影3-dimensional-projection">3.10.1 3D 投影（3 Dimensional Projection）</h3>
+<p>3D 中使用 X,Y,Z 三点构成某点的坐标，因 2D 电脑屏幕无法将三轴立体坐标完美展示，故使用某种图形算法来将 3D 坐标“拍平”（flattening）显示至 2D 屏幕上，这称为「3D 投影」（3 Dimensional Projection）。</p>
+<p>所有的点都从 3D 转成 2D 后，就可以用画 2D 线段的函数来连接这些点，称为「线框渲染」（Wireframe Rendering）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2020%3A%E6%97%B6%2033%3A%E5%88%86%2015%3A%E7%A7%92%20zpj2p2fxnp1674563595697.png" alt="线框渲染"></p>
+<p>3D 投影有许多类别，最常见的是正交投影（Orthographic Projection）和透视投影（Perspective Projection）：</p>
+<p>（1）正交投影：立方体的各个边，在投影中互相平行。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2020%3A%E6%97%B6%2035%3A%E5%88%86%2008%3A%E7%A7%92%20px0b8si0kn1674563708793.png" alt="正交投影"></p>
+<p>（2）透视投影：立方体中的平行线段会在远处收敛于某点。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2020%3A%E6%97%B6%2036%3A%E5%88%86%2041%3A%E7%A7%92%20wfl8ykh07f1674563801529.png" alt="透视投影"></p>
+<p>两种 3D 投影的过程类似，所使用的数学表达方式不同而已，具体采用哪种取决于开发人员。</p>
+<h3 id="3102-填充filling">3.10.2 填充（filling）</h3>
+<h4 id="多边形polygons">多边形(Polygons)</h4>
+<p>在 3D 图形学中，一般称三角形为「多边形」(Polygons)，这是最常用于构建复杂图形的基本形状，因为它简单——空间中三点定义一个平面。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2020%3A%E6%97%B6%2044%3A%E5%88%86%2016%3A%E7%A7%92%20j3ic527fsu1674564256388.png" alt="三角形"></p>
+<p>多个多边形构成的集合称为「网格」（mesh），网格越密，表面越光滑，细节越多，同时也带来更多的计算量。</p>
+<p>游戏设计者要平衡画面的真实度和多边形数量，如果多边形数量太多，帧率会下降到肉眼可感知，用户会觉得卡顿。</p>
+<h4 id="扫描线渲染-scanline-rendering">扫描线渲染 (Scanline Rendering)</h4>
+<p>扫描线渲染 (Scanline Rendering) 是于 1967 年诞生在犹他州大学的经典填充图形算法。</p>
+<ol>
+<li>将图形铺上一层像素网格。</li>
+</ol>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2020%3A%E6%97%B6%2042%3A%E5%88%86%2020%3A%E7%A7%92%20p2hzepqp4o1674564140582.png" alt=""></p>
+<ol start="2">
+<li>读取多边形的三个点，找最大和最小的 Y 值，只在这两点间工作。</li>
+</ol>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2020%3A%E6%97%B6%2049%3A%E5%88%86%2046%3A%E7%A7%92%20b2kv1sr6251674564586335.png" style="zoom: 100%;" /></div>
+<ol start="3">
+<li>从上往下，一次处理一行。计算每一行和多边 形相交的 2 个点，填满 2 个相交点之间的像素。</li>
+</ol>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674564782168.png" style="zoom: 100%;" /></div>
+<ol start="4">
+<li>重复逐行填充，直至底部，填充的速度叫 fillrate（填充速率）。</li>
+</ol>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674564879425.png" style="zoom: 100%;" /></div>
+<h4 id="画家算法painters-algorithm">画家算法（Painter&rsquo;s Algorithm）</h4>
+<p>3D 场景中会因多边形的重叠错落而产生遮挡（occlusion）现象，其最直接的处理方法时使用排序算法，从远到近排列，然后从远到近渲染。因画家也是先画背景，故名画家算法（Painter&rsquo;s Algorithm）。</p>
+<ol>
+<li>从用到近排序，在有序状态下自最远的多边形开始，使用扫描线算法来填充多边形，一次填充一个。</li>
+</ol>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674565575794.png" alt=""></p>
+<ol start="2">
+<li>重复填充过程即可，注意实际应用中的多边形未必是如示例中一般与屏幕平行。</li>
+</ol>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674565664840.png" alt=""></p>
+<h4 id="深度缓冲z-buffering">深度缓冲（Z-Buffering）</h4>
+<p>深度缓冲（Z-Buffering）是另一种处理遮挡现象的方式，无需排序，速度更快。这种方法会记录场景中每个像素和摄像机的距离，在内存里存一个数字矩阵。</p>
+<ol>
+<li>每个像素的距离被初始化为&quot;无限大&quot;，该算法会从列表里第一个多边形开始处理（即多边形 A），将其距离和  Z-Buffer 中存储的距离进行对比，始终记录更新最小值。</li>
+</ol>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674565901798.png" alt=""></p>
+<ol start="2">
+<li>按照列表继续向下对比第二个多边形的距离，直至列表结束。因未进行排序，故记录距离的 Z-buffer （缓冲区）中多边形 C 只有一部分值会被覆盖。</li>
+</ol>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674565972323.png" alt=""></p>
+<ol start="3">
+<li>标记完  Z-buffer 后，搭配改进后的扫描线算法使用。加强版扫描线算法不仅可以勘测两线交叉点，还可确认某像素是否在最终场景中可见，如果不可见则跳过。</li>
+</ol>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674566263036.png" alt=""></p>
+<p>在两个多边形距离相同时，采用深度缓冲会使得多边形在内存中不断移动，两者访问顺序的先后会不断变化。再加上浮点数的舍入误差问题，究竟是将哪个多边形画在上方，是无法预测的。因此，这种情况下会导致出现<a href="https://youtu.be/TEAtmCYYKZA?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&amp;t=470"> Z-fighting 效果</a>。</p>
+<h4 id="背面剔除back-face-culling">背面剔除（Back-Face Culling）</h4>
+<p>为节约处理时间，忽略多边形背面的处理优化方式，称为「背面剔除」（Back-Face Culling）。比如在游戏角色的头部或是地面，只能够看到朝外的那一面，这会带来一个 bug —— 进入模型后从内部向外看，头部和地面会消失。</p>
+<h3 id="3103-抗锯齿antialiasing-">3.10.3 抗锯齿（Antialiasing ）</h3>
+<p>上述例子中三角形填充后边缘都是锯齿，当像素较小时锯齿不明显，但用低配电脑玩游戏时，肯定会出现这种情况。一种减轻锯齿的方法叫抗锯齿(Antialiasing)，其通过判断多边形切过像素的程度，来调整填充颜色。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674565222853.png" style="zoom: 100%;" /></div>
+<p>如果像素在多边形内部，就直接涂颜色；如果多边形划过像素，颜色就浅一些。这样抗锯齿的方法可以实现边缘羽化的效果，在字体和图标中广泛使用。</p>
+<h3 id="3104-光照lighting">3.10.4 光照（lighting）</h3>
+<p>光照（lighting）又名明暗处理（shading），在 3D 场景中的物体表面会有明暗变化，添加灯光后会提高物体的真实感。</p>
+<p>以茶壶中 3 个不同位置的多边形为例，其不平行与屏幕，各自面对不同方向，该方向称为「表面法线」（Surface Normal），即下图中垂直于表面的箭头方向。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674566884963.png" style="zoom: 100%;"/> <alt=''表面法线'' /></div>
+<p>因表面法线的角度不同，光线反射到观察者的强度也不同，不同多边形被照亮的程度也不同。根据距离光源的位置对不同多边形进行着色的方法，称为「平面着色」（Flat Shading），这是最基本的照明算法（lighting algorithm）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674567485134.png" alt="平面着色"></p>
+<p>但平面着色的方法使得多边形的边界非常明显，看起来不光滑。因此出现了更多算法来更巧妙地改变颜色、得到更好地效果，比如高洛德着色（Gouraud Shading）和 冯氏着色（Phong Shading）等。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674567566930.png" alt=""></p>
+<h3 id="3105-纹理textures">3.10.5 纹理（textures）</h3>
+<p>纹理（textures）在图形学中指物品的外观而非手感，与照明算法一样，纹理也可以通过多种算法实现各式效果。其中最简单的一种效果称为「纹理映射」（texture mapping）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674567956898.png" alt="纹理映射"></p>
+<p>纹理映射是指先将多边形的坐标和纹理坐标对应，在使用“扫描线算法”进行填充时，先查看内存中的纹理图像，后从相应区域取平均颜色，再决定该像素使用什么颜色进行填充。</p>
+<h3 id="3106-gpu">3.10.6 GPU</h3>
+<p>每个场景中都是由上百万个多边形构成的，渲染如此多个多边形构成的场景需要大量的计算，而无论多大的场景都是需要这样“扫描线填充, 抗锯齿, 光照, 纹理化”一遍一遍地处理。</p>
+<p>为了加速渲染过程，有以下几种方法：</p>
+<p>（1）为这种特定运算来做专门的硬件（即 GPU）来加快速度。</p>
+<p>（2）把3D场景分解成多个小部分，并行渲染而非按顺序渲染。</p>
+<p>图形处理单元（Graphics Processing Unit, GPU）时为图形而生的处理器，其在显卡（Graphics Cards）之上，附有专用的 RAM 使得 GPU 的多个核心可以高速访问相关网格和纹理。</p>
+<p>现代显卡，如 GeForce GTX 1080 TI，有 3584 个处理核心，提供大规模并行处理，每秒可处理上亿个多边形。</p>
+<h1 id="4-计算机网络">4 计算机网络</h1>
+<h2 id="41-计算机网络-computer-networks">4.1 计算机网络 (Computer Networks)</h2>
+<h3 id="411-早期网络">4.1.1 早期网络</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 150 年前
++ 特快邮件
++ - 发一封信件从伦敦到加州要花 2~3 周。
+- 传播一条信息所需要的时间称为「时延」 (latency) 。
+
++ 1950~60s
++ 球鞋网络 (sneakernet) 
++ - 在公司或研究室内部使用，旨在信息交换。
+- 也有助于共享物理资源，如打印机或存储器。
+
++ 1970s
++ 以太网
++ - 一种局域网 (近距离构成的小型网络，简称 LAN) ，诞生于  Xerox PARC (施乐的&quot;帕洛阿尔托研究中心&quot;) 。
+- 最简单形式：一条以太网电线连接数台计算机，数据在电缆中共享，各取所需。
+
+</code></pre>
+<h3 id="412-以太网">4.1.2 以太网</h3>
+<h4 id="mac-地址">MAC 地址</h4>
+<p>以太网 (Ethernet) 是早期最著名也最成功的一种局域网 LAN 技术，其使用一条以太网电线连接数台计算机，数据在电缆中进行共享，使用 MAC 地址 (Media Access Control address) 来确认接收数据的对象。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674649146505.png" alt="MAC 地址"></p>
+<p>将 MAC 地址放在数据头部作为前缀，当计算机监听到以太电缆中的数据有自己的 MAC 地址时才处理数据。现在制造的每一台计算机都自带唯一的 MAC 地址用于构建以太网和无线网络 (WIFI) 。</p>
+<h4 id="载波监听">载波监听</h4>
+<p>像以太网这样多台电脑共享一个传输媒介的方法称为「载波侦听多路访问」 (Carrier Sense Multiple Access, CSMA)  ：</p>
+<ul>
+<li>载体 (carrier)：指运输数据的共享媒介。以太网的&quot;载体&quot;是铜线，WiFi 的&quot;载体&quot;是传播无线电波的空气。</li>
+<li>侦听(Sense)：计算机守候在端口等待数据。</li>
+<li>多路访问 (Multiple Access)：许多计算机同时侦听载体。</li>
+</ul>
+<p>载体传输数据的速度 叫「带宽」(Bandwidth)，共享载体会导致网络流量上升时出现「冲突」(collision)——大家都想往载体里传数据，但一次只能有一个。</p>
+<p>出现冲突后最简单的处理方式是停止传输，等待网络空闲重试。但其他计算机也会这样做，这很可能导致更多冲突。</p>
+<h4 id="指数退避">指数退避</h4>
+<p>一台计算机在传输聚聚期间检测到冲突时，会等待“1s+随机时间”后重试。若重试仍然出现冲突，意味着网络出现拥塞 (congestion)，此时则等待 2s。再度重试仍然冲突时，等待 4s 后进行重发尝试。接着是 8s、16s etc. ，以此类推。</p>
+<p>这种等待时间指数级增长的方法称为「指数退避」(Exponential Backoff)，以太网和 WIFI 等传输协议均使用这种技巧避免网络拥塞。</p>
+<h4 id="冲突域">冲突域</h4>
+<p>载体和其中的设备总称为「冲突域」(Collision Domain)，为了减少冲突并提升效率，可以将一个大的冲突域拆解为两个小的冲突域，使用交换机 (Network Switch) 来连接。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674649311076.png" alt="冲突域"></p>
+<p>交换机会维护记录着 MAC 地址所属网络（冲突域）的列表，其仅在必要时进行数据传输，如当 A 向 F 发数据时。</p>
+<h3 id="423-路由">4.2.3 路由</h3>
+<p>大型网络的构建通常是由多个稍小的网络连接而成的，而一个计算机通过多个网络到达另一个计算机通常也会有多条路径，因此存在「路由」(routing) 问题。</p>
+<h4 id="电路交换">电路交换</h4>
+<p>如同早期 1910s 的电话系统那样，为两台遥遥相望的计算机或网络通过电路连接后分配一条专用的通信线路，称为「电路交换」(Circuit Switching)。</p>
+<p>电路交换的缺点在于不灵活且价格高昂，同时存在线路闲置的情况。其优点在于专属电路无需共享可以随意使用，因此军队、银行等其他机构依然会购买专用线路来连接数据中心。</p>
+<h4 id="报文交换">报文交换</h4>
+<p>使用类似于邮政系统的站点中转方式进行数据传输，称为「报文交换」(Message Switching)。</p>
+<p>在报文交换中，数据会经由不同的路由器 (network routers) 传输至目的地。消息沿着路由跳转的次数称为「跳数」(hop count)，通过对跳数的记录分析，可以分辨相应的路由问题。</p>
+<p>若某条报文的跳数被检测出过高异常，则可以推断出路由存在错误，这称为「跳数限制」(Hop Limit)。</p>
+<p>报文交换的优点在于可以使用不同的路由使得通信更为可靠、容错率更高。缺点在于报文较大时易堵塞网络，可通过将大报文拆分为「数据包」(packets) 来解决。</p>
+<h4 id="ip-协议">IP 协议</h4>
+<p>被分割出的数据包中均带有目标地址，用于告知路由器如何转发。报文的具体格式通过 1970s 创建的「互联网协议」(Internet Protocol, IP) 定义。</p>
+<p>遵循 IP 协议的计算机都用于一个 IP 地址，以点分十进制的方式表示，如 172.217.7.238 (Google 某服务器的 IP 地址)。</p>
+<p>数百万台计算机在网络上不断交换数据，瓶颈的出现和消失是毫秒级的。因此，路由器平衡会与其他路由器之间的负载，以确保网络中的数据传输可以快速可靠，这叫「阻塞控制」(congestion control)。</p>
+<p>当同一报文的不同数据包经由不同线路到达目的地，其到达的先后顺序可能不一致，即出现乱序问题，可以通过 TCP/IP 协议来解决。</p>
+<h4 id="分组交换">分组交换</h4>
+<p>将大的报文数据拆分成多个小数据包后，通过灵活的路由传递，这种传输数据的运行方式称为「分组交换」(Packet Switching)。</p>
+<p>分组交换源于冷战期间的核攻击威胁，具有去中心化的特点，不存在中心权威机构，也没有单点失败问题。</p>
+<p>世界上第一个分组交换网络是 ARPANET ，该名字源于赞助此项目的机构“美国高级研究计划局”(Advanced Research Projects Agency)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674650984942.png" alt="1974 年的 ARPANET"></p>
+<p>上图是 1974 年的 ARPANET 简图。图中每个小圆表示一个地点，比如运行着一个路由器的大学或实验室（拥有单台或多台计算机）。图中还能看到 &ldquo;PDP-1&rdquo; 和&quot;IBM 360系统&quot;，甚至还有一个伦敦的 ATLAS 是通过卫星连到网络里的。</p>
+<p>如今，全球的路由器协同工作，找出最高效的线路，用各种标准协议运输数据，比如 &ldquo;因特网控制消息协议&rdquo;(Internet Control Message Protocol, ICMP) 以及&quot;边界网关协议&quot;(Border Gateway Protocol, BGP) 等。</p>
+<p>互联网在这几十年间发展迅速，据估计约有接近 100 亿台联网设备。随着各种智能设备的出现，比如联网冰箱，恒温器以及其他智能家电，它们还组成了「物联网」(internet of things)。</p>
+<h2 id="42-互联网-the-internet">4.2 互联网 (The Internet)</h2>
+<p>互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。</p>
+<p>计算机需要先连接到局域网 (Local Area Network,LAN)—— 即 WIFI 路由器所连接的所有设备组成的小型网络，局域网再连接至广域网 (Wide Area Network, WAN)。</p>
+<p>广域网中的路由器又归属于「互联网服务提供商」(Internet Service Provider, ISP)，旗下有多个不同范围大小的广域网互相连接。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674706548886.png" alt="跳跃主干网络获取资源"></p>
+<p>若想获取某个资源，数据包（packet）需要先经由互联网主干（由一群超大型、带宽超高路由器组成）到达资源的服务器。</p>
+<p>在这个过程中，数据包可能要跳个 10 次才能到达（4 跳进主干，2 跳穿越，4 跳进服务器）。Windows, Mac OS 或 Linux系统，可以用 traceroute 来查看具体跳数。</p>
+<h3 id="421-ip">4.2.1 IP</h3>
+<p>互联网协议(Internet Protocol, IP) 中规定了数据包 (packet) 在互联网中传输的标准，是非常底层的一种协议。</p>
+<p>数据包的头部 (前缀) 是指“关于数据的数据”，又名「原数据」(metadata) 。头部指存储了目标地址，无法用于区分具体将数据交给目标地址的电脑中的哪个程序。</p>
+<p>因此需要更高层的协议来区分程序， IP 负责把数据包送到正确的计算机，而 UDP 负责把数据包送到正确的程序中。</p>
+<h3 id="422-udp">4.2.2 UDP</h3>
+<p>用户数据报协议(User Datagram Protocol, UDP) 是一种传输层协议，其头部包含着端口号 (port) 和校验和 (checksum)等元数据。</p>
+<p>每个想要访问网络的程序，会向操作系统申请唯一的端口号。当数据包到达时，根据端口号将数据交付给不同的程序。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674707170480.png" alt="端口号"></p>
+<p>校验和用于检验数据是否正确，最简单的方式是将数据求和后对比。在 UDP 中，校验和以 16bit 的形式进行存储，若求和高于 16 位所能表示的最大值则舍弃高位。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674707481545.png" alt="校验和"></p>
+<p>接收方收到数据包后会重新计算一次数据和，再与头部中的校验和进行对比，若不一致，则可判定数据可能因功率波动或电缆故障等原因而出现了错误。</p>
+<p>UDP 不提供修复数据或是数据重发的机制，检验出错后 UDP 会直接丢包，且其无法确认数据包是否已经到达。但其优势在于简单快捷，一些视频通话应用更加青睐。</p>
+<h3 id="423-tcp">4.2.3 TCP</h3>
+<p>传输控制协议(Transmission Control Protocol, TCP) 较之 UDP 的“尽力而为”而言更加可靠，其可以确保“所有数据均必须到达”。TCP 协议最初是和 IP 协议一齐出现，称为 TCP/IP 协议，后拆分为两个协议。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708413729.png" alt="TCP/IP"></p>
+<p>TCP 有许多更高级的功能，最重要的几个特性如下：</p>
+<h4 id="有序">有序</h4>
+<p>TCP 数据包有序号(sequence numbers)，就算传输过程中出现了乱序到达的情况，接收方仍然可以利用序号对数据包进行正确排序。</p>
+<h4 id="确认码">确认码</h4>
+<p>TCP 要求接收方的电脑收到数据包、检查&quot;校验和&quot;无误后（数据没有损坏），给发送方发一个确认码 (Acknowledgement, ACK) ，代表收到了数据包。</p>
+<p>发送方在收到上一个数据包的确认码之后，会接着再发送下一个数据包。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708847530.png" alt="ACK"></p>
+<p>若确认码因延误或丢失使得在一定时间后发送方仍未收到，则发送方会再次重发数据包。若接收方收到重复的数据包，可根据序号加判断是否重复需要丢弃。</p>
+<p>此外，TCP 可以一次发送多个数据包，等待接收多个确认码，使得效率提升。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708918911.png" alt=""></p>
+<h4 id="拥塞控制">拥塞控制</h4>
+<p>在 TCP 协议中，可以借由确认码的成功率和来回时间来推测网络的拥塞程度，进而调整发送数据包的数量。</p>
+<p>简言之，TCP 可以处理乱序、丢失、重发问题，还可以根据网络拥塞情况来自动调整传输速率。</p>
+<p>但为了提高可靠性而存在的 ACK 使得数据包数量翻番，信息传输的密度下降，不适用于像是在线射击游戏等对时间要求很高的程序使用。</p>
+<h3 id="424-dns">4.2.4 DNS</h3>
+<p>计算机根据“IP 地址”和“端口号”对网站进行访问，比如 谷歌的 IP 地址和端口号是 172.217.7.238/80。但数字不利于人类记忆识别，用文字表示的域名 google.com 较之更为友好。</p>
+<p>因此，需要使用特殊服务实现“IP 地址/端口号”和“域名”之间的映射对应关系，这种服务称为「域名系统」(Domain Name System, DNS) 。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674709731917.png" alt="DNS"></p>
+<p>输入域名后，浏览器会访问 DNS 服务器去询问其对应的 IP 地址是什么。接着 DNS 会查表，若表项存在则返回相应内容。</p>
+<p>因注册的二级域名就已高达数千万个，为了更好地管理，DNS 使用树状结构来存储映射关系。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674709783202.png" alt="DNS 结构树"></p>
+<p>域名自右往左为：「顶级域名」(Top Level Domains, TLD) 、二级域名(lower level domains)、子域名(subdomains) etc.</p>
+<p>因 DNS 的结构树非常大，因此这些数据都分布在许多 DNS 服务器中，不同的服务器负责树中不同部分的查询返回服务。</p>
+<h3 id="425-osi-模型">4.2.5 OSI 模型</h3>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674710118971.png" alt="OSI 模型"></p>
+<p>开放式系统互联通信参考模型 (Open System Interconnection, OSI) 是一种将网络通信划分为多层次的概念性框架，每层各自处理一部分问题，利用抽象以便更好地简化通信。具体分层如下：</p>
+<ol>
+<li>物理层 (Physical Layer)：线路里的电信号，以及无线网络里的无线信号。</li>
+<li>数据链路层 (Data Link Layer)：负责操控&quot;物理层&quot;，有媒体访问控制地址（MAC）、碰撞检测、指数退避，以及其他一些底层协议。</li>
+<li>网络层 (Network Layer)：负责各种报文交换和路由。</li>
+<li>传输层 (Transport layer)：有 TCP、UDP 等协议，负责在计算机之间进行点到点的传输，同时提供检测和修复错误的服务。</li>
+<li>会话层 (Session Layer)：使用 TCP 和 UDP 来创建连接，传递信息，然后关掉连接，这个过程称为「会话」(session) 。</li>
+<li>表示层 (the Presentation Layer) ：</li>
+<li>应用程序层 (Application Layer) ：其中有浏览器，Skype，HTML解码，在线看电影等。</li>
+</ol>
+<h2 id="43-万维网-the-world-wide-web">4.3 万维网 (The World Wide Web)</h2>
+<p>万维网 (World Wide Web) 运行在互联网 (Internet) 上，两者经常混用但不是一回事。</p>
+<p>互联网是传递数据的管道，各种程序都会用。其中传输最多数据的程序是分布在全球数百万个服务器上的万维网，可以通过浏览器进行访问。</p>
+<h3 id="431-超文本和超链接">4.3.1 超文本和超链接</h3>
+<p>万维网的最基本单位是单个页面 (page)，页面中有内容，也有去往其他页面的「超链接」(hyperlinks)，点击即可跳转。</p>
+<p>在超链接出现之前，我们需要在文件系统中找到信息或是把地址输入搜索框，才能在计算机上看到另一个信息。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674712345781.png" alt="Memex"></p>
+<p>Vannevar Bush 所构想机器 Memex 对其有相关的形容：</p>
+<blockquote>
+<p>[!quote]
+“关联式索引.. 选一个物品会引起另一个物品被立即选中，将两样东西联系在一起的过程十分重要。在任何时候，当其中一件东西进入视线只需点一下按钮，立马就能回忆起另一件。”</p>
+</blockquote>
+<p>在还未出现显示屏的 1945 年，这个想法非常超前。因文字超链接的强大，它有了一个专有名词「超文本」(hypertext)。如今的超文本通常指向另一个网页，然后由浏览器进行渲染。</p>
+<h3 id="432-url">4.3.2 URL</h3>
+<p>网页用于互相连接的唯一地址，称为「统一资源定位器」(Uniform Resource Locator, URL)。以访问 crash courses 的网页 thecrashcourse.com/courses 为例：</p>
+<ol>
+<li>DNS 查找：输入 thecrashcourse.com 域名，输出对应 IP 地址。</li>
+<li>建立连接：浏览器请求与运行着网页服务器的 IP 地址建立起 TCP 连接，使用标准端口号 80。</li>
+<li>请求服务：使用「超文本传输协议」(Hypertext Transfer Protocol, HTTP) 来向服务器发送指令 &ldquo;GET /courses&rdquo;，来请求名为 &ldquo;courses&rdquo; 的页面。</li>
+<li>返回渲染：请求指令以&quot;ASCII编码&quot;发送到服务器后，服务器返回该地址所对应的网页，浏览器将网页渲染至屏幕上。</li>
+</ol>
+<h3 id="433-http">4.3.3 HTTP</h3>
+<p>HTTP 的第一个标准 HTTP 0.9 创建于 1991 年，只有一个 &ldquo;GET&rdquo; 指令。当用户在网页中点击其他超链接是，计算机会重新发送 GET 请求，浏览网页的过程就是不断重复发送 GET 请求的过程。</p>
+<p>在之后的版本，HTTP 添加了放置在请求前的状态码 (status codes)，用于指明请求状态。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674713402801.png" alt="状态码"></p>
+<p>200 表示 OK - 网页找到了给你，而 400~499 则代表客户端出错，比如 404 代表网页不存在。</p>
+<h3 id="434-html">4.3.4 HTML</h3>
+<p>因超文本的存储和发送都是以普通文本的形式进行，利用 ASCII 或 UTF-16 进行编码解释，需要通过一种标记方法来区分文本和连接，因此诞生了「超文本标记语言」(Hypertext Markup Language, HTML)。</p>
+<p>HTML 第一版的版本号是 0.8，创建于 1990 年，有 18 种HTML指令，通常由一对开始标签和结束标签 (tag) 构成，基本指令如下：</p>
+<ul>
+<li><code>&lt;h1&gt; 标题 &lt;/h1&gt;</code> ：一级标题。</li>
+<li><code>&lt;a href=链接&gt; 文本 &lt;/a&gt;</code> ：超链接。</li>
+<li><code>&lt;ol&gt;&lt;li&gt;有序列表&lt;/li&gt;&lt;/ol&gt;</code> ：无序列表。</li>
+</ul>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674714038212.png" alt="HTML"></p>
+<p>将这些文字使用文本编辑器（记事本），另存为 &ldquo;test.html&rdquo; 后拖入浏览器即可打开该网页。</p>
+<p>最新版本的 HTML 5 由 100 多种标签，包括图片标签、表格标签、表单标签、按钮标签等。</p>
+<p>此外，还可以使用「层叠样式表」(Cascading Style Sheets, CSS) 和 JavaScript 等技术，加进网页来做一些更厉害的事。</p>
+<h3 id="435-浏览器">4.3.5 浏览器</h3>
+<p>第一个浏览器和服务器是 Tim Berners-Lee 在 1990 年写的，一共花了 2 个月，同时他还建立了 URL, HTML 和 HTTP 这几个最基本的网络标准。</p>
+<p>他在瑞士的&quot;欧洲核子研究所&quot;(CERN) 工作，已经研究超文本系统有十几年了。起初这个浏览器和服务器仅在 CERN 内部使用，1991 年对外发布，万维网就此诞生。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674714645353.png" alt="万维网"></p>
+<p>万维网带有开发标准，因此大家都可以开发新的服务器和浏览器。&ldquo;伊利诺伊大学香槟分校&quot;的一个小组在 1993 年做了 Mosaic 浏览器，这是第一个可以在文字旁边显示图片的浏览器。</p>
+<p>此前浏览图片需要单独开启新窗口，Mosaic 还引进了书签等新功能，界面友好，使它很受欢迎。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674714672867.png" alt="Mosaic"></p>
+<p>1990 年代末有许多浏览器面世，比如 Netscape Navigator, Internet Explorer, Opera, OmniWeb, Mozilla。同时也有很多服务器面世, 比如 Apache 和 微软互联网信息服务(Microsoft’s Internet Information Services, IIS)。在这个黄金时代中，也诞生了许多网络巨头，如创始于 1990 年代中期的亚马逊和 eBay。</p>
+<h3 id="436-搜索引擎">4.3.6 搜索引擎</h3>
+<h4 id="门户网站">门户网站</h4>
+<p>随着网页日益增多，寻找所需内容变得困难。起初人们会维护一个链接到其他网站的目录。</p>
+<p>其中最有名的叫 &ldquo;Jerry和David的万维网指南&rdquo; (Jerry and David&rsquo;s guide to the World Wide Web)，它在 1994 年改名为 Yahoo。</p>
+<p>随着网络越来越大，人工编辑的目录变得不便利，于是出现了「搜索引擎」(search engines)。</p>
+<h4 id="jump-station">Jump Station</h4>
+<p>最像现代搜索引擎的最早搜索引擎是由 Jonathon Fletcher 于 1993 年在斯特林大学创建的 JumpStation，它由三部分组成：</p>
+<ol>
+<li>爬虫 (web crawler)：顺着链接不停探索的软件，看到新链接时将其加入自己的列表当中。</li>
+<li>索引 (index)：记录爬虫访问过的网页中，出现过哪些关键词。</li>
+<li>搜索算法 (search algorithm)：用于排序匹配上关键词的网页先后顺序。</li>
+</ol>
+<h4 id="google">Google</h4>
+<p>早期搜索引擎的算法仅取决于搜索词在页面上的出现次数，有些内容农场会不断重复热门搜索词来吸引人们，拉低信息搜索质量。Google 创造了一个算法来规避这个问题，就此成名。</p>
+<p>与其信任网页上的内容，不如信任其他网站链接到这个网站的&quot;反向链接&quot;数量，而反向链接中有信誉的网站占比越大，则可认为网站质量越高。</p>
+<p>Google 一开始时是 1996 年斯坦福大学中名为 BackRub 的一个研究项目，两年后分离出来，演变成如今的谷歌。</p>
+<h3 id="437-网络中立性">4.3.7 网络中立性</h3>
+<p>网络中立性 (Net Neutrality) 是指应该平等对待所有数据包，不论它的内容是什么，其传输速度和优先级应当是一致的。</p>
+<p>有些公司会乐意通过故意给某些数据更少带宽和更低优先级的方式，来使得自己的数据优先到达，这种方式为「节流」(Throttled) 。</p>
+<p>支持&quot;网络中立性&quot;的人认为失去中立性后，服务商可以推出提速的&quot;高级套餐&rdquo;，为剥削性商业模式埋下种子，使得龙头企业拥有特权优势，而初创公司出于劣势，不利于创新。另一方面，从技术原因来看，我们也很容易希望即时通讯的消息比邮件的优先级更高、更快到达。</p>
+<p>而反对&quot;网络中立性&quot;的人认为，市场竞争会阻碍不良行为。如果供应商把客户喜欢的网站降速，客户会离开供应商。</p>
+<h2 id="44-网络安全-cybersecurity">4.4 网络安全 (Cybersecurity)</h2>
+<h3 id="441-安全特性">4.4.1 安全特性</h3>
+<p>计算机安全可以视为保护系统和数据的保密性 (Secrecy), 完整性 (Integrity) 和可用性 (Availability)：</p>
+<ul>
+<li>
+<p>保密性：只有有权限的人，才能<strong>读取</strong>计算机系统和数据。若黑客泄露信用卡信息，则是攻击保密性。</p>
+</li>
+<li>
+<p>完整性：只有有权限的人，才能<strong>使用和修改</strong>系统和数据。若黑客知道你邮箱密码伪造你的发送邮件，则是攻击完整性。</p>
+</li>
+<li>
+<p>可用性：有相应权限的人，可以<strong>随时访问</strong>计算机系统和数据。用大量假请求来拖垮服务器的「拒绝服务攻击」(Distributed Denial of Service Attack, DDOS)，是在攻击可用性。</p>
+</li>
+</ul>
+<h3 id="442-威胁模型分析">4.4.2 威胁模型分析</h3>
+<p>为实现 4.4.1 节中的对三种特性的维护，安全架构师会从抽象层面对假想敌人做出模拟，为特定情境做准备，这个过程称为「威胁模型分析」(threat model)。</p>
+<p>该模型会对攻击者进行大致描述：攻击者能力 (capabilities)、攻击目标 (goals)、可能攻击手段/攻击矢量（attack vector）。</p>
+<p>在实际应用过程中，具体如何保护要看是与谁进行对抗。通常威胁模型分析里 会以能力水平区分，比如&quot;某人可以物理接触到笔记本计算机，而且时间无限&quot;，安全架构师要在给定的威胁模型下提供解决方案以保持系统安全。</p>
+<p>只要某些假设不被推翻，保护计算机系统、网络和数据的方法有很多。诸多安全问题可以被归结为以下两个问题：</p>
+<ol>
+<li>who are you?  你是谁？ -&gt; 身份认证</li>
+<li>what should you have access to?  你能访问什么？-&gt; 访问控制</li>
+</ol>
+<h3 id="443-身份认证">4.4.3 身份认证</h3>
+<p>根据来访者的身份给予不同权限，用于区分不同使用者的方式称为「身份认证」 (authentication) ，常用的三种方式分别是：你知道什么 (What you know)、你有什么 (What you have)、你是什么 (what you are)。</p>
+<p>对于重要账户，可以采用&quot;双因素&quot; (two-factor) 或&quot;多因素&quot;认证 (multi-factor authentication)，这种两步验证使得安全性大大提升。</p>
+<h4 id="what-you-know">What you know</h4>
+<p>基于某个只有计算机和你知道的秘密（如用户名和密码）来确认身份，但若攻击者通过猜测得知，密码组合位数越多、复杂性越高，被猜中的概率越低。</p>
+<p>以 4 位的手机 PIN 码为例，计算机可以在 1s 内从 0000 一直试到 9999，这种尝试所有可能性的攻击方式称为「暴力攻击」(brute force attack)。</p>
+<p>通常的系统会有次数限制，比如在 PIN 码输入错误 3 次后，需要等待一定时间才能进行重试。但假设攻击者使用数以万计的计算机来形成僵尸网络在不同账户上尝试密码组合，就算每个账户只试一次，也存在命中的可能性。</p>
+<p>8 位 PIN 码著有 1 亿种组合，但包含特殊字符的 8 位数密码有超过 600w 亿种组合。为了记忆和复杂度的综合，可以使用三个连续单词的组合，英文大约有 10w 个单词，三个单词的组合约有 1亿亿种可能。而使用不在字典中的单词，会使得密码强度进一步提升。</p>
+<h4 id="what-you-have">What you have</h4>
+<p>基于某种用户所拥有的特定物体来确认身份，比如钥匙和锁。通常需要有人在场，使得远程攻击更为困难。但如果攻击者在附件，安全性就会降低——钥匙可以被复制，手机可能被偷，锁可以撬开。</p>
+<h4 id="what-you-are">What you are</h4>
+<p>基于人类自身的生物特征来进行身份认证，比如指纹识别器和虹膜扫描仪就是典型的生物识别验证器，安全性最高但好的识别技术十分昂贵，且传感器中识别到的数据每次都会有差异。</p>
+<p>相较于具有&quot;确定性&quot;（正确 or 错误）的 &ldquo;你知道什么&quot;和&quot;你有什么&quot;这两种验证方式，&ldquo;生物识别&quot;是存在概率性的。系统有可能认不出你或者错认你，同时生物认证也存在无法重设的问题——人只有十个手指，攻击者如果拿到所有指纹就玩完。</p>
+<h3 id="444-访问控制">4.4.4 访问控制</h3>
+<p>认证完身份后，可以通过用户相对应的权限 (Permissions) 或是「访问控制列表」(Access Control Lists, ACL) 来明确谁能访问什么，修改什么，使用什么。基本权限如下：</p>
+<ul>
+<li>读 (Read)：允许用户查看文件内容。</li>
+<li>写 (write)：允许用户修改内容。</li>
+<li>执行 (execute)：限允许用户运行文件（如程序）。</li>
+</ul>
+<p>一种常用的&quot;访问控制列表&quot;配置（即访问控制模型）是为美国国防部&quot;多层安全政策&quot;制定的 Bell-LaPadula 模型，其特点在于「不能向上读，不能向下写」。</p>
+<p>以 &ldquo;公开、机密、绝密&rdquo; 三个访问级别为例：&ldquo;机密&quot;权限用户仅能读取 &ldquo;机密&rdquo; 和 &ldquo;公开&rdquo; 文件，无法读取 &ldquo;绝密&rdquo; 文件；&ldquo;绝密&rdquo; 权限用户可以读取所有访问级别的文件，但为防止高级别文件泄露，无法修改写入低级别文件。</p>
+<p>除此之外，&ldquo;中国墙&quot;模型 (the Chinese Wall model) 和&quot;比伯&rdquo;(Biba model) 模型也是较为常见的访问控制模型，模型的优劣取决于具体情况。</p>
+<h3 id="445-独立安全检查和质量验证">4.4.5 独立安全检查和质量验证</h3>
+<p>进行身份验证和访问控制的前提是软硬件可信，但我们实际上无法确定操作系统有没有被攻击者的恶意软件控制或是安全程序是否有给攻击者留后门。</p>
+<p>安全软件在理论上是 &ldquo;安全的&rdquo;，但在实现时可能出错存有 bug，我们可以通过一发现漏洞就修复以及当程序被攻破时尽可能减少损害等方式来提高安全性。</p>
+<p>系统级安全的圣杯之一是「安全内核」(security kernel)，又称作「可信计算基础」(trusted computing base)：在最小化代码数量的前提下，决定内核中有什么，同时还要确保安全性都是接近可验证的。</p>
+<p>正式验证代码安全性是一个活跃的研究领域，现在最好的安全手段是「独立安全检查和质量验证」(Independent Verification and Validation)，这种方法让安全领域的软件开发者来审计代码（通常是开源的），外部开发人员比写原始代码的人更容易找到错误。</p>
+<p>同时，也会举行安全大会以便安全专家互相认识并分享想法。</p>
+<h3 id="446-隔离">4.4.6 隔离</h3>
+<p>隔离 (isolation) 是一种在当程序被攻破后控制损害最小化的方式之一，可以通过「沙盒」(sandbox) 程序来实现，沙盒的具体方法是由操作系统给每个程序独有的内存块，其他程序不能使用。</p>
+<p>一台计算机可以运行多个虚拟机 (Virtual Machines)，虚拟机模拟计算机，每个虚拟机都在自己的沙箱里。如果一个程序出错，最糟糕的情况是它自己崩溃或是搞坏它处于的虚拟机，而计算机上其他东西都是隔离的，并不会受其影响。</p>
+<h2 id="45-黑客与攻击-hackers--cyber-attacks">4.5 黑客与攻击 (Hackers &amp; Cyber Attacks)</h2>
+<h3 id="451-hackers">4.5.1 hackers</h3>
+<p>黑客 (hackers) 是指能凭技术知识闯入计算机系统的人，一些通过寻找并修复软件漏洞使得系统更加安全的黑客被称为是「白帽子」(White Hats)。</p>
+<p>相对应的，也有窃取、利用、售卖计算机漏洞和数据的 &ldquo;黑帽&rdquo; 人士 (Black Hat Hackers) 。他们或出于好玩与好奇，或是为了钱财而成为网络罪犯，或是通过黑客手段来影响社会舆论或是达到政治目的（即黑客行动主义者，hacktivists）。</p>
+<h3 id="452-社会工程学">4.5.2 社会工程学</h3>
+<p>黑客最常见的入侵方式是通过欺骗别人而非技术手段，这类通过欺骗手段让人泄露机密信息或让别人将电脑系统配置得变得易于攻击的方式称为「社会工程学」(social engineering)。</p>
+<h4 id="网络钓鱼-phishing">网络钓鱼 (phishing)</h4>
+<p>网络钓鱼的典型例子是伪造银行发送邮件，点击链接进入冒牌银行官网，输入的账密信息会发送给攻击者，之后对方就可以假冒你的身份来登录网站。</p>
+<h4 id="假托-pretexting">假托 (Pretexting)</h4>
+<p>假托是指攻击者伪装成内部人员通过电话将电脑系统配置得更加容易入侵，其第一通电话会让人进行内部转接使得攻击者看起来像是内部 IT 人员。</p>
+<p>通过这种方式只需要事先知道关键员工的名字等信息，就可以以假乱真，使对方降低戒备从而修改配置或是泄露出密码等机密信息。</p>
+<h4 id="木马-trojan-horse">木马 (Trojan horse)</h4>
+<p>木马是伪装成无害的照片或发票等内容的恶意软件，这些恶意软件有的是会偷取银行凭证之类的数据，有的是会加密文件索要赎金的 &ldquo;勒索软件&rdquo; (ransomware)。</p>
+<h3 id="453-nand-镜像-nand-mirroring">4.5.3 NAND 镜像 (NAND Mirroring)</h3>
+<p>若木马或是电话欺骗无法奏效，则攻击者可能会采取暴力尝试来试图进入系统。大多数现代系统会加长等待时间来抵御这种攻击，每次失败就加长等待时间，甚至失败超过一定次数后，完全锁住。</p>
+<p>但最近有一种攻破方式「NAND 镜像」可以绕过这种限制，这种方式需要能够物理接触到电脑，先在内存中接上几根线后复制整个内存。在暴力尝试密码出现设备等待重试的情况时，直接用复制好的内存重新覆盖一次，使得可以无限尝试密码而无序等待。</p>
+<h3 id="454-缓冲区溢出-buffer-overflow">4.5.4 缓冲区溢出 (buffer overflow)</h3>
+<h4 id="漏洞利用-exploit">漏洞利用 (Exploit)</h4>
+<p>通过系统漏洞来获得某些操作能力和访问权限的远程攻击方式，称为「漏洞利用」，最常见的一种漏洞利用是「缓冲区溢出」 (buffer overflow)。</p>
+<p>缓冲区 (buffer) 泛指预留在内存中的一块空间，比如在登录界面输入账密时，这些信息会先记录在缓冲区内再验证是否正确，当输入数据超出缓冲区大小时则出现 &ldquo;溢出&rdquo; (overflow)，此时溢出数据会覆盖掉缓冲区前后的相邻数据。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674737832654.png" alt="缓冲区溢出"></p>
+<p>这种情况有时只会因重要值被垃圾数据覆盖而导致程序或系统崩溃，有时攻击者可以更巧妙地利用这个漏洞 (bug) 来注入有意义的新值到程序的内存中，比如把 &ldquo;is_admin&rdquo; 的值改成 true 获得管理员权限。有了任意修改内存的能力，黑客可以绕过&quot;登录&quot;之类的东西，甚至使用那个程序劫持整个系统。</p>
+<p>应对缓冲区溢出有两种常见方式：边界检查 (bounds checking) 和金丝雀 (canaries)。</p>
+<h4 id="边界检查-bounds-checking">边界检查 (bounds checking)</h4>
+<p>边界检查是指在将值复制到缓冲区之前，先检查一下值的长度，许多现代编程语言自带了边界检查的功能。</p>
+<p>同时程序也会随机存放变量（比如之前提及的 &ldquo;is_admin&rdquo;）在内存中的位置，使得攻击者不知道应当覆盖内存中的哪部分内容。</p>
+<h4 id="金丝雀-canaries">金丝雀 (canaries)</h4>
+<p>金丝雀 (canaries) 源于矿工将金丝雀矿井来警告危险的举动，安全领域的 &ldquo;金丝雀&rdquo; 是指在缓冲区留有一些不用的空间，通过追踪空间内的值是否发生变化来确认是否受到攻击。</p>
+<h3 id="455-代码注入-injection">4.5.5 代码注入 (injection)</h3>
+<p>代码注入 (injection) 常用于攻击使用数据库的网站，在登陆界面使用一种流行的数据库 API —— &ldquo;结构化查询语言&rdquo;(Structured Query Language, SQL) 中的命令插入输入框内，进而对系统进行破坏性操作。</p>
+<p>比如在输入用户名的地方写入 &ldquo;whatever; drop table users&rdquo;，系统会先查询 whatever 这个用户，接着执行命令 &ldquo;drop table users&rdquo; (SQL 命令通过 <code>；</code> 分隔)，使得攻击者在未入侵系统的情况下删除了全表。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674737902017.png" alt="代码注入"></p>
+<p>即使没有正式访问权限，还是可以通过代码注入来利用 bug 来制造混乱。如果指令更复杂一些也许可以添加新记录到数据库，比如新建一个管理员帐户，甚至可以让数据库泄露数据，使得黑客能够窃取信用卡号码，社会安全号码以及各种其他信息。</p>
+<p>如今几乎所有服务器都会防御这种手段，比如通过不允许输入分号或括号等特殊字符来作为第一道防御，再比如通过修改或删除特殊字符来清理输入后再放入数据库查询语句中。</p>
+<h3 id="456-零日漏洞">4.5.6 零日漏洞</h3>
+<p>可行的系统「漏洞利用」(Exploits) 通常会被放置在网上售卖，若该漏洞十分流行或造成的危害很大，则售价越高。有时甚至政府也会购买漏洞利用，使得他们可以通过入侵系统实现间谍活动。</p>
+<p>若软件制造者不知道软件有新漏洞被发现了，则称该漏洞为「零日漏洞」(a zero day vulnerability)。黑帽子们会抢在白帽子们做出补丁之前尽可能的利用漏洞来获利，因此保持系统更新非常重要，很多更新都是安全性补丁。</p>
+<h3 id="457-僵尸网络">4.5.7 僵尸网络</h3>
+<p>当有足够多的电脑存在漏洞，使得恶意程序可以在电脑刺激互相传播，这种恶意程序被称为「蠕虫」(worms)。</p>
+<p>当攻击者利用蠕虫拿下了诸多电脑，则可以组成「僵尸网络」(botnet) 来进行大规模攻击，比如发送大量垃圾邮件、用别人电脑的计算能力和电费挖 Bitcoin、发起&quot;拒绝服务攻击&rdquo; (DDoS) 来攻击服务器等。</p>
+<p>现在，网络攻击每年损害全球经济差不多 5000 亿，这个数字正在日益渐增。许多专家预测下一次的大战会是网络攻击，因为越来越多的基础设施变得数字化，其造成的伤亡甚至会高于传统战争。</p>
+<h2 id="46-加密-cryptography">4.6 加密 (Cryptography)</h2>
+<p>世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署&quot;多层防御&rdquo; (defence in depth) 。</p>
+<p>计算机安全中最常见的防御形式是密码学(cryptography)，该词来自 crypto 和 graphy，大致翻译成&quot;秘密写作&rdquo;。其基本概念如下：</p>
+<ul>
+<li>加密算法 (Cipher)：用于将明文转为密文进行信息加密，不知道如何解密的情况下，密文看起来只是乱码。</li>
+<li>加密 (encryption)：将明文转成密文。</li>
+<li>解密 (decryption)：将密文恢复成明文。</li>
+</ul>
+<h3 id="461-替换加密">4.6.1 替换加密</h3>
+<h4 id="凯撒加密-caesar-cipher">凯撒加密 (Caesar cipher)</h4>
+<p>朱利叶斯·凯撒 (Julius Caesar) 在很早之前就通过将信件中的字母向前移动三个位置来进行加密，这种名为「凯撒加密」(Caesar cipher) 的加密算法归属于一大类名为「替换加密」(substitution ciphers) 的算法类型。</p>
+<p>为了解密，接收者要知道对方使用了什么算法，并且明确要偏移的字母位数。这种算法把每个字母替换成其他字母，其缺点在于替换后的字母出现频率依然有迹可循，密码破译师可以通过统计数据发现相关规律进而破解加密。</p>
+<p>1587 年，正因为一个&quot;替换加密&quot;的密文被破译，导致刺杀伊丽莎白女王的阴谋暴露，使得玛丽女王被处决。</p>
+<h4 id="英格玛机enigma">英格玛机（Enigma）</h4>
+<p>1900 年代，人们用密码学做了加密机器，其中最出名的是纳粹在战时用于加密通讯信息的机器英格玛机 (Enigma Machine) ，属于替换加密的一种。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742198444.png" alt="英格玛"></p>
+<p>如 2.6.2 节中提及的那样，Enigma 是一台像打字机的机器，另有键盘、灯板和转子齿轮，在键盘和转子 (rotors) 上都有完整的字母表。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742329044.png" alt="单个英格玛转子"></p>
+<p>在单个转子重，一面有代表 26 个字母的 26 个接触点，通过线连接到另一面来替换字母。使用多个转子，将上一个转自的输出作为下一个转子的输入。</p>
+<p>转子还有 26 个起始位置，可以按不同顺序放入转子，提供更多字母替换映射。转子之后是一个叫&quot;反射器&quot; (reflector) 的特殊电路，其每个引脚会连到另一个引脚并将信号发回给转子。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742426776.png" alt="多个转子"></p>
+<p>而在机器的前方还有一个插板，可以把输入键盘的字母预先进行替换，使得加密的复杂度进一步提升。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742594511.png" alt="插板"></p>
+<p>英格玛机器的电路是双向的，加密和解密步骤是一致的，因此只需要确保 发送机和接收机的初始配置一样就行。</p>
+<p>英格玛机器的加密特点在于字母加密后一定会变成另一个字母，为了弥补这种简单替换加密的弊端，英格玛会在每输入一个字母后将转子转动一个，使得同一字母会随每次的按键来呈现多种不同映射。</p>
+<p>而正如 2.6.2 节中介绍的那样，艾伦·图灵 (Alan Turing) 和同事破解了英格玛的加密过程，并把大部分破解流程做成了自动化。</p>
+<h3 id="462-移位加密-permutation-ciphers">4.6.2 移位加密 (permutation ciphers)</h3>
+<p>另一类加密算法称为「移位加密」(permutation ciphers)，其中的一个典例是「列移位加密」 (a columnar transposition cipher) —— 通过读取方向和网格大小来加密信息。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674741468891.png" alt="列移位加密"></p>
+<p>若从网格左起开始，从下往上，一次一列，重新组合字母，则可以得到 &ldquo;SCRMMTH EEA L EN-UFT NO&rdquo; 的密文。通过读取方向和 5×5 大小的网格尺寸，可以逆推出明文。</p>
+<h3 id="463-加密算法">4.6.3 加密算法</h3>
+<p>随着计算机出现，加密从硬件转往软件。早期加密算法中，应用最广泛的是数据加密标准和高级加密标准。</p>
+<h4 id="数据加密标准">数据加密标准</h4>
+<p>1977 年，IBM 和 NSA 开发了「数据加密标准」(Data Encryption Standard, DES)，最初使用的密钥是 56bit 长的二进制数，密钥数量为 $2^{56}$ (约 72 千万亿) 个。</p>
+<p>然而随着计算能力的暴增，1999 年一台 25w 美元的计算机可以在两天能遍历所有可能密钥从而暴力破解得到 DES 的密钥，因此该算法不再安全。</p>
+<h4 id="高级加密标准">高级加密标准</h4>
+<p>2001 年，为了紧跟算力增加的现状出台了「高级加密标准」(Advanced Encryption Standard, AES) ，其使用 128/192/256 bit 长度的密钥。</p>
+<p>一个 128bit 的密钥，使用如今的电脑想要暴力破解需要计算上万亿年才可以。更长的密钥位数，使得暴力破解更为困难。</p>
+<p>AES 会将数据切成每块 16 字节的大小，然后用密钥进行一系列替换加密和移位加密，再加上一些其他操作来进一步加密信息，每块数据会重复这个加密过程 10 次以上。</p>
+<p>密钥的长度位数和加密过程的重复次数都是基于性能速度和安全性两者之间的权衡，没有人愿意等待几个小时来加密发送邮件。</p>
+<p>如今 AES 被广泛使用，比如 iPhone 上加密文件、用 WPA2 协议在 WiFi 中访问 HTTPS 网站等。</p>
+<h3 id="464-密钥交换">4.6.4 密钥交换</h3>
+<p>以上所讨论的加密技术都有赖于发送者和接收者同时持有密钥进行加密解密。在早期密钥的交换可以通过口头约定或是实体交换，比如德国人给英格玛配了记录每天机器配置的密码本。</p>
+<p>为了在公开的互联网传递密钥，我们需要可靠的「密钥交换」(key exchange)——一种不发送密钥，但依然让两台计算机在密钥上达成共识的算法。</p>
+<h4 id="单向函数">单向函数</h4>
+<p>密钥交换通过「单向函数」(one-way functions) 实现，单向函数是指很容易正向算出结果，但想从结果逆向推算出输入非常困难的数学操作。</p>
+<p>以颜色为例，发送方和接收方各自选择不为人知的本命色，双方发送时将本名色混合公开色进行传输，接收时再使用自己的本名色叠加，三色混合而成的颜色 (即密钥) 仅交流双方可知。</p>
+<h4 id="迪菲-赫尔曼算法">迪菲-赫尔曼算法</h4>
+<p>具体实现是一种名为「迪菲-赫尔曼密钥交换」 (Diffie-Hellman Key Exchange) 的算法，其单向函数是模幂运算。</p>
+<p>通过对基数进行幂运算取余后得到模很容易，但想要从余数和基数中逆推出指数是多少就很难，而随着基数变大则会难上加难。</p>
+<p>基数 B 和模数 M 是公开的，指数是发送方秘密指定的。阿珍和阿强各自选取一个秘密指数 X 和 Y，发送给对方 B^X mod M /  B^Y mod M，接收之后各自对其取 X 或 Y 的次方进行模幂运算，得出仅双方共享的密钥，由此建立起「共享密钥」(shared key)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674744752363.png" alt="模幂运算"></p>
+<h3 id="465-非对称加密">4.6.5 非对称加密</h3>
+<p>双方用相同的的密钥加密和解密消息，称为「对称加密」(symmetric keys)，凯撒加密，英格玛，AES 都是&quot;对称加密&quot;。</p>
+<p>而使用两个不同的密钥——公开的公钥 (public key) 和私有的私钥 (private key)——进行加密的方式，称为「非对称加密」(asymmetric encryption)。其 &ldquo;不对称&rdquo; 在于仅仅知道公钥只能加密，但不能解密。</p>
+<h4 id="数字签名">数字签名</h4>
+<p>类似于锁和箱子，发送方将信息放入箱子锁起后传输，只有接收方的钥匙能开启箱子。同样的，公钥加密后只能私钥来解密，而私钥加密后可以用公钥解密，私钥和公钥时而是箱子时而是锁。</p>
+<p>这种做法常用于数字签名，服务器使用私钥加密，任何人都可以用服务器的公钥解密。因为只有私钥的持有人能加密，故签名无法伪造，从而证明数据源自可靠的服务器或个人。</p>
+<h4 id="rsa">RSA</h4>
+<p>目前最流行的&quot;非对称加密&quot;技术是 RSA，该名字源于发明者 Rivest, Shamir, Adleman。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674745560193.png" alt="RSA"></p>
+<h1 id="5-拓展讨论">5 拓展讨论</h1>
+<h2 id="51-机器学习与人工智能-machine-learning--artificial-intelligence">5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence)</h2>
+<p>机器学习 (Machine Learning, ML) 的本质是根据数据做出决定，机器学习算法让计算机可以从数据中学习，然后自行做出预测和决定。</p>
+<p>能够根据数据做出一定决断并不意味着它拥有和人类一般的智能 (Artificial Intelligence, AI)。ML 和 AI 经常混用，但计算机科学家通常认为前者是实现后者的技术之一。</p>
+<h3 id="511-分类器--classifier">5.1.1 分类器  (classifier)</h3>
+<p>本节以判断飞蛾是&quot;月蛾&quot;还是&quot;帝蛾&quot;为例，进行概念的简单讲解。这类问题称为「分类」 (classification)，用于解决分类问题的算法称为「分类器」 (classifier)。</p>
+<h3 id="决策边界-decision-boundaries">决策边界 (decision boundaries)</h3>
+<p>许多分类器会将照片和声音中的「训练数据」(training data) 简化为「特征」(features)，以便于更好地进行 &ldquo;分类&rdquo; 判断的取值。其具体步骤如下：</p>
+<p>（1）人类昆虫学家记录飞蛾的特征值和种类，进行「标记数据」(labeled data)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675220849996.png" alt="标记数据"></p>
+<p>（2）将数据可视化形成「决策空间」(decision space)，使用机器学习算法找出区分飞蛾的最佳方式，确定「决策边界」 (decision boundaries)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675220970138.png" alt="决策边界"></p>
+<p>（3）根据实际数据与决策边界的误差值，绘制「混淆矩阵」(confusion matrix)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221101348.png" alt="混淆矩阵"></p>
+<p>决策边界的确定无法 100% 涵盖正确判断，机器学习算法的目的在于「最大化正确分类 + 最小化错误分类」。在上述训练数据中，所确认的决策边界平均识别准确率在 84%。</p>
+<h4 id="决策树-decision-trees">决策树 (Decision Trees)</h4>
+<p>将不认识的飞蛾测量特征并绘制到决策空间中，这种数据称为「未标签数据」(unlabeled data)，可以利用决策边界预测判断飞蛾种类。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221502695.png" alt="未标签数据"></p>
+<p>将把决策空间切成几个盒子的简单方法可以用「决策树」(Decision Trees) 来表示，使用 if 语句写出代码就是生成决策树的机器学习算法。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221564903.png" alt="决策树"></p>
+<p>决策树只是机器学习中的一个简单示例，如今有数百种算法存在且不断出现新算法。一些算法甚至用多个 &ldquo;决策树&rdquo; 来预测，计算机科学家称为 &ldquo;森林&rdquo; (Forests)。</p>
+<p>也有不用树的方法，比如 &ldquo;支持向量机&rdquo; (Support Vector Machines)，本质上是用任意线段来切分 &ldquo;决策空间&rdquo;，线段可以是多项式或其他数学函数。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221885248.png" alt="支持向量机"></p>
+<p>机器学习算法会负责找出最好的线，最准的决策边界。增加至 3 个特征，我们还可以继续用 3D 散点图绘制出决策空间。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221960514.png" alt="3D散点图"></p>
+<p>但当引入多个特征，就无法依靠人力在一个上千维度的决策空间里，为超平面(Hyperplane)找出一个方程了，但聪明的机器学习算法可以做到。</p>
+<h3 id="512-人工神经网络-artificial-neural-networks">5.1.2 人工神经网络 (artificial neural networks)</h3>
+<p>&ldquo;决策树&quot;和&quot;支持向量机&quot;这样的技术发源自统计学，统计学早在计算机出现前就在用数据做决定，有一大类机器学习算法用了统计学方法。但也有不用统计学的算法，其中最值得注意的是「人工神经网络」(artificial neural networks)。</p>
+<p>人类的神经元细胞利用电信号和化学信号来处理和传输消息，它从其他细胞 得到一个或多个输入，然后处理信号并发出信号，从而形成巨大的互联网络来处理复杂的信息。</p>
+<p>人工神经元通过类似的方式，接收多个输入后整合并发出一个信号。其不适用电信号或是化学信号，而是使用数据堆叠成多层，形成神经元网络，故有此名。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675222465029.png" alt="人工神经网络"></p>
+<p>仍以飞蛾为例，输入数据的特征依旧选定为 &ldquo;重量&rdquo; 和 &ldquo;翼展&rdquo; 作为第一层「输入层」(input layer) ，在输入层和输出分类结果的「输出层」(output layer)  之间存在「隐藏层」(hidden layer)。</p>
+<p>隐藏层负责把输入变成输出，实际上用于判断分类。首先将输入数据乘以权重，求和后再进行偏差值处理（加减固定值），接着再用激活函数 (activation function) / 传递函数 (transfer function) 对输出结果执行最后一次数学修改。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675224489512.png" alt="隐藏层处理"></p>
+<p>权重和偏差值一开始是随机的，算法会通过 &ldquo;标记数据&rdquo; 来进行训练和测试，进而调整这些值来逐渐提高准确性。</p>
+<p>隐藏层中存在多个神经元 (neuron)，每个神经元都会进行加权、求和、偏置、激活函数的计算过程，并向前进行传播，计算结果最高的就是分类结果。</p>
+<p>最重要的是隐藏层可以有很多层，<strong>深度学习 (deep learning )</strong> 因存在多个隐藏层而得名。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675224592479.png" alt="深度学习"></p>
+<p>训练更复杂的网络需要更多的计算量和数据，尽管神经网络 50 多年前就发明了，但直到处理器和 CPU 的发展才使得深层神经网络在最近成为可能。</p>
+<p>几年前，Google 和 Facebook 展示了深度神经网络在照片中识别人脸的准确率和人一样高，这是一个巨大的里程碑。</p>
+<h3 id="513-强化学习--reinforcement-learning">5.1.3 强化学习 ( Reinforcement Learning)</h3>
+<p>只能做特定任务 &ldquo;弱 AI&rdquo;(Weak AI) 或&quot;窄 AI&rdquo; (Narrow AI)，比如利用深层神经网络来开车、翻译、诊断医疗状况等，只能做特定的一件事。</p>
+<p>真正通用的、像人一样聪明的 AI，叫 &ldquo;强 AI&rdquo; (Strong AI)。目前强 AI 暂未出现，但许多人认为随着数字化知识的爆炸性增长可能会加速其的出现，毕竟 AI 吸收新讯息的速度比人类强得多。</p>
+<p>比如 IBM 的 Watson(沃森) 吸收了 2 亿个网页的内容，在 2011 年的知识竞答中碾压了人类；2016 年 Google 推出的 AlphaGo（玩围棋的窄 AI）通过和自己的克隆版下无数次围棋来打败人类最好的围棋选手。</p>
+<p>像 AlphaGo 这样通过不断试错来学习什么管用、什么不管用，从而自己发现成功的策略的方法很类似与人类的学习方式，这称为「强化学习」(Reinforcement Learning)。</p>
+<p>对于很多垂直的问题，强化学习已被广​​泛使用。如果这类技术被广泛使用，可能会创造出类似于人类的 &ldquo;强 AI&rdquo; 能够像人类小孩一样学习，但学习速度超快。如果这发生了，对人类可能有相当大的影响。</p>
+<h2 id="52-计算机视觉-computer-vision">5.2 计算机视觉 (Computer Vision)</h2>
+<p>计算机视觉 (Computer Vision) 领域的目标是让计算机理解图像和视频。</p>
+<blockquote>
+<p>[!quote]
+&ldquo;Just like to hear is the not the same as to listen.To take pictures is not the same as to see.&rdquo; by computer vision professor Fei-Fei Li</p>
+<p>「听到不等于听懂，看到不等于看懂」——李飞飞，计算机视觉教授</p>
+</blockquote>
+<h3 id="521-颜色跟踪算法">5.2.1 颜色跟踪算法</h3>
+<p>参见 3.3.1 节位图的相关说明，我们知道单个像素是由 &ldquo;红、绿、蓝&rdquo; 三原色组成的，三种颜色的组合 RGB 值可以定义一个像素的颜色。而最简单的计算机视觉算法是一种 &ldquo;颜色跟踪算法&rdquo; (color marker tracking and similar algorithms)。</p>
+<p>首先记录单色物体的最中心像素 RGB 值，如粉球中心点像素。为使得程序找到输入图片中最接近该 RGB 值颜色的像素，算法会按序 (如左上始) 逐个检查像素计算于目标颜色的差异。遍历后最接近目标值的像素位置，可能就是所要找的物品 (粉球)。</p>
+<p>根据这个思路，可以为视频的每一帧图片都跑一次算法，从而跟踪粉球的位置。其缺陷在于因为光线、阴影等干扰会使得粉球的颜色有所变化，而与所存储的原始粉球 RGB 值不一致。再加上环境中可能存在其他颜色相近的物品，也会对该算法的识别准确率产生影响。</p>
+<p>因此颜色跟踪算法的使用环境的控制要求较高，且只适用于单个像素的搜索而无法匹配占有多个像素的特征。</p>
+<h3 id="522-核-kernel">5.2.2 核 (kernel)</h3>
+<p>当我们需要识别类似于物体边缘 (由多个像素组成) 时，需要采用能够按块处理像素的算法。简化颜色以灰度图片为例进行说明，易得边缘处存在垂直变化，故设定 &ldquo;某像素是垂直边缘的可能性，取决于左右两边像素的颜色差异程度&rdquo; 的判断规则。</p>
+<p>算法在本例中不仅处理单个像素，而是处理某像素和左右两边的像素这一小区域 (small regions) ，称该区域为「块」(patches)。</p>
+<p>判断规则——色差越大越可能是边缘——的数学表达，称为「核」(kernel) 或是「过滤器」(filter) 。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675483606870.png" alt="核"></p>
+<p>&ldquo;核&rdquo; 内的值 (数字) 用于对块做像素乘法，其总和用于存储更新中心像素的值。这种将 &ldquo;核&rdquo; 用于像素块的操作方式，称为「卷积」(convolution)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675484067296.png" alt=""></p>
+<p>将这个 &ldquo;核&rdquo; 用于照片中的每个像素，处理后的结果会突出垂直边缘的像素值，如下图所示。若想突出水平边缘的特征，则需要使用不同的 &ldquo;核&rdquo; 再做进一步的处理。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675484293371.png" alt="垂直边缘敏感核处理效果"></p>
+<p>这两个用于边缘增强的 &ldquo;核&rdquo; 称为「Prewitt 算子」(Prewitt Operators)，以发明者的名字命名。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675484648822.png"</div></div>
+<p>各类不同的 &ldquo;核&rdquo; 可以用于不同的图像转换，也可以制作对不同模式敏感的 &ldquo;核&rdquo;，用于匹配特定形状。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675485474276.png" alt="各类不同核"></p>
+<p>多个 &ldquo;核&rdquo; 组合在一起识别效率与准确率均会提升，比如用线段敏感的核判断鼻子、用像素岛核来判断眼睛等组合识别人脸。</p>
+<p>不是脸但又有一堆脸的特征在正确的位置，这种情况不太可能。这种组合 &ldquo;核&rdquo; 是一个早期很有影响力的算法的基础，称为「维奥拉·琼斯 人脸检测算法」(Viola-Jones Face Detection)。</p>
+<h3 id="523-卷积神经网络">5.2.3 卷积神经网络</h3>
+<p>5.1.2 节中介绍的人工神经网络，通过最基本的单位 &ldquo;神经元&rdquo; 来对多个输入进行处理，乘权求和后得到一个输出。当我们为神经元输入二维像素 (2D pixel data)，则会得到「卷积神经网络」 (Convolutional Neural Networks)。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675486107425.png"</div></div>
+<p>与 5.2.2 小节中预先设定好的 &ldquo;核&rdquo; 不同，卷积神经网络中的 &ldquo;核&rdquo; 可以自行学习，卷积神经网络可以选择有利于识别图片中特征的核作为某层神经元的处理方式，再将处理好的图像传给下一层进行别的特征识别。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675486149597.png" alt="卷积神经网络"></p>
+<p>&ldquo;卷积神经网络&rdquo; 不是非要很多很多层，但一般会有很多层，来识别复杂物体和场景，所以算是 &ldquo;深度学习&rdquo; 的一种。</p>
+<h3 id="524-情感识别算法">5.2.4 情感识别算法</h3>
+<p>识别出人脸后，还可以进一步使用更专用的计算机视觉算法——像是 &ldquo;情感识别算法&rdquo;(emotion recognition algorithms) 来定位面部标志，进而判断人类的情绪。</p>
+<p>比如定位了鼻尖和嘴角的标志点，可以通过计算点之间的举例来判断是否张嘴或微笑；跟踪眉毛相对于眼睛的位置，可以判断是否表示喜悦或是惊喜；通过这些信息来让电脑知道你的情绪，从而做出合适的行为。这只是计算机通过视觉感知周围的一个例子，你在不同环境会有不同行为，计算机在足够聪明的情况下也应如此。</p>
+<p>面部标记点也可以捕捉脸的形状，进行生物识别，可以用于手机解锁或是让政府用摄像头跟踪人。跟踪手臂和全身的标记点，可以让计算机理解用户的身体语言，比如用户给联网微波炉的手势。</p>
+<p>抽象是构建复杂系统的关键，计算机视觉也是一样。硬件层面，有工程师在造更好的摄像头，让计算机有越来越好的视力；有了用来自摄像头的数据，可以用视觉算法找出脸和手，用其他算法接着处理来解释图片中的东西；有这些基本信息后，人们可以做出新的交互体验，比如智能电视和智能辅导系统会根据用户的手势和表情来回应。</p>
+<h2 id="53-自然语言处理-natural-language-processing">5.3 自然语言处理 (Natural Language Processing)</h2>
+<p>相较于 2.2 节中讨论过的 &ldquo;编程语言&rdquo; 这种词汇量较少、非常结构化的语言类型而言，拥有大量词汇、多义词、口音等特点的人类语言与之完全不同。</p>
+<p>代码只能在拼写和语法完全正确时才能编译和运行，而在大多数情况下，人类语言就算有拼写或发音错误，对方也能够理解含义。</p>
+<p>我们将人类语言称为「自然语言」(Natural Language)，为了使得计算机拥有能够进行语音对话的能力而诞生了「自然语言处理」(Natural Language Processing, NLP)，这是结合计算机科学和语言学的跨学科领域。</p>
+<h3 id="531-分析树">5.3.1 分析树</h3>
+<h4 id="词性">词性</h4>
+<p>单词组成的句子组合方式有无数种，无法通过字典涵盖所有可能。因此 NLP 早期的基本问题是如何为句子分块，其可以通过词性和语法来判断。</p>
+<p>以英语为例，英语语音存在 9 种词性——名词，代词，冠词，动词，形容词，副词，介词，连词和感叹词，单类词性下还存在子类，如单数名词 vs 复数名词、副词最高级 vs 副词比较级等。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675493960162.png" alt="9 种词性"></p>
+<h4 id="短语结构规则">短语结构规则</h4>
+<p>但仅依靠词性字典无法处理多重词性的单词在某个语境下的模糊性，需要利用语法辅助判断，故出现「短语结构规则」(phrase structure rules) 来代表语法规则。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675494004128.png" alt="短语结构规则"></p>
+<p>比如英语中有一条规则是 &ldquo;句子可以由一个名词短语和一个动词短语组成，名词短语可以是 &lsquo;冠词 + n.&rsquo; 或 &lsquo;adj. + n.&rsquo; 等&rdquo;，我们可以给一门语言制定出一堆规则，如上图所示。</p>
+<h4 id="分析树">分析树</h4>
+<p>利用这些 &ldquo;短语结构规则&rdquo; 可以做出「分析树」(parse tree)，树中注明句子结构和单词词性，使得句子中的数据块更小更易处理。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675494113532.png" alt="分析树"></p>
+<h4 id="知识图谱">知识图谱</h4>
+<p>&ldquo;短语结构规则&quot;和其他把语言结构化的方法，还可以用来生成句子。当数据存在语义信息网络时，这种方法特别有效。实体互相连在一起，提供构造句子的所有成分。</p>
+<p>Google 版用结构化方法生成句子的方式称为「知识图谱 」(Knowledge Graph) 。在 2016 年底，包含大概七百亿个事实，以及不同实体间的关系。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675494579254.png" alt="知识图谱-Siri: Thriller was released in 1983 and sung by Michael Jackson"></p>
+<h3 id="532-聊天机器人">5.3.2 聊天机器人</h3>
+<p>处理, 分析, 生成文字是聊天程序的最基本部件，早期的聊天程序大多是基于规则 (rule-based)，后期则使用机器学习进行对话。</p>
+<p>基于规则的聊天程序中，会有专家将用户可能会说的话和机器人应该回复的话写成上百个规则，这使得其无法处理复杂对话且难以维护。</p>
+<p>一个著名早期例子是 1960 年代中期诞生于麻省理工学院的治疗师聊天机器人 Eliza，它用基本句法规则 (basic syntactic rules) 来理解用户打的文字，然后向用户提问。</p>
+<p>如今的聊天机器人和对话系统多使用机器学习完成，通过上 GB 的真人聊天数据来训练聊天机器人用于客服回答，人们也让聊天机器人互相聊天。</p>
+<p>在 Facebook 的一个实验里聊天机器人甚至发展出自己的语言，这件事被报道得很吓人，但实际上只是计算机为了提高效率在制定简单协议来帮助沟通。</p>
+<h3 id="533-语音识别-speech-recognition">5.3.3 语音识别 (speech recognition)</h3>
+<h4 id="发展简史">发展简史</h4>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1952 年
++ Audrey
++ - 由贝尔实验室推出的第一个语音识别系统  Audrey，用于自动数字识别器。
+- 如果说得够慢，它可以识别全部十位数字，但因不如手动输入快而没有实际应用。
+
++ 1962 年
++ 鞋盒 (Shoebox)
++ IBM 在世界博览会上展示了能够识别 16 个单词的机器，大小类似于鞋盒。
+
++ 1971 年
++ Harpy
++ - 由 DARPA 启动的五年筹资计划，推进了语音识别领域的研究
+- 因此诞生了卡内基梅隆大学 (CMU) 的 Harpy，第一个可以识别 1000 个单词以上的系统
+
++ 1980~90s
++ 实时语音识别
++ - 早期语言识别，经常比实时说话要慢十倍或以上
+- 随着计算机性能大幅提升，实时语音识别变得可行
+- 用于处理自然语音的算法也从手工制定规则变成了从语言数据库中进行学习的机器学习或是深度神经网络
+
+</code></pre>
+<h4 id="识别原理">识别原理</h4>
+<p>基本过程：将波形转为频谱，识别音素，转成文字。</p>
+<p>具体示例如下：</p>
+<p>通过麦克风内部隔膜震动的频率，捕捉信号形成声音的 &ldquo;波形&rdquo; (waveforms)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675495865620.png" alt="声波"></p>
+<p>将波形用「快速傅里叶变换」(Fast Fourier Transform, FFT) 转换为 &ldquo;频谱&rdquo;(spectrogram)。颜色越亮处，该频率的声音越大，类似于立体声系统的 EQ 可视化器。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675496137598.png" alt="频谱"></p>
+<p>因为发音时人类的声带会放大或减少不同的共振，所以频谱中的信号也会呈现出螺纹状，形成或亮或暗的区域。如果从底向上看，可以标出高峰，称这些峰值为「共振锋」(formants)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675496487850.png" alt="共振峰"></p>
+<p>通过对频谱中的 &ldquo;元音及其共振峰频率组合&rdquo; 标注值，电脑可以识别出元音，进而识别出整个单词。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675496543156.png" alt="元音及其共振峰频率组合"></p>
+<p>构成单词的声音片段，称为「音素」(phonemes)。英语有大概 44 种音素，所以语音识别的本质成了 &ldquo;音素识别&rdquo;。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675496773218.png" alt="音素"></p>
+<p>再结合分词、句子始终点确认等方法技术，就可以将语音转成文字。</p>
+<h4 id="语言模型">语言模型</h4>
+<p>因为口音和发音错误等原因，人们的单词发音有所不同，可以利用语言模型来提高识别准确度。</p>
+<p>语言模型中会有单词顺序的统计信息，比如 n. + v. 后大概率是 + adj. 。当识别时不确定 she was 后面紧跟的词是 happy 还是 harpy，语言模型会选可能性更高的 happy。</p>
+<h3 id="535-语音合成">5.3.5 语音合成</h3>
+<p>早期语音合成技术，可以清楚听到音素是拼在一起的，比如 1937 年贝尔实验室的手动操作机器。</p>
+<p>到了 1980 年代，技术改进了很多，但音素混合依然不够好，产生明显的机器人声。</p>
+<p>如今电脑合成的声音，比如 Siri, Cortana, Alexa 好了很多，尽管它们已经非常接近，但还不够像人。</p>
+<p>如果语音识别的效果足够好，人们用语音交互的频率会提高，这又给了谷歌，亚马逊，微软等公司更多数据来训练语音系统、提高准确率，这使得人们更愿意使用语音交互，从而形成正反馈循环。</p>
+<h2 id="54-机器人-robots">5.4 机器人 (Robots)</h2>
+<h3 id="541-robot">5.4.1 robot</h3>
+<p>机器人是由计算机控制，可以自动执行一系列动作的机器。</p>
+<p>外观并不重要，工厂的机械臂 (industrial arms)、无人机 (drones that fly)、辅助外科医生的蛇状机器人(snake-like medical robots)、以及人形机器人(robotic assistants)，都可以是机器人 (robot)。</p>
+<p>有时我们会将虚拟人物称为 &ldquo;robot&rdquo;，但将其称作 &ldquo;bot&rdquo; 甚至是 &ldquo;agent&rdquo; 会更加合适，因为 &ldquo;robot&rdquo; 的潜在含义是存在于现实世界中的机器。</p>
+<p>robot (机器人) 一词首次出现在 1920 年的一部捷克戏剧，代表人造的类人角色。该词源于斯拉夫语词汇 robota，代表农民在十九世纪欧洲封建社会的强迫劳动。</p>
+<p>在持续了一个世纪的称呼中，机器人都是大规模生产、高效不知疲倦、看起来像人的东西，但毫无情感，不会保护自己，没有创造力。</p>
+<h3 id="542-发展简史">5.4.2 发展简史</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ pre-1920s
++ 自动机 (auromatons)
++ - 古代发明家发明了比如计时/定时敲钟的机械装置，能够自动运行
+- 这类无需用电、具有人类或动物形象、能唱歌跳舞打鼓等的装置，可以认为是广义上的自动运行机器
+
++ 1739 年
++ Canard Digerateur (吃饭鸭鸭)
++ - 法国人 Jacques de Vaucans 发明的机器，形状像鸭子，能够吃东西然后排泄。
+- 伏尔泰在 1739 年写过，&quot;如果没有吃饭鸭鸭的声音，还有什么能够提醒你法国的荣光呢？&quot;
+
++ 1700 年
++ 土耳其行棋傀儡 (Mechanical Turk)
++ - 一个能下国际象棋的人形机器人，在欧洲各地展览，棋艺好得像某种机械人工智能
+- 实际上机器内有人控制，这是一个骗局
+
++ 1940s 末
++ CNC 机器
++ - Computer Numerical Control，简称 CNC 机器，是第一台由计算机控制的机器
+- CNC 机器可以执行一串由程序指定的操作，提高制造业的制造能力和精确度，同时降低了成本（5.7 会继续讨论）
+
++ 1960 年
++ Unimate
++ - 第一个进行商业出售的可编程工业机器人
+- 可以把压铸机做出来的热金属成品提起来，然后堆起来
+- 自此开启机器人行业
+
+</code></pre>
+<h3 id="543-控制原理">5.4.3 控制原理</h3>
+<h4 id="简单控制回路">简单控制回路</h4>
+<p>用于像是用机器爪子在轨道上来回移动这类简单的运动，可以通过 &ldquo;简单控制回路&rdquo; (simple control loop) 来完成，下图是一个判断当前位置和目标位置的「负反馈回路」(negative feedback loop) 示例。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675504258699.png" alt="负反馈回路"></p>
+<p>一个基本的负反馈回路由以下 3 部分组成：</p>
+<ol>
+<li>传感器 (sensor)：测量现实中想要控制的东西，如水压、马达位置、气温。</li>
+<li>error：通过传感器来计算与目标值相差的多少。</li>
+<li>控制器 (controller)：决定怎么减小 error，控制泵/电机/加热元件或其他物理组件来做出动作。</li>
+</ol>
+<p>简单控制回路适用于严格控制的环境，但现实世界中 robot 会受摩擦力、惯性力、风阻力等外力影响，比如上例中爪子如果过重则在惯性力的作用下可能会使得爪子在目标处不断来回移动。</p>
+<h4 id="pid-控制器">PID 控制器</h4>
+<p>PID 控制器的全称是 &ldquo;proportional–integral–derivative controller&rdquo; (比例-积分-微分 控制器)，早期是机械设备，现在由纯软件控制。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675506346709.png" alt="PID"></p>
+<p>以餐厅内递送食物的机器人为例，其设计目标是以 2m/s 的理想速度进行穿行，需要根据环境中的变化（风阻、地形 etc.）来控制马达动力的大小从而保持理想速度。</p>
+<p>PID 控制器会根据当前速度和目标速度的数据，计算以下 3 个值：</p>
+<ol>
+<li>比例值 (proportional value)：实际值 (actual value) 和理想值 (desired value) 之差。
+<ul>
+<li>实际值可能是实时的，也可能存在滞后。</li>
+<li>&ldquo;实际值&quot;和&quot;理想值&quot;的差距 (比例值) 越大则约用力。</li>
+<li>实行 &ldquo;比例控制&rdquo; (proportional control)。</li>
+</ul>
+</li>
+<li>积分值 (integral value)：一段时间内的误差总和，辅助弥补误差。
+<ul>
+<li>如上坡可能产生误差，值过大可能比例控制得不够，需更用力</li>
+</ul>
+</li>
+<li>导数值 (derivative value)：理想值与实际值之间的变化率。
+<ul>
+<li>有助于解决未来可能出现的错误。</li>
+<li>又名 &ldquo;预期控制&rdquo; (anticipatory control)。</li>
+</ul>
+</li>
+</ol>
+<p>这三个值会拥有各自权重，组合使用来控制系统。PID 控制器应用广泛，比如汽车里的巡航控制、无人机用来保持水平得螺旋桨速度控制等。</p>
+<h3 id="544-机器人的发展现状">5.4.4 机器人的发展现状</h3>
+<p>控制回路负责将机器人的物理属性 (e.g. 当前位置) 变成期望值，这些期望值由更高层软件来负责确定，其做出计划让机器人执行。</p>
+<p>利用技术，机器人已经取得了很多成就，比如潜入深海、探索火星。但有趣的是，许多对人类来说很简单的任务，比如双腿直立行走、开门、穿衣服、摸狗等人类无需刻意做的举动，有超级计算机能力的机器人却做不到。</p>
+<p>这些问题最有可能通过 5.1 小节讨论过的 &ldquo;人工智能&rdquo; 来解决，机器人无需休息且可以多个手臂同时练习，通过数千小时的训练来变得擅长。</p>
+<p>近年最大的突破之一是无人驾驶汽车，汽车的输入（转弯 or 变速）很简单，难得是应对路况——判断车道、理解路标、预测车流、车流中穿行、留心行人和骑自行车的以及各种障碍。</p>
+<p>无人驾驶汽车非常依赖 5.2 节 p35 集讨论的 &ldquo;计算机视觉算法&rdquo;，现在也出现了外貌和行为像人类的 &ldquo;类人计算机&rdquo; (primitive androids)。</p>
+<p>因可替换且力量、耐力、注意力和准确性远超人类，军队也对机器人很有兴趣。拆弹机器人和无人侦察机如今很常见，完全自主决定且全副武装的机器人也在慢慢出现。</p>
+<p>比如韩国的三星 SGR-A1 哨兵炮，这种有智力并且可以杀人的机器人，称为「致命自主武器」(lethal autonomous weapons)。这是一个复杂又棘手的问题，一方面它可以将士兵带离战场挽救生命甚至阻止战争，但另一方面它没有人类般的判断力和同情心，会让战争更加黑暗和复杂。</p>
+<h3 id="545-机器人三定律">5.4.5 机器人三定律</h3>
+<p>科幻作家艾萨克·阿西莫夫 (Isaac Asimov) 早预见了类似于 &ldquo;致命自主武器&rdquo; 所带来的危险，他在 1942 年短篇小说 Runaround 中写了 &ldquo;机器人三定律&rdquo; (Three Laws of Robotics)，之后在 1985 年的《机器人与帝国》（Robots and Empire）又加了 &ldquo;定律 0 &ldquo;。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675506611298.png" alt="机器人定律"></p>
+<p>简单说这些定律指导机器人的行为准则或者说道德指南，旨在让机器人不要造成伤害，特别是不要伤害人类。</p>
+<p>这些规则实践起来相当不足，并且有很多模糊的地方，但阿西莫夫三定律激发了大量科幻小说讨论和学术讨论，如今也有专门讨论机器人伦理的会议。</p>
+<p>阿西莫夫写这些虚构规则是为了反对 &ldquo;机器人都很邪恶&rdquo; 这种常见描述，他童年读的小说里，机器人脱离控制，然后伤害甚至毁灭创造者的场景很常见。但阿西莫夫认为 机器人有用、可靠，甚至可以让人喜爱。</p>
+<p>这种技术的两面性值得我们思考，我们要认真思考计算机的潜力和危害，从而改善这个世界，而机器人最能提醒我们这一点了。</p>
+<h2 id="55-计算机中的心理学-psychology-of-computing">5.5 计算机中的心理学 (Psychology of Computing)</h2>
+<p>系统设计师 (system designers) 会综合运用社会心理学、认知心理学、行为心理学、感知心理学等学科原理，使得物理界面或计算机界面更加具有「易用度」(Usability)。</p>
+<p>易用度是指指的是如软件这类人造物体软件达到目的的效率有多高。为了帮助人类工作，我们需要了解人类是怎么观察、思考、反应和互动的。</p>
+<h3 id="55-人类感知特性">5.5 人类感知特性</h3>
+<h4 id="视觉系统-visual-perception">视觉系统 (Visual Perception)</h4>
+<p>以视觉系统为例，人类擅长为颜色的深浅排序，而不擅长为不同颜色排序 (根据波长)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675508596239.png" alt="颜色深浅"></p>
+<p>因此，同色不同强度的颜色适合用于表现连续值，而不同颜色更适合用于分类或对比数据。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675508623450.png" alt="颜色区分"></p>
+<h4 id="认知系统-human-cognition">认知系统 (human cognition)</h4>
+<p>理解人类的认知系统也能帮我们设计更好的界面，比如信息分块 (chunked) 后会更易于读取和记忆。</p>
+<p>分块是指把信息分成更小，更有意义的块。人类的短期记忆能记住 5 到 9 个东西，保守估计是在 5 个及以下组块，因此在记忆电话号码时我们更倾向于分块记忆。</p>
+<p>尽管对于计算机而言，分块更加耗费时间和空间且效率更低，但这对人类更有效率，因此许多界面设计也利用了 &ldquo;分块&rdquo;，比如下拉菜单和带按钮的菜单栏。</p>
+<h3 id="552-直观功能">5.5.2 直观功能</h3>
+<p>Don Norman 使得 &ldquo;直观功能/功能可见性&rdquo; (affordances) 这个概念在计算机领域流行起来，据他所说，&ldquo;直观功能&rdquo; 是在为如何操作物体提供线索，而无需提示说明。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675509097898.png" alt="affordances"></p>
+<p>这个概念广泛用于 3.9 节 p26 集所讨论的 &ldquo;图形用户界面&rdquo;，这也是图形界面比命令行更易用的原因之一。</p>
+<p>@Carrie Anne 最喜欢的&quot;直观功能&quot;之一是向用户表明元素是可拖动的样式「滚花」(knurling)，其来源于现实世界中工具上用于提高握力的纹理。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675509388291.png" alt="knurling"></p>
+<p>&ldquo;直观功能&rdquo; 的心理学概念依据是「认出与回想」(recognition vs. recall)，这就是为什么选择题比填空题容易的原因，一般来说用感觉来触发记忆会容易得多。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675509642526.png" alt="认出与回想"></p>
+<p>图形界面用 &ldquo;图标&rdquo; (icons) 代表功能，比起依靠记忆来输入命令的命令行界面方便得多，无需回想功能只需认出图标即可。</p>
+<p>而让所有菜单选项好找好记，有时候意味着用的时候会慢一些。这与另一个心理学概念「专业知识」 (expertise) 有所冲突。当我们熟悉界面之后，会建立起如何高效完成某个事情的 &ldquo;心理模型&rdquo; (mental models) 使得操作速度会加快。</p>
+<p>好的界面会提供多种方法来实现目标操作，比如适用于新手的菜单栏操作，以及使用于熟练者的快捷键操作。</p>
+<h3 id="553-情感计算">5.5.3 情感计算</h3>
+<p>Rosalind Picard 在 1995 年关于「情感计算」 (Affective Computing) 的论文中，阐述了 &ldquo;计算机会根据用户状态做出恰当反应&rdquo; 的愿景。这篇论文开创了心理学、社会科学和计算机科学的跨学科结合，促进了让计算机理解人类情感的研究。</p>
+<p>情绪会影响人类学习、沟通和决策等日常活动，&ldquo;情感系统&rdquo; (Affect-aware systems) 会利用传感器获得声音、表情以及出汗/心率等生物指标，结合写明人类如何表达情感的计算模型来估算用户情绪，确定怎样用最好的方式来回应用户，以达到使用户冷静/建立信任/完成作业等目标。</p>
+<p>Facebook 在 2012 年进行了一项&quot;影响用户&quot;的研究，通过对时间线内容进行积极/消极内容出现频率的控制，他们发现看到积极向上内容的用户发的帖子往往更正面，反之亦然。</p>
+<p>这个研究结果相当有争议性，显然 Facebook 和其他网站向你展示的内容会对我们产生影响，这对他们而言是机会也是责任。</p>
+<p>由此还衍生出 &ldquo;计算机程序如何回应人类&rdquo; 的问题， 如果用户情绪较为负面，即使有点尴尬，电脑也应该试着积极正面地回应用户。而关于什么行为是&quot;正确的&rdquo;，这还是个开放性的研究问题。</p>
+<h3 id="554-cmc">5.5.4 CMC</h3>
+<p>Facebook 的研究试验是「以计算机为媒介沟通」(computer-mediated communication, CMC) 领域的极佳例子，该领域是一个很大的研究领域。</p>
+<p>&ldquo;计算机媒介&rdquo;(computer-mediated) 既包括在线会议这样的 &ldquo;同步通讯&rdquo; (synchronous communication) ，也包括推特、邮件、短信这样的 &ldquo;异步通信&rdquo; (asynchronous communication)。研究人员会研究用户怎么用表情包、怎么轮换发言、以及用不同沟通渠道时的用词有什么区别等问题。</p>
+<p>一个有趣的发现是，比起面对面沟通，人们更愿意在网上透露自己的信息。</p>
+<p>心理学研究也表明，如果想说服某人、传授经验知识或引起注意，双方的眼神注视非常重要。在谈话时看着别人叫 &ldquo;相互凝视&rdquo; (mutual gaze)，这在线上场景中常常缺失，从而带来权力不平衡等副作用。</p>
+<p>因此研究人员开发了计算机视觉和图形软件来纠正头部和眼睛的位置，使得视频时会觉得对方在直视摄像头，看着他们，这种方式称为 &ldquo;增强凝视&rdquo; (augmented gaze)。</p>
+<h3 id="555-恐怖谷">5.5.5 恐怖谷</h3>
+<p>在过去一个世纪，除了工业用途机器人，也有许多用于用于医疗、教育和娱乐的机器人出现。</p>
+<p>研究机器人和人类之间如何互动的领域称为「人机交互」(Human-Robot Interaction, HRI)，该领域研究 &ldquo;人类如何感受机器人的不同形式和不同行为？&rdquo; &ldquo;机器人如何明白人类社交暗示而非只是尴尬互动？&rdquo; 等问题。</p>
+<p>人们喜欢 &ldquo;拟人化&rdquo; 的物品，对计算机也不例外。我们有对 &ldquo;将机器人的外表和行为做得尽可能像人一样&rdquo; 的追求，1940~50s 的机器人是完全的工业机器，但如今的类人机器越来越像真实人类，以至于某些时候会让人有种怪异不安感。</p>
+<p>这个&quot;几乎像人类&quot;和&quot;真的是人类&quot;之间的小曲线(dip in realism)，叫「恐怖谷」(uncanny valley)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675511864175.png" alt="恐怖谷"></p>
+<p>对于机器人是否应该有人类一样的行为，也存在争议。很多证据表明，即使机器人的行为不像人类，人类也会用社交习俗对待它们。比如机器人插队或是踩脚，人们也会生气气！</p>
+<p>毫无疑问，心理学 + 计算机科学是强大的组合拥有可以影响日常生活的巨大潜力。这也带来了很多开放式问题。</p>
+<ul>
+<li>你可能会对计算机撒谎，但计算机应不应该对你撒谎？如果撒谎能让你更高效更快乐呢？</li>
+<li>社交媒体公司是否应该精心挑选展示给你的内容，让你在网站上多待一会儿、买更多东西？</li>
+</ul>
+<p>这类道德问题不容易回答，但心理学至少可以帮助我们理解不同选择 带来的影响和意义。</p>
+<h2 id="56-教育型科技-educational-technology">5.6 教育型科技 (Educational Technology)</h2>
+<p>计算机带来的最大改变之一是信息的创造和传播能力，如今的互联网的信息数据量级极高——目前有 13 亿个网站存在，仅维基百科就有 500 万篇英文文章，Google 每天提供 40 亿次搜索来访问这些信息；Youtube 上每分钟有 350 万个视频被观看，每分钟用户上传 400 小时的新视频。</p>
+<p>尽管很多播放量是 Gangnam Style 和 Despacito，但剩下大部分内容都是教育型内容。可能获取到信息和学习不是一回事，课上提问以及上手实践等互动式课堂的学习途径当然很棒，但我们也相信教育型技术在课内课外带来的帮助。</p>
+<p>从纸笔到用 ML 的智能系统，科技几千年来一直在辅助教育。甚至早期人类 在洞穴里画狩猎场景也是为了后代，远距离教育一直推动着教育科技的发展。</p>
+<p>自公元 50 年左右，圣保罗 (St. Paul) 就发书信给亚洲设立的新教堂提供宗教课程。从此，自广播和电视、到 DVD 和光碟这几大技术浪潮都自称要改变教育。</p>
+<p>事实上，在 1913 年托马斯·爱迪生 (Thomas Edison) 曾预测说：&ldquo;书籍很快会过时&hellip; 用影片来教授所有知识是可能的，学校体系将在未来十年彻底改变&rdquo;。显然，这还未成为现实。</p>
+<h3 id="561-学习技巧">5.6.1 学习技巧</h3>
+<p>在讨论教育技术可以帮你做什么之前，有研究表明有些简单事情可以显著提高学习效率：</p>
+<p>（1）倍速：将学习类视频的速度调整适合自己，能理解视频内容同时也有足够时间进行思考。</p>
+<p>（2）暂停：在困难的部分暂停。问自己一些问题看能不能回答；想想视频接下来可能讲什么，然后继续播放看猜对没有。</p>
+<p>（3）练习：做视频中的提供的练习。即使不是程序员，你也可以在纸上写伪代码，或试试学编程。</p>
+<h3 id="562-mooc">5.6.2 MOOC</h3>
+<p>把高质量教育内容做成视频传播，在过去一个世纪吸引了很多人，这个老想法的新化身则以「大型开放式课程」(Massive Open Online Courses, MOOC) 出现。</p>
+<p>纽约时报宣称 2012 年是 MOOC 年，曾有人认为大学会就此终结，但随着热度褪去这也没能成为现实。也许是因为加大授课规模时，让很少数量的老师或是在完全没有老师的情况下教百万名学生会遇到很多问题，而这引起了 &ldquo;教育科技家&rdquo;(educational technologists) 的注意和兴趣。</p>
+<p>在线上教育中，有效提供好的反馈是难题之一。有用但有些争议的做法是让学生之间提供相互的反馈，但学生既不是专家也非老师，其无法提供很好的反馈。但我们可以通过算法在数百万个选择里为学生匹配出完美的学习伙伴，也可以让算法完成一部分评分作业。</p>
+<h3 id="563-智能辅导系统">5.6.3 智能辅导系统</h3>
+<p>可以提供个性化学习体验的系统泛称为「智能辅导系统」(Intelligent Tutoring Systems) ，通常使用 AI 实现。该系统需要了解用户知道什么，不知道什么，进而在正确的时间提供正确的资料，让用户练习没理解的难的部分而不是给出用户已经学会的内容。</p>
+<h4 id="域模型">域模型</h4>
+<p>以研究代数问题的假想辅导系统为例，使用 IF-THEN 语句来描述计算过程中正确步骤所需知识的 &ldquo;判断规则&rdquo; (production rule)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675514671450.png" alt="表达式规则"></p>
+<p>同时其也可以用于代表学生常犯的错误，又名为 &ldquo;错误规则&rdquo; (buggy rules)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675514702086.png" alt="错误规则"></p>
+<p>学生做完一个步骤后可能触发多个&quot;判断规则&rdquo;，系统不能完全弄清是什么原因让学生选了那个答案，因此会将 &ldquo;判断规则&rdquo; 会和 &ldquo;选择算法&rdquo; (selection algorithm) 结合使用组成「域模型」(Domain Model)，来推断学生错选的可能原因。</p>
+<p>&ldquo;域模型&rdquo; 采用 &ldquo;形式化表达/正式写法&quot;来说明特定学科的知识、技能或是解题程序。但其不记录进度，无法带领学习者以正确顺序搞定学科上的所有课程，因此需要 &ldquo;智能辅导系统&rdquo; 来负责创建和维护 &ldquo;学生模型&rdquo; (student model) 。</p>
+<h4 id="贝叶斯知识追踪">贝叶斯知识追踪</h4>
+<p>&ldquo;学生模型&rdquo; 中需要记录学生已经掌握的判断规则，以及还需练习的生疏部分，这将通过「贝叶斯知识追踪」(Bayesian knowledge tracing) 来明晰学生的学习情况。</p>
+<p>贝叶斯知识追踪算法把学生的知识 当成一组值对外部不可见隐藏变量 (latent variables)，根据学生答题正确情况来更新学生对知识的掌握程度估算值。该算法记录 4 个答题概率：</p>
+<ol>
+<li>已经学会的概率 (probability of already learned previously)</li>
+<li>瞎猜的概率 (probability of guess)</li>
+<li>失误的概率 (probability of slip)</li>
+<li>做题过程中学会的概率 (probability of transit)</li>
+</ol>
+<p>之前已经学会的概率取决于答案的正确与否，计算公式有下图 2 种，计算后更新概率值。尽管存在别的方法来追踪学生学习情况，但 &ldquo;智能辅导系统&rdquo; 通常用 &ldquo;贝叶斯知识追踪&rdquo; 处理。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675515200283.png" alt="贝叶斯知识追踪"></p>
+<p>为了高效地让学生不断练习技能直至掌握，软件要选择合适的问题呈现给学生，这称为「自适应程序」(adaptive sequencing)，是个性化算法的形式之一。</p>
+<p>教师和研究人员在 APP 或网站收集上百万学习者的数据，进而从数据中观察学生回答正确率、常见错误、回答速度、观看视频时哪部分加速以及学生如何在论坛和其他人互动等。</p>
+<p>这个研究领域称为「教育数据挖掘」(Educational Data Mining)，它能用上学生所有的 &ldquo;捂脸&rdquo; (face palms) 和 &ldquo;啊哈&rdquo; (ah ha) 时刻，用以帮助改善未来的个性化学习。</p>
+<h3 id="564-教育科技未来">5.6.4 教育科技未来</h3>
+<p>谈到未来，教育技术人员经常从科幻小说中获得灵感。比如 Neal Stephenson 的《钻石时代》(The Diamond Age) 这本书激励了很多研究人员，该书讲述了年轻女孩在书中虚拟助手的帮助下学习成长过程的故事。</p>
+<p>如今有非科幻小说研究者，比如贾斯汀卡塞尔 (Justine Cassell) 在制作虚拟教学助手，助手可以&quot;像人类一样沟通、有人类一样的行为，在陪伴过程中和学习者建立信任，相处融洽，甚至和人类学生成为朋友&rdquo;。</p>
+<p>此外，教育科技和设备如今在逐渐扩展到笔记本和台式电脑之外。比如巨大桌面设备让学生可以团队合作，以及小型移动设备，让学生路上也能学习，同时 &ldquo;虚拟现实&rdquo; (Virtual Reality, VR) 和 &ldquo;增强现实&rdquo; (Augmented Reality, AR) 也让人们兴奋不已。</p>
+<p>如果猜想遥远的未来，教育可能会完全消失，直接在大脑层面进行，把新技能直接下载到大脑。尽管看起来遥远，但科学家们已经在摸索，比如仅仅通过检测大脑信号来得知某人是否知道什么。</p>
+<p>这带来了一个有趣的问题：如果我们可以把东西下载到大脑里，我们能不能上传大脑里的东西？</p>
+<h2 id="57-奇点天网计算机的未来the-singularity-skynet-and-the-future-of-computing">5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing)</h2>
+<blockquote>
+<p>[!quote]
+&ldquo;Computer science isn&rsquo;t magic, but it sort of is!Knowing how to use and program computers is sorcery of the 21st century.Instead of incantations and spells, it&rsquo;s scripts and code.&rdquo;  by Carrie Anne</p>
+<p>计算机科学不是魔法，但它有点像魔法。学习使用电脑和编程，是 21 世纪的巫术，只不过用的不是咒语而是代码。—— 凯莉·安</p>
+</blockquote>
+<h3 id="571-普适计算">5.7.1 普适计算</h3>
+<p>1990 年代由马克·威泽尔 (Mark Weiser) 提出「普适计算」 ( Ubiquitous Computing) 的概念，即计算机存在于在所有可想象的东西之中。</p>
+<blockquote>
+<p>[!quote]</p>
+<p>&ldquo;For (fifty) years, most interface design, and most computer design, has been headed down the path of the &ldquo;dramatic&rdquo; machine. Its highest idea is to make a computer so exciting, so wonderful, so interesting, that we never want to be without it. A less-traveled path I call the &ldquo;invisible&rdquo;; its highest idea is to make a computer so imbedded, so fitting, so natural, that we use it without even thinking about it … The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it.&rdquo; by Mark Weiser, 1990s</p>
+<p>(五十)年来，大多数界面和计算机设计，都是朝&quot;戏剧性&quot;方向前进想把计算机做得超好，让人一刻也不想离开。另一条少有人走的路 是&quot;无形&quot;的，把计算机整合到所有东西里，用的时候很自然、完全注意不到。最厉害的科技是看不见的科技，它们融入到日常生活的每一部分，直到无法区分。——马克·威泽尔</p>
+</blockquote>
+<p>有人把 &ldquo;普适计算&rdquo; 当作是 &ldquo;反乌托邦&rdquo; (dystopian) ，但提出者认为其具有非凡潜力。</p>
+<h3 id="572-奇点">5.7.2 奇点</h3>
+<p>&ldquo;普适计算&rdquo; 在一定程度上可以描述计算机的未来，而在人们思考计算机的未来时经常会直接想到人工智能。但并非所有东西都需要使用 AI 或是被 AI 优化更新，就像电气革命后出现了电灯泡但蜡烛仍然存在。</p>
+<p>最可能的情况是 AI 变成计算机科学家手中的另一门新工具，但真正让人深思和担忧的是 &ldquo;人工智能是否会超越人类智能？&rdquo; 这涉及许多因素，比如 &ldquo;智能的准确定义是什么？&quot;。</p>
+<p>尽管 AI 可以在几秒内识别歌曲、驾驶汽车、翻译多种语言，但却无法完成爬楼梯、叠衣服等简单事项，人工智能成长到和人类一样通用，还有很长的路。</p>
+<p>因为 &ldquo;智能&rdquo; 是难以量化的指标，人们更喜欢用处理能力来区分，但这种衡量智能的方法比较 &ldquo;以计算为中心&rdquo; 。以当前的发展速度来看，计算机的计算能力相当于老鼠，距离人类的计算能力似乎看起来还有些距离。</p>
+<p>但就算处理器增长速度不再遵循 &ldquo;摩尔定律&rdquo; (1.10 节, p17 集)，也可能只需要十几年计算机就能赶上人类的计算速度。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675517919707.png" alt="计算速度"></p>
+<p>假设计算机发展的趋势继续保持下去，在本世纪结束前计算机的处理能力/智能会比全人类加起来还多，然后人的参与会越来越少，人工超级智能会开始改造自己。</p>
+<p>这种智能科技的失控性发展称为「奇点」(singularity)，由约翰·冯·诺伊曼 (John von Neumann, 2.1.2 节, p10 集) 在 1950 年代最早提出。距离其提出后 60 多年的今天，奇点仍然距离我们十分遥远。</p>
+<blockquote>
+<p>[!quote]
+&ldquo;The accelerating progress of technology and changes in the mode of human life,give the appearance of approaching some essential singularity in the history of the race beyond which human affairs, as we know them, could not continue.&rdquo;  by John von Neumann</p>
+<p>&ldquo;越来越快的技术发展速度和人类生活方式的改变，看起来会接近人类历史中某些重要的奇点，看起来会接近人类历史中某些重要的奇点，这个势头不会永远继续下去。&rdquo; —— 约翰·冯·诺伊曼</p>
+</blockquote>
+<p>一些专家认为，计算机的发展趋势会更加平缓一些，更趋向于 S 型而非指数型。而随着复杂度增加，进步会越来越难，微软联合创始人保罗·艾伦 (Paul Allen) 称之为「复杂度刹车」(complexity brake)。</p>
+<h3 id="573-技术性失业">5.7.3 技术性失业</h3>
+<p>假设奇点到来、超智能计算机出现，这对人类意味着什么呢？关于这个问题由许多激烈讨论，其最直接的影响是 &ldquo;技术性失业&rdquo; (technological unemployment)——许多工作出于效率和成本的原因被计算机(AI 或是 robots) 替代了。</p>
+<p>技术性失业并非新鲜事，比如 1800s 雅卡尔的织布机(Jacquard&rsquo;s Loom, Episode 10) 带来的纺织工人失业导致了骚乱，1960s 的自动接线板代替了电话接线员，1980s 的机器喷漆代替了人工喷漆等等。</p>
+<p>一方面，自动化使得一部分人们失去了工作。另一方面，大量产品被廉价生产。但与之前技术进步带来的技术性失业不同，专家认为 AI、robots 以及更广义的计算机会比这些更具有破坏性。</p>
+<p>工作可以分为 2 个维度，4 种类型：</p>
+<div align="center"> <img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675519306363.png" ></div>
+<ul>
+<li>重复性手工工作：可以让机器自动化，部分已经被替代，剩下的主部被替代。</li>
+<li>非重复性手工型工作：如厨师、服务员、保安等，值得担心。</li>
+<li>非重复性思维型型工作：如客服，收银员，银行柜员和办公室助理，同样值得担心。</li>
+<li>非重复性思维型工作：如教师、艺术家、小说家、律师、医生和科学家等，暂时比较安全。</li>
+</ul>
+<p>非重复性思维型工作占美国劳动力的 40%，意味着 60% 的工作易受自动化的影响。有人认为这种大规模失业会带来社会动荡和混乱，但也有人认为这是对将人类从无聊工作中解放的途径之一。</p>
+<p>没人能预知未来，但长远来看一切终将归于平静，政界正在讨论的问题是怎么处理数百万人突然失业造成的短期经济混乱。</p>
+<h3 id="574-未来幻想">5.7.4 未来幻想</h3>
+<blockquote>
+<p>[!quote]
+&ldquo;The Singularity will allow us to transcend (the) limitations of our biological bodies and brains. We will gain power over our fates. &hellip; We will be able to live as long as we want. We will fully understand human thinking and will vastly extend and expand its reach.&rdquo; by futurist Ray Kurzweil</p>
+<p>&ldquo;奇点会让我们超越肉体和大脑的局限性，我们能掌控自己的命运。可以想活多久活多久，我们能完全理解并扩展大脑思维。&quot;——未来学家, 雷·库兹韦尔</p>
+</blockquote>
+<p>超人类主义者 (Transhumanists) 认为会出现&quot;改造人&rdquo; (cyborgs)，人类通过和科技融合在一起来增强智力和身体，随着脑机接口的出现，再加上 Google Glass 和 微软 Hololens 这样的穿戴式计算机，这条界线正变得越来越模糊。</p>
+<p>也有人预见到 &ldquo;数字永生&rdquo; (Digital Ascension) ，根据 Jaron Lanier 的说法，其是指 &ldquo;人类的肉体死去，意识上传到计算机&rdquo; (would involve people dying in the flesh and being uploaded into a computer and remaining conscious )。这种从生物体变成数字体的过程，可能是下一次进化跨越。</p>
+<p>而其他人则预测人类大体会保持原样，但超智能电脑会照顾我们以便让我们好好享受生活。但也有人反对，为什么超级人工智能会费时间照顾我们？人类不也没照顾蚂蚁吗？</p>
+<p>我们无法预测未来，但关于未来的讨论非常多。等这些技术出现后，我们可以更好地进行计划。不论你把计算机视为未来的朋友或敌人，更有可能的是它们的存在时间会超过人类。</p>
+<p>许多未来学家和科幻作家猜测，机器人会去太空殖民，无视时间、辐射以及一些其他让人类难以长时间太空旅行的因素。亿万年后太阳燃尽 地球成为星尘，也许我们的机器人孩子会继续努力探索宇宙每一个角落，以纪念它们的父母，同时让宇宙变得更好。</p>
+<p>与此同时，计算机还有很长的路要走，计算机科学家们在努力推进过去 40 集谈到的话题。</p>
+<p>在接下来的十几年，我们可以预想：VR/AR、无人驾驶车、无人机、可穿戴计算机和服务型机器人 会变得主流；互联网会继续诞生新服务；在线流媒体会用新方式连接人们；新的编程语言和范例会不断出现，帮助创造令人惊叹的新软件；新硬件能让神经网络和 3D 图形等复杂运算快如闪电；个人电脑也会创新，由过去 40 年的桌面电脑变为无处不在的虚拟助手。</p>
+<p>我们在这个系列还有很多话题没有讨论，比如加密货币，无线通讯，3D打印，生物信息学和量子计算。</p>
+<p>我们正处于计算机的黄金时代，全部总结是绝无可能的。但最重要的是你可以学习计算机成为这个惊人转型的一部分，把世界变得更好。</p>
+
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/cccs/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/" class="block">1 计算机组成</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/cccs/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="block">Crash Course Computer Science</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

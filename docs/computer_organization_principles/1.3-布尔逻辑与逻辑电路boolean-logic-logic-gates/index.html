@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>1.3 布尔逻辑与逻辑电路（Boolean Logic &amp; Logic Gates） | 1 计算机组成 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="抽象（Abstraction） 在计算机科学中，抽象化是将资料与程序，以它的语义来呈现出它的外观，但是隐藏起它的实现细节。 抽象化是用来减少程序的复杂度，">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science | 计算机速成课",
+      "item":"https://viyi.cc/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"1 计算机组成",
+      "item":"https://viyi.cc/docs/computer_organization_principles/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"1.3 布尔逻辑与逻辑电路（Boolean Logic \u0026 Logic Gates）",
+      "item":"https://viyi.cc/docs/computer_organization_principles/1.3-%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E4%B8%8E%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AFboolean-logic-logic-gates/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs/computer_organization_principles/1.3-%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E4%B8%8E%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AFboolean-logic-logic-gates/"
+    },
+    "headline": "1.3 布尔逻辑与逻辑电路（Boolean Logic \u0026 Logic Gates） | 1 计算机组成 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  986 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "抽象（Abstraction） 在计算机科学中，抽象化是将资料与程序，以它的语义来呈现出它的外观，但是隐藏起它的实现细节。 抽象化是用来减少程序的复杂度，"
+}
+</script><meta property="og:title" content="1.3 布尔逻辑与逻辑电路（Boolean Logic &amp; Logic Gates） | 1 计算机组成 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs/computer_organization_principles/1.3-%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E4%B8%8E%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AFboolean-logic-logic-gates/" />
+
+
+
+
+<meta property="og:description" content="抽象（Abstraction） 在计算机科学中，抽象化是将资料与程序，以它的语义来呈现出它的外观，但是隐藏起它的实现细节。 抽象化是用来减少程序的复杂度，" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-e">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">目录</span>
+    <i class='fas fa-caret-right ms-1'></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="https://viyi.cc/docs/computer_organization_principles/">1 计算机组成</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/1.1%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97/">1.1 早期的计算（Early Computing）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/1.2-%E7%94%B5%E5%AD%90%E8%AE%A1%E7%AE%97electronic-computing/">1.2 电子计算（Electronic Computing）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/1.3-%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E4%B8%8E%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AFboolean-logic-logic-gates/">1.3 布尔逻辑与逻辑电路（Boolean Logic &amp; Logic Gates）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/">1.4 二进制表示法（Representing Numbers and Letters with Binary）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/1.5-alu-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83-how-computers-calculate/">1.5 ALU 算术逻辑单元 （How Computers Calculate）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/">1.6 寄存器 &amp; 内存（Registers and RAM）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/">1.7 CPU 中央处理器（The Central Processing Unit）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/1.8-%E6%8C%87%E4%BB%A4%E5%92%8C%E7%A8%8B%E5%BA%8Finstructions-programs/">1.8 指令和程序（Instructions &amp; Programs）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/1.9-%E9%AB%98%E7%BA%A7-cpu-%E8%AE%BE%E8%AE%A1advanced-cpu-designs/">1.9 高级 CPU 设计（Advanced CPU Designs）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/computer_organization_principles/1.10-%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E6%91%A9%E5%B0%94%E5%AE%9A%E5%BE%8Bintegrated-circuits-moores-law/">1.10 集成电路、摩尔定律（Integrated Circuits &amp; Moore&#39;s Law）</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    <article class="prose">
+  <h1 class="mb-4">1.3 布尔逻辑与逻辑电路（Boolean Logic &amp; Logic Gates）</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>2分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <blockquote>
+<p>抽象（Abstraction）</p>
+<p>在计算机科学中，抽象化是将资料与程序，以它的语义来呈现出它的外观，但是隐藏起它的实现细节。</p>
+<p>抽象化是用来减少程序的复杂度，使得程序员可以专注在处理少数重要的部分。</p>
+<p>(cr. <a href="https://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)">wikipedia</a>, link <a href="https://ray-eldath.me/programming/three-important-ideas/">🆚 数学抽象</a>)</p>
+</blockquote>
+<h3 id="131-为何选择二进制">1.3.1 为何选择二进制</h3>
+<p>计算机从十进制的机电设备进化到了二进制（Binary）
+的电子设备，电路的开闭表示真（true）和假（false）两种状态。</p>
+<p>尽管晶体管可以表示超过两种状态（以不同大小的电流经过），但可表示的状态越多，越容易受噪音的扰动，就越难以区分。而二进制的 1 和 0 很容易在电路中用「通」和「断」区分出来。</p>
+<p>同时，布尔代数作为一种仅处理两种状态的数学分支，为计算机提供了完备的运算法则和方法。</p>
+<h3 id="132-布尔代数">1.3.2 布尔代数</h3>
+<p>布尔代数（Boolean Algebra）由英国数学家乔治·布尔（George Boole）发明，因出于对亚里士多德基于哲学的逻辑方法进行数学式扩展的兴趣，其用逻辑方程系统而正式地证明真理，并于 1847 年的首部著作《逻辑的数学分析》中进行了介绍。</p>
+<p>布尔代数中使用 true 和 false 两个变量进行逻辑操作，其基本运算如下：</p>
+<blockquote>
+<p>[!TIP]</p>
+<ol>
+<li>布尔代数的基本运算可以很容易地用晶体管构建，将晶体管的控制线当作 input，将底部的电极线当作 output，则输入输出同步：
+<img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2004%3A%E5%88%86%2015%3A%E7%A7%92%20czmo4eomik1673006655193.png" alt="布尔代数-电路图|300"></li>
+<li>能控制电流的路径称为「门」（Gate）。</li>
+<li>电路图中的拱门表示 2 条线没有连接，仅仅只是跨越。
+<img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2021%3A%E6%97%B6%2019%3A%E5%88%86%2027%3A%E7%A7%92%202inlqcldxu1673011167605.png" alt="布尔代数电路图|800"></li>
+</ol>
+</blockquote>
+<h3 id="133-not-非">1.3.3 NOT 非</h3>
+<p>数学符号： $\neg$</p>
+<p>Tips：真假倒置</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">!A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<ul>
+<li>上方的电极线当作 output，下方电极线接地。</li>
+<li>半导体通电 True （Input on），则线路接地，无输出电流，为 False。</li>
+<li>半导体不通电 False （Input off），则输出电流从上方输出，为 True。</li>
+</ul>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2037%3A%E5%88%86%2044%3A%E7%A7%92%207m0ink8yuf1673008663979.png" alt="!0-&gt;1"></p>
+<h3 id="134-and-与">1.3.4 AND 与</h3>
+<p>数学符号：$\land$</p>
+<p>Tips：一假则假，两真为真。</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A &amp;&amp; B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<ul>
+<li>两晶体管串联，当且仅当 2 个晶体管都通电，输出才有电流（True）。</li>
+</ul>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2032%3A%E5%88%86%2055%3A%E7%A7%92%20ijxuptscyd1673008375724.png" alt="1&amp;&amp;1-&gt;1"></p>
+<h3 id="135-or-或">1.3.5 OR 或</h3>
+<p>数学符号：$\lor$</p>
+<p>Tips：一真为真，两假则假。</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A || B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<ul>
+<li>两晶体管并联，均无电流时晶体管阻塞，输出无电流为 False。</li>
+</ul>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2037%3A%E5%88%86%2002%3A%E7%A7%92%20e02ug3n4s61673008622241.png" alt="0||0-&gt;0"></p>
+<h3 id="136-xor-异或">1.3.6 XOR 异或</h3>
+<p>数学符号：$\oplus$</p>
+<p>Tips：不同为真，相同则假。</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A XOR B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2038%3A%E5%88%86%2059%3A%E7%A7%92%20wp11yr3ucb1673008739003.png" alt="0 XOR 1-&gt;1"></p>
+<h3 id="137-逻辑门电路">1.3.7 逻辑门电路</h3>
+<p>作为用晶体管搭建的复杂电路的抽象，将逻辑门电路简化，用于构建更大的组件，而不至于太复杂。与、或、非以及异或门电路符号如下：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2058%3A%E5%88%86%2010%3A%E7%A7%92%20d126v1g9vz1673009890789.png" alt="逻辑门电路符号"></p>
+
+</article>
+
+                    
+                    
+                    
+
+                    
+
+
+
+                    
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/docs/computer_organization_principles/1.2-%E7%94%B5%E5%AD%90%E8%AE%A1%E7%AE%97electronic-computing/" class="block">1.2 电子计算（Electronic Computing）</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/docs/computer_organization_principles/1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/" class="block">1.4 二进制表示法（Representing Numbers and Letters with Binary）</a>
+      
+    </div>
+  </div>
+
+
+                    
+
+
+
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div
+  class="
+    bg-secondary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc 
+    border-s
+   hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#131-为何选择二进制">1.3.1 为何选择二进制</a></li>
+        <li><a href="#132-布尔代数">1.3.2 布尔代数</a></li>
+        <li><a href="#133-not-非">1.3.3 NOT 非</a></li>
+        <li><a href="#134-and-与">1.3.4 AND 与</a></li>
+        <li><a href="#135-or-或">1.3.5 OR 或</a></li>
+        <li><a href="#136-xor-异或">1.3.6 XOR 异或</a></li>
+        <li><a href="#137-逻辑门电路">1.3.7 逻辑门电路</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        hljs.highlightAll();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

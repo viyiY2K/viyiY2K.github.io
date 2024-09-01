@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>2 程序设计 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="2 程序设计 2.1 编程史话（Early Programming） 2.1.1 编程介质 在 1.7.2 节中说明 CPU 工作原理时，我们假设程序已经在计算机内存中了，但实际上程序需要被加载（">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science",
+      "item":"https://viyi.cc/cccs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"计算机组成",
+      "item":"https://viyi.cc/cccs/crash-course-computer-science/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"2 程序设计",
+      "item":"https://viyi.cc/cccs/crash-course-computer-science/2-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/cccs/crash-course-computer-science/2-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"
+    },
+    "headline": "2 程序设计 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2024-10-16T00:00:00+00:00",
+    "wordCount":  8591 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "2 程序设计 2.1 编程史话（Early Programming） 2.1.1 编程介质 在 1.7.2 节中说明 CPU 工作原理时，我们假设程序已经在计算机内存中了，但实际上程序需要被加载（"
+}
+</script><meta property="og:title" content="2 程序设计 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/cccs/crash-course-computer-science/2-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" />
+
+
+
+
+<meta property="og:description" content="2 程序设计 2.1 编程史话（Early Programming） 2.1.1 编程介质 在 1.7.2 节中说明 CPU 工作原理时，我们假设程序已经在计算机内存中了，但实际上程序需要被加载（" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2024-10-16T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="CCCS" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">2 程序设计</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>18分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h1 id="2-程序设计">2 程序设计</h1>
+<h2 id="21-编程史话early-programming">2.1 编程史话（Early Programming）</h2>
+<h3 id="211-编程介质">2.1.1 编程介质</h3>
+<p>在 1.7.2 节中说明 CPU 工作原理时，我们假设程序已经在计算机内存中了，但实际上程序需要被加载（load into）进内存。</p>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1801 年
++ 可穿孔纸卡（punch cards）
++ - 约瑟夫·雅卡尔（Joseph Marie Jacquard）发明了可编程纺织机，一种可编织图案的纺织机，其是最早的编程。
+- 纺织的每行图案由可穿孔纸卡决定，特定位置是否穿孔决定线的位置高低。
+- 1890 年人口普查也是采用穿孔纸卡进行汇总的（参见 1.1.2 节的打孔卡片制表机），但其存储的是数据而非程序。
+- 1955 年的美国 SAGE 防空系统是使用纸卡的最大型程序，其主控制程序用了 6.25w 张穿孔卡纸，约为 5MB 的数据。
+- 直至 1980s，基本所有的计算机都有穿孔卡纸读取器。
+
++ after 60s
++ 插线板（plug boards）
++ - 用于正确执行加减乘除的控制面板，面板上由许多可以插电线的小插孔，使得机器不同部分可以互相传递数据和信号。
+- 缺点在于运行不同的程序需要重新接线。
+
++ 1920s
++ 可插拔插线板（swappable plug boards）
++ - 目的是为了更方便地为机器插入不同程序，但对其编程很复杂。
+- 流行于 1940s，IBM 402 核算机、ENIAC（1946 年，参见 1.2.3 节）均采用可插拔插线板制作。
+- 缺点是更换程序耗时长且繁琐。以 ENIAC 为例，程序连线需至多耗费三周。
+
++ 1940s~50s
++ 内存（electronic memory）
++ - 内存价格下降、容量提升，将程序存储在内存更易于修改和读取。
+- 足够大的内存可以存储运行程序、所需数据以及运行时所产生的新数据。
+- 使用内存的机器称为「存储程序计算机」（Stored-program Computers）。
+- 内存中的程序和数据依然要通过穿孔卡纸读取器（punch card reader）从穿孔卡纸写入（1980s）。
+
++ pre-1980
++ 控制台（control consoles）
++ - 在控制台(控制面板)上进行面板编程（panel programming） ，面板是使用开关和按钮的，其可以做到在插线板上接线一样的效果。
+- 面板上有指示灯，用于代表各种函数的状态和内存中的值。
+- 早期针对爱好者的家用计算机因外围设备的昂贵，多使用开关进行编程。
+- 第一款取得商业成功的计算机是 Altair 8800（1975 年），提供整机和组件两个版本可供选择。
+
+</code></pre>
+<h3 id="212-冯诺依曼结构">2.1.2 冯诺依曼结构</h3>
+<p>「冯诺依曼结构」（Von Neumann Architecture）由数学家和物理学家约翰·冯·诺依曼（John Von Neumann）发明，其特点在于将程序和数据都存储在同一个地方。</p>
+<p>冯诺依曼计算机的标志性组成：处理器（带有 ALU）、数据寄存器、指令寄存器、指令地址寄存器、内存（存储数据和指令），如 1.7.1 小节中搭建起来的那样。</p>
+<p>第一台采用冯诺依曼结构的存储程序计算机（Von Neumann Architecture Stored-program）是由曼彻斯特大学于 1948 年建造的 Baby（绰号）——离散变量自动电子计算机（Electronic Discrete Variable Automatic Computer, EDVAC）。</p>
+<h2 id="22-编程语言the-first-programming-languages">2.2 编程语言（The First Programming Languages）</h2>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ early day
++ 机器语言（Machine Language）
++ - 机器语言又名机器码（Machine Code），指只能理解二进制描述的信息。
+- 早期编程只能使用机器语言进行，在其之前人们会先对程序做一个高层次的描述——称为「伪代码」（Pseudo-Code），然后再用操作码表（opcode tables）进行转换。
+
++ 1940~50s
++ 汇编语言（Assembly Language）
++ - 为操作码分配简单名字——助记符（mnemonics），后接数据形成完整指令。
+- 计算机无法理解助记符，因此需要二进制程序汇编器（Assembler）将文字指令自动转换为二进制指令。
+- 不断发展的汇编器还提供了自动分析 JUMP 地址（通过插入可跳转标签）等功能，以便应对程序开头新增代码导致地址变化的情况。
+- 通常来说，一条汇编指令对应一条机器指令，其依旧和底层硬件联系紧密，需要程序员思考使用什么寄存器和内存地址。
+
++ 1952 年
++ 算术语言版本 0（A-0)
++ - 算术语言版本 0（Arithmeic Language Version 0）是一种由葛丽丝·霍普（Dr.Grace Hopper）创造的高级编程语言，源于其在使用 Harvard Mark 1 编码的噩梦体验。
+- 高级程序语言可以将一行代码转换为几十条的二进制指令。
+- 葛丽丝·霍普在 1952 年创造了第一个编译器（compiler）。
+- 该想法有些超前，受限于当时“计算机只能做算术，不能运行程序”的看法，未被广泛使用。
+
++ 1957 年
++ FORTRAN
++ - IBM 于 1957 年发布，名字源自 Formula Translation（公式翻译），起初仅能运行在 IBM 计算机上。
+- 比同等的手写汇编代码平均短 20 倍，运行速度稍差，但编程速度大大提升。
+
++ 1959 年
++ COBOL
++ - 1950s 的编程语言和编译器仅能运行在一种计算机中，升级电脑会带来巨大的重写代码工作量，因此通用编程语言的开发被提上日程。
+-  1959 年组建的数据系统语言委员会开发了 Common Business-Oriented Language，简称 COBOL。
+- 为了兼容不同的硬件，每个计算机架构需要一个 COBOL 编译器，该编译器可以接收相同的 COBOL 代码。这种特性称为「一次编写，多次运行」（write once,run anywhere），现今大多数编程语言都是如此。
+
++ NOW
++ 高级编程语言（high-level programming languages）
++ - 1960s, ALGOL, LISO, BASIC
+- 70s, Pascal, C, Smalltalk
+- 80s, C++, Objective-C, Perl
+- 90s, Python, Ruby, Java
+- 千禧年，Swift, C#, Go etc.
+
+</code></pre>
+<p>🏆 the holy grail (圣杯)：使用英文直接于计算机对话（plain ol&rsquo; English），计算机会理解并执行。</p>
+<h2 id="23-编程原理语句和函数programming-basics-statements--functions">2.3 编程原理：语句和函数（Programming Basics: Statements &amp; Functions）</h2>
+<h3 id="231-概述">2.3.1 概述</h3>
+<p>规定句子结构的一系列规则，叫做「语法」（syntax），编程语言也有相应的语法结构。用编程语言表达完整单个思想的内容，称为「语句」（statement）。</p>
+<p>最基本的语句是赋值语句（assignment statement），用于将一个变量赋值给另一个变量，使用「=」连接两个变量，次序为从右往左。e.g. a = 5, b = 10, c = a +b, abc 均为可赋值的量，变量名可任意但需唯一。</p>
+<h3 id="232-控制流语句control-statements">2.3.2 控制流语句（Control statements）</h3>
+<p>用于控制程序的执行顺序。</p>
+<h4 id="if-statements">if Statements</h4>
+<p>又名条件语句（Conditional Statements），基本思想为「如果 X 为真（True），那么执行 Y」（其中 X 为 conditional expression 条件表达式），类似于岔路口，会根据条件表达时的真假执行一次。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2006%3A%E5%88%86%2049%3A%E7%A7%92%20uiyywudubm1673420809491.png" alt="if"></p>
+<p>与 else 结合使用后，当条件为假时，则执行 else 中的代码：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2010%3A%E5%88%86%2046%3A%E7%A7%92%20utaxns8mb11673421045990.png" alt="if-else"></p>
+<h4 id="条件循环conditional-loop">条件循环（conditional loop）</h4>
+<p>使用条件循环可根据条件执行多次，如 while 循环——当 while 条件为真时，代码会重复执行。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2014%3A%E5%88%86%2016%3A%E7%A7%92%20jcqh8njxwn1673421256371.png" alt="while"></p>
+<p>另一种常见的循环是 for loop ——不判断执行条件而是判断执行次数，for 会循环特定次数。执行后自增 1，直到循环条件不满足。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2016%3A%E5%88%86%2013%3A%E7%A7%92%20qn43d2xkmi1673421373452.png" alt="for"></p>
+<h3 id="234-函数">2.3.4 函数</h3>
+<p>「Less is more. 」当某段代码需要多次重复使用时，为避免修改繁琐可以将其打包为「函数」（functions），又名「方法」（methods）或是「子程序」（subroutines）。</p>
+<p>下图示例是名为「EXPONENT」(指数) 的函数，所需参数为「BASE」(底数) 和「EXP」(exponent, 指数)，「RETURN」用于返回计算结果给调用该函数的代码。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2022%3A%E5%88%86%2052%3A%E7%A7%92%20l0wr6voatd1673421772192.png" alt="指数函数"></p>
+<p>函数这样的抽象（abstraction）是现代编程的核心，现代软件采用「模块化编程」（Modularizing programs），其由上千个函数构成。不同的程序员写不同的函数，其各自确保自己的代码工作正常，各个函数各自负责不同的事情，使得整个程序正常运作。</p>
+<p>当某个函数的代码行数过百，则应该有东西可以拆成一个新的函数。现代编程语言中有专业人员预先写好的函数集合，称为「库」（library）。</p>
+<h2 id="24-算法入门intro-to-algorithms">2.4 算法入门（Intro to Algorithms）</h2>
+<h3 id="241-概述">2.4.1 概述</h3>
+<h4 id="算法">算法</h4>
+<p>算法（Algorithm）一词源自 1000 多年前的波斯博识者，阿尔·花拉子密(Abū ʿAbdallāh Muḥammad ibn Mūsā al-Khwārizmī), 代数（algebra）之父之一。</p>
+<p>算法是指求解问题的具体步骤，一般来说所需步骤越短越好，但有时也会考虑占用内存的情况。</p>
+<h4 id="复杂度">复杂度</h4>
+<p>算法的输入大小和运行步骤之间的关系叫做「算法复杂度」，使用「大 O 表示法」来衡量运行速度的量级。</p>
+<h3 id="242-选择排序selection-sort">2.4.2 选择排序（Selection sort）</h3>
+<p>遍历找到当前最小数，移动至最前，后从第二个继续循环该遍历，直到最后一个数字。算法时间复杂度为 $O（N^2）$，指数级增长，效率较低。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2043%3A%E5%88%86%2042%3A%E7%A7%92%20m5ruem6z3b1673423021920.png" alt="选择排序"></p>
+<h3 id="243-归并排序merge-sort">2.4.3 归并排序（merge sort）</h3>
+<p>若数组大小大于 1，则将数组对半分割，直至单个数组个数为 1（示例中）。接着从首个开始两两对比每组中第一个数字的大小，归并为 * 2 个组，循环重复。</p>
+<p>算法时间复杂度为 $O（nlogn）$ ，n 为比较 + 合并的次数（与输入成正比），log n 是合并步骤的次数（重复对半切是和输入呈对数关系）。</p>
+<h3 id="244-dijkstra-算法">2.4.4 Dijkstra 算法</h3>
+<p>Dijkstra 是一种图搜索（graph search）算法，图由节点（node）和边（line）相连构成，点到点之间的代价称为成本（cost）或是权重（weight）。</p>
+<p>若要计算任意某两点之间的最小代价路线，最简单的蛮力法是尝试每一条路计算总成本，时间复杂度为 $O(n!)$，阶乘量级是最糟糕的。</p>
+<p>Dijkstra 算法是 Edsger Dijkstra 发明与 1956 年构思的算法，其<a href="https://www.bilibili.com/video/BV1EW411u7th?t=492.9&amp;p=13">基本思想如下</a>：总是从代价最低的节点开始，运行一次后得知相邻节点的代价；再从相邻节点中的最小节点开始向前计算相邻节点的邻居的代价，更新该值，接着计算相邻节点中的第二小节点向前一步的代价，若相邻节点的同一邻居计算结果再次计算时比原值更小，则更新。</p>
+<p>1956 年初始版本的 Dijkstra 算法的时间复杂度是 $O(n)$，经改进后为 $O(nlog+l)$，其中 n 为节点数，l 为边数。</p>
+<h2 id="25-数据结构data-structures">2.5 数据结构（Data Structures）</h2>
+<p>数据结构是用于表示算法所处理的数据在内存中存储的格式，当数据是结构化的，会更便于读取。</p>
+<p>不同的数据结构有不同的特性，适用于不同的场景,正确选择数据结构会让工作更为简单。</p>
+<p>大多数编程语言自带了预先做好的数据结构，比如 C++ 中的「标准模板库」（Standard Template Library）和 Java 中的「Java 类库」（Java Class Library）。</p>
+<h3 id="251-数组array">2.5.1 数组（Array）</h3>
+<h4 id="数组">数组</h4>
+<p>数组又名列表（list）或是向量（Vector），其连续存储在内存中，可存储多个值。</p>
+<p>数组中不同值使用下标（index）区分，下标从 0 开始，使用方括号 [ ] 表示所访问数组的数值。e.g 数组 j 的第一个元素为 <code>j[0]</code>，第三个元素为 <code>j[2]</code>。</p>
+<p>本质上是通过计算第一个元素地址的<strong>偏移量</strong>，来得到数组中其他元素的地址。注意区分数组中第 5 个数字和数组中下标为 5 的数，前者下标为 4，后者实际为第六个数。</p>
+<p>数组用途广泛，几乎所有的编程语言都自带了很多函数来处理数据，比如数组排序函数。</p>
+<h4 id="字符串">字符串</h4>
+<p>字符串（string）是由字母、数字、标点等组成的数组，以二进制值 <code>\0</code> （null）结尾。处理字符串的常见函数有 <code>strcat</code>，其接受两个数组，将第二个放在第一个结尾处。</p>
+<h4 id="矩阵">矩阵</h4>
+<p>数组仅能操作一维数据，二维及以上数据需要使用<strong>矩阵（Matrix）</strong>。以二维矩阵为例，取值需要 2 个下标，如 <code>j[2][1]</code> :</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2016%3A%E6%97%B6%2027%3A%E5%88%86%2041%3A%E7%A7%92%20pq9kgaevs41673425660980.png" alt="矩阵"></p>
+<h3 id="252-结构体struct">2.5.2 结构体（struct）</h3>
+<p>结构体是指将几个逻辑上有关系的变量打包在一起的结构，比如将银行卡和余额打包在一个称为一个结构体放入数组中。</p>
+<p>但数组创建时则大小固定，无法动态增加，同时其按序排列，在中间插入某值需移动后续诸多值，着实不便。因而可以使用结构体建立新的数据结构消除相关限制。</p>
+<h3 id="253-链表">2.5.3 链表</h3>
+<p>通常采用名为 node 的结构体构建，节点（node）是变量（variable）和指针（pointer）构成的结构体，指针是指向一个内存地址的特殊变量。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2016%3A%E6%97%B6%2042%3A%E5%88%86%2007%3A%E7%A7%92%20tul9630evn1673426527084.png" alt="node"></p>
+<h4 id="单链表linked-list">单链表（linked list）</h4>
+<p>多个节点可以组成链表（linked list），通过链表中的每个节点指向下一个节点来实现灵活性。下图所示为「循环链表」（circular linked），若最后一个指针为 0(null)，则为非循环列表。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2016%3A%E6%97%B6%2045%3A%E5%88%86%2051%3A%E7%A7%92%208fczka81641673426751547.png" style="zoom: 50%;" /></div>
+<p>链表的大小可以动态增减，插入也比数组更加容易，只需改变指针即可（如下图）。在链表中，重新排序、两端缩减、分割以及倒序等操作也很容易进行。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2016%3A%E6%97%B6%2048%3A%E5%88%86%2046%3A%E7%A7%92%20brc1ggyzmx1673426925886.png" alt="链表插入"></p>
+<h4 id="队列queue">队列（queue）</h4>
+<p>一种可以使用链表构建的复杂数据结构，采用「先进先出」（First-In First-Out, FIFO）的原则。</p>
+<p>处理完一个数据则可以其「出队」（dequeue），将数据加入队列则称为「入队」（enqueue）。入队需要遍历整个链表直至结尾，然后将原先结尾节点的指针指向要加入的节点。</p>
+<h4 id="栈stacks">栈（stacks）</h4>
+<p>栈是一种「后进先出」（Last-In First-Out, LIFO）的数据结构，类似于放羽毛球进筒里。栈中数据的出入称为「进栈」（push）和「出栈」（pop）。</p>
+<h3 id="254-树tree">2.5.4 树（tree）</h3>
+<p>在 node 的基础上再新增一个指针可以构造出树：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2017%3A%E6%97%B6%2001%3A%E5%88%86%2038%3A%E7%A7%92%20v2onl6rku91673427698508.png" alt="树的结构体"></p>
+<p>抽象来看，可以将最高的节点称为「根节点」（root），节点下的所有节点称为「子节点」（children），任何子节点的直属上层节点称为「父节点」（parent node），没有任何子节点的节点（i.e. 树结束的地方）叫做「叶节点」（leaf）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2017%3A%E6%97%B6%2005%3A%E5%88%86%2024%3A%E7%A7%92%20sq5bh67yy91673427924179.png" alt="树"></p>
+<p>上图这种每个节点最多只有两个节点的树称为「二叉树」（binary tree），这是一种特殊的树。树的节点个数是任意的，甚至我们可以在 node 中使用链表来存储所有的子节点。</p>
+<p>树的特性是从根到叶是单向进行，而非循环。若数据随意连接，则构成 2.4.4 节中提过的图（graph），图的指向任意，可以使用多个指针的 node 来表示。</p>
+<h2 id="26-阿兰图灵alan-turing">2.6 阿兰·图灵（Alan Turing）</h2>
+<p>阿兰·马蒂森·图灵（Alan Mathison Turing）于 1921 年出生在伦敦，从小表现出惊人的数学和科学能力。他对计算机科学的建树始于 1935 年，当时他是剑桥国王学院的硕士生。</p>
+<h3 id="261-丘奇-图灵论题">2.6.1 丘奇-图灵论题</h3>
+<h4 id="可判定性问题">可判定性问题</h4>
+<p>可判定性问题（Entscheidungsproblem, 德语）是由德国数学家大卫·希尔伯特提出的问题：「是否存在一种算法，输入正式逻辑语句输出准确的&quot;是&quot;或&quot;否&quot;答案？」，该算法能回答如“是否有一个数大于所有数”之类的数学问题。</p>
+<p>1935 年美国数学家阿隆佐·丘奇（Alonzo Church）首次提出解决方法，其开发了名为「Lambda 算子」（Lambda Calculus）的数学表达系统，证明了该算法不存在。该系统能表示任何计算，但其使用的数学技巧难以理解和使用。</p>
+<p>与此同时，阿兰·图灵也提出了一种现在名为「图灵机」（Turing Machine）的假想计算机，其计算能力与 Lambda 算子一致但更为简单，因此在新兴的计算机领域更加受欢迎。</p>
+<h4 id="图灵机">图灵机</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2017%3A%E6%97%B6%2033%3A%E5%88%86%2039%3A%E7%A7%92%20w9592x62141673429619426.png" alt="图灵机"></p>
+<p>图灵机是一台理论计算设备，由如下部件组成：</p>
+<ol>
+<li>纸带：无限长，用于存储符号。</li>
+<li>读写头：位于纸带上，可以读取和写入纸带上的符号。</li>
+<li>状态变量：用于保存当前变量。</li>
+<li>规则：用于描述机器做什么；根据当前状态和读写头中的符号来决定机器的执行 -&gt; 写入符号 or 改变状态 or 移动一格读写头 or 动作组合。</li>
+</ol>
+<p>使用图灵机需要定义起始状态和规则，具体示例<a href="https://www.bilibili.com/video/BV1EW411u7th?t=154.5&amp;p=15">参见视频</a>。该机器是一台通用计算机，如果有足够的时间和内存（纸带）可以利用规则和状态执行任何计算，这是一个很强大的理论模型。</p>
+<h4 id="图灵完备">图灵完备</h4>
+<p>图灵完备（Turing Completeness）是针对一套数据操作规则而言的概念。数据操作规则可以是一门编程语言，也可以是计算机里具体实现了的指令集。当这套规侧可以实现图灵机模型里的全部功能时，就称它具有图灵完备性。（cr.<a href="https://www.zhihu.com/question/20115374/answer/288346717">知乎 @RanC</a>）</p>
+<h4 id="停机问题">停机问题</h4>
+<p>停机问题（Halt problem）是指“给定图灵机描述和输入纸带，是否有算法确定机器会永远计算下去，还是会在某一点停机？”，图灵证明了其无法解决，推理如下：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2018%3A%E6%97%B6%2006%3A%E5%88%86%2029%3A%E7%A7%92%20yqb68j2gtm1673431589745.png" alt="停机问题"></p>
+<ol>
+<li>假想图灵机 H：输入“问题描述 + 纸带数据”，输出 Yes 表示会停机，输出 No 表示不会。</li>
+<li>假想图灵机 -H：H 的输出为 Yes，则 -H 的输出为不会停机；H 的输出为 No，则 -H 的输出为会停机。</li>
+<li>将 H 和 -H 组成机器，并添加分离器（splitter）使得其只接收一个输入（程序），名为「Bizzaro」(异魔)。</li>
+</ol>
+<p>将 Bizzaro 的描述作为其输入（问 H 说当 Bizzaro 的输入是 H 时会如何），则出现悖论：</p>
+<ul>
+<li>H 说 Bizzaro 会停机，则通过 -H 进入无限循环。</li>
+<li>H 说 Bizzaro 不会停机，则输出 No 通过 -H 停机。</li>
+</ul>
+<p>图灵证明了有个程序使得图灵机 H 无法判断是否会停机，意味着“停机问题”无法用图灵机解决。</p>
+<h4 id="可计算性理论">可计算性理论</h4>
+<p>丘奇和图灵对可判定性问题的解答证明了计算机的能力是有极限的，无论有多少的时间或内存，有些问题是计算机无法解决的。</p>
+<p>这种对可计算性理论（formalize computability）的讨论，称为「丘奇-图灵论题」（Church-Turing Thesis）。</p>
+<h3 id="262-破译英格玛机">2.6.2 破译英格玛机</h3>
+<p>从 1936 年至 1938 年，图灵在丘奇的指导下拿到了普林斯顿的博士学位，毕业后回到剑桥。</p>
+<p>再之后，图灵加入了英国政府的密码破译组织。1939 年前后，英国卷入第二次世界大战，图灵的才能被投入战争，其工作内容之一是破解德国的通信加密。</p>
+<p>在 1.2.3  节我们在讨论巨人一号时，曾提及图灵在该计算机安装地——英国布莱切利园（Bletchley Park）——制作了 Bombe，一种用于破译纳粹英格玛（Nazi Enigma codes）的机电设备。</p>
+<p>英格玛机（Enigma Machine）是一种用于加密（Encryption）明文的设备，加密由机器顶部有 26 齿的齿轮组合决定，机器前还有用于互换两字母的插板，总共有上十亿种可能（具体可参见 4.6.1 节）。</p>
+<p>Bombe 是图灵在波兰破译专家成果的基础上设计的，其利用了英格玛机的缺陷——字母加密后绝不会是字母自己本身，减少了对加密信息尝试组合的搜索数量。</p>
+<p>德国人时不时会升级英格玛机（e.g. 加个齿轮），图灵和他的同事们则努力破解加密。这些解密得到的情报为盟军赢得了许多优势，有些史学家认为他们将战争缩短了好几年。</p>
+<h3 id="263-图灵测试">2.6.3 图灵测试</h3>
+<p>战后图灵回到学术界，为早期计算机工作做出贡献，如曼彻斯特 1 号（早期的存储程序计算机）以及人工智能（Aritificial Intelligence, 1956 年被正式命名，见后）。</p>
+<p>1950 年，图灵设想了未来计算机能够拥有和人类一样的智力，或至少难以区分。他提出“若计算机能够欺骗人类相信它是人类，才能算是智能”，这成为智能测试的基础，成为「图灵测试」（Turing Test）。</p>
+<p>图灵测试的现代版本称为「公开全自动图灵测试」（a completely automated public Turing Test），用于区分计算机和人类，即常见的「验证码」（Captcha）。</p>
+<p>同时，计算机领域的最高奖项「图灵奖」（Turing Award）也以图灵的名字命名。</p>
+<h2 id="27-软件工程software-engineering">2.7 软件工程（Software Engineering）</h2>
+<p>工程师会通过协作与工具完成大型程序的编写，相关的事情则形成了「软件工程」这个学科，该词由工程师 Margaret Hamilton 提出。</p>
+<h3 id="271-对象">2.7.1 对象</h3>
+<p>2.3.4 节中提及的「函数」仍然无法应对超大数量级的代码，比如微软的 Office 有共计 4kw 行代码，全抽象成函数少说也有几十万个。</p>
+<p>解决方法是将函数打包成新的层级，将相关的函数代码归为一类，打包成为「对象」（objects）。</p>
+<p>比如汽车软件和定速巡航有关的函数，像是设定速度、逐渐加速减速、定制定速巡航等，都可以打包为“定速巡航对象”。程序员在使用时，通过最外层的层级逐次往下找：Car. Engine. CruiseControl. setCruiseSpeed(550)。</p>
+<h3 id="272-面向对象编程">2.7.2 面向对象编程</h3>
+<p>将函数打包成为对象的思想称为「面向对象编程」（Object-Oriented, OO），常见的 OO 语言有 Python 和 Java。其本质在于通过封装组件来隐藏复杂度，就像之前把晶体管打包成了逻辑门，很适合大型工程。</p>
+<p>一类软件中介为另一类软件中介提供服务的方式，是通过「程序编程接口」（Application Programming Interface, API）实现，使用文档（documentation）可以辅助帮助其他人理解代码的作用。</p>
+<p>API 可以控制函数和数据的访问权限，确保安全。若函数被标记为 public，则其他对象可以顺利调用（call）它；若函数被标记为 private，则只有同一个对象内的其他函数可以调用它。</p>
+<h3 id="273-ide">2.7.3 IDE</h3>
+<p>集成开发环境（Integrated Development Environments, IDE）是指集成了写代码、编译、测试、调试（debug）、实时检查、高亮代码等功能的专门工具，例如 VIM。</p>
+<p>大多数程序员会耗费 70%~80% 的时间用于 debug，好的工具能够帮助程序员防止错误和解决错误。</p>
+<h3 id="274-文档与注释">2.7.4 文档与注释</h3>
+<p>文档（documentation）是用于对代码的解释说明，通常命名为「README」来告诉其他程序员看代码前先看这个文件。</p>
+<p>文档还有助于开发者在几个月后理解自己的代码，同时能够提高复用性，更好地利用其他程序员写好的东西来解决问题，而不是自己造轮子。</p>
+<p>注释（comments）同样是解释代码的，只不过是放在源代码中使用特殊标记注明。编译器在编译代码时，会忽略注释，其唯一作用是帮助开发者理解代码。</p>
+<h3 id="275-版本控制">2.7.5 版本控制</h3>
+<p>源代码管理（Source Control）又名版本控制（Revision  Control）。大型软件公司会把会把代码放到一个中心服务器上，称为「代码仓库」（code repository）。</p>
+<p>程序员可以从代码仓库中把想修改的代码借出（check out），该操作可以在 IDE 中完成。修改测试后再提交（commit）回代码仓库。当某段代码被 check out，且可能被修改过时，其他开发者不会动这段代码，防止冲突和重复劳动，有助于分工协作。</p>
+<p>代码的主版本（master）应编译正常且尽可能少 bug，若其出现问题则可以回滚（rolled back）到之前的稳定版（stable version）。这经由版本控制管理实现，其跟踪了所有变化，也记录了谁修改了什么代码。</p>
+<h3 id="276-质量保证测试">2.7.6 质量保证测试</h3>
+<p>质量保证测试（Quality Assurance testing, QA）是指个人或团队严格测试软件的方方面面，模拟各种可能情况，试验软件是否出错（找 bug）。</p>
+<p>较为粗糙版本称为 alpha 版，是 beta 版的前身，通常只在公司内部测试。软件接近完成但没有 100% 测试过的版本称为 beta 版，有时会向公众发布进行测试。</p>
+
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/cccs/crash-course-computer-science/1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/" class="block">1 计算机组成</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/cccs/crash-course-computer-science/3-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="block">3 操作系统</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#21-编程史话early-programming">2.1 编程史话（Early Programming）</a>
+      <ul>
+        <li><a href="#211-编程介质">2.1.1 编程介质</a></li>
+        <li><a href="#212-冯诺依曼结构">2.1.2 冯诺依曼结构</a></li>
+      </ul>
+    </li>
+    <li><a href="#22-编程语言the-first-programming-languages">2.2 编程语言（The First Programming Languages）</a></li>
+    <li><a href="#23-编程原理语句和函数programming-basics-statements--functions">2.3 编程原理：语句和函数（Programming Basics: Statements &amp; Functions）</a>
+      <ul>
+        <li><a href="#231-概述">2.3.1 概述</a></li>
+        <li><a href="#232-控制流语句control-statements">2.3.2 控制流语句（Control statements）</a>
+          <ul>
+            <li><a href="#if-statements">if Statements</a></li>
+            <li><a href="#条件循环conditional-loop">条件循环（conditional loop）</a></li>
+          </ul>
+        </li>
+        <li><a href="#234-函数">2.3.4 函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#24-算法入门intro-to-algorithms">2.4 算法入门（Intro to Algorithms）</a>
+      <ul>
+        <li><a href="#241-概述">2.4.1 概述</a>
+          <ul>
+            <li><a href="#算法">算法</a></li>
+            <li><a href="#复杂度">复杂度</a></li>
+          </ul>
+        </li>
+        <li><a href="#242-选择排序selection-sort">2.4.2 选择排序（Selection sort）</a></li>
+        <li><a href="#243-归并排序merge-sort">2.4.3 归并排序（merge sort）</a></li>
+        <li><a href="#244-dijkstra-算法">2.4.4 Dijkstra 算法</a></li>
+      </ul>
+    </li>
+    <li><a href="#25-数据结构data-structures">2.5 数据结构（Data Structures）</a>
+      <ul>
+        <li><a href="#251-数组array">2.5.1 数组（Array）</a>
+          <ul>
+            <li><a href="#数组">数组</a></li>
+            <li><a href="#字符串">字符串</a></li>
+            <li><a href="#矩阵">矩阵</a></li>
+          </ul>
+        </li>
+        <li><a href="#252-结构体struct">2.5.2 结构体（struct）</a></li>
+        <li><a href="#253-链表">2.5.3 链表</a>
+          <ul>
+            <li><a href="#单链表linked-list">单链表（linked list）</a></li>
+            <li><a href="#队列queue">队列（queue）</a></li>
+            <li><a href="#栈stacks">栈（stacks）</a></li>
+          </ul>
+        </li>
+        <li><a href="#254-树tree">2.5.4 树（tree）</a></li>
+      </ul>
+    </li>
+    <li><a href="#26-阿兰图灵alan-turing">2.6 阿兰·图灵（Alan Turing）</a>
+      <ul>
+        <li><a href="#261-丘奇-图灵论题">2.6.1 丘奇-图灵论题</a>
+          <ul>
+            <li><a href="#可判定性问题">可判定性问题</a></li>
+            <li><a href="#图灵机">图灵机</a></li>
+            <li><a href="#图灵完备">图灵完备</a></li>
+            <li><a href="#停机问题">停机问题</a></li>
+            <li><a href="#可计算性理论">可计算性理论</a></li>
+          </ul>
+        </li>
+        <li><a href="#262-破译英格玛机">2.6.2 破译英格玛机</a></li>
+        <li><a href="#263-图灵测试">2.6.3 图灵测试</a></li>
+      </ul>
+    </li>
+    <li><a href="#27-软件工程software-engineering">2.7 软件工程（Software Engineering）</a>
+      <ul>
+        <li><a href="#271-对象">2.7.1 对象</a></li>
+        <li><a href="#272-面向对象编程">2.7.2 面向对象编程</a></li>
+        <li><a href="#273-ide">2.7.3 IDE</a></li>
+        <li><a href="#274-文档与注释">2.7.4 文档与注释</a></li>
+        <li><a href="#275-版本控制">2.7.5 版本控制</a></li>
+        <li><a href="#276-质量保证测试">2.7.6 质量保证测试</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

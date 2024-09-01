@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>5.5 计算机中的心理学 (Psychology of Computing) | 5 拓展讨论 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="系统设计师 (system designers) 会综合运用社会心理学、认知心理学、行为心理学、感知心理学等学科原理，使得物理界面或计算机界面更加具有「易用度」(Usability)。 易">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science | 计算机速成课",
+      "item":"https://viyi.cc/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"5 拓展讨论",
+      "item":"https://viyi.cc/docs/extended_discussion/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"5.5 计算机中的心理学 (Psychology of Computing)",
+      "item":"https://viyi.cc/docs/extended_discussion/5.5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6-psychology-of-computing/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs/extended_discussion/5.5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6-psychology-of-computing/"
+    },
+    "headline": "5.5 计算机中的心理学 (Psychology of Computing) | 5 拓展讨论 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  2506 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "系统设计师 (system designers) 会综合运用社会心理学、认知心理学、行为心理学、感知心理学等学科原理，使得物理界面或计算机界面更加具有「易用度」(Usability)。 易"
+}
+</script><meta property="og:title" content="5.5 计算机中的心理学 (Psychology of Computing) | 5 拓展讨论 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs/extended_discussion/5.5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6-psychology-of-computing/" />
+
+
+
+
+<meta property="og:description" content="系统设计师 (system designers) 会综合运用社会心理学、认知心理学、行为心理学、感知心理学等学科原理，使得物理界面或计算机界面更加具有「易用度」(Usability)。 易" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-e">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">目录</span>
+    <i class='fas fa-caret-right ms-1'></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="https://viyi.cc/docs/extended_discussion/">5 拓展讨论</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/">5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/">5.2 计算机视觉 (Computer Vision)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.3-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86-natural-language-processing/">5.3 自然语言处理 (Natural Language Processing)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.4-%E6%9C%BA%E5%99%A8%E4%BA%BA-robots/">5.4 机器人 (Robots)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6-psychology-of-computing/">5.5 计算机中的心理学 (Psychology of Computing)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.6-%E6%95%99%E8%82%B2%E5%9E%8B%E7%A7%91%E6%8A%80-educational-technology/">5.6 教育型科技 (Educational Technology)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.7-%E5%A5%87%E7%82%B9%E5%A4%A9%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5the-singularity-skynet-and-the-future-of-computing/">5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing)</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    <article class="prose">
+  <h1 class="mb-4">5.5 计算机中的心理学 (Psychology of Computing)</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>6分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>系统设计师 (system designers) 会综合运用社会心理学、认知心理学、行为心理学、感知心理学等学科原理，使得物理界面或计算机界面更加具有「易用度」(Usability)。</p>
+<p>易用度是指指的是如软件这类人造物体软件达到目的的效率有多高。为了帮助人类工作，我们需要了解人类是怎么观察、思考、反应和互动的。</p>
+<h3 id="55-人类感知特性">5.5 人类感知特性</h3>
+<h4 id="视觉系统-visual-perception">视觉系统 (Visual Perception)</h4>
+<p>以视觉系统为例，人类擅长为颜色的深浅排序，而不擅长为不同颜色排序 (根据波长)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675508596239.png" alt="颜色深浅"></p>
+<p>因此，同色不同强度的颜色适合用于表现连续值，而不同颜色更适合用于分类或对比数据。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675508623450.png" alt="颜色区分"></p>
+<h4 id="认知系统-human-cognition">认知系统 (human cognition)</h4>
+<p>理解人类的认知系统也能帮我们设计更好的界面，比如信息分块 (chunked) 后会更易于读取和记忆。</p>
+<p>分块是指把信息分成更小，更有意义的块。人类的短期记忆能记住 5 到 9 个东西，保守估计是在 5 个及以下组块，因此在记忆电话号码时我们更倾向于分块记忆。</p>
+<p>尽管对于计算机而言，分块更加耗费时间和空间且效率更低，但这对人类更有效率，因此许多界面设计也利用了 &ldquo;分块&rdquo;，比如下拉菜单和带按钮的菜单栏。</p>
+<h3 id="552-直观功能">5.5.2 直观功能</h3>
+<p>Don Norman 使得 &ldquo;直观功能/功能可见性&rdquo; (affordances) 这个概念在计算机领域流行起来，据他所说，&ldquo;直观功能&rdquo; 是在为如何操作物体提供线索，而无需提示说明。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675509097898.png" alt="affordances"></p>
+<p>这个概念广泛用于 3.9 节 p26 集所讨论的 &ldquo;图形用户界面&rdquo;，这也是图形界面比命令行更易用的原因之一。</p>
+<p>@Carrie Anne 最喜欢的&quot;直观功能&quot;之一是向用户表明元素是可拖动的样式「滚花」(knurling)，其来源于现实世界中工具上用于提高握力的纹理。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675509388291.png" alt="knurling"></p>
+<p>&ldquo;直观功能&rdquo; 的心理学概念依据是「认出与回想」(recognition vs. recall)，这就是为什么选择题比填空题容易的原因，一般来说用感觉来触发记忆会容易得多。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675509642526.png" alt="认出与回想"></p>
+<p>图形界面用 &ldquo;图标&rdquo; (icons) 代表功能，比起依靠记忆来输入命令的命令行界面方便得多，无需回想功能只需认出图标即可。</p>
+<p>而让所有菜单选项好找好记，有时候意味着用的时候会慢一些。这与另一个心理学概念「专业知识」 (expertise) 有所冲突。当我们熟悉界面之后，会建立起如何高效完成某个事情的 &ldquo;心理模型&rdquo; (mental models) 使得操作速度会加快。</p>
+<p>好的界面会提供多种方法来实现目标操作，比如适用于新手的菜单栏操作，以及使用于熟练者的快捷键操作。</p>
+<h3 id="553-情感计算">5.5.3 情感计算</h3>
+<p>Rosalind Picard 在 1995 年关于「情感计算」 (Affective Computing) 的论文中，阐述了 &ldquo;计算机会根据用户状态做出恰当反应&rdquo; 的愿景。这篇论文开创了心理学、社会科学和计算机科学的跨学科结合，促进了让计算机理解人类情感的研究。</p>
+<p>情绪会影响人类学习、沟通和决策等日常活动，&ldquo;情感系统&rdquo; (Affect-aware systems) 会利用传感器获得声音、表情以及出汗/心率等生物指标，结合写明人类如何表达情感的计算模型来估算用户情绪，确定怎样用最好的方式来回应用户，以达到使用户冷静/建立信任/完成作业等目标。</p>
+<p>Facebook 在 2012 年进行了一项&quot;影响用户&quot;的研究，通过对时间线内容进行积极/消极内容出现频率的控制，他们发现看到积极向上内容的用户发的帖子往往更正面，反之亦然。</p>
+<p>这个研究结果相当有争议性，显然 Facebook 和其他网站向你展示的内容会对我们产生影响，这对他们而言是机会也是责任。</p>
+<p>由此还衍生出 &ldquo;计算机程序如何回应人类&rdquo; 的问题， 如果用户情绪较为负面，即使有点尴尬，电脑也应该试着积极正面地回应用户。而关于什么行为是&quot;正确的&quot;，这还是个开放性的研究问题。</p>
+<h3 id="554-cmc">5.5.4 CMC</h3>
+<p>Facebook 的研究试验是「以计算机为媒介沟通」(computer-mediated communication, CMC) 领域的极佳例子，该领域是一个很大的研究领域。</p>
+<p>&ldquo;计算机媒介&rdquo;(computer-mediated) 既包括在线会议这样的 &ldquo;同步通讯&rdquo; (synchronous communication) ，也包括推特、邮件、短信这样的 &ldquo;异步通信&rdquo; (asynchronous communication)。研究人员会研究用户怎么用表情包、怎么轮换发言、以及用不同沟通渠道时的用词有什么区别等问题。</p>
+<p>一个有趣的发现是，比起面对面沟通，人们更愿意在网上透露自己的信息。</p>
+<p>心理学研究也表明，如果想说服某人、传授经验知识或引起注意，双方的眼神注视非常重要。在谈话时看着别人叫 &ldquo;相互凝视&rdquo; (mutual gaze)，这在线上场景中常常缺失，从而带来权力不平衡等副作用。</p>
+<p>因此研究人员开发了计算机视觉和图形软件来纠正头部和眼睛的位置，使得视频时会觉得对方在直视摄像头，看着他们，这种方式称为 &ldquo;增强凝视&rdquo; (augmented gaze)。</p>
+<h3 id="555-恐怖谷">5.5.5 恐怖谷</h3>
+<p>在过去一个世纪，除了工业用途机器人，也有许多用于用于医疗、教育和娱乐的机器人出现。</p>
+<p>研究机器人和人类之间如何互动的领域称为「人机交互」(Human-Robot Interaction, HRI)，该领域研究 &ldquo;人类如何感受机器人的不同形式和不同行为？&rdquo; &ldquo;机器人如何明白人类社交暗示而非只是尴尬互动？&rdquo; 等问题。</p>
+<p>人们喜欢 &ldquo;拟人化&rdquo; 的物品，对计算机也不例外。我们有对 &ldquo;将机器人的外表和行为做得尽可能像人一样&rdquo; 的追求，1940~50s 的机器人是完全的工业机器，但如今的类人机器越来越像真实人类，以至于某些时候会让人有种怪异不安感。</p>
+<p>这个&quot;几乎像人类&quot;和&quot;真的是人类&quot;之间的小曲线(dip in realism)，叫「恐怖谷」(uncanny valley)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675511864175.png" alt="恐怖谷"></p>
+<p>对于机器人是否应该有人类一样的行为，也存在争议。很多证据表明，即使机器人的行为不像人类，人类也会用社交习俗对待它们。比如机器人插队或是踩脚，人们也会生气气！</p>
+<p>毫无疑问，心理学 + 计算机科学是强大的组合拥有可以影响日常生活的巨大潜力。这也带来了很多开放式问题。</p>
+<ul>
+<li>你可能会对计算机撒谎，但计算机应不应该对你撒谎？如果撒谎能让你更高效更快乐呢？</li>
+<li>社交媒体公司是否应该精心挑选展示给你的内容，让你在网站上多待一会儿、买更多东西？</li>
+</ul>
+<p>这类道德问题不容易回答，但心理学至少可以帮助我们理解不同选择 带来的影响和意义。</p>
+
+</article>
+
+                    
+                    
+                    
+
+                    
+
+
+
+                    
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/docs/extended_discussion/5.4-%E6%9C%BA%E5%99%A8%E4%BA%BA-robots/" class="block">5.4 机器人 (Robots)</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/docs/extended_discussion/5.6-%E6%95%99%E8%82%B2%E5%9E%8B%E7%A7%91%E6%8A%80-educational-technology/" class="block">5.6 教育型科技 (Educational Technology)</a>
+      
+    </div>
+  </div>
+
+
+                    
+
+
+
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div
+  class="
+    bg-secondary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc 
+    border-s
+   hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#55-人类感知特性">5.5 人类感知特性</a>
+          <ul>
+            <li><a href="#视觉系统-visual-perception">视觉系统 (Visual Perception)</a></li>
+            <li><a href="#认知系统-human-cognition">认知系统 (human cognition)</a></li>
+          </ul>
+        </li>
+        <li><a href="#552-直观功能">5.5.2 直观功能</a></li>
+        <li><a href="#553-情感计算">5.5.3 情感计算</a></li>
+        <li><a href="#554-cmc">5.5.4 CMC</a></li>
+        <li><a href="#555-恐怖谷">5.5.5 恐怖谷</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        hljs.highlightAll();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

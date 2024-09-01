@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>4.6 加密 (Cryptography) | 4 计算机网络 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署&quot;多层防御&quot; (defence in depth) 。 计算机安">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science | 计算机速成课",
+      "item":"https://viyi.cc/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"4 计算机网络",
+      "item":"https://viyi.cc/docs/4_computer_network/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"4.6 加密 (Cryptography)",
+      "item":"https://viyi.cc/docs/4_computer_network/4.6-%E5%8A%A0%E5%AF%86-cryptography/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs/4_computer_network/4.6-%E5%8A%A0%E5%AF%86-cryptography/"
+    },
+    "headline": "4.6 加密 (Cryptography) | 4 计算机网络 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  2535 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署\u0026quot;多层防御\u0026quot; (defence in depth) 。 计算机安"
+}
+</script><meta property="og:title" content="4.6 加密 (Cryptography) | 4 计算机网络 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs/4_computer_network/4.6-%E5%8A%A0%E5%AF%86-cryptography/" />
+
+
+
+
+<meta property="og:description" content="世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署&quot;多层防御&quot; (defence in depth) 。 计算机安" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-e">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">目录</span>
+    <i class='fas fa-caret-right ms-1'></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="https://viyi.cc/docs/4_computer_network/">4 计算机网络</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/">4.1 计算机网络 (Computer Networks)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.2-%E4%BA%92%E8%81%94%E7%BD%91-the-internet/">4.2 互联网 (The Internet)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.3-%E4%B8%87%E7%BB%B4%E7%BD%91-the-world-wide-web/">4.3 万维网 (The World Wide Web)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.4-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-cybersecurity/">4.4 网络安全 (Cybersecurity)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.5-%E9%BB%91%E5%AE%A2%E4%B8%8E%E6%94%BB%E5%87%BB-hackers-cyber-attacks/">4.5 黑客与攻击 (Hackers &amp; Cyber Attacks)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="https://viyi.cc/docs/4_computer_network/4.6-%E5%8A%A0%E5%AF%86-cryptography/">4.6 加密 (Cryptography)</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    <article class="prose">
+  <h1 class="mb-4">4.6 加密 (Cryptography)</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>6分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署&quot;多层防御&quot; (defence in depth) 。</p>
+<p>计算机安全中最常见的防御形式是密码学(cryptography)，该词来自 crypto 和 graphy，大致翻译成&quot;秘密写作&quot;。其基本概念如下：</p>
+<ul>
+<li>加密算法 (Cipher)：用于将明文转为密文进行信息加密，不知道如何解密的情况下，密文看起来只是乱码。</li>
+<li>加密 (encryption)：将明文转成密文。</li>
+<li>解密 (decryption)：将密文恢复成明文。</li>
+</ul>
+<h3 id="461-替换加密">4.6.1 替换加密</h3>
+<h4 id="凯撒加密-caesar-cipher">凯撒加密 (Caesar cipher)</h4>
+<p>朱利叶斯·凯撒 (Julius Caesar) 在很早之前就通过将信件中的字母向前移动三个位置来进行加密，这种名为「凯撒加密」(Caesar cipher) 的加密算法归属于一大类名为「替换加密」(substitution ciphers) 的算法类型。</p>
+<p>为了解密，接收者要知道对方使用了什么算法，并且明确要偏移的字母位数。这种算法把每个字母替换成其他字母，其缺点在于替换后的字母出现频率依然有迹可循，密码破译师可以通过统计数据发现相关规律进而破解加密。</p>
+<p>1587 年，正因为一个&quot;替换加密&quot;的密文被破译，导致刺杀伊丽莎白女王的阴谋暴露，使得玛丽女王被处决。</p>
+<h4 id="英格玛机enigma">英格玛机（Enigma）</h4>
+<p>1900 年代，人们用密码学做了加密机器，其中最出名的是纳粹在战时用于加密通讯信息的机器英格玛机 (Enigma Machine) ，属于替换加密的一种。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742198444.png" alt="英格玛"></p>
+<p>如 2.6.2 节中提及的那样，Enigma 是一台像打字机的机器，另有键盘、灯板和转子齿轮，在键盘和转子 (rotors) 上都有完整的字母表。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742329044.png" alt="单个英格玛转子"></p>
+<p>在单个转子重，一面有代表 26 个字母的 26 个接触点，通过线连接到另一面来替换字母。使用多个转子，将上一个转自的输出作为下一个转子的输入。</p>
+<p>转子还有 26 个起始位置，可以按不同顺序放入转子，提供更多字母替换映射。转子之后是一个叫&quot;反射器&quot; (reflector) 的特殊电路，其每个引脚会连到另一个引脚并将信号发回给转子。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742426776.png" alt="多个转子"></p>
+<p>而在机器的前方还有一个插板，可以把输入键盘的字母预先进行替换，使得加密的复杂度进一步提升。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742594511.png" alt="插板"></p>
+<p>英格玛机器的电路是双向的，加密和解密步骤是一致的，因此只需要确保 发送机和接收机的初始配置一样就行。</p>
+<p>英格玛机器的加密特点在于字母加密后一定会变成另一个字母，为了弥补这种简单替换加密的弊端，英格玛会在每输入一个字母后将转子转动一个，使得同一字母会随每次的按键来呈现多种不同映射。</p>
+<p>而正如 2.6.2 节中介绍的那样，艾伦·图灵 (Alan Turing) 和同事破解了英格玛的加密过程，并把大部分破解流程做成了自动化。</p>
+<h3 id="462-移位加密-permutation-ciphers">4.6.2 移位加密 (permutation ciphers)</h3>
+<p>另一类加密算法称为「移位加密」(permutation ciphers)，其中的一个典例是「列移位加密」 (a columnar transposition cipher) —— 通过读取方向和网格大小来加密信息。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674741468891.png" alt="列移位加密"></p>
+<p>若从网格左起开始，从下往上，一次一列，重新组合字母，则可以得到 &ldquo;SCRMMTH EEA L EN-UFT NO&rdquo; 的密文。通过读取方向和 5×5 大小的网格尺寸，可以逆推出明文。</p>
+<h3 id="463-加密算法">4.6.3 加密算法</h3>
+<p>随着计算机出现，加密从硬件转往软件。早期加密算法中，应用最广泛的是数据加密标准和高级加密标准。</p>
+<h4 id="数据加密标准">数据加密标准</h4>
+<p>1977 年，IBM 和 NSA 开发了「数据加密标准」(Data Encryption Standard, DES)，最初使用的密钥是 56bit 长的二进制数，密钥数量为 $2^{56}$ (约 72 千万亿) 个。</p>
+<p>然而随着计算能力的暴增，1999 年一台 25w 美元的计算机可以在两天能遍历所有可能密钥从而暴力破解得到 DES 的密钥，因此该算法不再安全。</p>
+<h4 id="高级加密标准">高级加密标准</h4>
+<p>2001 年，为了紧跟算力增加的现状出台了「高级加密标准」(Advanced Encryption Standard, AES) ，其使用 128/192/256 bit 长度的密钥。</p>
+<p>一个 128bit 的密钥，使用如今的电脑想要暴力破解需要计算上万亿年才可以。更长的密钥位数，使得暴力破解更为困难。</p>
+<p>AES 会将数据切成每块 16 字节的大小，然后用密钥进行一系列替换加密和移位加密，再加上一些其他操作来进一步加密信息，每块数据会重复这个加密过程 10 次以上。</p>
+<p>密钥的长度位数和加密过程的重复次数都是基于性能速度和安全性两者之间的权衡，没有人愿意等待几个小时来加密发送邮件。</p>
+<p>如今 AES 被广泛使用，比如 iPhone 上加密文件、用 WPA2 协议在 WiFi 中访问 HTTPS 网站等。</p>
+<h3 id="464-密钥交换">4.6.4 密钥交换</h3>
+<p>以上所讨论的加密技术都有赖于发送者和接收者同时持有密钥进行加密解密。在早期密钥的交换可以通过口头约定或是实体交换，比如德国人给英格玛配了记录每天机器配置的密码本。</p>
+<p>为了在公开的互联网传递密钥，我们需要可靠的「密钥交换」(key exchange)——一种不发送密钥，但依然让两台计算机在密钥上达成共识的算法。</p>
+<h4 id="单向函数">单向函数</h4>
+<p>密钥交换通过「单向函数」(one-way functions) 实现，单向函数是指很容易正向算出结果，但想从结果逆向推算出输入非常困难的数学操作。</p>
+<p>以颜色为例，发送方和接收方各自选择不为人知的本命色，双方发送时将本名色混合公开色进行传输，接收时再使用自己的本名色叠加，三色混合而成的颜色 (即密钥) 仅交流双方可知。</p>
+<h4 id="迪菲-赫尔曼算法">迪菲-赫尔曼算法</h4>
+<p>具体实现是一种名为「迪菲-赫尔曼密钥交换」 (Diffie-Hellman Key Exchange) 的算法，其单向函数是模幂运算。</p>
+<p>通过对基数进行幂运算取余后得到模很容易，但想要从余数和基数中逆推出指数是多少就很难，而随着基数变大则会难上加难。</p>
+<p>基数 B 和模数 M 是公开的，指数是发送方秘密指定的。阿珍和阿强各自选取一个秘密指数 X 和 Y，发送给对方 B^X mod M /  B^Y mod M，接收之后各自对其取 X 或 Y 的次方进行模幂运算，得出仅双方共享的密钥，由此建立起「共享密钥」(shared key)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674744752363.png" alt="模幂运算"></p>
+<h3 id="465-非对称加密">4.6.5 非对称加密</h3>
+<p>双方用相同的的密钥加密和解密消息，称为「对称加密」(symmetric keys)，凯撒加密，英格玛，AES 都是&quot;对称加密&quot;。</p>
+<p>而使用两个不同的密钥——公开的公钥 (public key) 和私有的私钥 (private key)——进行加密的方式，称为「非对称加密」(asymmetric encryption)。其 &ldquo;不对称&rdquo; 在于仅仅知道公钥只能加密，但不能解密。</p>
+<h4 id="数字签名">数字签名</h4>
+<p>类似于锁和箱子，发送方将信息放入箱子锁起后传输，只有接收方的钥匙能开启箱子。同样的，公钥加密后只能私钥来解密，而私钥加密后可以用公钥解密，私钥和公钥时而是箱子时而是锁。</p>
+<p>这种做法常用于数字签名，服务器使用私钥加密，任何人都可以用服务器的公钥解密。因为只有私钥的持有人能加密，故签名无法伪造，从而证明数据源自可靠的服务器或个人。</p>
+<h4 id="rsa">RSA</h4>
+<p>目前最流行的&quot;非对称加密&quot;技术是 RSA，该名字源于发明者 Rivest, Shamir, Adleman。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674745560193.png" alt="RSA"></p>
+
+</article>
+
+                    
+                    
+                    
+
+                    
+
+
+
+                    
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/docs/4_computer_network/4.5-%E9%BB%91%E5%AE%A2%E4%B8%8E%E6%94%BB%E5%87%BB-hackers-cyber-attacks/" class="block">4.5 黑客与攻击 (Hackers &amp; Cyber Attacks)</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+    </div>
+  </div>
+
+
+                    
+
+
+
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div
+  class="
+    bg-secondary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc 
+    border-s
+   hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#461-替换加密">4.6.1 替换加密</a>
+          <ul>
+            <li><a href="#凯撒加密-caesar-cipher">凯撒加密 (Caesar cipher)</a></li>
+            <li><a href="#英格玛机enigma">英格玛机（Enigma）</a></li>
+          </ul>
+        </li>
+        <li><a href="#462-移位加密-permutation-ciphers">4.6.2 移位加密 (permutation ciphers)</a></li>
+        <li><a href="#463-加密算法">4.6.3 加密算法</a>
+          <ul>
+            <li><a href="#数据加密标准">数据加密标准</a></li>
+            <li><a href="#高级加密标准">高级加密标准</a></li>
+          </ul>
+        </li>
+        <li><a href="#464-密钥交换">4.6.4 密钥交换</a>
+          <ul>
+            <li><a href="#单向函数">单向函数</a></li>
+            <li><a href="#迪菲-赫尔曼算法">迪菲-赫尔曼算法</a></li>
+          </ul>
+        </li>
+        <li><a href="#465-非对称加密">4.6.5 非对称加密</a>
+          <ul>
+            <li><a href="#数字签名">数字签名</a></li>
+            <li><a href="#rsa">RSA</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        hljs.highlightAll();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

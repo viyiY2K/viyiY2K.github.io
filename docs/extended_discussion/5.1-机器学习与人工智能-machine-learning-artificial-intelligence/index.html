@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence) | 5 拓展讨论 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="机器学习 (Machine Learning, ML) 的本质是根据数据做出决定，机器学习算法让计算机可以从数据中学习，然后自行做出预测和决定。 能够根据数据做出一定决断并不意味着它拥有和人类一">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science | 计算机速成课",
+      "item":"https://viyi.cc/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"5 拓展讨论",
+      "item":"https://viyi.cc/docs/extended_discussion/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"5.1 机器学习与人工智能 (Machine Learning \u0026 Artificial Intelligence)",
+      "item":"https://viyi.cc/docs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/"
+    },
+    "headline": "5.1 机器学习与人工智能 (Machine Learning \u0026 Artificial Intelligence) | 5 拓展讨论 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  2214 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "机器学习 (Machine Learning, ML) 的本质是根据数据做出决定，机器学习算法让计算机可以从数据中学习，然后自行做出预测和决定。 能够根据数据做出一定决断并不意味着它拥有和人类一"
+}
+</script><meta property="og:title" content="5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence) | 5 拓展讨论 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/" />
+
+
+
+
+<meta property="og:description" content="机器学习 (Machine Learning, ML) 的本质是根据数据做出决定，机器学习算法让计算机可以从数据中学习，然后自行做出预测和决定。 能够根据数据做出一定决断并不意味着它拥有和人类一" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-e">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">目录</span>
+    <i class='fas fa-caret-right ms-1'></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="https://viyi.cc/docs/extended_discussion/">5 拓展讨论</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/">5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/">5.2 计算机视觉 (Computer Vision)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.3-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86-natural-language-processing/">5.3 自然语言处理 (Natural Language Processing)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.4-%E6%9C%BA%E5%99%A8%E4%BA%BA-robots/">5.4 机器人 (Robots)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6-psychology-of-computing/">5.5 计算机中的心理学 (Psychology of Computing)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.6-%E6%95%99%E8%82%B2%E5%9E%8B%E7%A7%91%E6%8A%80-educational-technology/">5.6 教育型科技 (Educational Technology)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.7-%E5%A5%87%E7%82%B9%E5%A4%A9%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5the-singularity-skynet-and-the-future-of-computing/">5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing)</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    <article class="prose">
+  <h1 class="mb-4">5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence)</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>5分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>机器学习 (Machine Learning, ML) 的本质是根据数据做出决定，机器学习算法让计算机可以从数据中学习，然后自行做出预测和决定。</p>
+<p>能够根据数据做出一定决断并不意味着它拥有和人类一般的智能 (Artificial Intelligence, AI)。ML 和 AI 经常混用，但计算机科学家通常认为前者是实现后者的技术之一。</p>
+<h3 id="511-分类器--classifier">5.1.1 分类器  (classifier)</h3>
+<p>本节以判断飞蛾是&quot;月蛾&quot;还是&quot;帝蛾&quot;为例，进行概念的简单讲解。这类问题称为「分类」 (classification)，用于解决分类问题的算法称为「分类器」 (classifier)。</p>
+<h3 id="决策边界-decision-boundaries">决策边界 (decision boundaries)</h3>
+<p>许多分类器会将照片和声音中的「训练数据」(training data) 简化为「特征」(features)，以便于更好地进行 &ldquo;分类&rdquo; 判断的取值。其具体步骤如下：</p>
+<p>（1）人类昆虫学家记录飞蛾的特征值和种类，进行「标记数据」(labeled data)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675220849996.png" alt="标记数据"></p>
+<p>（2）将数据可视化形成「决策空间」(decision space)，使用机器学习算法找出区分飞蛾的最佳方式，确定「决策边界」 (decision boundaries)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675220970138.png" alt="决策边界"></p>
+<p>（3）根据实际数据与决策边界的误差值，绘制「混淆矩阵」(confusion matrix)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221101348.png" alt="混淆矩阵"></p>
+<p>决策边界的确定无法 100% 涵盖正确判断，机器学习算法的目的在于「最大化正确分类 + 最小化错误分类」。在上述训练数据中，所确认的决策边界平均识别准确率在 84%。</p>
+<h4 id="决策树-decision-trees">决策树 (Decision Trees)</h4>
+<p>将不认识的飞蛾测量特征并绘制到决策空间中，这种数据称为「未标签数据」(unlabeled data)，可以利用决策边界预测判断飞蛾种类。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221502695.png" alt="未标签数据"></p>
+<p>将把决策空间切成几个盒子的简单方法可以用「决策树」(Decision Trees) 来表示，使用 if 语句写出代码就是生成决策树的机器学习算法。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221564903.png" alt="决策树"></p>
+<p>决策树只是机器学习中的一个简单示例，如今有数百种算法存在且不断出现新算法。一些算法甚至用多个 &ldquo;决策树&rdquo; 来预测，计算机科学家称为 &ldquo;森林&rdquo; (Forests)。</p>
+<p>也有不用树的方法，比如 &ldquo;支持向量机&rdquo; (Support Vector Machines)，本质上是用任意线段来切分 &ldquo;决策空间&rdquo;，线段可以是多项式或其他数学函数。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221885248.png" alt="支持向量机"></p>
+<p>机器学习算法会负责找出最好的线，最准的决策边界。增加至 3 个特征，我们还可以继续用 3D 散点图绘制出决策空间。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675221960514.png" alt="3D散点图"></p>
+<p>但当引入多个特征，就无法依靠人力在一个上千维度的决策空间里，为超平面(Hyperplane)找出一个方程了，但聪明的机器学习算法可以做到。</p>
+<h3 id="512-人工神经网络-artificial-neural-networks">5.1.2 人工神经网络 (artificial neural networks)</h3>
+<p>&ldquo;决策树&quot;和&quot;支持向量机&quot;这样的技术发源自统计学，统计学早在计算机出现前就在用数据做决定，有一大类机器学习算法用了统计学方法。但也有不用统计学的算法，其中最值得注意的是「人工神经网络」(artificial neural networks)。</p>
+<p>人类的神经元细胞利用电信号和化学信号来处理和传输消息，它从其他细胞 得到一个或多个输入，然后处理信号并发出信号，从而形成巨大的互联网络来处理复杂的信息。</p>
+<p>人工神经元通过类似的方式，接收多个输入后整合并发出一个信号。其不适用电信号或是化学信号，而是使用数据堆叠成多层，形成神经元网络，故有此名。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675222465029.png" alt="人工神经网络"></p>
+<p>仍以飞蛾为例，输入数据的特征依旧选定为 &ldquo;重量&rdquo; 和 &ldquo;翼展&rdquo; 作为第一层「输入层」(input layer) ，在输入层和输出分类结果的「输出层」(output layer)  之间存在「隐藏层」(hidden layer)。</p>
+<p>隐藏层负责把输入变成输出，实际上用于判断分类。首先将输入数据乘以权重，求和后再进行偏差值处理（加减固定值），接着再用激活函数 (activation function) / 传递函数 (transfer function) 对输出结果执行最后一次数学修改。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675224489512.png" alt="隐藏层处理"></p>
+<p>权重和偏差值一开始是随机的，算法会通过 &ldquo;标记数据&rdquo; 来进行训练和测试，进而调整这些值来逐渐提高准确性。</p>
+<p>隐藏层中存在多个神经元 (neuron)，每个神经元都会进行加权、求和、偏置、激活函数的计算过程，并向前进行传播，计算结果最高的就是分类结果。</p>
+<p>最重要的是隐藏层可以有很多层，<strong>深度学习 (deep learning )</strong> 因存在多个隐藏层而得名。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675224592479.png" alt="深度学习"></p>
+<p>训练更复杂的网络需要更多的计算量和数据，尽管神经网络 50 多年前就发明了，但直到处理器和 CPU 的发展才使得深层神经网络在最近成为可能。</p>
+<p>几年前，Google 和 Facebook 展示了深度神经网络在照片中识别人脸的准确率和人一样高，这是一个巨大的里程碑。</p>
+<h3 id="513-强化学习--reinforcement-learning">5.1.3 强化学习 ( Reinforcement Learning)</h3>
+<p>只能做特定任务 &ldquo;弱 AI&rdquo;(Weak AI) 或&quot;窄 AI&rdquo; (Narrow AI)，比如利用深层神经网络来开车、翻译、诊断医疗状况等，只能做特定的一件事。</p>
+<p>真正通用的、像人一样聪明的 AI，叫 &ldquo;强 AI&rdquo; (Strong AI)。目前强 AI 暂未出现，但许多人认为随着数字化知识的爆炸性增长可能会加速其的出现，毕竟 AI 吸收新讯息的速度比人类强得多。</p>
+<p>比如 IBM 的 Watson(沃森) 吸收了 2 亿个网页的内容，在 2011 年的知识竞答中碾压了人类；2016 年 Google 推出的 AlphaGo（玩围棋的窄 AI）通过和自己的克隆版下无数次围棋来打败人类最好的围棋选手。</p>
+<p>像 AlphaGo 这样通过不断试错来学习什么管用、什么不管用，从而自己发现成功的策略的方法很类似与人类的学习方式，这称为「强化学习」(Reinforcement Learning)。</p>
+<p>对于很多垂直的问题，强化学习已被广​​泛使用。如果这类技术被广泛使用，可能会创造出类似于人类的 &ldquo;强 AI&rdquo; 能够像人类小孩一样学习，但学习速度超快。如果这发生了，对人类可能有相当大的影响。</p>
+
+</article>
+
+                    
+                    
+                    
+
+                    
+
+
+
+                    
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/docs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/" class="block">5.2 计算机视觉 (Computer Vision)</a>
+      
+    </div>
+  </div>
+
+
+                    
+
+
+
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div
+  class="
+    bg-secondary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc 
+    border-s
+   hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#511-分类器--classifier">5.1.1 分类器  (classifier)</a></li>
+        <li><a href="#决策边界-decision-boundaries">决策边界 (decision boundaries)</a>
+          <ul>
+            <li><a href="#决策树-decision-trees">决策树 (Decision Trees)</a></li>
+          </ul>
+        </li>
+        <li><a href="#512-人工神经网络-artificial-neural-networks">5.1.2 人工神经网络 (artificial neural networks)</a></li>
+        <li><a href="#513-强化学习--reinforcement-learning">5.1.3 强化学习 ( Reinforcement Learning)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        hljs.highlightAll();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

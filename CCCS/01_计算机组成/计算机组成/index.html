@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>1 计算机组成 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="该小节介绍了计算机组成相关内容。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science",
+      "item":"https://viyi.cc/cccs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"计算机组成",
+      "item":"https://viyi.cc/cccs/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"1 计算机组成",
+      "item":"https://viyi.cc/cccs/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/cccs/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/"
+    },
+    "headline": "1 计算机组成 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2020-10-16T00:00:00+00:00",
+    "wordCount":  14368 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "该小节介绍了计算机组成相关内容。"
+}
+</script><meta property="og:title" content="1 计算机组成 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/cccs/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/" />
+
+
+
+<meta property="og:description" content="该小节介绍了计算机组成相关内容。" />
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2020-10-16T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="CCCS" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/cccs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">Crash Course Computer Science</a>
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">1 计算机组成</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>29分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h2 id="11-早期的计算early-computing">1.1 早期的计算（Early Computing）</h2>
+<h3 id="111-信息时代electronic-age">1.1.1 信息时代（Electronic Age）</h3>
+<p>三次工业革命推动全球发展：</p>
+<ol>
+<li>第一次（蒸汽）：用机械提高农业、工业、畜牧业的规模，又名机器时代（the Age of Machines）。</li>
+<li>第二次（电力）：第二次工业革命以电力的大规模应用为代表，电灯的发明为标志，用上了石油作为能源。</li>
+<li>第三次（电脑）：个人电脑的普及，互联网的出现，信息时代的到来。</li>
+</ol>
+<h3 id="112-早期计算历史">1.1.2 早期计算历史</h3>
+<blockquote>
+<p>&ldquo;At each increase of knowledge, as well as on the contrivance of every new tool, human labor becomes abridged.&rdquo; by Charles Babbage</p>
+<p>「随着知识的增长和新工具的诞生，人工劳力会越来越少。」——查尔斯·巴贝奇</p>
+</blockquote>
+<p><img src="assets/1%E6%97%A9%E6%9C%9F%E8%AE%A1%E7%AE%97%E5%8E%86%E5%8F%B2_%E9%A1%B5%E9%9D%A2_1.jpg" alt="1%E6%97%A9%E6%9C%9F%E8%AE%A1%E7%AE%97%E5%8E%86%E5%8F%B2_%E9%A1%B5%E9%9D%A2_1.jpg"></p>
+<p><img src="assets/1%E6%97%A9%E6%9C%9F%E8%AE%A1%E7%AE%97%E5%8E%86%E5%8F%B2_%E9%A1%B5%E9%9D%A2_2.jpg" alt="1%E6%97%A9%E6%9C%9F%E8%AE%A1%E7%AE%97%E5%8E%86%E5%8F%B2_%E9%A1%B5%E9%9D%A2_2.jpg"></p>
+<h2 id="12-电子计算electronic-computing">1.2 电子计算（Electronic Computing）</h2>
+<h3 id="121-诞生背景">1.2.1 诞生背景</h3>
+<p>20 世纪人类社会规模的飞速增长，二战动员人数的数量级已经达亿，全球贸易和运输更加紧密，工程和科学的复杂程度达到新高。随之而来的是数据量的暴增，这使人们需要更自动化、更强大的计算能力。</p>
+<h3 id="122-电子元器件发展历史">1.2.2 电子元器件发展历史</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1835 年
++ 继电器（Relay）
++ - 由美国科学家约瑟夫·亨利（Joseph Henry）发明。
+- 一种利用电磁感应定律控制电路开关的机械开关器件。当电流流经控制电路中的线圈，线圈会产生电磁场用以吸引金属臂，从而闭合电路。
+- 尽管在 1940s 继电器可以达到 50 次/秒的翻转速度，但受机械金属臂存在实体质量的限制，其速度提升仍然无法满足需求。
+
++ 1904 年
++ 真空管（Vacuum Tube）
++ - 热电子管（thermionic valve)：由英国物理学家约翰·弗莱明（John Ambrose Fleming）发明，其将两个电极装入气密的玻璃灯泡中，是世界上第一个真空管。
+- 二极管（diode）：由可加热的电极端发射电子，另一电极则吸引正电电子，形成电流。
+- 只能单向流动，无法控制开关电流。
+
++ 1906 年
++ 三级管（Triode）
++ - 具有放大器功能的真空管，由美国发明家李·德弗雷斯特（Lee De Forest）发明。
+- 在二极管的基础上，加入第三个“控制”电极，使得在其上增加正电荷会允许电子流动，反之亦然。
+- 可通过控制线路开关电路，无机械器件损耗问题，每秒开闭高达数千次。
+- 玻璃制品，存在易碎易烧坏的问题。
+- 1940s 成本与可靠性得到改进，使得可以被用于制作计算机。
+
++ 1947 年
++ 晶体管（transistor）
++ - 由贝尔实验室的约翰·巴丁（John Bardeen）、沃尔特·布拉顿（Walter Brattain）和威廉·肖克利（William Shockley）发明。
+- 晶体管中使用半导体材料分隔两个电极，通过“门电极”的控制线路来改变半导体材料的导电性，从而控制电流。
+- 每秒开关次数达万次；固态制品，体积小。
+
+</code></pre>
+<p>一些趣闻：</p>
+<ol>
+<li>硅谷（Silicon Valley）：美国加利福尼亚州圣克拉拉谷（Santa Clara Valley）的别称，因此地多为晶体管和半导体的开发（其最常见材料为硅）企业而得名。</li>
+<li>晶体管的发明者之一威廉·肖克利（William Shockley）在硅谷创立了肖克利半导体实验室（Shockley Semiconductor Laboratory）。</li>
+<li>因不满肖克利的管理方法和行为，实验室中的八人（Traitorous eight）成立了仙童半导体（airchild Semiconductor），其员工后来创立了英特尔（Intel）——当今世界上最大的计算机芯片制造商。</li>
+</ol>
+<h3 id="123-电子计算机发展历史">1.2.3 电子计算机发展历史</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1944 年 
++ Harvard Mark Ⅰ
++ - 由 IBM 为二战同盟国制造的计算机（electro-mechanical），用于为曼哈顿计划（Manhattan Project）进行模拟，是最大的机电计算机之一。
+- 采用约 3500 个继电器制造，受限于继电器本身的开关速度、机械元件的损耗、高温易吸引昆虫等问题，其故障率很高。
+- 据 Grace Hopper 说，因 1947 年 9 月 Harvard Mark Ⅱ 操作员从故障继电器中拔出过死虫，此后便将电脑出问题称为「出了 bug」。
+- 程序是写在打孔纸带上的，当程序出现 bug 时，为了节约时间，只能贴上胶带也就是打补丁（patched）来填补空隙，漏洞和补丁因此得名(cr.p11)。
+
++ 1943 年
++ 巨人一号（the Colossus MK 1）
++ - 由工程师 Tommy Flowers 设计，主要用于破解纳粹通信。巨人是第一个大规模使用真空管的计算机。
+- 安装于英国布莱切利园（Bletchley Park），阿兰·图灵（Alan Turing）曾在此地制作过名为 Bombe 的用于破译纳粹英格玛（Nazi Enigma codes）的机电设备，其严格意义上不算是计算机。
+- 可以通过用几百根电线插入插板的方式进行编程（执行正确操作），是第一个可编程的电子计算机。
+
++ 1946 年
++ ENIAC
++ - ENIAC 全称为电子数值积分计算机（Electronic Numerical Integrator And Computer），由约翰·莫奇利（John Mauchly）和约翰·皮斯普·埃克特（J. Presper Eckert）于宾西法尼亚大学建造完成，是世界上第一个真正的通用可编程电子计算机。
+- 每秒可执行 5000 次十位数加减法，故障率在 2 次/天左右，运作了十年。
+
++ 1955 年
++ AN/FSQ-7 computer
++ 使用了[ 49,000 个真空管](https://en.wikipedia.org/wiki/AN/FSQ-7_Combat_Direction_Central)制作，是美国空军 SAGE 防空计算机系统的一部分，已经基本到达真空管计算机的极限。
+
++ 1957 年
++ IBM 608
++ - 第一个完全使用晶体管的计算机，价格便宜使得普通消费者也能够购入。
+- 使用了 3000 个晶体管，每秒可以执行 4500 次加法，每秒可执行 80 次左右的乘除法。
+
+</code></pre>
+<h2 id="13-布尔逻辑与逻辑电路boolean-logic--logic-gates">1.3 布尔逻辑与逻辑电路（Boolean Logic &amp; Logic Gates）</h2>
+<blockquote>
+<p>[!quote] 抽象（Abstraction）</p>
+<p>在计算机科学中，抽象化是将资料与程序，以它的语义来呈现出它的外观，但是隐藏起它的实现细节。</p>
+<p>抽象化是用来减少程序的复杂度，使得程序员可以专注在处理少数重要的部分。</p>
+<p>(cr. <a href="https://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8)">wikipedia</a>, link <a href="https://ray-eldath.me/programming/three-important-ideas/">🆚 数学抽象</a>)</p>
+</blockquote>
+<h3 id="131-为何选择二进制">1.3.1 为何选择二进制</h3>
+<p>计算机从十进制的机电设备进化到了二进制（Binary）
+的电子设备，电路的开闭表示真（true）和假（false）两种状态。</p>
+<p>尽管晶体管可以表示超过两种状态（以不同大小的电流经过），但可表示的状态越多，越容易受噪音的扰动，就越难以区分。而二进制的 1 和 0 很容易在电路中用「通」和「断」区分出来。</p>
+<p>同时，布尔代数作为一种仅处理两种状态的数学分支，为计算机提供了完备的运算法则和方法。</p>
+<h3 id="132-布尔代数">1.3.2 布尔代数</h3>
+<p>布尔代数（Boolean Algebra）由英国数学家乔治·布尔（George Boole）发明，因出于对亚里士多德基于哲学的逻辑方法进行数学式扩展的兴趣，其用逻辑方程系统而正式地证明真理，并于 1847 年的首部著作《逻辑的数学分析》中进行了介绍。</p>
+<p>布尔代数中使用 true 和 false 两个变量进行逻辑操作，其基本运算如下：</p>
+<blockquote>
+<p>[!TIP]</p>
+<ol>
+<li>布尔代数的基本运算可以很容易地用晶体管构建，将晶体管的控制线当作 input，将底部的电极线当作 output，则输入输出同步：
+<img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2004%3A%E5%88%86%2015%3A%E7%A7%92%20czmo4eomik1673006655193.png" alt="布尔代数-电路图|300"></li>
+<li>能控制电流的路径称为「门」（Gate）。</li>
+<li>电路图中的拱门表示 2 条线没有连接，仅仅只是跨越。
+<img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2021%3A%E6%97%B6%2019%3A%E5%88%86%2027%3A%E7%A7%92%202inlqcldxu1673011167605.png" alt="布尔代数电路图|800"></li>
+</ol>
+</blockquote>
+<h3 id="133-not-非">1.3.3 NOT 非</h3>
+<p>数学符号： $\neg$</p>
+<p>Tips：真假倒置</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">!A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<ul>
+<li>上方的电极线当作 output，下方电极线接地。</li>
+<li>半导体通电 True （Input on），则线路接地，无输出电流，为 False。</li>
+<li>半导体不通电 False （Input off），则输出电流从上方输出，为 True。</li>
+</ul>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2037%3A%E5%88%86%2044%3A%E7%A7%92%207m0ink8yuf1673008663979.png" alt="!0-&gt;1"></p>
+<h3 id="134-and-与">1.3.4 AND 与</h3>
+<p>数学符号：$\land$</p>
+<p>Tips：一假则假，两真为真。</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A &amp;&amp; B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<ul>
+<li>两晶体管串联，当且仅当 2 个晶体管都通电，输出才有电流（True）。</li>
+</ul>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2032%3A%E5%88%86%2055%3A%E7%A7%92%20ijxuptscyd1673008375724.png" alt="1&amp;&amp;1-&gt;1"></p>
+<h3 id="135-or-或">1.3.5 OR 或</h3>
+<p>数学符号：$\lor$</p>
+<p>Tips：一真为真，两假则假。</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A || B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<ul>
+<li>两晶体管并联，均无电流时晶体管阻塞，输出无电流为 False。</li>
+</ul>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2037%3A%E5%88%86%2002%3A%E7%A7%92%20e02ug3n4s61673008622241.png" alt="0||0-&gt;0"></p>
+<h3 id="136-xor-异或">1.3.6 XOR 异或</h3>
+<p>数学符号：$\oplus$</p>
+<p>Tips：不同为真，相同则假。</p>
+<p>真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A XOR B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">假</td>
+</tr>
+<tr>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+<td style="text-align:center">真</td>
+</tr>
+<tr>
+<td style="text-align:center">真</td>
+<td style="text-align:center">真</td>
+<td style="text-align:center">假</td>
+</tr>
+</tbody>
+</table>
+<p>晶体管电路：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2038%3A%E5%88%86%2059%3A%E7%A7%92%20wp11yr3ucb1673008739003.png" alt="0 XOR 1-&gt;1"></p>
+<h3 id="137-逻辑门电路">1.3.7 逻辑门电路</h3>
+<p>作为用晶体管搭建的复杂电路的抽象，将逻辑门电路简化，用于构建更大的组件，而不至于太复杂。与、或、非以及异或门电路符号如下：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%206%3A%E6%97%A5%2020%3A%E6%97%B6%2058%3A%E5%88%86%2010%3A%E7%A7%92%20d126v1g9vz1673009890789.png" alt="逻辑门电路符号"></p>
+<h2 id="14-二进制表示法representing-numbers-and-letters-with-binary">1.4 二进制表示法（Representing Numbers and Letters with Binary）</h2>
+<blockquote>
+<p>[!quote]</p>
+<p>“Everything is number.”by Pythagoras</p>
+<p>「万物皆数。」——毕达哥斯拉</p>
+</blockquote>
+<h3 id="141-二进制">1.4.1 二进制</h3>
+<p>在二进制中，每个符号就是二进制元数字（0/1）中的一个二进制位 （binary digit） 或是称之为一位 （bit）。</p>
+<p>二进制基数为 2，位权为 2 的整数次幂。用 0 和 1 这两个数字表示，逢二进一。</p>
+<table>
+<thead>
+<tr>
+<th>$2^0$</th>
+<th style="text-align:center">$2^1$</th>
+<th style="text-align:center">$2^2$</th>
+<th style="text-align:center">$2^3$</th>
+<th style="text-align:center">$2^4$</th>
+<th style="text-align:center">$2^5$</th>
+<th style="text-align:center">$2^6$</th>
+<th style="text-align:center">$2^7$</th>
+<th style="text-align:center">$2^8$</th>
+<th style="text-align:center">$2^9$</th>
+<th style="text-align:center">$2^{10}$</th>
+<th style="text-align:center">$2^{11}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">128</td>
+<td style="text-align:center">256</td>
+<td style="text-align:center">512</td>
+<td style="text-align:center">1024</td>
+<td style="text-align:center">2048</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$2^{12}$</th>
+<th style="text-align:center">$2^{13}$</th>
+<th style="text-align:center">$2^{14}$</th>
+<th style="text-align:center">$2^{15}$</th>
+<th style="text-align:center">$2^{16}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">4096</td>
+<td style="text-align:center">8192</td>
+<td style="text-align:center">16384</td>
+<td style="text-align:center">32768</td>
+<td style="text-align:center">65536</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2012%3A%E6%97%B6%2039%3A%E5%88%86%2039%3A%E7%A7%92%20ljpx6dlqcw1673066379277.png" alt="二进制算术加法"></p>
+<p>计算机中的数据常用 8 位表示，又名 1 字节（1 bit = 1Byte）。8 位二进制可按 3 位为一组（高位补零）转换为八进制：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">八进制</th>
+<th style="text-align:center">二进制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">000</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">001</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">010</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">011</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">100</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">101</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">110</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">111</td>
+</tr>
+</tbody>
+</table>
+<h3 id="142-进制转换">1.4.2 进制转换</h3>
+<p>十进制转二进制则「除基逆序取余」，二进制转十进制则「乘位权后相加」。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2012%3A%E6%97%B6%2027%3A%E5%88%86%2055%3A%E7%A7%92%20220luifvo71673065675134.png" alt="二进制转十进制"></p>
+<h3 id="143-单位换算">1.4.3 单位换算</h3>
+<p>因 $10^3=1000$ 与 $2^{10}=1024$ 是近似值，故在某些时候 KB 所描述的两种含义经常混用（i.e. 1KB = 1000 or 1024 Byte 均正确）。</p>
+<p>通常来说描述存储容量或是文件大小时以 2 为底，描述频率或速率时以 10 为底。e.g. 32 位或 64 位计算机是指每次按块处理数据的单块长度位 32b 或 64b（32b 可表示的最大数约为 43 亿，64b 则为 $9.2^{10}$）。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">十进制术语</th>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">数值</th>
+<th style="text-align:center">二进制术语</th>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">数值</th>
+<th style="text-align:center">数值差别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">kilobyte</td>
+<td style="text-align:center">KB</td>
+<td style="text-align:center">$10^3$</td>
+<td style="text-align:center">kibibyte</td>
+<td style="text-align:center">KiB</td>
+<td style="text-align:center">$2^{10}$</td>
+<td style="text-align:center">2%</td>
+</tr>
+<tr>
+<td style="text-align:center">megabyte</td>
+<td style="text-align:center">MB</td>
+<td style="text-align:center">$10^6$</td>
+<td style="text-align:center">mebibyte</td>
+<td style="text-align:center">MiB</td>
+<td style="text-align:center">$2^{20}$</td>
+<td style="text-align:center">5%</td>
+</tr>
+<tr>
+<td style="text-align:center">gigabyte</td>
+<td style="text-align:center">GB</td>
+<td style="text-align:center">$10^9$</td>
+<td style="text-align:center">gibibyte</td>
+<td style="text-align:center">GiB</td>
+<td style="text-align:center">$2^{30}$</td>
+<td style="text-align:center">7%</td>
+</tr>
+<tr>
+<td style="text-align:center">terabyte</td>
+<td style="text-align:center">TB</td>
+<td style="text-align:center">$10^{12}$</td>
+<td style="text-align:center">tebibyte</td>
+<td style="text-align:center">TiB</td>
+<td style="text-align:center">$2^{40}$</td>
+<td style="text-align:center">10%</td>
+</tr>
+</tbody>
+</table>
+<p>e.g. 1KB = 1000B = 8000b；1MB = 1000KB etc.</p>
+<h3 id="144-负数与浮点数">1.4.4 负数与浮点数</h3>
+<p>为了便于存储数据，计算机将内存中的位置标记称为「位址」（memory addresses）。当硬盘（memory）的容量到达 GB 和 TB 这样上万亿字节的量级时，需要用 32/64 位的数字来表示位址。</p>
+<p>地址无需区分数字的正负，在其他情况下则需要区分（银行存款）。此时可用 32 位中的第 1 位标识正负（1 负 0 正），剩下的 31 位表示数字本身（实数），可表示范围为 ±20 亿左右（ $-2^{31}$ ~ $2^{31}-1$ ）。</p>
+<p>非整数因其小数点可以在数字中浮动而称为「浮点数」（Floating Point Numbers），其最常见的表示标准是 IEEE 754 标准。该标准使用类似于科学计数法的方式存储十进制值。</p>
+<p>具体表示方法为「浮点数 = 有效位数 × 指数」，以 32 位浮点数为例，第 1 位表示正负，第 2~9 位则表示指数，剩下 23 位存储有效位数。e.g. 625.9 = 0.6259（有效位数）× $10^3$（指数）</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2013%3A%E6%97%B6%2031%3A%E5%88%86%2032%3A%E7%A7%92%20ggyvmt3nuy1673069492724.png" alt="IEEE754浮点数表示"></p>
+<h3 id="145-字符">1.4.5 字符</h3>
+<p>英国作家弗朗西斯·培根（Francis Bacon）曾用 5 位序列来编码 26 个英文字母，在 1600s 传递机密信件。5 位最多可表示 $2^5=32$ 个数字，足够容纳英文字母，但无法表示符号与数字以及大小写字母。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2013%3A%E6%97%B6%2044%3A%E5%88%86%2012%3A%E7%A7%92%207qm0m2vwje1673070252440.png" alt="弗朗西斯·培根（Francis Bacon）的编码方式"></p>
+<h4 id="ascii">ASCII</h4>
+<p>ASCII 全称为美国信息交换标准代码（American Standard Code for Information Interchange），于 1963 年发明，使用 7 位代码表示 128 个不同的值。</p>
+<p>在 ASCII 中，除了大小写字母、数字以及常用符号之外，还有一些特殊命令符号。比如使用换行符（图中 10）进行换行。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2013%3A%E6%97%B6%2044%3A%E5%88%86%2022%3A%E7%A7%92%20k7yxn9xn0f1673070262779.png" alt="ASCII 码表"></p>
+<p>ASCII 的出现使得不同公司所制造的设备之间能够交换数据，我们将这种能够通用交换信息的能力称为「互用性」（interoperability）。</p>
+<p>ASCII 为英文设计，在其他非英语国家不够通用。因电脑中 1 字节有 8 位，ASCII 中未使用的 128~256 可供各个国家进行再次编码。常见用途如下：</p>
+<ul>
+<li>美国：主要用于编码附加符号，如数学符号、图形元素或是常用重音字符。</li>
+<li>俄罗斯：用于表示西里尔（Cyrillic）字符。</li>
+<li>希腊：表示希腊字母。</li>
+</ul>
+<h4 id="unicode">Unicode</h4>
+<p>尽管 ASCII 留有空余编码，但对非拉丁语系的国家仍不适用（比如中国和日本）。因此各国均发明了多字节编码方案，但互不兼容，由此带来新的问题——乱码（因过于常见，在日本甚至有个词  mojibake 表示这种情况）。</p>
+<p>Unicode 于 1992 年诞生，采用统一编码方案解决乱码问题。最常见的 Unicode 是 16 位的，可表示的量级达百万，甚至有空位放 Emoji 😉。</p>
+<h2 id="15-alu-算术逻辑单元-how-computers-calculate">1.5 ALU 算术逻辑单元 （How Computers Calculate）</h2>
+<p>ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。</p>
+<p>最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整 ALU。 Intel 74181 使用了 70 个逻辑门，但无法执行乘除运算。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2021%3A%E5%88%86%2021%3A%E7%A7%92%20v0rgihsyxw1673076081658.png" alt=" Intel 74181"></p>
+<p>ALU 由 1 个算术单元（arithmetic）和 1 个逻辑单元（logic unit）组成，算术单元可用于进行加减法运算或是增量运算（x+1），逻辑单元执行逻辑操作（如布尔代数中的基本运算）。</p>
+<h3 id="151-算术单元">1.5.1 算术单元</h3>
+<h4 id="半加器">半加器</h4>
+<p>半加器（half adder）由异或门和与门组成，仅能计算 1 位加法。两个输入（0 或 1）有 4 种可能的输出（1 = true，0 = false），不计进位的情况（1+1=0，高位舍弃）可用「异或门」搭建：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2012%3A%E5%88%86%2058%3A%E7%A7%92%20uriwgxr41q1673071978725.png" alt="一位加法器"></p>
+<p>当且仅当两个输入均为 1 时需要进位，该规则和「与门」相同，两者连接则为半加器：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2019%3A%E5%88%86%2003%3A%E7%A7%92%209ix22pv9ln1673072343403.png" alt="半加器"></p>
+<h4 id="全加器">全加器</h4>
+<p>使用半加器做两个三位二进制数加法时，需要多加一个进位上的数字（共计 3 个数相加）。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2034%3A%E5%88%86%2012%3A%E7%A7%92%20q2vav5eukd1673073252330.png" style="zoom: 50%;" /></div>
+<p>全加器的真值表如下：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2038%3A%E5%88%86%2013%3A%E7%A7%92%207fo91nyjhi1673073493503.png" alt="全加器真值表"></p>
+<p>全加器的逻辑门电路如下：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2040%3A%E5%88%86%2053%3A%E7%A7%92%20luq7musmfd1673073653711.png" alt="全加器电路图"></p>
+<h4 id="8-位行波进位加法器">8 位行波进位加法器</h4>
+<p>全加器可以处理两个三位二进制数的加法运算，两个八位二进制数的加法可以从低位逐列相加，用 1 个半加器和 7 个全加器搭建：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2052%3A%E5%88%86%2036%3A%E7%A7%92%202bznz43i2k1673074356077.png" alt="八位行波进位加法器"></p>
+<p>当计算结果的位数大于可用于表示的位数，则会出现「溢出」（overflow），这会导致 error 和不可预期的结果。</p>
+<p>为防止溢出，可以使用更多的全加器来完成 16 位或是 32 位数字的操作。但使用更多的逻辑门会提高造价，同时进位计算的耗时也更多，在每秒几十亿次的运算下该延迟仍然会造成影响。所以现代计算机所采用的加法电路为「超前进位加法器」（carry-look-ahead），其速度更快。</p>
+<h4 id="乘除法">乘除法</h4>
+<p>ALU 的算术单元基本都支持下图中的 8 种操作，简单 ALU 可以通过累加/累减来实现四则运算中的乘除法（慢但有效），复杂 ALU 会用更多的逻辑门构建乘法电路。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2006%3A%E5%88%86%2005%3A%E7%A7%92%20xugp30ectb1673075165151.png" alt="ALU算术单元支持的八种操作"></p>
+<h3 id="152-逻辑单元">1.5.2 逻辑单元</h3>
+<p>逻辑单元（logic unit）用于执行逻辑操作，比 AND、OR 和 NOT 操作，也可以用于进行简单的数值测试。注意此处的 0 和 1 遵守布尔代数的逻辑运作，而非算术加减。</p>
+<p>下图的逻辑单元门电路用于检测输出是否为 0（可用于确认两数字是否相等），OR 或门遇 1 出 1，最后用 NOT 非门取反后，凡有 1 则为 0，检测结果为 False 假，意为输出不为 0（其中至少有一位是 1）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2017%3A%E5%88%86%2012%3A%E7%A7%92%20jembsyifwo1673075831923.png" alt="检测输出是否为 0 的逻辑单元电路"></p>
+<h3 id="153-alu-抽象">1.5.3 ALU 抽象</h3>
+<p>8 位 ALU 需要用上百个逻辑门搭建，因此工程师用镂空大 V 符号来表示 ALU 组件：</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2023%3A%E5%88%86%2035%3A%E7%A7%92%20voq9xvav7n1673076215569.png" style="zoom: 50%;" /></div>
+<p>简图如下：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2028%3A%E5%88%86%2042%3A%E7%A7%92%20jkr8acrds91673076521986.png" alt="8 位 ALU 基本图形"></p>
+<p>除了两个 8 位的输出和一个输入之外，8 位 ALU 还需要用 4-bits「操作码」（Operation Code）确认执行操作类型，同时还会输出一些 1-bit 的标志位（Flags）表示特定状态，常见类型如下：</p>
+<ul>
+<li>溢出位（Overflow）检测是否发生溢出情况。</li>
+<li>零标志位（Zero）：检测输出是否为零。</li>
+<li>负标志位（Negative）：检测输出是否为负数。</li>
+</ul>
+<h2 id="16-寄存器--内存registers-and-ram">1.6 寄存器 &amp; 内存（Registers and RAM）</h2>
+<p>计算机的存储器（Memory）可分为两种类型：</p>
+<ol>
+<li>随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。
+<ul>
+<li>SRAM( Static Random Access Memory，静态随机存取存储器）：“静态”是指这种存储器只要保持通电，里面储存的数据就可以恒常保持（接下来用锁存器做的就是它）。</li>
+<li>DRAM( Dynamic Random Access Memory，动态随机存取存储器)：“动态”是指所储存的数据需要周期性地更新。</li>
+<li>Flash：允许多次写入的非易失性存储器。</li>
+<li>NVRAM( Non-Volatile Random Access Memory）：非易失性随机存取存储器。</li>
+</ul>
+</li>
+<li>持久存储器（Persistent Memory）：电源关闭时，数据也不会丢失。</li>
+</ol>
+<h3 id="161-and-or-锁存器">1.6.1 AND-OR 锁存器</h3>
+<p>用 OR 或门可以记录 1，用 AND 与门可以记录 0：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2000%3A%E5%88%86%2048%3A%E7%A7%92%20f8s9s8sa5a1673078448290.png" alt="记录 0 或 1"></p>
+<p>将两者如下图所示连接则构成 AND-OR 锁存器，可以锁定（latch）一个值来存储 1 位信息，故有此名。其有两个输入：「设置」为 1 则输出为 1，「复位」为 1 则输出为 0，两者均为 0 则输出最后记录的数字。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2003%3A%E5%88%86%2022%3A%E7%A7%92%20y54bkthke61673078602256.png" alt="AND-OR 锁存器"></p>
+<p>另，通常将放入数据的动作称为「写入」（writing），拿出数据的动作称为「读取」（reading）。</p>
+<h3 id="162-门锁gated-latch">1.6.2 门锁（Gated Latch）</h3>
+<p>AND-OR 锁存器需要用两个输入记录一个数字，使用起来较为麻烦，因此引入可以控制读写的「门锁」（Gated Latch）来存储 1 bit。门锁在输入输出之外，添加了一条允许写入线（Write Enable）——启用时允许写入数据，反之锁定（locked）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2013%3A%E5%88%86%2029%3A%E7%A7%92%20afk0la4b791673079208922.png" alt="门锁"></p>
+<h3 id="163-八位锁存器8-bit-latch">1.6.3 八位锁存器（8-bit Latch）</h3>
+<p>将 8 个门锁用 1 根允许写入线连接，构成八位锁存器，可用于存储 8 位信息。先将允许写入线置 1，写入数据后将其置 0 则可完成存储。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2019%3A%E5%88%86%2059%3A%E7%A7%92%20r4n03hbow51673079598873.png" alt="八位锁存器"></p>
+<h3 id="164-锁存器矩阵latches-matrix">1.6.4 锁存器矩阵（Latches Matrix）</h3>
+<h4 id="连接">连接</h4>
+<p>使用 16 × 16 个可存储 1 bit 的锁存器矩阵来存储 256 位，当需要启用某个锁存器时就打开相对应的行线、列线和允许写入线。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2025%3A%E5%88%86%2041%3A%E7%A7%92%20g1at8wiorr1673079941760.png" alt="锁存器矩阵"></p>
+<p>在交叉处使用 AND 与门连接，当且仅当行线、列线、单个锁存器的允许写入线均为 1 时，才允许该锁存器进行写入。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2034%3A%E5%88%86%2030%3A%E7%A7%92%20vh516h50ga1673080470371.png" alt="使用与门连接"></p>
+<p>这也意味着可以使用 1 根数据线来连接矩阵中的所有锁存器用于传输数据，因为可根据行列线进行需要开启的锁存器。类似地，可以使用 1 根允许写入线来控制从矩阵中的某个锁存器读取数据。</p>
+<p>因此，256 位的锁存器矩阵仅需 35 条线连接—— 1 条数据线、1 条允许写入线、1 条允许读取线以及 16 行、16 列用于选择锁存器的线。</p>
+<h4 id="选择">选择</h4>
+<p>4 位二进制数可表示的最大数字为 16，刚好足够满足对 16 × 16 的矩阵进行行数、列数的地址编码。</p>
+<p>可以使用 8 位二进制数来唯一标识行列交叉处的锁存器，比如第 12 行第 8 列的锁存器可以表示为 1100 1000，这就是前文 1.4.4 节中提过「位址」（memory addresses）。</p>
+<p>为了使机器读懂这个位址，需要使用 2 个支持 16 路的「多路复用器」（multiplexer）来分别处理行列地址，输入 4 位的数字后，多路复用器会连通相应的行/列线。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2051%3A%E5%88%86%2002%3A%E7%A7%92%20vuunik1yzs1673081462614.png" alt="多路复用器"></p>
+<p>16 × 16 的单位锁存器矩阵可以存储 256 个 bit，将 8 个 256-bit 的存储器连接起来构成大小为 256Bytes 的存储器。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2016%3A%E6%97%B6%2056%3A%E5%88%86%2004%3A%E7%A7%92%20kx3tmy0ii71673081764761.png" alt=""></p>
+<p>在 256Bytes 存储器中，一个八位数字是将每位各自存储在一个 256-bit 内存中，1 个 256-bit 存储器中的某位比特与其余 7 个 256-bit 存储器中的某 7 位比特共享同一个地址。因此，256Bytes 内存中也只有 256 个地址，各自代表 1Byte 的大小，可读写 8bit 值。</p>
+<p>简单起见，将这个 256Bytes 的存储器当作整体抽象为一个可寻址存储器。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2017%3A%E6%97%B6%2008%3A%E5%88%86%2029%3A%E7%A7%92%20wevb3q92ws1673082508995.png" alt="8 位可寻址存储器"></p>
+<h3 id="165-ram">1.6.5 RAM</h3>
+<p>8 位位址最多可以表示 256 （0~255）个地址，想要对 TB 或是 GB 级别的存储器寻址则更高位的数字表示地址（比如 16/32 位）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2017%3A%E6%97%B6%2022%3A%E5%88%86%2056%3A%E7%A7%92%20sck417easb1673083376008.png" alt="1980s 的 1MB 内存条"></p>
+<p>上图是 1 MB 大小的 RAM 内存条（1980s），通常是由 8 个内存模块（memory modules）构成，1 个内存模块里有 32 个内存方块（squares of memory），1 个内存方块中有 4 个小块（block），1 个小块中有 128 × 64 位的矩阵，单个小块是 8192bits 大小。</p>
+<p>因此，1 个内存方块中有 8192 × 4 = 32768 bits，总共有 32 个内存方块，单个内存模块大约在 100w bits 大小，有 8 个内存模块，总共是 800w bits 约等于 1 MB 大小。</p>
+<h2 id="17-cpu-中央处理器the-central-processing-unit">1.7 CPU 中央处理器（The Central Processing Unit）</h2>
+<h3 id="171-组成概述">1.7.1 组成概述</h3>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2019%3A%E6%97%B6%2018%3A%E5%88%86%2036%3A%E7%A7%92%20lzrx6mi9nu1673090315821.png" alt="CPU 简图"></p>
+<h4 id="cpu">CPU</h4>
+<p>CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。</p>
+<p>比如，若要执行加/减的数学指令，则交由 ALU 完成；若是内存指令，则与 RAM 通信配合进行读写操作（APU 与 RAM 用“地址线”、“数据线”和“允许读/写线”进行通信）。</p>
+<h4 id="微体系框架">微体系框架</h4>
+<p>使用高层次的视角观察计算机的方式称为「微体系架构」（microarchitecture），其更注重于逻辑上的「功能」。比如当我们用一条线连接 2 个组件时，这条线只是所有必须线路的抽象，并不代表两者连接仅仅通过一条线。</p>
+<h4 id="指令">指令</h4>
+<p>指令由「操作码」（operation code, opcode）和「地址码」组成，前者用于说明操作指令的 ID，后者则表示数据来自哪里（寄存器或内存地址）。指令用于指示计算机要做什么，多条指令共同组成程序。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2018%3A%E6%97%B6%2058%3A%E5%88%86%2035%3A%E7%A7%92%20ecjuw5ei941673089115725.png" alt="8-bit指令"></p>
+<h4 id="寄存器">寄存器</h4>
+<p>CPU 的控制单元中至少有 两个寄存器，一个「指令地址寄存器」（the instruction address register）用于存放当前指令的内存地址，另一个是「指令寄存器」（the instruction register）用于存储当前指令。</p>
+<p>另外还有一些寄存器用于临时存储数据和操作数据（如图中的 ABCD，其与 RAM 相连），寄存器也用于存储程序。</p>
+<h4 id="时钟">时钟</h4>
+<p>时钟（Clock）负责管理 CPU 运行的节奏，以精确地间隔触发电信号，控制单元用这个信号来推动 CPU 的内部操作。</p>
+<p>时钟速度（Clock Speed）是指 CPU 执行“取指令 -&gt; 解码 -&gt; 执行”中每一步的速度，单位为赫兹 Hz （频率单位，1Hz 表示 1 秒 1 个周期）。1MHz 为 1 秒 100w 个时钟周期，如今的电脑或是手机的时钟速度在千兆级别（1 秒 10 亿次时钟周期）。</p>
+<p>超频（overclocking）/  降频（underclocking）是指修改时钟速度，加快或降低 CPU 的速度。超频过多会让 CPU 过热或产生乱码，降频可以省电，对笔记本和手机很重要，通常会动态调整。</p>
+<p>1971 年发布的 4 位 CPU Intel 4004 是第一个单芯片 CPU，其微体系架构（microarchitecture）类似与上述所言，其时钟频率达到 740k Hz（每秒 74 万次）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2019%3A%E6%97%B6%2029%3A%E5%88%86%2026%3A%E7%A7%92%20gnrhs34n881673090966266.png" alt="Intel 4004 体系架构"></p>
+<h3 id="172-cpu-基本工作原理">1.7.2 CPU 基本工作原理</h3>
+<p>CPU 的运作分为三个阶段：取指令（fetch phase）、解码（decode phase）、执行（execute phase）。</p>
+<h4 id="取指令">取指令</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%209%3A%E6%97%A5%2016%3A%E6%97%B6%2054%3A%E5%88%86%2032%3A%E7%A7%92%20eiqzf4f3za1673254472039.png" alt="取指令"></p>
+<p>（1）指令地址寄存器发地址给 RAM</p>
+<p>（2）RAM 发该地址内的数据给指令寄存器</p>
+<p>（3）指令寄存器接受数据</p>
+<h4 id="解码">解码</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2013%3A%E6%97%B6%2020%3A%E5%88%86%2043%3A%E7%A7%92%20u5bw5b97n51673328043641.png" alt="解码"></p>
+<p>指令寄存器根据数据发送指令给控制单元 -&gt; 控制单元解码（使用逻辑门来确认操作码是否为某个指令，示例为 0010-LOAD A、地址 1110-14）</p>
+<h4 id="执行">执行</h4>
+<p>📌e.g. LOAD A(取数)：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2012%3A%E6%97%B6%2051%3A%E5%88%86%2019%3A%E7%A7%92%20cwmzjbgi4n1673326278756.png" alt="LOAD A"></p>
+<p>（1）使用确认指令（LOAD A）的电路打开寄存器 A 的允许写入线，将从 RAM 读取到的数据存入 A。</p>
+<p>（2）指令地址寄存器 +1，继续执行下一指令。</p>
+<p>📌e.g. ADD(加法)</p>
+<blockquote>
+<p>操作码 1000 0100 在解码阶段会被解出，1000 指 ADD 相加，则相应的后 4 位会被解释为名为 01 和 00 的两个寄存器地址，分别为寄存器 B 和寄存器 A -&gt; 把寄存器 B 的值加入寄存器 A 中。</p>
+</blockquote>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2012%3A%E6%97%B6%2045%3A%E5%88%86%2057%3A%E7%A7%92%20z0pe2mu8nk1673325956790.png" alt="ADD"></p>
+<p>（1）调用 ALU，控制单元将寄存器 B 作为 ALU 的第一个输入，将寄存器 A 作为 ALU 的第二个输入，同时传入 ADD 操作码进入 ALU。</p>
+<p>（2）ALU 计算完成后将结果暂存于控制单元中的寄存器中，若 ALU 直接将结果存于寄存器 A 中，则会出现不断自加的情况。</p>
+<p>（3）控制单元关闭 ALU 后， 将暂存在内部寄存器中的计算结果放入寄存器 A 中。</p>
+<p>（4）指令地址寄存器 +1。</p>
+<p>📌e.g. STORE(存数)</p>
+<blockquote>
+<p>操作码 0100 1101 在解码阶段会被解出，0100 为 STORE A，1101 是 RAM 地址 13。</p>
+</blockquote>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2012%3A%E6%97%B6%2047%3A%E5%88%86%2008%3A%E7%A7%92%20iwnygxwxsq1673326028241.png" alt="STORE"></p>
+<p>（1）打开寄存器 A 的允许读取线，将读取到的数据存入 RAM 。</p>
+<p>（2）程序结束，HALT 停止。</p>
+<h2 id="18-指令和程序instructions--programs">1.8 指令和程序（Instructions &amp; Programs）</h2>
+<h3 id="181-指令集">1.8.1 指令集</h3>
+<p>指令由「操作码」和「地址码」组成，前者用于说明操作指令，后者则表示操作数据的地址（寄存器或内存地址）。记录指令名称、用法、操作码以及所需 RAM 地址/寄存器位址的表格，称为「指令集」。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2013%3A%E6%97%B6%2008%3A%E5%88%86%2021%3A%E7%A7%92%20fntgnmfn3p1673327301020.png" alt="常见指令集"></p>
+<p>指令集使得身为硬件的 CPU 是「可编程」（programmable），其可以被软件控制做到硬件本身无法完成的事前，比如下图就是用仅能做加减的 ALU 实现计算余数（e.g. 11 / 5 -&gt; 1）的例子（下图的实现需要多个时钟周期，很低效）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2013%3A%E6%97%B6%2032%3A%E5%88%86%2026%3A%E7%A7%92%20mi3duinzyq1673328746142.png" alt="除法指令串"></p>
+<h3 id="182-指令执行">1.8.2 指令执行</h3>
+<h4 id="jump">JUMP</h4>
+<p>用于改变指令的顺序，或是跳过一些指令。JUMP 的底层实现方式是将指令后四位代表的内存地址的值覆盖掉「指令地址寄存器」里的值。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2013%3A%E6%97%B6%2024%3A%E5%88%86%2019%3A%E7%A7%92%209l94ptffwp1673328259061.png" alt="JUMP"></p>
+<p>为了避免无限循环（infinite loop）, JUMP 可以设置为有条件的，比如 JUMP NEGATIVE（在 ALU 的负标志位为真 true 时进行 JUMP）、JUMP IF EQUAL（如果相等）、JUMP IF GREATER（如果更大）。</p>
+<h4 id="halt">HALT</h4>
+<p>用于停止执行指令程序，同时也是区分指令和数据的标志（指令和数据在同一内存中均以二进制进行存储）。</p>
+<h3 id="183-指令长度">1.8.3 指令长度</h3>
+<p>本例中的 CPU 指令为 8 位，前 4 位为操作码，后 4 位为地址码，至多支持 $2^4=16$ 个操作，远远无法满足需求。现代 CPU 通常使用两种方法来拓展指令长度（the instruction length）：</p>
+<p>（1）使用更多位数表示指令，如 32 位或 64 位。</p>
+<p>（2）采用「可变指令长度」（variable-length instructions），指令长度任意，但指令读取稍显复杂。以 8-bit 操作码的 CPU 为例，其遇到 HALT 这类无序额外数据的指令会立即执行，遇到 JUMP 这类需要位置值信息的指令（又名「立即值」（Immediate Value））会明白所需位置值在 JUMP 后面。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2013%3A%E6%97%B6%2046%3A%E5%88%86%2055%3A%E7%A7%92%202lya7qg1jg1673329615323.png" alt="Intel 4004 指令集"></p>
+<p>1971 年 Intel 4004 CPU 发布，这是第一个单芯片 CPU，支持 46 个指令。为了表示更多的内存地址，其使用 8-bit 立即值来执行 JUMP。经多年发展，如今的 Intel i7 已有上千指令和指令变种，指令长度在 1~15 个字节中变化。</p>
+<h2 id="19-高级-cpu-设计advanced-cpu-designs">1.9 高级 CPU 设计（Advanced CPU Designs）</h2>
+<h3 id="191-瓶颈演变">1.9.1 瓶颈演变</h3>
+<p>计算机的计算量日益骤增，从 1Hz 到 1GHz 的 CPU 时钟速度（1.7.1 节），每秒需要执行约十亿条指令是非常庞大计算量。</p>
+<p>为了提升计算速度，早期的计算机试图减少晶体管（1.2/1.3 节）的切换时间，但最终碰到了物理瓶颈。</p>
+<p>另一种方法是通过硬件电路实现相关操作来加快处理速度，比如通过直接在 CPU 硬件层面中使用专门的电路设计除法，直接给 ALU 提供除法指令，而非像 1.8.1 节中举例的那样通过软件来实现。</p>
+<p>现代处理器中有许多类似于除法的专门电路来处理图形操作、解码压缩视频、加密文档等，主要为加快处理速度、减少时钟周期。像是 MMX、3DNOW、SSE 等还有额外电路来做更多复杂操作，用于游戏和加密等场景。</p>
+<p>硬件实现的便利使得人们很难删掉指令，于是其不断增加——从 Intel 4004 的 46 条指令到现代 CPU 的 上千条指令，CPU 的计算速度越来越快。新的瓶颈不再是时钟周期，而是读取写入数据的 I/O 操作。</p>
+<p>数据的读写需要 RAM 的配合，作为独立部件的 RAM 与 CPU 通过「总线」（bus）连接。尽管接近光速传输的电信号可以通过几厘米的总线很快到达（甚至不计寻址、取数、配置、输出的时间），但与每秒处理上亿条指令的 CPU 来说仍有速度差距。</p>
+<h3 id="192-缓存">1.9.2 缓存</h3>
+<p>缓存（cache）是内置于 CPU 中的仅有 KB/MB 大小的存储器，其作为中转站/临时空间缓和两者的处理速度差异，避免 CPU 在等待 I/O 操作执行时空等。</p>
+<p>因数据通常按顺序处理，故 CPU 从 RAM 取数据时，可一次取一批暂存在缓存中。在 CPU 执行时可以直接取用缓存中的数据，仅耗费 1 个时钟周期。</p>
+<p>当 CPU 执行复杂的长运算时，缓存也可充当临时空间用于存储计算中间值。</p>
+<h4 id="缓存命中">缓存命中</h4>
+<p>若 CPU 所需数据已在缓存中，称为「缓存命中」（cache hit），反之数据不在缓存中称为「缓存未命中」（cache miss）。</p>
+<h4 id="脏位">脏位</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2014%3A%E6%97%B6%2032%3A%E5%88%86%2033%3A%E7%A7%92%20z0499mn4bd1673332353893.png" alt="脏位"></p>
+<p>当因计算结果暂存在缓存中等原因，使得缓存中数据与 RAM 中的数据值不一致时，需要通过缓存中的特殊标记位「脏位」（dirty bit）记录，以便之后同步。</p>
+<h4 id="同步">同步</h4>
+<p>同步通常发生在缓存已满，但 CPU 又需要使用缓存时。在清理缓存之前，CPU 会先检查脏位，若该位已“脏”则先将数据写回 RAM 后再加载新内容。</p>
+<h3 id="192-指令流水线">1.9.2 指令流水线</h3>
+<p>指令流水线（instruction pipelining）是指当指令执行的各个阶段使用的是 CPU 不同部分时，将其并行处理（parallelize）的执行方式，像是做饭等水开的时候先去切菜。</p>
+<p>原本的「取指 -&gt; 解码 -&gt; 执行」需要 3 个时钟周期才能完成一个指令，并行后可以在每个时钟周期内处理 1 个指令，使得其吞吐量（throughput）翻三番。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2014%3A%E6%97%B6%2033%3A%E5%88%86%2017%3A%E7%A7%92%20sjf8oneu891673332397187.png" alt="指令流水线"></p>
+<p>指令流水线加快了处理速度，也带来了新的问题——数据依赖性（a dependency in the instructions）和执行流（exexution flow）的改变。</p>
+<h4 id="数据依赖性与乱序执行">数据依赖性与乱序执行</h4>
+<p>指令之间的前后依赖关系称为数据依赖性，比如在读取某个数据时，当前正在执行的指令会修改该数据，我们就会拿到旧数据。流水线处理器（pipelined processors）需要弄清楚这种数据之间的依赖关系，必要时停止流水线操作以避免出错。</p>
+<p>在高端的 CPU 中，使用「乱序执行」（out-of-order execution）来最小化流水线的停工时间，这种复杂电路其能够动态性排序有依赖关系的指令。</p>
+<h4 id="执行流改变与推测执行">执行流改变与推测执行</h4>
+<p>“条件跳转”之类的指令会改变程序的执行流，简单的流水线处理器会等待 JUMP 条件值确定后执行，复杂的流水线处理器为避免出现这种空等延迟会采用「推测执行」（speculative execution）。</p>
+<p>推测执行是指高端 CPU 会猜测 JUMP 的结果（在岔路口选择路径），提前将指令放进流水线。猜对则立即运行，猜错就清空流水线。</p>
+<p>为了减少猜错清空的次数，CPU 厂商使用更为复杂的方法来预测哪条分支更有可能，称为「分支预测」（branch prediction），现代 CPU 的正确率超过 90%。</p>
+<h4 id="超标量处理器">超标量处理器</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2014%3A%E6%97%B6%2052%3A%E5%88%86%2009%3A%E7%A7%92%205sf2i40vbi1673333529482.png" alt="超标量处理器"></p>
+<p>理想情况下，指令流水线在 1 个时钟周期完成 1 个指令，而可以在 1个时钟周期完成多个指令的处理器称为「超标量处理器」（superscalar processors）。</p>
+<p>这种处理器会一次性处理多条指令（取指令 + 解码），通过增加几个相同的电路执行高频指令，以便同时处理多条指令。比如很多 CPU 中会有 4/8/more 完全相同的 ALU 支持执行多个数学运算。</p>
+<h3 id="193-多核处理器">1.9.3 多核处理器</h3>
+<p>除了上一小节中谈及的优化 1 个指令流的吞吐量来提升 CPU 性能之外，还可以使用多核处理器同时运行多个指令流。</p>
+<p>多核处理器是指在一个 CPU 芯片中有多个独立处理单元，其共享缓存等资源，可以合作进行运算。如双核处理器（dual-core processors）或是四核处理器（quad-core processors）。</p>
+<h3 id="194-超级计算机">1.9.4 超级计算机</h3>
+<p>当多核处理器也无法满足运算需求时，可以使用多个多核处理器。最常见的是使用 2 个或是 4 个CPU ，而如果要模拟宇宙形成这种怪兽级别的运算（monster calculations）则需要使用超级计算机（supercomputer）的运算能力。</p>
+<p>超级计算机一般拥有着上万个 CPU，每个 CPU 有着上百个核心，每个核心的频率达到 GHz，每秒可以进行亿亿次量级的运算。</p>
+<p>截至 2022 年 11 月，<a href="https://www.top500.org/lists/top500/2022/11/">世界上最快的计算机</a>是美国橡树岭国家实验室的 Frontier，总共超过 8 千万个核心，每个核心的运算是 2GHz，每秒可运行 110.2 亿亿次浮点运算，这也称为每秒浮点运算次数（FLOPS）。</p>
+<h2 id="110-集成电路摩尔定律integrated-circuits--moores-law">1.10 集成电路、摩尔定律（Integrated Circuits &amp; Moore&rsquo;s Law）</h2>
+<h3 id="1101-集成电路integrated-circuits">1.10.1 集成电路（Integrated Circuits）</h3>
+<h4 id="数字暴政">数字暴政</h4>
+<p>1940s~1960s 中期，计算机由独立部件用线连接而成组成，这些独立部件称为「分立元件」（discrete components）。</p>
+<p>若想提升性能，只能增加更多分立元件，这会导致更多更复杂的电线，这种问题称为「数字暴政」（Tyranny of Numbers）。</p>
+<p>比如 1.2.3 小节提及的 ENIAC 就使用了 1.7w 多个真空管，7w 个电阻，1w 个电容，500w 个手工焊点。</p>
+<p>后来到了  1950s 中期，更小更可靠的晶体管在市场上出现。1959 年 IBM 将 709 计算机中的电子管换为晶体管制造出了 IBM 7090，其速度提升 6 倍，价格只有一半。但商业化的晶体管仍然属于分立元件。</p>
+<p>数字暴政问题的严重性在 1960s 达到顶峰，亟待引入新抽象来封装这种复杂性。</p>
+<h4 id="集成电路">集成电路</h4>
+<p>1958 年，Jack Kilby 使用锗作为材料将独立部件用电线连接集成在一起，使得原先分立元件组合成了新的独立组件单元，集成电路（Integrated Circuits, IC）自此出现。</p>
+<p>1959 年，Robert Noyce 所在公司仙童半导体使用了更稳定储量也更多的硅作为集成电路材料，使得集成电路被广泛使用。Noyce  也因此被公认为现代集成电路之父，开创了电子时代（the electronics era）。</p>
+<h4 id="印刷电路板">印刷电路板</h4>
+<p>起初的 IC 只集成了几个晶体管，可以将 1.3 节的逻辑门封装成单独组件，但 IC 之间的相互连接仍然不便。于是出现了「印刷电路板」（Printed Circuit Boards, PCB）。</p>
+<p>印刷电路板通过蚀刻（etch）金属线的方式将零件连接在一起，无需焊接或是使用一大堆线，并且可以大规模量产。</p>
+<p>PCB 和 IC 相结合使得分立元件和电线大幅减少，实现相同功能。</p>
+<h3 id="1102-光刻技术photolithography">1.10.2 光刻技术（Photolithography）</h3>
+<p>受限于当时的技术，在 IC 立塞 5 个以上的分立元件还是很困难，直到新的制作工艺「光刻」（Photolithography）出现，其利用光将图案印到材料上，可以使用基础操作来制造复杂电路。以用光刻技术制作晶体管为例：</p>
+<h4 id="蚀刻etch">蚀刻（etch）</h4>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2019%3A%E5%88%86%2003%3A%E7%A7%92%20oi9hx9b8tb1673702343331.png" alt="光刻基础层"></p>
+<ul>
+<li>晶圆（silicon wafer）：最基础的硅薄片，一种半导体材料，有时导电有时不导电。</li>
+<li>氧化层（oxide layer）：保护层。</li>
+<li>光刻胶（photoresist）：光照后可溶，可以使用特殊化学药剂洗掉。</li>
+<li>光掩膜（photomask）：用于遮挡不希望被强光照射融化的地方。</li>
+</ul>
+<p>强光照射后，未被光掩模遮挡的光刻胶部分会发生化学变化，使用一种化学物质洗去后，氧化层露出：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2022%3A%E5%88%86%2044%3A%E7%A7%92%20mp9nxq20aj1673702564756.png" alt="强光照射"></p>
+<p>用另一种化学物质（通常是酸）洗去氧化层中间露出部分，注意两侧氧化层被光刻胶保护未被洗去：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2025%3A%E5%88%86%2056%3A%E7%A7%92%20ujxk66y7w81673702755980.png" alt="洗氧化层"></p>
+<p>使用另一种化学药品洗掉光刻胶，蚀刻完成：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2029%3A%E5%88%86%2031%3A%E7%A7%92%20e05skp8f1d1673702971087.png" alt="洗光刻胶"></p>
+<h4 id="掺杂doping">掺杂（doping）</h4>
+<p>使用高温气体（比如磷）渗透进暴露出的硅，改变硅的电学性质，使得其导电性更好，这一化学过程称为掺杂（doping）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2035%3A%E5%88%86%2031%3A%E7%A7%92%2090uy4vfw331673703331328.png" alt="掺杂"></p>
+<p>（注：半导体的具体物理和化学性质可参见 <a href="https://www.youtube.com/watch?v=IcrBqCFLHIY&amp;t=0s">Youtuber Derek Muller 的频道 @Veritasium</a>。）</p>
+<p>再重复一次蚀刻，放上光刻胶和光掩模，开出新形状的缺口：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2038%3A%E5%88%86%2003%3A%E7%A7%92%20a3sji5ixfb1673703483456.png" alt=""></p>
+<p>用另一种气体对硅进行掺杂，控制好深度和时机，控制其不超过之前的区域：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2040%3A%E5%88%86%2015%3A%E7%A7%92%20g8m0f1pvoj1673703614932.png" alt="二次掺杂"></p>
+<h4 id="金属化metalization">金属化（metalization）</h4>
+<p>材料处理完后，需要在氧化层上制作出通道，用于放置细小金属导线来连接晶体管。依旧使用光刻胶和光掩膜重复蚀刻步骤，刻出通道。</p>
+<p>接着放置一层薄金属（铝或者铜），该过程称为金属化（metalization）：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2047%3A%E5%88%86%2007%3A%E7%A7%92%20q0ts7df31t1673704027857.png" alt="金属化"></p>
+<p>再通过光刻胶和光掩膜重复蚀刻步骤，将金属上的具体电路蚀刻出：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2048%3A%E5%88%86%2048%3A%E7%A7%92%20tyuanol1xn1673704128024.png" alt="晶体管"></p>
+<p>至此一个晶体管（transistor）制作完工。这是一个双极型晶体管（bipolar junction transistor），由三根线连接不同的区域，每个趋于的掺杂方式不同。</p>
+<h4 id="微型芯片chip">微型芯片（chip）</h4>
+<p>光刻法同样可以制作电阻或电容等其他电子元件和相互连接的电路，其均可制作在一片硅上。</p>
+<p>光刻法一次会制作上百万个细节，同时通过焦距改变可以将透过光掩膜的光投射成任意大小，以便于制作出精细细节。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2054%3A%E5%88%86%2055%3A%E7%A7%92%20dmeut5c17j1673704495229.png" alt="光刻投影"></p>
+<p>IC 中会有许多导线上下交错，连接各个元件。一片晶圆可以制作很多 IC ，整块晶圆制作完成会后切割然后包裹进微型芯片（chip）中，成为它的核心。</p>
+<h3 id="1103-罗尔定律moore-law">1.10.3 罗尔定律（Moore&rsquo; Law）</h3>
+<p>因光刻技术的发展，晶体管变小且集成密度变高。从 1960s 初 IC 塞不下超过 5 个晶体管，到 1960s 中期市场出现超过 100 个晶体管的 IC，于是 1965 年戈登摩尔（Gordon Moore）看到了某些趋势：</p>
+<p>每两年左右，得益于材料和制造技术的发展，同样大小的空间可以塞进两倍数量的晶体管。</p>
+<p>这被称作是罗尔定理，虽然名为“定律”，但其实只是一种正确趋势。</p>
+<p>与此同时，芯片的价格也在急剧下降，从 1962 年的平均 50 美元，到 1968 年的 2 美元左右，再到现在几分钱的 IC ，晶体管更小密度更高价格也低廉。</p>
+<h3 id="1104-intel-4004">1.10.4 Intel 4004</h3>
+<p>晶体管越小，所要移动的电荷量就越少，就能越快速滴切换状态，耗电更少。同时，电路更紧凑也意味着信号延迟更低，时钟速度也会更快。</p>
+<p>1968 年，罗伯特·诺伊斯（Robert Noyce）和戈登·摩尔联手成立了新公司 Intel——现今最大的芯片制造商，该名字源于 Integrated（集成）和 Electronics（电子）两个词的组合。</p>
+<p>发布于 1971 年的 Intel 4004 CPU 是重要的里程碑，其是第一个使用 IC 制作的微型处理器（microprocessor），集成了 2.3k 个晶体管。</p>
+<h3 id="1105-超大规模集成vlsi">1.10.5 超大规模集成（VLSI）</h3>
+<p>自 Intel 4004 始，CPU 中集成的晶体管数量爆发式增长：</p>
+<ul>
+<li>1980 年，3w 晶体管</li>
+<li>1990 年，100w 晶体管</li>
+<li>2000 年，3000w 晶体管</li>
+<li>2010 年，10 亿晶体管</li>
+</ul>
+<p>实现 10 亿这种密度的光刻技术分辨率约为 1w 纳米，是人类头发直径的 1/10。现如今已发展到 14 纳米，比红细胞小 400 倍。</p>
+<p>与此同时，大多数电子器件——RAM、显卡、固态硬盘、摄像头感光元件 etc. ——也在指数式发展。</p>
+<p>以 iPhone 7 的 A10 CPU 为例，其在 1cm ×1 cm 大小的面积中集成了 33 亿个晶体管。</p>
+<p>这样数量级的电路设计显然无法人力一个个完成，自 1970 年代开始，现代工程师就开始使用「超大规模集成」（very-large-scale integration, VLSI）来自动生成芯片设计。</p>
+<p>比如使用「逻辑综合」（logic synthesis）这种技术，可以放置像缓存内存（memory cache）一样的完整高级组件，软件会自动高效生成电路。</p>
+<h3 id="1106-世代演变与瓶颈">1.10.6 世代演变与瓶颈</h3>
+<ul>
+<li>计算 1.0（the 1st generation of computer）：真空管</li>
+<li>计算 2.0（the second generation of electronic computing）：晶体管</li>
+<li>计算 3.0（the third generation of computing）：IC 出现并用于制作微处理器</li>
+<li>计算 4.0 （the fourth generation computer）：超大规模集成电路</li>
+</ul>
+<p>摩尔定律也许接近终结了，如果进一步做小芯片，会面临两个主要问题：</p>
+<ol>
+<li>波长精度极限：光刻法中使用的光的波长精度已经到达极限，无法更精细地使用光掩膜来蚀刻图案。因此，科学家在研制波长更短的光源，用以投射更小的图案。</li>
+<li>量子隧道贯穿（quantum tunneling）：当晶体管非常小，电极之间可能只举例几个原子，电子会跳过间隙，这种现象称为量子隧道贯穿。这会使得晶体管漏电，无法成为好的开关器件。实验室中已经造出 1 纳米大小的晶体管，但能否量产未知。</li>
+</ol>
+
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/cccs/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/%E6%8B%93%E5%B1%95%E8%AE%A8%E8%AE%BA/" class="block">Crash Course Computer Science</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#11-早期的计算early-computing">1.1 早期的计算（Early Computing）</a>
+      <ul>
+        <li><a href="#111-信息时代electronic-age">1.1.1 信息时代（Electronic Age）</a></li>
+        <li><a href="#112-早期计算历史">1.1.2 早期计算历史</a></li>
+      </ul>
+    </li>
+    <li><a href="#12-电子计算electronic-computing">1.2 电子计算（Electronic Computing）</a>
+      <ul>
+        <li><a href="#121-诞生背景">1.2.1 诞生背景</a></li>
+        <li><a href="#122-电子元器件发展历史">1.2.2 电子元器件发展历史</a></li>
+        <li><a href="#123-电子计算机发展历史">1.2.3 电子计算机发展历史</a></li>
+      </ul>
+    </li>
+    <li><a href="#13-布尔逻辑与逻辑电路boolean-logic--logic-gates">1.3 布尔逻辑与逻辑电路（Boolean Logic &amp; Logic Gates）</a>
+      <ul>
+        <li><a href="#131-为何选择二进制">1.3.1 为何选择二进制</a></li>
+        <li><a href="#132-布尔代数">1.3.2 布尔代数</a></li>
+        <li><a href="#133-not-非">1.3.3 NOT 非</a></li>
+        <li><a href="#134-and-与">1.3.4 AND 与</a></li>
+        <li><a href="#135-or-或">1.3.5 OR 或</a></li>
+        <li><a href="#136-xor-异或">1.3.6 XOR 异或</a></li>
+        <li><a href="#137-逻辑门电路">1.3.7 逻辑门电路</a></li>
+      </ul>
+    </li>
+    <li><a href="#14-二进制表示法representing-numbers-and-letters-with-binary">1.4 二进制表示法（Representing Numbers and Letters with Binary）</a>
+      <ul>
+        <li><a href="#141-二进制">1.4.1 二进制</a></li>
+        <li><a href="#142-进制转换">1.4.2 进制转换</a></li>
+        <li><a href="#143-单位换算">1.4.3 单位换算</a></li>
+        <li><a href="#144-负数与浮点数">1.4.4 负数与浮点数</a></li>
+        <li><a href="#145-字符">1.4.5 字符</a>
+          <ul>
+            <li><a href="#ascii">ASCII</a></li>
+            <li><a href="#unicode">Unicode</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#15-alu-算术逻辑单元-how-computers-calculate">1.5 ALU 算术逻辑单元 （How Computers Calculate）</a>
+      <ul>
+        <li><a href="#151-算术单元">1.5.1 算术单元</a>
+          <ul>
+            <li><a href="#半加器">半加器</a></li>
+            <li><a href="#全加器">全加器</a></li>
+            <li><a href="#8-位行波进位加法器">8 位行波进位加法器</a></li>
+            <li><a href="#乘除法">乘除法</a></li>
+          </ul>
+        </li>
+        <li><a href="#152-逻辑单元">1.5.2 逻辑单元</a></li>
+        <li><a href="#153-alu-抽象">1.5.3 ALU 抽象</a></li>
+      </ul>
+    </li>
+    <li><a href="#16-寄存器--内存registers-and-ram">1.6 寄存器 &amp; 内存（Registers and RAM）</a>
+      <ul>
+        <li><a href="#161-and-or-锁存器">1.6.1 AND-OR 锁存器</a></li>
+        <li><a href="#162-门锁gated-latch">1.6.2 门锁（Gated Latch）</a></li>
+        <li><a href="#163-八位锁存器8-bit-latch">1.6.3 八位锁存器（8-bit Latch）</a></li>
+        <li><a href="#164-锁存器矩阵latches-matrix">1.6.4 锁存器矩阵（Latches Matrix）</a>
+          <ul>
+            <li><a href="#连接">连接</a></li>
+            <li><a href="#选择">选择</a></li>
+          </ul>
+        </li>
+        <li><a href="#165-ram">1.6.5 RAM</a></li>
+      </ul>
+    </li>
+    <li><a href="#17-cpu-中央处理器the-central-processing-unit">1.7 CPU 中央处理器（The Central Processing Unit）</a>
+      <ul>
+        <li><a href="#171-组成概述">1.7.1 组成概述</a>
+          <ul>
+            <li><a href="#cpu">CPU</a></li>
+            <li><a href="#微体系框架">微体系框架</a></li>
+            <li><a href="#指令">指令</a></li>
+            <li><a href="#寄存器">寄存器</a></li>
+            <li><a href="#时钟">时钟</a></li>
+          </ul>
+        </li>
+        <li><a href="#172-cpu-基本工作原理">1.7.2 CPU 基本工作原理</a>
+          <ul>
+            <li><a href="#取指令">取指令</a></li>
+            <li><a href="#解码">解码</a></li>
+            <li><a href="#执行">执行</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#18-指令和程序instructions--programs">1.8 指令和程序（Instructions &amp; Programs）</a>
+      <ul>
+        <li><a href="#181-指令集">1.8.1 指令集</a></li>
+        <li><a href="#182-指令执行">1.8.2 指令执行</a>
+          <ul>
+            <li><a href="#jump">JUMP</a></li>
+            <li><a href="#halt">HALT</a></li>
+          </ul>
+        </li>
+        <li><a href="#183-指令长度">1.8.3 指令长度</a></li>
+      </ul>
+    </li>
+    <li><a href="#19-高级-cpu-设计advanced-cpu-designs">1.9 高级 CPU 设计（Advanced CPU Designs）</a>
+      <ul>
+        <li><a href="#191-瓶颈演变">1.9.1 瓶颈演变</a></li>
+        <li><a href="#192-缓存">1.9.2 缓存</a>
+          <ul>
+            <li><a href="#缓存命中">缓存命中</a></li>
+            <li><a href="#脏位">脏位</a></li>
+            <li><a href="#同步">同步</a></li>
+          </ul>
+        </li>
+        <li><a href="#192-指令流水线">1.9.2 指令流水线</a>
+          <ul>
+            <li><a href="#数据依赖性与乱序执行">数据依赖性与乱序执行</a></li>
+            <li><a href="#执行流改变与推测执行">执行流改变与推测执行</a></li>
+            <li><a href="#超标量处理器">超标量处理器</a></li>
+          </ul>
+        </li>
+        <li><a href="#193-多核处理器">1.9.3 多核处理器</a></li>
+        <li><a href="#194-超级计算机">1.9.4 超级计算机</a></li>
+      </ul>
+    </li>
+    <li><a href="#110-集成电路摩尔定律integrated-circuits--moores-law">1.10 集成电路、摩尔定律（Integrated Circuits &amp; Moore&rsquo;s Law）</a>
+      <ul>
+        <li><a href="#1101-集成电路integrated-circuits">1.10.1 集成电路（Integrated Circuits）</a>
+          <ul>
+            <li><a href="#数字暴政">数字暴政</a></li>
+            <li><a href="#集成电路">集成电路</a></li>
+            <li><a href="#印刷电路板">印刷电路板</a></li>
+          </ul>
+        </li>
+        <li><a href="#1102-光刻技术photolithography">1.10.2 光刻技术（Photolithography）</a>
+          <ul>
+            <li><a href="#蚀刻etch">蚀刻（etch）</a></li>
+            <li><a href="#掺杂doping">掺杂（doping）</a></li>
+            <li><a href="#金属化metalization">金属化（metalization）</a></li>
+            <li><a href="#微型芯片chip">微型芯片（chip）</a></li>
+          </ul>
+        </li>
+        <li><a href="#1103-罗尔定律moore-law">1.10.3 罗尔定律（Moore&rsquo; Law）</a></li>
+        <li><a href="#1104-intel-4004">1.10.4 Intel 4004</a></li>
+        <li><a href="#1105-超大规模集成vlsi">1.10.5 超大规模集成（VLSI）</a></li>
+        <li><a href="#1106-世代演变与瓶颈">1.10.6 世代演变与瓶颈</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

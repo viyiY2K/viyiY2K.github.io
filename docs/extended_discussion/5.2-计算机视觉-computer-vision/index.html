@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>5.2 计算机视觉 (Computer Vision) | 5 拓展讨论 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="计算机视觉 (Computer Vision) 领域的目标是让计算机理解图像和视频。 [!quote] &ldquo;Just like to hear is the not the same as to listen.To take pictures is not the same as to see.&rdquo; by computer vision professor Fei-Fei Li 「听到不等于听懂，看到不等于看懂」——李飞飞">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science | 计算机速成课",
+      "item":"https://viyi.cc/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"5 拓展讨论",
+      "item":"https://viyi.cc/docs/extended_discussion/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"5.2 计算机视觉 (Computer Vision)",
+      "item":"https://viyi.cc/docs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/"
+    },
+    "headline": "5.2 计算机视觉 (Computer Vision) | 5 拓展讨论 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  977 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "计算机视觉 (Computer Vision) 领域的目标是让计算机理解图像和视频。 [!quote] \u0026ldquo;Just like to hear is the not the same as to listen.To take pictures is not the same as to see.\u0026rdquo; by computer vision professor Fei-Fei Li 「听到不等于听懂，看到不等于看懂」——李飞飞"
+}
+</script><meta property="og:title" content="5.2 计算机视觉 (Computer Vision) | 5 拓展讨论 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/" />
+
+
+
+
+<meta property="og:description" content="计算机视觉 (Computer Vision) 领域的目标是让计算机理解图像和视频。 [!quote] &ldquo;Just like to hear is the not the same as to listen.To take pictures is not the same as to see.&rdquo; by computer vision professor Fei-Fei Li 「听到不等于听懂，看到不等于看懂」——李飞飞" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-e">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">目录</span>
+    <i class='fas fa-caret-right ms-1'></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="https://viyi.cc/docs/extended_discussion/">5 拓展讨论</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/">5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/">5.2 计算机视觉 (Computer Vision)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.3-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86-natural-language-processing/">5.3 自然语言处理 (Natural Language Processing)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.4-%E6%9C%BA%E5%99%A8%E4%BA%BA-robots/">5.4 机器人 (Robots)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6-psychology-of-computing/">5.5 计算机中的心理学 (Psychology of Computing)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.6-%E6%95%99%E8%82%B2%E5%9E%8B%E7%A7%91%E6%8A%80-educational-technology/">5.6 教育型科技 (Educational Technology)</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/extended_discussion/5.7-%E5%A5%87%E7%82%B9%E5%A4%A9%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5the-singularity-skynet-and-the-future-of-computing/">5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing)</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    <article class="prose">
+  <h1 class="mb-4">5.2 计算机视觉 (Computer Vision)</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>2分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>计算机视觉 (Computer Vision) 领域的目标是让计算机理解图像和视频。</p>
+<blockquote>
+<p>[!quote]
+&ldquo;Just like to hear is the not the same as to listen.To take pictures is not the same as to see.&rdquo; by computer vision professor Fei-Fei Li</p>
+<p>「听到不等于听懂，看到不等于看懂」——李飞飞，计算机视觉教授</p>
+</blockquote>
+<h3 id="521-颜色跟踪算法">5.2.1 颜色跟踪算法</h3>
+<p>参见 3.3.1 节位图的相关说明，我们知道单个像素是由 &ldquo;红、绿、蓝&rdquo; 三原色组成的，三种颜色的组合 RGB 值可以定义一个像素的颜色。而最简单的计算机视觉算法是一种 &ldquo;颜色跟踪算法&rdquo; (color marker tracking and similar algorithms)。</p>
+<p>首先记录单色物体的最中心像素 RGB 值，如粉球中心点像素。为使得程序找到输入图片中最接近该 RGB 值颜色的像素，算法会按序 (如左上始) 逐个检查像素计算于目标颜色的差异。遍历后最接近目标值的像素位置，可能就是所要找的物品 (粉球)。</p>
+<p>根据这个思路，可以为视频的每一帧图片都跑一次算法，从而跟踪粉球的位置。其缺陷在于因为光线、阴影等干扰会使得粉球的颜色有所变化，而与所存储的原始粉球 RGB 值不一致。再加上环境中可能存在其他颜色相近的物品，也会对该算法的识别准确率产生影响。</p>
+<p>因此颜色跟踪算法的使用环境的控制要求较高，且只适用于单个像素的搜索而无法匹配占有多个像素的特征。</p>
+<h3 id="522-核-kernel">5.2.2 核 (kernel)</h3>
+<p>当我们需要识别类似于物体边缘 (由多个像素组成) 时，需要采用能够按块处理像素的算法。简化颜色以灰度图片为例进行说明，易得边缘处存在垂直变化，故设定 &ldquo;某像素是垂直边缘的可能性，取决于左右两边像素的颜色差异程度&rdquo; 的判断规则。</p>
+<p>算法在本例中不仅处理单个像素，而是处理某像素和左右两边的像素这一小区域 (small regions) ，称该区域为「块」(patches)。</p>
+<p>判断规则——色差越大越可能是边缘——的数学表达，称为「核」(kernel) 或是「过滤器」(filter) 。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675483606870.png" alt="核"></p>
+<p>&ldquo;核&rdquo; 内的值 (数字) 用于对块做像素乘法，其总和用于存储更新中心像素的值。这种将 &ldquo;核&rdquo; 用于像素块的操作方式，称为「卷积」(convolution)。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675484067296.png" alt=""></p>
+<p>将这个 &ldquo;核&rdquo; 用于照片中的每个像素，处理后的结果会突出垂直边缘的像素值，如下图所示。若想突出水平边缘的特征，则需要使用不同的 &ldquo;核&rdquo; 再做进一步的处理。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675484293371.png" alt="垂直边缘敏感核处理效果"></p>
+<p>这两个用于边缘增强的 &ldquo;核&rdquo; 称为「Prewitt 算子」(Prewitt Operators)，以发明者的名字命名。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675484648822.png"</div></div>
+<p>各类不同的 &ldquo;核&rdquo; 可以用于不同的图像转换，也可以制作对不同模式敏感的 &ldquo;核&rdquo;，用于匹配特定形状。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675485474276.png" alt="各类不同核"></p>
+<p>多个 &ldquo;核&rdquo; 组合在一起识别效率与准确率均会提升，比如用线段敏感的核判断鼻子、用像素岛核来判断眼睛等组合识别人脸。</p>
+<p>不是脸但又有一堆脸的特征在正确的位置，这种情况不太可能。这种组合 &ldquo;核&rdquo; 是一个早期很有影响力的算法的基础，称为「维奥拉·琼斯 人脸检测算法」(Viola-Jones Face Detection)。</p>
+<h3 id="523-卷积神经网络">5.2.3 卷积神经网络</h3>
+<p>5.1.2 节中介绍的人工神经网络，通过最基本的单位 &ldquo;神经元&rdquo; 来对多个输入进行处理，乘权求和后得到一个输出。当我们为神经元输入二维像素 (2D pixel data)，则会得到「卷积神经网络」 (Convolutional Neural Networks)。</p>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675486107425.png"</div></div>
+<p>与 5.2.2 小节中预先设定好的 &ldquo;核&rdquo; 不同，卷积神经网络中的 &ldquo;核&rdquo; 可以自行学习，卷积神经网络可以选择有利于识别图片中特征的核作为某层神经元的处理方式，再将处理好的图像传给下一层进行别的特征识别。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675486149597.png" alt="卷积神经网络"></p>
+<p>&ldquo;卷积神经网络&rdquo; 不是非要很多很多层，但一般会有很多层，来识别复杂物体和场景，所以算是 &ldquo;深度学习&rdquo; 的一种。</p>
+<h3 id="524-情感识别算法">5.2.4 情感识别算法</h3>
+<p>识别出人脸后，还可以进一步使用更专用的计算机视觉算法——像是 &ldquo;情感识别算法&rdquo;(emotion recognition algorithms) 来定位面部标志，进而判断人类的情绪。</p>
+<p>比如定位了鼻尖和嘴角的标志点，可以通过计算点之间的举例来判断是否张嘴或微笑；跟踪眉毛相对于眼睛的位置，可以判断是否表示喜悦或是惊喜；通过这些信息来让电脑知道你的情绪，从而做出合适的行为。这只是计算机通过视觉感知周围的一个例子，你在不同环境会有不同行为，计算机在足够聪明的情况下也应如此。</p>
+<p>面部标记点也可以捕捉脸的形状，进行生物识别，可以用于手机解锁或是让政府用摄像头跟踪人。跟踪手臂和全身的标记点，可以让计算机理解用户的身体语言，比如用户给联网微波炉的手势。</p>
+<p>抽象是构建复杂系统的关键，计算机视觉也是一样。硬件层面，有工程师在造更好的摄像头，让计算机有越来越好的视力；有了用来自摄像头的数据，可以用视觉算法找出脸和手，用其他算法接着处理来解释图片中的东西；有这些基本信息后，人们可以做出新的交互体验，比如智能电视和智能辅导系统会根据用户的手势和表情来回应。</p>
+
+</article>
+
+                    
+                    
+                    
+
+                    
+
+
+
+                    
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/docs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/" class="block">5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence)</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/docs/extended_discussion/5.3-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86-natural-language-processing/" class="block">5.3 自然语言处理 (Natural Language Processing)</a>
+      
+    </div>
+  </div>
+
+
+                    
+
+
+
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div
+  class="
+    bg-secondary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc 
+    border-s
+   hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#521-颜色跟踪算法">5.2.1 颜色跟踪算法</a></li>
+        <li><a href="#522-核-kernel">5.2.2 核 (kernel)</a></li>
+        <li><a href="#523-卷积神经网络">5.2.3 卷积神经网络</a></li>
+        <li><a href="#524-情感识别算法">5.2.4 情感识别算法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        hljs.highlightAll();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>3.2 内存 &amp; 储存介质（Memory &amp; Storage） | 3 操作系统 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="3.2.1 存储器（storage） 1.6 小节设计的 RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science | 计算机速成课",
+      "item":"https://viyi.cc/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"3 操作系统",
+      "item":"https://viyi.cc/docs/operating_system/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"3.2 内存 \u0026 储存介质（Memory \u0026 Storage）",
+      "item":"https://viyi.cc/docs/operating_system/3.2-%E5%86%85%E5%AD%98-%E5%82%A8%E5%AD%98%E4%BB%8B%E8%B4%A8memory-storage/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs/operating_system/3.2-%E5%86%85%E5%AD%98-%E5%82%A8%E5%AD%98%E4%BB%8B%E8%B4%A8memory-storage/"
+    },
+    "headline": "3.2 内存 \u0026 储存介质（Memory \u0026 Storage） | 3 操作系统 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  2897 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "3.2.1 存储器（storage） 1.6 小节设计的 RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent"
+}
+</script><meta property="og:title" content="3.2 内存 &amp; 储存介质（Memory &amp; Storage） | 3 操作系统 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs/operating_system/3.2-%E5%86%85%E5%AD%98-%E5%82%A8%E5%AD%98%E4%BB%8B%E8%B4%A8memory-storage/" />
+
+
+
+
+<meta property="og:description" content="3.2.1 存储器（storage） 1.6 小节设计的 RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-e">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">目录</span>
+    <i class='fas fa-caret-right ms-1'></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="https://viyi.cc/docs/operating_system/">3 操作系统</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/operating_system/3.1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9Foperating-systems/">3.1 操作系统（Operating Systems）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="https://viyi.cc/docs/operating_system/3.2-%E5%86%85%E5%AD%98-%E5%82%A8%E5%AD%98%E4%BB%8B%E8%B4%A8memory-storage/">3.2 内存 &amp; 储存介质（Memory &amp; Storage）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/operating_system/3.3-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9Ffiles-file-systems/">3.3 文件系统（Files &amp; File Systems）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/operating_system/3.4-%E5%8E%8B%E7%BC%A9compression/">3.4 压缩（Compression）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/operating_system/3.5-%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92human-computer-interaction/">3.5 人机交互（Human-Computer Interaction）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/operating_system/3.6-%E5%B1%8F%E5%B9%95-2d-%E5%9B%BE%E5%BD%A2%E6%98%BE%E7%A4%BA-screens-2d-graphics/">3.6 屏幕 &amp; 2D 图形显示 - Screens &amp; 2D Graphics</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/operating_system/3.7-%E5%86%B7%E6%88%98%E5%92%8C%E6%B6%88%E8%B4%B9%E4%B8%BB%E4%B9%89the-cold-war-and-consumerism/">3.7 冷战和消费主义（The Cold War and Consumerism）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/operating_system/3.8-%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%9D%A9%E5%91%BDthe-personal-computer-revolution/">3.8 个人计算机革命（The Personal Computer Revolution）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/operating_system/3.9-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2graphical-user-interfaces/">3.9 图形用户界面（Graphical User Interfaces）</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/operating_system/3.10-3d-%E5%9B%BE%E5%BD%A23d-graphics/">3.10 3D 图形（3D Graphics）</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    <article class="prose">
+  <h1 class="mb-4">3.2 内存 &amp; 储存介质（Memory &amp; Storage）</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>6分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h3 id="321-存储器storage">3.2.1 存储器（storage）</h3>
+<p>1.6 小节设计的 RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent），断电后数据会丢失。</p>
+<p>存储器是一种非易失性（non-volatile）的存储介质，断电不会丢失，直到数据被删除或覆盖。</p>
+<p>在以前“易失性”的速度快，“非易失性”的速度慢，但随着技术发展两者差异逐渐缩小。</p>
+<h3 id="322-存储介质发展">3.2.2 存储介质发展</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ 1940s
++ 打孔纸卡
++ - 最早的存储介质是打孔纸卡以及打孔纸带，其使用了十几年。
+- 1940 年代的纸卡标准是 80 列 × 12 行，一张卡可以存储 960 位数据。
+- 美国军方于 1958 年投入使用的半自动地面防空系统 SAGE 是已知最大的纸卡程序，其主程序存储在 6.25w 个纸卡上，大小为 5MB。
+- 纸卡的优点在于不用电且便宜耐用，缺点在于读取慢、只能写入一次、难以修改（打孔后无法轻易补上），且不便于存储临时值。
+
++ 1944 年
++ 延迟线存储器（Delay Line Memory）
++ - 由 J.Presper Eckert 在建造 ENNIAC 时发明，其利用压力波在液体（如水银）中传播的延迟来存储数据。
+- 在装满液体的管子两端放置 input 和 output，用电路连接后，管子中间再加一个放大器（Amplifier）弥补信号衰弱，可以做出存储数据的循环。
+![延迟线](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2016%3A%E5%88%86%2047%3A%E7%A7%92%20g6v0fqdhet1673770607331.png)
+- 信号沿着电线传播几乎是瞬时的，故在任何时间点只能显示读取 1bit 数据，但管子内可以存储多个位。
+- 因每一时刻只能读取一位，访问特定 bit 需要等待其在循环中出现，其又名「顺序存储器」或是「循环存储器」（sequential or cyclic-access memory）。
+- 1949 年制作的 EDVAC 使用了 128 条延迟线，每条 352bits，存储了 4.5w 位数据，使得 EDVAC 成为最早的存储程序计算机（且采用了冯诺依曼结构）。
+
++ 1950s
++ 磁芯存储器（magnetic core memory）
++ - 在磁芯上饶电线并施加电流，将其磁化在一个方向，关掉后仍可保持磁化；沿反方向施加电流，磁化方向（磁性）会翻转。
+![磁芯](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2033%3A%E5%88%86%2004%3A%E7%A7%92%20uoukqjb3981673771583908.png)
+- 可以将磁芯排列成网格，通过贯穿每个磁芯的线和负责选择行列的线来读写某一位，可以随时访问任意一位。
+- 第一次大规模应用是在 1953 年 MIT 的 Whirlwind 1，其使用了 32 × 32 排列的 16 块磁芯板，存储约 1.6w 位。
+- 使用手工编织，自 1950s 中期流行了 20 余年。成本从 1 美元一位下降到 1970s 的 1 美分左右。
+
++ 1951 年
++ 磁带
++ - Eckert 和同事 Mauchly 创业设计了 UNIVAC 电脑——最早进行商业销售的电脑之一，其推出了「磁带」这种新存储介质。
+![磁带](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2035%3A%E5%88%86%2022%3A%E7%A7%92%209ixbyo7pov1673771722546.png)
+- 磁带使用一条长的磁性带卷在轴上，可以在“磁带驱动器”内前后移动；写头电流流经产生磁场，将磁带的一小部分磁化；电流方向决定极性，分别代表 1 和 0；此外，另附读头用于非破坏性地检测极性。
+- UNIVAC 是由半英寸宽的 8 条并行磁带，共存储近 2MB 字节。
+- 尽管磁带驱动器昂贵，但磁带便宜又小，因此磁带至今仍用于存档。
+- 缺点在于访问速度慢，连续介质需要找倒带或是快进才能到达特定位置进行访问。
+
++ 1950~60s
++ 磁鼓存储器（Magnetic Drum Memory）
++ - 使用盖满磁性材料的金属圆筒来记录数据，滚筒会持续旋转至正确位置，使用周围数十个读写头来读或写 1bit 数据。为缩短延迟，鼓轮每分钟上千转。
+![磁鼓](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2038%3A%E5%88%86%2022%3A%E7%A7%92%20gqi8z9n05u1673771902168.png)
+- 1953 年，可以买到存储 8w 位（约 10KB）的磁鼓存储器。但在 1970 年代，其不再生产。
+
++ 1956 年
++ 磁盘（disk drive）
++ - 由磁鼓存储器衍生而来，使用盘而非圆柱体。磁盘表面有磁性，使用写入头和读取他来处理上面的 1 和 0。
+- IBM 的 RAMAC 305 是世界上第一台磁盘计算机，其利用了磁盘体积薄的特点，将其堆叠在一起提供了更多表面积来存储数据。
+- RAMAC 共计使用 50 张 24 英寸直径的磁盘，可存储 5MB 大小。支持访问任意数据，寻道时间（the seek time）为平均 1/6s。
+- 因 1/6s 的速度仍然不够快，因此另配有磁鼓存储器和磁芯存储器。可当作是「内存层次结构」（memory hierarchy）的例子，在成本和速度中取得平衡。
+![内存层次结构](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2048%3A%E5%88%86%2032%3A%E7%A7%92%206dfonkm2jt1673772512260.png)
+- 访问特定比特时，磁盘会高速旋转至正确位置，读/写磁头向上/下移动找到正确磁盘，将磁头滑入进行读写。
+- 1970 年代机械硬盘（Hard Disk Drives, HDD）大幅度改进且变得普遍，如今现代硬盘的平均寻道时间低于 1/100s。
+- 流行于 mid-1970~1990s 的软盘使用了软性材料当作磁盘，其他基本与硬盘一致。当时发明是为了便携，现在最多可以在保存图标中看到。
+
++ 1972 年
++ 激光盘（laserdisc）
++ - 12 英寸的激光盘是一种光学存储器，使用表面的小坑造成光的不同反射来存储数据，光学传感器会捕获到这些反射，从而解码为 1 和 0。
+- 更为常见的光学存储器是光盘（Compact Disk, CD）以及 90s 流行的 DVD。
+
++ 1990s
++ 固态硬盘（Solid State Drives）
++ - 现在固态硬盘 SSD 逐渐取代机械硬盘 HDD，其没有移动部件磁头，无需等待磁盘旋转，访问时间低于 1/1000s。
+- 第一个 RAM 集成电路出现在 1972 年，成本每比特 1 美分，迅速取代了磁芯存储器。SSD 比起 RAM 的速度还是慢了很多，因此现代计算机仍然采用存储层次结构。
+
+</code></pre>
+
+</article>
+
+                    
+                    
+                    
+
+                    
+
+
+
+                    
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/docs/operating_system/3.1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9Foperating-systems/" class="block">3.1 操作系统（Operating Systems）</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/docs/operating_system/3.3-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9Ffiles-file-systems/" class="block">3.3 文件系统（Files &amp; File Systems）</a>
+      
+    </div>
+  </div>
+
+
+                    
+
+
+
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div
+  class="
+    bg-secondary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc 
+    border-s
+   hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#321-存储器storage">3.2.1 存储器（storage）</a></li>
+        <li><a href="#322-存储介质发展">3.2.2 存储介质发展</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        hljs.highlightAll();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

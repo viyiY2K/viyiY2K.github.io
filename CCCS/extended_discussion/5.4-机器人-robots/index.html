@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>5.4 机器人 (Robots) | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="5.4.1 robot 机器人是由计算机控制，可以自动执行一系列动作的机器。 外观并不重要，工厂的机械臂 (industrial arms)、无人机 (drones that fly)、辅助外科医生的蛇状机器人(snak">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science",
+      "item":"https://viyi.cc/cccs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"5 拓展讨论",
+      "item":"https://viyi.cc/cccs/extended_discussion/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"5.4 机器人 (Robots)",
+      "item":"https://viyi.cc/cccs/extended_discussion/5.4-%E6%9C%BA%E5%99%A8%E4%BA%BA-robots/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/cccs/extended_discussion/5.4-%E6%9C%BA%E5%99%A8%E4%BA%BA-robots/"
+    },
+    "headline": "5.4 机器人 (Robots) | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  2563 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "5.4.1 robot 机器人是由计算机控制，可以自动执行一系列动作的机器。 外观并不重要，工厂的机械臂 (industrial arms)、无人机 (drones that fly)、辅助外科医生的蛇状机器人(snak"
+}
+</script><meta property="og:title" content="5.4 机器人 (Robots) | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/cccs/extended_discussion/5.4-%E6%9C%BA%E5%99%A8%E4%BA%BA-robots/" />
+
+
+
+
+<meta property="og:description" content="5.4.1 robot 机器人是由计算机控制，可以自动执行一系列动作的机器。 外观并不重要，工厂的机械臂 (industrial arms)、无人机 (drones that fly)、辅助外科医生的蛇状机器人(snak" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="cccs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+            <a href="/cccs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">CCCS</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">5.4 机器人 (Robots)</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>6分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h3 id="541-robot">5.4.1 robot</h3>
+<p>机器人是由计算机控制，可以自动执行一系列动作的机器。</p>
+<p>外观并不重要，工厂的机械臂 (industrial arms)、无人机 (drones that fly)、辅助外科医生的蛇状机器人(snake-like medical robots)、以及人形机器人(robotic assistants)，都可以是机器人 (robot)。</p>
+<p>有时我们会将虚拟人物称为 &ldquo;robot&rdquo;，但将其称作 &ldquo;bot&rdquo; 甚至是 &ldquo;agent&rdquo; 会更加合适，因为 &ldquo;robot&rdquo; 的潜在含义是存在于现实世界中的机器。</p>
+<p>robot (机器人) 一词首次出现在 1920 年的一部捷克戏剧，代表人造的类人角色。该词源于斯拉夫语词汇 robota，代表农民在十九世纪欧洲封建社会的强迫劳动。</p>
+<p>在持续了一个世纪的称呼中，机器人都是大规模生产、高效不知疲倦、看起来像人的东西，但毫无情感，不会保护自己，没有创造力。</p>
+<h3 id="542-发展简史">5.4.2 发展简史</h3>
+<pre><code class="language-timeline">[line-2, body-2]
+
++ pre-1920s
++ 自动机 (auromatons)
++ - 古代发明家发明了比如计时/定时敲钟的机械装置，能够自动运行
+- 这类无需用电、具有人类或动物形象、能唱歌跳舞打鼓等的装置，可以认为是广义上的自动运行机器
+
++ 1739 年
++ Canard Digerateur (吃饭鸭鸭)
++ - 法国人 Jacques de Vaucans 发明的机器，形状像鸭子，能够吃东西然后排泄。
+- 伏尔泰在 1739 年写过，&quot;如果没有吃饭鸭鸭的声音，还有什么能够提醒你法国的荣光呢？&quot;
+
++ 1700 年
++ 土耳其行棋傀儡 (Mechanical Turk)
++ - 一个能下国际象棋的人形机器人，在欧洲各地展览，棋艺好得像某种机械人工智能
+- 实际上机器内有人控制，这是一个骗局
+
++ 1940s 末
++ CNC 机器
++ - Computer Numerical Control，简称 CNC 机器，是第一台由计算机控制的机器
+- CNC 机器可以执行一串由程序指定的操作，提高制造业的制造能力和精确度，同时降低了成本（5.7 会继续讨论）
+
++ 1960 年
++ Unimate
++ - 第一个进行商业出售的可编程工业机器人
+- 可以把压铸机做出来的热金属成品提起来，然后堆起来
+- 自此开启机器人行业
+
+</code></pre>
+<h3 id="543-控制原理">5.4.3 控制原理</h3>
+<h4 id="简单控制回路">简单控制回路</h4>
+<p>用于像是用机器爪子在轨道上来回移动这类简单的运动，可以通过 &ldquo;简单控制回路&rdquo; (simple control loop) 来完成，下图是一个判断当前位置和目标位置的「负反馈回路」(negative feedback loop) 示例。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675504258699.png" alt="负反馈回路"></p>
+<p>一个基本的负反馈回路由以下 3 部分组成：</p>
+<ol>
+<li>传感器 (sensor)：测量现实中想要控制的东西，如水压、马达位置、气温。</li>
+<li>error：通过传感器来计算与目标值相差的多少。</li>
+<li>控制器 (controller)：决定怎么减小 error，控制泵/电机/加热元件或其他物理组件来做出动作。</li>
+</ol>
+<p>简单控制回路适用于严格控制的环境，但现实世界中 robot 会受摩擦力、惯性力、风阻力等外力影响，比如上例中爪子如果过重则在惯性力的作用下可能会使得爪子在目标处不断来回移动。</p>
+<h4 id="pid-控制器">PID 控制器</h4>
+<p>PID 控制器的全称是 &ldquo;proportional–integral–derivative controller&rdquo; (比例-积分-微分 控制器)，早期是机械设备，现在由纯软件控制。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675506346709.png" alt="PID"></p>
+<p>以餐厅内递送食物的机器人为例，其设计目标是以 2m/s 的理想速度进行穿行，需要根据环境中的变化（风阻、地形 etc.）来控制马达动力的大小从而保持理想速度。</p>
+<p>PID 控制器会根据当前速度和目标速度的数据，计算以下 3 个值：</p>
+<ol>
+<li>比例值 (proportional value)：实际值 (actual value) 和理想值 (desired value) 之差。
+<ul>
+<li>实际值可能是实时的，也可能存在滞后。</li>
+<li>&ldquo;实际值&quot;和&quot;理想值&quot;的差距 (比例值) 越大则约用力。</li>
+<li>实行 &ldquo;比例控制&rdquo; (proportional control)。</li>
+</ul>
+</li>
+<li>积分值 (integral value)：一段时间内的误差总和，辅助弥补误差。
+<ul>
+<li>如上坡可能产生误差，值过大可能比例控制得不够，需更用力</li>
+</ul>
+</li>
+<li>导数值 (derivative value)：理想值与实际值之间的变化率。
+<ul>
+<li>有助于解决未来可能出现的错误。</li>
+<li>又名 &ldquo;预期控制&rdquo; (anticipatory control)。</li>
+</ul>
+</li>
+</ol>
+<p>这三个值会拥有各自权重，组合使用来控制系统。PID 控制器应用广泛，比如汽车里的巡航控制、无人机用来保持水平得螺旋桨速度控制等。</p>
+<h3 id="544-机器人的发展现状">5.4.4 机器人的发展现状</h3>
+<p>控制回路负责将机器人的物理属性 (e.g. 当前位置) 变成期望值，这些期望值由更高层软件来负责确定，其做出计划让机器人执行。</p>
+<p>利用技术，机器人已经取得了很多成就，比如潜入深海、探索火星。但有趣的是，许多对人类来说很简单的任务，比如双腿直立行走、开门、穿衣服、摸狗等人类无需刻意做的举动，有超级计算机能力的机器人却做不到。</p>
+<p>这些问题最有可能通过 5.1 小节讨论过的 &ldquo;人工智能&rdquo; 来解决，机器人无需休息且可以多个手臂同时练习，通过数千小时的训练来变得擅长。</p>
+<p>近年最大的突破之一是无人驾驶汽车，汽车的输入（转弯 or 变速）很简单，难得是应对路况——判断车道、理解路标、预测车流、车流中穿行、留心行人和骑自行车的以及各种障碍。</p>
+<p>无人驾驶汽车非常依赖 5.2 节 p35 集讨论的 &ldquo;计算机视觉算法&rdquo;，现在也出现了外貌和行为像人类的 &ldquo;类人计算机&rdquo; (primitive androids)。</p>
+<p>因可替换且力量、耐力、注意力和准确性远超人类，军队也对机器人很有兴趣。拆弹机器人和无人侦察机如今很常见，完全自主决定且全副武装的机器人也在慢慢出现。</p>
+<p>比如韩国的三星 SGR-A1 哨兵炮，这种有智力并且可以杀人的机器人，称为「致命自主武器」(lethal autonomous weapons)。这是一个复杂又棘手的问题，一方面它可以将士兵带离战场挽救生命甚至阻止战争，但另一方面它没有人类般的判断力和同情心，会让战争更加黑暗和复杂。</p>
+<h3 id="545-机器人三定律">5.4.5 机器人三定律</h3>
+<p>科幻作家艾萨克·阿西莫夫 (Isaac Asimov) 早预见了类似于 &ldquo;致命自主武器&rdquo; 所带来的危险，他在 1942 年短篇小说 Runaround 中写了 &ldquo;机器人三定律&rdquo; (Three Laws of Robotics)，之后在 1985 年的《机器人与帝国》（Robots and Empire）又加了 &ldquo;定律 0 &ldquo;。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675506611298.png" alt="机器人定律"></p>
+<p>简单说这些定律指导机器人的行为准则或者说道德指南，旨在让机器人不要造成伤害，特别是不要伤害人类。</p>
+<p>这些规则实践起来相当不足，并且有很多模糊的地方，但阿西莫夫三定律激发了大量科幻小说讨论和学术讨论，如今也有专门讨论机器人伦理的会议。</p>
+<p>阿西莫夫写这些虚构规则是为了反对 &ldquo;机器人都很邪恶&rdquo; 这种常见描述，他童年读的小说里，机器人脱离控制，然后伤害甚至毁灭创造者的场景很常见。但阿西莫夫认为 机器人有用、可靠，甚至可以让人喜爱。</p>
+<p>这种技术的两面性值得我们思考，我们要认真思考计算机的潜力和危害，从而改善这个世界，而机器人最能提醒我们这一点了。</p>
+
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/cccs/extended_discussion/5.3-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86-natural-language-processing/" class="block">5.3 自然语言处理 (Natural Language Processing)</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/cccs/extended_discussion/5.5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6-psychology-of-computing/" class="block">5.5 计算机中的心理学 (Psychology of Computing)</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#541-robot">5.4.1 robot</a></li>
+        <li><a href="#542-发展简史">5.4.2 发展简史</a></li>
+        <li><a href="#543-控制原理">5.4.3 控制原理</a>
+          <ul>
+            <li><a href="#简单控制回路">简单控制回路</a></li>
+            <li><a href="#pid-控制器">PID 控制器</a></li>
+          </ul>
+        </li>
+        <li><a href="#544-机器人的发展现状">5.4.4 机器人的发展现状</a></li>
+        <li><a href="#545-机器人三定律">5.4.5 机器人三定律</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>

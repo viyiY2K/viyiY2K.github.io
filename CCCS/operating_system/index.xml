@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 操作系统 on 与你分享我的眼睛</title>
+    <link>https://viyi.cc/cccs/operating_system/</link>
+    <description>Recent content in 3 操作系统 on 与你分享我的眼睛</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/cccs/operating_system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3.1 操作系统（Operating Systems）</title>
+      <link>https://viyi.cc/cccs/operating_system/3.1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9Foperating-systems/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/cccs/operating_system/3.1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9Foperating-systems/</guid>
+      <description>3.1.1 操作系统简史 [line-2, body-2] + 1940/50s + pre-OS + - 此时电脑每次只能运行一个程序，程序员在打孔纸卡上写程序，完成后交给操作员等待放入。 - 操作员在计算机完成上一个程序后，放入</description>
+    </item>
+    
+    <item>
+      <title>3.2 内存 &amp; 储存介质（Memory &amp; Storage）</title>
+      <link>https://viyi.cc/cccs/operating_system/3.2-%E5%86%85%E5%AD%98-%E5%82%A8%E5%AD%98%E4%BB%8B%E8%B4%A8memory-storage/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/cccs/operating_system/3.2-%E5%86%85%E5%AD%98-%E5%82%A8%E5%AD%98%E4%BB%8B%E8%B4%A8memory-storage/</guid>
+      <description>3.2.1 存储器（storage） 1.6 小节设计的 RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent</description>
+    </item>
+    
+    <item>
+      <title>3.3 文件系统（Files &amp; File Systems）</title>
+      <link>https://viyi.cc/cccs/operating_system/3.3-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9Ffiles-file-systems/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/cccs/operating_system/3.3-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9Ffiles-file-systems/</guid>
+      <description>3.3.1 文件格式（file format） 文件的底层均为二进制 0 和 1，需要用格式明确如何解释这些 0 和 1，同时也便于进行文件管理。文件格式可以自行发明，但最好使</description>
+    </item>
+    
+    <item>
+      <title>3.4 压缩（Compression）</title>
+      <link>https://viyi.cc/cccs/operating_system/3.4-%E5%8E%8B%E7%BC%A9compression/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/cccs/operating_system/3.4-%E5%8E%8B%E7%BC%A9compression/</guid>
+      <description>3.4.1 游程编码（Run-Length Encoding） 游程编码（Run-Length Encoding）适用于经常出现重复值的文件中，比如下图中有 7 个连续黄</description>
+    </item>
+    
+    <item>
+      <title>3.5 人机交互（Human-Computer Interaction）</title>
+      <link>https://viyi.cc/cccs/operating_system/3.5-%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92human-computer-interaction/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/cccs/operating_system/3.5-%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92human-computer-interaction/</guid>
+      <description>「人机交互」（Human-Computer Interaction）是一门研究人类和机器直接进行交互的学科，各种 I/O 设备都提供了界面（interface）</description>
+    </item>
+    
+    <item>
+      <title>3.6 屏幕 &amp; 2D 图形显示 - Screens &amp; 2D Graphics</title>
+      <link>https://viyi.cc/cccs/operating_system/3.6-%E5%B1%8F%E5%B9%95-2d-%E5%9B%BE%E5%BD%A2%E6%98%BE%E7%A4%BA-screens-2d-graphics/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/cccs/operating_system/3.6-%E5%B1%8F%E5%B9%95-2d-%E5%9B%BE%E5%BD%A2%E6%98%BE%E7%A4%BA-screens-2d-graphics/</guid>
+      <description>1960s 的 PDP-1 的电脑、屏幕、电传打字机是分开的，因为早期的文本任务和图形任务是分开的。早期的屏幕无法显示清晰的文字，打印到纸上会有更高的对比度和分辨率。 屏幕早</description>
+    </item>
+    
+    <item>
+      <title>3.7 冷战和消费主义（The Cold War and Consumerism）</title>
+      <link>https://viyi.cc/cccs/operating_system/3.7-%E5%86%B7%E6%88%98%E5%92%8C%E6%B6%88%E8%B4%B9%E4%B8%BB%E4%B9%89the-cold-war-and-consumerism/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/cccs/operating_system/3.7-%E5%86%B7%E6%88%98%E5%92%8C%E6%B6%88%E8%B4%B9%E4%B8%BB%E4%B9%89the-cold-war-and-consumerism/</guid>
+      <description>1940~1970 年代计算机在短短三十年间经历了巨变，这是由政府和消费者两方推动的。 政府资金推动了计算机的早期研究发展，使得计算机行业有时间等待技术成熟到可以商用，公</description>
+    </item>
+    
+    <item>
+      <title>3.8 个人计算机革命（The Personal Computer Revolution）</title>
+      <link>https://viyi.cc/cccs/operating_system/3.8-%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%9D%A9%E5%91%BDthe-personal-computer-revolution/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/cccs/operating_system/3.8-%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%9D%A9%E5%91%BDthe-personal-computer-revolution/</guid>
+      <description>3.8.1 微型计算机 相较于那个时代放在公司或大学中的“普通”（normal）计算机，1970s 出现了「微型计算机」（microcomputer），它的出现源于</description>
+    </item>
+    
+    <item>
+      <title>3.9 图形用户界面（Graphical User Interfaces）</title>
+      <link>https://viyi.cc/cccs/operating_system/3.9-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2graphical-user-interfaces/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/cccs/operating_system/3.9-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2graphical-user-interfaces/</guid>
+      <description>3.9.1 增强人类智力（Augmenting Human Intellect） GUI 的先驱是道格拉斯·恩格尔巴特（Douglas Engelbart），他在二战期间阅读了布什（</description>
+    </item>
+    
+    <item>
+      <title>3.10 3D 图形（3D Graphics）</title>
+      <link>https://viyi.cc/cccs/operating_system/3.10-3d-%E5%9B%BE%E5%BD%A23d-graphics/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/cccs/operating_system/3.10-3d-%E5%9B%BE%E5%BD%A23d-graphics/</guid>
+      <description>3.10.1 3D 投影（3 Dimensional Projection） 3D 中使用 X,Y,Z 三点构成某点的坐标，因 2D 电脑屏幕无法将三轴立体坐标完美展示，故使用某种图形算法来将 3D 坐标“拍平”（fla</description>
+    </item>
+    
+  </channel>
+</rss>
