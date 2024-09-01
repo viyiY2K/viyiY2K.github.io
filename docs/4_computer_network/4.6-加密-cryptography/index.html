@@ -75,7 +75,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
 <meta name="description"
-  content="世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署&quot;多层防御&quot; (defence in depth) 。 计算机安">
+  content="世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署&#34;多层防御&#34; (defence in depth) 。">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -117,7 +117,7 @@
             "url": "https://viyi.cc/images/icon.png"
         }
         },
-    "description": "世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署\u0026quot;多层防御\u0026quot; (defence in depth) 。 计算机安"
+    "description": "世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署\u0022多层防御\u0022 (defence in depth) 。"
 }
 </script><meta property="og:title" content="4.6 加密 (Cryptography) | 4 计算机网络 | 与你分享我的眼睛" />
 <meta property="og:type" content="article" />
@@ -130,9 +130,7 @@
 
 
 
-
-<meta property="og:description" content="世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署&quot;多层防御&quot; (defence in depth) 。 计算机安" />
-
+<meta property="og:description" content="世上不存在 100% 安全的系统，漏洞总是会存在，无非是多与少的问题。因此系统架构师为提升系统安全性，通常会部署&#34;多层防御&#34; (defence in depth) 。" />
 
 
 
@@ -384,12 +382,12 @@
 <li>加密 (encryption)：将明文转成密文。</li>
 <li>解密 (decryption)：将密文恢复成明文。</li>
 </ul>
-<h3 id="461-替换加密">4.6.1 替换加密</h3>
-<h4 id="凯撒加密-caesar-cipher">凯撒加密 (Caesar cipher)</h4>
+<h2 id="461-替换加密">4.6.1 替换加密</h2>
+<h3 id="凯撒加密-caesar-cipher">凯撒加密 (Caesar cipher)</h3>
 <p>朱利叶斯·凯撒 (Julius Caesar) 在很早之前就通过将信件中的字母向前移动三个位置来进行加密，这种名为「凯撒加密」(Caesar cipher) 的加密算法归属于一大类名为「替换加密」(substitution ciphers) 的算法类型。</p>
 <p>为了解密，接收者要知道对方使用了什么算法，并且明确要偏移的字母位数。这种算法把每个字母替换成其他字母，其缺点在于替换后的字母出现频率依然有迹可循，密码破译师可以通过统计数据发现相关规律进而破解加密。</p>
 <p>1587 年，正因为一个&quot;替换加密&quot;的密文被破译，导致刺杀伊丽莎白女王的阴谋暴露，使得玛丽女王被处决。</p>
-<h4 id="英格玛机enigma">英格玛机（Enigma）</h4>
+<h3 id="英格玛机enigma">英格玛机（Enigma）</h3>
 <p>1900 年代，人们用密码学做了加密机器，其中最出名的是纳粹在战时用于加密通讯信息的机器英格玛机 (Enigma Machine) ，属于替换加密的一种。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674742198444.png" alt="英格玛"></p>
 <p>如 2.6.2 节中提及的那样，Enigma 是一台像打字机的机器，另有键盘、灯板和转子齿轮，在键盘和转子 (rotors) 上都有完整的字母表。</p>
@@ -402,39 +400,39 @@
 <p>英格玛机器的电路是双向的，加密和解密步骤是一致的，因此只需要确保 发送机和接收机的初始配置一样就行。</p>
 <p>英格玛机器的加密特点在于字母加密后一定会变成另一个字母，为了弥补这种简单替换加密的弊端，英格玛会在每输入一个字母后将转子转动一个，使得同一字母会随每次的按键来呈现多种不同映射。</p>
 <p>而正如 2.6.2 节中介绍的那样，艾伦·图灵 (Alan Turing) 和同事破解了英格玛的加密过程，并把大部分破解流程做成了自动化。</p>
-<h3 id="462-移位加密-permutation-ciphers">4.6.2 移位加密 (permutation ciphers)</h3>
+<h2 id="462-移位加密-permutation-ciphers">4.6.2 移位加密 (permutation ciphers)</h2>
 <p>另一类加密算法称为「移位加密」(permutation ciphers)，其中的一个典例是「列移位加密」 (a columnar transposition cipher) —— 通过读取方向和网格大小来加密信息。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674741468891.png" alt="列移位加密"></p>
 <p>若从网格左起开始，从下往上，一次一列，重新组合字母，则可以得到 &ldquo;SCRMMTH EEA L EN-UFT NO&rdquo; 的密文。通过读取方向和 5×5 大小的网格尺寸，可以逆推出明文。</p>
-<h3 id="463-加密算法">4.6.3 加密算法</h3>
+<h2 id="463-加密算法">4.6.3 加密算法</h2>
 <p>随着计算机出现，加密从硬件转往软件。早期加密算法中，应用最广泛的是数据加密标准和高级加密标准。</p>
-<h4 id="数据加密标准">数据加密标准</h4>
+<h3 id="数据加密标准">数据加密标准</h3>
 <p>1977 年，IBM 和 NSA 开发了「数据加密标准」(Data Encryption Standard, DES)，最初使用的密钥是 56bit 长的二进制数，密钥数量为 $2^{56}$ (约 72 千万亿) 个。</p>
 <p>然而随着计算能力的暴增，1999 年一台 25w 美元的计算机可以在两天能遍历所有可能密钥从而暴力破解得到 DES 的密钥，因此该算法不再安全。</p>
-<h4 id="高级加密标准">高级加密标准</h4>
+<h3 id="高级加密标准">高级加密标准</h3>
 <p>2001 年，为了紧跟算力增加的现状出台了「高级加密标准」(Advanced Encryption Standard, AES) ，其使用 128/192/256 bit 长度的密钥。</p>
 <p>一个 128bit 的密钥，使用如今的电脑想要暴力破解需要计算上万亿年才可以。更长的密钥位数，使得暴力破解更为困难。</p>
 <p>AES 会将数据切成每块 16 字节的大小，然后用密钥进行一系列替换加密和移位加密，再加上一些其他操作来进一步加密信息，每块数据会重复这个加密过程 10 次以上。</p>
 <p>密钥的长度位数和加密过程的重复次数都是基于性能速度和安全性两者之间的权衡，没有人愿意等待几个小时来加密发送邮件。</p>
 <p>如今 AES 被广泛使用，比如 iPhone 上加密文件、用 WPA2 协议在 WiFi 中访问 HTTPS 网站等。</p>
-<h3 id="464-密钥交换">4.6.4 密钥交换</h3>
+<h2 id="464-密钥交换">4.6.4 密钥交换</h2>
 <p>以上所讨论的加密技术都有赖于发送者和接收者同时持有密钥进行加密解密。在早期密钥的交换可以通过口头约定或是实体交换，比如德国人给英格玛配了记录每天机器配置的密码本。</p>
 <p>为了在公开的互联网传递密钥，我们需要可靠的「密钥交换」(key exchange)——一种不发送密钥，但依然让两台计算机在密钥上达成共识的算法。</p>
-<h4 id="单向函数">单向函数</h4>
+<h3 id="单向函数">单向函数</h3>
 <p>密钥交换通过「单向函数」(one-way functions) 实现，单向函数是指很容易正向算出结果，但想从结果逆向推算出输入非常困难的数学操作。</p>
 <p>以颜色为例，发送方和接收方各自选择不为人知的本命色，双方发送时将本名色混合公开色进行传输，接收时再使用自己的本名色叠加，三色混合而成的颜色 (即密钥) 仅交流双方可知。</p>
-<h4 id="迪菲-赫尔曼算法">迪菲-赫尔曼算法</h4>
+<h3 id="迪菲-赫尔曼算法">迪菲-赫尔曼算法</h3>
 <p>具体实现是一种名为「迪菲-赫尔曼密钥交换」 (Diffie-Hellman Key Exchange) 的算法，其单向函数是模幂运算。</p>
 <p>通过对基数进行幂运算取余后得到模很容易，但想要从余数和基数中逆推出指数是多少就很难，而随着基数变大则会难上加难。</p>
 <p>基数 B 和模数 M 是公开的，指数是发送方秘密指定的。阿珍和阿强各自选取一个秘密指数 X 和 Y，发送给对方 B^X mod M /  B^Y mod M，接收之后各自对其取 X 或 Y 的次方进行模幂运算，得出仅双方共享的密钥，由此建立起「共享密钥」(shared key)。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674744752363.png" alt="模幂运算"></p>
-<h3 id="465-非对称加密">4.6.5 非对称加密</h3>
+<h2 id="465-非对称加密">4.6.5 非对称加密</h2>
 <p>双方用相同的的密钥加密和解密消息，称为「对称加密」(symmetric keys)，凯撒加密，英格玛，AES 都是&quot;对称加密&quot;。</p>
 <p>而使用两个不同的密钥——公开的公钥 (public key) 和私有的私钥 (private key)——进行加密的方式，称为「非对称加密」(asymmetric encryption)。其 &ldquo;不对称&rdquo; 在于仅仅知道公钥只能加密，但不能解密。</p>
-<h4 id="数字签名">数字签名</h4>
+<h3 id="数字签名">数字签名</h3>
 <p>类似于锁和箱子，发送方将信息放入箱子锁起后传输，只有接收方的钥匙能开启箱子。同样的，公钥加密后只能私钥来解密，而私钥加密后可以用公钥解密，私钥和公钥时而是箱子时而是锁。</p>
 <p>这种做法常用于数字签名，服务器使用私钥加密，任何人都可以用服务器的公钥解密。因为只有私钥的持有人能加密，故签名无法伪造，从而证明数据源自可靠的服务器或个人。</p>
-<h4 id="rsa">RSA</h4>
+<h3 id="rsa">RSA</h3>
 <p>目前最流行的&quot;非对称加密&quot;技术是 RSA，该名字源于发明者 Rivest, Shamir, Adleman。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674745560193.png" alt="RSA"></p>
 
@@ -488,33 +486,29 @@
 >
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#461-替换加密">4.6.1 替换加密</a>
       <ul>
-        <li><a href="#461-替换加密">4.6.1 替换加密</a>
-          <ul>
-            <li><a href="#凯撒加密-caesar-cipher">凯撒加密 (Caesar cipher)</a></li>
-            <li><a href="#英格玛机enigma">英格玛机（Enigma）</a></li>
-          </ul>
-        </li>
-        <li><a href="#462-移位加密-permutation-ciphers">4.6.2 移位加密 (permutation ciphers)</a></li>
-        <li><a href="#463-加密算法">4.6.3 加密算法</a>
-          <ul>
-            <li><a href="#数据加密标准">数据加密标准</a></li>
-            <li><a href="#高级加密标准">高级加密标准</a></li>
-          </ul>
-        </li>
-        <li><a href="#464-密钥交换">4.6.4 密钥交换</a>
-          <ul>
-            <li><a href="#单向函数">单向函数</a></li>
-            <li><a href="#迪菲-赫尔曼算法">迪菲-赫尔曼算法</a></li>
-          </ul>
-        </li>
-        <li><a href="#465-非对称加密">4.6.5 非对称加密</a>
-          <ul>
-            <li><a href="#数字签名">数字签名</a></li>
-            <li><a href="#rsa">RSA</a></li>
-          </ul>
-        </li>
+        <li><a href="#凯撒加密-caesar-cipher">凯撒加密 (Caesar cipher)</a></li>
+        <li><a href="#英格玛机enigma">英格玛机（Enigma）</a></li>
+      </ul>
+    </li>
+    <li><a href="#462-移位加密-permutation-ciphers">4.6.2 移位加密 (permutation ciphers)</a></li>
+    <li><a href="#463-加密算法">4.6.3 加密算法</a>
+      <ul>
+        <li><a href="#数据加密标准">数据加密标准</a></li>
+        <li><a href="#高级加密标准">高级加密标准</a></li>
+      </ul>
+    </li>
+    <li><a href="#464-密钥交换">4.6.4 密钥交换</a>
+      <ul>
+        <li><a href="#单向函数">单向函数</a></li>
+        <li><a href="#迪菲-赫尔曼算法">迪菲-赫尔曼算法</a></li>
+      </ul>
+    </li>
+    <li><a href="#465-非对称加密">4.6.5 非对称加密</a>
+      <ul>
+        <li><a href="#数字签名">数字签名</a></li>
+        <li><a href="#rsa">RSA</a></li>
       </ul>
     </li>
   </ul>

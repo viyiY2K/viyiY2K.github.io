@@ -75,7 +75,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
 <meta name="description"
-  content="3.1.1 操作系统简史 [line-2, body-2] &#43; 1940/50s &#43; pre-OS &#43; - 此时电脑每次只能运行一个程序，程序员在打孔纸卡上写程序，完成后交给操作员等待放入。 - 操作员在计算机完成上一个程序后，放入">
+  content="现代流行的操作系统有 Mac OS X, Windows 10, iOS 和 Android 等。">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -108,7 +108,7 @@
     },
     "headline": "3.1 操作系统（Operating Systems） | 3 操作系统 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
     "dateModified": "2023-09-17T00:00:00+00:00",
-    "wordCount":  1737 ,
+    "wordCount":  570 ,
     "publisher": {
         "@type": "Person",
         "name": "枝因（viyi）",
@@ -117,7 +117,7 @@
             "url": "https://viyi.cc/images/icon.png"
         }
         },
-    "description": "3.1.1 操作系统简史 [line-2, body-2] \u002b 1940\/50s \u002b pre-OS \u002b - 此时电脑每次只能运行一个程序，程序员在打孔纸卡上写程序，完成后交给操作员等待放入。 - 操作员在计算机完成上一个程序后，放入"
+    "description": "现代流行的操作系统有 Mac OS X, Windows 10, iOS 和 Android 等。"
 }
 </script><meta property="og:title" content="3.1 操作系统（Operating Systems） | 3 操作系统 | 与你分享我的眼睛" />
 <meta property="og:type" content="article" />
@@ -130,9 +130,7 @@
 
 
 
-
-<meta property="og:description" content="3.1.1 操作系统简史 [line-2, body-2] &#43; 1940/50s &#43; pre-OS &#43; - 此时电脑每次只能运行一个程序，程序员在打孔纸卡上写程序，完成后交给操作员等待放入。 - 操作员在计算机完成上一个程序后，放入" />
-
+<meta property="og:description" content="现代流行的操作系统有 Mac OS X, Windows 10, iOS 和 Android 等。" />
 
 
 
@@ -409,7 +407,7 @@
   </div>
   <div class="me-6 my-2">
     <i class="fas fa-clock me-1"></i>
-    <span>4分钟阅读时长</span>
+    <span>2分钟阅读时长</span>
   </div>
 
   
@@ -421,62 +419,18 @@
   
   
 
-  <h3 id="311-操作系统简史">3.1.1 操作系统简史</h3>
-<pre><code class="language-timeline">[line-2, body-2]
-
-+ 1940/50s
-+ pre-OS
-+ - 此时电脑每次只能运行一个程序，程序员在打孔纸卡上写程序，完成后交给操作员等待放入。
-- 操作员在计算机完成上一个程序后，放入新程序，运行计算机，输出结果，停机。
-- 一个程序通常需要几个小时/天，甚至是几周完成，但因计算机处理速度慢，因而手动放入程序的做法可以接受。
-
-+ 1950s
-+ 批处理系统与设备驱动程序
-+ - 第一个操作系统加强了程序加载方式，使得计算机运行完一个程序后，会自动运行下一个程序，该过程称为「批处理」（batch processing）。
-- 操作系统提供 API 来抽象硬件层面的外部设备，充当软硬件之间的媒介，称为「设备驱动程序」（device drivers）。
-- 设备驱动程序使得程序员可以用标准化机制和 I/O 设备交互，不再只是对照手册 “plug-and-pray”（祈祷能用）。
-
-+ 1962 年
-+ Atlas Supervisor
-+ - 英国曼彻斯特大学研发世界上第一台超级计算机 Atlas 时，为解决程序因 I/O 读取速度阻塞的问题所开发的程序。
-- Atlas Supervisor 可以通过调度（clever scheduling）来实现在单个 CPU 上同时运行多个程序，即「多任务处理」。
-- 同时运行多个程序会存在内存使用和数据保留问题，通过「虚拟内存」和「内存保护」解决。
-- 第一台支持虚拟内存和内存保护的计算机和操作系统。
-
-+ 1969 年
-+ Multics
-+ - Multics(多任务与计算机系统)是早期最有影响力的分时操作系统，其从设计伊始就考虑到了安全问题，因此复杂程度远超平均，OS 占用 1Mb 内存。
-- Multics 的研究人员坦言其没能获得商业成功的明显问题在于过度设计，其提供了太多功能。
-
-+ 1971 年
-+ Unix
-+ - 由 Multics 的研究员丹尼尔·里奇（Dennis Ritchie）和肯·汤姆逊（Ken Thompason）在贝尔实验室打造出的新操作系统。
-- Unix 将 OS 分为「内核」和「工具」两部分：内核（kernel）只有 OS 的核心功能，比如内存管理、多任务和 I/O 处理；工具部分的程序和运行库则不属于内核。
-- 内核恐慌（heard of kernel panics）：Unix 中处理错误的方式是当错误发生以至于内核崩溃无法恢复，就调用一个“恐慌”（panics）函数无限循环输出“恐慌”。
-- 因 Unix 足够简单可以在更便宜更多的硬件运行，再加上生态的丰富性（发布不久就有人写了不同编程语言的编译器、甚至是文字处理器），其成为 1970~80 年最流行的 OS 之一。
-
-+ 1981 年
-+ MS-DOS
-+ - 1980s 早期计算机价格降低至可以大幅商业化，称为个人电脑（personal computer）或是家庭电脑（home computer），其操作系统比大型主机的简单得多
-- 微软发布的磁盘操作系统 MS-DOS 只有 160kB，可以使用磁盘容纳。
-- 没有多任务和保护内存的功能，使得程序经常使电脑崩溃，只能通过重启恢复。
-- 直至流行于 90s 发布于 1985 年的早期 Windows ，都仍然未提供内存保护。当程序行为不当，就会出现蓝屏——程序崩溃严重到将系统也带崩溃了。
-
-+ NOW
-+ 现代操作系统
-+ 现代流行的操作系统有 Mac OS X, Windows 10, iOS 和 Android 等。
-
-</code></pre>
-<h3 id="312-os-特性">3.1.2 OS 特性</h3>
-<h4 id="多任务处理multitasking">多任务处理（multitasking）</h4>
+  <h2 id="311-操作系统简史">3.1.1 操作系统简史</h2>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/os.png" alt="OS 简史"></p>
+<h2 id="312-os-特性">3.1.2 OS 特性</h2>
+<h3 id="多任务处理multitasking">多任务处理（multitasking）</h3>
 <p>在运行 I/O 相关程序等待调用相关外部设备时，先将程序休眠运行另一个程序，等待 I/O 操作结束后标记为“可继续运行”，在之后某时刻安排给 CPU 执行，实现多个程序的同时运行，在单个 CPU 上共享时间。</p>
-<h4 id="内存管理memory-allocation">内存管理（Memory Allocation）</h4>
+<h3 id="内存管理memory-allocation">内存管理（Memory Allocation）</h3>
 <p>多任务处理使得每个程序都会占用一些内存，为保证切换程序时相关数据不丢失，我们可以为每个程序分配专属内存块。</p>
 <p>当某个程序需要更多内存，则继续向操作系统请求。OS 会决定是否同意分配、分配哪些内存块。这导致程序所分配到的内存可能是非连续的，程序员难以跟踪使用，因此 OS 会将内存地址虚拟化（virtualize），称为「虚拟内存」（Virtual Memory）。</p>
 <p>使用虚拟内存后，OS 会自动处理虚拟内存和物理内存之间的映射，程序可以假定自己所分配到的内存总是从地址 0 开始。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2015%3A%E6%97%B6%2025%3A%E5%88%86%2018%3A%E7%A7%92%20yensex14ei1673767518831.png" alt="memory allocation"></p>
 <p>以程序 A 和 B为例：B 分配到的内存地址是 1000 到 1999，但对于程序而言，它所看到的地址是 0~999；而对于程序 A 而言，第二次请求分配后，它有了 2000 个连续地址的内存，但实际上第二次分配的物理地址是 2000~2999。</p>
-<h4 id="受保护内存memory-protection">受保护内存（Memory Protection）</h4>
+<h3 id="受保护内存memory-protection">受保护内存（Memory Protection）</h3>
 <p>为不同程序分块分配专属内存范围，将其各自隔离同时也可以实现对内存的保护，在防止恶意软件（如病毒）入侵时很有帮助，这样带病毒的程序只会损害自己的内存。</p>
 
 </article>
@@ -527,16 +481,12 @@
 >
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#311-操作系统简史">3.1.1 操作系统简史</a></li>
+    <li><a href="#312-os-特性">3.1.2 OS 特性</a>
       <ul>
-        <li><a href="#311-操作系统简史">3.1.1 操作系统简史</a></li>
-        <li><a href="#312-os-特性">3.1.2 OS 特性</a>
-          <ul>
-            <li><a href="#多任务处理multitasking">多任务处理（multitasking）</a></li>
-            <li><a href="#内存管理memory-allocation">内存管理（Memory Allocation）</a></li>
-            <li><a href="#受保护内存memory-protection">受保护内存（Memory Protection）</a></li>
-          </ul>
-        </li>
+        <li><a href="#多任务处理multitasking">多任务处理（multitasking）</a></li>
+        <li><a href="#内存管理memory-allocation">内存管理（Memory Allocation）</a></li>
+        <li><a href="#受保护内存memory-protection">受保护内存（Memory Protection）</a></li>
       </ul>
     </li>
   </ul>

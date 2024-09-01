@@ -145,11 +145,11 @@
     </item>
     
     <item>
-      <title>1.1 早期的计算</title>
-      <link>https://viyi.cc/docs/computer_organization_principles/1.1%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97/</link>
+      <title>1.1 早期的计算（Early Computing）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.1-%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97early-computing/</link>
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/docs/computer_organization_principles/1.1%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97/</guid>
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.1-%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97early-computing/</guid>
       <description>1.1.1 信息时代（Electronic Age） 三次工业革命推动全球发展： 第一次（蒸汽）：用机械提高农业、工业、畜牧业的规模，又名机器时代（the Age of Mach</description>
     </item>
     
@@ -177,7 +177,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/computer_organization_principles/1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/</guid>
-      <description>!&amp;gt;[!quote] “Everything is number.”by Pythagoras 「万物皆数。」——毕达哥斯拉 1.4.1 二进制 在二进制中，每个符号就是二进制元数字（0/1）中的一个二进制位 （b</description>
+      <description>“Everything is number.”by Pythagoras 「万物皆数。」——毕达哥斯拉 1.4.1 二进制 在二进制中，每个符号就是二进制元数字（0/1）中的一个二进制位 （bi</description>
     </item>
     
     <item>
@@ -186,7 +186,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/computer_organization_principles/1.5-alu-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83-how-computers-calculate/</guid>
-      <description>!ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整</description>
+      <description>ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整</description>
     </item>
     
     <item>
@@ -195,7 +195,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/computer_organization_principles/1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/</guid>
-      <description>!计算机的存储器（Memory）可分为两种类型： 随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。 SRAM( Static Random Access Memory，</description>
+      <description>计算机的存储器（Memory）可分为两种类型： 随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。 SRAM( Static Random Access Memory，静</description>
     </item>
     
     <item>
@@ -204,7 +204,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/computer_organization_principles/1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/</guid>
-      <description>!### 1.7.1 组成概述 CPU CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。 比如</description>
+      <description>1.7.1 组成概述 CPU CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。 比如，</description>
     </item>
     
     <item>
@@ -213,7 +213,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/computer_organization_principles/1.8-%E6%8C%87%E4%BB%A4%E5%92%8C%E7%A8%8B%E5%BA%8Finstructions-programs/</guid>
-      <description>!### 1.8.1 指令集 指令由「操作码」和「地址码」组成，前者用于说明操作指令，后者则表示操作数据的地址（寄存器或内存地址）。记录指令名称、用法、操作码以及所需 RAM 地</description>
+      <description>1.8.1 指令集 指令由「操作码」和「地址码」组成，前者用于说明操作指令，后者则表示操作数据的地址（寄存器或内存地址）。记录指令名称、用法、操作码以及所需 RAM 地址</description>
     </item>
     
     <item>
@@ -231,7 +231,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/programming/2.1-%E7%BC%96%E7%A8%8B%E5%8F%B2%E8%AF%9Dearly-programming/</guid>
-      <description>2.1.1 编程介质 在 1.7.2 节中说明 CPU 工作原理时，我们假设程序已经在计算机内存中了，但实际上程序需要被加载（load into）进内存。 [line-2, body-2] + 1801 年 + 可穿孔纸卡（pun</description>
+      <description>2.1.1 编程介质 在 1.7.2 节中说明 CPU 工作原理时，我们假设程序已经在计算机内存中了，但实际上程序需要被加载（load into）进内存。 2.1.2 冯诺依曼结构 「冯诺依曼结构」</description>
     </item>
     
     <item>
@@ -240,7 +240,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/programming/2.2-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80the-first-programming-languages/</guid>
-      <description>[line-2, body-2] + early day + 机器语言（Machine Language） + - 机器语言又名机器码（Machine Code），指只能理解二进制描述的信息。 - 早期编程只能使用</description>
+      <description>🏆 the holy grail (圣杯)：使用英文直接于计算机对话（plain ol&amp;rsquo; English），计算机会理解并执行。</description>
     </item>
     
     <item>
@@ -294,7 +294,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/operating_system/3.1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9Foperating-systems/</guid>
-      <description>3.1.1 操作系统简史 [line-2, body-2] + 1940/50s + pre-OS + - 此时电脑每次只能运行一个程序，程序员在打孔纸卡上写程序，完成后交给操作员等待放入。 - 操作员在计算机完成上一个程序后，放入</description>
+      <description>3.1.1 操作系统简史 3.1.2 OS 特性 多任务处理（multitasking） 在运行 I/O 相关程序等待调用相关外部设备时，先将程序休眠运行另一个程序，等待 I/O 操作结束后标记为</description>
     </item>
     
     <item>
@@ -375,7 +375,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/4_computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/</guid>
-      <description>4.1.1 早期网络 [line-2, body-2] + 150 年前 + 特快邮件 + - 发一封信件从伦敦到加州要花 2~3 周。 - 传播一条信息所需要的时间称为「时延」 (latency) 。 + 1950~60s + 球鞋网络 (sneakernet) + - 在公司或研究室内部使</description>
+      <description>4.1.1 早期网络 4.1.2 以太网 MAC 地址 以太网 (Ethernet) 是早期最著名也最成功的一种局域网 LAN 技术，其使用一条以太网电线连接数台计算机，数据在电缆中进行共享，使用 MAC 地址 (Media Access Control address) 来</description>
     </item>
     
     <item>
@@ -438,7 +438,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/</guid>
-      <description>计算机视觉 (Computer Vision) 领域的目标是让计算机理解图像和视频。 [!quote] &amp;ldquo;Just like to hear is the not the same as to listen.To take pictures is not the same as to see.&amp;rdquo; by computer vision professor Fei-Fei Li 「听到不等于听懂，看到不等于看懂」——李飞飞</description>
+      <description>计算机视觉 (Computer Vision) 领域的目标是让计算机理解图像和视频。 &amp;ldquo;Just like to hear is the not the same as to listen.To take pictures is not the same as to see.&amp;rdquo; by computer vision professor Fei-Fei Li 「听到不等于听懂，看到不等于看懂」——李飞飞，</description>
     </item>
     
     <item>
@@ -483,7 +483,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/extended_discussion/5.7-%E5%A5%87%E7%82%B9%E5%A4%A9%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5the-singularity-skynet-and-the-future-of-computing/</guid>
-      <description>[!quote] &amp;ldquo;Computer science isn&amp;rsquo;t magic, but it sort of is!Knowing how to use and program computers is sorcery of the 21st century.Instead of incantations and spells, it&amp;rsquo;s scripts and code.&amp;rdquo; by Carrie Anne 计算机科学不是魔法，但它有点像魔法。学习使用电脑和编程，是 21 世纪的巫术，只不过用的不</description>
+      <description>&amp;ldquo;Computer science isn&amp;rsquo;t magic, but it sort of is!Knowing how to use and program computers is sorcery of the 21st century.Instead of incantations and spells, it&amp;rsquo;s scripts and code.&amp;rdquo; by Carrie Anne 计算机科学不是魔法，但它有点像魔法。学习使用电脑和编程，是 21 世纪的巫术，只不过用的不是</description>
     </item>
     
     <item>

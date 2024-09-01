@@ -13,7 +13,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/4_computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/</guid>
-      <description>4.1.1 早期网络 [line-2, body-2] + 150 年前 + 特快邮件 + - 发一封信件从伦敦到加州要花 2~3 周。 - 传播一条信息所需要的时间称为「时延」 (latency) 。 + 1950~60s + 球鞋网络 (sneakernet) + - 在公司或研究室内部使</description>
+      <description>4.1.1 早期网络 4.1.2 以太网 MAC 地址 以太网 (Ethernet) 是早期最著名也最成功的一种局域网 LAN 技术，其使用一条以太网电线连接数台计算机，数据在电缆中进行共享，使用 MAC 地址 (Media Access Control address) 来</description>
     </item>
     
     <item>

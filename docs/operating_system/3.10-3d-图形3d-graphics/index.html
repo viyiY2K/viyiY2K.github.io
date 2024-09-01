@@ -421,23 +421,23 @@
   
   
 
-  <h3 id="3101-3d-投影3-dimensional-projection">3.10.1 3D 投影（3 Dimensional Projection）</h3>
+  <h2 id="3101-3d-投影3-dimensional-projection">3.10.1 3D 投影（3 Dimensional Projection）</h2>
 <p>3D 中使用 X,Y,Z 三点构成某点的坐标，因 2D 电脑屏幕无法将三轴立体坐标完美展示，故使用某种图形算法来将 3D 坐标“拍平”（flattening）显示至 2D 屏幕上，这称为「3D 投影」（3 Dimensional Projection）。</p>
 <p>所有的点都从 3D 转成 2D 后，就可以用画 2D 线段的函数来连接这些点，称为「线框渲染」（Wireframe Rendering）。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2020%3A%E6%97%B6%2033%3A%E5%88%86%2015%3A%E7%A7%92%20zpj2p2fxnp1674563595697.png" alt="线框渲染"></p>
+<img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2020%3A%E6%97%B6%2033%3A%E5%88%86%2015%3A%E7%A7%92%20zpj2p2fxnp1674563595697.png" alt="线框渲染" style="zoom:80%;" />
 <p>3D 投影有许多类别，最常见的是正交投影（Orthographic Projection）和透视投影（Perspective Projection）：</p>
 <p>（1）正交投影：立方体的各个边，在投影中互相平行。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2020%3A%E6%97%B6%2035%3A%E5%88%86%2008%3A%E7%A7%92%20px0b8si0kn1674563708793.png" alt="正交投影"></p>
 <p>（2）透视投影：立方体中的平行线段会在远处收敛于某点。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2020%3A%E6%97%B6%2036%3A%E5%88%86%2041%3A%E7%A7%92%20wfl8ykh07f1674563801529.png" alt="透视投影"></p>
 <p>两种 3D 投影的过程类似，所使用的数学表达方式不同而已，具体采用哪种取决于开发人员。</p>
-<h3 id="3102-填充filling">3.10.2 填充（filling）</h3>
-<h4 id="多边形polygons">多边形(Polygons)</h4>
+<h2 id="3102-填充filling">3.10.2 填充（filling）</h2>
+<h3 id="多边形polygons">多边形(Polygons)</h3>
 <p>在 3D 图形学中，一般称三角形为「多边形」(Polygons)，这是最常用于构建复杂图形的基本形状，因为它简单——空间中三点定义一个平面。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2020%3A%E6%97%B6%2044%3A%E5%88%86%2016%3A%E7%A7%92%20j3ic527fsu1674564256388.png" alt="三角形"></p>
 <p>多个多边形构成的集合称为「网格」（mesh），网格越密，表面越光滑，细节越多，同时也带来更多的计算量。</p>
 <p>游戏设计者要平衡画面的真实度和多边形数量，如果多边形数量太多，帧率会下降到肉眼可感知，用户会觉得卡顿。</p>
-<h4 id="扫描线渲染-scanline-rendering">扫描线渲染 (Scanline Rendering)</h4>
+<h3 id="扫描线渲染-scanline-rendering">扫描线渲染 (Scanline Rendering)</h3>
 <p>扫描线渲染 (Scanline Rendering) 是于 1967 年诞生在犹他州大学的经典填充图形算法。</p>
 <ol>
 <li>将图形铺上一层像素网格。</li>
@@ -455,7 +455,7 @@
 <li>重复逐行填充，直至底部，填充的速度叫 fillrate（填充速率）。</li>
 </ol>
 <div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674564879425.png" style="zoom: 100%;" /></div>
-<h4 id="画家算法painters-algorithm">画家算法（Painter&rsquo;s Algorithm）</h4>
+<h3 id="画家算法painters-algorithm">画家算法（Painter&rsquo;s Algorithm）</h3>
 <p>3D 场景中会因多边形的重叠错落而产生遮挡（occlusion）现象，其最直接的处理方法时使用排序算法，从远到近排列，然后从远到近渲染。因画家也是先画背景，故名画家算法（Painter&rsquo;s Algorithm）。</p>
 <ol>
 <li>从用到近排序，在有序状态下自最远的多边形开始，使用扫描线算法来填充多边形，一次填充一个。</li>
@@ -465,7 +465,7 @@
 <li>重复填充过程即可，注意实际应用中的多边形未必是如示例中一般与屏幕平行。</li>
 </ol>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674565664840.png" alt=""></p>
-<h4 id="深度缓冲z-buffering">深度缓冲（Z-Buffering）</h4>
+<h3 id="深度缓冲z-buffering">深度缓冲（Z-Buffering）</h3>
 <p>深度缓冲（Z-Buffering）是另一种处理遮挡现象的方式，无需排序，速度更快。这种方法会记录场景中每个像素和摄像机的距离，在内存里存一个数字矩阵。</p>
 <ol>
 <li>每个像素的距离被初始化为&quot;无限大&quot;，该算法会从列表里第一个多边形开始处理（即多边形 A），将其距离和  Z-Buffer 中存储的距离进行对比，始终记录更新最小值。</li>
@@ -480,13 +480,13 @@
 </ol>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674566263036.png" alt=""></p>
 <p>在两个多边形距离相同时，采用深度缓冲会使得多边形在内存中不断移动，两者访问顺序的先后会不断变化。再加上浮点数的舍入误差问题，究竟是将哪个多边形画在上方，是无法预测的。因此，这种情况下会导致出现<a href="https://youtu.be/TEAtmCYYKZA?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&amp;t=470"> Z-fighting 效果</a>。</p>
-<h4 id="背面剔除back-face-culling">背面剔除（Back-Face Culling）</h4>
+<h3 id="背面剔除back-face-culling">背面剔除（Back-Face Culling）</h3>
 <p>为节约处理时间，忽略多边形背面的处理优化方式，称为「背面剔除」（Back-Face Culling）。比如在游戏角色的头部或是地面，只能够看到朝外的那一面，这会带来一个 bug —— 进入模型后从内部向外看，头部和地面会消失。</p>
-<h3 id="3103-抗锯齿antialiasing-">3.10.3 抗锯齿（Antialiasing ）</h3>
+<h2 id="3103-抗锯齿antialiasing-">3.10.3 抗锯齿（Antialiasing ）</h2>
 <p>上述例子中三角形填充后边缘都是锯齿，当像素较小时锯齿不明显，但用低配电脑玩游戏时，肯定会出现这种情况。一种减轻锯齿的方法叫抗锯齿(Antialiasing)，其通过判断多边形切过像素的程度，来调整填充颜色。</p>
 <div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674565222853.png" style="zoom: 100%;" /></div>
 <p>如果像素在多边形内部，就直接涂颜色；如果多边形划过像素，颜色就浅一些。这样抗锯齿的方法可以实现边缘羽化的效果，在字体和图标中广泛使用。</p>
-<h3 id="3104-光照lighting">3.10.4 光照（lighting）</h3>
+<h2 id="3104-光照lighting">3.10.4 光照（lighting）</h2>
 <p>光照（lighting）又名明暗处理（shading），在 3D 场景中的物体表面会有明暗变化，添加灯光后会提高物体的真实感。</p>
 <p>以茶壶中 3 个不同位置的多边形为例，其不平行与屏幕，各自面对不同方向，该方向称为「表面法线」（Surface Normal），即下图中垂直于表面的箭头方向。</p>
 <div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674566884963.png" style="zoom: 100%;"/> <alt=''表面法线'' /></div>
@@ -494,11 +494,11 @@
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674567485134.png" alt="平面着色"></p>
 <p>但平面着色的方法使得多边形的边界非常明显，看起来不光滑。因此出现了更多算法来更巧妙地改变颜色、得到更好地效果，比如高洛德着色（Gouraud Shading）和 冯氏着色（Phong Shading）等。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674567566930.png" alt=""></p>
-<h3 id="3105-纹理textures">3.10.5 纹理（textures）</h3>
+<h2 id="3105-纹理textures">3.10.5 纹理（textures）</h2>
 <p>纹理（textures）在图形学中指物品的外观而非手感，与照明算法一样，纹理也可以通过多种算法实现各式效果。其中最简单的一种效果称为「纹理映射」（texture mapping）。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674567956898.png" alt="纹理映射"></p>
 <p>纹理映射是指先将多边形的坐标和纹理坐标对应，在使用“扫描线算法”进行填充时，先查看内存中的纹理图像，后从相应区域取平均颜色，再决定该像素使用什么颜色进行填充。</p>
-<h3 id="3106-gpu">3.10.6 GPU</h3>
+<h2 id="3106-gpu">3.10.6 GPU</h2>
 <p>每个场景中都是由上百万个多边形构成的，渲染如此多个多边形构成的场景需要大量的计算，而无论多大的场景都是需要这样“扫描线填充, 抗锯齿, 光照, 纹理化”一遍一遍地处理。</p>
 <p>为了加速渲染过程，有以下几种方法：</p>
 <p>（1）为这种特定运算来做专门的硬件（即 GPU）来加快速度。</p>
@@ -556,24 +556,20 @@
 >
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#3101-3d-投影3-dimensional-projection">3.10.1 3D 投影（3 Dimensional Projection）</a></li>
+    <li><a href="#3102-填充filling">3.10.2 填充（filling）</a>
       <ul>
-        <li><a href="#3101-3d-投影3-dimensional-projection">3.10.1 3D 投影（3 Dimensional Projection）</a></li>
-        <li><a href="#3102-填充filling">3.10.2 填充（filling）</a>
-          <ul>
-            <li><a href="#多边形polygons">多边形(Polygons)</a></li>
-            <li><a href="#扫描线渲染-scanline-rendering">扫描线渲染 (Scanline Rendering)</a></li>
-            <li><a href="#画家算法painters-algorithm">画家算法（Painter&rsquo;s Algorithm）</a></li>
-            <li><a href="#深度缓冲z-buffering">深度缓冲（Z-Buffering）</a></li>
-            <li><a href="#背面剔除back-face-culling">背面剔除（Back-Face Culling）</a></li>
-          </ul>
-        </li>
-        <li><a href="#3103-抗锯齿antialiasing-">3.10.3 抗锯齿（Antialiasing ）</a></li>
-        <li><a href="#3104-光照lighting">3.10.4 光照（lighting）</a></li>
-        <li><a href="#3105-纹理textures">3.10.5 纹理（textures）</a></li>
-        <li><a href="#3106-gpu">3.10.6 GPU</a></li>
+        <li><a href="#多边形polygons">多边形(Polygons)</a></li>
+        <li><a href="#扫描线渲染-scanline-rendering">扫描线渲染 (Scanline Rendering)</a></li>
+        <li><a href="#画家算法painters-algorithm">画家算法（Painter&rsquo;s Algorithm）</a></li>
+        <li><a href="#深度缓冲z-buffering">深度缓冲（Z-Buffering）</a></li>
+        <li><a href="#背面剔除back-face-culling">背面剔除（Back-Face Culling）</a></li>
       </ul>
     </li>
+    <li><a href="#3103-抗锯齿antialiasing-">3.10.3 抗锯齿（Antialiasing ）</a></li>
+    <li><a href="#3104-光照lighting">3.10.4 光照（lighting）</a></li>
+    <li><a href="#3105-纹理textures">3.10.5 纹理（textures）</a></li>
+    <li><a href="#3106-gpu">3.10.6 GPU</a></li>
   </ul>
 </nav>
 </div>

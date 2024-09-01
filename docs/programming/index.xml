@@ -13,7 +13,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/programming/2.1-%E7%BC%96%E7%A8%8B%E5%8F%B2%E8%AF%9Dearly-programming/</guid>
-      <description>2.1.1 编程介质 在 1.7.2 节中说明 CPU 工作原理时，我们假设程序已经在计算机内存中了，但实际上程序需要被加载（load into）进内存。 [line-2, body-2] + 1801 年 + 可穿孔纸卡（pun</description>
+      <description>2.1.1 编程介质 在 1.7.2 节中说明 CPU 工作原理时，我们假设程序已经在计算机内存中了，但实际上程序需要被加载（load into）进内存。 2.1.2 冯诺依曼结构 「冯诺依曼结构」</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/programming/2.2-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80the-first-programming-languages/</guid>
-      <description>[line-2, body-2] + early day + 机器语言（Machine Language） + - 机器语言又名机器码（Machine Code），指只能理解二进制描述的信息。 - 早期编程只能使用</description>
+      <description>🏆 the holy grail (圣杯)：使用英文直接于计算机对话（plain ol&amp;rsquo; English），计算机会理解并执行。</description>
     </item>
     
     <item>

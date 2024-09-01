@@ -75,7 +75,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
 <meta name="description"
-  content="3.2.1 存储器（storage） 1.6 小节设计的 RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent">
+  content="RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent），断电后数据会丢失。">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -108,7 +108,7 @@
     },
     "headline": "3.2 内存 \u0026 储存介质（Memory \u0026 Storage） | 3 操作系统 | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
     "dateModified": "2023-09-17T00:00:00+00:00",
-    "wordCount":  2897 ,
+    "wordCount":  181 ,
     "publisher": {
         "@type": "Person",
         "name": "枝因（viyi）",
@@ -117,7 +117,7 @@
             "url": "https://viyi.cc/images/icon.png"
         }
         },
-    "description": "3.2.1 存储器（storage） 1.6 小节设计的 RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent"
+    "description": "RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent），断电后数据会丢失。"
 }
 </script><meta property="og:title" content="3.2 内存 &amp; 储存介质（Memory &amp; Storage） | 3 操作系统 | 与你分享我的眼睛" />
 <meta property="og:type" content="article" />
@@ -130,9 +130,7 @@
 
 
 
-
-<meta property="og:description" content="3.2.1 存储器（storage） 1.6 小节设计的 RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent" />
-
+<meta property="og:description" content="RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent），断电后数据会丢失。" />
 
 
 
@@ -409,7 +407,7 @@
   </div>
   <div class="me-6 my-2">
     <i class="fas fa-clock me-1"></i>
-    <span>6分钟阅读时长</span>
+    <span>1分钟阅读时长</span>
   </div>
 
   
@@ -421,74 +419,12 @@
   
   
 
-  <h3 id="321-存储器storage">3.2.1 存储器（storage）</h3>
+  <h2 id="321-存储器storage">3.2.1 存储器（storage）</h2>
 <p>1.6 小节设计的 RAM 是一种易失性存储器(volatile memory)，一般来说电脑的内存是非永久性的（non-permanent），断电后数据会丢失。</p>
 <p>存储器是一种非易失性（non-volatile）的存储介质，断电不会丢失，直到数据被删除或覆盖。</p>
 <p>在以前“易失性”的速度快，“非易失性”的速度慢，但随着技术发展两者差异逐渐缩小。</p>
-<h3 id="322-存储介质发展">3.2.2 存储介质发展</h3>
-<pre><code class="language-timeline">[line-2, body-2]
-
-+ 1940s
-+ 打孔纸卡
-+ - 最早的存储介质是打孔纸卡以及打孔纸带，其使用了十几年。
-- 1940 年代的纸卡标准是 80 列 × 12 行，一张卡可以存储 960 位数据。
-- 美国军方于 1958 年投入使用的半自动地面防空系统 SAGE 是已知最大的纸卡程序，其主程序存储在 6.25w 个纸卡上，大小为 5MB。
-- 纸卡的优点在于不用电且便宜耐用，缺点在于读取慢、只能写入一次、难以修改（打孔后无法轻易补上），且不便于存储临时值。
-
-+ 1944 年
-+ 延迟线存储器（Delay Line Memory）
-+ - 由 J.Presper Eckert 在建造 ENNIAC 时发明，其利用压力波在液体（如水银）中传播的延迟来存储数据。
-- 在装满液体的管子两端放置 input 和 output，用电路连接后，管子中间再加一个放大器（Amplifier）弥补信号衰弱，可以做出存储数据的循环。
-![延迟线](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2016%3A%E5%88%86%2047%3A%E7%A7%92%20g6v0fqdhet1673770607331.png)
-- 信号沿着电线传播几乎是瞬时的，故在任何时间点只能显示读取 1bit 数据，但管子内可以存储多个位。
-- 因每一时刻只能读取一位，访问特定 bit 需要等待其在循环中出现，其又名「顺序存储器」或是「循环存储器」（sequential or cyclic-access memory）。
-- 1949 年制作的 EDVAC 使用了 128 条延迟线，每条 352bits，存储了 4.5w 位数据，使得 EDVAC 成为最早的存储程序计算机（且采用了冯诺依曼结构）。
-
-+ 1950s
-+ 磁芯存储器（magnetic core memory）
-+ - 在磁芯上饶电线并施加电流，将其磁化在一个方向，关掉后仍可保持磁化；沿反方向施加电流，磁化方向（磁性）会翻转。
-![磁芯](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2033%3A%E5%88%86%2004%3A%E7%A7%92%20uoukqjb3981673771583908.png)
-- 可以将磁芯排列成网格，通过贯穿每个磁芯的线和负责选择行列的线来读写某一位，可以随时访问任意一位。
-- 第一次大规模应用是在 1953 年 MIT 的 Whirlwind 1，其使用了 32 × 32 排列的 16 块磁芯板，存储约 1.6w 位。
-- 使用手工编织，自 1950s 中期流行了 20 余年。成本从 1 美元一位下降到 1970s 的 1 美分左右。
-
-+ 1951 年
-+ 磁带
-+ - Eckert 和同事 Mauchly 创业设计了 UNIVAC 电脑——最早进行商业销售的电脑之一，其推出了「磁带」这种新存储介质。
-![磁带](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2035%3A%E5%88%86%2022%3A%E7%A7%92%209ixbyo7pov1673771722546.png)
-- 磁带使用一条长的磁性带卷在轴上，可以在“磁带驱动器”内前后移动；写头电流流经产生磁场，将磁带的一小部分磁化；电流方向决定极性，分别代表 1 和 0；此外，另附读头用于非破坏性地检测极性。
-- UNIVAC 是由半英寸宽的 8 条并行磁带，共存储近 2MB 字节。
-- 尽管磁带驱动器昂贵，但磁带便宜又小，因此磁带至今仍用于存档。
-- 缺点在于访问速度慢，连续介质需要找倒带或是快进才能到达特定位置进行访问。
-
-+ 1950~60s
-+ 磁鼓存储器（Magnetic Drum Memory）
-+ - 使用盖满磁性材料的金属圆筒来记录数据，滚筒会持续旋转至正确位置，使用周围数十个读写头来读或写 1bit 数据。为缩短延迟，鼓轮每分钟上千转。
-![磁鼓](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2038%3A%E5%88%86%2022%3A%E7%A7%92%20gqi8z9n05u1673771902168.png)
-- 1953 年，可以买到存储 8w 位（约 10KB）的磁鼓存储器。但在 1970 年代，其不再生产。
-
-+ 1956 年
-+ 磁盘（disk drive）
-+ - 由磁鼓存储器衍生而来，使用盘而非圆柱体。磁盘表面有磁性，使用写入头和读取他来处理上面的 1 和 0。
-- IBM 的 RAMAC 305 是世界上第一台磁盘计算机，其利用了磁盘体积薄的特点，将其堆叠在一起提供了更多表面积来存储数据。
-- RAMAC 共计使用 50 张 24 英寸直径的磁盘，可存储 5MB 大小。支持访问任意数据，寻道时间（the seek time）为平均 1/6s。
-- 因 1/6s 的速度仍然不够快，因此另配有磁鼓存储器和磁芯存储器。可当作是「内存层次结构」（memory hierarchy）的例子，在成本和速度中取得平衡。
-![内存层次结构](https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2015%3A%E6%97%A5%2016%3A%E6%97%B6%2048%3A%E5%88%86%2032%3A%E7%A7%92%206dfonkm2jt1673772512260.png)
-- 访问特定比特时，磁盘会高速旋转至正确位置，读/写磁头向上/下移动找到正确磁盘，将磁头滑入进行读写。
-- 1970 年代机械硬盘（Hard Disk Drives, HDD）大幅度改进且变得普遍，如今现代硬盘的平均寻道时间低于 1/100s。
-- 流行于 mid-1970~1990s 的软盘使用了软性材料当作磁盘，其他基本与硬盘一致。当时发明是为了便携，现在最多可以在保存图标中看到。
-
-+ 1972 年
-+ 激光盘（laserdisc）
-+ - 12 英寸的激光盘是一种光学存储器，使用表面的小坑造成光的不同反射来存储数据，光学传感器会捕获到这些反射，从而解码为 1 和 0。
-- 更为常见的光学存储器是光盘（Compact Disk, CD）以及 90s 流行的 DVD。
-
-+ 1990s
-+ 固态硬盘（Solid State Drives）
-+ - 现在固态硬盘 SSD 逐渐取代机械硬盘 HDD，其没有移动部件磁头，无需等待磁盘旋转，访问时间低于 1/1000s。
-- 第一个 RAM 集成电路出现在 1972 年，成本每比特 1 美分，迅速取代了磁芯存储器。SSD 比起 RAM 的速度还是慢了很多，因此现代计算机仍然采用存储层次结构。
-
-</code></pre>
+<h2 id="322-存储介质发展">3.2.2 存储介质发展</h2>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%E5%AD%98%E5%82%A8.png" alt="存储"></p>
 
 </article>
 
@@ -543,12 +479,8 @@
 >
   <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#321-存储器storage">3.2.1 存储器（storage）</a></li>
-        <li><a href="#322-存储介质发展">3.2.2 存储介质发展</a></li>
-      </ul>
-    </li>
+    <li><a href="#321-存储器storage">3.2.1 存储器（storage）</a></li>
+    <li><a href="#322-存储介质发展">3.2.2 存储介质发展</a></li>
   </ul>
 </nav>
 </div>

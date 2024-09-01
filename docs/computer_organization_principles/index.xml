@@ -8,11 +8,11 @@
     <language>zh</language>
     <lastBuildDate>Sun, 02 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/docs/computer_organization_principles/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>1.1 早期的计算</title>
-      <link>https://viyi.cc/docs/computer_organization_principles/1.1%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97/</link>
+      <title>1.1 早期的计算（Early Computing）</title>
+      <link>https://viyi.cc/docs/computer_organization_principles/1.1-%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97early-computing/</link>
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/docs/computer_organization_principles/1.1%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97/</guid>
+      <guid>https://viyi.cc/docs/computer_organization_principles/1.1-%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97early-computing/</guid>
       <description>1.1.1 信息时代（Electronic Age） 三次工业革命推动全球发展： 第一次（蒸汽）：用机械提高农业、工业、畜牧业的规模，又名机器时代（the Age of Mach</description>
     </item>
     
@@ -40,7 +40,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/computer_organization_principles/1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/</guid>
-      <description>!&amp;gt;[!quote] “Everything is number.”by Pythagoras 「万物皆数。」——毕达哥斯拉 1.4.1 二进制 在二进制中，每个符号就是二进制元数字（0/1）中的一个二进制位 （b</description>
+      <description>“Everything is number.”by Pythagoras 「万物皆数。」——毕达哥斯拉 1.4.1 二进制 在二进制中，每个符号就是二进制元数字（0/1）中的一个二进制位 （bi</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/computer_organization_principles/1.5-alu-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83-how-computers-calculate/</guid>
-      <description>!ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整</description>
+      <description>ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整</description>
     </item>
     
     <item>
@@ -58,7 +58,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/computer_organization_principles/1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/</guid>
-      <description>!计算机的存储器（Memory）可分为两种类型： 随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。 SRAM( Static Random Access Memory，</description>
+      <description>计算机的存储器（Memory）可分为两种类型： 随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。 SRAM( Static Random Access Memory，静</description>
     </item>
     
     <item>
@@ -67,7 +67,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/computer_organization_principles/1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/</guid>
-      <description>!### 1.7.1 组成概述 CPU CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。 比如</description>
+      <description>1.7.1 组成概述 CPU CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。 比如，</description>
     </item>
     
     <item>
@@ -76,7 +76,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/computer_organization_principles/1.8-%E6%8C%87%E4%BB%A4%E5%92%8C%E7%A8%8B%E5%BA%8Finstructions-programs/</guid>
-      <description>!### 1.8.1 指令集 指令由「操作码」和「地址码」组成，前者用于说明操作指令，后者则表示操作数据的地址（寄存器或内存地址）。记录指令名称、用法、操作码以及所需 RAM 地</description>
+      <description>1.8.1 指令集 指令由「操作码」和「地址码」组成，前者用于说明操作指令，后者则表示操作数据的地址（寄存器或内存地址）。记录指令名称、用法、操作码以及所需 RAM 地址</description>
     </item>
     
     <item>

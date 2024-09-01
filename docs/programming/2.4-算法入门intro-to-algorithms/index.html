@@ -388,19 +388,19 @@
   
   
 
-  <h3 id="241-概述">2.4.1 概述</h3>
-<h4 id="算法">算法</h4>
+  <h2 id="241-概述">2.4.1 概述</h2>
+<h3 id="算法">算法</h3>
 <p>算法（Algorithm）一词源自 1000 多年前的波斯博识者，阿尔·花拉子密(Abū ʿAbdallāh Muḥammad ibn Mūsā al-Khwārizmī), 代数（algebra）之父之一。</p>
 <p>算法是指求解问题的具体步骤，一般来说所需步骤越短越好，但有时也会考虑占用内存的情况。</p>
-<h4 id="复杂度">复杂度</h4>
+<h3 id="复杂度">复杂度</h3>
 <p>算法的输入大小和运行步骤之间的关系叫做「算法复杂度」，使用「大 O 表示法」来衡量运行速度的量级。</p>
-<h3 id="242-选择排序selection-sort">2.4.2 选择排序（Selection sort）</h3>
+<h2 id="242-选择排序selection-sort">2.4.2 选择排序（Selection sort）</h2>
 <p>遍历找到当前最小数，移动至最前，后从第二个继续循环该遍历，直到最后一个数字。算法时间复杂度为 $O（N^2）$，指数级增长，效率较低。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2011%3A%E6%97%A5%2015%3A%E6%97%B6%2043%3A%E5%88%86%2042%3A%E7%A7%92%20m5ruem6z3b1673423021920.png" alt="选择排序"></p>
-<h3 id="243-归并排序merge-sort">2.4.3 归并排序（merge sort）</h3>
+<h2 id="243-归并排序merge-sort">2.4.3 归并排序（merge sort）</h2>
 <p>若数组大小大于 1，则将数组对半分割，直至单个数组个数为 1（示例中）。接着从首个开始两两对比每组中第一个数字的大小，归并为 * 2 个组，循环重复。</p>
 <p>算法时间复杂度为 $O（nlogn）$ ，n 为比较 + 合并的次数（与输入成正比），log n 是合并步骤的次数（重复对半切是和输入呈对数关系）。</p>
-<h3 id="244-dijkstra-算法">2.4.4 Dijkstra 算法</h3>
+<h2 id="244-dijkstra-算法">2.4.4 Dijkstra 算法</h2>
 <p>Dijkstra 是一种图搜索（graph search）算法，图由节点（node）和边（line）相连构成，点到点之间的代价称为成本（cost）或是权重（weight）。</p>
 <p>若要计算任意某两点之间的最小代价路线，最简单的蛮力法是尝试每一条路计算总成本，时间复杂度为 $O(n!)$，阶乘量级是最糟糕的。</p>
 <p>Dijkstra 算法是 Edsger Dijkstra 发明与 1956 年构思的算法，其<a href="https://www.bilibili.com/video/BV1EW411u7th?t=492.9&amp;p=13">基本思想如下</a>：总是从代价最低的节点开始，运行一次后得知相邻节点的代价；再从相邻节点中的最小节点开始向前计算相邻节点的邻居的代价，更新该值，接着计算相邻节点中的第二小节点向前一步的代价，若相邻节点的同一邻居计算结果再次计算时比原值更小，则更新。</p>
@@ -459,19 +459,15 @@
 >
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#241-概述">2.4.1 概述</a>
       <ul>
-        <li><a href="#241-概述">2.4.1 概述</a>
-          <ul>
-            <li><a href="#算法">算法</a></li>
-            <li><a href="#复杂度">复杂度</a></li>
-          </ul>
-        </li>
-        <li><a href="#242-选择排序selection-sort">2.4.2 选择排序（Selection sort）</a></li>
-        <li><a href="#243-归并排序merge-sort">2.4.3 归并排序（merge sort）</a></li>
-        <li><a href="#244-dijkstra-算法">2.4.4 Dijkstra 算法</a></li>
+        <li><a href="#算法">算法</a></li>
+        <li><a href="#复杂度">复杂度</a></li>
       </ul>
     </li>
+    <li><a href="#242-选择排序selection-sort">2.4.2 选择排序（Selection sort）</a></li>
+    <li><a href="#243-归并排序merge-sort">2.4.3 归并排序（merge sort）</a></li>
+    <li><a href="#244-dijkstra-算法">2.4.4 Dijkstra 算法</a></li>
   </ul>
 </nav>
 </div>

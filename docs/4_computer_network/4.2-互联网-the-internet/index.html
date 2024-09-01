@@ -75,7 +75,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
 <meta name="description"
-  content="互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。 计算机需要先连接到局域网 (Local Area Network,LAN)—— 即 WIFI 路由器所连接的所有设备">
+  content="互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -117,7 +117,7 @@
             "url": "https://viyi.cc/images/icon.png"
         }
         },
-    "description": "互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。 计算机需要先连接到局域网 (Local Area Network,LAN)—— 即 WIFI 路由器所连接的所有设备"
+    "description": "互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。"
 }
 </script><meta property="og:title" content="4.2 互联网 (The Internet) | 4 计算机网络 | 与你分享我的眼睛" />
 <meta property="og:type" content="article" />
@@ -130,9 +130,7 @@
 
 
 
-
-<meta property="og:description" content="互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。 计算机需要先连接到局域网 (Local Area Network,LAN)—— 即 WIFI 路由器所连接的所有设备" />
-
+<meta property="og:description" content="互联网是多个网络分布式连接构成的，其中由无数日益增多的互联设备组成。" />
 
 
 
@@ -383,11 +381,11 @@
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674706548886.png" alt="跳跃主干网络获取资源"></p>
 <p>若想获取某个资源，数据包（packet）需要先经由互联网主干（由一群超大型、带宽超高路由器组成）到达资源的服务器。</p>
 <p>在这个过程中，数据包可能要跳个 10 次才能到达（4 跳进主干，2 跳穿越，4 跳进服务器）。Windows, Mac OS 或 Linux系统，可以用 traceroute 来查看具体跳数。</p>
-<h3 id="421-ip">4.2.1 IP</h3>
+<h2 id="421-ip">4.2.1 IP</h2>
 <p>互联网协议(Internet Protocol, IP) 中规定了数据包 (packet) 在互联网中传输的标准，是非常底层的一种协议。</p>
 <p>数据包的头部 (前缀) 是指“关于数据的数据”，又名「原数据」(metadata) 。头部指存储了目标地址，无法用于区分具体将数据交给目标地址的电脑中的哪个程序。</p>
 <p>因此需要更高层的协议来区分程序， IP 负责把数据包送到正确的计算机，而 UDP 负责把数据包送到正确的程序中。</p>
-<h3 id="422-udp">4.2.2 UDP</h3>
+<h2 id="422-udp">4.2.2 UDP</h2>
 <p>用户数据报协议(User Datagram Protocol, UDP) 是一种传输层协议，其头部包含着端口号 (port) 和校验和 (checksum)等元数据。</p>
 <p>每个想要访问网络的程序，会向操作系统申请唯一的端口号。当数据包到达时，根据端口号将数据交付给不同的程序。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674707170480.png" alt="端口号"></p>
@@ -395,24 +393,24 @@
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674707481545.png" alt="校验和"></p>
 <p>接收方收到数据包后会重新计算一次数据和，再与头部中的校验和进行对比，若不一致，则可判定数据可能因功率波动或电缆故障等原因而出现了错误。</p>
 <p>UDP 不提供修复数据或是数据重发的机制，检验出错后 UDP 会直接丢包，且其无法确认数据包是否已经到达。但其优势在于简单快捷，一些视频通话应用更加青睐。</p>
-<h3 id="423-tcp">4.2.3 TCP</h3>
+<h2 id="423-tcp">4.2.3 TCP</h2>
 <p>传输控制协议(Transmission Control Protocol, TCP) 较之 UDP 的“尽力而为”而言更加可靠，其可以确保“所有数据均必须到达”。TCP 协议最初是和 IP 协议一齐出现，称为 TCP/IP 协议，后拆分为两个协议。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708413729.png" alt="TCP/IP"></p>
 <p>TCP 有许多更高级的功能，最重要的几个特性如下：</p>
-<h4 id="有序">有序</h4>
+<h3 id="有序">有序</h3>
 <p>TCP 数据包有序号(sequence numbers)，就算传输过程中出现了乱序到达的情况，接收方仍然可以利用序号对数据包进行正确排序。</p>
-<h4 id="确认码">确认码</h4>
+<h3 id="确认码">确认码</h3>
 <p>TCP 要求接收方的电脑收到数据包、检查&quot;校验和&quot;无误后（数据没有损坏），给发送方发一个确认码 (Acknowledgement, ACK) ，代表收到了数据包。</p>
 <p>发送方在收到上一个数据包的确认码之后，会接着再发送下一个数据包。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708847530.png" alt="ACK"></p>
 <p>若确认码因延误或丢失使得在一定时间后发送方仍未收到，则发送方会再次重发数据包。若接收方收到重复的数据包，可根据序号加判断是否重复需要丢弃。</p>
 <p>此外，TCP 可以一次发送多个数据包，等待接收多个确认码，使得效率提升。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674708918911.png" alt=""></p>
-<h4 id="拥塞控制">拥塞控制</h4>
+<h3 id="拥塞控制">拥塞控制</h3>
 <p>在 TCP 协议中，可以借由确认码的成功率和来回时间来推测网络的拥塞程度，进而调整发送数据包的数量。</p>
 <p>简言之，TCP 可以处理乱序、丢失、重发问题，还可以根据网络拥塞情况来自动调整传输速率。</p>
 <p>但为了提高可靠性而存在的 ACK 使得数据包数量翻番，信息传输的密度下降，不适用于像是在线射击游戏等对时间要求很高的程序使用。</p>
-<h3 id="424-dns">4.2.4 DNS</h3>
+<h2 id="424-dns">4.2.4 DNS</h2>
 <p>计算机根据“IP 地址”和“端口号”对网站进行访问，比如 谷歌的 IP 地址和端口号是 172.217.7.238/80。但数字不利于人类记忆识别，用文字表示的域名 google.com 较之更为友好。</p>
 <p>因此，需要使用特殊服务实现“IP 地址/端口号”和“域名”之间的映射对应关系，这种服务称为「域名系统」(Domain Name System, DNS) 。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674709731917.png" alt="DNS"></p>
@@ -421,7 +419,7 @@
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674709783202.png" alt="DNS 结构树"></p>
 <p>域名自右往左为：「顶级域名」(Top Level Domains, TLD) 、二级域名(lower level domains)、子域名(subdomains) etc.</p>
 <p>因 DNS 的结构树非常大，因此这些数据都分布在许多 DNS 服务器中，不同的服务器负责树中不同部分的查询返回服务。</p>
-<h3 id="425-osi-模型">4.2.5 OSI 模型</h3>
+<h2 id="425-osi-模型">4.2.5 OSI 模型</h2>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1674710118971.png" alt="OSI 模型"></p>
 <p>开放式系统互联通信参考模型 (Open System Interconnection, OSI) 是一种将网络通信划分为多层次的概念性框架，每层各自处理一部分问题，利用抽象以便更好地简化通信。具体分层如下：</p>
 <ol>
@@ -487,21 +485,17 @@
 >
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#421-ip">4.2.1 IP</a></li>
+    <li><a href="#422-udp">4.2.2 UDP</a></li>
+    <li><a href="#423-tcp">4.2.3 TCP</a>
       <ul>
-        <li><a href="#421-ip">4.2.1 IP</a></li>
-        <li><a href="#422-udp">4.2.2 UDP</a></li>
-        <li><a href="#423-tcp">4.2.3 TCP</a>
-          <ul>
-            <li><a href="#有序">有序</a></li>
-            <li><a href="#确认码">确认码</a></li>
-            <li><a href="#拥塞控制">拥塞控制</a></li>
-          </ul>
-        </li>
-        <li><a href="#424-dns">4.2.4 DNS</a></li>
-        <li><a href="#425-osi-模型">4.2.5 OSI 模型</a></li>
+        <li><a href="#有序">有序</a></li>
+        <li><a href="#确认码">确认码</a></li>
+        <li><a href="#拥塞控制">拥塞控制</a></li>
       </ul>
     </li>
+    <li><a href="#424-dns">4.2.4 DNS</a></li>
+    <li><a href="#425-osi-模型">4.2.5 OSI 模型</a></li>
   </ul>
 </nav>
 </div>

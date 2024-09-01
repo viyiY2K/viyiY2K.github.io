@@ -108,7 +108,7 @@
     },
     "headline": "1.10 集成电路、摩尔定律（Integrated Circuits \u0026 Moore\u0027s Law） | 1 计算机组成 | 与你分享我的眼睛","datePublished": "2022-09-02T00:00:00+00:00",
     "dateModified": "2023-09-17T00:00:00+00:00",
-    "wordCount":  3267 ,
+    "wordCount":  2734 ,
     "publisher": {
         "@type": "Person",
         "name": "枝因（viyi）",
@@ -276,7 +276,7 @@
     <li class="py-2">
         <div class="">
             <a class=" hover:text-eureka"
-                href="https://viyi.cc/docs/computer_organization_principles/1.1%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97/">1.1 早期的计算</a>
+                href="https://viyi.cc/docs/computer_organization_principles/1.1-%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97early-computing/">1.1 早期的计算（Early Computing）</a>
         </div>
         
     </li>
@@ -409,7 +409,7 @@
   </div>
   <div class="me-6 my-2">
     <i class="fas fa-clock me-1"></i>
-    <span>7分钟阅读时长</span>
+    <span>6分钟阅读时长</span>
   </div>
 
   
@@ -421,24 +421,24 @@
   
   
 
-  <h3 id="1101-集成电路integrated-circuits">1.10.1 集成电路（Integrated Circuits）</h3>
-<h4 id="数字暴政">数字暴政</h4>
+  <h2 id="1101-集成电路integrated-circuits">1.10.1 集成电路（Integrated Circuits）</h2>
+<h3 id="数字暴政">数字暴政</h3>
 <p>1940s~1960s 中期，计算机由独立部件用线连接而成组成，这些独立部件称为「分立元件」（discrete components）。</p>
 <p>若想提升性能，只能增加更多分立元件，这会导致更多更复杂的电线，这种问题称为「数字暴政」（Tyranny of Numbers）。</p>
 <p>比如 1.2.3 小节提及的 ENIAC 就使用了 1.7w 多个真空管，7w 个电阻，1w 个电容，500w 个手工焊点。</p>
 <p>后来到了  1950s 中期，更小更可靠的晶体管在市场上出现。1959 年 IBM 将 709 计算机中的电子管换为晶体管制造出了 IBM 7090，其速度提升 6 倍，价格只有一半。但商业化的晶体管仍然属于分立元件。</p>
 <p>数字暴政问题的严重性在 1960s 达到顶峰，亟待引入新抽象来封装这种复杂性。</p>
-<h4 id="集成电路">集成电路</h4>
+<h3 id="集成电路">集成电路</h3>
 <p>1958 年，Jack Kilby 使用锗作为材料将独立部件用电线连接集成在一起，使得原先分立元件组合成了新的独立组件单元，集成电路（Integrated Circuits, IC）自此出现。</p>
 <p>1959 年，Robert Noyce 所在公司仙童半导体使用了更稳定储量也更多的硅作为集成电路材料，使得集成电路被广泛使用。Noyce  也因此被公认为现代集成电路之父，开创了电子时代（the electronics era）。</p>
-<h4 id="印刷电路板">印刷电路板</h4>
+<h3 id="印刷电路板">印刷电路板</h3>
 <p>起初的 IC 只集成了几个晶体管，可以将 1.3 节的逻辑门封装成单独组件，但 IC 之间的相互连接仍然不便。于是出现了「印刷电路板」（Printed Circuit Boards, PCB）。</p>
 <p>印刷电路板通过蚀刻（etch）金属线的方式将零件连接在一起，无需焊接或是使用一大堆线，并且可以大规模量产。</p>
 <p>PCB 和 IC 相结合使得分立元件和电线大幅减少，实现相同功能。</p>
-<h3 id="1102-光刻技术photolithography">1.10.2 光刻技术（Photolithography）</h3>
+<h2 id="1102-光刻技术photolithography">1.10.2 光刻技术（Photolithography）</h2>
 <p>受限于当时的技术，在 IC 立塞 5 个以上的分立元件还是很困难，直到新的制作工艺「光刻」（Photolithography）出现，其利用光将图案印到材料上，可以使用基础操作来制造复杂电路。以用光刻技术制作晶体管为例：</p>
-<h4 id="蚀刻etch">蚀刻（etch）</h4>
-<p>![光刻基础层](assets/{2023%3A年 1%3A月 14%3A日 21%3A时 19%3A分 03%3A秒 oi9hx9b8tb1673702343331-17251876557391.png)</p>
+<h3 id="蚀刻etch">蚀刻（etch）</h3>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2019%3A%E5%88%86%2003%3A%E7%A7%92%20oi9hx9b8tb1673702343331.png" alt="光刻基础层"></p>
 <ul>
 <li>晶圆（silicon wafer）：最基础的硅薄片，一种半导体材料，有时导电有时不导电。</li>
 <li>氧化层（oxide layer）：保护层。</li>
@@ -446,30 +446,30 @@
 <li>光掩膜（photomask）：用于遮挡不希望被强光照射融化的地方。</li>
 </ul>
 <p>强光照射后，未被光掩模遮挡的光刻胶部分会发生化学变化，使用一种化学物质洗去后，氧化层露出：</p>
-<p>![强光照射](assets/{2023%3A年 1%3A月 14%3A日 21%3A时 22%3A分 44%3A秒 mp9nxq20aj1673702564756-17251876557403.png)</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2022%3A%E5%88%86%2044%3A%E7%A7%92%20mp9nxq20aj1673702564756.png" alt="强光照射"></p>
 <p>用另一种化学物质（通常是酸）洗去氧化层中间露出部分，注意两侧氧化层被光刻胶保护未被洗去：</p>
-<p>![洗氧化层](assets/{2023%3A年 1%3A月 14%3A日 21%3A时 25%3A分 56%3A秒 ujxk66y7w81673702755980-17251876557405.png)</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2025%3A%E5%88%86%2056%3A%E7%A7%92%20ujxk66y7w81673702755980.png" alt="洗氧化层"></p>
 <p>使用另一种化学药品洗掉光刻胶，蚀刻完成：</p>
-<p>![洗光刻胶](assets/{2023%3A年 1%3A月 14%3A日 21%3A时 29%3A分 31%3A秒 e05skp8f1d1673702971087.png)</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2029%3A%E5%88%86%2031%3A%E7%A7%92%20e05skp8f1d1673702971087.png" alt="洗光刻胶"></p>
 <h4 id="掺杂doping">掺杂（doping）</h4>
 <p>使用高温气体（比如磷）渗透进暴露出的硅，改变硅的电学性质，使得其导电性更好，这一化学过程称为掺杂（doping）。</p>
-<p>![掺杂](assets/{2023%3A年 1%3A月 14%3A日 21%3A时 35%3A分 31%3A秒 90uy4vfw331673703331328-17251876557408.png)</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2035%3A%E5%88%86%2031%3A%E7%A7%92%2090uy4vfw331673703331328.png" alt="掺杂"></p>
 <p>（注：半导体的具体物理和化学性质可参见 <a href="https://www.youtube.com/watch?v=IcrBqCFLHIY&amp;t=0s">Youtuber Derek Muller 的频道 @Veritasium</a>。）</p>
 <p>再重复一次蚀刻，放上光刻胶和光掩模，开出新形状的缺口：</p>
-<p>![](assets/{2023%3A年 1%3A月 14%3A日 21%3A时 38%3A分 03%3A秒 a3sji5ixfb1673703483456.png)</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2038%3A%E5%88%86%2003%3A%E7%A7%92%20a3sji5ixfb1673703483456.png" alt=""></p>
 <p>用另一种气体对硅进行掺杂，控制好深度和时机，控制其不超过之前的区域：</p>
-<p>![二次掺杂](assets/{2023%3A年 1%3A月 14%3A日 21%3A时 40%3A分 15%3A秒 g8m0f1pvoj1673703614932.png)</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2040%3A%E5%88%86%2015%3A%E7%A7%92%20g8m0f1pvoj1673703614932.png" alt="二次掺杂"></p>
 <h4 id="金属化metalization">金属化（metalization）</h4>
 <p>材料处理完后，需要在氧化层上制作出通道，用于放置细小金属导线来连接晶体管。依旧使用光刻胶和光掩膜重复蚀刻步骤，刻出通道。</p>
 <p>接着放置一层薄金属（铝或者铜），该过程称为金属化（metalization）：</p>
-<p>![金属化](assets/{2023%3A年 1%3A月 14%3A日 21%3A时 47%3A分 07%3A秒 q0ts7df31t1673704027857.png)</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2047%3A%E5%88%86%2007%3A%E7%A7%92%20q0ts7df31t1673704027857.png" alt="金属化"></p>
 <p>再通过光刻胶和光掩膜重复蚀刻步骤，将金属上的具体电路蚀刻出：</p>
-<p>![晶体管](assets/{2023%3A年 1%3A月 14%3A日 21%3A时 48%3A分 48%3A秒 tyuanol1xn1673704128024.png)</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2048%3A%E5%88%86%2048%3A%E7%A7%92%20tyuanol1xn1673704128024.png" alt="晶体管"></p>
 <p>至此一个晶体管（transistor）制作完工。这是一个双极型晶体管（bipolar junction transistor），由三根线连接不同的区域，每个趋于的掺杂方式不同。</p>
 <h4 id="微型芯片chip">微型芯片（chip）</h4>
 <p>光刻法同样可以制作电阻或电容等其他电子元件和相互连接的电路，其均可制作在一片硅上。</p>
 <p>光刻法一次会制作上百万个细节，同时通过焦距改变可以将透过光掩膜的光投射成任意大小，以便于制作出精细细节。</p>
-<p>![光刻投影](assets/{2023%3A年 1%3A月 14%3A日 21%3A时 54%3A分 55%3A秒 dmeut5c17j1673704495229.png)</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2014%3A%E6%97%A5%2021%3A%E6%97%B6%2054%3A%E5%88%86%2055%3A%E7%A7%92%20dmeut5c17j1673704495229.png" alt="光刻投影"></p>
 <p>IC 中会有许多导线上下交错，连接各个元件。一片晶圆可以制作很多 IC ，整块晶圆制作完成会后切割然后包裹进微型芯片（chip）中，成为它的核心。</p>
 <h3 id="1103-罗尔定律moore-law">1.10.3 罗尔定律（Moore&rsquo; Law）</h3>
 <p>因光刻技术的发展，晶体管变小且集成密度变高。从 1960s 初 IC 塞不下超过 5 个晶体管，到 1960s 中期市场出现超过 100 个晶体管的 IC，于是 1965 年戈登摩尔（Gordon Moore）看到了某些趋势：</p>
@@ -556,18 +556,17 @@
 >
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#1101-集成电路integrated-circuits">1.10.1 集成电路（Integrated Circuits）</a>
       <ul>
-        <li><a href="#1101-集成电路integrated-circuits">1.10.1 集成电路（Integrated Circuits）</a>
+        <li><a href="#数字暴政">数字暴政</a></li>
+        <li><a href="#集成电路">集成电路</a></li>
+        <li><a href="#印刷电路板">印刷电路板</a></li>
+      </ul>
+    </li>
+    <li><a href="#1102-光刻技术photolithography">1.10.2 光刻技术（Photolithography）</a>
+      <ul>
+        <li><a href="#蚀刻etch">蚀刻（etch）</a>
           <ul>
-            <li><a href="#数字暴政">数字暴政</a></li>
-            <li><a href="#集成电路">集成电路</a></li>
-            <li><a href="#印刷电路板">印刷电路板</a></li>
-          </ul>
-        </li>
-        <li><a href="#1102-光刻技术photolithography">1.10.2 光刻技术（Photolithography）</a>
-          <ul>
-            <li><a href="#蚀刻etch">蚀刻（etch）</a></li>
             <li><a href="#掺杂doping">掺杂（doping）</a></li>
             <li><a href="#金属化metalization">金属化（metalization）</a></li>
             <li><a href="#微型芯片chip">微型芯片（chip）</a></li>

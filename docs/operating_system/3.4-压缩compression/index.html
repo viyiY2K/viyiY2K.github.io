@@ -421,18 +421,18 @@
   
   
 
-  <h3 id="341-游程编码run-length-encoding">3.4.1 游程编码（Run-Length Encoding）</h3>
+  <h2 id="341-游程编码run-length-encoding">3.4.1 游程编码（Run-Length Encoding）</h2>
 <p>游程编码（Run-Length Encoding）适用于经常出现重复值的文件中，比如下图中有 7 个连续黄色像素，可以插入额外的字节表示有连续 7 个黄色像素，接着删除重复数据。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2024%3A%E6%97%A5%2015%3A%E6%97%B6%2038%3A%E5%88%86%2056%3A%E7%A7%92%20nltjudiib51674545936260.png" alt="游程编码"></p>
 <p>但需要为了能让计算机分辨出“长度”和“字节”，所以需要为所有不同颜色的像素标上长度，有时反而会使得数据量变多。</p>
-<h3 id="342-dftba">3.4.2 DFTBA</h3>
+<h2 id="342-dftba">3.4.2 DFTBA</h2>
 <p>DFTBA 有点像“Don&rsquo;t forget to be awesome”（别忘了变厉害）的缩写，使用字典（dictionary）来存储代码和数据之间的对应关系，使得数据的表示更为紧凑，同样是无损压缩。</p>
 <p>首先将数据分块计算组合出现的频率，使用「霍夫曼树」（Huffman Tree）进行编码——由大卫·霍夫曼（David Huffman）发明于 1950s，具体步骤如下：</p>
 <p>列出所有分块组合以及其出现频率，每轮选中最低的两个频率组成一个树的节点，重复组成最终的霍夫曼树。其特点在于出现频率最低的排列在树的最底端，数字也越大。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2016%3A%E6%97%B6%2024%3A%E5%88%86%2048%3A%E7%A7%92%20654dwea33f1674030288880.png" alt="DFTBA"></p>
 <p>根据霍夫曼树对分块组合进行编码，因树的每条路径唯一，所以编码也不会有冲突。接着根据组合的对应将像素数据替换成相应的 code，如将两个黄色的像素替换为 00。同时将保存对应关系的字典也存储在编码数据前即可。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2016%3A%E6%97%B6%2028%3A%E5%88%86%2008%3A%E7%A7%92%207clqkk7h661674030488683.png" alt="字典编码"></p>
-<h3 id="343-有损压缩">3.4.3 有损压缩</h3>
+<h2 id="343-有损压缩">3.4.3 有损压缩</h2>
 <p>解压前后数据完全一致的压缩方法，称为「无损压缩」（lossless compression）。常常组合使用“消除冗余”和“使用更紧凑的表示方式”两者压缩方法来实现，如 GIF, PNG, PDF, ZIP 。</p>
 <p>在一些人类看不出区别的时候，使用有损压缩（lossy compression）会更有效率。比如人类无法听到超声波数据，其对人声较为敏感，而对低音只能感觉得到震动。音频有损压缩会利用人类这种感知特性，使用不同的精度来编码不同的频段，比如在网络通话时会根据网速来视情况降低声音质量。</p>
 <p>这种通过删除人类无法感知到的数据的编码方式，称为「感知编码」（perceptual coding），属于心理物理学（Psychophysics）领域，依赖于人类的感知模型。</p>
@@ -494,13 +494,9 @@
 >
   <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#341-游程编码run-length-encoding">3.4.1 游程编码（Run-Length Encoding）</a></li>
-        <li><a href="#342-dftba">3.4.2 DFTBA</a></li>
-        <li><a href="#343-有损压缩">3.4.3 有损压缩</a></li>
-      </ul>
-    </li>
+    <li><a href="#341-游程编码run-length-encoding">3.4.1 游程编码（Run-Length Encoding）</a></li>
+    <li><a href="#342-dftba">3.4.2 DFTBA</a></li>
+    <li><a href="#343-有损压缩">3.4.3 有损压缩</a></li>
   </ul>
 </nav>
 </div>

@@ -75,7 +75,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
 <meta name="description"
-  content="!ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整">
+  content="ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -117,7 +117,7 @@
             "url": "https://viyi.cc/images/icon.png"
         }
         },
-    "description": "!ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整"
+    "description": "ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整"
 }
 </script><meta property="og:title" content="1.5 ALU 算术逻辑单元 （How Computers Calculate） | 1 计算机组成 | 与你分享我的眼睛" />
 <meta property="og:type" content="article" />
@@ -131,7 +131,7 @@
 
 
 
-<meta property="og:description" content="!ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整" />
+<meta property="og:description" content="ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整" />
 
 
 
@@ -276,7 +276,7 @@
     <li class="py-2">
         <div class="">
             <a class=" hover:text-eureka"
-                href="https://viyi.cc/docs/computer_organization_principles/1.1%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97/">1.1 早期的计算</a>
+                href="https://viyi.cc/docs/computer_organization_principles/1.1-%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97early-computing/">1.1 早期的计算（Early Computing）</a>
         </div>
         
     </li>
@@ -421,36 +421,36 @@
   
   
 
-  <p>!ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。</p>
+  <p>ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。</p>
 <p>最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整 ALU。 Intel 74181 使用了 70 个逻辑门，但无法执行乘除运算。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2021%3A%E5%88%86%2021%3A%E7%A7%92%20v0rgihsyxw1673076081658.png" alt=" Intel 74181"></p>
 <p>ALU 由 1 个算术单元（arithmetic）和 1 个逻辑单元（logic unit）组成，算术单元可用于进行加减法运算或是增量运算（x+1），逻辑单元执行逻辑操作（如布尔代数中的基本运算）。</p>
-<h3 id="151-算术单元">1.5.1 算术单元</h3>
-<h4 id="半加器">半加器</h4>
+<h2 id="151-算术单元">1.5.1 算术单元</h2>
+<h3 id="半加器">半加器</h3>
 <p>半加器（half adder）由异或门和与门组成，仅能计算 1 位加法。两个输入（0 或 1）有 4 种可能的输出（1 = true，0 = false），不计进位的情况（1+1=0，高位舍弃）可用「异或门」搭建：</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2012%3A%E5%88%86%2058%3A%E7%A7%92%20uriwgxr41q1673071978725.png" alt="一位加法器"></p>
 <p>当且仅当两个输入均为 1 时需要进位，该规则和「与门」相同，两者连接则为半加器：</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2019%3A%E5%88%86%2003%3A%E7%A7%92%209ix22pv9ln1673072343403.png" alt="半加器"></p>
-<h4 id="全加器">全加器</h4>
+<h3 id="全加器">全加器</h3>
 <p>使用半加器做两个三位二进制数加法时，需要多加一个进位上的数字（共计 3 个数相加）。</p>
-<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2034%3A%E5%88%86%2012%3A%E7%A7%92%20q2vav5eukd1673073252330.png" style="zoom: 50%;" /></div>
+<div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2034%3A%E5%88%86%2012%3A%E7%A7%92%20q2vav5eukd1673073252330.png" style="zoom: 30%;" /></div>
 <p>全加器的真值表如下：</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2038%3A%E5%88%86%2013%3A%E7%A7%92%207fo91nyjhi1673073493503.png" alt="全加器真值表"></p>
 <p>全加器的逻辑门电路如下：</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2040%3A%E5%88%86%2053%3A%E7%A7%92%20luq7musmfd1673073653711.png" alt="全加器电路图"></p>
-<h4 id="8-位行波进位加法器">8 位行波进位加法器</h4>
+<h3 id="8-位行波进位加法器">8 位行波进位加法器</h3>
 <p>全加器可以处理两个三位二进制数的加法运算，两个八位二进制数的加法可以从低位逐列相加，用 1 个半加器和 7 个全加器搭建：</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2014%3A%E6%97%B6%2052%3A%E5%88%86%2036%3A%E7%A7%92%202bznz43i2k1673074356077.png" alt="八位行波进位加法器"></p>
 <p>当计算结果的位数大于可用于表示的位数，则会出现「溢出」（overflow），这会导致 error 和不可预期的结果。</p>
 <p>为防止溢出，可以使用更多的全加器来完成 16 位或是 32 位数字的操作。但使用更多的逻辑门会提高造价，同时进位计算的耗时也更多，在每秒几十亿次的运算下该延迟仍然会造成影响。所以现代计算机所采用的加法电路为「超前进位加法器」（carry-look-ahead），其速度更快。</p>
-<h4 id="乘除法">乘除法</h4>
+<h3 id="乘除法">乘除法</h3>
 <p>ALU 的算术单元基本都支持下图中的 8 种操作，简单 ALU 可以通过累加/累减来实现四则运算中的乘除法（慢但有效），复杂 ALU 会用更多的逻辑门构建乘法电路。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2006%3A%E5%88%86%2005%3A%E7%A7%92%20xugp30ectb1673075165151.png" alt="ALU算术单元支持的八种操作"></p>
-<h3 id="152-逻辑单元">1.5.2 逻辑单元</h3>
+<h2 id="152-逻辑单元">1.5.2 逻辑单元</h2>
 <p>逻辑单元（logic unit）用于执行逻辑操作，比 AND、OR 和 NOT 操作，也可以用于进行简单的数值测试。注意此处的 0 和 1 遵守布尔代数的逻辑运作，而非算术加减。</p>
 <p>下图的逻辑单元门电路用于检测输出是否为 0（可用于确认两数字是否相等），OR 或门遇 1 出 1，最后用 NOT 非门取反后，凡有 1 则为 0，检测结果为 False 假，意为输出不为 0（其中至少有一位是 1）。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2017%3A%E5%88%86%2012%3A%E7%A7%92%20jembsyifwo1673075831923.png" alt="检测输出是否为 0 的逻辑单元电路"></p>
-<h3 id="153-alu-抽象">1.5.3 ALU 抽象</h3>
+<h2 id="153-alu-抽象">1.5.3 ALU 抽象</h2>
 <p>8 位 ALU 需要用上百个逻辑门搭建，因此工程师用镂空大 V 符号来表示 ALU 组件：</p>
 <div align="center"><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2015%3A%E6%97%B6%2023%3A%E5%88%86%2035%3A%E7%A7%92%20voq9xvav7n1673076215569.png" style="zoom: 50%;" /></div>
 <p>简图如下：</p>
@@ -515,20 +515,16 @@
 >
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#151-算术单元">1.5.1 算术单元</a>
       <ul>
-        <li><a href="#151-算术单元">1.5.1 算术单元</a>
-          <ul>
-            <li><a href="#半加器">半加器</a></li>
-            <li><a href="#全加器">全加器</a></li>
-            <li><a href="#8-位行波进位加法器">8 位行波进位加法器</a></li>
-            <li><a href="#乘除法">乘除法</a></li>
-          </ul>
-        </li>
-        <li><a href="#152-逻辑单元">1.5.2 逻辑单元</a></li>
-        <li><a href="#153-alu-抽象">1.5.3 ALU 抽象</a></li>
+        <li><a href="#半加器">半加器</a></li>
+        <li><a href="#全加器">全加器</a></li>
+        <li><a href="#8-位行波进位加法器">8 位行波进位加法器</a></li>
+        <li><a href="#乘除法">乘除法</a></li>
       </ul>
     </li>
+    <li><a href="#152-逻辑单元">1.5.2 逻辑单元</a></li>
+    <li><a href="#153-alu-抽象">1.5.3 ALU 抽象</a></li>
   </ul>
 </nav>
 </div>

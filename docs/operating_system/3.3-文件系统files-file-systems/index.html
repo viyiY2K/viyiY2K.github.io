@@ -75,7 +75,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
 <meta name="description"
-  content="3.3.1 文件格式（file format） 文件的底层均为二进制 0 和 1，需要用格式明确如何解释这些 0 和 1，同时也便于进行文件管理。文件格式可以自行发明，但最好使">
+  content="文件的底层均为二进制 0 和 1，需要用格式明确如何解释这些 0 和 1，同时也便于进行文件管理。">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -117,7 +117,7 @@
             "url": "https://viyi.cc/images/icon.png"
         }
         },
-    "description": "3.3.1 文件格式（file format） 文件的底层均为二进制 0 和 1，需要用格式明确如何解释这些 0 和 1，同时也便于进行文件管理。文件格式可以自行发明，但最好使"
+    "description": "文件的底层均为二进制 0 和 1，需要用格式明确如何解释这些 0 和 1，同时也便于进行文件管理。"
 }
 </script><meta property="og:title" content="3.3 文件系统（Files &amp; File Systems） | 3 操作系统 | 与你分享我的眼睛" />
 <meta property="og:type" content="article" />
@@ -130,9 +130,7 @@
 
 
 
-
-<meta property="og:description" content="3.3.1 文件格式（file format） 文件的底层均为二进制 0 和 1，需要用格式明确如何解释这些 0 和 1，同时也便于进行文件管理。文件格式可以自行发明，但最好使" />
-
+<meta property="og:description" content="文件的底层均为二进制 0 和 1，需要用格式明确如何解释这些 0 和 1，同时也便于进行文件管理。" />
 
 
 
@@ -421,34 +419,34 @@
   
   
 
-  <h3 id="331-文件格式file-format">3.3.1 文件格式（file format）</h3>
+  <h2 id="331-文件格式file-format">3.3.1 文件格式（file format）</h2>
 <p>文件的底层均为二进制 0 和 1，需要用格式明确如何解释这些 0 和 1，同时也便于进行文件管理。文件格式可以自行发明，但最好使用现有的通用标准。以下三种为常见格式：</p>
-<h4 id="文本文件txt-file">文本文件（txt file）</h4>
+<h3 id="文本文件txt-file">文本文件（txt file）</h3>
 <p>一种纯文本格式，后缀为 .txt，需配合 ASCII 编码或其他字符标准编码进行解码数字。</p>
-<h4 id="波形文件wave-file">波形文件（WAVE File）</h4>
+<h3 id="波形文件wave-file">波形文件（WAVE File）</h3>
 <p>用于存储音频数据，后缀为 .wav，其在文件开头存储「元数据」（metadata）——用于说明关于数据的信息，例如码率（bit rate）、声道数、立体声等。</p>
 <p>因元数据存储于文件开头，后接实际数据，故又名文件头（Header），下图为 WAVE 格式的前 44 个字节（以及数据 DATA）：</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2014%3A%E6%97%B6%2017%3A%E5%88%86%2041%3A%E7%A7%92%20sjme0iaw9a1674022661347.png" alt=""></p>
 <p>DATA 中也存储着数字，表示每秒捕获了多少次的声音幅度。麦克风可以对声音进行上千次采样，录制好的采样可以用一个数字表示，声压越高数字也越大，这也称为「振幅」（amplitude）。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2014%3A%E6%97%B6%2021%3A%E5%88%86%2036%3A%E7%A7%92%20tdc1chatso1674022896020.png" alt="振幅"></p>
 <p>在播放时，扬声器会产生与之相同的波形。</p>
-<h4 id="位图bitmap">位图（Bitmap）</h4>
+<h3 id="位图bitmap">位图（Bitmap）</h3>
 <p>位图用于存储图片，后缀为 .bmp，其文件开头也是元数据，用于说明图片宽度、高度、颜色深度等信息。</p>
 <p>计算机中的图片由「像素」（pixels）组成，单个像素又是由红、绿、蓝这三种加色原色/三基色 (additive primary colors) 组成。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2014%3A%E6%97%B6%2026%3A%E5%88%86%2046%3A%E7%A7%92%204srkyitpu81674023205847.png" alt="位图"></p>
 <p>上图示例为 4×4 像素大小的位图，颜色深度为 24 位——8 位（1 字节）红色，8 位 绿色和 8 位蓝色。</p>
 <p>元数据后的 3 个字节解释为第一个像素点的 RGB 值，即 255，255，255 白色，以此类推。解释好 4×3 = 12 个字节后换行，因为元数据中说明了宽度，然后接着往下解释。</p>
-<h3 id="332-文件目录directory-file">3.3.2 文件目录（Directory File）</h3>
+<h2 id="332-文件目录directory-file">3.3.2 文件目录（Directory File）</h2>
 <p>早期的磁带、磁鼓、磁盘或是集成电路，通过软硬件抽象后可以当作一个“支持存储数据的桶”，桶里基本就只存一个数据的一整个文件，从头到尾直至存满所有数据。</p>
 <p>后来随着计算机的计算能力提高和存储容量的提高，开始将文件进行连续存储（back-to-back），因桶里只是存储大量位，故需要用一个特殊文件来记录其他文件的位置。这种特殊文件泛称为「文件目录」（Directory File），通常放置在存储器（ storage）最开头的位置 0 处。</p>
 <p>文件目录中存储着其他文件的名字、创建时间、最后修改时间、文件所有者、读写权限以及最重要的文件起始位置和长度。在增删文件或是进行更改文件名等操作时，必须修改目录文件。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2018%3A%E6%97%A5%2014%3A%E6%97%B6%2038%3A%E5%88%86%2033%3A%E7%A7%92%20rvlhuq8wa91674023913363.png" alt=""></p>
-<h3 id="333-平面文件系统flat-file-system">3.3.3 平面文件系统（Flat File System）</h3>
+<h2 id="333-平面文件系统flat-file-system">3.3.3 平面文件系统（Flat File System）</h2>
 <p>文件均位于同一个目录层次的文件管理系统，在文件连续存储的情况下，前一个文件数据的增加会覆盖掉后一个文件。</p>
 <p>现代文件系统会将存储空间分块后，将文件拆分存储在多块里，类似于 3.1.2 节中的虚拟内存。分块后会有一些预留空间（slack space），方便文件的改动与管理，因此目录中也要记录文件在哪些块里。</p>
 <p>数据的删除仅在目录文件中删掉文件存储在某块中的记录，使得可用空间增加，但不意味着存储空间内的数据已经被擦除或覆盖，因此存在恢复的可能。</p>
 <p>因文件并非完整存储，而是分散在切割好的块里，因此文件的增删改会带来「碎片」（fragmentation），块之间的跳转读取对于许多存储技术来说十分不便，因此计算机会通过「碎片整理」（defragmentation）来移动数据排列成正确顺序。</p>
-<h3 id="334-分层文件系统hierarchical-file-system">3.3.4 分层文件系统（Hierarchical File System）</h3>
+<h2 id="334-分层文件系统hierarchical-file-system">3.3.4 分层文件系统（Hierarchical File System）</h2>
 <p>文件数量的增多迫使文件需要层次化管理，用文件夹多层嵌套管理文件的方式称为「分层文件系统」（Hierarchical File System），目录文件不仅要指向文件，还要指向其他目录文件。</p>
 <p>比如最顶层的根目录（Root Directory）存储着其他文件和文件夹，若要读取其中的子文件夹，必须读取其目录文件。在移动文件至不同文件夹时，只需要修改两个文件夹的目录文件记录，文件的物理存储位置无需改变。</p>
 
@@ -505,20 +503,16 @@
 >
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#331-文件格式file-format">3.3.1 文件格式（file format）</a>
       <ul>
-        <li><a href="#331-文件格式file-format">3.3.1 文件格式（file format）</a>
-          <ul>
-            <li><a href="#文本文件txt-file">文本文件（txt file）</a></li>
-            <li><a href="#波形文件wave-file">波形文件（WAVE File）</a></li>
-            <li><a href="#位图bitmap">位图（Bitmap）</a></li>
-          </ul>
-        </li>
-        <li><a href="#332-文件目录directory-file">3.3.2 文件目录（Directory File）</a></li>
-        <li><a href="#333-平面文件系统flat-file-system">3.3.3 平面文件系统（Flat File System）</a></li>
-        <li><a href="#334-分层文件系统hierarchical-file-system">3.3.4 分层文件系统（Hierarchical File System）</a></li>
+        <li><a href="#文本文件txt-file">文本文件（txt file）</a></li>
+        <li><a href="#波形文件wave-file">波形文件（WAVE File）</a></li>
+        <li><a href="#位图bitmap">位图（Bitmap）</a></li>
       </ul>
     </li>
+    <li><a href="#332-文件目录directory-file">3.3.2 文件目录（Directory File）</a></li>
+    <li><a href="#333-平面文件系统flat-file-system">3.3.3 平面文件系统（Flat File System）</a></li>
+    <li><a href="#334-分层文件系统hierarchical-file-system">3.3.4 分层文件系统（Hierarchical File System）</a></li>
   </ul>
 </nav>
 </div>

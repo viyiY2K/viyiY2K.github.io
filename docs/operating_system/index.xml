@@ -13,7 +13,7 @@
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://viyi.cc/docs/operating_system/3.1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9Foperating-systems/</guid>
-      <description>3.1.1 操作系统简史 [line-2, body-2] + 1940/50s + pre-OS + - 此时电脑每次只能运行一个程序，程序员在打孔纸卡上写程序，完成后交给操作员等待放入。 - 操作员在计算机完成上一个程序后，放入</description>
+      <description>3.1.1 操作系统简史 3.1.2 OS 特性 多任务处理（multitasking） 在运行 I/O 相关程序等待调用相关外部设备时，先将程序休眠运行另一个程序，等待 I/O 操作结束后标记为</description>
     </item>
     
     <item>
