@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5 拓展讨论 on 与你分享我的眼睛</title>
+    <link>https://viyi.cc/docs_cccs/extended_discussion/</link>
+    <description>Recent content in 5 拓展讨论 on 与你分享我的眼睛</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 02 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/docs_cccs/extended_discussion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5.1 机器学习与人工智能 (Machine Learning &amp; Artificial Intelligence)</title>
+      <link>https://viyi.cc/docs_cccs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/</guid>
+      <description>机器学习 (Machine Learning, ML) 的本质是根据数据做出决定，机器学习算法让计算机可以从数据中学习，然后自行做出预测和决定。 能够根据数据做出一定决断并不意味着它拥有和人类一</description>
+    </item>
+    
+    <item>
+      <title>5.2 计算机视觉 (Computer Vision)</title>
+      <link>https://viyi.cc/docs_cccs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/extended_discussion/5.2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-computer-vision/</guid>
+      <description>计算机视觉 (Computer Vision) 领域的目标是让计算机理解图像和视频。 &amp;ldquo;Just like to hear is the not the same as to listen.To take pictures is not the same as to see.&amp;rdquo; by computer vision professor Fei-Fei Li 「听到不等于听懂，看到不等于看懂」——李飞飞，</description>
+    </item>
+    
+    <item>
+      <title>5.3 自然语言处理 (Natural Language Processing)</title>
+      <link>https://viyi.cc/docs_cccs/extended_discussion/5.3-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86-natural-language-processing/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/extended_discussion/5.3-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86-natural-language-processing/</guid>
+      <description>相较于 2.2 节中讨论过的 &amp;ldquo;编程语言&amp;rdquo; 这种词汇量较少、非常结构化的语言类型而言，拥有大量词汇、多义词、口音等特点的人类语言与之完全不</description>
+    </item>
+    
+    <item>
+      <title>5.4 机器人 (Robots)</title>
+      <link>https://viyi.cc/docs_cccs/extended_discussion/5.4-%E6%9C%BA%E5%99%A8%E4%BA%BA-robots/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/extended_discussion/5.4-%E6%9C%BA%E5%99%A8%E4%BA%BA-robots/</guid>
+      <description>5.4.1 robot 机器人是由计算机控制，可以自动执行一系列动作的机器。 外观并不重要，工厂的机械臂 (industrial arms)、无人机 (drones that fly)、辅助外科医生的蛇状机器人(snak</description>
+    </item>
+    
+    <item>
+      <title>5.5 计算机中的心理学 (Psychology of Computing)</title>
+      <link>https://viyi.cc/docs_cccs/extended_discussion/5.5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6-psychology-of-computing/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/extended_discussion/5.5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6-psychology-of-computing/</guid>
+      <description>系统设计师 (system designers) 会综合运用社会心理学、认知心理学、行为心理学、感知心理学等学科原理，使得物理界面或计算机界面更加具有「易用度」(Usability)。 易</description>
+    </item>
+    
+    <item>
+      <title>5.6 教育型科技 (Educational Technology)</title>
+      <link>https://viyi.cc/docs_cccs/extended_discussion/5.6-%E6%95%99%E8%82%B2%E5%9E%8B%E7%A7%91%E6%8A%80-educational-technology/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/extended_discussion/5.6-%E6%95%99%E8%82%B2%E5%9E%8B%E7%A7%91%E6%8A%80-educational-technology/</guid>
+      <description>计算机带来的最大改变之一是信息的创造和传播能力，如今的互联网的信息数据量级极高——目前有 13 亿个网站存在，仅维基百科就有 500 万篇英文文章，Google 每天</description>
+    </item>
+    
+    <item>
+      <title>5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing)</title>
+      <link>https://viyi.cc/docs_cccs/extended_discussion/5.7-%E5%A5%87%E7%82%B9%E5%A4%A9%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5the-singularity-skynet-and-the-future-of-computing/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/extended_discussion/5.7-%E5%A5%87%E7%82%B9%E5%A4%A9%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5the-singularity-skynet-and-the-future-of-computing/</guid>
+      <description>&amp;ldquo;Computer science isn&amp;rsquo;t magic, but it sort of is!Knowing how to use and program computers is sorcery of the 21st century.Instead of incantations and spells, it&amp;rsquo;s scripts and code.&amp;rdquo; by Carrie Anne 计算机科学不是魔法，但它有点像魔法。学习使用电脑和编程，是 21 世纪的巫术，只不过用的不是</description>
+    </item>
+    
+  </channel>
+</rss>

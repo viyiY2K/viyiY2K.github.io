@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing) | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="计算机科学不是魔法，但它有点像魔法。学习使用电脑和编程，是 21 世纪的巫术，只不过用的不是咒语而是代码。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science | 计算机速成课",
+      "item":"https://viyi.cc/docs_cccs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"5 拓展讨论",
+      "item":"https://viyi.cc/docs_cccs/extended_discussion/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing)",
+      "item":"https://viyi.cc/docs_cccs/extended_discussion/5.7-%E5%A5%87%E7%82%B9%E5%A4%A9%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5the-singularity-skynet-and-the-future-of-computing/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs_cccs/extended_discussion/5.7-%E5%A5%87%E7%82%B9%E5%A4%A9%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5the-singularity-skynet-and-the-future-of-computing/"
+    },
+    "headline": "5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing) | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  2817 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "计算机科学不是魔法，但它有点像魔法。学习使用电脑和编程，是 21 世纪的巫术，只不过用的不是咒语而是代码。"
+}
+</script><meta property="og:title" content="5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing) | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs_cccs/extended_discussion/5.7-%E5%A5%87%E7%82%B9%E5%A4%A9%E7%BD%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5the-singularity-skynet-and-the-future-of-computing/" />
+
+
+
+<meta property="og:description" content="计算机科学不是魔法，但它有点像魔法。学习使用电脑和编程，是 21 世纪的巫术，只不过用的不是咒语而是代码。" />
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs_CCCS" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">5.7 奇点，天网，计算机的未来(The Singularity, Skynet, and the Future of Computing)</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>6分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <blockquote>
+<p>&ldquo;Computer science isn&rsquo;t magic, but it sort of is!Knowing how to use and program computers is sorcery of the 21st century.Instead of incantations and spells, it&rsquo;s scripts and code.&rdquo;  by Carrie Anne</p>
+<p>计算机科学不是魔法，但它有点像魔法。学习使用电脑和编程，是 21 世纪的巫术，只不过用的不是咒语而是代码。—— 凯莉·安</p>
+</blockquote>
+<h2 id="571-普适计算">5.7.1 普适计算</h2>
+<p>1990 年代由马克·威泽尔 (Mark Weiser) 提出「普适计算」 ( Ubiquitous Computing) 的概念，即计算机存在于在所有可想象的东西之中。</p>
+<blockquote>
+<p>&ldquo;For (fifty) years, most interface design, and most computer design, has been headed down the path of the &ldquo;dramatic&rdquo; machine. Its highest idea is to make a computer so exciting, so wonderful, so interesting, that we never want to be without it. A less-traveled path I call the &ldquo;invisible&rdquo;; its highest idea is to make a computer so imbedded, so fitting, so natural, that we use it without even thinking about it … The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it.&rdquo; by Mark Weiser, 1990s</p>
+<p>(五十)年来，大多数界面和计算机设计，都是朝&quot;戏剧性&quot;方向前进想把计算机做得超好，让人一刻也不想离开。另一条少有人走的路 是&quot;无形&quot;的，把计算机整合到所有东西里，用的时候很自然、完全注意不到。最厉害的科技是看不见的科技，它们融入到日常生活的每一部分，直到无法区分。——马克·威泽尔</p>
+</blockquote>
+<p>有人把 &ldquo;普适计算&rdquo; 当作是 &ldquo;反乌托邦&rdquo; (dystopian) ，但提出者认为其具有非凡潜力。</p>
+<h2 id="572-奇点">5.7.2 奇点</h2>
+<p>&ldquo;普适计算&rdquo; 在一定程度上可以描述计算机的未来，而在人们思考计算机的未来时经常会直接想到人工智能。但并非所有东西都需要使用 AI 或是被 AI 优化更新，就像电气革命后出现了电灯泡但蜡烛仍然存在。</p>
+<p>最可能的情况是 AI 变成计算机科学家手中的另一门新工具，但真正让人深思和担忧的是 &ldquo;人工智能是否会超越人类智能？&rdquo; 这涉及许多因素，比如 &ldquo;智能的准确定义是什么？&quot;。</p>
+<p>尽管 AI 可以在几秒内识别歌曲、驾驶汽车、翻译多种语言，但却无法完成爬楼梯、叠衣服等简单事项，人工智能成长到和人类一样通用，还有很长的路。</p>
+<p>因为 &ldquo;智能&rdquo; 是难以量化的指标，人们更喜欢用处理能力来区分，但这种衡量智能的方法比较 &ldquo;以计算为中心&rdquo; 。以当前的发展速度来看，计算机的计算能力相当于老鼠，距离人类的计算能力似乎看起来还有些距离。</p>
+<p>但就算处理器增长速度不再遵循 &ldquo;摩尔定律&rdquo; (1.10 节, p17 集)，也可能只需要十几年计算机就能赶上人类的计算速度。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675517919707.png" alt="计算速度"></p>
+<p>假设计算机发展的趋势继续保持下去，在本世纪结束前计算机的处理能力/智能会比全人类加起来还多，然后人的参与会越来越少，人工超级智能会开始改造自己。</p>
+<p>这种智能科技的失控性发展称为「奇点」(singularity)，由约翰·冯·诺伊曼 (John von Neumann, 2.1.2 节, p10 集) 在 1950 年代最早提出。距离其提出后 60 多年的今天，奇点仍然距离我们十分遥远。</p>
+<blockquote>
+<p>[!quote]
+&ldquo;The accelerating progress of technology and changes in the mode of human life,give the appearance of approaching some essential singularity in the history of the race beyond which human affairs, as we know them, could not continue.&rdquo;  by John von Neumann</p>
+<p>&ldquo;越来越快的技术发展速度和人类生活方式的改变，看起来会接近人类历史中某些重要的奇点，看起来会接近人类历史中某些重要的奇点，这个势头不会永远继续下去。&rdquo; —— 约翰·冯·诺伊曼</p>
+</blockquote>
+<p>一些专家认为，计算机的发展趋势会更加平缓一些，更趋向于 S 型而非指数型。而随着复杂度增加，进步会越来越难，微软联合创始人保罗·艾伦 (Paul Allen) 称之为「复杂度刹车」(complexity brake)。</p>
+<h2 id="573-技术性失业">5.7.3 技术性失业</h2>
+<p>假设奇点到来、超智能计算机出现，这对人类意味着什么呢？关于这个问题由许多激烈讨论，其最直接的影响是 &ldquo;技术性失业&rdquo; (technological unemployment)——许多工作出于效率和成本的原因被计算机(AI 或是 robots) 替代了。</p>
+<p>技术性失业并非新鲜事，比如 1800s 雅卡尔的织布机(Jacquard&rsquo;s Loom, Episode 10) 带来的纺织工人失业导致了骚乱，1960s 的自动接线板代替了电话接线员，1980s 的机器喷漆代替了人工喷漆等等。</p>
+<p>一方面，自动化使得一部分人们失去了工作。另一方面，大量产品被廉价生产。但与之前技术进步带来的技术性失业不同，专家认为 AI、robots 以及更广义的计算机会比这些更具有破坏性。</p>
+<p>工作可以分为 2 个维度，4 种类型：</p>
+<div align="center"> <img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1675519306363.png" ></div>
+<ul>
+<li>重复性手工工作：可以让机器自动化，部分已经被替代，剩下的主部被替代。</li>
+<li>非重复性手工型工作：如厨师、服务员、保安等，值得担心。</li>
+<li>非重复性思维型型工作：如客服，收银员，银行柜员和办公室助理，同样值得担心。</li>
+<li>非重复性思维型工作：如教师、艺术家、小说家、律师、医生和科学家等，暂时比较安全。</li>
+</ul>
+<p>非重复性思维型工作占美国劳动力的 40%，意味着 60% 的工作易受自动化的影响。有人认为这种大规模失业会带来社会动荡和混乱，但也有人认为这是对将人类从无聊工作中解放的途径之一。</p>
+<p>没人能预知未来，但长远来看一切终将归于平静，政界正在讨论的问题是怎么处理数百万人突然失业造成的短期经济混乱。</p>
+<h2 id="574-未来幻想">5.7.4 未来幻想</h2>
+<blockquote>
+<p>&ldquo;The Singularity will allow us to transcend (the) limitations of our biological bodies and brains. We will gain power over our fates. &hellip; We will be able to live as long as we want. We will fully understand human thinking and will vastly extend and expand its reach.&rdquo; by futurist Ray Kurzweil</p>
+<p>&ldquo;奇点会让我们超越肉体和大脑的局限性，我们能掌控自己的命运。可以想活多久活多久，我们能完全理解并扩展大脑思维。&quot;——未来学家, 雷·库兹韦尔</p>
+</blockquote>
+<p>超人类主义者 (Transhumanists) 认为会出现&quot;改造人&rdquo; (cyborgs)，人类通过和科技融合在一起来增强智力和身体，随着脑机接口的出现，再加上 Google Glass 和 微软 Hololens 这样的穿戴式计算机，这条界线正变得越来越模糊。</p>
+<p>也有人预见到 &ldquo;数字永生&rdquo; (Digital Ascension) ，根据 Jaron Lanier 的说法，其是指 &ldquo;人类的肉体死去，意识上传到计算机&rdquo; (would involve people dying in the flesh and being uploaded into a computer and remaining conscious )。这种从生物体变成数字体的过程，可能是下一次进化跨越。</p>
+<p>而其他人则预测人类大体会保持原样，但超智能电脑会照顾我们以便让我们好好享受生活。但也有人反对，为什么超级人工智能会费时间照顾我们？人类不也没照顾蚂蚁吗？</p>
+<p>我们无法预测未来，但关于未来的讨论非常多。等这些技术出现后，我们可以更好地进行计划。不论你把计算机视为未来的朋友或敌人，更有可能的是它们的存在时间会超过人类。</p>
+<p>许多未来学家和科幻作家猜测，机器人会去太空殖民，无视时间、辐射以及一些其他让人类难以长时间太空旅行的因素。亿万年后太阳燃尽 地球成为星尘，也许我们的机器人孩子会继续努力探索宇宙每一个角落，以纪念它们的父母，同时让宇宙变得更好。</p>
+<p>与此同时，计算机还有很长的路要走，计算机科学家们在努力推进过去 40 集谈到的话题。</p>
+<p>在接下来的十几年，我们可以预想：VR/AR、无人驾驶车、无人机、可穿戴计算机和服务型机器人 会变得主流；互联网会继续诞生新服务；在线流媒体会用新方式连接人们；新的编程语言和范例会不断出现，帮助创造令人惊叹的新软件；新硬件能让神经网络和 3D 图形等复杂运算快如闪电；个人电脑也会创新，由过去 40 年的桌面电脑变为无处不在的虚拟助手。</p>
+<p>我们在这个系列还有很多话题没有讨论，比如加密货币，无线通讯，3D打印，生物信息学和量子计算。</p>
+<p>我们正处于计算机的黄金时代，全部总结是绝无可能的。但最重要的是你可以学习计算机成为这个惊人转型的一部分，把世界变得更好。</p>
+
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/docs_cccs/extended_discussion/5.6-%E6%95%99%E8%82%B2%E5%9E%8B%E7%A7%91%E6%8A%80-educational-technology/" class="block">5.6 教育型科技 (Educational Technology)</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#571-普适计算">5.7.1 普适计算</a></li>
+    <li><a href="#572-奇点">5.7.2 奇点</a></li>
+    <li><a href="#573-技术性失业">5.7.3 技术性失业</a></li>
+    <li><a href="#574-未来幻想">5.7.4 未来幻想</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> © 2023-2024 <a href="https://viyi.cc/about_me/">viyi</a>  |  <a href="https://notbyai.fyi/cn/" target="_blank" rel="noopener noreferrer">Not by AI</a>
+</div>
+  </div>
+    </footer>
+  </body>
+</html>

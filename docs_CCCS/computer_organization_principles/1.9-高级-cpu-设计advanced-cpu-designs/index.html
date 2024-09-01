@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>1.9 高级 CPU 设计（Advanced CPU Designs） | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="1.9.1 瓶颈演变 计算机的计算量日益骤增，从 1Hz 到 1GHz 的 CPU 时钟速度（1.7.1 节），每秒需要执行约十亿条指令是非常庞大计算量。 为了提升计算速度，早期的计算机试图减">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science | 计算机速成课",
+      "item":"https://viyi.cc/docs_cccs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"1 计算机组成",
+      "item":"https://viyi.cc/docs_cccs/computer_organization_principles/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"1.9 高级 CPU 设计（Advanced CPU Designs）",
+      "item":"https://viyi.cc/docs_cccs/computer_organization_principles/1.9-%E9%AB%98%E7%BA%A7-cpu-%E8%AE%BE%E8%AE%A1advanced-cpu-designs/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs_cccs/computer_organization_principles/1.9-%E9%AB%98%E7%BA%A7-cpu-%E8%AE%BE%E8%AE%A1advanced-cpu-designs/"
+    },
+    "headline": "1.9 高级 CPU 设计（Advanced CPU Designs） | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  2108 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "1.9.1 瓶颈演变 计算机的计算量日益骤增，从 1Hz 到 1GHz 的 CPU 时钟速度（1.7.1 节），每秒需要执行约十亿条指令是非常庞大计算量。 为了提升计算速度，早期的计算机试图减"
+}
+</script><meta property="og:title" content="1.9 高级 CPU 设计（Advanced CPU Designs） | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs_cccs/computer_organization_principles/1.9-%E9%AB%98%E7%BA%A7-cpu-%E8%AE%BE%E8%AE%A1advanced-cpu-designs/" />
+
+
+
+
+<meta property="og:description" content="1.9.1 瓶颈演变 计算机的计算量日益骤增，从 1Hz 到 1GHz 的 CPU 时钟速度（1.7.1 节），每秒需要执行约十亿条指令是非常庞大计算量。 为了提升计算速度，早期的计算机试图减" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs_CCCS" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">1.9 高级 CPU 设计（Advanced CPU Designs）</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>5分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h2 id="191-瓶颈演变">1.9.1 瓶颈演变</h2>
+<p>计算机的计算量日益骤增，从 1Hz 到 1GHz 的 CPU 时钟速度（1.7.1 节），每秒需要执行约十亿条指令是非常庞大计算量。</p>
+<p>为了提升计算速度，早期的计算机试图减少晶体管（1.2/1.3 节）的切换时间，但最终碰到了物理瓶颈。</p>
+<p>另一种方法是通过硬件电路实现相关操作来加快处理速度，比如通过直接在 CPU 硬件层面中使用专门的电路设计除法，直接给 ALU 提供除法指令，而非像 1.8.1 节中举例的那样通过软件来实现。</p>
+<p>现代处理器中有许多类似于除法的专门电路来处理图形操作、解码压缩视频、加密文档等，主要为加快处理速度、减少时钟周期。像是 MMX、3DNOW、SSE 等还有额外电路来做更多复杂操作，用于游戏和加密等场景。</p>
+<p>硬件实现的便利使得人们很难删掉指令，于是其不断增加——从 Intel 4004 的 46 条指令到现代 CPU 的 上千条指令，CPU 的计算速度越来越快。新的瓶颈不再是时钟周期，而是读取写入数据的 I/O 操作。</p>
+<p>数据的读写需要 RAM 的配合，作为独立部件的 RAM 与 CPU 通过「总线」（bus）连接。尽管接近光速传输的电信号可以通过几厘米的总线很快到达（甚至不计寻址、取数、配置、输出的时间），但与每秒处理上亿条指令的 CPU 来说仍有速度差距。</p>
+<h2 id="192-缓存">1.9.2 缓存</h2>
+<p>缓存（cache）是内置于 CPU 中的仅有 KB/MB 大小的存储器，其作为中转站/临时空间缓和两者的处理速度差异，避免 CPU 在等待 I/O 操作执行时空等。</p>
+<p>因数据通常按顺序处理，故 CPU 从 RAM 取数据时，可一次取一批暂存在缓存中。在 CPU 执行时可以直接取用缓存中的数据，仅耗费 1 个时钟周期。</p>
+<p>当 CPU 执行复杂的长运算时，缓存也可充当临时空间用于存储计算中间值。</p>
+<h3 id="缓存命中">缓存命中</h3>
+<p>若 CPU 所需数据已在缓存中，称为「缓存命中」（cache hit），反之数据不在缓存中称为「缓存未命中」（cache miss）。</p>
+<h3 id="脏位">脏位</h3>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2014%3A%E6%97%B6%2032%3A%E5%88%86%2033%3A%E7%A7%92%20z0499mn4bd1673332353893.png" alt="脏位"></p>
+<p>当因计算结果暂存在缓存中等原因，使得缓存中数据与 RAM 中的数据值不一致时，需要通过缓存中的特殊标记位「脏位」（dirty bit）记录，以便之后同步。</p>
+<h3 id="同步">同步</h3>
+<p>同步通常发生在缓存已满，但 CPU 又需要使用缓存时。在清理缓存之前，CPU 会先检查脏位，若该位已“脏”则先将数据写回 RAM 后再加载新内容。</p>
+<h2 id="192-指令流水线">1.9.2 指令流水线</h2>
+<p>指令流水线（instruction pipelining）是指当指令执行的各个阶段使用的是 CPU 不同部分时，将其并行处理（parallelize）的执行方式，像是做饭等水开的时候先去切菜。</p>
+<p>原本的「取指 -&gt; 解码 -&gt; 执行」需要 3 个时钟周期才能完成一个指令，并行后可以在每个时钟周期内处理 1 个指令，使得其吞吐量（throughput）翻三番。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2014%3A%E6%97%B6%2033%3A%E5%88%86%2017%3A%E7%A7%92%20sjf8oneu891673332397187.png" alt="指令流水线"></p>
+<p>指令流水线加快了处理速度，也带来了新的问题——数据依赖性（a dependency in the instructions）和执行流（exexution flow）的改变。</p>
+<h3 id="数据依赖性与乱序执行">数据依赖性与乱序执行</h3>
+<p>指令之间的前后依赖关系称为数据依赖性，比如在读取某个数据时，当前正在执行的指令会修改该数据，我们就会拿到旧数据。流水线处理器（pipelined processors）需要弄清楚这种数据之间的依赖关系，必要时停止流水线操作以避免出错。</p>
+<p>在高端的 CPU 中，使用「乱序执行」（out-of-order execution）来最小化流水线的停工时间，这种复杂电路其能够动态性排序有依赖关系的指令。</p>
+<h3 id="执行流改变与推测执行">执行流改变与推测执行</h3>
+<p>“条件跳转”之类的指令会改变程序的执行流，简单的流水线处理器会等待 JUMP 条件值确定后执行，复杂的流水线处理器为避免出现这种空等延迟会采用「推测执行」（speculative execution）。</p>
+<p>推测执行是指高端 CPU 会猜测 JUMP 的结果（在岔路口选择路径），提前将指令放进流水线。猜对则立即运行，猜错就清空流水线。</p>
+<p>为了减少猜错清空的次数，CPU 厂商使用更为复杂的方法来预测哪条分支更有可能，称为「分支预测」（branch prediction），现代 CPU 的正确率超过 90%。</p>
+<h3 id="超标量处理器">超标量处理器</h3>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2014%3A%E6%97%B6%2052%3A%E5%88%86%2009%3A%E7%A7%92%205sf2i40vbi1673333529482.png" alt="超标量处理器"></p>
+<p>理想情况下，指令流水线在 1 个时钟周期完成 1 个指令，而可以在 1个时钟周期完成多个指令的处理器称为「超标量处理器」（superscalar processors）。</p>
+<p>这种处理器会一次性处理多条指令（取指令 + 解码），通过增加几个相同的电路执行高频指令，以便同时处理多条指令。比如很多 CPU 中会有 4/8/more 完全相同的 ALU 支持执行多个数学运算。</p>
+<h2 id="193-多核处理器">1.9.3 多核处理器</h2>
+<p>除了上一小节中谈及的优化 1 个指令流的吞吐量来提升 CPU 性能之外，还可以使用多核处理器同时运行多个指令流。</p>
+<p>多核处理器是指在一个 CPU 芯片中有多个独立处理单元，其共享缓存等资源，可以合作进行运算。如双核处理器（dual-core processors）或是四核处理器（quad-core processors）。</p>
+<h2 id="194-超级计算机">1.9.4 超级计算机</h2>
+<p>当多核处理器也无法满足运算需求时，可以使用多个多核处理器。最常见的是使用 2 个或是 4 个CPU ，而如果要模拟宇宙形成这种怪兽级别的运算（monster calculations）则需要使用超级计算机（supercomputer）的运算能力。</p>
+<p>超级计算机一般拥有着上万个 CPU，每个 CPU 有着上百个核心，每个核心的频率达到 GHz，每秒可以进行亿亿次量级的运算。</p>
+<p>截至 2022 年 11 月，<a href="https://www.top500.org/lists/top500/2022/11/">世界上最快的计算机</a>是美国橡树岭国家实验室的 Frontier，总共超过 8 千万个核心，每个核心的运算是 2GHz，每秒可运行 110.2 亿亿次浮点运算，这也称为每秒浮点运算次数（FLOPS）。</p>
+
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/docs_cccs/computer_organization_principles/1.8-%E6%8C%87%E4%BB%A4%E5%92%8C%E7%A8%8B%E5%BA%8Finstructions-programs/" class="block">1.8 指令和程序（Instructions &amp; Programs）</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/docs_cccs/computer_organization_principles/1.10-%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E6%91%A9%E5%B0%94%E5%AE%9A%E5%BE%8Bintegrated-circuits-moores-law/" class="block">1.10 集成电路、摩尔定律（Integrated Circuits &amp; Moore&#39;s Law）</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#191-瓶颈演变">1.9.1 瓶颈演变</a></li>
+    <li><a href="#192-缓存">1.9.2 缓存</a>
+      <ul>
+        <li><a href="#缓存命中">缓存命中</a></li>
+        <li><a href="#脏位">脏位</a></li>
+        <li><a href="#同步">同步</a></li>
+      </ul>
+    </li>
+    <li><a href="#192-指令流水线">1.9.2 指令流水线</a>
+      <ul>
+        <li><a href="#数据依赖性与乱序执行">数据依赖性与乱序执行</a></li>
+        <li><a href="#执行流改变与推测执行">执行流改变与推测执行</a></li>
+        <li><a href="#超标量处理器">超标量处理器</a></li>
+      </ul>
+    </li>
+    <li><a href="#193-多核处理器">1.9.3 多核处理器</a></li>
+    <li><a href="#194-超级计算机">1.9.4 超级计算机</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> © 2023-2024 <a href="https://viyi.cc/about_me/">viyi</a>  |  <a href="https://notbyai.fyi/cn/" target="_blank" rel="noopener noreferrer">Not by AI</a>
+</div>
+  </div>
+    </footer>
+  </body>
+</html>

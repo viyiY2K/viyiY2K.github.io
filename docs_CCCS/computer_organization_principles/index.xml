@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 计算机组成 on 与你分享我的眼睛</title>
+    <link>https://viyi.cc/docs_cccs/computer_organization_principles/</link>
+    <description>Recent content in 1 计算机组成 on 与你分享我的眼睛</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 02 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/docs_cccs/computer_organization_principles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.1 早期的计算（Early Computing）</title>
+      <link>https://viyi.cc/docs_cccs/computer_organization_principles/1.1-%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97early-computing/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/computer_organization_principles/1.1-%E6%97%A9%E6%9C%9F%E7%9A%84%E8%AE%A1%E7%AE%97early-computing/</guid>
+      <description>1.1.1 信息时代（Electronic Age） 三次工业革命推动全球发展： 第一次（蒸汽）：用机械提高农业、工业、畜牧业的规模，又名机器时代（the Age of Mach</description>
+    </item>
+    
+    <item>
+      <title>1.2 电子计算（Electronic Computing）</title>
+      <link>https://viyi.cc/docs_cccs/computer_organization_principles/1.2-%E7%94%B5%E5%AD%90%E8%AE%A1%E7%AE%97electronic-computing/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/computer_organization_principles/1.2-%E7%94%B5%E5%AD%90%E8%AE%A1%E7%AE%97electronic-computing/</guid>
+      <description>1.2.1 诞生背景 20 世纪人类社会规模的飞速增长，二战动员人数的数量级已经达亿，全球贸易和运输更加紧密，工程和科学的复杂程度达到新高。随之而来的是数据量的暴增，</description>
+    </item>
+    
+    <item>
+      <title>1.3 布尔逻辑与逻辑电路（Boolean Logic &amp; Logic Gates）</title>
+      <link>https://viyi.cc/docs_cccs/computer_organization_principles/1.3-%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E4%B8%8E%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AFboolean-logic-logic-gates/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/computer_organization_principles/1.3-%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E4%B8%8E%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AFboolean-logic-logic-gates/</guid>
+      <description>抽象（Abstraction） 在计算机科学中，抽象化是将资料与程序，以它的语义来呈现出它的外观，但是隐藏起它的实现细节。 抽象化是用来减少程序的复杂度，</description>
+    </item>
+    
+    <item>
+      <title>1.4 二进制表示法（Representing Numbers and Letters with Binary）</title>
+      <link>https://viyi.cc/docs_cccs/computer_organization_principles/1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/computer_organization_principles/1.4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95representing-numbers-and-letters-with-binary/</guid>
+      <description>“Everything is number.”by Pythagoras 「万物皆数。」——毕达哥斯拉 1.4.1 二进制 在二进制中，每个符号就是二进制元数字（0/1）中的一个二进制位 （bi</description>
+    </item>
+    
+    <item>
+      <title>1.5 ALU 算术逻辑单元 （How Computers Calculate）</title>
+      <link>https://viyi.cc/docs_cccs/computer_organization_principles/1.5-alu-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83-how-computers-calculate/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/computer_organization_principles/1.5-alu-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83-how-computers-calculate/</guid>
+      <description>ALU 算术逻辑单元（Arithmetic and Logic Unit）是计算机中负责运算的组件。 最著名的 ALU 之一是 Intel 74181，其于 1970 年发布，是第一个封装在单个芯片中的完整</description>
+    </item>
+    
+    <item>
+      <title>1.6 寄存器 &amp; 内存（Registers and RAM）</title>
+      <link>https://viyi.cc/docs_cccs/computer_organization_principles/1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/computer_organization_principles/1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/</guid>
+      <description>计算机的存储器（Memory）可分为两种类型： 随机存取存储器（Random Access Memory, RAM）：仅在有电的情况下存储内容，常用作内存。 SRAM( Static Random Access Memory，静</description>
+    </item>
+    
+    <item>
+      <title>1.7 CPU 中央处理器（The Central Processing Unit）</title>
+      <link>https://viyi.cc/docs_cccs/computer_organization_principles/1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/computer_organization_principles/1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/</guid>
+      <description>1.7.1 组成概述 CPU CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。 比如，</description>
+    </item>
+    
+    <item>
+      <title>1.8 指令和程序（Instructions &amp; Programs）</title>
+      <link>https://viyi.cc/docs_cccs/computer_organization_principles/1.8-%E6%8C%87%E4%BB%A4%E5%92%8C%E7%A8%8B%E5%BA%8Finstructions-programs/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/computer_organization_principles/1.8-%E6%8C%87%E4%BB%A4%E5%92%8C%E7%A8%8B%E5%BA%8Finstructions-programs/</guid>
+      <description>1.8.1 指令集 指令由「操作码」和「地址码」组成，前者用于说明操作指令，后者则表示操作数据的地址（寄存器或内存地址）。记录指令名称、用法、操作码以及所需 RAM 地址</description>
+    </item>
+    
+    <item>
+      <title>1.9 高级 CPU 设计（Advanced CPU Designs）</title>
+      <link>https://viyi.cc/docs_cccs/computer_organization_principles/1.9-%E9%AB%98%E7%BA%A7-cpu-%E8%AE%BE%E8%AE%A1advanced-cpu-designs/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/computer_organization_principles/1.9-%E9%AB%98%E7%BA%A7-cpu-%E8%AE%BE%E8%AE%A1advanced-cpu-designs/</guid>
+      <description>1.9.1 瓶颈演变 计算机的计算量日益骤增，从 1Hz 到 1GHz 的 CPU 时钟速度（1.7.1 节），每秒需要执行约十亿条指令是非常庞大计算量。 为了提升计算速度，早期的计算机试图减</description>
+    </item>
+    
+    <item>
+      <title>1.10 集成电路、摩尔定律（Integrated Circuits &amp; Moore&#39;s Law）</title>
+      <link>https://viyi.cc/docs_cccs/computer_organization_principles/1.10-%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E6%91%A9%E5%B0%94%E5%AE%9A%E5%BE%8Bintegrated-circuits-moores-law/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/computer_organization_principles/1.10-%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E6%91%A9%E5%B0%94%E5%AE%9A%E5%BE%8Bintegrated-circuits-moores-law/</guid>
+      <description>1.10.1 集成电路（Integrated Circuits） 数字暴政 1940s~1960s 中期，计算机由独立部件用线连接而成组成，这些独立部件称为「分立元件」（discrete co</description>
+    </item>
+    
+  </channel>
+</rss>

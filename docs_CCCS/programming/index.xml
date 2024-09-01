@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 程序设计 on 与你分享我的眼睛</title>
+    <link>https://viyi.cc/docs_cccs/programming/</link>
+    <description>Recent content in 2 程序设计 on 与你分享我的眼睛</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 02 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/docs_cccs/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.1 编程史话（Early Programming）</title>
+      <link>https://viyi.cc/docs_cccs/programming/2.1-%E7%BC%96%E7%A8%8B%E5%8F%B2%E8%AF%9Dearly-programming/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/programming/2.1-%E7%BC%96%E7%A8%8B%E5%8F%B2%E8%AF%9Dearly-programming/</guid>
+      <description>2.1.1 编程介质 在 1.7.2 节中说明 CPU 工作原理时，我们假设程序已经在计算机内存中了，但实际上程序需要被加载（load into）进内存。 2.1.2 冯诺依曼结构 「冯诺依曼结构」</description>
+    </item>
+    
+    <item>
+      <title>2.2 编程语言（The First Programming Languages）</title>
+      <link>https://viyi.cc/docs_cccs/programming/2.2-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80the-first-programming-languages/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/programming/2.2-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80the-first-programming-languages/</guid>
+      <description>🏆 the holy grail (圣杯)：使用英文直接于计算机对话（plain ol&amp;rsquo; English），计算机会理解并执行。</description>
+    </item>
+    
+    <item>
+      <title>2.3 编程原理：语句和函数（Programming Basics Statements &amp; Functions）</title>
+      <link>https://viyi.cc/docs_cccs/programming/2.3-%E7%BC%96%E7%A8%8B%E5%8E%9F%E7%90%86%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%87%BD%E6%95%B0programming-basics-statements-functions/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/programming/2.3-%E7%BC%96%E7%A8%8B%E5%8E%9F%E7%90%86%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%87%BD%E6%95%B0programming-basics-statements-functions/</guid>
+      <description>2.3.1 概述 规定句子结构的一系列规则，叫做「语法」（syntax），编程语言也有相应的语法结构。用编程语言表达完整单个思想的内容，称为「语句」（statem</description>
+    </item>
+    
+    <item>
+      <title>2.4 算法入门（Intro to Algorithms）</title>
+      <link>https://viyi.cc/docs_cccs/programming/2.4-%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8intro-to-algorithms/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/programming/2.4-%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8intro-to-algorithms/</guid>
+      <description>2.4.1 概述 算法 算法（Algorithm）一词源自 1000 多年前的波斯博识者，阿尔·花拉子密(Abū ʿAbdallāh Muḥammad ibn Mūsā al-Khwāri</description>
+    </item>
+    
+    <item>
+      <title>2.5 数据结构（Data Structures）</title>
+      <link>https://viyi.cc/docs_cccs/programming/2.5-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84data-structures/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/programming/2.5-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84data-structures/</guid>
+      <description>数据结构是用于表示算法所处理的数据在内存中存储的格式，当数据是结构化的，会更便于读取。 不同的数据结构有不同的特性，适用于不同的场景,正确选择数据结构会</description>
+    </item>
+    
+    <item>
+      <title>2.6 阿兰·图灵（Alan Turing）</title>
+      <link>https://viyi.cc/docs_cccs/programming/2.6-%E9%98%BF%E5%85%B0%E5%9B%BE%E7%81%B5alan-turing/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/programming/2.6-%E9%98%BF%E5%85%B0%E5%9B%BE%E7%81%B5alan-turing/</guid>
+      <description>阿兰·马蒂森·图灵（Alan Mathison Turing）于 1921 年出生在伦敦，从小表现出惊人的数学和科学能力。他对计算机科学的建树始于 1935 年，当时他是剑桥国王学院的硕士</description>
+    </item>
+    
+    <item>
+      <title>2.7 软件工程（Software Engineering）</title>
+      <link>https://viyi.cc/docs_cccs/programming/2.7-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8Bsoftware-engineering/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/docs_cccs/programming/2.7-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8Bsoftware-engineering/</guid>
+      <description>工程师会通过协作与工具完成大型程序的编写，相关的事情则形成了「软件工程」这个学科，该词由工程师 Margaret Hamilton 提出。 2.7.1 对象 2.3.4 节中提及的「函数」仍然无法应对超大数量</description>
+    </item>
+    
+  </channel>
+</rss>

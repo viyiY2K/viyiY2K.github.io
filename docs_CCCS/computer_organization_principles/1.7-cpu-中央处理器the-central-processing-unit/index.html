@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>1.7 CPU 中央处理器（The Central Processing Unit） | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.3abe039c215b5762e381a5a07780a9ceb336844ff4009b0f604d13fd485b076964c1b15a7317a09c9f59a167295db500.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="1.7.1 组成概述 CPU CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。 比如，">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Crash Course Computer Science | 计算机速成课",
+      "item":"https://viyi.cc/docs_cccs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"1 计算机组成",
+      "item":"https://viyi.cc/docs_cccs/computer_organization_principles/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"1.7 CPU 中央处理器（The Central Processing Unit）",
+      "item":"https://viyi.cc/docs_cccs/computer_organization_principles/1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs_cccs/computer_organization_principles/1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/"
+    },
+    "headline": "1.7 CPU 中央处理器（The Central Processing Unit） | 与你分享我的眼睛","datePublished": "2022-10-02T00:00:00+00:00",
+    "dateModified": "2023-09-17T00:00:00+00:00",
+    "wordCount":  1432 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "1.7.1 组成概述 CPU CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。 比如，"
+}
+</script><meta property="og:title" content="1.7 CPU 中央处理器（The Central Processing Unit） | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs_cccs/computer_organization_principles/1.7-cpu-%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8the-central-processing-unit/" />
+
+
+
+
+<meta property="og:description" content="1.7.1 组成概述 CPU CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。 比如，" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-10-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-17T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs_CCCS" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">札记</a>
+            <a href="/categories/%E9%9A%8F%E6%83%B3/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">随想</a>
+            <a href="/categories/youcan/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自救</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">1.7 CPU 中央处理器（The Central Processing Unit）</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-10-02</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>3分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h2 id="171-组成概述">1.7.1 组成概述</h2>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2019%3A%E6%97%B6%2018%3A%E5%88%86%2036%3A%E7%A7%92%20lzrx6mi9nu1673090315821.png" alt="CPU 简图"></p>
+<h3 id="cpu">CPU</h3>
+<p>CPU （Central Processing Unit，中央处理单元）是负责通过「指令」指示程序如何操作的器件，其通常由寄存器、控制单元、ALU、时钟等组成。</p>
+<p>比如，若要执行加/减的数学指令，则交由 ALU 完成；若是内存指令，则与 RAM 通信配合进行读写操作（APU 与 RAM 用“地址线”、“数据线”和“允许读/写线”进行通信）。</p>
+<h3 id="微体系框架">微体系框架</h3>
+<p>使用高层次的视角观察计算机的方式称为「微体系架构」（microarchitecture），其更注重于逻辑上的「功能」。比如当我们用一条线连接 2 个组件时，这条线只是所有必须线路的抽象，并不代表两者连接仅仅通过一条线。</p>
+<h3 id="指令">指令</h3>
+<p>指令由「操作码」（operation code, opcode）和「地址码」组成，前者用于说明操作指令的 ID，后者则表示数据来自哪里（寄存器或内存地址）。指令用于指示计算机要做什么，多条指令共同组成程序。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2018%3A%E6%97%B6%2058%3A%E5%88%86%2035%3A%E7%A7%92%20ecjuw5ei941673089115725.png" alt="8-bit指令"></p>
+<h3 id="寄存器">寄存器</h3>
+<p>CPU 的控制单元中至少有 两个寄存器，一个「指令地址寄存器」（the instruction address register）用于存放当前指令的内存地址，另一个是「指令寄存器」（the instruction register）用于存储当前指令。</p>
+<p>另外还有一些寄存器用于临时存储数据和操作数据（如图中的 ABCD，其与 RAM 相连），寄存器也用于存储程序。</p>
+<h3 id="时钟">时钟</h3>
+<p>时钟（Clock）负责管理 CPU 运行的节奏，以精确地间隔触发电信号，控制单元用这个信号来推动 CPU 的内部操作。</p>
+<p>时钟速度（Clock Speed）是指 CPU 执行“取指令 -&gt; 解码 -&gt; 执行”中每一步的速度，单位为赫兹 Hz （频率单位，1Hz 表示 1 秒 1 个周期）。1MHz 为 1 秒 100w 个时钟周期，如今的电脑或是手机的时钟速度在千兆级别（1 秒 10 亿次时钟周期）。</p>
+<p>超频（overclocking）/  降频（underclocking）是指修改时钟速度，加快或降低 CPU 的速度。超频过多会让 CPU 过热或产生乱码，降频可以省电，对笔记本和手机很重要，通常会动态调整。</p>
+<p>1971 年发布的 4 位 CPU Intel 4004 是第一个单芯片 CPU，其微体系架构（microarchitecture）类似与上述所言，其时钟频率达到 740k Hz（每秒 74 万次）。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%207%3A%E6%97%A5%2019%3A%E6%97%B6%2029%3A%E5%88%86%2026%3A%E7%A7%92%20gnrhs34n881673090966266.png" alt="Intel 4004 体系架构"></p>
+<h2 id="172-cpu-基本工作原理">1.7.2 CPU 基本工作原理</h2>
+<p>CPU 的运作分为三个阶段：取指令（fetch phase）、解码（decode phase）、执行（execute phase）。</p>
+<h3 id="取指令">取指令</h3>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%209%3A%E6%97%A5%2016%3A%E6%97%B6%2054%3A%E5%88%86%2032%3A%E7%A7%92%20eiqzf4f3za1673254472039.png" alt="取指令"></p>
+<p>（1）指令地址寄存器发地址给 RAM</p>
+<p>（2）RAM 发该地址内的数据给指令寄存器</p>
+<p>（3）指令寄存器接受数据</p>
+<h3 id="解码">解码</h3>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2013%3A%E6%97%B6%2020%3A%E5%88%86%2043%3A%E7%A7%92%20u5bw5b97n51673328043641.png" alt="解码"></p>
+<p>指令寄存器根据数据发送指令给控制单元 -&gt; 控制单元解码（使用逻辑门来确认操作码是否为某个指令，示例为 0010-LOAD A、地址 1110-14）</p>
+<h3 id="执行">执行</h3>
+<p>📌e.g. LOAD A(取数)：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2012%3A%E6%97%B6%2051%3A%E5%88%86%2019%3A%E7%A7%92%20cwmzjbgi4n1673326278756.png" alt="LOAD A"></p>
+<p>（1）使用确认指令（LOAD A）的电路打开寄存器 A 的允许写入线，将从 RAM 读取到的数据存入 A。</p>
+<p>（2）指令地址寄存器 +1，继续执行下一指令。</p>
+<p>📌e.g. ADD(加法)</p>
+<blockquote>
+<p>操作码 1000 0100 在解码阶段会被解出，1000 指 ADD 相加，则相应的后 4 位会被解释为名为 01 和 00 的两个寄存器地址，分别为寄存器 B 和寄存器 A -&gt; 把寄存器 B 的值加入寄存器 A 中。</p>
+</blockquote>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2012%3A%E6%97%B6%2045%3A%E5%88%86%2057%3A%E7%A7%92%20z0pe2mu8nk1673325956790.png" alt="ADD"></p>
+<p>（1）调用 ALU，控制单元将寄存器 B 作为 ALU 的第一个输入，将寄存器 A 作为 ALU 的第二个输入，同时传入 ADD 操作码进入 ALU。</p>
+<p>（2）ALU 计算完成后将结果暂存于控制单元中的寄存器中，若 ALU 直接将结果存于寄存器 A 中，则会出现不断自加的情况。</p>
+<p>（3）控制单元关闭 ALU 后， 将暂存在内部寄存器中的计算结果放入寄存器 A 中。</p>
+<p>（4）指令地址寄存器 +1。</p>
+<p>📌e.g. STORE(存数)</p>
+<blockquote>
+<p>操作码 0100 1101 在解码阶段会被解出，0100 为 STORE A，1101 是 RAM 地址 13。</p>
+</blockquote>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%7B2023%3A%E5%B9%B4%201%3A%E6%9C%88%2010%3A%E6%97%A5%2012%3A%E6%97%B6%2047%3A%E5%88%86%2008%3A%E7%A7%92%20iwnygxwxsq1673326028241.png" alt="STORE"></p>
+<p>（1）打开寄存器 A 的允许读取线，将读取到的数据存入 RAM 。</p>
+<p>（2）程序结束，HALT 停止。</p>
+
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/docs_cccs/computer_organization_principles/1.6-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98registers-and-ram/" class="block">1.6 寄存器 &amp; 内存（Registers and RAM）</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/docs_cccs/computer_organization_principles/1.8-%E6%8C%87%E4%BB%A4%E5%92%8C%E7%A8%8B%E5%BA%8Finstructions-programs/" class="block">1.8 指令和程序（Instructions &amp; Programs）</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#171-组成概述">1.7.1 组成概述</a>
+      <ul>
+        <li><a href="#cpu">CPU</a></li>
+        <li><a href="#微体系框架">微体系框架</a></li>
+        <li><a href="#指令">指令</a></li>
+        <li><a href="#寄存器">寄存器</a></li>
+        <li><a href="#时钟">时钟</a></li>
+      </ul>
+    </li>
+    <li><a href="#172-cpu-基本工作原理">1.7.2 CPU 基本工作原理</a>
+      <ul>
+        <li><a href="#取指令">取指令</a></li>
+        <li><a href="#解码">解码</a></li>
+        <li><a href="#执行">执行</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> © 2023-2024 <a href="https://viyi.cc/about_me/">viyi</a>  |  <a href="https://notbyai.fyi/cn/" target="_blank" rel="noopener noreferrer">Not by AI</a>
+</div>
+  </div>
+    </footer>
+  </body>
+</html>
