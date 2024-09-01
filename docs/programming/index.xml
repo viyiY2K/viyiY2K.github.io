@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2 程序设计 on 与你分享我的眼睛</title>
+    <title>_index on 与你分享我的眼睛</title>
     <link>https://viyi.cc/docs/programming/</link>
-    <description>Recent content in 2 程序设计 on 与你分享我的眼睛</description>
+    <description>Recent content in _index on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/docs/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/docs/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2.1 编程史话（Early Programming）</title>
       <link>https://viyi.cc/docs/programming/2.1-%E7%BC%96%E7%A8%8B%E5%8F%B2%E8%AF%9Dearly-programming/</link>

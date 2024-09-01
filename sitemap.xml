@@ -35,6 +35,9 @@
     <loc>https://viyi.cc/relearning_to_type/</loc>
     <lastmod>2024-09-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://viyi.cc/about_me/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://viyi.cc/have_the_long_view_beyond_what_you_have_not_seen/</loc>
     <lastmod>2024-03-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -113,9 +116,6 @@
     <loc>https://viyi.cc/building_a_blog/</loc>
     <lastmod>2023-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://viyi.cc/about_me/</loc>
-    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://viyi.cc/success_is_not_necessary_for_me/</loc>
     <lastmod>2023-04-18T00:00:00+00:00</lastmod>
   </url><url>
@@ -130,6 +130,9 @@
   </url><url>
     <loc>https://viyi.cc/annual_review_2022/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://viyi.cc/docs/programming/</loc>
+    <lastmod>2022-10-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/docs/computer_organization_principles/</loc>
     <lastmod>2024-09-01T00:00:00+00:00</lastmod>
@@ -182,6 +185,9 @@
     <loc>https://viyi.cc/docs/programming/2.7-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8Bsoftware-engineering/</loc>
     <lastmod>2023-09-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://viyi.cc/docs/operating_system/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://viyi.cc/docs/operating_system/3.1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9Foperating-systems/</loc>
     <lastmod>2023-09-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -209,6 +215,9 @@
     <loc>https://viyi.cc/docs/operating_system/3.9-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2graphical-user-interfaces/</loc>
     <lastmod>2023-09-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://viyi.cc/docs/4_computer_network/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://viyi.cc/docs/4_computer_network/4.1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-computer-networks/</loc>
     <lastmod>2023-09-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -226,6 +235,9 @@
   </url><url>
     <loc>https://viyi.cc/docs/4_computer_network/4.6-%E5%8A%A0%E5%AF%86-cryptography/</loc>
     <lastmod>2023-09-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://viyi.cc/docs/extended_discussion/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/docs/extended_discussion/5.1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-machine-learning-artificial-intelligence/</loc>
     <lastmod>2023-09-17T00:00:00+00:00</lastmod>
@@ -265,18 +277,6 @@
   </url><url>
     <loc>https://viyi.cc/tags/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/docs/programming/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/docs/operating_system/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/docs/4_computer_network/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/docs/extended_discussion/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/docs_1/example-doc/chapter-1/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
