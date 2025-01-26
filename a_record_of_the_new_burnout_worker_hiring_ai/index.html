@@ -104,7 +104,7 @@
     },
     "headline": "新晋社畜雇佣 AI 实录 | 与你分享我的眼睛","datePublished": "2025-01-26T00:00:00+00:00",
     "dateModified": "2025-01-26T00:00:00+00:00",
-    "wordCount":  11586 ,
+    "wordCount":  11579 ,
     "author": {
         "@type": "Person",
         "name": "viyi"
@@ -472,7 +472,7 @@ if __name__ == &quot;__main__&quot;:
 <p>至此，和简中互不联网平台的斗智斗勇现在才刚刚开始。实际上一开始称之为半成品的原因在于，剩下的平台我并未没有成功用较为简单的方式获取到播放数据。</p>
 <p><a href="https://open.xiaohongshu.com/home">小红书开放平台</a>只提供店铺相关的 API，倒是<a href="https://github.com/Big-Buffer/XiaohongshuSpider">有人使用 Appium+Mitmproxy+Fiddler+夜神模拟器</a>实现，看起来有点过于麻烦。Github 上还有个项目 <a href="https://github.com/ReaJason/xhs?tab=readme-ov-file">xhs</a> 似乎实现了，但目前的可用性无法验证。考虑到最重要的播放量数据，在小红书上并不公开可见，这本来就仅限发布者本人可以查看，非公开数据本身获取难度会更大一些。</p>
 <p>抖音开放平台提供<a href="https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/video-data">查询特定视频数据的 API</a>，坏消息是个人身份仅支持创建小游戏和直播小玩法，这个接口需要企业身份认证，来开启移动/网站应用的视频权限。好消息是 <a href="https://github.com/Evil0ctal/Douyin_TikTok_Download_API">Douyin_TikTok_Download_API</a> 提供了类似的功能 ，坏消息 again 是它并没有提供单个视频播放、互动数据的接口。</p>
-<p>公众号的<a href="https://developers.weixin.qq.com/doc/offiaccount/Analytics/Graphic_Analysis_Data_Interface.html">获取图文群发每日数据接口</a>可以获取到实时的阅读数据，但需要公众号管理员权限开通验证 access_token，我的操作权限不够，此外点赞、在看和转发等互动数据也无法获取。第三方实现通常需要通过代理抓包，但关键参数也需要手动获取，因为 key 会定时刷新……详见 <a href="https://github.com/wnma3mz/wechat_articles_spider%E3%80%82%E5%90%8C%E4%B8%BA%E8%85%BE%E8%AE%AF%E7%B3%BB%E7%9A%84%E8%A7%86%E9%A2%91%E5%8F%B7%E7%8A%B6%E5%86%B5%E4%B9%9F%E7%B1%BB%E4%BC%BC%EF%BC%8C%E4%BD%9C%E4%B8%BA%E9%BA%BB%E7%93%9C%E5%92%8C%E8%85%BE%E8%AE%AF">https://github.com/wnma3mz/wechat_articles_spider。同为腾讯系的视频号状况也类似，作为麻瓜和腾讯</a> battle 的成本过高，遂放弃。</p>
+<p>公众号的<a href="https://developers.weixin.qq.com/doc/offiaccount/Analytics/Graphic_Analysis_Data_Interface.html">获取图文群发每日数据接口</a>可以获取到实时的阅读数据，但需要公众号管理员权限开通验证 access_token，我的操作权限不够，此外点赞、在看和转发等互动数据也无法获取。第三方实现通常需要通过代理抓包，但关键参数也需要手动获取，因为 key 会定时刷新……详见 <a href="https://github.com/wnma3mz/wechat_articles_spider">wechat_articles_spider</a>。同为腾讯系的视频号状况也类似，作为麻瓜和腾讯 battle 的成本过高，遂放弃。</p>
 <p>你看，世上无难事，只要肯放弃(。本想偷个懒以项目为单位获取全平台的播放量数据，结果转了一圈下来四处撞墙。事已至此，还是先把基本流程跑通，给这件事画个句号。</p>
 <h3 id="飞书-webhook">飞书 WebHook</h3>
 <p>bilibili、YouTube 和微博的数据获取已经解决，主要的长视频平台左右也就这俩(仨)，接下来解决定时转播数据的需求，再拆解其实是两个问题——信息传递和定时任务。如果有需要，还可以带上个数据存储，毕竟阿 B 后台并不提供固定周期的数据对比功能。</p>
@@ -1090,7 +1090,8 @@ if __name__ == &quot;__main__&quot;:
 <p>目前的进度是已经可以读取到所有的评论（包括副楼）保存到表格，还加了简单的筛选词，筛选出的评论可以通过带有 rpid 的直链跳转处理，再加个 WebHook 基本能凑合用，不过一直没空摸鱼把它加上……然后就放假了！</p>
 <p>这个版本的缺点是如果定时任务设得比较紧凑，IP 会暂时被封禁无法 work，这个应该可以设置代理绕过。</p>
 <p>现在「设置关键词筛选 -&gt; 给直链跳转删除」比起之前「逐条翻评论 -&gt; 定向删除」来得方便，不过理论上还可以在飞书消息<a href="https://open.feishu.cn/document/uAjLw4CM/ukzMukzMukzM/feishu-cards/configuring-card-interactions">加个交互</a>，结合 <a href="https://nemo2011.github.io/bilibili-api/#/modules/comment?id=async-def-delete">async def delete()</a> 就可以直接一键删除，不用二次跳转网页。</p>
-<p>是的，这里又要有但是了，账号会需要在浏览器长期登录账户以便投稿，这样会导致 Cookies 被刷新……。总之，以下是再凑合一下的版本：</p>
+<p>是的，这里又要有但是了，账号会需要在浏览器长期登录账户以便投稿，这样会导致 Cookies 被刷新……。总之，以下是再凑合一下的版本：
+(这段代码比较长，可以戳右侧目录跳过。)</p>
 <pre><code class="language-python">from bilibili_api import comment, Credential
 import asyncio
 import json
