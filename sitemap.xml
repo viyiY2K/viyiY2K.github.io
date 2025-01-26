@@ -2,17 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://viyi.cc/tags/ai/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://viyi.cc/authors/</loc>
-    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/categories/</loc>
-    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/posts/</loc>
-    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://viyi.cc/tags/python/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/tags/</loc>
-    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://viyi.cc/a_record_of_the_new_burnout_worker_hiring_ai/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://viyi.cc/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://viyi.cc/authors/viyi/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/tags/%E6%89%93%E5%AD%97/</loc>
     <lastmod>2024-09-02T00:00:00+00:00</lastmod>
@@ -23,20 +41,11 @@
     <loc>https://viyi.cc/tags/%E5%8F%8C%E6%8B%BC/</loc>
     <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://viyi.cc/</loc>
-    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/</loc>
-    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/authors/viyi/</loc>
-    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://viyi.cc/relearning_to_type/</loc>
     <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/about_me/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/have_the_long_view_beyond_what_you_have_not_seen/</loc>
     <lastmod>2024-03-01T00:00:00+00:00</lastmod>
