@@ -1090,8 +1090,7 @@ if __name__ == &quot;__main__&quot;:
 <p>目前的进度是已经可以读取到所有的评论（包括副楼）保存到表格，还加了简单的筛选词，筛选出的评论可以通过带有 rpid 的直链跳转处理，再加个 WebHook 基本能凑合用，不过一直没空摸鱼把它加上……然后就放假了！</p>
 <p>这个版本的缺点是如果定时任务设得比较紧凑，IP 会暂时被封禁无法 work，这个应该可以设置代理绕过。</p>
 <p>现在「设置关键词筛选 -&gt; 给直链跳转删除」比起之前「逐条翻评论 -&gt; 定向删除」来得方便，不过理论上还可以在飞书消息<a href="https://open.feishu.cn/document/uAjLw4CM/ukzMukzMukzM/feishu-cards/configuring-card-interactions">加个交互</a>，结合 <a href="https://nemo2011.github.io/bilibili-api/#/modules/comment?id=async-def-delete">async def delete()</a> 就可以直接一键删除，不用二次跳转网页。</p>
-<p>是的，这里又要有但是了，账号会需要在浏览器长期登录账户以便投稿，这样会导致 Cookies 被刷新……。总之，以下是再凑合一下的版本：<br>
-(这段代码比较长，可以戳右侧目录跳过。)</p>
+<p>是的，这里又要有但是了，账号会需要在浏览器长期登录账户以便投稿，这样会导致 Cookies 被刷新……。总之，以下是再凑合一下的版本(这段代码比较长，可以戳右侧目录跳过。)：</p>
 <pre><code class="language-python">from bilibili_api import comment, Credential
 import asyncio
 import json
