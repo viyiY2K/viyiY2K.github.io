@@ -117,7 +117,7 @@
             "url": "https://viyi.cc/images/icon.png"
         }
         },
-    "description": "\u003cp\u003e拯救沉溺细节雕花作战，启动。\u003c\/p\u003e"
+    "description": "拯救沉溺细节雕花作战，启动。"
 }
 </script><meta property="og:title" content="再搭博客记 | 与你分享我的眼睛" />
 <meta property="og:type" content="article" />
@@ -130,9 +130,7 @@
 
 
 
-
 <meta property="og:description" content="拯救沉溺细节雕花作战，启动。" />
-
 
 
 
@@ -293,7 +291,7 @@
 <p>在花了十来个小时寻找一个符合审美的 <a href="https://hexo.io/zh-cn/">Hexo</a> 主题之后，我甚至忘记了我一开始为什么想要做这件事。</p>
 <p>坦白来说，除了服务器贵了点之外，我对现行博客方案的唯一不满在于本地与 Typecho 两处的不同步。我习惯使用 Obisidian 撰写文章，每次写完复制到 Typecho 后，还得再手动填一次已经在 Front-matter 的内容，确实有点麻烦但还能忍受。可结合上我糟糕的审校习惯和细节雕花的强迫行为，每次回看就成了噩梦——总是能看到新的小错误，总是要重复修改，两处重复堆叠起来的次数之多着实令人生厌。</p>
 <p>「一定有更漂亮的方式完成这件事」，这种念头的出现毫不意外，接着我开始考虑起静态博客。这并不是一个深思熟虑的举动，现在回看，我更愿意称作是被拖进时间黑洞的预兆。我甚至都想不起来为什么选择了 Hexo。也许仅仅只是因为它是我记得的静态博客框架之一，毕竟观感上它们都大差不差。</p>
-<p>和我之前的判断差不多，的确静态博客的搭建要简单得多。参考 @EsunR 的《<a href="https://blog.esunr.xyz/2022/06/64163235c30f.html">Hexo 快速搭建指南</a>》按部就班地完成，耗时大概不足 2h。但写作流程依旧不够漂亮，将写完的 .md 文件放置在博客根目录下的 <code>source/_post</code> 文件夹后，还得 <code>hexo clean</code>、<code>hexo g</code>、<code>hexo d</code> 三连操作等待编译推送，且每次修改都需要来一回三连……这也很烦。进一步优化方案，结合 <a href="https://fushaolei.github.io/posts/github-action-hexo/">GitHub Action 的自动部署</a>和 <a href="https://blog.esunr.xyz/2022/07/e9b42b453d9f.html#3-3-%E4%BD%BF%E7%94%A8-Obsidian-Git-%E6%8F%92%E4%BB%B6">Obsidian 中的 Git 插件</a>，基本可以实现全程在 Obsidian 中写完并推送。</p>
+<p>和我之前的判断差不多，的确静态博客的搭建要简单得多。参考 @EsunR 的《<a href="https://blog.esunr.xyz/2022/06/64163235c30f.html">Hexo 快速搭建指南</a>》按部就班地完成，耗时大概不足 2h。但写作流程依旧不够漂亮，将写完的 .md 文件放置在博客根目录下的 <code>source/_post</code> 文件夹后，还得 hexo clean、hexo g、hexo d 三连操作等待编译推送，且每次修改都需要来一回三连……这也很烦。进一步优化方案，结合 <a href="https://fushaolei.github.io/posts/github-action-hexo/">GitHub Action 的自动部署</a>和 <a href="https://blog.esunr.xyz/2022/07/e9b42b453d9f.html#3-3-%E4%BD%BF%E7%94%A8-Obsidian-Git-%E6%8F%92%E4%BB%B6">Obsidian 中的 Git 插件</a>，基本可以实现全程在 Obsidian 中写完并推送。</p>
 <p>这套方案就写作体验来说绝对是相当丝滑，但<del>我大概率还是会继续留在 Typecho</del>。一方面 <a href="https://github.com/denolehov/obsidian-git">Obsidian Git</a> 的处理对象是仓库（vault）而不是库中的某个文件夹，考虑到我写作过程中经常需要查询援引既有笔记内容，而 Obsidian 跨仓库移动文件又并不是那么方便，操作还是稍显繁琐。另一方面，Hexo 的主题 <del>真的很丑</del> 很少有戳中我审美的。我是万万没想到，我能在两三个小时跑通流程之后，还要花大几十个小时找一个顺眼的主题（甚至还是没找到满意的）。原先选择的<a href="https://github.com/FuShaoLei/hexo-theme-white">主题 White</a>勉强及格，但它……不支持……脚注 (╯°□°）╯︵ ┻━┻。</p>
 <p><del>以结果论，这次迁移大概是失败了</del>。既然没有 get things done，那么是否 make myself better 了呢？在这次的失败经历中，有两点我很好奇。</p>
 <p>一是为什么我会有这么强的完成执念，它是否能被利用于更高 ROI（投入产出比）的任务中？我并不是在所有任务上都能有如此之大的热枕，否则我的高数题册早该写完了。我也不是第一次被任务吸掉所有注意力，忍不住不间断地投入时间，这并非偶然事件。如果这种甚至可以忽略生理需求、专注数十小时的心流体验并不是发生在“选皮肤”这种低价值的事上，我想我会更幸福一点。</p>
