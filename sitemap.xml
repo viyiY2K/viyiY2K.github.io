@@ -14,8 +14,11 @@
     <loc>https://viyi.cc/tags/</loc>
     <lastmod>2025-04-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://viyi.cc/what_happened_last_thursday/</loc>
-    <lastmod>2025-04-13T00:00:00+00:00</lastmod>
+    <loc>https://viyi.cc/annual_review_2024/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://viyi.cc/tags/%E5%B9%B4%E6%9C%AB%E5%9B%9E%E9%A1%BE/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/categories/%E9%9A%8F%E6%83%B3/</loc>
     <lastmod>2025-04-14T00:00:00+00:00</lastmod>
@@ -24,15 +27,6 @@
     <lastmod>2025-04-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/authors/viyi/</loc>
-    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/tags/%E8%81%8C%E5%9C%BA/</loc>
-    <lastmod>2025-04-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/annual_review_2024/</loc>
-    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/tags/%E5%B9%B4%E6%9C%AB%E5%9B%9E%E9%A1%BE/</loc>
     <lastmod>2025-04-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/tags/ai/</loc>
@@ -65,6 +59,9 @@
     <loc>https://viyi.cc/have_the_long_view_beyond_what_you_have_not_seen/</loc>
     <lastmod>2024-03-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://viyi.cc/tags/%E8%81%8C%E5%9C%BA/</loc>
+    <lastmod>2024-03-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://viyi.cc/annual_review_2023/</loc>
     <lastmod>2023-12-31T00:00:00+00:00</lastmod>
   </url><url>
@@ -73,12 +70,6 @@
   </url><url>
     <loc>https://viyi.cc/why_numbering_should_start_at_zero/</loc>
     <lastmod>2023-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/tags/blog/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/building_blog_again/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/tags/cptsd/</loc>
     <lastmod>2024-09-01T00:00:00+00:00</lastmod>
@@ -98,12 +89,6 @@
     <loc>https://viyi.cc/about_graduation/</loc>
     <lastmod>2023-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://viyi.cc/oh_god_these_stars/</loc>
-    <lastmod>2023-06-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://viyi.cc/tags/%E8%80%83%E7%A0%94/</loc>
-    <lastmod>2023-06-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://viyi.cc/tags/github/</loc>
     <lastmod>2023-06-02T00:00:00+00:00</lastmod>
   </url><url>
@@ -121,6 +106,9 @@
   </url><url>
     <loc>https://viyi.cc/thinking_sick_body/</loc>
     <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://viyi.cc/tags/blog/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://viyi.cc/building_a_blog/</loc>
     <lastmod>2023-05-20T00:00:00+00:00</lastmod>
