@@ -104,7 +104,7 @@
     },
     "headline": "复刻 @影视飓风 同款运营数据面板 | 与你分享我的眼睛","datePublished": "2025-08-03T00:00:00+00:00",
     "dateModified": "2025-08-03T00:00:00+00:00",
-    "wordCount":  2780 ,
+    "wordCount":  2795 ,
     "author": {
         "@type": "Person",
         "name": "viyi"
@@ -289,9 +289,9 @@
 <p>看到影视飓风的示例，想着终于可以抄作业了，顺藤摸瓜找到了飞书的<a href="https://gcnax5pj3z0y.feishu.cn/base/OI0sbGlETawgpTsmeXMcW0bpnwh?table=blkhHeam4VzGVk4i">多维表格模板</a>，但很不幸这只是个最终的展示物，真正可用的「自动获取数据」在飞书官方搭建服务售卖 ¥4999/场景。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1754224088209.png" alt="1754224088209.png"></p>
 <p>谢谢谢谢，本人读者甚至都没有 4999 人。</p>
-<p>买是买不起的，但不当社畜了我可有时间了呀，于是复刻影视飓风同款数据面板的项目就提上了日程。花了三四天用 Trae 实现了基本需求——自动定时获取全平台的粉丝数据、小红书的笔记详情数据，同步飞书多维表格可视化展示。另外还支持本地备份并且同步上传 git，在飞书群组里 @ 对应机器人实现实时更新。</p>
+<p>买是买不起的，但不当社畜了我可有时间了呀，于是复刻影视飓风同款数据面板的项目就提上了日程。花了三四天用 Trae 实现了基本需求——自动定时获取全平台的粉丝数据、小红书的笔记详情数据，同步飞书多维表格可视化展示，支持本地备份并且同步上传 github。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1754223517531.png" alt="1754223517531.png"></p>
-<p>默认是定时早上 9 点运行一次，也可以 @ 机器人+对应关键词来触发实时的数据更新，这俩需要脚本长期保持运行状态，最好是有空闲机子当作服务器会方便一些。</p>
+<p>默认是定时早上 9 点运行一次，也可以 @ 机器人+对应关键词来触发实时的数据更新。这俩功能需要脚本长期保持运行状态，最好是有空闲机子当作服务器会方便一些。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1754223784381.png" alt="1754223784381.png"></p>
 <p>说实话很简陋，尤其是用不了官方的 API（因为只面向企业开放） 只好依赖本地 cookie 容易过期失效（尤其是微信公众号），但作为只为麻瓜个人的工具还是够用的——大概这就是 vibe coding 的意义，就算是麻瓜也能手搓一个 for me 的专属工具提效。</p>
 <p>这里主要是写个比较详细的配置说明，让如山清抄作业（是的就是写给你的）。</p>
@@ -315,8 +315,8 @@
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/CleanShot%202025-08-03%20at%2018.21.37%402x.png" alt="CleanShot%202025-08-03%20at%2018.21.37%402x.png"></p>
 <p>注意，模板存储的位置最好是云盘，而不是知识库，这个会影响多维表格 App 的唯一标识 App Token 的获取方式：</p>
 <ul>
-<li>如果多维表格的 URL 以 <code>feishu.cn/base</code> 开头：<code>app_token</code> 可直接从 URL 中获取（具体为 URL 中 <code>base/</code> 后的部分）</li>
-<li>如果多维表格的 URL 以 <code>feishu.cn/wiki</code> 开头：需调用知识库相关<a href="https://go.feishu.cn/s/65W4PEw1g04">获取知识空间节点信息</a>接口获取，当 <code>obj_type</code> 的值为 <code>bitable</code> 时，<code>obj_token</code> 字段的值即为多维表格的 <code>app_token</code></li>
+<li>如果多维表格的 URL 以 feishu.cn/base 开头：app_token 可直接从 URL 中获取（具体为 URL 中 <code>base/</code> 后的部分）</li>
+<li>如果多维表格的 URL 以 feishu.cn/wiki 开头：需调用知识库相关<a href="https://go.feishu.cn/s/65W4PEw1g04">获取知识空间节点信息</a>接口获取，当 obj_type 的值为 bitable 时，obj_token 字段的值即为多维表格的 app_token</li>
 </ul>
 <p>下图示例中 feishu.cn 的后面为 base，则粉色高亮部分为 App Token，黄色高亮部分为 Table ID。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/CleanShot%202025-08-03%20at%2018.23.44%402x.png" alt="CleanShot%202025-08-03%20at%2018.23.44%402x.png"></p>
@@ -353,8 +353,9 @@
 <p>先启用第 4 种模式，实现用<a href="https://open.feishu.cn/document/server-docs/server-side-sdk">官方 SDK</a>启动长连接。建立连接之后，再进入<a href="https://open.feishu.cn/app/">应用管理界面</a>的「事件与回调」，添加「接收消息」的事件。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/CleanShot%202025-08-03%20at%2020.12.38%402x.png" alt="CleanShot%202025-08-03%20at%2020.12.38%402x.png"></p>
 <p>至此，完成所有配置。本地的备份数据会存储在当前路径下的 data 文件夹中，分别为 followers.csv 和 redbook_data.csv。前者是带时间戳的各平台数据，后者则是增量更新。往期某个时间点的小红书数据可以在 downloads 文件夹中查看，这里是从小红书创作者中心导出的图文数据（平台限制仅可导出半年内数据）。</p>
+<p>github 的同步会在 monitor_bot.py 执行之后默认进行，需要本地先关联到 github 的仓库。</p>
 <p>有空接着完善下去的话，会再添加发布新笔记后定时间隔获取单篇数据的功能，以及公众号的详情数据同步。先挖坑，够用暂时不会再花太多时间修改（。</p>
-<p>至于为什么没有影视飓风视频里的 CTR 和 AVD 数据……是因为本质上这俩是仅创作者本人可见的数据，一方面我现在手上没有视频账号，另一方面官方的 API 需要企业身份。个人如果想复刻，可以参考小红书图文详情的获取方式，用脚本操作浏览器从创作者中心导出对应数据，本地清洗备份再写入飞书多维表格进行可视化。</p>
+<p>至于为什么没有影视飓风视频里的 CTR 和 AVD 数据……是因为本质上这俩是仅创作者本人可见的数据，一方面我现在手上没有视频账号，另一方面官方的 API 需要企业身份。个人创作者如果想复刻，可以参考小红书图文详情的获取方式，用脚本操作浏览器从创作者中心导出对应数据，本地清洗备份再写入飞书多维表格进行可视化。</p>
 
 </article>
 
