@@ -97,7 +97,7 @@
     },
     "headline": "新晋社畜雇佣 AI 实录 | 与你分享我的眼睛","datePublished": "2025-01-26T00:00:00+00:00",
     "dateModified": "2025-01-26T00:00:00+00:00",
-    "wordCount":  7392 ,
+    "wordCount":  6890 ,
     "author": {
         "@type": "Person",
         "name": "viyi"
@@ -252,7 +252,7 @@
   </div>
   <div class="me-6 my-2">
     <i class="fas fa-clock me-1"></i>
-    <span>15 分钟阅读时长</span>
+    <span>14 分钟阅读时长</span>
   </div>
 
   
@@ -378,88 +378,8 @@
 </span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Play Count:&#34;</span><span class="p">,</span> <span class="n">play_count</span><span class="p">)</span>  
 </span></span></code></pre></div><p>Weibo Spider 是根据微博用户 id 访问主页并依序逐条提取微博数据，最终存储到 csv 文件的爬虫程序。它本质上是一种轮查（Polling），数据更新的频率取决于爬取的间隔时间。</p>
 <p>按照一开始的需求，我只需要获取单条微博的数据。本来犯懒不想仔细看是怎么实现的，直接从 csv 文件中筛选出对应的单条微博凑合用来着，后来还是忍受不了……因为如果设定的内容爬取周期比较长，加之该期间账号发布的内容较多，这种方法会比较浪费资源。</p>
-<p>其实实现起来也不难，移动端的微博数据比较规整也不会有登录限制，解析抓取到的内容就可以了。稍微不太顺手的一点是单条微博 id 的获取，网页端直接分享的短链并不带有微博唯一 id，必须从移动端分享取得。相关示例代码如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## -*- coding: utf-8 -*-</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">argparse</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">logging</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">urllib3</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">## 禁用 SSL 警告</span>
-</span></span><span class="line"><span class="cl"><span class="n">urllib3</span><span class="o">.</span><span class="n">disable_warnings</span><span class="p">(</span><span class="n">urllib3</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">InsecureRequestWarning</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_single_weibo</span><span class="p">(</span><span class="n">weibo_id</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;获取指定ID的单条微博信息&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">headers</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36&#39;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;&lt;https://m.weibo.cn/detail/</span><span class="si">{</span><span class="n">weibo_id</span><span class="si">}</span><span class="s2">&gt;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">html</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
-</span></span><span class="line"><span class="cl">        <span class="n">html</span> <span class="o">=</span> <span class="n">html</span><span class="p">[</span><span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;&#34;status&#34;:&#39;</span><span class="p">):]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">html</span> <span class="o">=</span> <span class="n">html</span><span class="p">[:</span><span class="n">html</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;&#34;call&#34;&#39;</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">html</span> <span class="o">=</span> <span class="n">html</span><span class="p">[:</span><span class="n">html</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">html</span> <span class="o">=</span> <span class="s2">&#34;{&#34;</span> <span class="o">+</span> <span class="n">html</span> <span class="o">+</span> <span class="s2">&#34;}&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">js</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">weibo_info</span> <span class="o">=</span> <span class="n">js</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;status&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">weibo_info</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">## 提取基本信息</span>
-</span></span><span class="line"><span class="cl">            <span class="n">weibo</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="s1">&#39;screen_name&#39;</span><span class="p">:</span> <span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">][</span><span class="s1">&#39;screen_name&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="s1">&#39;attitudes_count&#39;</span><span class="p">:</span> <span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;attitudes_count&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="s1">&#39;comments_count&#39;</span><span class="p">:</span> <span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;comments_count&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="s1">&#39;reposts_count&#39;</span><span class="p">:</span> <span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;reposts_count&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;created_at&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">            <span class="c1">## 获取视频信息</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">weibo_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;page_info&#34;</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="n">page_info</span> <span class="o">=</span> <span class="n">weibo_info</span><span class="p">[</span><span class="s2">&#34;page_info&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">page_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;type&#34;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&#34;video&#34;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">weibo</span><span class="p">[</span><span class="s1">&#39;play_count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">page_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;play_count&#34;</span><span class="p">,</span> <span class="s2">&#34;0&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">weibo</span><span class="p">[</span><span class="s1">&#39;video_title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">page_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;title&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">weibo</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;获取微博信息出错: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;获取微博数据并输出到命令行&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--id&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;微博ID&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="n">weibo_info</span> <span class="o">=</span> <span class="n">get_single_weibo</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">weibo_info</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">## 输出微博信息到命令行</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;用户: </span><span class="si">{</span><span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;screen_name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;创建时间: </span><span class="si">{</span><span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;created_at&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;内容: </span><span class="si">{</span><span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;点赞数: </span><span class="si">{</span><span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;attitudes_count&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;评论数: </span><span class="si">{</span><span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;comments_count&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;转发数: </span><span class="si">{</span><span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;reposts_count&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="s1">&#39;play_count&#39;</span> <span class="ow">in</span> <span class="n">weibo_info</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;播放量: </span><span class="si">{</span><span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;play_count&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;视频标题: </span><span class="si">{</span><span class="n">weibo_info</span><span class="p">[</span><span class="s1">&#39;video_title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&#34;获取微博信息失败&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
-</span></span></code></pre></div><p>至此，和简中互不联网平台的斗智斗勇现在才刚刚开始。实际上一开始称之为半成品的原因在于，剩下的平台我并未没有成功用较为简单的方式获取到播放数据。</p>
+<p>其实实现起来也不难，移动端的微博数据比较规整也不会有登录限制，解析抓取到的内容就可以了。稍微不太顺手的一点是单条微博 id 的获取，网页端直接分享的短链并不带有微博唯一 id，必须从移动端分享取得，相关示例代码<a href="https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/weibo.py">参见此处</a>。</p>
+<p>至此，和简中互不联网平台的斗智斗勇现在才刚刚开始。实际上一开始称之为半成品的原因在于，剩下的平台我并未没有成功用较为简单的方式获取到播放数据。</p>
 <p><a href="https://open.xiaohongshu.com/home">小红书开放平台</a>只提供店铺相关的 API，倒是<a href="https://github.com/Big-Buffer/XiaohongshuSpider">有人使用 Appium+Mitmproxy+Fiddler+夜神模拟器</a>实现，看起来有点过于麻烦。Github 上还有个项目 <a href="https://github.com/ReaJason/xhs?tab=readme-ov-file">xhs</a> 似乎实现了，但目前的可用性无法验证。考虑到最重要的播放量数据，在小红书上并不公开可见，这本来就仅限发布者本人可以查看，非公开数据本身获取难度会更大一些。</p>
 <p>抖音开放平台提供<a href="https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/video-data">查询特定视频数据的 API</a>，坏消息是个人身份仅支持创建小游戏和直播小玩法，这个接口需要企业身份认证，来开启移动/网站应用的视频权限。好消息是 <a href="https://github.com/Evil0ctal/Douyin_TikTok_Download_API">Douyin_TikTok_Download_API</a> 提供了类似的功能 ，坏消息 again 是它并没有提供单个视频播放、互动数据的接口。</p>
 <p>公众号的<a href="https://developers.weixin.qq.com/doc/offiaccount/Analytics/Graphic_Analysis_Data_Interface.html">获取图文群发每日数据接口</a>可以获取到实时的阅读数据，但需要公众号管理员权限开通验证 access_token，我的操作权限不够，此外点赞、在看和转发等互动数据也无法获取。第三方实现通常需要通过代理抓包，但关键参数也需要手动获取，因为 key 会定时刷新……详见 <a href="https://github.com/wnma3mz/wechat_articles_spider">wechat_articles_spider</a>。同为腾讯系的视频号状况也类似，作为麻瓜和腾讯 battle 的成本过高，遂放弃。</p>
