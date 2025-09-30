@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on 与你分享我的眼睛</title>
-    <link>http://localhost:1313/docs_1/</link>
+    <link>https://viyi.cc/docs_1/</link>
     <description>Recent content in Docs on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/docs_1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/docs_1/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

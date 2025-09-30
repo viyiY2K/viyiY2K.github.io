@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on 与你分享我的眼睛</title>
-    <link>http://localhost:1313/tags/github/</link>
+    <link>https://viyi.cc/tags/github/</link>
     <description>Recent content in Github on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 SSH 连接 Github 受锤记</title>
-      <link>http://localhost:1313/connection_closed_and_permission_denied/</link>
+      <link>https://viyi.cc/connection_closed_and_permission_denied/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/connection_closed_and_permission_denied/</guid>
+      <guid>https://viyi.cc/connection_closed_and_permission_denied/</guid>
       <description>&lt;p&gt;在试图学习用 Git，那当然第一步是要先连上 Github 啦。&lt;/p&gt;</description>
     </item>
     

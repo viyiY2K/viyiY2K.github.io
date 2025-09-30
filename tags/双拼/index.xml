@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>双拼 on 与你分享我的眼睛</title>
-    <link>http://localhost:1313/tags/%E5%8F%8C%E6%8B%BC/</link>
+    <link>https://viyi.cc/tags/%E5%8F%8C%E6%8B%BC/</link>
     <description>Recent content in 双拼 on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%8F%8C%E6%8B%BC/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/%E5%8F%8C%E6%8B%BC/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>重学打字</title>
-      <link>http://localhost:1313/relearning_to_type/</link>
+      <link>https://viyi.cc/relearning_to_type/</link>
       <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/relearning_to_type/</guid>
+      <guid>https://viyi.cc/relearning_to_type/</guid>
       <description>「壮壮撞墙了」，打出这句话你需要击键多少次、耗时多少秒？全拼下 28 次 8 秒，这是我用电脑键盘打字的速度，使用手机上的 T9 键盘也许要到 15s，而 8s 内我脑子里闪</description>
     </item>
     

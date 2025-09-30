@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>教育 on 与你分享我的眼睛</title>
-    <link>http://localhost:1313/tags/%E6%95%99%E8%82%B2/</link>
+    <link>https://viyi.cc/tags/%E6%95%99%E8%82%B2/</link>
     <description>Recent content in 教育 on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%95%99%E8%82%B2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/%E6%95%99%E8%82%B2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Crash Course Computer Science 课程笔记</title>
-      <link>http://localhost:1313/cccs/</link>
+      <link>https://viyi.cc/cccs/</link>
       <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/cccs/</guid>
+      <guid>https://viyi.cc/cccs/</guid>
       <description>本文档内容出自 Crash Course 上传在 YouTube 的 Computer Science 课程（2017 年），授课教师为 @Carrie Anne Philbin ，于 2022 年 10 月观看完中译版视频。 正在跳转到 Crash Course Computer Science 学习笔记&amp;hellip; 如果没有自</description>
     </item>
     

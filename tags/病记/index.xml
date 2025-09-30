@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>病记 on 与你分享我的眼睛</title>
-    <link>http://localhost:1313/tags/%E7%97%85%E8%AE%B0/</link>
+    <link>https://viyi.cc/tags/%E7%97%85%E8%AE%B0/</link>
     <description>Recent content in 病记 on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 26 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%97%85%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/%E7%97%85%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>思考病躯</title>
-      <link>http://localhost:1313/thinking_sick_body/</link>
+      <link>https://viyi.cc/thinking_sick_body/</link>
       <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/thinking_sick_body/</guid>
+      <guid>https://viyi.cc/thinking_sick_body/</guid>
       <description>&lt;p&gt;从四月末开始一直在生病，直到现在湿疹都还没有好，伴随着新冠的后遗症，我敲下了这些字。病情一直在反复，时好时坏，生病是最佳的休息理由，可我突然发现我不知道怎样才算是「休息」。&lt;/p&gt;</description>
     </item>
     

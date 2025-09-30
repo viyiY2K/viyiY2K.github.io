@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on 与你分享我的眼睛</title>
-    <link>http://localhost:1313/tags/blog/</link>
+    <link>https://viyi.cc/tags/blog/</link>
     <description>Recent content in Blog on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 09 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>再搭博客记</title>
-      <link>http://localhost:1313/building_blog_again/</link>
+      <link>https://viyi.cc/building_blog_again/</link>
       <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/building_blog_again/</guid>
+      <guid>https://viyi.cc/building_blog_again/</guid>
       <description>&lt;p&gt;拯救沉溺细节雕花作战，启动。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>初搭博客记</title>
-      <link>http://localhost:1313/building_a_blog/</link>
+      <link>https://viyi.cc/building_a_blog/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/building_a_blog/</guid>
+      <guid>https://viyi.cc/building_a_blog/</guid>
       <description>&lt;h2 id=&#34;教练我想搭博客&#34;&gt;“教练，我想搭博客”&lt;/h2&gt;
 &lt;p&gt;一切要从新冠说起。&lt;/p&gt;</description>
     </item>

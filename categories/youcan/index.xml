@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>YOUCAN on 与你分享我的眼睛</title>
-    <link>http://localhost:1313/categories/youcan/</link>
+    <link>https://viyi.cc/categories/youcan/</link>
     <description>Recent content in YOUCAN on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/youcan/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/categories/youcan/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>事情完成之前总像是不可能的</title>
-      <link>http://localhost:1313/about_defusion/</link>
+      <link>https://viyi.cc/about_defusion/</link>
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/about_defusion/</guid>
+      <guid>https://viyi.cc/about_defusion/</guid>
       <description>在做有挑战性的事情时，我很容易陷入管窥，我会有很多想法出现。它们有对有错有真有假，但这些都没那么重要，真正重要的是「有效性」。 那怎么判断呢？就问自己一</description>
     </item>
     
     <item>
       <title>过去的囚徒</title>
-      <link>http://localhost:1313/prisoner_of_the_past/</link>
+      <link>https://viyi.cc/prisoner_of_the_past/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/prisoner_of_the_past/</guid>
+      <guid>https://viyi.cc/prisoner_of_the_past/</guid>
       <description>&lt;p&gt;我差一点就跳下江了，幸存本人决定为自己制作点速效救命丸。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>思考病躯</title>
-      <link>http://localhost:1313/thinking_sick_body/</link>
+      <link>https://viyi.cc/thinking_sick_body/</link>
       <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/thinking_sick_body/</guid>
+      <guid>https://viyi.cc/thinking_sick_body/</guid>
       <description>&lt;p&gt;从四月末开始一直在生病，直到现在湿疹都还没有好，伴随着新冠的后遗症，我敲下了这些字。病情一直在反复，时好时坏，生病是最佳的休息理由，可我突然发现我不知道怎样才算是「休息」。&lt;/p&gt;</description>
     </item>
     
