@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bilibili on 与你分享我的眼睛</title>
-    <link>https://viyi.cc/tags/bilibili/</link>
+    <link>http://localhost:1313/tags/bilibili/</link>
     <description>Recent content in bilibili on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/bilibili/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/bilibili/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bilibili 直播预热曝光优化</title>
-      <link>https://viyi.cc/bilibili_live_preheating_exposure_optimization/</link>
+      <link>http://localhost:1313/bilibili_live_preheating_exposure_optimization/</link>
       <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/bilibili_live_preheating_exposure_optimization/</guid>
+      <guid>http://localhost:1313/bilibili_live_preheating_exposure_optimization/</guid>
       <description>注：本文主要针对 b 站平台的直播，原稿为内部交流使用，现脱敏关键数据，仅供参考。 现状简述 目前带货直播频率为一周 ×× 次，预热分发平台为 B 站动态、公众号以及</description>
     </item>
     

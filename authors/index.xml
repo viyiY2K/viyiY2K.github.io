@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on 与你分享我的眼睛</title>
-    <link>https://viyi.cc/authors/</link>
+    <link>http://localhost:1313/authors/</link>
     <description>Recent content in Authors on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 29 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/authors/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>枝因</title>
-      <link>https://viyi.cc/authors/viyi/</link>
-      <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+      <link>http://localhost:1313/authors/viyi/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/authors/viyi/</guid>
+      <guid>http://localhost:1313/authors/viyi/</guid>
       <description>并没有什么好介绍的，一句两句聊不清楚无常的生命，但还是按照惯例写点什么。 🙎‍♀️ 关于我 INFJ，挺不来事一女的。想成为马猴烧酒，想活在真实世界，想茁壮</description>
     </item>
     
     <item>
       <title>之一</title>
-      <link>https://viyi.cc/authors/viyii/</link>
+      <link>http://localhost:1313/authors/viyii/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/authors/viyii/</guid>
+      <guid>http://localhost:1313/authors/viyii/</guid>
       <description>庚辰年生，CPTSD 幸存者。要和我一起活下去，拜托了。</description>
     </item>
     
     <item>
       <title>Example Author</title>
-      <link>https://viyi.cc/authors/example-author/</link>
+      <link>http://localhost:1313/authors/example-author/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/authors/example-author/</guid>
+      <guid>http://localhost:1313/authors/example-author/</guid>
       <description>Self Introduction Cras ex dui, tristique a libero eget, consectetur semper ligula. Nunc augue arcu, malesuada a nisi et, molestie finibus metus. Sed lacus odio, ultricies a nisl vitae, sollicitudin tempor ipsum. Vivamus quis feugiat arcu. Sed mi nunc, efficitur quis tellus vitae, posuere mattis metus. Phasellus in mattis dui. Nullam blandit, augue non ullamcorper dapibus, lacus dui molestie massa, in iaculis purus lectus eu lectus. Duis hendrerit lacinia tellus, sit amet feugiat dolor placerat id.</description>
     </item>
     
     <item>
       <title>Hugo Authors</title>
-      <link>https://viyi.cc/authors/hugo-authors/</link>
+      <link>http://localhost:1313/authors/hugo-authors/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/authors/hugo-authors/</guid>
+      <guid>http://localhost:1313/authors/hugo-authors/</guid>
       <description>Vestibulum vel arcu Donec interdum justo sed posuere imperdiet. Quisque nec mauris eu erat mattis egestas in vitae nisl. Sed nisl augue, congue sed quam quis, tempor tempus nibh. Pellentesque accumsan in quam a interdum. Morbi iaculis venenatis lacinia. Mauris quis nisl vitae nisi mollis placerat id vel ligula. Integer vitae arcu ac leo iaculis rhoncus id vitae dolor. Fusce quis nisl tincidunt, vulputate dolor quis, mollis massa. Donec congue velit at risus cursus, eu auctor dolor rhoncus.</description>
     </item>
     

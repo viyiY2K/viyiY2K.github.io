@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>代码高亮 on 与你分享我的眼睛</title>
+    <link>http://localhost:1313/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/</link>
+    <description>Recent content in 代码高亮 on 与你分享我的眼睛</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 30 Sep 2025 18:50:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>代码高亮测试页面</title>
+      <link>http://localhost:1313/posts/test-code-highlight/</link>
+      <pubDate>Tue, 30 Sep 2025 18:50:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/test-code-highlight/</guid>
+      <description>代码高亮测试 这是一个用于测试代码高亮功能的页面。 Python 代码测试 def hello_world(): print(&amp;#34;Hello, World!&amp;#34;) return &amp;#34;success&amp;#34; # 这是一个注释 for i in range(10): if i % 2 == 0: print(f&amp;#34;偶数: {i}&amp;#34;) else: print(</description>
+    </item>
+    
+  </channel>
+</rss>

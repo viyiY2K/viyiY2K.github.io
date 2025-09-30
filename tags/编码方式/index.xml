@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>编码方式 on 与你分享我的眼睛</title>
-    <link>https://viyi.cc/tags/%E7%BC%96%E7%A0%81%E6%96%B9%E5%BC%8F/</link>
+    <link>http://localhost:1313/tags/%E7%BC%96%E7%A0%81%E6%96%B9%E5%BC%8F/</link>
     <description>Recent content in 编码方式 on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 18 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/%E7%BC%96%E7%A0%81%E6%96%B9%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%BC%96%E7%A0%81%E6%96%B9%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从零开始</title>
-      <link>https://viyi.cc/why_numbering_should_start_at_zero/</link>
+      <link>http://localhost:1313/why_numbering_should_start_at_zero/</link>
       <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://viyi.cc/why_numbering_should_start_at_zero/</guid>
+      <guid>http://localhost:1313/why_numbering_should_start_at_zero/</guid>
       <description>之前还在 uTools 打零工的时候，和老大聊评论区有人反馈，希望批量重命名插件的起始位序可以是 0 （当前默认是从 1 开始），我老大说这人一看就是搞计算机的。当时觉得挺</description>
     </item>
     
