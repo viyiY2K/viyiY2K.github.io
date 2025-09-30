@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>使用 SSH 连接 Github 受锤记 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.9285d3095319c9f1de8ca121e332e3d50ffa81a82b750989451699f045e74419ee32368863d7fae35ba67f133f6e31fa.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="在试图学习用 Git，那当然第一步是要先连上 Github 啦。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://viyi.cc/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"使用 SSH 连接 Github 受锤记",
+      "item":"https://viyi.cc/connection_closed_and_permission_denied/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/connection_closed_and_permission_denied/"
+    },
+    "headline": "使用 SSH 连接 Github 受锤记 | 与你分享我的眼睛","datePublished": "2023-06-01T00:00:00+00:00",
+    "dateModified": "2023-06-02T00:00:00+00:00",
+    "wordCount":  5488 ,
+    "author": {
+        "@type": "Person",
+        "name": ["viyi"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003e在试图学习用 Git，那当然第一步是要先连上 Github 啦。\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="使用 SSH 连接 Github 受锤记 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/connection_closed_and_permission_denied/" />
+
+
+
+
+<meta property="og:description" content="在试图学习用 Git，那当然第一步是要先连上 Github 啦。" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2023-06-01T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-06-02T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="SSH" />
+
+<meta property="article:tag" content="Github" />
+
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/archives/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">归档</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">使用 SSH 连接 Github 受锤记</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      
+        
+          title="编辑于 2023年06月02日"
+        
+      
+      >2023-06-01</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>11 分钟阅读时长</span>
+  </div>
+
+  
+    <div class="me-6 my-2">
+      <i class="fas fa-folder me-1"></i>
+      
+        <a href="https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/" class="hover:text-eureka"
+          >札记</a
+        >
+      
+    </div>
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>在试图学习用 Git，那当然第一步是要先连上 Github 啦。</p>
+<h2 id="孤岛简中">孤岛简中</h2>
+<p>依旧使用 ssh (Secure Shell) 来连接到 GitHub，起初还是下意识想要<a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">创建新的密钥</a>，毕竟<a href="https://viyi.cc/building_a_blog.html">之前</a>也这么干过，还灵光一现顺手改了个名字（记住这个下意识和顺手，后面要考🚬）。把公钥给到 GitHub 之后，用 <code>ssh -T git@github.com</code> 进行连接测试，结果报错 <code>Connection closed</code> ，这才开始启动大脑。</p>
+<p>查了好半天原因被溜回<a href="https://docs.github.com/zh/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">官方文档</a>，于是默默把它在寻找这类问题解决方法的路径优先级调高至 top。</p>
+<p>按照文档所言，先使用 <code>ssh -T -p 443 git@ssh.github.com</code> 进行测试。其中，选项 <code>-T</code> (test) 表测试，会在 ssh 成功连接后立即断开；<code>-p</code> (port) 指定端口号为 HTTPS 协议默认端口 44；<code>git</code> 为 GitHub 上 Git 服务器的用户名，通常没有实际操作权限，只是用于通信的身份认证；<code>ssh.github.com</code> 为所请求的服务器域名。结果报了新错 <code>Permission denied (publickey)</code>。看意思是能收到连接请求了，但没通过验证。</p>
+<p>先回看一下第一个错误，结合文档提及的代理服务器（proxy servers），考虑大概率是因为习惯科学养鹅，惯用的那家机场可能做了什么限制。确认 443 端口可以连接之后，考虑将它作为 ssh 的连接端口。参照文档中的具体操作，在 ssh 客户端的配置文件（ <code>~/.ssh/config</code> ）中添加以下内容</p>
+<pre><code>Host github.com
+    Hostname ssh.github.com
+    Port 443
+    User git
+</code></pre>
+<p>其中，<code>Host</code> 用于指定该配置项作用的主机名（若后接 <code>*</code> 则表全局），<code>Hostname</code> 用于指定请求通信对象的目标地址，<code>Port</code> 指定了连接所使用的远程端口，<code>User</code> 用于指定登陆远程主机所用的用户名。</p>
+<h2 id="我很好奇">我很好奇</h2>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1694227110862.png" alt="冰菓">)</p>
+<p>官方文档提供的解决路径是把 ssh 的连接端口换成 HTTPS 的默认端口，网上<a href="https://www.v2ex.com/t/807649">查到也有说</a>可以通过在 config 中添加 <code>ProxyCommand nc -v -x 127.0.0.1:7890 %h %p</code> 来解决。顺手查了些拓展资料，还挺有意思的。</p>
+<p><code>ProxyCommand</code> (代理命令) 是 ssh 配置中的一个参数，用于实现通过 Jump Host（跳板机/堡垒机）来连接到远程主机。大概意思就是阿珍（本地主机）想和阿强（目标主机）在赛博空间 say hi，但阿珍出于害羞（安全）不想让阿强知道自己是谁，于是让阿狗（跳板机）传达一下。在这个过程中，阿狗需要知道 ta 需要知道向哪个阿强（目标主机的 IP/域名）转达阿珍的 hi （流量）以及阿强的档期（目标主机的端口号）。具体在命令行中的呈现，是两个占位符—— <code>%h</code> (host) 和 <code>%p</code> (port)，在实际中会被替换为对应的内容。</p>
+<p>这个参数除了 <del>围观阿珍和阿强的爱情故事</del> 通过跳板机转发 ssh 流量给到目标主机之外，还可以指定执行 ssh 连接之前要执行的命令。于是接着就出现了 <code>nc</code> (netcat) 命令<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，这个命令用于设置路由器。麻瓜式理解路由器的话，把它当作是在网络中传输数据的阿猫就行，和之前的阿狗差不多意思。选项 <code>-v</code> (verbose) 是指显示指令执行过程，也就是说会开启调试模式输出详细信息。<code>-x</code> 是用于指定代理主机地址和通信端口号，开启这个选项后会默认使用 SOCKES5(Socket Secure 5) 协议。也就是说，后面的 <code>127.0.0.1:7890</code> 是指代理服务器的 IP 地址，端口号是 <code>7890</code>，使用的通信协议是 SOCKES5。</p>
+<p>后两个也挺有意思， <code>127.0.0.1</code> 是本地回环接口地址(localhost)，这是很特殊的一个 IPv4 地址，总是会指向本机上的网络接口。说人话，感觉这基本和我给我电脑取名叫小雷一样，让计算机帮我和 <code>127.0.0.1</code> 说谢谢，和我在致谢里写&quot;感谢小雷&quot;的区别是计算机只能听懂那串数字。换句话，<code>ProxyCommand nc -v -x 127.0.0.1:7890 %h %p</code> 的意思大概是假装自己是阿狗（运行在本地的代理软件），把原本在 ssh 默认 22 端口的流量通过 7890 端口用 SOCKS 协议转发给阿强（目标主机地址 <code>%h</code>）的端口（<code>%p</code>）。至于为什么是 7890，结合科学养鹅盲猜是因为常用工具 Clash 的默认端口号是这个，通常的配置中也会用 SOCKS5 协议。再简单来说，就是手动为 ssh 科学养鹅设个代理。</p>
+<p>进一步逆推它的奏效原因，结合<a href="https://www.cnblogs.com/tsalita/p/16185135.html#gallery-2">此处</a>提及 window 下的 git 默认没有用系统代理，科学养鹅之后会出现在浏览器里可以正常顺利访问，但在命令行中就没办法直接用这个命令连接的情况 <del>（我恨孤岛简中世界）</del>。罪魁祸首大概率是我用的 WSL(Windows Subsystem for Linux)，我他喵可没注意到 WSL 和 Windows 本身的网络配置是分开的啊！WSL 默认读取环境变量 <code>http_proxy</code> 和 <code>https_proxy</code> 里的代理配置，这里头我从没动过当然不会有我在 Windows 里的代理配置啊QAQ。</p>
+<h2 id="背景知识">背景知识</h2>
+<p>把时间线拉回最初用 <code>ssh -T git@github.com</code> 测试连接后报错查解法的时候，看到有新手说 ta 最后发现是因为自己“自作聪明”地把测试命令中的 <code>git@github.com</code> 换成了生成密钥时填在注释中的个人邮箱，于是卡在这一步折腾很久。</p>
+<p>个人猜想是因为通常教程中会习惯性地把个人邮箱放在注释中，会提示说这里要改成自己的邮箱（<code>-C &quot;your_email@example.com&quot;</code>）。但很少有人会进一步解释这只是个注释，是为了方便管理和识别，和生成密钥的过程本身其实没啥关系。于是操作者很可能会以为这是个必要操作，且保险起见通常也会逐步照搬。</p>
+<p>接着下一步中会出现 ssh 测试命令 <code>ssh -T git@github.com</code> 也同样出现了 @ 符号，于是产生误导，以为这里也需要替换成自己邮箱（尽管文档没说，但下意识脑补撰写者忘记提醒orz）。同样，很少有文档会进一步解释这条命令中 @ 前后内容的具体含义，这是指在进行 ssh 连接时，登陆远程主机所使用的用户名和远程主机的地址，有别于在使用邮箱服务时的用户名和电子邮箱网站地址。</p>
+<p>仔细想想，这事挺有意思的。首先官方文档大多时候是提示操作过程以期达成用户目的，它通常不会充当教育角色给足背景信息讲解说明，因为这样未免过于冗长，最多在<a href="https://docs.github.com/zh/authentication/troubleshooting-ssh/error-permission-denied-publickey#%E5%A7%8B%E7%BB%88%E4%BD%BF%E7%94%A8-git-%E7%94%A8%E6%88%B7">故障排误</a>说明一下。而其受众大多也是有明确问题期望得到解决的用户，大多数更希望提供明确路径来完成，通常没有耐心且认为了解原理无甚必要。其次，新手所犯的绝大多数错误是常识性错误，操作说明中所省略掉的解释，绝大多数是撰写者下意识默认为常识的背景知识。</p>
+<p>矛盾之处就在于此，一方面文档必然无法涵盖所有情况，但又无法给予操作者必要的最小背景知识，以期其能够自行做出初步推断。另一方面困住新手的常识性错误，低级到甚至不会出现在故障排误中又切实造成困扰，只能寄希望于搜索引擎的呈现内容，而往往又因无法准确归因导致检索效率低下。</p>
+<p>我一直觉得不写什么和写什么同样重要，但一方面受限于知识诅咒，<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> 很难完全把自己放置在读者角色上来正确预设共识。另一方面又担忧过多说明背景信息会使得文章冗长，不太符合我的美学。通常情况下我会放弃挣扎，生怕自己哪儿没写清楚，任由文章变得冗长。</p>
+<p>就算我偏好将所涉及到的专有名词和背景信息补足呈现，我也无法处理那些难以在一篇文章中说清的背景知识。比如我预设这篇文章的读者应当是和我一样的初学者，但其实我并没有办法在这篇文章中从宏观上说明在客户端和服务器之间经由网络进行交互的大致过程（因为过于复杂甚至能再写篇文章），而我的确认为这对于理解上述内容是很有帮助的。我总不能按头拉着（至今也许不存在的）读者和我一样去自习郑烇老师的<a href="https://www.bilibili.com/video/BV1JV411t7ow/">计算机网络课程</a>，所以目前做法是尽可能补全可拓展信息（我爱超链接）。</p>
+<p>最近在适应使用命令行，时不时就会发现自己被那些默认忽略的背景共识背刺了。其中之一是非英母语者对常用缩写命令的低敏感度，没办法立刻颅内补足完整命令，以至于理解记忆起来都有些磕绊（ <a href="https://github.com/marlonrichert/zsh-autocomplete">zsh-autocomplete</a> 赛高！<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>）。我当初还疑惑了半天为什么 Linux 把内容输出是 <code>cat</code> ，不能用 <code>dog</code> 是因为我们汪汪不可爱吗（bushi。查了下其实是取了&quot;concatenate&quot;(连接)的缩写，而不是通常理解中的喵喵。至于为什么是连接，后来在理解数据流（Data Stream）查管道（Pipeline）资料的时候才算是明白它的含义。</p>
+<p>再就又是“仅提供解法略过说明”情况的某种例证，诸多大佬大概是惯用命令行中的短选项（short option, <code>-单个缩写字母</code>），虽然在实际使用上确实是真的会方便很多啦。但对非英母语的初学者来说无形就增加了学习难度啊喂！比如上文提及 <code>nc</code> 命令的 <code>-x</code> 选项是用于指定代理地址（proxy_address）和端口号（port）的，通常来说命令行短选项的缩写是首字母，很自然会觉得说怎么不是 <code>-p</code> 对吧？！ <code>-x</code> 就出现得非常让人疑惑。</p>
+<p>查了一圈发现很可能是某种 QWERTY 现象<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>的遗留产物——代理服务器作为中继很可能在没啥事的时候下线，这种情况被称为 &ldquo;exit&rdquo;(退出)，所以通常计网中出现 &ldquo;exit proxy&rdquo; 或者是 &ldquo;external host&rdquo; 都和代理服务器有关。而又因为英语中的元音容易和其他选项混淆，选项名称中的 e 会被省略（其实常用写法是 &ldquo;eXit&rdquo;），于是传统上代理服务器选项的缩写通常是 <code>-x</code> 。而在 <code>nc</code> 命令中，<code>-p</code> 也确实是用于设置本地主机使用的通信端口号，通常用于监听，而不是指定代理服务器信息。</p>
+<p>我，单方面理直气壮地建议所有新手教程中涉及命令行的都放上长选项（long option, <code>--完整单词</code>）的解释！如果你不愿意，我只好嘤嘤嘤求你照顾下麻瓜（bushi。</p>
+<h2 id="拒绝许可">拒绝许可</h2>
+<p>至于我开篇第二个 <code>Permission denied (publickey)</code> <a href="https://docs.github.com/zh/authentication/troubleshooting-ssh/error-permission-denied-publickey">公钥权限被拒绝的错误</a>，那就又是另一个例证了。文档里的常规做法和软件中的默认设置，在很大程度上可以规避掉很多因为麻瓜搞出奇怪初始配置出现的诡异问题，而我不幸的就是那个完美避开防御性设计的踩雷麻瓜。</p>
+<blockquote>
+<p>人类的理智往往不断地重复自身，失去理智的情况亦然。——《失明症漫记》，若泽·萨拉马戈</p>
+</blockquote>
+<p>人在大多数时候依赖经验记忆行事，而非理性逻辑。启动大脑后想穿越回去拜托自己想想，在同一台主机上和多台远程服务器连接有必要搞新的密钥吗？！私钥又没泄露！这有道理吗！它被发明出来不就是为了只要把公钥撒出去就能建立安全连接这点很方便吗！这就是为什么<a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys">文档里要人检查是否存在已有密钥</a>的原因，但在写这篇文章之前我并没有优先看文档的习惯，我通常直接上手硬刚~~（然后就受锤了吧，让你不看说明书，幸灾乐祸.jpg）~~。</p>
+<p>虽然在我已经有个密钥的情况下，新建密钥其实毫无必要，但是理论上我把公钥给到 GitHub 之后，就可以通过它连接了对不对，它不应该再报错。起初我以为是私钥权限的问题，但确认后发现不是。还记得我创建的时候灵光一现顺手改了个名吗？也就是说我的公钥和私钥都不是默认的常规命名（id_算法），这才是问题所在。</p>
+<p>我又是怎么发现的呢？终于学会优先翻文档本人虽然没完全在故障排除里被治愈，但<a href="https://docs.github.com/zh/authentication/troubleshooting-ssh/error-permission-denied-publickey#make-sure-you-have-a-key-that-is-being-used">结合提示</a>里的「在大多数系统中，默认私钥（ <code>~/.ssh/id_rsa</code> 和 <code>~/.ssh/identity</code>）会自动添加到 SSH 身份验证代理中。 应无需运行 <code>ssh-add path/to/key</code>，<strong>除非在生成密钥时覆盖文件名。</strong>」，以及在<a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys">说明</a>步骤中的「 <strong>默认情况下</strong>，GitHub 支持的公钥的文件名是以下之一：id_rsa.pub、id_ecdsa.pub、id_ed25519.pub」，不难推断出是顺手一改名的锅TAT。</p>
+<p>让你灵光一闪又不顺手改配置！这顺得还不够啊喂！解决方法也很简单，用 <code>ssh-add path/to/文件名</code> 把专用密钥添加到 ssh-agent 的高速缓存中，再告诉 ssh 在连接到 GitHub 中所使用的指定公钥文件是什么应该就行。具体是在 <code>~/.ssh/config</code> 配置文件里加上</p>
+<pre><code>Host github.com
+    IdentityFile ~/.ssh/公钥文件名
+</code></pre>
+<p>其中，「公钥文件名」替换为 &ldquo;.pub&rdquo;(public) 后缀的那个文件名字。至于为什么是“应该”，因为我其实用的之前那个默认名称的密钥 :D，顺手查了原因但懒得再复现一次验证（我忏悔）。</p>
+<h2 id="只是个-c">只是个 c</h2>
+<p>早些年我也许还是很傲慢的，对一些特别简单问题甚至想用「<a href="https://btfy.ur1.fun/">让我帮你百度一下</a>」回复嘲讽（虽然我从没这么干……但我真的考虑过要不要这么干，再度忏悔）。但总是每天都有人在学习那些我已然熟稔于心的东西，总是有人才刚刚开始学习怎么在电脑上双击打开一款软件，就像我从头学习如何在命令行中使用工具一样。<del>（果然受锤之后才变得能谦卑）</del></p>
+<p>另一方面，在基于关键字的传统搜索引擎中，小白和大佬的检索效率完全不在一个量级，这也是那些下意识被当作共识忽略的背景知识所衍生出来的问题。单单是某些领域内的专有名词，都能拉开一大截检索质量。而两者对信源的优先级认知，无形中又拉了一截。很多时候并不是小白没有检索，而是以现在的认知水平没办法有效检索。</p>
+<p>这时候 chatGPT 真的就很有帮助，最近也在高频向 ta 提问，就算起初只能提出宽泛的问题，也能够从 ta 的回应里挖出有效信息进一步查相关资料，应对刚开始意识到可能“不知道自己不知道”的那一类情况很有效。不过它基于大力出奇迹的概率原理做出的回答，其实无法百分百保证真实和正确性，起初还小小的纠结了一下这个缺点。但仔细想了想，我并不止有这一个学习渠道，就算它说的是错的，也会随着逐渐深入学习被交叉印证出来，问题也不是特别大。当然有时候当场就会发现它前后逻辑矛盾……就只好怒斥“你们 AI 能不能努努力！”（bushi。</p>
+<p>看得出来我的 AI 焦虑症状减轻了很多，昨天我有个浴室沉思是说：所谓「精通」也许是从“使用”到“设计”甚至再到“创造”的过程。之前网上冲浪看到有人说，「能做出 copilot 的人自己得是 pilot」，十分同意，甚至想补一句“能够用好它的人自己也得是 copilot”。至于我？我现在最多算个 c 吧（。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>吐槽一下，一开始只查到了 <a href="https://netcat.sourceforge.net/">Netcat</a> 的主页和 ncat 的<a href="https://man7.org/linux/man-pages/man1/ncat.1.html">文档</a>，最后在奇怪的地方查到了它的<a href="https://docs.oracle.com/cd/E56344_01/html/E54075/netcat-1.html">解释文档</a>。还疑惑了一下 ncat 是什么，然后才发现它可能是 Netcat 里带的另一个工具……另外，发现 Michael Kerrisk 维护的 <a href="https://man7.org/linux/man-pages/index.html">Linux 文档</a> 中搜索是用 Google 的 site: 来实现的，好讨巧，转念又觉得挺合理的。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>一种认知偏差，是指掌握内容后很难想象不知道的情况，容易下意识地假设对方拥有理解我们熟知内容的背景知识。这使得我们在向他人传授时忽略必要信息，难以从听者角度思考。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>一个可以「实时预输入自动补全」（real-time type-ahead autocompletion）的 zsh 插件，完美拯救记不住选项名称的金鱼脑。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>这并不是什么专有名词，只是我通常用它来指代那些出于经济学家所说的转换成本（Switching Barrier） 而倾向遵循旧习，不愿意尝试更换其他更优解决方案的现象。QWERTY 的键盘布局放现在来说不算是漂亮的方案，但不妨碍它如今的统治地位。&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</article>
+
+
+      
+        <div class="my-4">
+    
+    <a href="https://viyi.cc/tags/ssh/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#SSH</a>
+    
+    <a href="https://viyi.cc/tags/github/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#Github</a>
+    
+</div>
+      
+
+      
+
+
+
+      
+        <div class="py-2">
+  
+    <div class="my-8 flex flex-col items-center md:flex-row">
+      <a href="https://viyi.cc/authors/viyi/" class="md:me-4 text-primary-text h-24 w-24">
+        
+        
+          <img
+            src="https://viyi.cc/images/icon.png"
+            class="bg-primary-bg w-full rounded-full"
+            alt="Avatar"
+          />
+        
+      </a>
+      <div class="mt-4 w-full md:mt-0 md:w-auto">
+        <a
+          href="https://viyi.cc/authors/viyi/"
+          class="mb-2 block border-b pb-1 text-lg font-bold"
+        >
+          <h3>枝因</h3>
+        </a>
+        <span class="block pb-2">Per aspera ad astra</span>
+        
+          
+          
+          
+          
+          <a href="mailto:viyiY2K@gmail.com" class="me-2">
+            <i class="fas fa-envelope"></i>
+          </a>
+        
+          
+          
+          
+          
+          <a href="https://t.me/viyiY2K" class="me-2">
+            <i class="fab fa-telegram"></i>
+          </a>
+        
+          
+          
+          
+          
+          <a href="https://www.zhihu.com/people/zhi-yin-233" class="me-2">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+</div>
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/about_graduation/" class="block">记毕业三两事</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/thinking_sick_body/" class="block">思考病躯</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#孤岛简中">孤岛简中</a></li>
+    <li><a href="#我很好奇">我很好奇</a></li>
+    <li><a href="#背景知识">背景知识</a></li>
+    <li><a href="#拒绝许可">拒绝许可</a></li>
+    <li><a href="#只是个-c">只是个 c</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">
+        
+        © 2023-2025 
+        <a href="https://viyi.cc/about_me/">枝因</a> ·  
+        Powered by the 
+        <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" rel="noopener noreferrer">Eureka</a> 
+        theme for 
+        <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+    </p>
+</div>
+
+  </div>
+    </footer>
+  </body>
+</html>

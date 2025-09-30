@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>卡片盒笔记到底是什么？ | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.9285d3095319c9f1de8ca121e332e3d50ffa81a82b750989451699f045e74419ee32368863d7fae35ba67f133f6e31fa.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="当你打开一个空白文档，准备写论文，痛苦也开始了。
+明明你看了很多文献、记了很多笔记、思考了很多可能性，但此时你还是只能凭借着感觉、回忆或是运气试图在面前这个空白文档中，一个字一个字地敲出你的想法。
+开题、看文献、成文——这似乎是再熟悉不过的论文流程，你甚至还可以将其分解为更小更具体的子任务来进行。
+大多数时候你的确是这样做的，而这很可能就是你痛苦的来源。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://viyi.cc/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"卡片盒笔记到底是什么？",
+      "item":"https://viyi.cc/zettelkasten/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/zettelkasten/"
+    },
+    "headline": "卡片盒笔记到底是什么？ | 与你分享我的眼睛","datePublished": "2022-03-07T00:00:00+00:00",
+    "dateModified": "2023-06-28T00:00:00+00:00",
+    "wordCount":  7011 ,
+    "author": {
+        "@type": "Person",
+        "name": ["viyi"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003e当你打开一个空白文档，准备写论文，痛苦也开始了。\u003c\/p\u003e\n\u003cp\u003e明明你看了很多文献、记了很多笔记、思考了很多可能性，但此时你还是只能凭借着感觉、回忆或是运气试图在面前这个空白文档中，一个字一个字地敲出你的想法。\u003c\/p\u003e\n\u003cp\u003e开题、看文献、成文——这似乎是再熟悉不过的论文流程，你甚至还可以将其分解为更小更具体的子任务来进行。\u003c\/p\u003e\n\u003cp\u003e大多数时候你的确是这样做的，而这很可能就是你痛苦的来源。\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="卡片盒笔记到底是什么？ | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/zettelkasten/" />
+
+
+
+
+<meta property="og:description" content="当你打开一个空白文档，准备写论文，痛苦也开始了。
+明明你看了很多文献、记了很多笔记、思考了很多可能性，但此时你还是只能凭借着感觉、回忆或是运气试图在面前这个空白文档中，一个字一个字地敲出你的想法。
+开题、看文献、成文——这似乎是再熟悉不过的论文流程，你甚至还可以将其分解为更小更具体的子任务来进行。
+大多数时候你的确是这样做的，而这很可能就是你痛苦的来源。" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-03-07T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-06-28T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="卡片盒笔记法" />
+
+<meta property="article:tag" content="PKM" />
+
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/archives/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">归档</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">卡片盒笔记到底是什么？</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      
+        
+          title="编辑于 2023年06月28日"
+        
+      
+      >2022-03-07</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>14 分钟阅读时长</span>
+  </div>
+
+  
+    <div class="me-6 my-2">
+      <i class="fas fa-folder me-1"></i>
+      
+        <a href="https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/" class="hover:text-eureka"
+          >札记</a
+        >
+      
+    </div>
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>当你打开一个空白文档，准备写论文，痛苦也开始了。</p>
+<p>明明你看了很多文献、记了很多笔记、思考了很多可能性，但此时你还是只能凭借着感觉、回忆或是运气试图在面前这个空白文档中，一个字一个字地敲出你的想法。</p>
+<p>开题、看文献、成文——这似乎是再熟悉不过的论文流程，你甚至还可以将其分解为更小更具体的子任务来进行。</p>
+<p>大多数时候你的确是这样做的，而这很可能就是你痛苦的来源。</p>
+<p>德国著名社会学家和系统理论家卢曼（Niklas Luhmann）贯彻终身的卡片盒笔记系统（Luhmann’s Zettelkasten）也许能极大减缓你写论文时的掉发速度。</p>
+<p>让我们先来看看卢曼是谁。</p>
+<p>尼克拉斯·卢曼（Niklas Luhmann）是德国的社会学家， 他作为社会系统理论的创新者，被视为卓越的社会学大家。这位酿酒师的儿子从法学院毕业后是个朝九晚五上班的公务员，后来则成为了一位出版 70 多本书和近 400 篇学术文章的社会学家。</p>
+<p>卢曼本人在填写关于自身研究的调查问卷时是这样回答的——「项目：社会学理论；期限：30 年；成本：零」。卢曼能如此轻松地高质高产，所依赖的正是他改进之后的卡片盒笔记系统。</p>
+<p>建立起这套笔记系统的方法并不繁琐复杂，你只需要一个大脑以及笔和纸，并且进行以下几个步骤：</p>
+<h3 id="记录"><strong>记录</strong></h3>
+<p>在日常的学习生活中你必然会阅读许多书籍、文献、资料，甚至是在听讲座、看视频或是与同学交流时，也会出现某些你并不希望忘记的内容。而只要在进行输入，就应当要记录。</p>
+<p>让我们拿出一张卡片，如果你手旁只有 A4 纸的话，那么请将它两次对折取其中 1/4。</p>
+<p>有限的纸张会提醒着你它无法容纳下详尽的摘抄，只能保留部分精简短小的内容。卡片中应当包含且只包含一个想法（One thought），这意味着它是原子化的——不能够再继续分割，但能够轻易组成分子。</p>
+<p>接着你需要注意的是，你必须使用自己的语言将感兴趣的内容转述记录为卡片主体，这是因为「摘抄即理解」是和「剪藏即学习」一样的错觉。</p>
+<blockquote>
+<p>行为模型 (the behavioral model) 中只考虑现实生活中位于主导作用的那些有限因素，而人类只能依次处理事件但仍能生存是依赖于：</p>
+<p>1. 「情感 (emotions) 」机制 → 在特定时间将注意力集中在需要高度关注的事情上，并且能够保证对新出现的紧急问题给予更高的优先度。
+2. 产生替代性选择的机制 → 找到更好的备选方案或是改进当前的现有方案。
+3. 获知生存环境中的真实情况并对其做进一步推论的能力 → 简化决策环境认识并进行常识性推理。</p>
+<p>此时你或许会突然灵光一闪出现与你现在记录的卡片内容并不紧密相关的想法，请不要放任它消失，也不要让它打断你现在的进度。我们可以随手找点什么将它记录下来，最重要的是一定要迅速方便，于是你现在多了一张「闪念笔记（Fleeting Notes）」。</p>
+</blockquote>
+<p>替代性选择出现的顺序与最终决策的关系</p>
+<p>让我们接着回到这张还未完成的卡片上，我们现在已经有了卡片的主体——经由自己语言转述出的原子化内容。</p>
+<p>接着你可以为它打上相关的标签，不过你并不需要一个完美的标签系统来容纳涵盖你的所有卡片，所以我们把这一步放到写完主体内容后进行。这样你就可以让标签随着记录慢慢生长出来，而不是在既定的框架中进行。</p>
+<blockquote>
+<p># 行为模型 # 生存机制</p>
+<p>行为模型 (the behavioral model) 中只考虑现实生活中位于主导作用的那些有限因素，而人类只能依次处理事件但仍能生存是依赖于：</p>
+<p>1. 「情感 (emotions) 」机制 → 在特定时间将注意力集中在需要高度关注的事情上，并且能够保证对新出现的紧急问题给予更高的优先度。
+2. 产生代替性选择的机制 → 找到更好的备选方案或是改进当前的现有方案。
+3. 获知生存环境中的真实情况并对其做进一步推论的能力 → 简化决策环境认识并进行常识性推理。</p>
+</blockquote>
+<p>接下来我们可以在下方继续记录下它的来源和基本信息，比如它源自哪本书的哪一章节位于多少页，这会为你之后引用文献提供极大的便利。如果这是你自己的某个想法，则可以留空。</p>
+<blockquote>
+<p># 行为模型 # 生存机制</p>
+<p>行为模型 (the behavioral model) 中只考虑现实生活中位于主导作用的那些有限因素，而人类只能依次处理事件但仍能生存是依赖于：</p>
+<p>1. 「情感 (emotions) 」机制 → 在特定时间将注意力集中在需要高度关注的事情上，并且能够保证对新出现的紧急问题给予更高的优先度。
+2. 产生代替性选择的机制 → 找到更好的备选方案或是改进当前的现有方案。
+3. 获知生存环境中的真实情况并对其做进一步推论的能力 → 简化决策环境认识并进行常识性推理。</p>
+<p>---</p>
+<p>「人类活动中的理性」，chapter 1.4 ，p24</p>
+</blockquote>
+<p>迄今为止这套方法似乎和你之前所学的笔记方法并没有太多的区别，真正使它行之有效的前提则是卡片唯一标识符（ID）的存在。ID 的作用将会在下一个步骤详细解释，这里先简单介绍一下卢曼的编号方式：</p>
+<p>基本的规是将抽象的数字和字母交替使用，而并不以主题来组织。比如我的第一张卡片的编号是 1，如果我因 1 有了一个相关想法，那我可以继续以 1 为起点分叉出 1a 来记录。如果我对 1a 有了补充或评论时，那接下来的笔记编号应为 1a1 。而此时如果我有一条与 1 相关而非 1a 分支相关的内容，则记为 1b，以此类推。</p>
+<p>这样编号的优势是在保证卡片 ID 唯一性的同时保留了思维过程的发展路径，并且为「连接」创造出条件。卢曼的这个编号方法在一定程度上忽略了结构层级，但也依赖于你对已有知识框架的判断以及对自己感兴趣内容的把握程度。</p>
+<p><img src="https://pic4.zhimg.com/v2-35c250bde4b8d91432a7a8fa653658bf_b.jpg" alt=""></p>
+<p>理论上来说只要 ID 具有唯一性，就足以满足最基本的需要。在初期我们可以让它再野蛮生长一些，这里我们不妨直接使用 16 位的时间戳来编号，并且把它放在左上角</p>
+<blockquote>
+<p># 202109232058</p>
+<p># 行为模型 # 生存机制</p>
+<p>行为模型 (the behavioral model) 中只考虑现实生活中位于主导作用的那些有限因素，而人类只能依次处理事件但仍能生存是依赖于：</p>
+<p>1. 「情感 (emotions) 」机制 → 在特定时间将注意力集中在需要高度关注的事情上，并且能够保证对新出现的紧急问题给予更高的优先度。
+2. 产生代替性选择的机制 → 找到更好的备选方案或是改进当前的现有方案。
+3. 获知生存环境中的真实情况并对其做进一步推论的能力 → 简化决策环境认识并进行常识性推理。</p>
+<p>---</p>
+<p>「人类活动中的理性」，chapter 1.4 ，p24</p>
+</blockquote>
+<p>现在这张卡片上有了四部分内容：编号、标签、主体、来源。恭喜你，现在你已经拥有了一个「文献笔记（Literature Notes）」。</p>
+<p>也别忘了我们之前留下的那张「闪念笔记（Fleeting Notes）」，你可以在时间充裕的情况下对它进行完整的阐述记录，使其成为一张新的文献笔记，接着就可以丢掉原来那张闪念笔记啦。</p>
+<blockquote>
+<p>【ID】 # 202109232058</p>
+<p>【tags】# 行为模型 # 生存机制</p>
+<p>【body】</p>
+<p>行为模型 (the behavioral model) 中只考虑现实生活中位于主导作用的那些有限因素，而人类只能依次处理事件但仍能生存是依赖于：</p>
+<p>1. 「情感 (emotions) 」机制 → 在特定时间将注意力集中在需要高度关注的事情上，并且能够保证对新出现的紧急问题给予更高的优先度。
+2. 产生代替性选择的机制 → 找到更好的备选方案或是改进当前的现有方案。
+3. 获知生存环境中的真实情况并对其做进一步推论的能力 → 简化决策环境认识并进行常识性推理。</p>
+<p>---</p>
+<p>【references】「人类活动中的理性」，chapter 1.4 ，p24</p>
+</blockquote>
+<p>在之后你所做的文献笔记中，最好都以统一的格式进行记录并且存放在同一处。当然卡片的格式可以依照你自己的实际使用情况进行改进，并不需要完全照搬这里的示例。</p>
+<blockquote>
+<p># 202109232058</p>
+<p>---</p>
+<p>title: 行为模型中的有限理性机制
+tags: # 行为模型 # 生存机制
+date: 2021-09-23
+item_type: book
+card_type: 文献笔记
+authors: Herbert A. Simon
+source: 人类活动中的理性
+chapter: 1.4</p>
+<p>---</p>
+<p>行为模型 (the behavioral model) 中只考虑现实生活中位于主导作用的那些有限因素，而人类只能依次处理事件但仍能生存是依赖于：</p>
+<p>1. 「情感 (emotions) 」机制 → 在特定时间将注意力集中在需要高度关注的事情上，并且能够保证对新出现的紧急问题给予更高的优先度。
+2. 产生代替性选择的机制 → 找到更好的备选方案或是改进当前的现有方案。
+3. 获知生存环境中的真实情况并对其做进一步推论的能力 → 简化决策环境认识并进行常识性推理。</p>
+</blockquote>
+<h3 id="连接"><strong>连接</strong></h3>
+<p>这是建立卡片盒笔记系统中最重要的一个步骤，也是它的魅力所在。</p>
+<p>每当出现一张新的笔记卡片，它都要与其他的笔记卡片建立起某种连接（connect）。而在建立连接的同时，也应当通过上下文的语境表明建立连接的原因。</p>
+<p>你需要重新观察一遍你的卡片盒，思考其中是否有别的卡片能为这张卡片提供依据，或是为其提供新的处理视角，抑或是对其进行反驳等等。此时 ID 的作用就出现了，你可以将其融入进卡片内容主体。</p>
+<p>如果此时有一张记录「稀缺心态带来的专注红利 (focus dividend)」的卡片能够印证第一点，而另一张记录「生物演进基本过程中的利他行为」的卡片可以为它提供另一种视角，那么这张卡片就会变成这样：</p>
+<blockquote>
+<p># 202109232058</p>
+<p># 行为模型 # 生存机制</p>
+<p>行为模型 (the behavioral model) 中只考虑现实生活中位于主导作用的那些有限因素，而人类只能依次处理事件但仍能生存是依赖于：</p>
+<p>1. 「情感 (emotions) 」机制 → 在特定时间将注意力集中在需要高度关注的事情上，并且能够保证对新出现的紧急问题给予更高的优先度 [[202006021622]] 。
+2. 产生代替性选择的机制 → 找到更好的备选方案或是改进当前的现有方案。
+3. 获知生存环境中的真实情况并对其做进一步推论的能力 → 简化决策环境认识并进行常识性推理。</p>
+<p>这种行为模型也可以从进化论的角度来看待 [[202109111418]] 。</p>
+<p>---</p>
+<p>「人类活动中的理性」，chapter 1.4 ，p24</p>
+</blockquote>
+<p>连接使得卡片盒系统本身开始有机生长（organic growth），卡片之间变得不再孤立。而你对这些卡片的理解也随着连接变得深厚，这并不与卡片的数量增加有何关系。</p>
+<p>同时它还创造出了新的意义——当连接建立起来，卡片中思想的语境也在变换，这使得想法会在不同语境（context）中碰撞出新的微妙变化，这正是创造的来源。</p>
+<p>除了 ID 之外，我们还可以再重新审视一遍那个作为标签的关键词，它也是连接的一部分。</p>
+<p>当你在进行收集（collect）时，你会想哪个层级分类下的标签最合适。当你在进行连接（connect）时，则会想哪个标签能让我就算忘记了它也能重新偶然发现？这是收纳者和写作者的重要区别。</p>
+<p>我们仍然应当将关注的重点放在卡片盒中已有的内容和你感兴趣的问题上，思考这张卡片能提供什么。</p>
+<p>事实上，我也许不太会想要去基于「行为模型」来回顾笔记并且写成文章。我关心的或许仅仅是自己是以何种「决策方式」来做出选择的，而这种行为模式其实是作为人类「有限理性」的一个例证。这两个关键词对我来说可能远比之前的来得更加合适，而它们都不曾出现在原文中。</p>
+<blockquote>
+<p># 202109232058</p>
+<p># 决策方式 # 有限理性</p>
+<p>行为模型 (the behavioral model) 中只考虑现实生活中位于主导作用的那些有限因素，而人类只能依次处理事件但仍能生存是依赖于：</p>
+<p>1. 「情感 (emotions) 」机制 → 在特定时间将注意力集中在需要高度关注的事情上，并且能够保证对新出现的紧急问题给予更高的优先度 [[202006021622]] 。
+2. 产生代替性选择的机制 → 找到更好的备选方案或是改进当前的现有方案。
+3. 获知生存环境中的真实情况并对其做进一步推论的能力 → 简化决策环境认识并进行常识性推理。</p>
+<p>这种行为模型也可以从进化论的角度来看待 [[202109111418]] 。</p>
+<p>---</p>
+<p>「人类活动中的理性」，chapter 1.4 ，p24</p>
+</blockquote>
+<p>而被连接的卡片中也应当建立起反向链接（backlinks），我们同样可以将 ID 写在下方并用符号注明这是反向的连接。比如加一条下划线来表示。</p>
+<p>连接不仅仅只在你创建新笔记时进行，你每天都应当抽出一点时间来观察你的卡片盒——它们如今生长的怎么样？有哪些卡片可以建立起新的连接？它们与我所感兴趣的内容有何关联？它们是否相互印证、相互补充或是相互矛盾？</p>
+<p>如果你发现一句两句话解释不清楚某几张卡片之间的关系，你可以使用新的卡片来进行说明解释，不过还是需要按之前的步骤进行记录和连接。</p>
+<p>现在这张有了连接和语境的卡片就可以成为「永久笔记（Permanent Notes）」了，接下来你可以愉快的忘掉它。</p>
+<p>是的，当它成为笔记盒中的一部分之后，你可以放心地忘记它来减轻大脑的负担。相信我，它并不会成为你笔记坟场中某具不知名的尸体，而是会继续发挥着妙用。</p>
+<p>很显然记录和连接应当是同步进行的，这里仅仅是为了讲解而拆分成两个步骤。实际上它们是你思考外化的一个过程，正如卢曼所言：「不写，就无法思考」（Luhmann，1992）。</p>
+<p>笔记也正是为了写作服务的，因为真正的思考需要外显化，写作会使得这些智慧的探索更具有实现目标的可能性。</p>
+<h3 id="梳理结构">梳理结构</h3>
+<p>在之前的过程中，我们其实将笔记分为了三类：临时记录并且需要以固定频率回顾处理的「闪念笔记」，由闪念笔记扩充或是在阅读时简要转述记录并遵循一定规范的「文献笔记」，进行思考后建立起连接和语境的「永久笔记」。</p>
+<p>在这些卡片之间存在着两种漫游方式：一是根据编号的顺序以思维过程的脉络来梳理，二则是通过 ID 编号之间的互相引用来进行梳理。</p>
+<p>随着系统中卡片的增加，它会逐渐生长成一种自下而上的网状笔记。尽管这是与人类思考方式相当接近的一种结构，但不可否认的是其他一些层次结构的存在也有助于我们进行创作，因为最终你的产出是要依赖它来进行表达的。</p>
+<blockquote>
+<p>写作之难，在于把网状的思考，用树状的语法结构，转换成线性字符串。  （&ldquo;The Web, the Tree, and the String&rdquo;）。  ——史蒂芬·平克（Steven Pinker）《风格感觉》</p>
+</blockquote>
+<p>梳理结构最基础方式则是建立索引卡片，索引卡片中需要包含着相关笔记的 ID 编号，你也可以加上标题来简要说明卡片的核心内容。</p>
+<p>还记得我们在标签时使用的那些关键词吗？你可以将标签关键词作为基础，列出该关键词下最重要的核心笔记作为入口，而非所有与其相关的卡片，从而建立起关键词索引卡片。</p>
+<p>如果有多张卡片并没有使用相同的关键词，却是在讨论同一个主题，那么我们可以建立一张主题式的索引卡片，从而对该主题进行概览。</p>
+<p>当然层次结构远不止这两种，你甚至可以用三段论来梳理出简单的的论证结构，一切都看你的卡片盒如何生长而你又有着何种构思。不过需要注意的是，一张卡片并非只能存在于一种层次结构中，在不同的上下文中碰撞出不同的火花才是使用它的真谛。</p>
+<p>这也是我们在上一步说你可以放心忘记你写过什么永久笔记的原因：原子化的它包含着的信息足以使得你能迅速理解当初记录时的想法，而梳理结构的进行则会让你以多种方式发现它的存在。</p>
+<p>你可以完全信任这个卡片笔记盒系统，它是解放大脑的最佳外部（external）思考系统。它会成为你的个性化思考工具，也会为你处理好一切。</p>
+<p>当我们的卡片盒中的卡片积累得足够丰富，再经由这样的结构梳理，你似乎已经能够窥得它在网状下的主要脉络，那么输出文章就是再自然不过的事了。</p>
+<h3 id="成文"><strong>成文</strong></h3>
+<p>到了这一步，你会发现你根本不是在面对空白文档来写论文，一切从来就不是从零开始。</p>
+<p>写作这件事已经融入进了笔记当中，你的日常积累——那些在不断阅读中不断记录的笔记——本就会成为你组装论文的一部分。你要做的只不过是回过头来将你早就表达在笔记上的洞见重新审视、补充、润色而已，这可比原先的疯狂追赶 DDL 来的轻松得多。</p>
+<p>你的写作是基于你现在所拥有的素材，而不是那些留在参考文献中可能存在的未知想法。</p>
+<p>把那些已经生长出脉络的相关卡片拿出来，按照顺序排列好。接着观察它们是否还有什么遗漏之处需要读新的东西记新的笔记进行补充，哪些地方又生长得过于茂盛足以暂时剔除出去成为新的文章，现有的这些想法能得出什么结论作为论点、存在什么样的逻辑漏洞、又需要以哪种框架论述&hellip;&hellip;给足自己思考观察的时间，去积极拓展它，而不是等待卡片盒系统集齐所有东西。</p>
+<p>接下来的一切是如此水到渠成：你只需要把这些笔记转化为连贯的内容，去印证完善你的论点就可以了，一篇文章就这样毫不费力地出现了。Steven Pinker 的「写作之难」，于你而言也就是「仅此而已」的地步。</p>
+<p>实际上你的卡片盒笔记系统也并不会只能拥有这一种能够输出文章的脉络，你会在不同阶段写出同时拥有不同的想法并且写出不同的文章。</p>
+<p>如果此时它的脉络还不足以支撑起一篇文章，那么就让它再生长一会好了。你完全也可以像卢曼那样「从不强迫自己做任何我不喜欢的事情。每当思路卡顿的时候，我就会转头去做别的事情」。</p>
+<p>这种自下而上的网状生长方式比自顶而下的拆解任务的做法来得更为有效的根本原因在于，写作所需要的洞见并非是一项能明确预先界定的目标。</p>
+<p>你无法预见你在阅读什么文献时会捕捉到那个有研究价值的 idea，你也无法预见你会对哪个脚注感兴趣又需要查找什么补充资料&hellip;&hellip;这意味着线性的写作框架几乎没办法容纳下这些内容，只会被不停打破。</p>
+<p>如果你真的仔细理解并且实践了这些步骤，你会发现这几个步骤并不是完全简单的线性递进过程。卢曼卡片盒笔记系统（Luhmann’s Zettelkasten）成为了打破线性顺序问题的前提，它实际上形成了一种开放性更强、更易于产生正反馈循环的工作流。</p>
+<p>这也是我从头到尾都并未称呼它为「卡片盒笔记法」的原因，系统之所以为系统，是因为它是存在需要实践去累积、迭代、更新的整体性流程。</p>
+<p>这里不得不再提及工具的选择问题，之前的举例都是可以用最基础的纸笔进行的。而当你要记录的来源是某篇微信文章或是 B 站视频时，手抄 URL 绝对会让你思考起人生的意义。</p>
+<p>输入来源变得多元化，电子化笔记的优势也会被凸显，尤其是涉及到「双向链接」的实现。这两年有许多支持双链的笔记出现，比如 Roam Research、Obsidian、Logseq 等等。而卡片盒笔记系统作为相当开放包容的工作流，只要掌握好基本原则和要素，你其实可以将其应用于不同的工具之中。</p>
+<p>也正是因为它的高度个性化，它也未必只适用于写论文，你或许也可以再根据自己实际的创作场景来对你的卡片盒笔记系统进行优化，这样也必然要经历方法论与工具使用之间的磨合过程。</p>
+<p>总之寄予他者能够提供 100% 契合的完美实现方案显然是不现实的，这里就不作过多的工具推荐了。不过之后我也会再介绍一些相关的工具，如果你们想的话（咕咕咕）。</p>
+</article>
+
+
+      
+        <div class="my-4">
+    
+    <a href="https://viyi.cc/tags/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#卡片盒笔记法</a>
+    
+    <a href="https://viyi.cc/tags/pkm/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#PKM</a>
+    
+</div>
+      
+
+      
+
+
+
+      
+        <div class="py-2">
+  
+    <div class="my-8 flex flex-col items-center md:flex-row">
+      <a href="https://viyi.cc/authors/viyi/" class="md:me-4 text-primary-text h-24 w-24">
+        
+        
+          <img
+            src="https://viyi.cc/images/icon.png"
+            class="bg-primary-bg w-full rounded-full"
+            alt="Avatar"
+          />
+        
+      </a>
+      <div class="mt-4 w-full md:mt-0 md:w-auto">
+        <a
+          href="https://viyi.cc/authors/viyi/"
+          class="mb-2 block border-b pb-1 text-lg font-bold"
+        >
+          <h3>枝因</h3>
+        </a>
+        <span class="block pb-2">Per aspera ad astra</span>
+        
+          
+          
+          
+          
+          <a href="mailto:viyiY2K@gmail.com" class="me-2">
+            <i class="fas fa-envelope"></i>
+          </a>
+        
+          
+          
+          
+          
+          <a href="https://t.me/viyiY2K" class="me-2">
+            <i class="fab fa-telegram"></i>
+          </a>
+        
+          
+          
+          
+          
+          <a href="https://www.zhihu.com/people/zhi-yin-233" class="me-2">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+</div>
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/annual_review_2022/" class="block">二〇二二</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/zhihu_enterprise_account_operation_planning/" class="block">知乎企业账号运营企划</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#记录"><strong>记录</strong></a></li>
+        <li><a href="#连接"><strong>连接</strong></a></li>
+        <li><a href="#梳理结构">梳理结构</a></li>
+        <li><a href="#成文"><strong>成文</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">
+        
+        © 2023-2025 
+        <a href="https://viyi.cc/about_me/">枝因</a> ·  
+        Powered by the 
+        <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" rel="noopener noreferrer">Eureka</a> 
+        theme for 
+        <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+    </p>
+</div>
+
+  </div>
+    </footer>
+  </body>
+</html>

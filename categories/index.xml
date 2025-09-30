@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 与你分享我的眼睛</title>
+    <link>https://viyi.cc/categories/</link>
+    <description>Recent content in Categories on 与你分享我的眼睛</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 29 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>札记</title>
+      <link>https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/</link>
+      <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>随想</title>
+      <link>https://viyi.cc/categories/%E9%9A%8F%E6%83%B3/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/categories/%E9%9A%8F%E6%83%B3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>YOUCAN</title>
+      <link>https://viyi.cc/categories/youcan/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/categories/youcan/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PKM on 与你分享我的眼睛</title>
+    <link>https://viyi.cc/tags/pkm/</link>
+    <description>Recent content in PKM on 与你分享我的眼睛</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/pkm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>卡片盒笔记到底是什么？</title>
+      <link>https://viyi.cc/zettelkasten/</link>
+      <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/zettelkasten/</guid>
+      <description>&lt;p&gt;当你打开一个空白文档，准备写论文，痛苦也开始了。&lt;/p&gt;
+&lt;p&gt;明明你看了很多文献、记了很多笔记、思考了很多可能性，但此时你还是只能凭借着感觉、回忆或是运气试图在面前这个空白文档中，一个字一个字地敲出你的想法。&lt;/p&gt;
+&lt;p&gt;开题、看文献、成文——这似乎是再熟悉不过的论文流程，你甚至还可以将其分解为更小更具体的子任务来进行。&lt;/p&gt;
+&lt;p&gt;大多数时候你的确是这样做的，而这很可能就是你痛苦的来源。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

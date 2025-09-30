@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Markdown 简明指北 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.9285d3095319c9f1de8ca121e332e3d50ffa81a82b750989451699f045e74419ee32368863d7fae35ba67f133f6e31fa.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="写东西的时候，你为排版掉过头发吗？字号、字体、字间距、行间距、段间距、页间距&hellip;.光是想想头发就掉了不少。当我们并不需要这么高的自由度，只想要有一份“看得过去”的内容呈现，这些可设置的选项，似乎就成了累赘。当选择变得更多，我们就会开始犹豫到底哪个更好，接着很可能会出现“码字五分钟，调样式俩小时”的无奈情况。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://viyi.cc/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"Markdown 简明指北",
+      "item":"https://viyi.cc/markdown_tutorial/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/markdown_tutorial/"
+    },
+    "headline": "Markdown 简明指北 | 与你分享我的眼睛",
+    "image": "https://viyi.cc/images/Markdown.png",
+    "datePublished": "2023-02-14T00:00:00+00:00",
+    "dateModified": "2023-05-24T00:00:00+00:00",
+    "wordCount":  6478 ,
+    "author": {
+        "@type": "Person",
+        "name": ["viyi"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003e写东西的时候，你为排版掉过头发吗？字号、字体、字间距、行间距、段间距、页间距\u0026hellip;.光是想想头发就掉了不少。当我们并不需要这么高的自由度，只想要有一份“看得过去”的内容呈现，这些可设置的选项，似乎就成了累赘。当选择变得更多，我们就会开始犹豫到底哪个更好，接着很可能会出现“码字五分钟，调样式俩小时”的无奈情况。\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="Markdown 简明指北 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/markdown_tutorial/" />
+
+
+
+
+<meta property="og:description" content="写东西的时候，你为排版掉过头发吗？字号、字体、字间距、行间距、段间距、页间距&hellip;.光是想想头发就掉了不少。当我们并不需要这么高的自由度，只想要有一份“看得过去”的内容呈现，这些可设置的选项，似乎就成了累赘。当选择变得更多，我们就会开始犹豫到底哪个更好，接着很可能会出现“码字五分钟，调样式俩小时”的无奈情况。" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2023-02-14T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-05-24T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="Markdown" />
+
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/archives/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">归档</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">Markdown 简明指北</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      
+        
+          title="编辑于 2023年05月24日"
+        
+      
+      >2023-02-14</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>13 分钟阅读时长</span>
+  </div>
+
+  
+    <div class="me-6 my-2">
+      <i class="fas fa-folder me-1"></i>
+      
+        <a href="https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/" class="hover:text-eureka"
+          >札记</a
+        >
+      
+    </div>
+  
+
+  
+</div>
+
+
+  
+  
+    <img src="https://viyi.cc/images/Markdown.png" class="w-full" alt="Featured Image">
+  
+
+  <p>写东西的时候，你为排版掉过头发吗？字号、字体、字间距、行间距、段间距、页间距&hellip;.光是想想头发就掉了不少。当我们并不需要这么高的自由度，只想要有一份“看得过去”的内容呈现，这些可设置的选项，似乎就成了累赘。当选择变得更多，我们就会开始犹豫到底哪个更好，接着很可能会出现“码字五分钟，调样式俩小时”的无奈情况。</p>
+<p>在一些并不需要很高排版需求的场景（比如自己的笔记），使用 <a href="https://daringfireball.net/projects/markdown/">Markdown</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 进行书写或许是更好的选择，这篇文章的主角终于出现了。那么，markdown 是什么？这是一种轻量级标记语言，通过一些简单的符号告诉电脑，“嘿，这个标记了 # 的后面是我的标题，请呈现出标题的样子就好了嗷”。接着它就会按照预设好的样式进行渲染呈现啦，就这么简单。</p>
+<p>让我们看看更加熟悉的文字处理器 —— word，当你在 word 中希望将某些文字调整为标题样式（三号宋体，加粗，顶格），最原始的做法是一步步点击字体、字号、加粗、修改缩进值、设置居中。相比较起来，敲个 # 显然可爱得多。</p>
+<p>当然，markdown 作为一种文件类型，是以 .md 或是 .markdown 为后缀名的。这似乎并不是大家常见的文件后缀，不过好在 markdown 的兼容性十分不错。得益于 <a href="https://pandoc.org/">Pandoc</a> 的强大，Markdown 文档可以轻松地转换为其他更加通用的文件类型—— Word、PDF、HTML 等等。</p>
+<p>此外，许多与写作有关的软件也支持了 Markdown ，像是<a href="https://note.youdao.com">有道云笔记</a>、<a href="https://www.notion.so/">Notion</a>、<a href="https://obsidian.md/">Obsidian</a>、<a href="https://www.feishu.cn/product/docs">飞书文档</a>等，甚至是在科学期刊的出版中，它也是<a href="https://peerj.com/articles/cs-112/#table-1">被接受的标准格式之一</a>。</p>
+<p>简而言之，如果你对排版需求并不严苛又希望有比较流畅的键入体验，就义无反顾地选择投入 markdown 的怀抱吧。它的语法十分简单，你只需要几分钟就足够学会如何使用它，然后开启幸福码字生活。</p>
+<h2 id="起源">起源</h2>
+<p>在正式介绍相关的语法之前，我们先聊聊它的起源。</p>
+<p>追溯到<a href="https://en.wikipedia.org/wiki/Markdown#History">最早期的 Markdown</a> ，它是由约翰·格鲁伯（John Gruber）和亚伦·斯沃茨（Aaron Swartz）在 2004 年共同创建的。其灵感来自于在电子邮件以及古早论坛 Usenet 中使用纯文本进行标记的惯例，他们想要创造一种「使用纯文本格式进行撰写、更加容易阅读，也能够转换为 HTML 文档」的语言，接着 markdown 的雏形出现了。</p>
+<p>可是有那么多的轻量标记语言和纯文本格式，平平无奇的 Markdown 凭什么变得流行？Pandoc 的出现是不得不提的一个重大助推力。2006 年诞生的 Pandoc 是用于文件格式转换的工具，由约翰·麦克法兰（John MacFarlane）使用 Haskell 语言开发，现在的它几乎能够完成任一标记语言格式（Markup Format）之间的相互转换。</p>
+<p>随着 Markdown 的普及和发展，问题也随之而来。张三说我喜欢用 === 表示标题，李四说我用 # 来实现也行，王五说它怎么没有列表样式呀？赵六说我还想敲表格呢。<a href="https://fletcherpenney.net/multimarkdown/">MultiMarkdown</a>、<a href="https://michelf.ca/projects/php-markdown/extra/">Markdown Extra</a> 等各种各样版本的扩展语法出现了，通用性自然也会下降——拜托，你写的那些标记我看不明白啊，那怎么办？标准化的工作需要被推进，但 Gruber 并<a href="https://twitter.com/gruber/status/507670720886091776">不认为有一种完美的通用范式可以让所有人都满意</a>，而且它也不应该变得臃肿，极简赛高。</p>
+<p>尽管如此，杰夫·阿特伍德（Jeff Atwood）和约翰·麦克法兰（John MacFarlane）等人还是<a href="https://blog.codinghorror.com/the-future-of-markdown/">希望提供一份标准的 markdown 语法规范以及参考</a>以供人们测试和使用。2014 年， <a href="https://commonmark.org/">CommonMark</a> 规范发布了。但由于 Gruber 的反对，这个规范没有沿用 Markdown 这个名称，而是修改为了 CommonMark，该规范中明确了基本的 Markdown 标准语法并且提供了一套全面的测试。</p>
+<p>可人们的需求确实是多样化的，因此现在也仍然有许多关于 Markdown 变体的存在，其中最流行的要数 <a href="https://github.github.com/gfm">GitHub Flavored Markdown (GFM) </a>，它完全遵循了 CommonMark 规范，并且提供了表格、下划线、任务列表、自动链接等拓展语法。当然现在还有许多其他的变体，根据其使用场景不同提供了不同的基于 Markdown 的拓展语法，篇幅所限，这里就暂时不过多介绍了。</p>
+<h2 id="使用流程">使用流程</h2>
+<p>说了这么多，那我们究竟要怎么上手用？首先，你需要一款支持 markdown 语法的文本编辑器，在里头按照语法规范标记文字内容。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> 接着，通过编辑器将它渲染为你所需要的样式，或是将 .md 文件转换成其他文件格式。最后，我们就可以将内容发布至网络，或者仅仅只是保存下来这份文档。</p>
+<p>上述过程中，我们刻意将书写和呈现分为了两个步骤，实际上现在的编辑器并不需要如此麻烦。早期的 Markdown 编辑器通常是双栏样式的，左边是纯文本格式标记的内容，右边则是渲染完成后的样式——你所看到的是左边的 # ，而最终得到的是右边的三号宋体加粗。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1688104608236.png" alt="早期双栏模式"></p>
+<p>而在 word 里，你设置完标题之后，它就已经是三号宋体加粗的呈现，并不存在 # 这样的中介。最重要的是，它打印到纸张上的最终呈现，和你在屏幕上看到的一模一样。人们管这样的东西叫「<a href="https://zh.wikipedia.org/zh-cn/%E6%89%80%E8%A7%81%E5%8D%B3%E6%89%80%E5%BE%97">所见即所得</a>」（What You See Is What You Get），这也是纯文本与富文本最大的区别。</p>
+<p>尽管对于 markdown 而言，它的承载媒介通常并不是纸张，但它如今也拥有着这样“所见即所得”的特性——在书写时越过作为中介的标记符号，直接呈现出最终的渲染效果。其实这都不太能算得上是编辑器的特点了，毕竟大多数 Markdown 编辑器都已经支持了这样的功能，通常你都可以在编辑器中自由切换「源代码模式」、「双栏模式」和「实时阅览模式」。源码模式就是我们一直在谈论的纯文本，实时阅览模式则可以提供和 word 一样的「所见即所得」体验，双栏模式则是这两者的综合。</p>
+<p>噢，至于你所“真正”看到的具体样式，我说如果你并不希望在屏幕上看到标题是三号宋体加粗，而是四号黑体倾斜的话&hellip;&hellip; 很遗憾，这并不是 markdown 语法所能够控制的部分。一般来说这是由你所使用的编辑器中提供的 .css 文件来控制的——你可以理解为这是个“主题皮肤”，有预设的各种风格可以供你挑选。文章中各个类型的文本怎么具体显示不需要你决定，你只需要决定它是不是这个类型（通过标记）。</p>
+<p>这是 markdown 的优点所在，我们只需要在样式上做判断题而不是填空题，这样就能更专注于文字内容本身的撰写。而正是因为它没办法做到 word 那样对版面精确的控制，它确实不适用于对版式有高要求的场景。</p>
+<p>说回到使用流程，如果你的文档最终需要以更加通用的格式进行传输，现在的编辑器大多也提供了「导出」的功能。要进行格式转换只需要点击就可以了，你甚至不需要知道 Pandoc 是什么。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1688109766232.png" alt="Typora 的导出菜单栏"></p>
+<p>于是，强行被我说成三个步骤的使用流程，其实只有“学会语法去写”这一步。</p>
+<h2 id="语法规范">语法规范</h2>
+<p>好的逼逼叨了这么多，终于能聊到语法了。需要强调的是，以下语法规则所使用的符号均为<strong>英文半角</strong>，其次一定<strong>不要忽略空格</strong>。</p>
+<p>在接下来的语法介绍中，我并不会严格按照标准语法和拓展语法来分类，也并不区分块级元素和行内元素。这里会以使用为导向进行简要分类，来介绍常用的 Markdown 语法。毕竟在使用中我们没必要区分它到底遵循了哪个规范又占了多大位置，我们只需要写出它且能够正常渲染就万事大吉啦。</p>
+<p>如果有多种标记方式可以呈现同一种样式，下文也只会提供最常见的那一种。因为多了容易犹豫，本质又没有区别。比如既可以用一串 <code>====</code>和 <code>----</code> 来表示标题，也可以用 <code>#</code> 来表示标题，后者既比前者好记、支持的层级更多、源码也更容易读且不易混淆。就算知道 <code>===</code> 也可以用，但实际上并不怎么会真的用得上，我们就直接聊最常用的呗，相信以下内容可以更好地帮你上手入门：</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1688105610250.png" alt="Markdown常用语法.png"></p>
+<p>事实上，这张图包含了大部分的语法内容，这篇文章重要的也许只有它。不过有些地方我们还是得多说几句，所以你可以选择继续看看文字版。</p>
+<h3 id="基本样式">基本样式</h3>
+<p>标题通常是在行首用井号 「#」 加上一个空格进行标记，「#」的个数表示标题的层级，一般最多支持 6 层，也就是「######」。</p>
+<pre><code class="language-markdown"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+</code></pre>
+<p><strong>加粗</strong>则是在文字前后各自使用两个星号 <code>**</code> 进行标记，若前后只有一个星号 <code>*</code> 则表示为<em>斜体</em>。将符号改成两个等号 <code>==</code>可以标识<span style="background-color: yellow;">高亮</span>，换成两个短波浪线 <code>~~</code> 则是<del>删除线</del>。<u>下划线</u>相对麻烦些，它其实是 HTML 的语法，在文字前敲上尖括号和小写英文字母 u <code>&lt;u&gt;</code> ，文字后则是在此基础上多加一个斜杠 <code>&lt;/u&gt;</code>。</p>
+<pre><code class="language-markdown">**加粗**
+*倾斜*
+~~删除线~~
+==高亮==
+&lt;u&gt;下划线&lt;/u&gt;
+`行内代码`
+$行内公式$
+\转义
+</code></pre>
+<p>这里需要注意的是，被符号包裹的文字前后<strong>通常不需要有空格</strong>。</p>
+<p>关于代码，我们可以在前后加上一个重音符「`」包裹起内容，使之成为行内代码。而使用连续三个重音符号「```」包裹起来的代码，则可以成为围栏代码块，这种语法通常可以加上编程语言的名字，实现语法高亮。</p>
+<p>当然，如果想要把 Markdown 中用于标记的符号原原本本地展现出来，而不是被当作渲染标记，我们可以在这些符号前加上反斜杠「\」，它也叫作转义。在 markdown 中有 13 种——「` * _ { } [ ] ( ) # + - . - ! | 」，大概没人会刻意记，总之一般遇到没法正常显示的符号，前面敲个反斜杠就可以啦。</p>
+<p>另外，如果编辑器支持数学公式的话（一般是 LaTex Math），那么通常会用一个美元符号 <code>$</code> 包裹表示行内公式，全行公式则是用两个美元符号 <code>$$</code> 标记。而如果你是 Emoji 爱好者，还可以用英文冒号「:」包裹起英文小写的表情简码（short codes）敲出相关的 Emoji 表情，比如 <code>😉</code> 就会呈现出 😉。</p>
+<h3 id="列表和引用">列表和引用</h3>
+<p>有序列表使用「阿拉伯数字<code>1</code>/英文字符<code>a</code> + 英文句号 <code>.</code> + 空格」表示，无序列表则使用「连字符 <code>-</code>+ 空格」表示。</p>
+<p>复选框则是使用「短斜杠<code>-</code> + 空格 + 左方括号<code>[</code> + 空格 + 右方括号 <code>]</code>+ 空格」来表示，注意<strong>这里有 3 个空格</strong>。如果方括号中间不是空格而是小写英文字母「x」，则表示复选框的选中状态。</p>
+<pre><code class="language-markdown">- 无序列表 1
+- 无序列表 2
+    - 无序列表 2.1
+    - 无序列表 2.1
+
+1. 有序列表 1
+2. 有序列表 2
+    a. 有序列表 2.1
+    b. 有序列表 2.1
+
+- [ ] Todo 1
+- [ ] Todo 2
+     - [x] Todo 2.1
+     - [x] Todo 2.1
+</code></pre>
+<p>如果行首使用大于号「&gt;」加一个空格，则表示块引用样式。支持多行引用（行首均加 &gt; 即可），引用行内同样支持其他语法。有序列表、无序列表、复选框以及引用样式这四类语法通常可以嵌套，按下「Tab 键」缩进后按照相应语法输入即可，其中引用的样式嵌套可以通过多个大于号「&gt;」加一个空格表示。</p>
+<pre><code class="language-markdown">&gt; 引用内容
+&gt;&gt; 二级引用内容
+</code></pre>
+<h3 id="插入内容">插入内容</h3>
+<p>在 Markdown 中，想要插入图片或链接，基本上是通过引用相关图片或是链接的地址来做到的，所以这一小节的标题也可以改为「引用」，但为了理解方便还是用了「插入」。</p>
+<h4 id="图片">图片</h4>
+<p>「英文感叹号 + 方括号 + 圆括号」<code>![图片文字](图片地址)</code> 表示图片，方括号内可以写图片文字或是图注，圆括号内需写明图片地址（网络或是本地都可以）。本地地址的话，还分为绝对引用和相对引用。图片的处理相对来说会稍微有点麻烦，建议搭配图床食用。</p>
+<h4 id="链接">链接</h4>
+<p>如果没有感叹号，只有「方括号 + 圆括号」<code>[文字描述](链接)</code> 则可以当作带文字描述的超链接，方括号内依旧是链接相关的文字描述，圆括号也依旧是链接地址。</p>
+<p>这个语法格式不仅仅可以引用网络上的内容，在 Markdown 文档中每个层级的标题本身就可以被引用（标题就是一个锚点或叫 ID），你只需要在圆括号中写上「井号 + #标题名称」<code>[文字描述](#标题)</code> 即可，注意这里的井号 # 后没有空格。这个语法可以实现同一篇文章内的跳转，撰写长文档的时候会方便许多。</p>
+<p>说回超链接，如果一篇文章中需要反复多次引用同一个链接，那么使用「引用链接」来插入会更方便一些。它的语法规则是两个方括号 <code>[链接呈现的文字描述][引用标记文字]</code>，你可以在文档末尾使用「方括号 + 英文冒号 + 链接地址」<code>[引用标记文字]:</code> 来注明「引用标记文字」所对应的实际上要导向的链接是什么。使用这个语法的话，之后你在文档内想要插入这个超链接时，就可以替换为文字，这样敲起来会方便些。</p>
+<p>其实如果你只是想放个链接可以跳转过去，直接放上 http 开头的链接地址就可以。尽管标准语法中需要将链接地址用尖括号「&lt; &gt;」包裹起来，但一般以 http 开头的话，编辑器都会默认自动识别为链接。它和文本引用链接实现的唯一区别是展示出的效果不一样，毕竟地址都比较长，直接放出来有点丑。另外也许需要补充的一点是，地址中的空格最好还是使用 %20 来替代，虽然一般编辑器都会自动进行这样的处理。</p>
+<h4 id="注脚">注脚</h4>
+<p>除了图片和链接之外，注脚也是一种常见的样式。在 Markdown 中，你可以使用「方括号<code>[]</code> + 插入符<code>^</code>（倒 v 符号）+ 数字/文字」 <code>[^1]</code> 来标记注脚。在文档末尾使用同样的格式再加上英文冒号 <code>[^1]:</code>，写明注释文字用于补充说明。</p>
+<h4 id="表格">表格</h4>
+<p>其实在 Markdown 中插入表格，敲起来还是有点麻烦的（甚至是需要单独分一节出来说明的），通常来说编辑器都会提供更加方便的实现而不需要真的手敲。不过为了内容完整，这里还是说明一下基本的语法：</p>
+<pre><code class="language-markdown">| 表头 1  |  表头 2   |  表头 3 |
+| :----- | :------: | -----: |
+| 左对齐 | 居中对齐 | 右对齐 |
+| &gt; 达咩 | ``` 达咩 |  @枝因 |
+</code></pre>
+<p>单元格使用竖线「 | 」来分割，内容和竖线之间的空格会被忽略。表头和其他行之间需要单独留一行用作分隔，分割行的单元格里要放上连字符「-」（数量不限，但保证各行 | 对齐的话最好，这样源码会易读些，虽然感觉没什么人真的会去读 .md 源码）。</p>
+<p>分割行中的某单元格内，在连字符最左侧加上英文冒号「:」表示该列是左对齐，把冒号放在最右侧则表示该列右对齐，左右都加就是居中对齐，什么冒号都没加默认是左对齐。另外，一般在表格中除了块引用和围栏代码块之外，其余语法均可使用。</p>
+<h3 id="段落">段落</h3>
+<p>连续三个以上的连字号 <code>---</code> 通常表示水平分割线，注意是连续、无空格且该行无其他字符。此外，最好不要在段落开头使用空格或是 Tab 进行缩进。</p>
+<p>在 Markdown 文档中，不同行并不意味着是段落，只有在前后均留有空行才会被视为一个段落单位。除了段落之外，通常在标题、引用和列表前后，也都需要留有空行。</p>
+<p>另外需要注意，有些编辑器中按下回车并不意味着换行，一般可以在行末敲上两个空格，或者也可以使用 HTML 中的 <code>&lt;br&gt;</code> 来标记换行。其实 Markdown 是支持 HTML 标记的（也看编辑器），但引入它进来就不够简单、易读、易写了。不过顺便说一句，像是一些网站（比如 B 站）如果提供了「嵌入代码」的功能，你直接粘贴进 markdown 文档一般来说也是可以的。</p>
+<p>当然还有一些常见规范要说起来其实是排版上的美学要求，并不是为了正常渲染呈现，这里就不过多说明了。不过如果你在敲中文和英文之间愿意加上空格的话，某些强迫症本人会很开心的(误)。</p>
+<h2 id="写在最后">写在最后</h2>
+<p>坦白讲，如果你比较关注和文字处理相关的软件，就会发现 Markdown 是如此常见。我们可以在任何需要书写的地方使用它，而这些场景下的工具又相当之多——我们可以用「<a href="https://typora.io/">Typora</a>」或「<a href="https://code.visualstudio.com/">VSCode</a>」来编辑 Markdown 文档，用「<a href="https://obsidian.md/">Obsidian</a>」或是「<a href="https://logseq.com/">Logseq</a>」来组织笔记，用「<a href="https://www.mujicv.com/">木及简历</a>」来制作简历，用「<a href="https://editor.mdnice.com/">mdnice</a>」来排版简中各个平台上的文章，用「<a href="https://www.gitbook.com/">Gitbook</a>」制作发布电子书，用「<a href="https://marp.app/">Marp</a>」来制作幻灯片&hellip;..这些工具都是基于 Markdown 的，但它们所支持的语法又不完全是 Markdown。</p>
+<p>这就是最让人无奈的地方，当一款软件说它支持 Markdown 语法的时候，我唯一能确定的只有它应该不会让我在排版样式上过于苦恼，因为它们实际上各自实现的都是不尽相同的 Markdown 语法。除非我仔细看这些工具的说明文档或者直接上手试着用，否则我没法知道它到底支持了什么版本的拓展语法，也不知道它是不是组合、自创了某些语法。</p>
+<p>不论是 CommonMark、GFM 还是我上文提及的介绍，都并不是这些工具严格遵循的规范，那只是一个相对清晰的惯例。每一款说支持「Markdown 语法」的工具，都成为了一种关于 Markdown 的方言（flavors），它们大差不差，可又不能说是完全一模一样。</p>
+<p>这也是我在上一小节并没有以具体的版本规范或是某个编辑器所支持的语法规则来介绍的原因，上面的介绍糅杂了基本语法、GFM 拓展语法和一点点 HTML 语法，这些语法常见但不意味着它就一定能被你所使用的编辑器支持。而不同的编辑器或许还会支持一些上述没有提及的语法，比如 Typora 支持用「^」和「~」的包裹来表示上下标， Obsidian 则提供了「&gt; [! 类型] 」的警报语法。</p>
+<p>因此，还是建议大家有空去看看这些工具的帮助文档中的语法说明，这会让你用起来更舒服。至于具体选什么 Markdown 编辑器，这里就不作过多介绍了。毕竟基本语法大多都是支持的，剩下的就看你的使用场景、编辑体验和个人偏好啦。如果有朋友感兴趣，或许有空可以再写一篇关于编辑器的介绍。</p>
+<p>以上。</p>
+<hr>
+<p>延伸阅读：</p>
+<ul>
+<li><a href="https://www.markdown.xyz/">Markdown 指南中文版</a></li>
+<li><a href="https://sspai.com/post/64842">Markdown 写作，Pandoc 转换：我的纯文本学术写作流程</a></li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>如果你是英文苦手，可以考虑看看这个<a href="https://markdown.cn/">中译版本</a>。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>如果你刚开始接触 Markdown 还没下载相关的编辑器，可以考虑先使用在线的编辑器 <a href="https://pandao.github.io/editor.md/index.html">Editor.md</a> 进行尝试。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</article>
+
+
+      
+        <div class="my-4">
+    
+    <a href="https://viyi.cc/tags/markdown/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#Markdown</a>
+    
+</div>
+      
+
+      
+
+
+
+      
+        <div class="py-2">
+  
+    <div class="my-8 flex flex-col items-center md:flex-row">
+      <a href="https://viyi.cc/authors/viyi/" class="md:me-4 text-primary-text h-24 w-24">
+        
+        
+          <img
+            src="https://viyi.cc/images/icon.png"
+            class="bg-primary-bg w-full rounded-full"
+            alt="Avatar"
+          />
+        
+      </a>
+      <div class="mt-4 w-full md:mt-0 md:w-auto">
+        <a
+          href="https://viyi.cc/authors/viyi/"
+          class="mb-2 block border-b pb-1 text-lg font-bold"
+        >
+          <h3>枝因</h3>
+        </a>
+        <span class="block pb-2">Per aspera ad astra</span>
+        
+          
+          
+          
+          
+          <a href="mailto:viyiY2K@gmail.com" class="me-2">
+            <i class="fas fa-envelope"></i>
+          </a>
+        
+          
+          
+          
+          
+          <a href="https://t.me/viyiY2K" class="me-2">
+            <i class="fab fa-telegram"></i>
+          </a>
+        
+          
+          
+          
+          
+          <a href="https://www.zhihu.com/people/zhi-yin-233" class="me-2">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+</div>
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/success_is_not_necessary_for_me/" class="block">成功不必在我</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/cccs/" class="block">Crash Course Computer Science 课程笔记</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#起源">起源</a></li>
+    <li><a href="#使用流程">使用流程</a></li>
+    <li><a href="#语法规范">语法规范</a>
+      <ul>
+        <li><a href="#基本样式">基本样式</a></li>
+        <li><a href="#列表和引用">列表和引用</a></li>
+        <li><a href="#插入内容">插入内容</a>
+          <ul>
+            <li><a href="#图片">图片</a></li>
+            <li><a href="#链接">链接</a></li>
+            <li><a href="#注脚">注脚</a></li>
+            <li><a href="#表格">表格</a></li>
+          </ul>
+        </li>
+        <li><a href="#段落">段落</a></li>
+      </ul>
+    </li>
+    <li><a href="#写在最后">写在最后</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">
+        
+        © 2023-2025 
+        <a href="https://viyi.cc/about_me/">枝因</a> ·  
+        Powered by the 
+        <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" rel="noopener noreferrer">Eureka</a> 
+        theme for 
+        <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+    </p>
+</div>
+
+  </div>
+    </footer>
+  </body>
+</html>

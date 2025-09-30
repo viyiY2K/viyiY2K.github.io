@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>bilibili 直播预热曝光优化 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.9285d3095319c9f1de8ca121e332e3d50ffa81a82b750989451699f045e74419ee32368863d7fae35ba67f133f6e31fa.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="原稿为内部交流使用，现脱敏关键数据，仅供参考。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://viyi.cc/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"bilibili 直播预热曝光优化",
+      "item":"https://viyi.cc/bilibili_live_preheating_exposure_optimization/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/bilibili_live_preheating_exposure_optimization/"
+    },
+    "headline": "bilibili 直播预热曝光优化 | 与你分享我的眼睛","datePublished": "2024-03-19T00:00:00+00:00",
+    "dateModified": "2025-09-30T00:00:00+00:00",
+    "wordCount":  2757 ,
+    "author": {
+        "@type": "Person",
+        "name": "viyi"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "原稿为内部交流使用，现脱敏关键数据，仅供参考。"
+}
+</script><meta property="og:title" content="bilibili 直播预热曝光优化 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/bilibili_live_preheating_exposure_optimization/" />
+
+
+
+<meta property="og:description" content="原稿为内部交流使用，现脱敏关键数据，仅供参考。" />
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2024-03-19T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2025-09-30T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="bilibili" />
+
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/archives/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">归档</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">bilibili 直播预热曝光优化</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      
+        
+          title="编辑于 2025年09月30日"
+        
+      
+      >2024-03-19</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>6 分钟阅读时长</span>
+  </div>
+
+  
+    <div class="me-6 my-2">
+      <i class="fas fa-folder me-1"></i>
+      
+        <a href="https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/" class="hover:text-eureka"
+          >札记</a
+        >
+      
+    </div>
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>注：本文主要针对 b 站平台的直播，原稿为内部交流使用，现脱敏关键数据，仅供参考。</p>
+<h2 id="现状简述">现状简述</h2>
+<p>目前带货直播频率为一周  ×× 次，预热分发平台为 B 站动态、公众号以及微博，本月预热曝光基本数据如下:</p>
+<table>
+<thead>
+<tr>
+<th>直播场次</th>
+<th>直播类型</th>
+<th>直播时间</th>
+<th>累计进房人数</th>
+<th>B 站预约人数</th>
+<th>公众号阅读量</th>
+<th>微博阅读量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>暂不考虑每场直播品类、选品等因素对相关数据的影响，也不涉及相关<a href="https://www.bilibili.com/read/cv19348069/">商业推广</a>。本文仅从内容分发的角度提供优化思路，以期通过提高直播曝光度，增加每场直播的进房人数。</p>
+<h2 id="分发逻辑">分发逻辑</h2>
+<h3 id="bilibili">bilibili</h3>
+<p>B 站直播相关曝光可粗略分为两个阶段，开播前（直播预约）与开播后（直播中）。</p>
+<p>开播前如若通过动态发布直播预告（及抽奖信息），可在「动态信息流」以及「账号主页卡片框」看到直播预约入口。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1759202416984.png" alt="1759202416984.png"></p>
+<p>此外，据<a href="https://www.bilibili.com/read/cv18519538/">官方所言</a>，直播预约也可同步至相关视频以及直播间中，详见下图。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1759202548303.png" alt="1759202548303.png"></p>
+<p>直播预约多面向粉丝，设置预约后，当主播在预约时间的前后半小时内开播，并且稳定开播 5 分钟以上，已预约的用户会收到站外开播推送。此处的站外开播推送经实测，是指自动在默认日历软件建立相关日程，该处链接需经浏览器二次跳转至 B 站。</p>
+<p>如发起直播预约写的是今晚 8 点直播，实际在今晚 6～10 点内开播，预约用户将会收到开播通知。正常开播届时是否有相关 push 未知。</p>
+<p>考虑到我们近三场直播间进房人数中的粉丝占比均值在 ×× % 且非预约占比均值为  ×× %，再结合 B 站流量分发主要集中在推荐页（约 90%），直播页（约 5 %）以及动态页（约 1 %）流量较少的基本情况，可以合理推测<strong>多数进房观看直播的观众并非通过「站外开播推送」进入直播间</strong>。</p>
+<p>开播后，直播间主要的曝光入口可简单分为「粉丝向」和「公开向」两个部分。粉丝向的直播中提示一般出现在头像动效中，主要为视频内容页、空间主页以及动态页。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1759202671968.png" alt="1759202671968.png"></p>
+<p>公开向的推荐主要位于推荐主页和直播首页，公域的分发逻辑暂未有相关的推荐指数算法泄露。以常识推断，直播分类、标题、封面、热度（观看数、时长、人气值）、标签等因素均会推荐位的展示。除此之外，移动端 push（开播提醒）也可纳入曝光入口之一。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1759202834541.png" alt="1759202834541.png"></p>
+<p>开播后的曝光程度无法准确度量，但视频内容页的曝光可藉由视频在看人数估计。就当前情况（七天前与两天前有投稿，播放量级中等）而言，目前在看人数约为 ×× 人上下。以分钟级来纵观单个节点进房人数，其中位估值约为 ×× 人左右。两者仅存在相关性，无法断定转化效果。</p>
+<h3 id="公众号与微博">公众号与微博</h3>
+<p>公众号与微博目前仅同步 B 站动态内容和海报，且直播预约需二次跳转，无法确切追踪导流效果。如有必要追踪效果，可考虑替换为带尾链的二维码。</p>
+<p>微博受限于字数以及虚高阅读量，此处仅作附带分发途径，不过多分析。公众号阅读量计算规则较为严格，该数值参考价值较大且内容形式可操作性较强。目前公众号总订阅数为 ××  万人，推送内容分为两类：直播预告以及视频图文。今年（2024 年）共计发送 ××  篇图文，其中 ×× 篇为视频图文稿、××  篇为店内商品介绍，其余 ××  篇均为直播预告。</p>
+<p>此处考虑数据的集中趋势，选取中位数作为度量。××  篇直播预告的阅读量中位数为 ×× ，打开率仅为 ×× %。考虑到微信推送机制的改变导致打开率整体出现下行，但同一账号中近 ×× 篇视频图文稿的打开率在 ××  左右，该数值表明其微信社媒表现尚可，故预热推文存在优化空间。</p>
+<h2 id="优化建议">优化建议</h2>
+<h3 id="bilibili-1">bilibili</h3>
+<h4 id="直播前">直播前</h4>
+<p>（1）直播间添加「购物」标签</p>
+<p>尽管 B 站目前暂未开辟购物分区，但在分区下的细分栏目中已然存在「购物」标签。若用户勾选该标签，则在分区中会出现「购物」的子区。本着能薅一点流量是一点的原则，建议直播间可<strong>打上购物相关标签</strong>，某种程度上也会影响平台隐性标签进而影响流量分发。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1759202936416.png" alt="1759202936416.png"></p>
+<p>（2）直播预约配置（视频关联、直播间展示）</p>
+<p>近三期直播中，预约观众在进房人数中占比约为  ××%~ ××% 左右（数据参见上方首条评论）。尽管占比较低，但依旧是向观众传递直播信息的首要途径之一，直播预约链路中官方提供了四个入口：<strong>个人空间、动态页、播放页以及直播间</strong>。</p>
+<p>在以往的直播预热流程中，通常仅在动态页发布预约抽奖，此时会自动同步至账号个人空间，暂未在播放页以及直播间配置相关预约入口。因此，若当月直播排期已确定，可<strong>在直播间挂上下场直播信息，主播进行相关口播引导</strong>。具体操作路径为「直播中心-开播设置-发布直播预约」，此处暂未出现「同步直播间」的选项可能是因为目前只发布了一场直播预约。</p>
+<p>当观众进入主播日常直播页面，会看到直播预约提示。如果配置了商品预告，也会看到预约提示，点击后即可查看预约中的商品以及价格。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1759203020856.png" alt="1759203020856.png"></p>
+<p>播放页的直播预约针对性更强，考虑到直播选品多为此前评测过的内容，且观众点进某期视频观看本就代表对该选题有兴趣，该分发路径转化质量较高。尽管早期内容流量表现稍次，但考虑关键词搜索带来的长尾以及公众号的二次推送，此法仍然值得尝试。</p>
+<p>因此，建议<strong>在相关视频稿件中关联上直播预约</strong>(若为混场直播，可关联多个视频稿件)。具体操作路径为「直播中心-直播带货-直播预约-关联预约组件」，预约发布后，稿件播放页将自动展示直播预约信息。需注意，合集视频将不展示，且生效期间框下资源位将不会展示广告，详情参见<a href="https://mx3yywczcow.feishu.cn/docx/BlVrdyDnsoifpoxzUgncc50vnLg">此处</a>。</p>
+<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1759203070906.png" alt="1759203070906.png"></p>
+<h4 id="直播中">直播中</h4>
+<p>目前在直播中会发布相关的定时动态，通过动态转发抽奖，提升进房人数。通常开奖于直播结束后，第二天中午删除该动态。</p>
+<p>发送单独动态，会给已将 up 主设置为特别关注的用户发送站外 push 通知。若该类直播动态过多，则会形成干扰。</p>
+<p>b 站在直播中，会默认发送一条直播中动态，直播结束届时此动态将被默认自动删除。长程直播（3h 以上）可间隔（&gt;1h)转发该动态，增加直播信息出现在动态信息流中的概率。该法比单独法动态的进直播间<strong>路径更短</strong>，更易使得观众进入直播间观看。</p>
+<h2 id="私域">私域</h2>
+<p>目前微信群聊的直播预告与 B 站动态呈同步更新，但分发途径仅为群聊普通信息。</p>
+<p>考虑到聊天窗口信息会被群友的聊天顶上去，活跃度较高的群聊所发布的预告信息被看到的可能性会更低，因此<strong>可考虑将预告同步以群公告的形式</strong>发送。</p>
+<p>且除提早几日预告之外，<strong>在直播当晚也可再度发送相关信息至群聊界面，注意频率需较低，否则易引起反感</strong>。</p>
+<h2 id="公众号">公众号</h2>
+<p>公众号目前的直播预告推文采用的是直给，标题为直播时间和场次信息，内容为直播产品或优惠情况。公众号的优化指标为打开率，理由在于直播预热本身目的在于给潜在观看用户植入模糊信息，主打一个希望他们能在娱乐时间灵光一闪想起先看在直播要不来看看的念头。</p>
+<p>直播预告的优化思路有两种：</p>
+<p>一为往期评测图文重发，文末带直播预告信息。这种形式存在的问题是若旧文重推频率过高，易引起公众号观众反感。此外，若直播场次非专场，较难有合适往期评测推文可贴直播预热。近期直播可以此种形式推文试水优化效果（往期重推内容）。</p>
+<p>二为单品带相关介绍，海报拆分带直播间信息。适用于混场多种类单品，基本内容格式为「单品介绍+原海报切片+直播信息」，可参考此文内容构成。</p>
+<p>参考资料：</p>
+<p><a href="https://www.bilibili.com/read/cv18519538/">B 站. 电商带货小助手. 直播预约功能. 2022.09.09.</a></p>
+<p><a href="https://mx3yywczcow.feishu.cn/docx/BlVrdyDnsoifpoxzUgncc50vnLg">B 站(飞书文档). 直播预约功能说明. 2023.01.12</a></p>
+
+</article>
+
+
+      
+        <div class="my-4">
+    
+    <a href="https://viyi.cc/tags/bilibili/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#bilibili</a>
+    
+</div>
+      
+
+      
+
+
+
+      
+        <div class="py-2">
+  
+    <div class="my-8 flex flex-col items-center md:flex-row">
+      <a href="https://viyi.cc/authors/viyi/" class="md:me-4 text-primary-text h-24 w-24">
+        
+        
+          <img
+            src="https://viyi.cc/images/icon.png"
+            class="bg-primary-bg w-full rounded-full"
+            alt="Avatar"
+          />
+        
+      </a>
+      <div class="mt-4 w-full md:mt-0 md:w-auto">
+        <a
+          href="https://viyi.cc/authors/viyi/"
+          class="mb-2 block border-b pb-1 text-lg font-bold"
+        >
+          <h3>枝因</h3>
+        </a>
+        <span class="block pb-2">Per aspera ad astra</span>
+        
+          
+          
+          
+          
+          <a href="mailto:viyiY2K@gmail.com" class="me-2">
+            <i class="fas fa-envelope"></i>
+          </a>
+        
+          
+          
+          
+          
+          <a href="https://t.me/viyiY2K" class="me-2">
+            <i class="fab fa-telegram"></i>
+          </a>
+        
+          
+          
+          
+          
+          <a href="https://www.zhihu.com/people/zhi-yin-233" class="me-2">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+</div>
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/relearning_to_type/" class="block">重学打字</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/have_the_long_view_beyond_what_you_have_not_seen/" class="block">要有一个远见，超越你所未见</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#现状简述">现状简述</a></li>
+    <li><a href="#分发逻辑">分发逻辑</a>
+      <ul>
+        <li><a href="#bilibili">bilibili</a></li>
+        <li><a href="#公众号与微博">公众号与微博</a></li>
+      </ul>
+    </li>
+    <li><a href="#优化建议">优化建议</a>
+      <ul>
+        <li><a href="#bilibili-1">bilibili</a>
+          <ul>
+            <li><a href="#直播前">直播前</a></li>
+            <li><a href="#直播中">直播中</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#私域">私域</a></li>
+    <li><a href="#公众号">公众号</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">
+        
+        © 2023-2025 
+        <a href="https://viyi.cc/about_me/">枝因</a> ·  
+        Powered by the 
+        <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" rel="noopener noreferrer">Eureka</a> 
+        theme for 
+        <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+    </p>
+</div>
+
+  </div>
+    </footer>
+  </body>
+</html>

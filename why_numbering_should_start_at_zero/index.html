@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>从零开始 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.9285d3095319c9f1de8ca121e332e3d50ffa81a82b750989451699f045e74419ee32368863d7fae35ba67f133f6e31fa.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="本文简要说明了为什么从 0 开始计数是合理且理所应当的事情。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://viyi.cc/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"从零开始",
+      "item":"https://viyi.cc/why_numbering_should_start_at_zero/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/why_numbering_should_start_at_zero/"
+    },
+    "headline": "从零开始 | 与你分享我的眼睛","datePublished": "2023-09-18T00:00:00+00:00",
+    "dateModified": "2023-09-18T00:00:00+00:00",
+    "wordCount":  2689 ,
+    "author": {
+        "@type": "Person",
+        "name": "viyi"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "本文简要说明了为什么从 0 开始计数是合理且理所应当的事情。"
+}
+</script><meta property="og:title" content="从零开始 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/why_numbering_should_start_at_zero/" />
+
+
+
+<meta property="og:description" content="本文简要说明了为什么从 0 开始计数是合理且理所应当的事情。" />
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2023-09-18T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2023-09-18T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="编码方式" />
+
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/archives/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">归档</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class="lg:col-start-2 bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">从零开始</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      
+        
+      
+      >2023-09-18</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>6 分钟阅读时长</span>
+  </div>
+
+  
+    <div class="me-6 my-2">
+      <i class="fas fa-folder me-1"></i>
+      
+        <a href="https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/" class="hover:text-eureka"
+          >札记</a
+        >
+      
+    </div>
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>之前还在 <a href="https://u.tools/">uTools</a> 打零工的时候，和老大聊评论区有人反馈，希望批量重命名插件的起始位序可以是 0 （当前默认是从 1 开始），我老大说这人一看就是搞计算机的。当时觉得挺有意思但并不明白为什么，直到我自己开始学计算机相关的内容。</p>
+<p>最早接触到自 0 开始计数的序列，大概是 C 语言中的数组。当时认认真真地在自己的笔记上写：⚠️ 首个元素的下标（Index）是 0 不是 1，老师解释说这是因为下标实际表示的是偏移量。但从 1 开始的话，2 不也是偏移了 1 吗？所以为什么要从 0 开始啊？但这么奇怪的问题我没好意思去网课下留评论问，于是我默默把它当惯例记下了。</p>
+<p>最近在读《操作系统导论》，在参考资料上看到了 E.Dijkstra 的 <a href="https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html">Why numbering should start at zero</a>，顺手找来读完后甚觉有趣，遂写篇文章推荐一下。对的，这位 Dijkstra 就是那位最短路径算法的著名 Dijkstra，顺带附赠一个冷知识：这个算法只是大佬<a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#History">在陪未婚妻逛街的时候花 20min 左右想出来的</a>……w(ﾟДﾟ)w。</p>
+<h2 id="左闭右开">左闭右开</h2>
+<p>在回答为什么要从 0 开始计数之前，我们先考虑一个（也许）更奇怪的问题：要怎么更漂亮地表示一串有序自然数？比如不用省略号的话，要怎么表示 2、3、4 …… 12 呢？</p>
+<p>显然我们可以一眼看出它的最大值（12）和最小值（2），因此我们可以用不等号来表示。此处假设这一串数字中的未知数称为 i ，则 i 需要满足的关系式可以使用这 4 种方式来表达：</p>
+<ol>
+<li>$2 \leq i &lt; 13$</li>
+<li>$1 &lt; i \leq 12$</li>
+<li>$2 \leq i \leq 12$</li>
+<li>$1 &lt; i &lt; 13$</li>
+</ol>
+<p>至于为什么是小于号而不是大于号……拜托正常人类都是从左往右阅读的啊喂，用大于号也太反直觉了，可以但没必要好吗！所以这里只用了小于号 &lt; 和小于等于号 ⩽ ，可以组合搭配出 4 种情况。再注考虑到当我们使用小于号的时候，其实意味着边界数字本身并不属于这个范围，因此我们需要注意边界数字的变化。</p>
+<p>现在让我们想想这四种表示方法的美感，或者换种更好理解的说法——哪种表示方式能更快速地给予更多的信息？哪种表示方式能更方便地进行操作处理？</p>
+<p>当一串数字出现的时候，想要知道这里头总共有几个数字是个挺朴实无华的需求对吧？所以我们先来想想如果要计算它们的个数，哪种会更方便呢？显然前两种搭配中的 $2 \leq i &lt; 13$ 和 $1 &lt; i \leq 12$ 会更方便。</p>
+<p>在计算个数而不是大小的时候，用边界数字相减之后必须 $+1$ 才能得到正确的答案，比如说 1~5 总共是 5 个数字，如果使用边界相减则只能得到 $5-1=4$ 。同理，2~12 是总共 11 个数字，而非 $12-2=10$ 个数字。而考虑到前文提及 &lt; 的特性——边界数字并不包含在范围内，刚巧就把在计算个数中的那个 +1 给抵消掉了。</p>
+<p>因此在 $2 \leq i &lt; 13$ 和 $1 &lt; i \leq 12$ 这两种方式中，我们可以直接通过 $13-2=11$ 或是 $12-1=11$ 这样直接<strong>把边界数字相减得到这个序列中的数字个数</strong>。而第三种表示方式 $2 \leq i \leq 12$ 和第四种表示方式 $1 &lt; i &lt; 13$ 显然都没这么方便，还得想想是 $+1$ 还是 $-1$ ，超麻烦！</p>
+<p>这两种表示方式还有另一个好处，在表示相邻子序列的时候非常符合直觉。当我们说有两个子序列相邻的时候，意味着一个子序列的上界和相邻子序列的下界是相等的。比如说数字序列 2、3、4 …… 8 和另一数字序列 8、9、10 …… 12，显然第一个数字序列的最大值（上界）和第二个数字序列的最小值（下界）是同一个数字。而使用 &lt; 和 ⩽ 的搭配，我们可以<strong>很方便地以 8 为关键数字来表示两个相邻子序列</strong>：$2\leq i &lt; 8$ 和 $8\leq j &lt; 13$ 或是 $1 &lt; i\leq 8$ 和 $8&lt; j \leq 12$ 。如果使用另外两种，我们都需要再想想边界数字的变化问题，超麻烦！</p>
+<p>所以在我们的组合搭配里，需要有（且仅有一个）小于号的存在。排除掉另两种表示方式之后，在 $2 \leq i &lt; 13$ 和 $1 &lt; i \leq 12$ 这两种方式中哪个会更漂亮呢？这两者的区别在于，小于号的位置不同引起的边界数字不同，也就是说关键在于上下界。</p>
+<p>先考虑一种特殊情况，符号左侧的最小值可以取得的最特别的值会是什么？我们都知道自然数中最小的数字是 1，如果我们想要表示的自然数序列里存在 1，当我们使用 &lt; 的时候，就只能使用非自然数 0 来当作边界数字。于是这个不等式现在出现了一个非自然数，而它用来表示一个自然数序列，这显然……有些不漂亮。因此，我们会更希望左边的下界符号是 ⩽ 可以用来包含下界，而不是 &lt; 。</p>
+<p>再考虑另一种特殊情况，符号右侧的最大值可以取得的最特别的值会是什么？最大值是用来确定上界的，最特别的就是这个界限和下界一样，这意味着这个序列里没有数字，它是空的。我们延续上面的假设，想要表示的序列里最小值是 1，且我们使用 ⩽ 来表示下界。当我们考虑用 ⩽ 来表示的时候，就只能写成 $1 \leq i \leq 0$ 。这很诡异，直觉上我们会想说右侧的数字应该不会比左边的小，而且 i 既为 1 又为 0 的话，这个不等式就完全没意义了呀。而当我们考虑使用 &lt; 来表示的空的情况时，写成 $1\leq i &lt; 1$ 看起来就稍微顺眼一些，因此我们希望右边的上界符号是不包含边界的 &lt; 。</p>
+<p>因此，我们可以骄傲地说 $i_{\rm min} \leq i &lt; i_{\rm max}$ 是这四种之中最漂亮的表示方式。</p>
+<h2 id="自-0-开始">自 0 开始</h2>
+<p>现在回到最初的问题，为什么计算机中的索引号（Index）往往是从 0 开始的？因为这样更漂亮，提供的信息更多。</p>
+<p>假设我们有顺序地往在柜子中的抽屉放了一些东西（共计有 N 个抽屉），显然如果数目太多说起来会很不方便，我们需要有一种方式来区分东西放在哪些抽屉里，于是我们给它加上索引号。现在让我们更漂亮地用数字和符号来表示这个索引号的范围，符号的使用在上一节已经说明了，唯一存在的问题是起始索引号用哪个数字。</p>
+<p>按照人类本能，我们可以从 1 开始，于是抽屉的索引号范围就会变成 $1\leq i&lt; N+1$ 。而如果从 0 开始，这个范围就会变成 $0 \leq i &lt;N$ ，似乎区别不大。可如果我们从 0 开始，那么下标本身除了提供自己当前所在位置的信息之外，还可以表示出它之前还有多少个抽屉。也就是说，<strong>下标既是位序也是数目</strong>。比如下标为 1 的第 2 个抽屉，可以直观地通过下标看出它之前还有 1 个抽屉存在，这也是所谓偏移量的实质——当起始值为 0 的时候，索引号本身就是偏移量。</p>
+<p>因此，从 0 开始是更漂亮的做法。现在我们可以骄傲地说，搞计算机的从 0 开始计数是正确、合理且理所当然的，尽管它也许不那么符合直觉。不符合直觉到引起某些数学家的注意，认为这是某种挑衅，以至于 E.Dijkstra 都要写篇文章来解释这样做为什么合理。是的，本文只是我被大佬说服后的产物，你居然都看到这里了，<a href="https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html">真的不考虑去拜读一下文章吗</a>？！</p>
+<p>原文中最好笑的一句话大概是 &ldquo;the moral of the story is that we had better regard —after all those centuries!— zero as a most natural number.&rdquo; 简直可以看到大佬在叉腰说：拜托！你们嘴里的非自然数 0 明明就很自然！搞数学的别来杠！（<del>但你自己不也用非自然数 0 出现在自然数序列里很 ugly 来论证下界不应该使用小于号吗？明明就口嫌体正直！</del>）</p>
+<p>最后浅浅夸一下 0 这个数字，在被计组中数制转换折磨过后的本人不得不承认如果没有 0 的存在，现行这套「数位 + 权值」的位置化计数方式完全没得玩，占位也是很重要的！有空再写好了，以上。</p>
+
+</article>
+
+
+      
+        <div class="my-4">
+    
+    <a href="https://viyi.cc/tags/%E7%BC%96%E7%A0%81%E6%96%B9%E5%BC%8F/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#编码方式</a>
+    
+</div>
+      
+
+      
+
+
+
+      
+        <div class="py-2">
+  
+    <div class="my-8 flex flex-col items-center md:flex-row">
+      <a href="https://viyi.cc/authors/viyi/" class="md:me-4 text-primary-text h-24 w-24">
+        
+        
+          <img
+            src="https://viyi.cc/images/icon.png"
+            class="bg-primary-bg w-full rounded-full"
+            alt="Avatar"
+          />
+        
+      </a>
+      <div class="mt-4 w-full md:mt-0 md:w-auto">
+        <a
+          href="https://viyi.cc/authors/viyi/"
+          class="mb-2 block border-b pb-1 text-lg font-bold"
+        >
+          <h3>枝因</h3>
+        </a>
+        <span class="block pb-2">Per aspera ad astra</span>
+        
+          
+          
+          
+          
+          <a href="mailto:viyiY2K@gmail.com" class="me-2">
+            <i class="fas fa-envelope"></i>
+          </a>
+        
+          
+          
+          
+          
+          <a href="https://t.me/viyiY2K" class="me-2">
+            <i class="fab fa-telegram"></i>
+          </a>
+        
+          
+          
+          
+          
+          <a href="https://www.zhihu.com/people/zhi-yin-233" class="me-2">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+</div>
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="https://viyi.cc/annual_review_2023/" class="block">二〇二三</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/building_blog_again/" class="block">再搭博客记</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">
+        
+        © 2023-2025 
+        <a href="https://viyi.cc/about_me/">枝因</a> ·  
+        Powered by the 
+        <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" rel="noopener noreferrer">Eureka</a> 
+        theme for 
+        <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+    </p>
+</div>
+
+  </div>
+    </footer>
+  </body>
+</html>
