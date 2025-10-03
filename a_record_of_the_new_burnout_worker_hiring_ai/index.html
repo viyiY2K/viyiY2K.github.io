@@ -104,7 +104,7 @@
     },
     "headline": "新晋社畜雇佣 AI 实录 | 与你分享我的眼睛","datePublished": "2025-01-26T00:00:00+00:00",
     "dateModified": "2025-01-26T00:00:00+00:00",
-    "wordCount":  6610 ,
+    "wordCount":  6616 ,
     "author": {
         "@type": "Person",
         "name": "viyi"
@@ -505,10 +505,10 @@ def ensure_data_dir():
 <p>除了给甲方的全平台汇总之外，内部要填的表单只是区分长短视频，需要把不同平台的数据对应起来，实现也是类似的，以短视频平台的汇总为例，<a href="https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/to_party_a_douyin.py">参见此处</a>。</p>
 <h2 id="评论区监测">评论区监测</h2>
 <p>好的，如果你看到这里，估计已经忘记我一开始还有个需求是监测评论来着。只是筛选评论区并转播倒是不难，感谢 <a href="https://github.com/Nemo2011/bilibili-api">bilibili-api</a>。</p>
-<p>目前的进度是已经可以读取到所有的评论（包括副楼）保存到表格，还加了简单的筛选词，筛选出的评论可以通过带有 rpid 的直链跳转处理，再加个 WebHook 基本能凑合用，不过一直没空摸鱼把它加上……然后就放假了！</p>
+<p>目前的进度是已经可以读取到所有的评论（包括副楼）保存到表格，还加了简单的筛选词，筛选出的评论可以通过带有 rpid 的直链跳转处理，再加个 WebHook 基本能凑合用。</p>
 <p>这个版本的缺点是如果定时任务设得比较紧凑，IP 会暂时被封禁无法 work，这个应该可以设置代理绕过。</p>
 <p>现在「设置关键词筛选 -&gt; 给直链跳转删除」比起之前「逐条翻评论 -&gt; 定向删除」来得方便，不过理论上还可以在飞书消息<a href="https://open.feishu.cn/document/uAjLw4CM/ukzMukzMukzM/feishu-cards/configuring-card-interactions">加个交互</a>，结合 <a href="https://nemo2011.github.io/bilibili-api/#/modules/comment?id=async-def-delete">async def delete()</a> 就可以直接一键删除，不用二次跳转网页。</p>
-<p>是的，这里又要有但是了，账号会需要在浏览器长期登录账户以便投稿，这样会导致 Cookies 被刷新……。总之，现在版本足能再凑合一下用(这段代码比较长，可以<a href="https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/comment_area_monitoring.py">戳这里</a>查看)。</p>
+<p>是的，这里又要有但是了，账号会需要在浏览器长期登录账户以便投稿，这样会导致 Cookies 被刷新……可以通过获取小号 cookie 解决（理想的方式应该是走官方 API）。总之，现在版本足能再凑合一下用(这段代码比较长，可以<a href="https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/comment_area_monitoring.py">戳这里</a>查看)。</p>
 <h2 id="写在最后">写在最后</h2>
 <p>“如果我能明白这究竟是怎么回事就好了”，通常这个想法会出现在最后 30% 的实现上。诚然，如果没有 AI，我绝无可能把这些琐碎的工作用 Python 解决掉，但它的表现依旧差口气。</p>
 <p>在想是不是用 cursor 的体验会好上更多……有空再写篇「麻瓜视角下的 AI 编程」聊聊，总之这篇真的断断续续写了好久，先这样，有空再填坑……</p>
