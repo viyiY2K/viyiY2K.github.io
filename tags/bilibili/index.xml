@@ -6,7 +6,25 @@
     <description>Recent content in bilibili on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/bilibili/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/bilibili/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>复刻 @影视飓风 同款运营数据面板</title>
+      <link>https://viyi.cc/how_to_build_an_operational_data_dashboard_like_mediastorm_s/</link>
+      <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/how_to_build_an_operational_data_dashboard_like_mediastorm_s/</guid>
+      <description>前不久刷到影视飓风的运营数据看板，可以每隔 15min 自动获取账号所有平台的数据，实时更新可视化的数据仪表盘，可把本运营牛马羡慕坏了。 虽说咱也整了俩小玩意帮我看</description>
+    </item>
+    
+    <item>
+      <title>主流平台封面图尺寸速查</title>
+      <link>https://viyi.cc/quick_check_on_cover_image_size_of_mainstream_platforms/</link>
+      <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/quick_check_on_cover_image_size_of_mainstream_platforms/</guid>
+      <description>问：投稿 12 个平台需要几张封面图？ 答：4 张。太好了居然不是 12 张XD。 可惜各家平台的 UI 比较混乱，总是因为小细节打回给动效老师调整，遂整理了一份基础规范。出</description>
+    </item>
+    
     <item>
       <title>bilibili 直播预热曝光优化</title>
       <link>https://viyi.cc/bilibili_live_preheating_exposure_optimization/</link>

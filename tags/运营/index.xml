@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>运营 on 与你分享我的眼睛</title>
+    <link>https://viyi.cc/tags/%E8%BF%90%E8%90%A5/</link>
+    <description>Recent content in 运营 on 与你分享我的眼睛</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 03 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/tags/%E8%BF%90%E8%90%A5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>复刻 @影视飓风 同款运营数据面板</title>
+      <link>https://viyi.cc/how_to_build_an_operational_data_dashboard_like_mediastorm_s/</link>
+      <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/how_to_build_an_operational_data_dashboard_like_mediastorm_s/</guid>
+      <description>前不久刷到影视飓风的运营数据看板，可以每隔 15min 自动获取账号所有平台的数据，实时更新可视化的数据仪表盘，可把本运营牛马羡慕坏了。 虽说咱也整了俩小玩意帮我看</description>
+    </item>
+    
+    <item>
+      <title>主流平台封面图尺寸速查</title>
+      <link>https://viyi.cc/quick_check_on_cover_image_size_of_mainstream_platforms/</link>
+      <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/quick_check_on_cover_image_size_of_mainstream_platforms/</guid>
+      <description>问：投稿 12 个平台需要几张封面图？ 答：4 张。太好了居然不是 12 张XD。 可惜各家平台的 UI 比较混乱，总是因为小细节打回给动效老师调整，遂整理了一份基础规范。出</description>
+    </item>
+    
+    <item>
+      <title>bilibili 直播预热曝光优化</title>
+      <link>https://viyi.cc/bilibili_live_preheating_exposure_optimization/</link>
+      <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/bilibili_live_preheating_exposure_optimization/</guid>
+      <description>注：本文主要针对 b 站平台的直播，原稿为内部交流使用，现脱敏关键数据，仅供参考。 现状简述 目前带货直播频率为一周 ×× 次，预热分发平台为 B 站动态、公众号以及</description>
+    </item>
+    
+    <item>
+      <title>知乎企业账号运营企划</title>
+      <link>https://viyi.cc/zhihu_enterprise_account_operation_planning/</link>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/zhihu_enterprise_account_operation_planning/</guid>
+      <description>背景分析 平台基本规则 本节将简要说明知乎平台的主要规则，为后文提供依据。 流量来源 很显然基础流量的很大一部分依赖于平台的推荐，知乎整体的内容生产方式由早期</description>
+    </item>
+    
+  </channel>
+</rss>
