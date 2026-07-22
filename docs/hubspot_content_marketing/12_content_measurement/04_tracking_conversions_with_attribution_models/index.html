@@ -1,26 +1,1612 @@
-<!doctype html><html lang=zh dir=ltr><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>拨开数据的迷雾：如何用归因模型精准还原客户旅程 | 内容营销 | 与你分享我的眼睛</title><meta name=generator content="Hugo Eureka 0.9.3"><link rel=stylesheet href=https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css><script defer src=https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js></script>
-<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto+Serif+SC:wght@400;600;700&amp;display=swap" as=style onload='this.onload=null,this.rel="stylesheet"'><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js crossorigin></script>
-<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js crossorigin></script>
-<link rel=stylesheet href=https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css media=print onload='this.media="all",this.onload=null'><script defer type=text/javascript src=https://viyi.cc/js/fontawesome.min.9285d3095319c9f1de8ca121e332e3d50ffa81a82b750989451699f045e74419ee32368863d7fae35ba67f133f6e31fa.js></script>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css integrity=sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js integrity=sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY crossorigin></script>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin></script>
-<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script><script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js integrity=sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0 crossorigin></script><style id=site-theme-color>:root{--color-eureka:#a878c4}.dark{--color-eureka:#a878c4}</style><style id=markdown-punctuation-overrides>.prose :where(code):not(:where([class~=not-prose] *))::before,.prose :where(code):not(:where([class~=not-prose] *))::after,.prose :where(blockquote p:first-of-type):not(:where([class~=not-prose] *))::before,.prose :where(blockquote p:last-of-type):not(:where([class~=not-prose] *))::after{content:none}</style><link rel=icon type=image/png sizes=32x32 href=https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png><link rel=apple-touch-icon sizes=180x180 href=https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png><meta name=description content="开篇引入 在现代营销的复杂网络中，一个陌生人变成忠实客户的过程，往往不是线性的，而是一场充满变数的“旅程”。他们可能先在社交媒体看到你，几天后搜索了你的"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"合辑","item":"https://viyi.cc/docs/"},{"@type":"ListItem","position":2,"name":"HubSpot 内容营销","item":"https://viyi.cc/docs/hubspot_content_marketing/"},{"@type":"ListItem","position":3,"name":"内容衡量与分析","item":"https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/"},{"@type":"ListItem","position":4,"name":"使用归因模型跟踪转化","item":"https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/04_tracking_conversions_with_attribution_models/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/04_tracking_conversions_with_attribution_models/"},"headline":"拨开数据的迷雾：如何用归因模型精准还原客户旅程 | 内容营销 | 与你分享我的眼睛","datePublished":"2025-12-18T00:00:00+00:00","dateModified":"2025-12-18T00:00:00+00:00","wordCount":3167,"publisher":{"@type":"Person","name":"枝因（viyi）","logo":{"@type":"ImageObject","url":"https://viyi.cc/images/icon.png"}},"description":"开篇引入 在现代营销的复杂网络中，一个陌生人变成忠实客户的过程，往往不是线性的，而是一场充满变数的“旅程”。他们可能先在社交媒体看到你，几天后搜索了你的"}</script><meta property="og:title" content="拨开数据的迷雾：如何用归因模型精准还原客户旅程 | 内容营销 | 与你分享我的眼睛"><meta property="og:type" content="article"><meta property="og:image" content="https://viyi.cc/images/icon.png"><meta property="og:url" content="https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/04_tracking_conversions_with_attribution_models/"><meta property="og:description" content="开篇引入 在现代营销的复杂网络中，一个陌生人变成忠实客户的过程，往往不是线性的，而是一场充满变数的“旅程”。他们可能先在社交媒体看到你，几天后搜索了你的"><meta property="og:locale" content="zh"><meta property="og:site_name" content="与你分享我的眼睛"><meta property="article:published_time" content="2025-12-18T00:00:00+00:00"><meta property="article:modified_time" content="2025-12-18T00:00:00+00:00"><meta property="article:section" content="docs"><body class="flex min-h-screen flex-col"><header class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"><div class="mx-auto w-full max-w-screen-xl"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=="Auto"||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName("html")[0].classList.add("dark")</script><nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0"><a href=/ class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
-<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
-<i class="fas fa-bars"></i></button><div id=target class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20"><div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0"><a href=/archives/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">归档</a>
-<a href=/docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item me-4">合辑</a>
-<a href=/about_me/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">关于我</a></div><div class=flex><div class="relative pt-4 md:pt-0"><div class="cursor-pointer hover:text-eureka" id=lightDarkMode><i class="fas fa-adjust"></i></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open></div><div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions><span class="px-4 py-1 hover:text-eureka" name=Light>浅色</span>
-<span class="px-4 py-1 hover:text-eureka" name=Dark>深色</span>
-<span class="px-4 py-1 hover:text-eureka" name=Auto>自动</span></div></div></div></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile></div></nav><script>let element=document.getElementById("lightDarkMode");storageColorScheme==null||storageColorScheme=="Auto"?document.addEventListener("DOMContentLoaded",()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove("fa-adjust"),element.firstElementChild.setAttribute("data-icon","sun"),element.firstElementChild.classList.add("fa-sun")):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove("fa-adjust"),element.firstElementChild.setAttribute("data-icon","moon"),element.firstElementChild.classList.add("fa-moon")),document.addEventListener("DOMContentLoaded",()=>{getcolorscheme(),switchBurger()})</script></div></header><main class="grow pt-16"><div class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8"><div class=lg:pt-12><div class="flex flex-col md:flex-row bg-secondary-bg rounded"><div class="md:w-1/4 lg:w-1/5 border-e"><div class="sticky top-16 pt-6"><div id=sidebar-title class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text"><span class=font-semibold>目录</span>
-<i class='fas fa-caret-right ms-1'></i></div><div id=sidebar-toc class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent"><div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded"><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/>HubSpot 内容营销</a></div><ul class=ps-6><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/01_business_storytelling/>商业故事讲述</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/01_business_storytelling/01_why_your_business_needs_a_story/>为什么企业需要一个故事</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/01_business_storytelling/02_what_do_you_need_to_tell_a_story/>讲好一个故事需要什么</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/01_business_storytelling/03_business_storytelling_in_action/>商业故事讲述实战</a></div></li></ul></li><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/02_content_creation_framework/>内容创作框架</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/02_content_creation_framework/01_why_does_your_business_need_a_content_creation_framework/>为什么企业需要内容创作框架</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/02_content_creation_framework/02_how_to_build_a_content_creation_framework/>如何构建内容创作框架</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/02_content_creation_framework/03_determining_the_resources_youll_need_for_a_content_creation/>确定内容创作所需的资源</a></div></li></ul></li><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/03_long_term_content_strategy/>长期内容策略规划</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/03_long_term_content_strategy/01_why_long_term_content_planning_is_important/>为什么长期内容规划很重要</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/03_long_term_content_strategy/02_whats_a_smart_goal_youre_working_towards/>你正在努力实现哪个 SMART 目标？</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/03_long_term_content_strategy/03_working_with_influencers_to_improve_your_content_strategy_efforts/>与影响者合作，提升内容策略成效</a></div></li></ul></li><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/04_content_ideation/>内容创意生成</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/04_content_ideation/01_why_do_you_need_a_process_to_generate_content_ideas/>为什么需要一套内容创意生成流程</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/04_content_ideation/02_where_do_ideas_come_from/>创意从何而来？</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/04_content_ideation/03_how_do_you_generate_ideas_for_content_creation/>如何为内容创作生成创意</a></div></li></ul></li><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/>高质量博客内容创作</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/01_why_blog_post_structure_matters/>为什么博客文章结构很重要</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/02_how_to_choose_a_topic_and_a_title_for_a_blog_post/>如何选择博客文章的主题和标题</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/03_how_to_create_and_structure_a_blog_post/>如何撰写并组织博客文章</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/05_how_to_embed_your_form_in_a_pop_up/>如何在弹窗中嵌入表单</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/06_what_are_some_effective_blog_writing_tips/>有哪些有效的博客写作技巧？</a></div></li></ul></li><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/>博客 SEO 优化</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/01_how_does_hubspot_use_blogging_to_rank_1_on_google/>HubSpot 如何利用博客在 Google 排名第一</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/02_building_topical_relevance/>构建主题相关性</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/03_how_hubspot_builds_topical_relevance/>HubSpot 如何构建主题相关性</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/04_optimizing_featured_snippets/>优化精选摘要</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/05_how_hubspot_optimizes_for_featured_snippets/>HubSpot 如何针对精选摘要进行优化</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/06_why_is_historical_optimization_a_key_seo_play/>为什么历史内容优化是关键的 SEO 策略？</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/07_how_to_get_started_with_historical_optimization/>如何开始进行历史内容优化</a></div></li></ul></li><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/07_content_repurposing/>内容再利用</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/07_content_repurposing/01_the_benefits_of_repurposing_content/>内容再利用的好处</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/07_content_repurposing/02_how_do_you_republish_content/>如何重新发布内容？</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/07_content_repurposing/03_how_do_you_repurpose_content/>如何进行内容再利用？</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/07_content_repurposing/04_how_to_repurpose_your_content_exponentially/>如何成倍扩大内容再利用的价值</a></div></li></ul></li><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/>主题集群与支柱页面</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/01_why_are_topic_clusters_important/>为什么主题集群很重要？</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/02_how_do_you_create_an_effective_topic_cluster/>如何创建有效的主题集群？</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/03_examples_of_commonly_used_pillar_page_types/>常见支柱页面类型示例</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/04_how_do_you_create_an_effective_pillar_page/>如何创建有效的支柱页面？</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/05_how_to_optimize_and_grow_your_pillar_pages_over_time/>如何持续优化和发展支柱页面</a></div></li></ul></li><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/09_video_marketing/>视频营销策略</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/09_video_marketing/01_why_should_you_create_engaging_videos/>为什么要制作引人入胜的视频？</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/09_video_marketing/02_how_to_use_video_throughout_the_inbound_methodology/>如何在集客营销方法论的各阶段使用视频</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/09_video_marketing/03_tips_for_getting_started_with_video_marketing/>视频营销入门技巧</a></div></li></ul></li><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/>客座博客策略</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/01_why_is_guest_blogging_a_critical_piece_of_your_blogging_strategy/>为什么客座博客是博客策略的关键组成部分？</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/02_how_to_create_a_guest_blogging_strategy/>如何制定客座博客策略</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/03_how_to_find_guest_blogging_opportunities/>如何寻找客座博客机会</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/04_how_to_secure_a_guest_blogging_spot/>如何争取客座博客发布机会</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/05_how_to_write_a_guest_blog_author_bio/>如何撰写客座博客作者简介</a></div></li></ul></li><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/11_content_promotion/>内容推广</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/11_content_promotion/01_building_a_promotional_plan/>制定内容推广计划</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/11_content_promotion/02_promoting_content_organically/>通过自然渠道推广内容</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/11_content_promotion/03_supplementing_organic_efforts_with_paid_promotion/>用付费推广补充自然推广</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/11_content_promotion/04_improving_your_content_promotion/>改进内容推广</a></div></li></ul></li><li class=py-2><div class=pb-2><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/>内容衡量与分析</a></div><ul class=ps-6><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/01_identifying_and_setting_goals/>识别并设定目标</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/02_organic_metrics_to_track/>需要跟踪的自然推广指标</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/03_paid_metrics_to_track/>需要跟踪的付费推广指标</a></div></li><li class=py-2><div><a class="text-eureka hover:text-eureka" href=https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/04_tracking_conversions_with_attribution_models/>使用归因模型跟踪转化</a></div></li><li class=py-2><div><a class=hover:text-eureka href=https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/05_communicating_content_performance/>汇报内容表现</a></div></li></ul></li></ul></div></div></div><div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8"><div class=flex><div class="w-full lg:w-3/4 px-6"><article class=prose><h1 class=mb-4>拨开数据的迷雾：如何用归因模型精准还原客户旅程</h1><div class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"><div class="me-6 my-2"><i class="fas fa-calendar me-1"></i>
-<span>2025-12-18</span></div><div class="me-6 my-2"><i class="fas fa-clock me-1"></i>
-<span>7 分钟阅读时长</span></div></div><p><strong>开篇引入</strong></p><p>在现代营销的复杂网络中，一个陌生人变成忠实客户的过程，往往不是线性的，而是一场充满变数的“旅程”。他们可能先在社交媒体看到你，几天后搜索了你的博客，最后通过邮件订阅下单。当转化发生时，究竟是哪个环节立了大功？是最初的偶遇，还是最后的临门一脚？</p><p>如果无法回答这个问题，营销预算的分配就如同“盲人摸象”。本篇文章将基于 HubSpot 的专业课程，深入剖析“归因模型（Attribution Models）”这一核心工具。这不仅仅是关于数据统计的技术，更是一门关于“理解人性决策路径”的艺术。通过本文，你将学会如何像侦探一样还原客户的真实足迹，并利用这些洞察成倍提升你的营销转化率。</p><hr><h2 id=归因模型的本质与价值>归因模型的本质与价值</h2><p><strong>[00:00-01:10]</strong></p><p>核心观点</p><p>归因模型是一套能够量化营销触点影响力的规则系统，它存在的根本目的是为了厘清从“陌生人”到“客户”这一完整旅程中的因果关系。</p><p><strong>深度阐述</strong></p><p>当我们谈论营销转化时，最头疼的往往不是“由于什么转化了”，而是“在转化的过程中，我们做的那么多努力，各自扮演了什么角色？”</p><p>视频作者首先指出，随着营销触点（Touchpoints）的增加，单一的判断标准已经失效。<strong>归因模型（Attribution Models）</strong> 应运而生，它本质上是一套算法规则，用来衡量不同营销渠道、不同内容资产在转化路径中的“功劳”大小。</p><ul><li><p>为什么要使用它？</p><p>想象一下，你的客户在购买前可能经历了由十几个触点组成的复杂网络：看了广告、读了公众号、刷了短视频、最后在官网下单。</p><ul><li><p>如果没有归因模型，你可能误以为最后那个“官网下单”的动作是唯一重要的，从而砍掉前面所有用于种草的预算。</p></li><li><p>有了归因模型，正如作者所言，我们才能 <em>&ldquo;to make sense of the entire journey from stranger to customer&rdquo;（理清从陌生人到客户的整个旅程）</em>。</p></li></ul></li><li><p>工具与实施</p><p>目前主流的营销软件（如 Google Analytics, HubSpot）都内置了强大的归因报告功能。这不仅是看一个数字，更是为了回答具体的商业问题：</p><ul><li><p>到底有多少线索（Leads）是首次通过博客进入视野的？</p></li><li><p>哪个渠道在“临门一脚”时最有效？</p></li><li><p>哪个促销活动真正促成了购买？</p></li></ul></li></ul><p><strong>重要原话</strong></p><blockquote><p>&ldquo;Attribution models are a set of rules that measure the impact of&mldr; to make sense of the entire journey from stranger to customer.&rdquo;</p><p>—— “归因模型是一套规则，用于衡量&mldr;以此理清从陌生人到客户的整个旅程。”</p></blockquote><hr><h2 id=常见归因模型全解析>常见归因模型全解析</h2><p><strong>[01:11-02:26]</strong></p><p>核心观点</p><p>不同的归因模型代表了不同的“营销价值观”，从侧重“初次相遇”的首次互动，到侧重“最终决策”的时间衰减，选择哪种模型取决于你想分析旅程的哪个阶段。</p><p><strong>深度阐述</strong></p><p>作者详细拆解了四种最经典的模型，每一种都对应着不同的分析逻辑：</p><ol><li><p><strong>首次触点归因 (First Touch Attribution)</strong></p><ul><li><p><strong>逻辑</strong>：将 100% 的功劳归结给客户<strong>第一次</strong>接触到品牌的触点。</p></li><li><p><strong>适用场景</strong>：当你关注“品牌知名度”或“获客源头”时。</p></li><li><p><strong>局限性</strong>：它极度强调“初次见面”，而完全忽略了后续的培育过程。比如，客户是因为一篇爆款文章关注你的，但之后看了十次产品介绍才买单，在这个模型下，产品介绍功劳为零。</p></li><li><p><strong>作者评价</strong>：虽然有偏差，但这是一种了解“是什么吸引人们进入你的大门”的简单有效方法。</p></li></ul></li><li><p><strong>末次触点与末次互动 (Last Touch & Last Interaction)</strong></p><ul><li><p><strong>末次触点 (Last Touch)</strong>：这是指客户在转化前，最后一次访问的内容资产。</p><ul><li><em>案例</em>：访客看了博客 -> 点击CTA -> 到达落地页 -> 转化。在这里，<strong>博客文章</strong>获得了全部功劳。</li></ul></li><li><p><strong>末次互动 (Last Interaction)</strong>：这指的是转化直接发生的那个具体动作。</p><ul><li><em>区别</em>：这更多用于评估具体的转化组件（如某个按钮、某个表单）的有效性。</li></ul></li></ul></li><li><p><strong>简单衰减/时间衰减模型 (Simple Decay / Time Decay)</strong></p><ul><li><p><strong>逻辑</strong>：距离转化时间越近的触点，获得的功劳权重越高。</p></li><li><p><strong>作者推荐</strong>：这是作者非常推崇的一种模型。</p></li><li><p><strong>背后的心理学</strong>：它假设客户的购买决策受到“近因效应”的影响最大。最近发生的互动（比如昨天的促销邮件）比三个月前的某次点击，对当下的购买决定影响更大。</p></li></ul></li><li><p><strong>线性模型 (Linear Attribution)</strong></p><ul><li><p><strong>逻辑</strong>：众生平等。路径上的每一个触点都获得相同的功劳。</p></li><li><p><strong>意义</strong>：这是一种“民主”的看法，承认每一个环节都不可或缺，适合用来观察整体营销生态的健康度。</p></li></ul></li></ol><p><strong>重要原话</strong></p><blockquote><p>&ldquo;I recommend using this model (Simple Decay) because it assumes that the purchase decision greatly influenced the decision to purchase.&rdquo;</p><p>—— “我推荐使用这个模型（简单衰减），因为它假设购买决策很大程度上受到了（临近购买时刻的）互动的影响。”</p></blockquote><hr><h2 id=策略实战如何用归因优化内容>策略实战——如何用归因优化内容</h2><p><strong>[02:26-04:00]</strong></p><p>核心观点</p><p>没有“正确”的模型，只有“适合”的问题。作者通过一个具体的 A/B 测试案例，展示了如何利用“末次触点模型”将线索转化率提升两倍。</p><p><strong>深度阐述</strong></p><p>这一部分是全篇的精华，作者从理论转向了实战。他提出了一个关键理念：<strong>你的分析目的决定了你该选什么模型。</strong></p><ul><li><p>实战案例背景</p><p>假设你的目标是优化内容策略以获取更多销售线索（Lead Generation）。你想知道哪种内容形式转化效率最高。此时，你应该选择 “末次触点模型” (Last Touch Attribution)，因为你关心的是转化前的最后一公里。</p></li><li><p>A/B 测试还原</p><p>作者设计了一个非常具体的实验，对比两种博客优化方案：</p><ul><li><p><strong>方案 A（传统路径）</strong>：在博客中添加 CTA（行动号召按钮） -> 用户点击 -> 跳转到独立的落地页（Landing Page） -> 填写表单下载资料。</p></li><li><p><strong>方案 B（原地转化）</strong>：在博客中直接嵌入弹出式表单（Pop-up Form） -> 用户无需离开博客页面即可填写并获取资料。</p></li></ul></li><li><p>数据洞察与决策</p><p>通过运行“末次触点”归因报告，结果显示：方案 B（弹出式表单）的转化线索数量是方案 A 的两倍。</p></li><li><p>得出的结论</p><p>数据告诉我们一个反直觉但深刻的道理：减少用户的跳转路径，比精心设计的落地页更重要。</p><p>基于这个归因结果，你可以自信地制定策略：将所有博客文章的优化方向，从“引导跳转”调整为“原地转化”。这就是归因模型带来的直接商业价值。</p></li></ul><p><strong>重要原话</strong></p><blockquote><p>&ldquo;You learn that blog posts optimized with a pop-up form convert twice as many leads as the CTA and landing page approach.&rdquo;</p><p>—— “你发现，用弹出式表单优化的博客文章，其转化的线索数量是 CTA 跳转落地页方式的两倍。”</p></blockquote><hr><h3 id=个人感受>个人感受</h3><p><strong>（还原作者的人文色彩）</strong></p><p>在整个讲解过程中，作者展现出一种极其<strong>务实且具有探索精神</strong>的态度。他没有神化某一种模型，而是反复强调“It depends”（视情况而定）。</p><p>这种态度让人感到安心——营销不是玄学，而是一种可以通过实验和数据来验证的科学。特别是当他讲述那个 A/B 测试的案例时，你能感受到一种“破案”般的快感：通过调整一个小小的变量（从跳转改为弹窗），就能带来两倍的增长。这传达出一种强烈的信念：<strong>答案往往就藏在数据里，只等你去发现。</strong></p><hr><h3 id=延伸思考>延伸思考</h3><p><strong>（基于视频内容的深度拓展）</strong></p><ol><li><p>归因的“黑暗地带”：</p><p>虽然视频介绍了基于 Cookie 和软件追踪的模型，但在当今隐私保护（如 iOS 隐私新政）日益严格的背景下，归因正变得越来越难。很多“暗社交”（Dark Social，如微信群、Slack 私聊分享）是软件追踪不到的。这提示我们，除了看软件报告，还需要结合“问卷调查”（如在注册时问一句“你是怎么知道我们的？”）来校准归因模型。</p></li><li><p>跨设备难题：</p><p>视频主要假设了较为线性的路径。但现实中，用户可能早上在地铁用手机看，晚上回家用电脑买。如果归因软件无法识别这是同一个人，模型就会失效。因此，打通 User ID（用户唯一标识）是实施精准归因的前置条件。</p></li><li><p>内容资产的复利：</p><p>作者提到的“衰减模型”虽然强调近期互动，但我们不能忽视那些位于漏斗顶端的“常青树内容”。它们虽然很少直接带来转化（在末次归因中得分低），但却是流量的源头活水。</p></li></ol><hr><h3 id=精华收获>精华收获</h3><p>如果你时间有限，请务必记住以下 4 点核心行动建议：</p><ol><li><p><strong>没有万能模型</strong>：</p><ul><li><p>想看谁把人<strong>领进门</strong>？看 <strong>First Touch（首次触点）</strong>。</p></li><li><p>想看谁<strong>促成了下单</strong>？看 <strong>Last Touch（末次触点）</strong>。</p></li><li><p>想看<strong>最有分量的助攻</strong>？看 <strong>Time Decay（时间衰减）</strong>。</p></li></ul></li><li><p>根据问题选工具：</p><p>在打开分析报告前，先问自己一个具体的问题（例如：“我的博客到底有没有带来客户？”），然后再去选择对应的模型，不要迷失在数据海洋中。</p></li><li><p>减少摩擦是王道：</p><p>案例证明，让用户少点击一次，转化率可能翻倍。在内容营销中，尽量尝试让用户在当前页面完成动作，而不是频繁跳转。</p></li><li><p>立即开始测试：</p><p>不要等到拥有完美数据才开始。现在就去挑选一个你最想优化的转化环节，运行两种不同的策略，用归因模型来判定胜负。</p></li></ol></article><div class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"><div><span class="text-primary-text block font-bold">上一页</span>
-<a href=https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/03_paid_metrics_to_track/ class=block>需要跟踪的付费推广指标</a></div><div class="mt-4 md:mt-0 md:text-right"><span class="text-primary-text block font-bold">下一页</span>
-<a href=https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/05_communicating_content_performance/ class=block>汇报内容表现</a></div></div></div><div class="hidden lg:block lg:w-1/4"><div class="bg-secondary-bg
-prose sticky top-16 z-10 hidden px-6 py-4 lg:block doc-toc-heading"><h3>本页内容</h3></div><div class="sticky-toc
-border-s
-hidden px-6 pb-6 lg:block doc-page-toc"><nav id=TableOfContents><ul><li><a href=#归因模型的本质与价值>归因模型的本质与价值</a></li><li><a href=#常见归因模型全解析>常见归因模型全解析</a></li><li><a href=#策略实战如何用归因优化内容>策略实战——如何用归因优化内容</a><ul><li><a href=#个人感受>个人感受</a></li><li><a href=#延伸思考>延伸思考</a></li><li><a href=#精华收获>精华收获</a></li></ul></li></ul></nav></div><style>.doc-toc-heading h3{margin:0;font-size:1rem}.doc-page-toc{max-height:calc(100vh - 10.5rem);overflow-y:auto;scrollbar-width:thin}.doc-page-toc nav>ul{padding-left:0;list-style:none;font-size:.875rem;line-height:1.45}.doc-page-toc li+li{margin-top:.625rem}.doc-page-toc a{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2}.doc-page-toc li.active>a{font-weight:600}</style><script>window.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".doc-page-toc #TableOfContents"),t=document.querySelectorAll("article.prose h2[id]");if(e&&t.length){const n=document.createElement("ul");t.forEach(e=>{const s=document.createElement("li"),t=document.createElement("a");t.setAttribute("href",`#${e.id}`),t.textContent=e.textContent,s.appendChild(t),n.appendChild(s)}),e.replaceChildren(n)}enableStickyToc()})</script></div></div></div></div></div><script>document.addEventListener("DOMContentLoaded",()=>{hljs.highlightAll(),changeSidebarHeight(),switchDocToc()})</script></div></div></main><footer class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b"><p class="text-sm text-tertiary-text">© 2023-2025
-<a href=https://viyi.cc/about_me/>枝因</a> ·
-Powered by the
-<a href=https://github.com/wangchucheng/hugo-eureka target=_blank rel="noopener noreferrer">Eureka</a>
-theme for
-<a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a></p></div></div></footer></body></html>
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>拨开数据的迷雾：如何用归因模型精准还原客户旅程 | 内容营销 | 与你分享我的眼睛</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.9285d3095319c9f1de8ca121e332e3d50ffa81a82b750989451699f045e74419ee32368863d7fae35ba67f133f6e31fa.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+<style id="site-theme-color">
+  :root {
+    --color-eureka: #a878c4;
+  }
+
+  .dark {
+    --color-eureka: #a878c4;
+  }
+</style>
+
+<style id="markdown-punctuation-overrides">
+   
+  .prose :where(code):not(:where([class~="not-prose"] *))::before,
+  .prose :where(code):not(:where([class~="not-prose"] *))::after,
+  .prose :where(blockquote p:first-of-type):not(:where([class~="not-prose"] *))::before,
+  .prose :where(blockquote p:last-of-type):not(:where([class~="not-prose"] *))::after {
+    content: none;
+  }
+</style>
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="开篇引入 在现代营销的复杂网络中，一个陌生人变成忠实客户的过程，往往不是线性的，而是一场充满变数的“旅程”。他们可能先在社交媒体看到你，几天后搜索了你的">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"合辑",
+      "item":"https://viyi.cc/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"HubSpot 内容营销",
+      "item":"https://viyi.cc/docs/hubspot_content_marketing/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"内容衡量与分析",
+      "item":"https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/"},{
+      "@type": "ListItem",
+      "position": 4 ,
+      "name":"使用归因模型跟踪转化",
+      "item":"https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/04_tracking_conversions_with_attribution_models/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/04_tracking_conversions_with_attribution_models/"
+    },
+    "headline": "拨开数据的迷雾：如何用归因模型精准还原客户旅程 | 内容营销 | 与你分享我的眼睛","datePublished": "2025-12-18T00:00:00+00:00",
+    "dateModified": "2025-12-18T00:00:00+00:00",
+    "wordCount":  3167 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "枝因（viyi）",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viyi.cc/images/icon.png"
+        }
+        },
+    "description": "开篇引入 在现代营销的复杂网络中，一个陌生人变成忠实客户的过程，往往不是线性的，而是一场充满变数的“旅程”。他们可能先在社交媒体看到你，几天后搜索了你的"
+}
+</script><meta property="og:title" content="拨开数据的迷雾：如何用归因模型精准还原客户旅程 | 内容营销 | 与你分享我的眼睛" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://viyi.cc/images/icon.png">
+
+
+<meta property="og:url" content="https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/04_tracking_conversions_with_attribution_models/" />
+
+
+
+
+<meta property="og:description" content="开篇引入 在现代营销的复杂网络中，一个陌生人变成忠实客户的过程，往往不是线性的，而是一场充满变数的“旅程”。他们可能先在社交媒体看到你，几天后搜索了你的" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="与你分享我的眼睛" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2025-12-18T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2025-12-18T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/archives/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">归档</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">合辑</a>
+            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+
+
+
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-e">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">目录</span>
+    <i class='fas fa-caret-right ms-1'></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pe-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ms-4 -me-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="https://viyi.cc/docs/hubspot_content_marketing/">HubSpot 内容营销</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/01_business_storytelling/">商业故事讲述</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/01_business_storytelling/01_why_your_business_needs_a_story/">为什么企业需要一个故事</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/01_business_storytelling/02_what_do_you_need_to_tell_a_story/">讲好一个故事需要什么</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/01_business_storytelling/03_business_storytelling_in_action/">商业故事讲述实战</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/02_content_creation_framework/">内容创作框架</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/02_content_creation_framework/01_why_does_your_business_need_a_content_creation_framework/">为什么企业需要内容创作框架</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/02_content_creation_framework/02_how_to_build_a_content_creation_framework/">如何构建内容创作框架</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/02_content_creation_framework/03_determining_the_resources_youll_need_for_a_content_creation/">确定内容创作所需的资源</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/03_long_term_content_strategy/">长期内容策略规划</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/03_long_term_content_strategy/01_why_long_term_content_planning_is_important/">为什么长期内容规划很重要</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/03_long_term_content_strategy/02_whats_a_smart_goal_youre_working_towards/">你正在努力实现哪个 SMART 目标？</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/03_long_term_content_strategy/03_working_with_influencers_to_improve_your_content_strategy_efforts/">与影响者合作，提升内容策略成效</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/04_content_ideation/">内容创意生成</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/04_content_ideation/01_why_do_you_need_a_process_to_generate_content_ideas/">为什么需要一套内容创意生成流程</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/04_content_ideation/02_where_do_ideas_come_from/">创意从何而来？</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/04_content_ideation/03_how_do_you_generate_ideas_for_content_creation/">如何为内容创作生成创意</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/">高质量博客内容创作</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/01_why_blog_post_structure_matters/">为什么博客文章结构很重要</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/02_how_to_choose_a_topic_and_a_title_for_a_blog_post/">如何选择博客文章的主题和标题</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/03_how_to_create_and_structure_a_blog_post/">如何撰写并组织博客文章</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/05_how_to_embed_your_form_in_a_pop_up/">如何在弹窗中嵌入表单</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/05_blog_content_creation/06_what_are_some_effective_blog_writing_tips/">有哪些有效的博客写作技巧？</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/">博客 SEO 优化</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/01_how_does_hubspot_use_blogging_to_rank_1_on_google/">HubSpot 如何利用博客在 Google 排名第一</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/02_building_topical_relevance/">构建主题相关性</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/03_how_hubspot_builds_topical_relevance/">HubSpot 如何构建主题相关性</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/04_optimizing_featured_snippets/">优化精选摘要</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/05_how_hubspot_optimizes_for_featured_snippets/">HubSpot 如何针对精选摘要进行优化</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/06_why_is_historical_optimization_a_key_seo_play/">为什么历史内容优化是关键的 SEO 策略？</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/06_blog_seo/07_how_to_get_started_with_historical_optimization/">如何开始进行历史内容优化</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/07_content_repurposing/">内容再利用</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/07_content_repurposing/01_the_benefits_of_repurposing_content/">内容再利用的好处</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/07_content_repurposing/02_how_do_you_republish_content/">如何重新发布内容？</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/07_content_repurposing/03_how_do_you_repurpose_content/">如何进行内容再利用？</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/07_content_repurposing/04_how_to_repurpose_your_content_exponentially/">如何成倍扩大内容再利用的价值</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/">主题集群与支柱页面</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/01_why_are_topic_clusters_important/">为什么主题集群很重要？</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/02_how_do_you_create_an_effective_topic_cluster/">如何创建有效的主题集群？</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/03_examples_of_commonly_used_pillar_page_types/">常见支柱页面类型示例</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/04_how_do_you_create_an_effective_pillar_page/">如何创建有效的支柱页面？</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/08_topic_clusters/05_how_to_optimize_and_grow_your_pillar_pages_over_time/">如何持续优化和发展支柱页面</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/09_video_marketing/">视频营销策略</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/09_video_marketing/01_why_should_you_create_engaging_videos/">为什么要制作引人入胜的视频？</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/09_video_marketing/02_how_to_use_video_throughout_the_inbound_methodology/">如何在集客营销方法论的各阶段使用视频</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/09_video_marketing/03_tips_for_getting_started_with_video_marketing/">视频营销入门技巧</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/">客座博客策略</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/01_why_is_guest_blogging_a_critical_piece_of_your_blogging_strategy/">为什么客座博客是博客策略的关键组成部分？</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/02_how_to_create_a_guest_blogging_strategy/">如何制定客座博客策略</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/03_how_to_find_guest_blogging_opportunities/">如何寻找客座博客机会</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/04_how_to_secure_a_guest_blogging_spot/">如何争取客座博客发布机会</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/10_guest_blogging/05_how_to_write_a_guest_blog_author_bio/">如何撰写客座博客作者简介</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/11_content_promotion/">内容推广</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/11_content_promotion/01_building_a_promotional_plan/">制定内容推广计划</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/11_content_promotion/02_promoting_content_organically/">通过自然渠道推广内容</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/11_content_promotion/03_supplementing_organic_efforts_with_paid_promotion/">用付费推广补充自然推广</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/11_content_promotion/04_improving_your_content_promotion/">改进内容推广</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/">内容衡量与分析</a>
+        </div>
+        
+        
+<ul class="ps-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/01_identifying_and_setting_goals/">识别并设定目标</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/02_organic_metrics_to_track/">需要跟踪的自然推广指标</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/03_paid_metrics_to_track/">需要跟踪的付费推广指标</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/04_tracking_conversions_with_attribution_models/">使用归因模型跟踪转化</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/05_communicating_content_performance/">汇报内容表现</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    <article class="prose">
+  <h1 class="mb-4">拨开数据的迷雾：如何用归因模型精准还原客户旅程</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      
+        
+      
+      >2025-12-18</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>7 分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p><strong>开篇引入</strong></p>
+<p>在现代营销的复杂网络中，一个陌生人变成忠实客户的过程，往往不是线性的，而是一场充满变数的“旅程”。他们可能先在社交媒体看到你，几天后搜索了你的博客，最后通过邮件订阅下单。当转化发生时，究竟是哪个环节立了大功？是最初的偶遇，还是最后的临门一脚？</p>
+<p>如果无法回答这个问题，营销预算的分配就如同“盲人摸象”。本篇文章将基于 HubSpot 的专业课程，深入剖析“归因模型（Attribution Models）”这一核心工具。这不仅仅是关于数据统计的技术，更是一门关于“理解人性决策路径”的艺术。通过本文，你将学会如何像侦探一样还原客户的真实足迹，并利用这些洞察成倍提升你的营销转化率。</p>
+<hr>
+<h2 id="归因模型的本质与价值">归因模型的本质与价值</h2>
+<p><strong>[00:00-01:10]</strong></p>
+<p>核心观点</p>
+<p>归因模型是一套能够量化营销触点影响力的规则系统，它存在的根本目的是为了厘清从“陌生人”到“客户”这一完整旅程中的因果关系。</p>
+<p><strong>深度阐述</strong></p>
+<p>当我们谈论营销转化时，最头疼的往往不是“由于什么转化了”，而是“在转化的过程中，我们做的那么多努力，各自扮演了什么角色？”</p>
+<p>视频作者首先指出，随着营销触点（Touchpoints）的增加，单一的判断标准已经失效。<strong>归因模型（Attribution Models）</strong> 应运而生，它本质上是一套算法规则，用来衡量不同营销渠道、不同内容资产在转化路径中的“功劳”大小。</p>
+<ul>
+<li>
+<p>为什么要使用它？</p>
+<p>想象一下，你的客户在购买前可能经历了由十几个触点组成的复杂网络：看了广告、读了公众号、刷了短视频、最后在官网下单。</p>
+<ul>
+<li>
+<p>如果没有归因模型，你可能误以为最后那个“官网下单”的动作是唯一重要的，从而砍掉前面所有用于种草的预算。</p>
+</li>
+<li>
+<p>有了归因模型，正如作者所言，我们才能 <em>&ldquo;to make sense of the entire journey from stranger to customer&rdquo;（理清从陌生人到客户的整个旅程）</em>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>工具与实施</p>
+<p>目前主流的营销软件（如 Google Analytics, HubSpot）都内置了强大的归因报告功能。这不仅是看一个数字，更是为了回答具体的商业问题：</p>
+<ul>
+<li>
+<p>到底有多少线索（Leads）是首次通过博客进入视野的？</p>
+</li>
+<li>
+<p>哪个渠道在“临门一脚”时最有效？</p>
+</li>
+<li>
+<p>哪个促销活动真正促成了购买？</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>重要原话</strong></p>
+<blockquote>
+<p>&ldquo;Attribution models are a set of rules that measure the impact of&hellip; to make sense of the entire journey from stranger to customer.&rdquo;</p>
+<p>—— “归因模型是一套规则，用于衡量&hellip;以此理清从陌生人到客户的整个旅程。”</p>
+</blockquote>
+<hr>
+<h2 id="常见归因模型全解析">常见归因模型全解析</h2>
+<p><strong>[01:11-02:26]</strong></p>
+<p>核心观点</p>
+<p>不同的归因模型代表了不同的“营销价值观”，从侧重“初次相遇”的首次互动，到侧重“最终决策”的时间衰减，选择哪种模型取决于你想分析旅程的哪个阶段。</p>
+<p><strong>深度阐述</strong></p>
+<p>作者详细拆解了四种最经典的模型，每一种都对应着不同的分析逻辑：</p>
+<ol>
+<li>
+<p><strong>首次触点归因 (First Touch Attribution)</strong></p>
+<ul>
+<li>
+<p><strong>逻辑</strong>：将 100% 的功劳归结给客户<strong>第一次</strong>接触到品牌的触点。</p>
+</li>
+<li>
+<p><strong>适用场景</strong>：当你关注“品牌知名度”或“获客源头”时。</p>
+</li>
+<li>
+<p><strong>局限性</strong>：它极度强调“初次见面”，而完全忽略了后续的培育过程。比如，客户是因为一篇爆款文章关注你的，但之后看了十次产品介绍才买单，在这个模型下，产品介绍功劳为零。</p>
+</li>
+<li>
+<p><strong>作者评价</strong>：虽然有偏差，但这是一种了解“是什么吸引人们进入你的大门”的简单有效方法。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>末次触点与末次互动 (Last Touch &amp; Last Interaction)</strong></p>
+<ul>
+<li>
+<p><strong>末次触点 (Last Touch)</strong>：这是指客户在转化前，最后一次访问的内容资产。</p>
+<ul>
+<li><em>案例</em>：访客看了博客 -&gt; 点击CTA -&gt; 到达落地页 -&gt; 转化。在这里，<strong>博客文章</strong>获得了全部功劳。</li>
+</ul>
+</li>
+<li>
+<p><strong>末次互动 (Last Interaction)</strong>：这指的是转化直接发生的那个具体动作。</p>
+<ul>
+<li><em>区别</em>：这更多用于评估具体的转化组件（如某个按钮、某个表单）的有效性。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>简单衰减/时间衰减模型 (Simple Decay / Time Decay)</strong></p>
+<ul>
+<li>
+<p><strong>逻辑</strong>：距离转化时间越近的触点，获得的功劳权重越高。</p>
+</li>
+<li>
+<p><strong>作者推荐</strong>：这是作者非常推崇的一种模型。</p>
+</li>
+<li>
+<p><strong>背后的心理学</strong>：它假设客户的购买决策受到“近因效应”的影响最大。最近发生的互动（比如昨天的促销邮件）比三个月前的某次点击，对当下的购买决定影响更大。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>线性模型 (Linear Attribution)</strong></p>
+<ul>
+<li>
+<p><strong>逻辑</strong>：众生平等。路径上的每一个触点都获得相同的功劳。</p>
+</li>
+<li>
+<p><strong>意义</strong>：这是一种“民主”的看法，承认每一个环节都不可或缺，适合用来观察整体营销生态的健康度。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>重要原话</strong></p>
+<blockquote>
+<p>&ldquo;I recommend using this model (Simple Decay) because it assumes that the purchase decision greatly influenced the decision to purchase.&rdquo;</p>
+<p>—— “我推荐使用这个模型（简单衰减），因为它假设购买决策很大程度上受到了（临近购买时刻的）互动的影响。”</p>
+</blockquote>
+<hr>
+<h2 id="策略实战如何用归因优化内容">策略实战——如何用归因优化内容</h2>
+<p><strong>[02:26-04:00]</strong></p>
+<p>核心观点</p>
+<p>没有“正确”的模型，只有“适合”的问题。作者通过一个具体的 A/B 测试案例，展示了如何利用“末次触点模型”将线索转化率提升两倍。</p>
+<p><strong>深度阐述</strong></p>
+<p>这一部分是全篇的精华，作者从理论转向了实战。他提出了一个关键理念：<strong>你的分析目的决定了你该选什么模型。</strong></p>
+<ul>
+<li>
+<p>实战案例背景</p>
+<p>假设你的目标是优化内容策略以获取更多销售线索（Lead Generation）。你想知道哪种内容形式转化效率最高。此时，你应该选择 “末次触点模型” (Last Touch Attribution)，因为你关心的是转化前的最后一公里。</p>
+</li>
+<li>
+<p>A/B 测试还原</p>
+<p>作者设计了一个非常具体的实验，对比两种博客优化方案：</p>
+<ul>
+<li>
+<p><strong>方案 A（传统路径）</strong>：在博客中添加 CTA（行动号召按钮） -&gt; 用户点击 -&gt; 跳转到独立的落地页（Landing Page） -&gt; 填写表单下载资料。</p>
+</li>
+<li>
+<p><strong>方案 B（原地转化）</strong>：在博客中直接嵌入弹出式表单（Pop-up Form） -&gt; 用户无需离开博客页面即可填写并获取资料。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>数据洞察与决策</p>
+<p>通过运行“末次触点”归因报告，结果显示：方案 B（弹出式表单）的转化线索数量是方案 A 的两倍。</p>
+</li>
+<li>
+<p>得出的结论</p>
+<p>数据告诉我们一个反直觉但深刻的道理：减少用户的跳转路径，比精心设计的落地页更重要。</p>
+<p>基于这个归因结果，你可以自信地制定策略：将所有博客文章的优化方向，从“引导跳转”调整为“原地转化”。这就是归因模型带来的直接商业价值。</p>
+</li>
+</ul>
+<p><strong>重要原话</strong></p>
+<blockquote>
+<p>&ldquo;You learn that blog posts optimized with a pop-up form convert twice as many leads as the CTA and landing page approach.&rdquo;</p>
+<p>—— “你发现，用弹出式表单优化的博客文章，其转化的线索数量是 CTA 跳转落地页方式的两倍。”</p>
+</blockquote>
+<hr>
+<h3 id="个人感受">个人感受</h3>
+<p><strong>（还原作者的人文色彩）</strong></p>
+<p>在整个讲解过程中，作者展现出一种极其<strong>务实且具有探索精神</strong>的态度。他没有神化某一种模型，而是反复强调“It depends”（视情况而定）。</p>
+<p>这种态度让人感到安心——营销不是玄学，而是一种可以通过实验和数据来验证的科学。特别是当他讲述那个 A/B 测试的案例时，你能感受到一种“破案”般的快感：通过调整一个小小的变量（从跳转改为弹窗），就能带来两倍的增长。这传达出一种强烈的信念：<strong>答案往往就藏在数据里，只等你去发现。</strong></p>
+<hr>
+<h3 id="延伸思考">延伸思考</h3>
+<p><strong>（基于视频内容的深度拓展）</strong></p>
+<ol>
+<li>
+<p>归因的“黑暗地带”：</p>
+<p>虽然视频介绍了基于 Cookie 和软件追踪的模型，但在当今隐私保护（如 iOS 隐私新政）日益严格的背景下，归因正变得越来越难。很多“暗社交”（Dark Social，如微信群、Slack 私聊分享）是软件追踪不到的。这提示我们，除了看软件报告，还需要结合“问卷调查”（如在注册时问一句“你是怎么知道我们的？”）来校准归因模型。</p>
+</li>
+<li>
+<p>跨设备难题：</p>
+<p>视频主要假设了较为线性的路径。但现实中，用户可能早上在地铁用手机看，晚上回家用电脑买。如果归因软件无法识别这是同一个人，模型就会失效。因此，打通 User ID（用户唯一标识）是实施精准归因的前置条件。</p>
+</li>
+<li>
+<p>内容资产的复利：</p>
+<p>作者提到的“衰减模型”虽然强调近期互动，但我们不能忽视那些位于漏斗顶端的“常青树内容”。它们虽然很少直接带来转化（在末次归因中得分低），但却是流量的源头活水。</p>
+</li>
+</ol>
+<hr>
+<h3 id="精华收获">精华收获</h3>
+<p>如果你时间有限，请务必记住以下 4 点核心行动建议：</p>
+<ol>
+<li>
+<p><strong>没有万能模型</strong>：</p>
+<ul>
+<li>
+<p>想看谁把人<strong>领进门</strong>？看 <strong>First Touch（首次触点）</strong>。</p>
+</li>
+<li>
+<p>想看谁<strong>促成了下单</strong>？看 <strong>Last Touch（末次触点）</strong>。</p>
+</li>
+<li>
+<p>想看<strong>最有分量的助攻</strong>？看 <strong>Time Decay（时间衰减）</strong>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>根据问题选工具：</p>
+<p>在打开分析报告前，先问自己一个具体的问题（例如：“我的博客到底有没有带来客户？”），然后再去选择对应的模型，不要迷失在数据海洋中。</p>
+</li>
+<li>
+<p>减少摩擦是王道：</p>
+<p>案例证明，让用户少点击一次，转化率可能翻倍。在内容营销中，尽量尝试让用户在当前页面完成动作，而不是频繁跳转。</p>
+</li>
+<li>
+<p>立即开始测试：</p>
+<p>不要等到拥有完美数据才开始。现在就去挑选一个你最想优化的转化环节，运行两种不同的策略，用归因模型来判定胜负。</p>
+</li>
+</ol>
+
+</article>
+
+                    
+                    
+                    
+                        
+                    
+
+                    
+
+
+
+                    
+                        
+
+
+
+
+
+
+
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+        
+      
+      
+        
+      
+    
+  
+    
+  
+
+
+
+
+
+
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold">上一页</span>
+        <a href="https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/03_paid_metrics_to_track/" class="block">需要跟踪的付费推广指标</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="https://viyi.cc/docs/hubspot_content_marketing/12_content_measurement/05_communicating_content_performance/" class="block">汇报内容表现</a>
+      
+    </div>
+  </div>
+
+
+                    
+                    
+
+
+
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div
+  class="
+    bg-secondary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block doc-toc-heading"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc 
+    border-s
+   hidden px-6 pb-6 lg:block doc-page-toc"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#归因模型的本质与价值">归因模型的本质与价值</a></li>
+    <li><a href="#常见归因模型全解析">常见归因模型全解析</a></li>
+    <li><a href="#策略实战如何用归因优化内容">策略实战——如何用归因优化内容</a>
+      <ul>
+        <li><a href="#个人感受">个人感受</a></li>
+        <li><a href="#延伸思考">延伸思考</a></li>
+        <li><a href="#精华收获">精华收获</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+<style>
+  .doc-toc-heading h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .doc-page-toc {
+    max-height: calc(100vh - 10.5rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+
+  .doc-page-toc nav > ul {
+    padding-left: 0;
+    list-style: none;
+    font-size: 0.875rem;
+    line-height: 1.45;
+  }
+
+  .doc-page-toc li + li {
+    margin-top: 0.625rem;
+  }
+
+  .doc-page-toc a {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .doc-page-toc li.active > a {
+    font-weight: 600;
+  }
+</style>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    
+    const toc = document.querySelector(".doc-page-toc #TableOfContents");
+    const headings = document.querySelectorAll("article.prose h2[id]");
+    if (toc && headings.length) {
+      const list = document.createElement("ul");
+      headings.forEach((heading) => {
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        link.setAttribute("href", `#${heading.id}`);
+        link.textContent = heading.textContent;
+        item.appendChild(link);
+        list.appendChild(item);
+      });
+      toc.replaceChildren(list);
+    }
+    
+    enableStickyToc();
+  });
+</script>
+
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        hljs.highlightAll();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">
+        
+        © 2023-2025 
+        <a href="https://viyi.cc/about_me/">枝因</a> ·  
+        Powered by the 
+        <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" rel="noopener noreferrer">Eureka</a> 
+        theme for 
+        <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+    </p>
+</div>
+
+  </div>
+    </footer>
+  </body>
+</html>
