@@ -1,315 +1,19 @@
-<!DOCTYPE html>
-<html
-  lang="zh"
-  dir="ltr"
-  
-><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<title>新晋社畜雇佣 AI 实录 | 与你分享我的眼睛</title>
-
-<meta name="generator" content="Hugo Eureka 0.9.3" />
-<link rel="stylesheet" href="https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
-<script defer src="https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload"
-  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
-  as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
-   media="print"
-  onload="this.media='all';this.onload=null" crossorigin>
-<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
-   crossorigin></script>
-  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
-     crossorigin></script>
-<link rel="stylesheet" href="https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
-
-
-<script defer type="text/javascript" src="https://viyi.cc/js/fontawesome.min.9285d3095319c9f1de8ca121e332e3d50ffa81a82b750989451699f045e74419ee32368863d7fae35ba67f133f6e31fa.js"></script>
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
-   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
-  onload="this.media='all';this.onload=null" crossorigin>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
-  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
-   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    renderMathInElement(document.body, {
-      delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "$", right: "$", display: false },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true }
-      ],
-    });
-  });
-</script>
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
-  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
-
-<style id="site-theme-color">
-  :root {
-    --color-eureka: #a878c4;
-  }
-
-  .dark {
-    --color-eureka: #a878c4;
-  }
-</style>
-
-<link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
-
-<meta name="description"
-  content="本文记录了一位绝望的社畜利用 AI 完成 Dirty work 自动化的过程。">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1 ,
-      "name":"Posts",
-      "item":"https://viyi.cc/posts/"},{
-      "@type": "ListItem",
-      "position": 2 ,
-      "name":"新晋社畜雇佣 AI 实录",
-      "item":"https://viyi.cc/a_record_of_the_new_burnout_worker_hiring_ai/"}]
-}
-</script>
-
-
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://viyi.cc/a_record_of_the_new_burnout_worker_hiring_ai/"
-    },
-    "headline": "新晋社畜雇佣 AI 实录 | 与你分享我的眼睛","datePublished": "2025-01-26T00:00:00+00:00",
-    "dateModified": "2025-01-26T00:00:00+00:00",
-    "wordCount":  6616 ,
-    "author": {
-        "@type": "Person",
-        "name": "viyi"
-    },
-    "publisher": {
-        "@type": "Person",
-        "name": "枝因（viyi）",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://viyi.cc/images/icon.png"
-        }
-        },
-    "description": "本文记录了一位绝望的社畜利用 AI 完成 Dirty work 自动化的过程。"
-}
-</script><meta property="og:title" content="新晋社畜雇佣 AI 实录 | 与你分享我的眼睛" />
-<meta property="og:type" content="article" />
-
-
-<meta property="og:image" content="https://viyi.cc/images/icon.png">
-
-
-<meta property="og:url" content="https://viyi.cc/a_record_of_the_new_burnout_worker_hiring_ai/" />
-
-
-
-<meta property="og:description" content="本文记录了一位绝望的社畜利用 AI 完成 Dirty work 自动化的过程。" />
-
-
-
-<meta property="og:locale" content="zh" />
-
-
-
-
-<meta property="og:site_name" content="与你分享我的眼睛" />
-
-
-
-
-
-
-<meta property="article:published_time" content="2025-01-26T00:00:00&#43;00:00" />
-
-
-<meta property="article:modified_time" content="2025-01-26T00:00:00&#43;00:00" />
-
-
-
-<meta property="article:section" content="posts" />
-
-
-<meta property="article:tag" content="AI" />
-
-<meta property="article:tag" content="Python" />
-
-
-
-
-
-
-  <body class="flex min-h-screen flex-col">
-    <header
-      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
-    >
-      <div class="mx-auto w-full max-w-screen-xl"><script>
-    let storageColorScheme = localStorage.getItem("lightDarkMode")
-    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
-        document.getElementsByTagName('html')[0].classList.add('dark')
-    }
-</script>
-<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
-    <a href="/" class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
-    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
-        <i class="fas fa-bars"></i>
-    </button>
-
-    <div id="target"
-        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
-        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
-            <a href="/archives/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">归档</a>
-            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">合辑</a>
-            <a href="/about_me/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
-        </div>
-
-        <div class="flex">
-            <div class="relative pt-4 md:pt-0">
-                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
-                    <i class="fas fa-adjust"></i>
-                </div>
-                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
-                </div>
-                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
-                    id='lightDarkOptions'>
-                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
-                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
-                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
-    </div>
-
-</nav>
-<script>
-    
-    let element = document.getElementById('lightDarkMode')
-    if (storageColorScheme == null || storageColorScheme == 'Auto') {
-        document.addEventListener('DOMContentLoaded', () => {
-            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
-        })
-    } else if (storageColorScheme == "Light") {
-        element.firstElementChild.classList.remove('fa-adjust')
-        element.firstElementChild.setAttribute("data-icon", 'sun')
-        element.firstElementChild.classList.add('fa-sun')
-    } else if (storageColorScheme == "Dark") {
-        element.firstElementChild.classList.remove('fa-adjust')
-        element.firstElementChild.setAttribute("data-icon", 'moon')
-        element.firstElementChild.classList.add('fa-moon')
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        getcolorscheme();
-        switchBurger();
-    });
-</script>
-</div>
-    </header>
-    <main class="grow pt-16">
-        <div class="pl-scrollbar">
-          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
-  
-  
-  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
-    <div
-      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
-    >
-      <article class="prose">
-  <h1 class="mb-4">新晋社畜雇佣 AI 实录</h1>
-
-  <div
-  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
->
-  <div class="me-6 my-2">
-    <i class="fas fa-calendar me-1"></i>
-    <span
-      
-        
-      
-      >2025-01-26</span
-    >
-  </div>
-  <div class="me-6 my-2">
-    <i class="fas fa-clock me-1"></i>
-    <span>14 分钟阅读时长</span>
-  </div>
-
-  
-    <div class="me-6 my-2">
-      <i class="fas fa-folder me-1"></i>
-      
-        <a href="https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/" class="hover:text-eureka"
-          >札记</a
-        >
-      
-    </div>
-  
-
-  
-</div>
-
-
-  
-  
-
-  <blockquote>
-<p>我们觉得，没有必要因为世界表现得荒谬，我们就随着它一起来做荒谬之事。——斯蒂芬·茨威格「昨日的世界」</p>
-</blockquote>
-<p>诚然，我知道一份工作里不可避免的会存在 Dirty work，但我确实没料到它占据了绝大部分。作为某个头部博主团队里的新媒体运营，我日常工作里最无聊的是，监测视频情况、检查是否达成 KPI 并且定时收录相关数据。</p>
-<p>老板娘理直气壮地要求我，就算是周五发视频，周末也要“时不时”看一下数据。是的，就算是双休也并不代表我拥有离线权🙂。我的职业素养告诉我，这确实是应当的，视频发出并不代表这个项目结束了，运营维护和数据分析也很重要。</p>
-<p>如果我有对应的职权，可以根据数据情况做进一步的应对，我想它不会显得那么无聊。事实上，我既没有预算用于投流，也无法参与内容制作，连视频的标封也无权过问。甚至，在我对视频评论区做文本情感分析的时候，她对着数据表评价了一句「没必要」。</p>
-<p>因此，我想她只是需要我转播数据情况给她。</p>
-<p>理论上来说，这件事并不需要耗费太多时间。它只是很琐碎，B 站、微博、公众号、抖音、小红书、视频号，光是简中就有 6 个平台，再加上海外的 YouTube——这意味着我需要汇总 7 个平台的播放量以及相关的互动数据（实际上分发总计是 12 个平台）。</p>
-<p>与此同时，我也需要关注这些平台里的评论，是否有观众指出视频中的片源问题和事实性错误，抑或是对论证过程、测试细节的质疑。这些有损品牌形象的评论，只会占非常小的比例，但一旦出现又没有及时响应，很容易造成舆情危机。当然，考虑到在各个平台影响力不同，我通常也只关注 B 站，顺带看看微博和 YouTube。</p>
-<p>这两件事让这份工作很大程度上变成了 <a href="https://www.marxists.org/chinese/david-graeber/2018/02.htm">Bullshit Jobs</a>，转播数据情况是在充当老板娘的 flunky，而紧盯评论区通常都是在给制作团队当 duct taper。</p>
-<p>我们大多数时候换源是因为评论区指出画面标注错误、剪辑存在误导性、字幕错误等片源问题，而如果这个团队有合理的审片流程，这些显然都可以避免。很不幸，我目睹了排期紧张导致无法预留出内审时间的项目管理惨状，再加上曾经因为推动内审成为那个被 Shooting 的 The Messenger，现在只能表示无能为力。</p>
-<p>这篇文章并不是为了抱怨这份工作，尽管我对这些琐碎的工作内容感到厌烦，但还是试图做点什么让它不那么无聊，比如利用自动化工具。</p>
-<h2 id="定时转播视频数据">定时转播视频数据</h2>
-<h3 id="自动化获取数据">自动化获取数据</h3>
-<p>为了避免重复造轮子，先做点简单的调研。如果在搜索引擎查询「社媒矩阵管理」，能够查询到许多工具。这些都是 To B 的服务商，很显然，被雇佣的我大概率比这些工具便宜(。</p>
-<p>所幸我只需要监测视频数据，听起来很简单——只需要定时获取各个视频平台的数据，再转播到飞书就可以了。实现起来也不难，如果平台足够开放的话。</p>
-<p>虽然这点小需求不涉及什么复杂的技术栈，但起码得选定某种编程语言实现。考虑到 Python 的库支持足够丰富……从零开始学 Python，启动(bushi。如果真的从零开始学，大概这篇文章要再难产久一点。事实上，后文出现的所有代码 ，基本都是 AI 完成的，感谢 Monica 的黑五折扣🙏。</p>
-<p>长视频平台中，最重要的莫过于 bilibili 和 YouTube。所幸这俩都很友好，再加上 <a href="https://github.com/Nemo2011/bilibili-api">bilibili-api</a> 和 <a href="https://github.com/ytdl-org/youtube-dl">youtube-dl</a> 也是很完善的库，很容易获取到特定视频的播放量和点赞等数据。</p>
-<p>B 站特定视频数据抓取的示例代码如下：</p>
-<pre><code class="language-python">import asyncio
+<!doctype html><html lang=zh dir=ltr><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>新晋社畜雇佣 AI 实录 | 与你分享我的眼睛</title><meta name=generator content="Hugo Eureka 0.9.3"><link rel=stylesheet href=https://viyi.cc/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css><script defer src=https://viyi.cc/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js></script>
+<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto+Serif+SC:wght@400;600;700&amp;display=swap" as=style onload='this.onload=null,this.rel="stylesheet"'><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js crossorigin></script>
+<link rel=stylesheet href=https://viyi.cc/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css media=print onload='this.media="all",this.onload=null'><script defer type=text/javascript src=https://viyi.cc/js/fontawesome.min.9285d3095319c9f1de8ca121e332e3d50ffa81a82b750989451699f045e74419ee32368863d7fae35ba67f133f6e31fa.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css integrity=sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js integrity=sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script><script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js integrity=sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0 crossorigin></script><style id=site-theme-color>:root{--color-eureka:#a878c4}.dark{--color-eureka:#a878c4}</style><style id=markdown-punctuation-overrides>.prose :where(code):not(:where([class~=not-prose] *))::before,.prose :where(code):not(:where([class~=not-prose] *))::after,.prose :where(blockquote p:first-of-type):not(:where([class~=not-prose] *))::before,.prose :where(blockquote p:last-of-type):not(:where([class~=not-prose] *))::after{content:none}</style><link rel=icon type=image/png sizes=32x32 href=https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png><link rel=apple-touch-icon sizes=180x180 href=https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png><meta name=description content="本文记录了一位绝望的社畜利用 AI 完成 Dirty work 自动化的过程。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://viyi.cc/posts/"},{"@type":"ListItem","position":2,"name":"新晋社畜雇佣 AI 实录","item":"https://viyi.cc/a_record_of_the_new_burnout_worker_hiring_ai/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://viyi.cc/a_record_of_the_new_burnout_worker_hiring_ai/"},"headline":"新晋社畜雇佣 AI 实录 | 与你分享我的眼睛","datePublished":"2025-01-26T00:00:00+00:00","dateModified":"2025-01-26T00:00:00+00:00","wordCount":6616,"author":{"@type":"Person","name":"viyi"},"publisher":{"@type":"Person","name":"枝因（viyi）","logo":{"@type":"ImageObject","url":"https://viyi.cc/images/icon.png"}},"description":"本文记录了一位绝望的社畜利用 AI 完成 Dirty work 自动化的过程。"}</script><meta property="og:title" content="新晋社畜雇佣 AI 实录 | 与你分享我的眼睛"><meta property="og:type" content="article"><meta property="og:image" content="https://viyi.cc/images/icon.png"><meta property="og:url" content="https://viyi.cc/a_record_of_the_new_burnout_worker_hiring_ai/"><meta property="og:description" content="本文记录了一位绝望的社畜利用 AI 完成 Dirty work 自动化的过程。"><meta property="og:locale" content="zh"><meta property="og:site_name" content="与你分享我的眼睛"><meta property="article:published_time" content="2025-01-26T00:00:00+00:00"><meta property="article:modified_time" content="2025-01-26T00:00:00+00:00"><meta property="article:section" content="posts"><meta property="article:tag" content="AI"><meta property="article:tag" content="Python"><body class="flex min-h-screen flex-col"><header class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"><div class="mx-auto w-full max-w-screen-xl"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=="Auto"||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName("html")[0].classList.add("dark")</script><nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0"><a href=/ class="me-6 text-primary-text text-xl font-bold">与你分享我的眼睛</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i></button><div id=target class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20"><div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0"><a href=/archives/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">归档</a>
+<a href=/docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">合辑</a>
+<a href=/about_me/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">关于我</a></div><div class=flex><div class="relative pt-4 md:pt-0"><div class="cursor-pointer hover:text-eureka" id=lightDarkMode><i class="fas fa-adjust"></i></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open></div><div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions><span class="px-4 py-1 hover:text-eureka" name=Light>浅色</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>深色</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>自动</span></div></div></div></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile></div></nav><script>let element=document.getElementById("lightDarkMode");storageColorScheme==null||storageColorScheme=="Auto"?document.addEventListener("DOMContentLoaded",()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove("fa-adjust"),element.firstElementChild.setAttribute("data-icon","sun"),element.firstElementChild.classList.add("fa-sun")):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove("fa-adjust"),element.firstElementChild.setAttribute("data-icon","moon"),element.firstElementChild.classList.add("fa-moon")),document.addEventListener("DOMContentLoaded",()=>{getcolorscheme(),switchBurger()})</script></div></header><main class="grow pt-16"><div class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8"><div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12"><div class="bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"><article class=prose><h1 class=mb-4>新晋社畜雇佣 AI 实录</h1><div class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"><div class="me-6 my-2"><i class="fas fa-calendar me-1"></i>
+<span>2025-01-26</span></div><div class="me-6 my-2"><i class="fas fa-clock me-1"></i>
+<span>14 分钟阅读时长</span></div><div class="me-6 my-2"><i class="fas fa-folder me-1"></i>
+<a href=https://viyi.cc/categories/%E6%9C%AD%E8%AE%B0/ class=hover:text-eureka>札记</a></div></div><blockquote><p>我们觉得，没有必要因为世界表现得荒谬，我们就随着它一起来做荒谬之事。——斯蒂芬·茨威格「昨日的世界」</p></blockquote><p>诚然，我知道一份工作里不可避免的会存在 Dirty work，但我确实没料到它占据了绝大部分。作为某个头部博主团队里的新媒体运营，我日常工作里最无聊的是，监测视频情况、检查是否达成 KPI 并且定时收录相关数据。</p><p>老板娘理直气壮地要求我，就算是周五发视频，周末也要“时不时”看一下数据。是的，就算是双休也并不代表我拥有离线权🙂。我的职业素养告诉我，这确实是应当的，视频发出并不代表这个项目结束了，运营维护和数据分析也很重要。</p><p>如果我有对应的职权，可以根据数据情况做进一步的应对，我想它不会显得那么无聊。事实上，我既没有预算用于投流，也无法参与内容制作，连视频的标封也无权过问。甚至，在我对视频评论区做文本情感分析的时候，她对着数据表评价了一句「没必要」。</p><p>因此，我想她只是需要我转播数据情况给她。</p><p>理论上来说，这件事并不需要耗费太多时间。它只是很琐碎，B 站、微博、公众号、抖音、小红书、视频号，光是简中就有 6 个平台，再加上海外的 YouTube——这意味着我需要汇总 7 个平台的播放量以及相关的互动数据（实际上分发总计是 12 个平台）。</p><p>与此同时，我也需要关注这些平台里的评论，是否有观众指出视频中的片源问题和事实性错误，抑或是对论证过程、测试细节的质疑。这些有损品牌形象的评论，只会占非常小的比例，但一旦出现又没有及时响应，很容易造成舆情危机。当然，考虑到在各个平台影响力不同，我通常也只关注 B 站，顺带看看微博和 YouTube。</p><p>这两件事让这份工作很大程度上变成了 <a href=https://www.marxists.org/chinese/david-graeber/2018/02.htm>Bullshit Jobs</a>，转播数据情况是在充当老板娘的 flunky，而紧盯评论区通常都是在给制作团队当 duct taper。</p><p>我们大多数时候换源是因为评论区指出画面标注错误、剪辑存在误导性、字幕错误等片源问题，而如果这个团队有合理的审片流程，这些显然都可以避免。很不幸，我目睹了排期紧张导致无法预留出内审时间的项目管理惨状，再加上曾经因为推动内审成为那个被 Shooting 的 The Messenger，现在只能表示无能为力。</p><p>这篇文章并不是为了抱怨这份工作，尽管我对这些琐碎的工作内容感到厌烦，但还是试图做点什么让它不那么无聊，比如利用自动化工具。</p><h2 id=定时转播视频数据>定时转播视频数据</h2><h3 id=自动化获取数据>自动化获取数据</h3><p>为了避免重复造轮子，先做点简单的调研。如果在搜索引擎查询「社媒矩阵管理」，能够查询到许多工具。这些都是 To B 的服务商，很显然，被雇佣的我大概率比这些工具便宜(。</p><p>所幸我只需要监测视频数据，听起来很简单——只需要定时获取各个视频平台的数据，再转播到飞书就可以了。实现起来也不难，如果平台足够开放的话。</p><p>虽然这点小需求不涉及什么复杂的技术栈，但起码得选定某种编程语言实现。考虑到 Python 的库支持足够丰富……从零开始学 Python，启动(bushi。如果真的从零开始学，大概这篇文章要再难产久一点。事实上，后文出现的所有代码 ，基本都是 AI 完成的，感谢 Monica 的黑五折扣🙏。</p><p>长视频平台中，最重要的莫过于 bilibili 和 YouTube。所幸这俩都很友好，再加上 <a href=https://github.com/Nemo2011/bilibili-api>bilibili-api</a> 和 <a href=https://github.com/ytdl-org/youtube-dl>youtube-dl</a> 也是很完善的库，很容易获取到特定视频的播放量和点赞等数据。</p><p>B 站特定视频数据抓取的示例代码如下：</p><pre><code class=language-python>import asyncio
 from bilibili_api import video
 
 async def main() -&gt; None:
@@ -341,9 +45,7 @@ async def main() -&gt; None:
 
 if __name__ == &quot;__main__&quot;:
     asyncio.get_event_loop().run_until_complete(main())
-</code></pre>
-<p>通过 pip 安装的 youtube-dl 是 2021.12.17 的版本，该版过旧不能顺利提取数据，且无法更新版本（原因未知）。因此这里改用了 yt-dlp，这是 youtube-dl 的一个分支，通常更新更快，功能更强大。YouTube 特定视频数据抓取的示例代码如下：</p>
-<pre><code class="language-python">import yt_dlp
+</code></pre><p>通过 pip 安装的 youtube-dl 是 2021.12.17 的版本，该版过旧不能顺利提取数据，且无法更新版本（原因未知）。因此这里改用了 yt-dlp，这是 youtube-dl 的一个分支，通常更新更快，功能更强大。YouTube 特定视频数据抓取的示例代码如下：</p><pre><code class=language-python>import yt_dlp
 
 def get_video_info(video_url):
     ydl_opts = {
@@ -368,11 +70,7 @@ print(f&quot;标题: {title}&quot;)
 print(f&quot;观看次数: {views}&quot;)
 print(f&quot;点赞数: {likes}&quot;)
 print(f&quot;评论数: {comments}&quot;)
-</code></pre>
-<p>接下来是微博，至于为什么是它，因为 <a href="https://github.com/dataabc/weiboSpider">Weibo Spider</a> 是现成的好工具。官方的文档只提供了<a href="https://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI">转发评论数的读取接口</a>，还缺少点赞和视频播放量。这个第三方的工具可以获取点赞数，但目前也无法获取微博视频的播放量。</p>
-<p>因此在此基础上，我还修改了源码中页面解析相关的内容，比如获取和解析视频信息的函数、修改写入结果文件的表头，并且更新写入方法，确保该项数据被写入文件。</p>
-<p>这里容易翻车的是第一步，解决方法是：通过添加调试信息，打印出抓取的原始数据，确认播放量的字段是否存在、在哪个字段中。打印出 Weibo Info 后，可以看到播放量 play_count 的信息是在 page_info 的结构中。这个字段的值是「5 万次播放」，而不是一个数字。相关调试代码如下：</p>
-<pre><code class="language-python">def get_video_url(self, weibo_info):
+</code></pre><p>接下来是微博，至于为什么是它，因为 <a href=https://github.com/dataabc/weiboSpider>Weibo Spider</a> 是现成的好工具。官方的文档只提供了<a href=https://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI>转发评论数的读取接口</a>，还缺少点赞和视频播放量。这个第三方的工具可以获取点赞数，但目前也无法获取微博视频的播放量。</p><p>因此在此基础上，我还修改了源码中页面解析相关的内容，比如获取和解析视频信息的函数、修改写入结果文件的表头，并且更新写入方法，确保该项数据被写入文件。</p><p>这里容易翻车的是第一步，解决方法是：通过添加调试信息，打印出抓取的原始数据，确认播放量的字段是否存在、在哪个字段中。打印出 Weibo Info 后，可以看到播放量 play_count 的信息是在 page_info 的结构中。这个字段的值是「5 万次播放」，而不是一个数字。相关调试代码如下：</p><pre><code class=language-python>def get_video_url(self, weibo_info):
     &quot;&quot;&quot;获取微博视频url和播放量&quot;&quot;&quot;
     video_url = &quot;&quot;
     play_count = 0  ## 新增播放量变量
@@ -395,35 +93,12 @@ print(f&quot;评论数: {comments}&quot;)
 
             print(&quot;Video URL:&quot;, video_url)  
             print(&quot;Play Count:&quot;, play_count)  
-</code></pre>
-<p>Weibo Spider 是根据微博用户 id 访问主页并依序逐条提取微博数据，最终存储到 csv 文件的爬虫程序。它本质上是一种轮查（Polling），数据更新的频率取决于爬取的间隔时间。</p>
-<p>按照一开始的需求，我只需要获取单条微博的数据。本来犯懒不想仔细看是怎么实现的，直接从 csv 文件中筛选出对应的单条微博凑合用来着，后来还是忍受不了……因为如果设定的内容爬取周期比较长，加之该期间账号发布的内容较多，这种方法会比较浪费资源。</p>
-<p>其实实现起来也不难，移动端的微博数据比较规整也不会有登录限制，解析抓取到的内容就可以了。稍微不太顺手的一点是单条微博 id 的获取，网页端直接分享的短链并不带有微博唯一 id，必须从移动端分享取得，相关示例代码<a href="https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/weibo.py">参见此处</a>。</p>
-<p>至此，和简中互不联网平台的斗智斗勇现在才刚刚开始。实际上一开始称之为半成品的原因在于，剩下的平台我并未没有成功用较为简单的方式获取到播放数据。</p>
-<p><a href="https://open.xiaohongshu.com/home">小红书开放平台</a>只提供店铺相关的 API，倒是<a href="https://github.com/Big-Buffer/XiaohongshuSpider">有人使用 Appium+Mitmproxy+Fiddler+夜神模拟器</a>实现，看起来有点过于麻烦。Github 上还有个项目 <a href="https://github.com/ReaJason/xhs?tab=readme-ov-file">xhs</a> 似乎实现了，但目前的可用性无法验证。考虑到最重要的播放量数据，在小红书上并不公开可见，这本来就仅限发布者本人可以查看，非公开数据本身获取难度会更大一些。</p>
-<p>抖音开放平台提供<a href="https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/video-data">查询特定视频数据的 API</a>，坏消息是个人身份仅支持创建小游戏和直播小玩法，这个接口需要企业身份认证，来开启移动/网站应用的视频权限。好消息是 <a href="https://github.com/Evil0ctal/Douyin_TikTok_Download_API">Douyin_TikTok_Download_API</a> 提供了类似的功能 ，坏消息 again 是它并没有提供单个视频播放、互动数据的接口。</p>
-<p>公众号的<a href="https://developers.weixin.qq.com/doc/offiaccount/Analytics/Graphic_Analysis_Data_Interface.html">获取图文群发每日数据接口</a>可以获取到实时的阅读数据，但需要公众号管理员权限开通验证 access_token，我的操作权限不够，此外点赞、在看和转发等互动数据也无法获取。第三方实现通常需要通过代理抓包，但关键参数也需要手动获取，因为 key 会定时刷新……详见 <a href="https://github.com/wnma3mz/wechat_articles_spider">wechat_articles_spider</a>。同为腾讯系的视频号状况也类似，作为麻瓜和腾讯 battle 的成本过高，遂放弃。</p>
-<p>你看，世上无难事，只要肯放弃(。本想偷个懒以项目为单位获取全平台的播放量数据，结果转了一圈下来四处撞墙。事已至此，还是先把基本流程跑通，给这件事画个句号。</p>
-<h3 id="飞书-webhook">飞书 WebHook</h3>
-<p>bilibili、YouTube 和微博的数据获取已经解决，主要的长视频平台左右也就这俩(仨)，接下来解决定时转播数据的需求，再拆解其实是两个问题——信息传递和定时任务。如果有需要，还可以带上个数据存储，毕竟阿 B 后台并不提供固定周期的数据对比功能。</p>
-<p>公司用的 IM 软件是飞书，它的自定义机器人支持 WebHook，可以将其他平台的消息推送至该群组中，完美的提醒工具。</p>
-<blockquote>
-<p>WebHook 是一种基于 HTTP 的回调机制，允许一个系统在特定事件发生时自动向另一个系统发送实时通知。当触发预设条件时，源系统会将相关数据以 POST 请求的方式推送到目标系统的指定 URL，接收方可以立即处理这些信息。这种方式类似于 &quot; 事件通知 &ldquo;，避免了传统轮询方式的低效，广泛应用于支付通知、代码托管平台的变更提醒、消息推送等场景，实现了不同系统间快速、实时的数据交互。</p>
-</blockquote>
-<p>好的，显然上面这个解释太掉书袋了。简单来说，在飞书里设定好一个自定义机器人，我们会获得一个链接。利用这个链接传输数据，机器人就会在群组里弹消息了！</p>
-<p>这样我就不需要“时不时”戳开视频看一眼数据，然后播报给老板娘了，好耶！基本的设置流程，可以参见飞书的<a href="https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot?lang=zh-CN">自定义机器人使用指南</a>。获取到 WebHook URL 后，只需要简单地修改一下脚本，写好消息发送的格式就可以了。</p>
-<p>发布时间也是衡量数据表现的维度之一，因此加上了这个数据，还顺手计算了互动总数。示例代码为 bilibili，其他平台类似，完整代码<a href="https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/bilibili_real_time.py">参见此处</a>。</p>
-<p>实际接收到消息的效果是这样的：</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881422761.png" alt="1737881422761.png"></p>
-<p>如果你像我一样要运营多个矩阵号，还可以顺手修改下颜色方便辨识，加上个变量即可：</p>
-<pre><code class="language-python">#如果是账号1，则是紫色；账号 2 则是粉色；除了这俩，默认是橙色。
+</code></pre><p>Weibo Spider 是根据微博用户 id 访问主页并依序逐条提取微博数据，最终存储到 csv 文件的爬虫程序。它本质上是一种轮查（Polling），数据更新的频率取决于爬取的间隔时间。</p><p>按照一开始的需求，我只需要获取单条微博的数据。本来犯懒不想仔细看是怎么实现的，直接从 csv 文件中筛选出对应的单条微博凑合用来着，后来还是忍受不了……因为如果设定的内容爬取周期比较长，加之该期间账号发布的内容较多，这种方法会比较浪费资源。</p><p>其实实现起来也不难，移动端的微博数据比较规整也不会有登录限制，解析抓取到的内容就可以了。稍微不太顺手的一点是单条微博 id 的获取，网页端直接分享的短链并不带有微博唯一 id，必须从移动端分享取得，相关示例代码<a href=https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/weibo.py>参见此处</a>。</p><p>至此，和简中互不联网平台的斗智斗勇现在才刚刚开始。实际上一开始称之为半成品的原因在于，剩下的平台我并未没有成功用较为简单的方式获取到播放数据。</p><p><a href=https://open.xiaohongshu.com/home>小红书开放平台</a>只提供店铺相关的 API，倒是<a href=https://github.com/Big-Buffer/XiaohongshuSpider>有人使用 Appium+Mitmproxy+Fiddler+夜神模拟器</a>实现，看起来有点过于麻烦。Github 上还有个项目 <a href="https://github.com/ReaJason/xhs?tab=readme-ov-file">xhs</a> 似乎实现了，但目前的可用性无法验证。考虑到最重要的播放量数据，在小红书上并不公开可见，这本来就仅限发布者本人可以查看，非公开数据本身获取难度会更大一些。</p><p>抖音开放平台提供<a href=https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/video-data>查询特定视频数据的 API</a>，坏消息是个人身份仅支持创建小游戏和直播小玩法，这个接口需要企业身份认证，来开启移动/网站应用的视频权限。好消息是 <a href=https://github.com/Evil0ctal/Douyin_TikTok_Download_API>Douyin_TikTok_Download_API</a> 提供了类似的功能 ，坏消息 again 是它并没有提供单个视频播放、互动数据的接口。</p><p>公众号的<a href=https://developers.weixin.qq.com/doc/offiaccount/Analytics/Graphic_Analysis_Data_Interface.html>获取图文群发每日数据接口</a>可以获取到实时的阅读数据，但需要公众号管理员权限开通验证 access_token，我的操作权限不够，此外点赞、在看和转发等互动数据也无法获取。第三方实现通常需要通过代理抓包，但关键参数也需要手动获取，因为 key 会定时刷新……详见 <a href=https://github.com/wnma3mz/wechat_articles_spider>wechat_articles_spider</a>。同为腾讯系的视频号状况也类似，作为麻瓜和腾讯 battle 的成本过高，遂放弃。</p><p>你看，世上无难事，只要肯放弃(。本想偷个懒以项目为单位获取全平台的播放量数据，结果转了一圈下来四处撞墙。事已至此，还是先把基本流程跑通，给这件事画个句号。</p><h3 id=飞书-webhook>飞书 WebHook</h3><p>bilibili、YouTube 和微博的数据获取已经解决，主要的长视频平台左右也就这俩(仨)，接下来解决定时转播数据的需求，再拆解其实是两个问题——信息传递和定时任务。如果有需要，还可以带上个数据存储，毕竟阿 B 后台并不提供固定周期的数据对比功能。</p><p>公司用的 IM 软件是飞书，它的自定义机器人支持 WebHook，可以将其他平台的消息推送至该群组中，完美的提醒工具。</p><blockquote><p>WebHook 是一种基于 HTTP 的回调机制，允许一个系统在特定事件发生时自动向另一个系统发送实时通知。当触发预设条件时，源系统会将相关数据以 POST 请求的方式推送到目标系统的指定 URL，接收方可以立即处理这些信息。这种方式类似于 " 事件通知 &ldquo;，避免了传统轮询方式的低效，广泛应用于支付通知、代码托管平台的变更提醒、消息推送等场景，实现了不同系统间快速、实时的数据交互。</p></blockquote><p>好的，显然上面这个解释太掉书袋了。简单来说，在飞书里设定好一个自定义机器人，我们会获得一个链接。利用这个链接传输数据，机器人就会在群组里弹消息了！</p><p>这样我就不需要“时不时”戳开视频看一眼数据，然后播报给老板娘了，好耶！基本的设置流程，可以参见飞书的<a href="https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot?lang=zh-CN">自定义机器人使用指南</a>。获取到 WebHook URL 后，只需要简单地修改一下脚本，写好消息发送的格式就可以了。</p><p>发布时间也是衡量数据表现的维度之一，因此加上了这个数据，还顺手计算了互动总数。示例代码为 bilibili，其他平台类似，完整代码<a href=https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/bilibili_real_time.py>参见此处</a>。</p><p>实际接收到消息的效果是这样的：</p><p><img src=https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881422761.png alt=1737881422761.png></p><p>如果你像我一样要运营多个矩阵号，还可以顺手修改下颜色方便辨识，加上个变量即可：</p><pre><code class=language-python>#如果是账号1，则是紫色；账号 2 则是粉色；除了这俩，默认是橙色。
 template_color = &quot;purple&quot; if info['owner']['name'] == &quot;账号名1&quot; else &quot;carmine&quot; if info['owner']['name'] == &quot;账号名2&quot; else &quot;orange&quot;
 
 #记得把消息格式里的 template 也改下。
 &quot;template&quot;: template_color  ## 设置标题主题颜色
-</code></pre>
-<p>如果希望以 7 天为周期横向对比各个视频的数据表现，那还可以加入下面这段代码，这样它就会在第七天保存当时的数据进入 bilibili_7-Day.csv 的文件中。</p>
-<pre><code class="language-python">## 在文件开头添加
+</code></pre><p>如果希望以 7 天为周期横向对比各个视频的数据表现，那还可以加入下面这段代码，这样它就会在第七天保存当时的数据进入 bilibili_7-Day.csv 的文件中。</p><pre><code class=language-python>## 在文件开头添加
 from pathlib import Path
 import csv
 
@@ -468,37 +143,12 @@ def ensure_data_dir():
             writer.writerow(row_data)
             
         logging.info(f&quot;已将第7天数据写入 {csv_file}: {info['title']}&quot;)
-</code></pre>
-<h3 id="定时执行脚本任务">定时执行脚本任务</h3>
-<p>能成功写入第 7 天数据的前提是，我们需要在第 7 天的时候运行它，这就涉及到定时任务了。</p>
-<p>很可惜我家没有装宽带，也没有可以玩的小主机之类的东西。考虑到我们这种随时 on call 的岗，为了方便远控访问 NAS，电脑几乎不关机……那就直接用公司电脑来设置定时任务好了。</p>
-<p>最简单的实现是 Windows 自带的「任务计划程序」，理论上这种系统工具应该<a href="https://learn.microsoft.com/zh-cn/troubleshoot/windows-server/system-management-components/schedule-server-process">逐步按引导操作</a>就可以实现，GUI 就应当让人看到就明白对吗？可惜这个世界上，应然和实然是两回事。</p>
-<p>常规的教程只说了”将所需要运行的脚本路径填入即可“，但它一直无法按预期运行定时任务。几经周折后终于在某个角落（一篇名为「<a href="https://www.cnblogs.com/sui776265233/p/13602893.html">windows设置定时执行脚本</a>」的文章）里查到，其实需要在启动程序的那部分，先填入 Python.exe 的绝对路径，并在可选的两个参数中，填入 Python 脚本路径和解释器路径。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881461733.png" alt="1737881461733.png"></p>
-<p>尽管这位<a href="https://www.cnblogs.com/sui776265233">迎风而来的小随</a>在 2021 年停止了博客的更新，但还是由衷地感谢 ta 的文章解决了我的小问题。这就是我现在依旧更喜欢文字、更喜欢网页，并且无比痛恨死链的原因。</p>
-<p>不过我依旧无法接受需要为每次的定时任务逐次点击这么多次鼠标，我的腕管综合征对此表示强烈的不满。于是又让 AI 写了一段使用 Schtasks 命令行完成操作的命令：</p>
-<pre><code class="language-python">C:\\Windows\\System32\\schtasks.exe /create /tn &quot;测试&quot; `
+</code></pre><h3 id=定时执行脚本任务>定时执行脚本任务</h3><p>能成功写入第 7 天数据的前提是，我们需要在第 7 天的时候运行它，这就涉及到定时任务了。</p><p>很可惜我家没有装宽带，也没有可以玩的小主机之类的东西。考虑到我们这种随时 on call 的岗，为了方便远控访问 NAS，电脑几乎不关机……那就直接用公司电脑来设置定时任务好了。</p><p>最简单的实现是 Windows 自带的「任务计划程序」，理论上这种系统工具应该<a href=https://learn.microsoft.com/zh-cn/troubleshoot/windows-server/system-management-components/schedule-server-process>逐步按引导操作</a>就可以实现，GUI 就应当让人看到就明白对吗？可惜这个世界上，应然和实然是两回事。</p><p>常规的教程只说了”将所需要运行的脚本路径填入即可“，但它一直无法按预期运行定时任务。几经周折后终于在某个角落（一篇名为「<a href=https://www.cnblogs.com/sui776265233/p/13602893.html>windows设置定时执行脚本</a>」的文章）里查到，其实需要在启动程序的那部分，先填入 Python.exe 的绝对路径，并在可选的两个参数中，填入 Python 脚本路径和解释器路径。</p><p><img src=https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881461733.png alt=1737881461733.png></p><p>尽管这位<a href=https://www.cnblogs.com/sui776265233>迎风而来的小随</a>在 2021 年停止了博客的更新，但还是由衷地感谢 ta 的文章解决了我的小问题。这就是我现在依旧更喜欢文字、更喜欢网页，并且无比痛恨死链的原因。</p><p>不过我依旧无法接受需要为每次的定时任务逐次点击这么多次鼠标，我的腕管综合征对此表示强烈的不满。于是又让 AI 写了一段使用 Schtasks 命令行完成操作的命令：</p><pre><code class=language-python>C:\\Windows\\System32\\schtasks.exe /create /tn &quot;测试&quot; `
     /tr &quot;cmd.exe /c cd /d C:\\Users\\wl747\\AppData\\Local\\Programs\\Python\\Python313 &amp;&amp; C:\\Users\\wl747\\AppData\\Local\\Programs\\Python\\Python313\\pythonw.exe G:\\zdh\\bili.py BV号&quot; `
     /sc HOURLY /mo 6 /sd (Get-Date).ToString(&quot;yyyy/MM/dd&quot;) /st (Get-Date).ToString(&quot;HH:mm&quot;) `
     /du 360 /ed (Get-Date).AddDays(16).ToString(&quot;yyyy/MM/dd&quot;) `
     /f /ru &quot;SYSTEM&quot;
-</code></pre>
-<p>它可以实现每 6 小时运行一次 Python 脚本的计划任务，持续 16 天。这里需要注意，每次的定时任务最好不重名。如果你需要更详细的解释以便修改这段命令，可以戳<a href="https://monica.im/share/chat?shareId=q4cNbhNWIcmox9wq">这里让 Monica 为您服务</a>:p。</p>
-<p>至此，看似简单实则并没那么简单的转播数据需求，算是完成了。</p>
-<h2 id="数据汇总录入">数据汇总录入</h2>
-<p>当我向老板娘表示这个 Bot 可以实现定时播报数据情况，可以把它配置到群聊的时候，新的需求又来了。同理可得，AI 并不会让人失业，只会让预期可实现的需求越变越多。</p>
-<p>出于交付达标的考虑，她依旧要求我在每周五更新一份全平台数据的表单（事实上只有 4 个平台，而且我发现她上次看这个文档已经是两周前了🚬）。加上本身时隔 7 天就需要收录的长、短视频表单，以及 2025 年绩效标准更新之后对内部公开的视频数据表单（是的，很难想象视频内容制作团队在此之前是无法看到平台非公开数据的……）。另外，甲方也经常提出需要汇总全平台数据的需求。</p>
-<p>于是我需要频繁填写的表单从两份变成了五份，表头项要求各不相同。数据汇总这件事，也变成了费时费力且毫无成就感的 Dirty Work。没有人可以忍受需要花一个小时只是为了填一份该死的表格，为此需要跳转 12 个平台找到对应视频、一项项确认数据、依次对比表头填入固定格子里，如此重复成百上千次。</p>
-<p>这太愚蠢了，但很显然，各平台的封闭性并没有提供足够简单好用的接口让这种琐碎事消失，当然有更复杂的方式可以实现，这让那些社媒管理平台得以盈利。只不过本麻瓜被拒之门外，好消息是我们依旧可以曲线救国。</p>
-<p>大多数（7/12）平台提供了详细数据导出的功能，还有 2 个（YouTube 和微博）可以通过上述的脚本获取到，剩下 3 个无关紧要的平台，只有甲方会需要，因此手动收录也显得不那么不可接受。那么，导出 7 个平台的数据并筛选标题关键词，同时给到 YouTube 和微博的视频链接，理论上是能实现一键汇总 9 个平台的数据的。</p>
-<p>只是手动下载 7 个平台的数据再提供 2 个链接，显然比之前逐个汇总那么多表项来得可以接受。于是对外汇总数据的 1.0 版本非常简单粗暴，筛选固定路径里的文件，根据平台名找到对应文件，然后匹配和检索关键词一致的行，复制表头和该行数据到新文件中。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881485152.png" alt="1737881485152.png"></p>
-<p>至于为什么区分出了 1.0 版本，因为总是会有新的要求，<a href="https://en.wikipedia.org/wiki/Scope_creep">Scope Creep</a> 永远正确，被困住的只有牛马🚬。有些甲方对表头的要求是指定的，于是 2.0 版本用了更通用的匹配方式，也让输出更加规整。</p>
-<p>最终的输出将会是：</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881509051.png" alt="1737881509051.png"></p>
-<p>具体的实现<a href="https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/to_party_a_bilibili.py">参见此处</a>，代码过长故不放入正文。</p>
-<p>如果需要增删输出中的列，只需要修改这里的代码：</p>
-<pre><code class="language-python">    ## 输出列及其可能的列名
+</code></pre><p>它可以实现每 6 小时运行一次 Python 脚本的计划任务，持续 16 天。这里需要注意，每次的定时任务最好不重名。如果你需要更详细的解释以便修改这段命令，可以戳<a href="https://monica.im/share/chat?shareId=q4cNbhNWIcmox9wq">这里让 Monica 为您服务</a>:p。</p><p>至此，看似简单实则并没那么简单的转播数据需求，算是完成了。</p><h2 id=数据汇总录入>数据汇总录入</h2><p>当我向老板娘表示这个 Bot 可以实现定时播报数据情况，可以把它配置到群聊的时候，新的需求又来了。同理可得，AI 并不会让人失业，只会让预期可实现的需求越变越多。</p><p>出于交付达标的考虑，她依旧要求我在每周五更新一份全平台数据的表单（事实上只有 4 个平台，而且我发现她上次看这个文档已经是两周前了🚬）。加上本身时隔 7 天就需要收录的长、短视频表单，以及 2025 年绩效标准更新之后对内部公开的视频数据表单（是的，很难想象视频内容制作团队在此之前是无法看到平台非公开数据的……）。另外，甲方也经常提出需要汇总全平台数据的需求。</p><p>于是我需要频繁填写的表单从两份变成了五份，表头项要求各不相同。数据汇总这件事，也变成了费时费力且毫无成就感的 Dirty Work。没有人可以忍受需要花一个小时只是为了填一份该死的表格，为此需要跳转 12 个平台找到对应视频、一项项确认数据、依次对比表头填入固定格子里，如此重复成百上千次。</p><p>这太愚蠢了，但很显然，各平台的封闭性并没有提供足够简单好用的接口让这种琐碎事消失，当然有更复杂的方式可以实现，这让那些社媒管理平台得以盈利。只不过本麻瓜被拒之门外，好消息是我们依旧可以曲线救国。</p><p>大多数（7/12）平台提供了详细数据导出的功能，还有 2 个（YouTube 和微博）可以通过上述的脚本获取到，剩下 3 个无关紧要的平台，只有甲方会需要，因此手动收录也显得不那么不可接受。那么，导出 7 个平台的数据并筛选标题关键词，同时给到 YouTube 和微博的视频链接，理论上是能实现一键汇总 9 个平台的数据的。</p><p>只是手动下载 7 个平台的数据再提供 2 个链接，显然比之前逐个汇总那么多表项来得可以接受。于是对外汇总数据的 1.0 版本非常简单粗暴，筛选固定路径里的文件，根据平台名找到对应文件，然后匹配和检索关键词一致的行，复制表头和该行数据到新文件中。</p><p><img src=https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881485152.png alt=1737881485152.png></p><p>至于为什么区分出了 1.0 版本，因为总是会有新的要求，<a href=https://en.wikipedia.org/wiki/Scope_creep>Scope Creep</a> 永远正确，被困住的只有牛马🚬。有些甲方对表头的要求是指定的，于是 2.0 版本用了更通用的匹配方式，也让输出更加规整。</p><p>最终的输出将会是：</p><p><img src=https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881509051.png alt=1737881509051.png></p><p>具体的实现<a href=https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/to_party_a_bilibili.py>参见此处</a>，代码过长故不放入正文。</p><p>如果需要增删输出中的列，只需要修改这里的代码：</p><pre><code class=language-python>    ## 输出列及其可能的列名
     output_columns = {
         '平台': '',
         '标题': '作品/标题/描述',
@@ -510,186 +160,16 @@ def ensure_data_dir():
         '转发': '转发/转发次数/分享',
         '收藏': '收藏'
     }
-</code></pre>
-<p>冒号前是输出的列名，冒号后是输入表中改数值项可能对应的列名，记得注意逗号。</p>
-<p>除了给甲方的全平台汇总之外，内部要填的表单只是区分长短视频，需要把不同平台的数据对应起来，实现也是类似的，以短视频平台的汇总为例，<a href="https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/to_party_a_douyin.py">参见此处</a>。</p>
-<h2 id="评论区监测">评论区监测</h2>
-<p>好的，如果你看到这里，估计已经忘记我一开始还有个需求是监测评论来着。只是筛选评论区并转播倒是不难，感谢 <a href="https://github.com/Nemo2011/bilibili-api">bilibili-api</a>。</p>
-<p>目前的进度是已经可以读取到所有的评论（包括副楼）保存到表格，还加了简单的筛选词，筛选出的评论可以通过带有 rpid 的直链跳转处理，再加个 WebHook 基本能凑合用。</p>
-<p>这个版本的缺点是如果定时任务设得比较紧凑，IP 会暂时被封禁无法 work，这个应该可以设置代理绕过。</p>
-<p>现在「设置关键词筛选 -&gt; 给直链跳转删除」比起之前「逐条翻评论 -&gt; 定向删除」来得方便，不过理论上还可以在飞书消息<a href="https://open.feishu.cn/document/uAjLw4CM/ukzMukzMukzM/feishu-cards/configuring-card-interactions">加个交互</a>，结合 <a href="https://nemo2011.github.io/bilibili-api/#/modules/comment?id=async-def-delete">async def delete()</a> 就可以直接一键删除，不用二次跳转网页。</p>
-<p>是的，这里又要有但是了，账号会需要在浏览器长期登录账户以便投稿，这样会导致 Cookies 被刷新……可以通过获取小号 cookie 解决（理想的方式应该是走官方 API）。总之，现在版本足能再凑合一下用(这段代码比较长，可以<a href="https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/comment_area_monitoring.py">戳这里</a>查看)。</p>
-<h2 id="写在最后">写在最后</h2>
-<p>“如果我能明白这究竟是怎么回事就好了”，通常这个想法会出现在最后 30% 的实现上。诚然，如果没有 AI，我绝无可能把这些琐碎的工作用 Python 解决掉，但它的表现依旧差口气。</p>
-<p>在想是不是用 cursor 的体验会好上更多……有空再写篇「麻瓜视角下的 AI 编程」聊聊，总之这篇真的断断续续写了好久，先这样，有空再填坑……</p>
-
-</article>
-
-
-      
-        <div class="my-4">
-    
-    <a href="https://viyi.cc/tags/ai/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#AI</a>
-    
-    <a href="https://viyi.cc/tags/python/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#Python</a>
-    
-</div>
-      
-
-      
-
-
-
-      
-        <div class="py-2">
-  
-    <div class="my-8 flex flex-col items-center md:flex-row">
-      <a href="https://viyi.cc/authors/viyi/" class="md:me-4 text-primary-text h-24 w-24">
-        
-        
-          <img
-            src="https://viyi.cc/images/icon.png"
-            class="bg-primary-bg w-full rounded-full"
-            alt="Avatar"
-          />
-        
-      </a>
-      <div class="mt-4 w-full md:mt-0 md:w-auto">
-        <a
-          href="https://viyi.cc/authors/viyi/"
-          class="mb-2 block border-b pb-1 text-lg font-bold"
-        >
-          <h3>枝因</h3>
-        </a>
-        <span class="block pb-2">Per aspera ad astra</span>
-        
-          
-          
-          
-          
-          <a href="mailto:viyiY2K@gmail.com" class="me-2">
-            <i class="fas fa-envelope"></i>
-          </a>
-        
-          
-          
-          
-          
-          <a href="https://t.me/viyiY2K" class="me-2">
-            <i class="fab fa-telegram"></i>
-          </a>
-        
-          
-          
-          
-          
-          <a href="https://www.zhihu.com/people/zhi-yin-233" class="me-2">
-            <i class="fab fa-zhihu"></i>
-          </a>
-        
-      </div>
-    </div>
-  
-</div>
-
-      
-
-      
-  <div
-    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
-  >
-    <div>
-      
-        <span class="text-primary-text block font-bold"
-          >上一页</span
-        >
-        <a href="https://viyi.cc/annual_review_2024/" class="block">二〇二四</a>
-      
-    </div>
-    <div class="mt-4 md:mt-0 md:text-right">
-      
-        <span class="text-primary-text block font-bold">下一页</span>
-        <a href="https://viyi.cc/relearning_to_type/" class="block">重学打字</a>
-      
-    </div>
-  </div>
-
-
-      
-
-
-
-    </div>
-    
-      <div class="col-span-2">
-        
-        
-          <div
-  class="
-    bg-primary-bg
-   prose sticky top-16 z-10 hidden px-6 py-4 lg:block "
->
-  <h3>本页内容</h3>
-</div>
-<div
-  class="sticky-toc  hidden px-6 pb-6 lg:block "
->
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#定时转播视频数据">定时转播视频数据</a>
-      <ul>
-        <li><a href="#自动化获取数据">自动化获取数据</a></li>
-        <li><a href="#飞书-webhook">飞书 WebHook</a></li>
-        <li><a href="#定时执行脚本任务">定时执行脚本任务</a></li>
-      </ul>
-    </li>
-    <li><a href="#数据汇总录入">数据汇总录入</a></li>
-    <li><a href="#评论区监测">评论区监测</a></li>
-    <li><a href="#写在最后">写在最后</a></li>
-  </ul>
-</nav>
-</div>
-
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    
-    enableStickyToc();
-  });
-</script>
-
-        
-      </div>
-    
-
-    
-    
-  </div>
-
-  
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        hljs.highlightAll();
-      });
-    </script>
-
-          </div>
-        </div>
-      
-    </main>
-    <footer class="pl-scrollbar">
-      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
-    <p class="text-sm text-tertiary-text">
-        
-        © 2023-2025 
-        <a href="https://viyi.cc/about_me/">枝因</a> ·  
-        Powered by the 
-        <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" rel="noopener noreferrer">Eureka</a> 
-        theme for 
-        <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
-    </p>
-</div>
-
-  </div>
-    </footer>
-  </body>
-</html>
+</code></pre><p>冒号前是输出的列名，冒号后是输入表中改数值项可能对应的列名，记得注意逗号。</p><p>除了给甲方的全平台汇总之外，内部要填的表单只是区分长短视频，需要把不同平台的数据对应起来，实现也是类似的，以短视频平台的汇总为例，<a href=https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/to_party_a_douyin.py>参见此处</a>。</p><h2 id=评论区监测>评论区监测</h2><p>好的，如果你看到这里，估计已经忘记我一开始还有个需求是监测评论来着。只是筛选评论区并转播倒是不难，感谢 <a href=https://github.com/Nemo2011/bilibili-api>bilibili-api</a>。</p><p>目前的进度是已经可以读取到所有的评论（包括副楼）保存到表格，还加了简单的筛选词，筛选出的评论可以通过带有 rpid 的直链跳转处理，再加个 WebHook 基本能凑合用。</p><p>这个版本的缺点是如果定时任务设得比较紧凑，IP 会暂时被封禁无法 work，这个应该可以设置代理绕过。</p><p>现在「设置关键词筛选 -> 给直链跳转删除」比起之前「逐条翻评论 -> 定向删除」来得方便，不过理论上还可以在飞书消息<a href=https://open.feishu.cn/document/uAjLw4CM/ukzMukzMukzM/feishu-cards/configuring-card-interactions>加个交互</a>，结合 <a href="https://nemo2011.github.io/bilibili-api/#/modules/comment?id=async-def-delete">async def delete()</a> 就可以直接一键删除，不用二次跳转网页。</p><p>是的，这里又要有但是了，账号会需要在浏览器长期登录账户以便投稿，这样会导致 Cookies 被刷新……可以通过获取小号 cookie 解决（理想的方式应该是走官方 API）。总之，现在版本足能再凑合一下用(这段代码比较长，可以<a href=https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/comment_area_monitoring.py>戳这里</a>查看)。</p><h2 id=写在最后>写在最后</h2><p>“如果我能明白这究竟是怎么回事就好了”，通常这个想法会出现在最后 30% 的实现上。诚然，如果没有 AI，我绝无可能把这些琐碎的工作用 Python 解决掉，但它的表现依旧差口气。</p><p>在想是不是用 cursor 的体验会好上更多……有空再写篇「麻瓜视角下的 AI 编程」聊聊，总之这篇真的断断续续写了好久，先这样，有空再填坑……</p></article><div class=my-4><a href=https://viyi.cc/tags/ai/ class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#AI</a>
+<a href=https://viyi.cc/tags/python/ class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#Python</a></div><div class=py-2><div class="my-8 flex flex-col items-center md:flex-row"><a href=https://viyi.cc/authors/viyi/ class="md:me-4 text-primary-text h-24 w-24"><img src=https://viyi.cc/images/icon.png class="bg-primary-bg w-full rounded-full" alt=Avatar></a><div class="mt-4 w-full md:mt-0 md:w-auto"><a href=https://viyi.cc/authors/viyi/ class="mb-2 block border-b pb-1 text-lg font-bold"><h3>枝因</h3></a><span class="block pb-2">Per aspera ad astra</span>
+<a href=mailto:viyiY2K@gmail.com class=me-2><i class="fas fa-envelope"></i></a>
+<a href=https://t.me/viyiY2K class=me-2><i class="fab fa-telegram"></i></a>
+<a href=https://www.zhihu.com/people/zhi-yin-233 class=me-2><i class="fab fa-zhihu"></i></a></div></div></div><div class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"><div><span class="text-primary-text block font-bold">上一页</span>
+<a href=https://viyi.cc/annual_review_2024/ class=block>二〇二四</a></div><div class="mt-4 md:mt-0 md:text-right"><span class="text-primary-text block font-bold">下一页</span>
+<a href=https://viyi.cc/relearning_to_type/ class=block>重学打字</a></div></div></div><div class=col-span-2><div class="bg-primary-bg
+prose sticky top-16 z-10 hidden px-6 py-4 lg:block"><h3>本页内容</h3></div><div class="sticky-toc hidden px-6 pb-6 lg:block"><nav id=TableOfContents><ul><li><a href=#定时转播视频数据>定时转播视频数据</a><ul><li><a href=#自动化获取数据>自动化获取数据</a></li><li><a href=#飞书-webhook>飞书 WebHook</a></li><li><a href=#定时执行脚本任务>定时执行脚本任务</a></li></ul></li><li><a href=#数据汇总录入>数据汇总录入</a></li><li><a href=#评论区监测>评论区监测</a></li><li><a href=#写在最后>写在最后</a></li></ul></nav></div><script>window.addEventListener("DOMContentLoaded",()=>{enableStickyToc()})</script></div></div><script>document.addEventListener("DOMContentLoaded",()=>{hljs.highlightAll()})</script></div></div></main><footer class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b"><p class="text-sm text-tertiary-text">© 2023-2025
+<a href=https://viyi.cc/about_me/>枝因</a> ·
+Powered by the
+<a href=https://github.com/wangchucheng/hugo-eureka target=_blank rel="noopener noreferrer">Eureka</a>
+theme for
+<a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a></p></div></div></footer></body></html>
