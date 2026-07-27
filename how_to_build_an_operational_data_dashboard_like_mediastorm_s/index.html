@@ -123,7 +123,7 @@
     },
     "headline": "复刻 @影视飓风 同款运营数据面板 | 与你分享我的眼睛","datePublished": "2025-08-03T00:00:00+00:00",
     "dateModified": "2025-08-03T00:00:00+00:00",
-    "wordCount":  2795 ,
+    "wordCount":  2862 ,
     "author": {
         "@type": "Person",
         "name": "viyi"
@@ -327,6 +327,7 @@
 <p>默认是定时早上 9 点运行一次，也可以 @ 机器人+对应关键词来触发实时的数据更新。这俩功能需要脚本长期保持运行状态，最好是有空闲机子当作服务器会方便一些。</p>
 <p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1754223784381.png" alt="1754223784381.png"></p>
 <p>说实话很简陋，尤其是用不了官方的 API（因为只面向企业开放） 只好依赖本地 cookie 容易过期失效（尤其是微信公众号），但作为只为麻瓜个人的工具还是够用的——大概这就是 vibe coding 的意义，就算是麻瓜也能手搓一个 for me 的专属工具提效。</p>
+<p>再加上之前其实大部分平台数据获取的脚本，也已经实现了，整个集合的面板就是小 case 啦~如果想知道这部分情况，可以参见<a href="https://viyi.cc/a_record_of_the_new_burnout_worker_hiring_ai/">《新晋社畜雇佣 AI 实录》</a>。</p>
 <p>这里主要是写个比较详细的配置说明，让如山清抄作业（是的就是写给你的）。</p>
 <p>主要的脚本都放在 <a href="https://github.com/viyiY2K/social_media_data/">GitHub</a>上了，先把这个项目下载到本地，确认本地的 Python 环境和相关的依赖（REDME 中有）。然后我们来修改这些脚本，把必要的东西填上。</p>
 <p>首先是微博、抖音、bilibili、小红书的 cookie 信息，需要登录后再获取。安装浏览器插件「<a href="https://cookie-editor.com/">Cookie-Editor</a>」，进入已登录的 bilibili 页面。第一次使用插件，需要给相关的权限。</p>
