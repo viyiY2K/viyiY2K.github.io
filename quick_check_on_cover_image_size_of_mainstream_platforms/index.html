@@ -90,6 +90,26 @@
   }
 </style>
 
+<style id="inline-code-style">
+   
+  .prose :where(code):not(:where(pre *, [class~="not-prose"] *)) {
+    background-color: var(--color-tertiary-bg);
+    color: var(--color-primary-text);
+    padding: 0.15em 0.4em;
+    margin: 0 0.1em;
+    border-radius: 0.3em;
+    font-size: 0.85em;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .prose :where(a code):not(:where(pre *, [class~="not-prose"] *)) {
+    color: inherit;
+  }
+</style>
+
 <link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
@@ -314,26 +334,26 @@
 
   <p>问：投稿 12 个平台需要几张封面图？
 答：4 张。太好了居然不是 12 张XD。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1760414261208.png" alt="1760414261208.png"></p>
+<p><img src="1760414261208.png" alt="1760414261208.png"></p>
 <p>可惜各家平台的 UI 比较混乱，总是因为小细节打回给动效老师调整，遂整理了一份基础规范。出于尊重知识产权考虑，无法公开完整表格。但为了防止以后重复造轮子，遂将部分基础尺寸要求留档。</p>
 <p>我对各平台封面的基本要求是「在任意 UI 界面裁剪下，封面中的核心信息传递准确」，一般在平台投稿界面，会有基本的尺寸说明。但是，是的总要有但是，实际在平台的不同界面下，封面裁剪尺寸各异。这说白了还挺琐碎的，遍历各个界面确认裁剪比例，绘制出核心显示范围，将信息放置在「核心展示区」即可。</p>
 <p>该说不说，b 站的 UI 在网页端、移动端的不同界面都不统一，甚至出现过 16:10 这种在投稿页面封面要求中没有指明（但实际存在）的裁剪尺寸，怒斥😡。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1760412051673.png" alt="1760412051673.png"></p>
+<p><img src="1760412051673.png" alt="1760412051673.png"></p>
 <p>公众号的尺寸正常是 2.35:1，但考虑到也有 1:1 的裁剪展示，把两个尺寸拼接在一起 3.35:1，利用平台自带的裁剪框选择，即可在两个尺寸在均保证信息完整。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/11.png" alt="11.png"></p>
+<p><img src="11.png" alt="11.png"></p>
 <p>同家的视频号就比较抓马了……封面尺寸是随视频尺寸变动的，对于横版视频和竖版视频，封面的裁剪需求都不一致；在不同界面下，裁剪的尺寸也比较横跳。</p>
 <figure style="display: flex; justify-content: space-around;">
   <div style="text-align: center;">
-    <img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1760412317785.png" alt="横版" width="300">
+    <img src="1760412317785.png" alt="横版" width="300">
     <figcaption>图1：视频号横版尺寸</figcaption>
   </div>
   <div style="text-align: center;">
-    <img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1760414406185.png" alt="竖版" width="85">
+    <img src="1760414406185.png" alt="竖版" width="85">
     <figcaption>图2：视频号竖版尺寸</figcaption>
   </div>
 </figure>
 <p>另外，现在短视频平台（抖音、小红书、快手）投稿横版视频时，可上传两张封面（通常为 16:9 和 3:4）。在移动端信息流展示中，3:4 的尺寸占比更大，故投稿横版视频时需同步上传 3:4 封面。</p>
-<div style="text-align: center;"> <img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1760415029749.png" alt="短视频封面" width="40%"> </div>
+<div style="text-align: center;"> <img src="1760415029749.png" alt="短视频封面" width="40%"> </div>
 <p>另附说明（以 b 站尺寸为例）：</p>
 <ol>
 <li>

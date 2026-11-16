@@ -90,6 +90,26 @@
   }
 </style>
 
+<style id="inline-code-style">
+   
+  .prose :where(code):not(:where(pre *, [class~="not-prose"] *)) {
+    background-color: var(--color-tertiary-bg);
+    color: var(--color-primary-text);
+    padding: 0.15em 0.4em;
+    margin: 0 0.1em;
+    border-radius: 0.3em;
+    font-size: 0.85em;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .prose :where(a code):not(:where(pre *, [class~="not-prose"] *)) {
+    color: inherit;
+  }
+</style>
+
 <link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
@@ -354,7 +374,7 @@
 <p>迄今为止这套方法似乎和你之前所学的笔记方法并没有太多的区别，真正使它行之有效的前提则是卡片唯一标识符（ID）的存在。ID 的作用将会在下一个步骤详细解释，这里先简单介绍一下卢曼的编号方式：</p>
 <p>基本的规是将抽象的数字和字母交替使用，而并不以主题来组织。比如我的第一张卡片的编号是 1，如果我因 1 有了一个相关想法，那我可以继续以 1 为起点分叉出 1a 来记录。如果我对 1a 有了补充或评论时，那接下来的笔记编号应为 1a1 。而此时如果我有一条与 1 相关而非 1a 分支相关的内容，则记为 1b，以此类推。</p>
 <p>这样编号的优势是在保证卡片 ID 唯一性的同时保留了思维过程的发展路径，并且为「连接」创造出条件。卢曼的这个编号方法在一定程度上忽略了结构层级，但也依赖于你对已有知识框架的判断以及对自己感兴趣内容的把握程度。</p>
-<p><img src="https://pic4.zhimg.com/v2-35c250bde4b8d91432a7a8fa653658bf_b.jpg" alt=""></p>
+<p><img src="v2-35c250bde4b8d91432a7a8fa653658bf_b.jpg" alt=""></p>
 <p>理论上来说只要 ID 具有唯一性，就足以满足最基本的需要。在初期我们可以让它再野蛮生长一些，这里我们不妨直接使用 16 位的时间戳来编号，并且把它放在左上角</p>
 <blockquote>
 <p># 202109232058</p>

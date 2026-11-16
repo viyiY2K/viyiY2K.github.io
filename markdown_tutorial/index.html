@@ -90,6 +90,26 @@
   }
 </style>
 
+<style id="inline-code-style">
+   
+  .prose :where(code):not(:where(pre *, [class~="not-prose"] *)) {
+    background-color: var(--color-tertiary-bg);
+    color: var(--color-primary-text);
+    padding: 0.15em 0.4em;
+    margin: 0 0.1em;
+    border-radius: 0.3em;
+    font-size: 0.85em;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .prose :where(a code):not(:where(pre *, [class~="not-prose"] *)) {
+    color: inherit;
+  }
+</style>
+
 <link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
@@ -322,19 +342,19 @@
 <h2 id="使用流程">使用流程</h2>
 <p>说了这么多，那我们究竟要怎么上手用？首先，你需要一款支持 markdown 语法的文本编辑器，在里头按照语法规范标记文字内容。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> 接着，通过编辑器将它渲染为你所需要的样式，或是将 .md 文件转换成其他文件格式。最后，我们就可以将内容发布至网络，或者仅仅只是保存下来这份文档。</p>
 <p>上述过程中，我们刻意将书写和呈现分为了两个步骤，实际上现在的编辑器并不需要如此麻烦。早期的 Markdown 编辑器通常是双栏样式的，左边是纯文本格式标记的内容，右边则是渲染完成后的样式——你所看到的是左边的 # ，而最终得到的是右边的三号宋体加粗。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1688104608236.png" alt="早期双栏模式"></p>
+<p><img src="1688104608236.png" alt="早期双栏模式"></p>
 <p>而在 word 里，你设置完标题之后，它就已经是三号宋体加粗的呈现，并不存在 # 这样的中介。最重要的是，它打印到纸张上的最终呈现，和你在屏幕上看到的一模一样。人们管这样的东西叫「<a href="https://zh.wikipedia.org/zh-cn/%E6%89%80%E8%A7%81%E5%8D%B3%E6%89%80%E5%BE%97">所见即所得</a>」（What You See Is What You Get），这也是纯文本与富文本最大的区别。</p>
 <p>尽管对于 markdown 而言，它的承载媒介通常并不是纸张，但它如今也拥有着这样“所见即所得”的特性——在书写时越过作为中介的标记符号，直接呈现出最终的渲染效果。其实这都不太能算得上是编辑器的特点了，毕竟大多数 Markdown 编辑器都已经支持了这样的功能，通常你都可以在编辑器中自由切换「源代码模式」、「双栏模式」和「实时阅览模式」。源码模式就是我们一直在谈论的纯文本，实时阅览模式则可以提供和 word 一样的「所见即所得」体验，双栏模式则是这两者的综合。</p>
 <p>噢，至于你所“真正”看到的具体样式，我说如果你并不希望在屏幕上看到标题是三号宋体加粗，而是四号黑体倾斜的话&hellip;&hellip; 很遗憾，这并不是 markdown 语法所能够控制的部分。一般来说这是由你所使用的编辑器中提供的 .css 文件来控制的——你可以理解为这是个“主题皮肤”，有预设的各种风格可以供你挑选。文章中各个类型的文本怎么具体显示不需要你决定，你只需要决定它是不是这个类型（通过标记）。</p>
 <p>这是 markdown 的优点所在，我们只需要在样式上做判断题而不是填空题，这样就能更专注于文字内容本身的撰写。而正是因为它没办法做到 word 那样对版面精确的控制，它确实不适用于对版式有高要求的场景。</p>
 <p>说回到使用流程，如果你的文档最终需要以更加通用的格式进行传输，现在的编辑器大多也提供了「导出」的功能。要进行格式转换只需要点击就可以了，你甚至不需要知道 Pandoc 是什么。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1688109766232.png" alt="Typora 的导出菜单栏"></p>
+<p><img src="1688109766232.png" alt="Typora 的导出菜单栏"></p>
 <p>于是，强行被我说成三个步骤的使用流程，其实只有“学会语法去写”这一步。</p>
 <h2 id="语法规范">语法规范</h2>
 <p>好的逼逼叨了这么多，终于能聊到语法了。需要强调的是，以下语法规则所使用的符号均为<strong>英文半角</strong>，其次一定<strong>不要忽略空格</strong>。</p>
 <p>在接下来的语法介绍中，我并不会严格按照标准语法和拓展语法来分类，也并不区分块级元素和行内元素。这里会以使用为导向进行简要分类，来介绍常用的 Markdown 语法。毕竟在使用中我们没必要区分它到底遵循了哪个规范又占了多大位置，我们只需要写出它且能够正常渲染就万事大吉啦。</p>
 <p>如果有多种标记方式可以呈现同一种样式，下文也只会提供最常见的那一种。因为多了容易犹豫，本质又没有区别。比如既可以用一串 <code>====</code>和 <code>----</code> 来表示标题，也可以用 <code>#</code> 来表示标题，后者既比前者好记、支持的层级更多、源码也更容易读且不易混淆。就算知道 <code>===</code> 也可以用，但实际上并不怎么会真的用得上，我们就直接聊最常用的呗，相信以下内容可以更好地帮你上手入门：</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1688105610250.png" alt="Markdown常用语法.png"></p>
+<p><img src="1688105610250.png" alt="Markdown常用语法.png"></p>
 <p>事实上，这张图包含了大部分的语法内容，这篇文章重要的也许只有它。不过有些地方我们还是得多说几句，所以你可以选择继续看看文字版。</p>
 <h3 id="基本样式">基本样式</h3>
 <p>标题通常是在行首用井号 「#」 加上一个空格进行标记，「#」的个数表示标题的层级，一般最多支持 6 层，也就是「######」。</p>

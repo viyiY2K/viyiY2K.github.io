@@ -90,6 +90,26 @@
   }
 </style>
 
+<style id="inline-code-style">
+   
+  .prose :where(code):not(:where(pre *, [class~="not-prose"] *)) {
+    background-color: var(--color-tertiary-bg);
+    color: var(--color-primary-text);
+    padding: 0.15em 0.4em;
+    margin: 0 0.1em;
+    border-radius: 0.3em;
+    font-size: 0.85em;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .prose :where(a code):not(:where(pre *, [class~="not-prose"] *)) {
+    color: inherit;
+  }
+</style>
+
 <link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
@@ -317,7 +337,7 @@
 </code></pre>
 <p>其中，<code>Host</code> 用于指定该配置项作用的主机名（若后接 <code>*</code> 则表全局），<code>Hostname</code> 用于指定请求通信对象的目标地址，<code>Port</code> 指定了连接所使用的远程端口，<code>User</code> 用于指定登陆远程主机所用的用户名。</p>
 <h2 id="我很好奇">我很好奇</h2>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1694227110862.png" alt="冰菓">)</p>
+<p><img src="1694227110862.png" alt="冰菓">)</p>
 <p>官方文档提供的解决路径是把 ssh 的连接端口换成 HTTPS 的默认端口，网上<a href="https://www.v2ex.com/t/807649">查到也有说</a>可以通过在 config 中添加 <code>ProxyCommand nc -v -x 127.0.0.1:7890 %h %p</code> 来解决。顺手查了些拓展资料，还挺有意思的。</p>
 <p><code>ProxyCommand</code> (代理命令) 是 ssh 配置中的一个参数，用于实现通过 Jump Host（跳板机/堡垒机）来连接到远程主机。大概意思就是阿珍（本地主机）想和阿强（目标主机）在赛博空间 say hi，但阿珍出于害羞（安全）不想让阿强知道自己是谁，于是让阿狗（跳板机）传达一下。在这个过程中，阿狗需要知道 ta 需要知道向哪个阿强（目标主机的 IP/域名）转达阿珍的 hi （流量）以及阿强的档期（目标主机的端口号）。具体在命令行中的呈现，是两个占位符—— <code>%h</code> (host) 和 <code>%p</code> (port)，在实际中会被替换为对应的内容。</p>
 <p>这个参数除了 <del>围观阿珍和阿强的爱情故事</del> 通过跳板机转发 ssh 流量给到目标主机之外，还可以指定执行 ssh 连接之前要执行的命令。于是接着就出现了 <code>nc</code> (netcat) 命令<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，这个命令用于设置路由器。麻瓜式理解路由器的话，把它当作是在网络中传输数据的阿猫就行，和之前的阿狗差不多意思。选项 <code>-v</code> (verbose) 是指显示指令执行过程，也就是说会开启调试模式输出详细信息。<code>-x</code> 是用于指定代理主机地址和通信端口号，开启这个选项后会默认使用 SOCKES5(Socket Secure 5) 协议。也就是说，后面的 <code>127.0.0.1:7890</code> 是指代理服务器的 IP 地址，端口号是 <code>7890</code>，使用的通信协议是 SOCKES5。</p>

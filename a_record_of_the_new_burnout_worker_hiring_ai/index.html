@@ -90,6 +90,26 @@
   }
 </style>
 
+<style id="inline-code-style">
+   
+  .prose :where(code):not(:where(pre *, [class~="not-prose"] *)) {
+    background-color: var(--color-tertiary-bg);
+    color: var(--color-primary-text);
+    padding: 0.15em 0.4em;
+    margin: 0 0.1em;
+    border-radius: 0.3em;
+    font-size: 0.85em;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .prose :where(a code):not(:where(pre *, [class~="not-prose"] *)) {
+    color: inherit;
+  }
+</style>
+
 <link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
@@ -424,7 +444,7 @@ print(f&quot;评论数: {comments}&quot;)
 <p>这样我就不需要“时不时”戳开视频看一眼数据，然后播报给老板娘了，好耶！基本的设置流程，可以参见飞书的<a href="https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot?lang=zh-CN">自定义机器人使用指南</a>。获取到 WebHook URL 后，只需要简单地修改一下脚本，写好消息发送的格式就可以了。</p>
 <p>发布时间也是衡量数据表现的维度之一，因此加上了这个数据，还顺手计算了互动总数。示例代码为 bilibili，其他平台类似，完整代码<a href="https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/bilibili_real_time.py">参见此处</a>。</p>
 <p>实际接收到消息的效果是这样的：</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881422761.png" alt="1737881422761.png"></p>
+<p><img src="1737881422761.png" alt="1737881422761.png"></p>
 <p>如果你像我一样要运营多个矩阵号，还可以顺手修改下颜色方便辨识，加上个变量即可：</p>
 <pre><code class="language-python">#如果是账号1，则是紫色；账号 2 则是粉色；除了这俩，默认是橙色。
 template_color = &quot;purple&quot; if info['owner']['name'] == &quot;账号名1&quot; else &quot;carmine&quot; if info['owner']['name'] == &quot;账号名2&quot; else &quot;orange&quot;
@@ -484,7 +504,7 @@ def ensure_data_dir():
 <p>很可惜我家没有装宽带，也没有可以玩的小主机之类的东西。考虑到我们这种随时 on call 的岗，为了方便远控访问 NAS，电脑几乎不关机……那就直接用公司电脑来设置定时任务好了。</p>
 <p>最简单的实现是 Windows 自带的「任务计划程序」，理论上这种系统工具应该<a href="https://learn.microsoft.com/zh-cn/troubleshoot/windows-server/system-management-components/schedule-server-process">逐步按引导操作</a>就可以实现，GUI 就应当让人看到就明白对吗？可惜这个世界上，应然和实然是两回事。</p>
 <p>常规的教程只说了”将所需要运行的脚本路径填入即可“，但它一直无法按预期运行定时任务。几经周折后终于在某个角落（一篇名为「<a href="https://www.cnblogs.com/sui776265233/p/13602893.html">windows设置定时执行脚本</a>」的文章）里查到，其实需要在启动程序的那部分，先填入 Python.exe 的绝对路径，并在可选的两个参数中，填入 Python 脚本路径和解释器路径。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881461733.png" alt="1737881461733.png"></p>
+<p><img src="1737881461733.png" alt="1737881461733.png"></p>
 <p>尽管这位<a href="https://www.cnblogs.com/sui776265233">迎风而来的小随</a>在 2021 年停止了博客的更新，但还是由衷地感谢 ta 的文章解决了我的小问题。这就是我现在依旧更喜欢文字、更喜欢网页，并且无比痛恨死链的原因。</p>
 <p>不过我依旧无法接受需要为每次的定时任务逐次点击这么多次鼠标，我的腕管综合征对此表示强烈的不满。于是又让 AI 写了一段使用 Schtasks 命令行完成操作的命令：</p>
 <pre><code class="language-python">C:\\Windows\\System32\\schtasks.exe /create /tn &quot;测试&quot; `
@@ -502,10 +522,10 @@ def ensure_data_dir():
 <p>这太愚蠢了，但很显然，各平台的封闭性并没有提供足够简单好用的接口让这种琐碎事消失，当然有更复杂的方式可以实现，这让那些社媒管理平台得以盈利。只不过本麻瓜被拒之门外，好消息是我们依旧可以曲线救国。</p>
 <p>大多数（7/12）平台提供了详细数据导出的功能，还有 2 个（YouTube 和微博）可以通过上述的脚本获取到，剩下 3 个无关紧要的平台，只有甲方会需要，因此手动收录也显得不那么不可接受。那么，导出 7 个平台的数据并筛选标题关键词，同时给到 YouTube 和微博的视频链接，理论上是能实现一键汇总 9 个平台的数据的。</p>
 <p>只是手动下载 7 个平台的数据再提供 2 个链接，显然比之前逐个汇总那么多表项来得可以接受。于是对外汇总数据的 1.0 版本非常简单粗暴，筛选固定路径里的文件，根据平台名找到对应文件，然后匹配和检索关键词一致的行，复制表头和该行数据到新文件中。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881485152.png" alt="1737881485152.png"></p>
+<p><img src="1737881485152.png" alt="1737881485152.png"></p>
 <p>至于为什么区分出了 1.0 版本，因为总是会有新的要求，<a href="https://en.wikipedia.org/wiki/Scope_creep">Scope Creep</a> 永远正确，被困住的只有牛马🚬。有些甲方对表头的要求是指定的，于是 2.0 版本用了更通用的匹配方式，也让输出更加规整。</p>
 <p>最终的输出将会是：</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1737881509051.png" alt="1737881509051.png"></p>
+<p><img src="1737881509051.png" alt="1737881509051.png"></p>
 <p>具体的实现<a href="https://github.com/viyiY2K/viyiY2K.github.io/blob/main/python/to_party_a_bilibili.py">参见此处</a>，代码过长故不放入正文。</p>
 <p>如果需要增删输出中的列，只需要修改这里的代码：</p>
 <pre><code class="language-python">    ## 输出列及其可能的列名

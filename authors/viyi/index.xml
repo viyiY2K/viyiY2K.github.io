@@ -6,7 +6,7 @@
     <description>Recent content in 枝因 on 与你分享我的眼睛</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 24 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/authors/viyi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://viyi.cc/authors/viyi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>@数字生命卡兹克 运营侧优化分析</title>
       <link>https://viyi.cc/docs/ip_khazix_social_media_analysis/03_operational_optimization/</link>
@@ -59,6 +59,15 @@
       
       <guid>https://viyi.cc/docs/ip_khazix_social_media_analysis/</guid>
       <description>本项目聚焦 @数字生命卡兹克 在微信公众号、X、小红书、微博、抖音与 B 站等公开社交媒体平台上的内容生产与传播。 我从公众号文章、跨平台发布记录和具体内容案例</description>
+    </item>
+    
+    <item>
+      <title>Claude 再爱我一次</title>
+      <link>https://viyi.cc/try_the_claude_account_again/</link>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://viyi.cc/try_the_claude_account_again/</guid>
+      <description>我们从 Anthropic 官方帮助文档里可以看到，它明确列出了三类封禁账号的原因。 我们先处理第二条的否命题——从受支持的地区创建账户。 用上 Claude 这事不难。注册个账号，OK，</description>
     </item>
     
     <item>

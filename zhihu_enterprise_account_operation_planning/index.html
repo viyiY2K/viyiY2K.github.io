@@ -90,6 +90,26 @@
   }
 </style>
 
+<style id="inline-code-style">
+   
+  .prose :where(code):not(:where(pre *, [class~="not-prose"] *)) {
+    background-color: var(--color-tertiary-bg);
+    color: var(--color-primary-text);
+    padding: 0.15em 0.4em;
+    margin: 0 0.1em;
+    border-radius: 0.3em;
+    font-size: 0.85em;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .prose :where(a code):not(:where(pre *, [class~="not-prose"] *)) {
+    color: inherit;
+  }
+</style>
+
 <link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
@@ -306,13 +326,13 @@
 <h2 id="平台基本规则">平台基本规则</h2>
 <p>本节将简要说明知乎平台的主要规则，为后文提供依据。</p>
 <h3 id="流量来源">流量来源</h3>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%E7%9F%A5%E4%B9%8E%E6%B5%81%E9%87%8F%E5%85%A5%E5%8F%A3.PNG" alt="知乎基础流量来源"></p>
+<p><img src="%E7%9F%A5%E4%B9%8E%E6%B5%81%E9%87%8F%E5%85%A5%E5%8F%A3.PNG" alt="知乎基础流量来源"></p>
 <p>很显然基础流量的很大一部分依赖于平台的推荐，知乎整体的内容生产方式由早期的 UGC（User-generated Content，用户生产内容）逐渐转变为 UGC + PGC（Professionally-generated Content，专业生成内容），对高质量内容的需求在扩大化。而平台从始至终都是为了优质内容而服务，其自有一套规则来决定曝光。顺势而为是立身之本，这部分的内容会在下一小节详述。</p>
 <p>在平台流量分发之外用户的内容获取途径主要为「主动获取」和「内容匹配」。在手机端 app 越发孤岛化的当下，知乎某种程度上发挥着传统搜索引擎的部分作用，再加上知乎在搜索引擎中相对较高的权重占比，这部分来源也需纳入考量。此外，主动获取在问答社区不仅仅来源于搜索，发布提问也是其获取内容的途径之一。而「内容匹配」则是依赖于平台算法的信息流分发，同样归于下一小节再述。</p>
 <p>另外需要注意的是，近几年知乎的媒介形式由图文内容逐渐倾斜为视频内容。移动端的「视频」入口层级与首页的「推荐」是同一层级，显然其目前更倾向于对视频内容的引导和扶持。</p>
 <h3 id="威尔逊算法">威尔逊算法</h3>
 <p>此为<a href="https://zhuanlan.zhihu.com/p/19902495">知乎官方公开</a>的回答排序算法，<a href="https://www.zhihu.com/question/26933554">威尔逊公式</a>如下：</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/%E7%9F%A5%E4%B9%8E%E7%AE%97%E6%B3%95.JPG" alt="知乎威尔逊公示"></p>
+<p><img src="%E7%9F%A5%E4%B9%8E%E7%AE%97%E6%B3%95.JPG" alt="知乎威尔逊公示"></p>
 <p>u 表示赞同数， v 表示反对数， n 表示总票数， p 表示赞同率， z 是正态分 布的分位数（参数）， S 表示最终的威尔逊得分。</p>
 <blockquote>
 <p>结论</p>

@@ -90,6 +90,26 @@
   }
 </style>
 
+<style id="inline-code-style">
+   
+  .prose :where(code):not(:where(pre *, [class~="not-prose"] *)) {
+    background-color: var(--color-tertiary-bg);
+    color: var(--color-primary-text);
+    padding: 0.15em 0.4em;
+    margin: 0 0.1em;
+    border-radius: 0.3em;
+    font-size: 0.85em;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .prose :where(a code):not(:where(pre *, [class~="not-prose"] *)) {
+    color: inherit;
+  }
+</style>
+
 <link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
@@ -233,6 +253,14 @@
       
       
       
+        
+      
+      
+      
+    
+      
+      
+      
       
       
     
@@ -404,6 +432,8 @@
     
     
     
+    
+      
     
       
     
@@ -438,6 +468,8 @@
         
         
         
+          
+        
         
         
       
@@ -446,7 +478,13 @@
         
         
         
-          
+        
+        
+      
+    
+      
+        
+        
         
         
         
@@ -661,14 +699,14 @@
         <a href="/posts/" 
            class="inline-flex items-center px-4 py-2 bg-primary-bg border border-tertiary-bg hover:bg-eureka hover:text-white hover:border-eureka rounded-full text-sm font-medium transition-colors duration-200 no-underline">
           全部
-          <span class="ml-2 text-xs opacity-75">(28)</span>
+          <span class="ml-2 text-xs opacity-75">(29)</span>
         </a>
         
         
         <a href="/categories/札记/" 
            class="inline-flex items-center px-4 py-2 bg-primary-bg border border-tertiary-bg hover:bg-eureka hover:text-white hover:border-eureka rounded-full text-sm font-medium transition-colors duration-200 no-underline">
           札记
-          <span class="ml-2 text-xs opacity-75">(17)</span>
+          <span class="ml-2 text-xs opacity-75">(18)</span>
         </a>
         
         
@@ -693,6 +731,14 @@
     
     <div class="mb-8">
       <div class="flex flex-wrap justify-center gap-4">
+        
+          
+          
+          <a href="#year-2026" 
+             class="inline-flex items-center px-4 py-2 bg-tertiary-bg hover:bg-eureka hover:text-white rounded-full text-sm font-medium transition-colors duration-200 no-underline">
+            2026
+            <span class="ml-2 text-xs opacity-75">(1)</span>
+          </a>
         
           
           
@@ -746,6 +792,58 @@
     </div>
     
     
+    
+      
+      
+      
+      
+      <div id="year-2026" class="mb-12">
+        
+        <div class="flex items-center mb-6">
+          <div class="flex-shrink-0">
+            <h2 class="text-3xl font-bold text-primary-text bg-eureka text-white px-4 py-2 rounded-lg shadow-sm">
+              2026
+            </h2>
+          </div>
+          <div class="flex-grow ml-4 h-px bg-tertiary-bg"></div>
+          <div class="flex-shrink-0 ml-4 text-tertiary-text text-sm">
+            1 篇文章
+          </div>
+        </div>
+        
+        
+        <div class="space-y-8">
+          
+            <article class="group">
+              <div class="flex items-start space-x-4 p-4 pb-6 rounded-lg hover:bg-tertiary-bg transition-colors duration-200">
+                
+                <div class="flex-shrink-0 text-center">
+                  <div class="bg-eureka text-white px-3 py-1 rounded-lg text-sm font-medium">
+                    11/16
+                  </div>
+                </div>
+                
+                
+                <div class="flex-grow min-w-0">
+                  <h3 class="text-lg font-medium mb-1">
+                    <a href="https://viyi.cc/try_the_claude_account_again/" 
+                       class="text-primary-text hover:text-eureka transition-colors duration-200 no-underline group-hover:text-eureka">
+                      Claude 再爱我一次
+                    </a>
+                  </h3>
+                  
+                  
+                   <div class="text-tertiary-text text-sm leading-relaxed">
+                     
+                       本文也不保证你绝对能用上 Claude，用上了也不保证你绝对不封号。别来骂我，你骂我，我就哭。
+                     
+                   </div>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
     
       
       

@@ -90,6 +90,26 @@
   }
 </style>
 
+<style id="inline-code-style">
+   
+  .prose :where(code):not(:where(pre *, [class~="not-prose"] *)) {
+    background-color: var(--color-tertiary-bg);
+    color: var(--color-primary-text);
+    padding: 0.15em 0.4em;
+    margin: 0 0.1em;
+    border-radius: 0.3em;
+    font-size: 0.85em;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .prose :where(a code):not(:where(pre *, [class~="not-prose"] *)) {
+    color: inherit;
+  }
+</style>
+
 <link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
@@ -305,28 +325,28 @@
 <p>惯例打开 Z-Library，发现之前的网站挂了。遂去 Google 搜索，点开排序首位网站、搜索、命中。截至目前一切正常，弹出弹窗要求付费。思考三秒，白嫖那么久付费支持下不过分。</p>
 <p>付款前福至心灵，感觉如果它收费不应该一点消息都没有，一查果然是误入诈骗网站。怒发小红书，怕是捅了算法 G 点狂推相关，总刷到引流笔记，卖 Z-Library 入口 GMV 达两万。</p>
 <p>沉默一秒钟，再次怒发小红书指路正确入口，一天后小爆了，被夹。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/redbook.JPG" alt="redbook.JPG"></p>
+<p><img src="redbook.JPG" alt="redbook.JPG"></p>
 <p>沉默两秒钟，我偏要说。</p>
 <h3 id="两个油猴脚本">两个油猴脚本</h3>
 <p>这两年阅读习惯变了，喜欢纸质书胜过电子书。</p>
 <p>大部分会买、小部分会从图书馆借。深圳这边基建是真的好，在居民区会有小的自助图书点，可以在公众号上预借图书，送至家附近的自助点取书，非常方便。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/yujie.JPG" alt="yujie.JPG"></p>
+<p><img src="yujie.JPG" alt="yujie.JPG"></p>
 <p>通常会在豆瓣读书上标记想读的书，进入对应的书籍页面，右侧会显示常用的在线阅读的网站——我一般只看有没有「微信读书」，毕竟氪金了。书籍基本信息下方，则是两个资源站的入口，点击就可以跳转过去。如果微信读书没有，一般我会去这俩地方下载文件。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1757940217568.png" alt="1757940217568.png"></p>
+<p><img src="1757940217568.png" alt="1757940217568.png"></p>
 <p>显然这不是豆瓣读书自带的功能，是通过两个油猴脚本实现的。预设你的浏览器中已安装「<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a>」，那么只需要去 <a href="https://greasyfork.org/zh-CN">Greasyfork</a> 下载 <a href="https://greasyfork.org/zh-CN/scripts/412479-ebooks-assistant">豆瓣读书助手</a> 和 <a href="https://greasyfork.org/zh-CN/scripts/541792-ebooks">电子书助手</a> 即可。</p>
 <h3 id="z-library-和-annas-archive">Z-Library 和 Anna&rsquo;s Archive</h3>
 <p>这个脚本本质只是个跳转快捷键，有用的是这两个资源站。</p>
 <p>Z-Library 是一个收录了上千万本书的影子图书馆，<strong>免费的</strong>，每天可以下载 5 本书，注册后是 10 本，有捐赠的话是 15 本，这个是自愿的。Z-Library 也是我用很多年的一个资源站，就个人经验而言，它很少有不命中的。</p>
 <p>说缺点的话，它是一直在和版权方玩猫鼠游戏，所以域名时常会更换，用着用着你会发现，啊这个站点挂掉了。</p>
 <p>这个脚本在首次使用时，是需要自行设置 Z-Library 的域名地址，脚本设置里有<a href="https://www.reddit.com/r/zlibrary/wiki/index/access/">传送门</a>。点击可以直接跳转到 Z-Library 在 Reddit 上的 wiki 页面，这里会更新最新可用的 Z-Library 域名。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1759205934007.png" alt="1759205934007.png"></p>
+<p><img src="1759205934007.png" alt="1759205934007.png"></p>
 <p>截止目前（2025/08/29）可用的域名是：</p>
 <ul>
 <li>You can use <a href="https://z-library.gs/">z-library.gs</a> or <a href="https://1lib.sk/">1lib.sk</a> or <a href="https://z-lib.fm/">z-lib.fm</a> or <a href="http://z-lib.gd/">z-lib.gd</a> or <a href="http://z-lib.gl/">z-lib.gl</a> or <a href="https://zliba.ru/">zliba.ru</a></li>
 <li>If you are in Italy, France or Spain try <a href="https://z-library.ec/">z-library.ec</a></li>
 </ul>
 <p>另一个找到最新域名的方法，是在 <a href="https://zh.wikipedia.org/zh-cn/Z-Library">Wikipedia 的 Z-Library</a> 页面。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1757940567786.png" alt="1757940567786.png"></p>
+<p><img src="1757940567786.png" alt="1757940567786.png"></p>
 <p>Reddit 和 Wikimedia 的入口是绝对正确的，不像 Google 出来的排序前三基本都是诈骗网站……这年头诈骗网站的 SEO 做得都比正牌强（bushi。</p>
 <p>考虑到有些朋友并不会魔法，无法顺利访问 Reddit 和 Wikimedia，国内也存在一些<a href="https://zlibrary.2rdh.com/">镜像站点</a>。</p>
 <p>通常来说，只要不诱导填入敏感信息，或是要求直接付费，Z-Library 的镜像网站问题都不大。</p>
@@ -334,7 +354,7 @@
 <p>「<a href="https://zh.annas-archive.org/">安娜的档案</a>」我用得相对少一点，它是 22 年才创立的，因为那年 Z-Library 的俄罗斯运营人员进去了……。安娜主要功能是索引各家影子图书馆，比如 Library Genesis、Sci-Hub 等等，索引了 5 千万本书。</p>
 <p>简单来说，可以在这里搜索、找到哪个影子图书馆里有你需要的书。尽管安娜并不直接存储这些电子书，但会提供可下载的资源传送门给到。</p>
 <p>另外还值得一提的是，23 年有人给「安娜的档案」捐赠了来自超星和读秀的数据库，里头有 37 万个文件近 200TB 的中文图书资源，对于中文读者来说非常友好。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1757940652062.png" alt="1757940652062.png"></p>
+<p><img src="1757940652062.png" alt="1757940652062.png"></p>
 <p>总结地来说，如果这俩馆藏几千万本的都不能命中，那这本书大概没有电子版，毕竟没有人扫描就不会流传出资源。就算有，时间成本也太高，不如直接借或者买划算（绝版或特殊的书除外)。</p>
 <h2 id="写在最后">写在最后</h2>
 <p>起初在小红书看到购买 Z-Library 入口的时候，我是很诧异的。心想这不是公开的东西吗？卖这个链接会被骂吧？于是去翻了眼已购买的评论，清一色的好评。</p>
@@ -342,7 +362,7 @@
 <p>好像对我来说习以为常的东西，对另一些人来说是不存在的。阳光普照大地，他们站在阴影里。尽管笨拙、尽管花了冤枉钱，但仍然在往前走，仍然在求知。</p>
 <p>想起我最早开始在网上写东西，是因为觉得好东西应该让更多人知道。明明有更有效率、更舒适、更好的工具可以使用，为什么不看看它们呢？</p>
 <p>顺手把被夹的小红书抄送到了微信公众号，停更几年之后，我还是收到了感谢QAQ。</p>
-<p><img src="https://zyin-1309341307.cos.ap-nanjing.myqcloud.com/note/1759208799261.png" alt="1759208799261.png"></p>
+<p><img src="1759208799261.png" alt="1759208799261.png"></p>
 <p>呜呜呜能帮到他们真是太好了，想接着写下去，想多抹平一些信息差，想拯救世界。</p>
 
 </article>
