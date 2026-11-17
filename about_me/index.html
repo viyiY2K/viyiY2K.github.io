@@ -110,6 +110,111 @@
   }
 </style>
 
+<style id="code-copy-button">
+   
+  .code-block-wrap {
+    position: relative;
+  }
+
+  .code-block-wrap > pre {
+    padding-top: 2.4em;
+  }
+
+  .code-copy-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    z-index: 1;
+    padding: 0.2em 0.7em;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    border-radius: 0.35em;
+    border: 1px solid var(--color-tertiary-bg);
+    background-color: var(--color-secondary-bg);
+    color: var(--color-secondary-text, inherit);
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.15s, color 0.15s, border-color 0.15s;
+  }
+
+  .code-copy-btn:hover,
+  .code-copy-btn:focus-visible {
+    opacity: 1;
+    color: var(--color-eureka);
+    border-color: var(--color-eureka);
+  }
+
+  .code-copy-btn.is-copied {
+    color: var(--color-eureka);
+    border-color: var(--color-eureka);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text).catch(function () {
+          return legacyCopy(text);
+        });
+      }
+      return legacyCopy(text);
+    }
+
+    function legacyCopy(text) {
+      return new Promise(function (resolve, reject) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy') ? resolve() : reject();
+        } catch (e) {
+          reject(e);
+        } finally {
+          document.body.removeChild(ta);
+        }
+      });
+    }
+
+    document.querySelectorAll('.prose pre > code').forEach(function (code) {
+      var pre = code.parentElement;
+      if (pre.parentElement.classList.contains('code-block-wrap')) return;
+
+      var wrap = document.createElement('div');
+      wrap.className = 'code-block-wrap';
+      pre.parentNode.insertBefore(wrap, pre);
+      wrap.appendChild(pre);
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'code-copy-btn';
+      btn.textContent = '复制';
+      btn.setAttribute('aria-label', '复制代码');
+      wrap.appendChild(btn);
+
+      var timer;
+      btn.addEventListener('click', function () {
+        copyText(code.innerText.replace(/\n$/, '')).then(function () {
+          btn.textContent = '已复制';
+          btn.classList.add('is-copied');
+        }, function () {
+          btn.textContent = '复制失败';
+        }).then(function () {
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            btn.textContent = '复制';
+            btn.classList.remove('is-copied');
+          }, 2000);
+        });
+      });
+    });
+  });
+</script>
+
 <link rel="icon" type="image/png" sizes="32x32" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_32x32_fill_box_center_3.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
