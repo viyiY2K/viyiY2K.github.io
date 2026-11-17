@@ -114,7 +114,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://viyi.cc/images/icon_hu2a15d92a7effe9046579bd1577f1faa2_259981_180x180_fill_box_center_3.png">
 
 <meta name="description"
-  content="本文也不保证你绝对能用上 Claude，用上了也不保证你绝对不封号。别来骂我，你骂我，我就哭。">
+  content="本文不保证你绝对能用上 Claude，用上了也不保证你绝对不封号。别来骂我，你骂我，我就哭。">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -142,8 +142,8 @@
         "@id": "https://viyi.cc/try_the_claude_account_again/"
     },
     "headline": "Claude 再爱我一次 | 与你分享我的眼睛","datePublished": "2026-11-16T00:00:00+00:00",
-    "dateModified": "2026-11-16T00:00:00+00:00",
-    "wordCount":  15519 ,
+    "dateModified": "2026-11-17T00:00:00+00:00",
+    "wordCount":  16933 ,
     "author": {
         "@type": "Person",
         "name": ["viyi"]
@@ -156,7 +156,7 @@
             "url": "https://viyi.cc/images/icon.png"
         }
         },
-    "description": "本文也不保证你绝对能用上 Claude，用上了也不保证你绝对不封号。别来骂我，你骂我，我就哭。"
+    "description": "本文不保证你绝对能用上 Claude，用上了也不保证你绝对不封号。别来骂我，你骂我，我就哭。"
 }
 </script><meta property="og:title" content="Claude 再爱我一次 | 与你分享我的眼睛" />
 <meta property="og:type" content="article" />
@@ -169,7 +169,7 @@
 
 
 
-<meta property="og:description" content="本文也不保证你绝对能用上 Claude，用上了也不保证你绝对不封号。别来骂我，你骂我，我就哭。" />
+<meta property="og:description" content="本文不保证你绝对能用上 Claude，用上了也不保证你绝对不封号。别来骂我，你骂我，我就哭。" />
 
 
 
@@ -188,7 +188,7 @@
 <meta property="article:published_time" content="2026-11-16T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2026-11-16T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2026-11-17T00:00:00&#43;00:00" />
 
 
 
@@ -197,11 +197,15 @@
 
 <meta property="article:tag" content="Claude" />
 
-<meta property="article:tag" content="防封" />
-
-<meta property="article:tag" content="ISP" />
+<meta property="article:tag" content="AI" />
 
 
+
+
+
+<meta property="og:see_also" content="https://viyi.cc/how_to_build_an_operational_data_dashboard_like_mediastorm_s/" />
+
+<meta property="og:see_also" content="https://viyi.cc/a_record_of_the_new_burnout_worker_hiring_ai/" />
 
 
 
@@ -295,13 +299,15 @@
     <span
       
         
+          title="编辑于 2026年11月17日"
+        
       
       >2026-11-16</span
     >
   </div>
   <div class="me-6 my-2">
     <i class="fas fa-clock me-1"></i>
-    <span>31 分钟阅读时长</span>
+    <span>34 分钟阅读时长</span>
   </div>
 
   
@@ -361,22 +367,57 @@
 <p>通常机场给的配置里也是做了分流，YAML 文件里会首先会把已知国内域名单独走 DIRECT，还有一些 PT 下载、广告代理等流量单独处理，毕竟这种没必要走海外代理，既占流量额又延迟高。然后针对常用的国外域名，再去分组写规则，比如先按地区分个节点组，然后根据网站域名去选这个节点组。这样网站可以单独选地区，地区组里又可以根据延迟切换节点。最后，如果一圈儿匹配下来，域名还是没命中，就交给 Final 组去兜底。</p>
 <p>我们要做的呢，大致过程是先在配置里加上 ISP 节点，然后把 AI 相关的域名（尤其是 Claude）分流到 ISP 节点里，接着把兜底的 Final 组也接到 ISP 上。这样就算 AI 组里没有涵盖到 Anthropic 使用的第三方服务调用，也会落到 Final 组里。</p>
 <p>我的自用配置做得更精细一点，单独给分了个 ISP 节点组，里面放了 1 个二跳节点和 2 个直连节点。这样如果直连节点延迟高 ，可以切换成用机场节点做了桥接的二跳节点，通常来说这个会更快一点，但重复占流量额度是次选。</p>
-<p>我也没有简单粗暴地反向让所有海外流量都走 ISP 节点，毕竟机场节点流量可以和 ISP 节点流量分开计算，ISP 可以仅供 Claude 和其他 AI 使用，日常看 YouTube 之类的用机场流量更合适。所以，我把 Claude 写死在了 ISP 组里，其余 AI 相关域名默认选 ISP 组，如果 ISP 节点流量不足或者延迟过高，可以切换成别的机场节点，毕竟其他家没有 A 社封号狠。其余的常用网站依旧保留可选的机场节点组，而不是固定 ISP 组。</p>
-<p>好好好，我造有人已经看不明白了。总之，你可以把我的这份脱敏配置给到你的 Codex，然后把文件里的 Prompt 复制粘贴发给它，之后去 <a href="https://dashboard.iproyal.com/me/products/static-residential-proxies">IPRoray</a> 里点击「复制代理」，到时候方便 Codex 读剪切板使用。</p>
+<p>我也没有简单粗暴地反向让所有海外流量都走 ISP 节点，毕竟机场节点流量可以和 ISP 节点流量分开计算，ISP 可以仅供 Claude 和其他 AI 使用，日常看 YouTube 之类的用机场流量更合适。</p>
+<p>所以，我把 Claude 写死在了 ISP 组里，其余 AI 相关域名默认选 ISP 组，如果 ISP 节点流量不足或者延迟过高，可以切换成别的机场节点，毕竟其他家没有 A 社封号狠。其余的常用网站依旧保留可选的机场节点组，而不是固定 ISP 组。</p>
+<p>好好好，我造有人已经看不明白了。总之，总之，你可以把我的<a href="Clash%20%E8%84%B1%E6%95%8F%E9%85%8D%E7%BD%AE-2026-11-17.yaml">这份脱敏配置</a>（<a href="Clash 脱敏配置-2026-11-17.yaml" download>戳這裡下載</a>）给到你的 Codex，然后把下方的 Prompt 复制粘贴发给它。</p>
+<pre><code>请参照附件中的 Clash 脱敏配置，使用我自己的机场节点和 ISP 节点，生成一份新的 Clash 配置，并作为独立配置导入我的 Clash 客户端。
+
+目标：
+复现参考配置中的代理链、策略组、分流规则和 DNS 设置，同时适配我的节点和客户端。
+
+具体要求：
+1. 只读检查我的客户端、内核版本、现有配置和节点信息。
+2. 分析参考配置中的 dialer-proxy 代理链和分流方式，用我自己的真实机场及 ISP 节点替换占位节点。
+3. 保留机场订阅的更新能力；不要修改、覆盖或删除现有配置、订阅及覆写文件。
+4. 检查参考配置中的本机路径、局域网地址等专属设置，按我的环境调整，不要照搬。
+5. 我的 ISP 节点信息会预先复制到系统剪贴板。需要时直接读取一次剪贴板，解析节点协议、服务器地址、端口和认证信息，并写入新配置。不要在聊天、终端输出或日志中回显剪贴板原文和完整凭据，不要修改剪贴板。如果内容无法识别或信息不完整，只说明缺少什么，让我重新复制；如果你无法访问剪贴板，再告诉我替代提供方式。
+6. 将新配置另存为一个名称清楚的 YAML 文件。只做离线静态检查，包括 YAML 格式、字段兼容性、节点和策略组引用，以及代理链循环检查；不要启动或重载代理内核进行验证。
+7. 将文件作为独立配置导入 Clash，但保持当前配置继续启用，不选中或激活新配置。如果导入会自动启用配置，或无法确认导入是否会影响当前连接，则停在文件生成这一步，提供文件路径和手动导入说明。
+
+禁止执行：
+- 切换当前配置、节点或策略组选择。
+- 重启、停止或重载 Clash 及其内核。
+- 修改系统代理、TUN、DNS 或网络设置。
+- 执行测速、健康检查、连通性测试、出口 IP 查询或其他联网验证。
+- 上传含真实节点凭据的配置到外部服务。
+
+最后告诉我新文件的位置、是否已导入、静态检查结果，以及需要我之后手动启用的步骤。明确说明新配置尚未做实际联网验证。
+</code></pre>
+<p>之后去 <a href="https://dashboard.iproyal.com/me/products/static-residential-proxies">IPRoray</a> 里点击「复制代理」，到时候方便 Codex 读剪切板使用。</p>
 <p><img src="image-20261109001327194.png" alt="image-20261109001327194"></p>
-<p>之后在 Clash 切换 Codex 写好的配置，分别访问 baidu.com、Openai.com 和 anthropic.com。看 Clash 的日志，应该分别是 DIRECT 和代理组里对应选中的节点。</p>
+<p>之后在 Clash 切换 Codex 写好的配置，理論上應該和我的代理分組一樣。</p>
+<p><img src="Pasted%20image%2020261117235723.png" alt=""></p>
+<p>Proxies 是所有節點的大分組，也是我們 JP-ISP-Chain 的前跳節點。像我圖上，在 Proxies 裡選擇了「專線 6」，那 Chain 實際的網絡請求鏈路就是「本幾 Claude 客戶端 -&gt; 專線 6 -&gt; ISP -&gt; Anthropic」，最終 A 社看到的出口地址仍然是 ISP，前跳只是為了加速。</p>
+<p>ISP 這個分組裡，另外兩個是直連的節點，只是端口和連結方式不一樣，本質沒什麼區別。這三個節點的出口依舊都是同一個 IP。如果某個 timeout，切換另一個就可以。分流規則裡，Claude 相關的已經寫死選定 ISP 組，以防誤操作。</p>
+<p>AI 組是命中的就是除了 Claude 之外的常規 AI，比如 OpenAI 相關的流量會走 AI 組選中的節點出。這個可以單獨固定走美區，不和 ISP 綁定死。</p>
+<p>Final 組是所有分流規則失效的兜底，默認是保持在 ISP 組防止洩漏真實 IP。但如果有時候訪問國內域名確實非常之卡無法加載，可以把這個短暫切到 DIRECT，用完再切回來。</p>
+<p>可以再簡單測試一下，分别访问 baidu.com、Openai.com 和 anthropic.com。首先這仨應該都能正常訪問，其次看 Clash 的日志，应该分别是 DIRECT 和代理组里对应选中的节点。</p>
+<p><img src="Pasted%20image%2020261117235828.png" alt=""></p>
 <p>要用 Codex 改是因为涉及科学养鹅，国内的 Agent 不太安全。理论上你用网页版的 ChatGPT 改也可以，只需要手动把 YAML 文件粘贴进 Clash（ISP 信息也是需要手动填，毕竟我的 Prompt 要求禁止明文提供）。不让 Codex 去验证是因为如果你用比较差的模型，如果配置写岔了它会反复重连卡住。</p>
 <p>手动验证的时候如果出现海外网站打不开或者分流不对的情况，那就切回原有配置，让 GPT 老师再改。之前确实有用 Sol 改不对的情况…最后是直接上 Astra 了🚬。</p>
-<p>如果你用的不是 Clash，也可以把我之前的模板给它，让它根据你用的代理软件去改配置。最简单的其实是你下载一个 Clash，通常机场也会提供 Clash 的适配。</p>
+<p>如果你用的不是 Clash，也可以把我之前的模板给它，這個模板主要是看分流規則和節點分組，让它根据你用的代理软件去改配置。最简单的其实是你下载一个 Clash，通常机场也会提供 Clash 的适配。</p>
 <p>anyway，总之，到这一步，网络配置就成功了一大半。日常使用上，勾选上 Clash 的开机自启常驻，开启 TUN 虚拟网卡模式。</p>
-<p>至于是规则还是全局呢……建议是全局，但我的 mac mini 平常也挂了采集国内社媒数据的定时，担心国内社媒账号被风控，所以我是选「规则」。一般来说大家也只有一台主机，日常还是要用国内的软件，全局可能会延迟比较高，如果能接受当然是全局更安全。</p>
+<p>至于是规则还是全局呢……建议是全局，但我的 mac mini 平常也挂了采集国内社媒数据的定时，担心国内社媒账号被风控，所以我是选「规则」。</p>
+<p>一般来说大家也只有一台主机，日常还是要用国内的软件，全局可能会延迟比较高，如果能接受当然是全局更安全。如果長期開全局，記得首頁的節點要選對，一般會默認是 Proxies 裡的，修改成我們預期的 ISP 節點即可。</p>
 <p>后续如果账号使用和氪金都正常，建议是不要随便切换 ISP 节点，如果你全程抄作业到这里，那应该是只续了 30 天，要记得提前几天去 <a href="https://dashboard.iproyal.com/me/products/static-residential-proxies">IPRoyal</a> 里续费 ISP。在「我的订单」-「ISP」里下滑到最下面 ，选中对应的订单，点击「动作」列的「&hellip;」，选择「延长订单」即可。</p>
 <p><img src="image-20261108234345952.png" alt="image-20261108234345952"></p>
+<p>以及，機場記得續費，也不要隨便更新重置。更新之後的規則和節點可能都會發生變化，需要重新再修改配置。</p>
 <p>接着如果你还是非常之不放心这个 ISP 节点的质量，可以到 <a href="https://ip.net.coffee/claude/">Net.Coffee</a> 上查询一下情况。</p>
 <p><img src="image-20261108215028942.png" alt="image-20261108215028942"></p>
 <p>显然这个 56 分和有滥用记录就是我“高性价比”的代价，但截止目前来看问题还不是很大（毕竟我的号还健在）。</p>
 <h3 id="兜底熔断">兜底熔断</h3>
-<p>最后我们在网络环境这部分要做的工作，是确保 Clash 崩溃之后 Claude 也不会拿到真实 IP，那这个就要设置防火墙级别的 Kill Switch 了。我手上的都是 macOS 设备，用本机的 PF 搞定就行，把这段 Prompt 发给你的 Codex。</p>
+<p>最后我们在网络环境这部分要做的工作，是确保 Clash 崩溃之后 Claude 也不会拿到真实 IP，那这个就要设置防火墙级别的 Kill Switch 了。</p>
+<p>我手上的都是 macOS 设备，用本机的 PF 搞定就行，把这段 Prompt 发给你的 Codex。</p>
 <pre><code>我的核心目标是：
 
 在不改变现有 Mac 使用习惯的前提下，给 Clash 增加一道独立的网络安全防线，防止 Clash 意外崩溃时，Claude Code 和 Claude Desktop 绕过代理，暴露我的真实公网 IP。
@@ -445,12 +486,16 @@ Mac 正常使用	不需要切换用户、改变工作流或额外管理应用
 
 这里还有一个技术上的区别：我真正关心的是防止真实出口泄漏，而不是简单地让海外网站打不开。因此，最终的方案不仅要阻断非国内 IP，还要验证 DNS、IPv6、代理上游例外及其他可能的绕行路径。
 </code></pre>
-<p>至此，网络配置上能做的防护基本已经做完了。如果再封号，能在网络配置上做的事情，就只有清除相关信息换一个更干净的 ISP 节点，或者干脆自己搭一个 VPS。再往上升级，就是干脆租一台在美国或者日本的 macmini 远程使用了🚬（希望我不要被逼到这一步）。</p>
+<p>Windows 暫時沒試過，可以把 Prompt 裡的 macOS 換成 Windows 嘗試看看，目標定義清楚的話，應該只有實現方式可能不太一樣，效果可以類似。</p>
+<p>起初加這個是因為，我發現我的同事們的操作習慣其實是，只在用到外網的時候才開 Clash，而不是常駐。在未開啟 Clash 的時候，很可能後台還有其他 Claude 相關服務在運行，那真實出口 IP 依舊會暴露⋯⋯</p>
+<p>如果 Kill Switch 正常兜底，那麼在 Clash 退出的情況下，Claude 相關的網絡請求會直接在 DNS 解析階段就掛掉，慣例防一手 again。</p>
+<p><img src="Pasted%20image%2020261118003753.png" alt=""></p>
+<p>至此，网络配置上能做的防护基本已经做完了。</p>
+<p>如果再封号，能在网络配置上做的事情，就只有清除相关信息换一个更干净的 ISP 节点，或者干脆自己搭一个 VPS。再往上升级，就是干脆租一台在美国或者日本的 macmini 远程使用了🚬（希望我不要被逼到这一步）。</p>
 <h2 id="注册环境">注册环境</h2>
 <p>像我这个 IP 如果已经被检测到过有滥用记录，其实多多少少在注册初期的风险值就更高。据推特上各路佬的说法，Claude 的风控是积分制，注册伊始就定下了权重，基本只减不增。</p>
 <p>IP 的干净程度是第一位，除了网络之外，浏览器也可能透露的位置，这也同样要是受支持的地区。其次是邮箱，这个我们后面说，先把浏览器配好。</p>
 <h3 id="浏览器指纹">浏览器指纹</h3>
-<p>⚠️ 简单介绍浏览器指纹</p>
 <p>使用比特浏览器主要是保证浏览器环境稳定，是的网络稳定不代表你的真实 IP 一定不泄漏。比如最容易导致泄露的 WebRTC，在惯用的浏览器里因为考虑到有时候确实是涉及到音视频传输，一刀切禁用不现实。那不如干脆单独给 Claude 配一个浏览器，并且把浏览指纹清理干净。</p>
 <p>这个配置也不复杂，进入<a href="https://www.bitbrowser.cn/download">官网下载页</a>，下载安装比特浏览器。</p>
 <p>点击「浏览器窗口」的「新建窗口」，设置里「代理方式」保持默认的「自定义代理」，「代理类型」选 Socks5。</p>
@@ -813,9 +858,7 @@ Mac 正常使用	不需要切换用户、改变工作流或额外管理应用
     
     <a href="https://viyi.cc/tags/claude/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#Claude</a>
     
-    <a href="https://viyi.cc/tags/%E9%98%B2%E5%B0%81/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#防封</a>
-    
-    <a href="https://viyi.cc/tags/isp/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#ISP</a>
+    <a href="https://viyi.cc/tags/ai/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#AI</a>
     
 </div>
       
@@ -962,6 +1005,19 @@ Mac 正常使用	不需要切换用户、改变工作流或额外管理应用
     
 
     
+    
+      <div
+        class=" bg-secondary-bg prose col-span-2 rounded p-6 lg:col-span-6"
+      >
+        <h3>相关</h3>
+        
+          <a href="https://viyi.cc/how_to_build_an_operational_data_dashboard_like_mediastorm_s/" class="no-underline">复刻 @影视飓风 同款运营数据面板</a>
+          <br />
+        
+          <a href="https://viyi.cc/a_record_of_the_new_burnout_worker_hiring_ai/" class="no-underline">新晋社畜雇佣 AI 实录</a>
+          <br />
+        
+      </div>
     
   </div>
 
